@@ -1,0 +1,1 @@
+See [Evaluate-a-model-in-an-Azure-WebApi](https://github.com/Microsoft/CNTK/wiki/Evaluate-a-model-in-an-Azure-WebApi).

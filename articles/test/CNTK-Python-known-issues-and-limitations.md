@@ -1,0 +1,3 @@
+This is a beta release meant for users to try the bits and provide feedback on the usability and functional aspects of the API. These bits have undergone limited testing so far, so expect some rough edges. **Also please expect the API to undergo changes over the coming weeks, which may break backwards compatibility of programs written against the beta release**.
+
+- The core API itself is implemented in C++ for speed and efficiency and python bindings are created through SWIG. We are increasingly creating thin python wrappers for the APIs to attach docstrings to, but this is a work in progress and for some of the APIs, you may directly encounter SWIG generated API definitions (which are not the prettiest to read).
