@@ -54,7 +54,7 @@ CNTK also allows to use a MAP (maximum-a-posteriori) estimate during training,
 where the running long-term estimate is taken as the prior.
 The weight of the prior is controlled by the `blendTimeConstant` parameter.
 However, this has not been found useful so far in our experiments.
-
+ 
 Note that during inference, CNTK will set both time constants automatically such that
 only use the existing running mean is used, and that it is not updated. There is no explicit action needed by the user.
 
