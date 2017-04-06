@@ -22,7 +22,7 @@ There are profiler APIs that control the profiler's behavior. A typical usage wi
     training_session.train()
     stop_profiler()
 
-Note that profiler is not enabled after start_profiler, and in training_session enable_profiler() is called after the first checkpoint. This is to skip the first epoch that may have more latency due to prefetching. When not using training_session, user need to do it like:
+Note that profiler is not enabled after start_profiler, and in training_session enable_profiler() is called after the first checkpoint. This is to skip the first epoch that asdfmay have more latency due to prefetching. When not using training_session, user need to do it like:
 
     from cntk.utils import start_profiler, stop_profiler, enable_profiler
     start_profiler()        
