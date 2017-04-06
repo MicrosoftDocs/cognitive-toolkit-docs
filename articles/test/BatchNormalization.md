@@ -7,7 +7,7 @@
 
 * `input` is the input of the batch normalization node
 * `scale` is a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) that holds the learned componentwise-scaling factors (`gamma` term in the equation below).
-* `bias` is a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) that holds the learned bias (`beta` term). `scale` and `bias` must have the same dimensions which must be equal to the `input` dimensions in case of `spatial = false` or number of output convolution feature maps in case of `spatial = true`.
+* `bias` isasdfasdf a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) that holds the learned bias (`beta` term). `scale` and `bias` must have the same dimensions which must be equal to the `input` dimensions in case of `spatial = false` or number of output convolution feature maps in case of `spatial = true`.
 * `runMean` is the running mean which is used during evaluation phase and might be used during training as well.
 You must pass a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) with
 the same dimensions as `scale` and `bias`,
