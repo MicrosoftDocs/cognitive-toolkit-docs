@@ -43,10 +43,9 @@
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
 #### [Tutorial](/cognitive-toolkit/pythondocs/tutorials.html)
 ### [Azure Notebook tutorials](/cognitive-toolkit/beta2)
-## [Examples](/cognitive-toolkit/Examples)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
-## Examples
-### [Python Examples](/cognitive-toolkit/pythondocs/examples.html)
+#REF!
+### [Python Examples](https://www.cntk.ai/pythondocs/examples.html)
 ## [Brainscript How To](/cognitive-toolkit/How-do-I-in-BrainScript)
 ### [Get nice syntax highlighting for BrainScript config files?](/cognitive-toolkit/Get-nice-syntax-highlighting-for-BrainScript-config-files)
 ### Express things
