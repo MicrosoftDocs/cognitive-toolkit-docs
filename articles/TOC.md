@@ -44,7 +44,7 @@
 #### [Tutorial](/cognitive-toolkit/pythondocs/tutorials.html)
 ### [Azure Notebook tutorials](/cognitive-toolkit/beta2)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
-#REF!
+## [Examples](/cognitive-toolkit/Examples)
 ### [Python Examples](https://www.cntk.ai/pythondocs/examples.html)
 ## [Brainscript How To](/cognitive-toolkit/How-do-I-in-BrainScript)
 ### [Get nice syntax highlighting for BrainScript config files?](/cognitive-toolkit/Get-nice-syntax-highlighting-for-BrainScript-config-files)
