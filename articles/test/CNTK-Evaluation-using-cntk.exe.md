@@ -1,10 +1,10 @@
 ## Evaluating a model using cntk.exe
 
-Evaluating a model using the CNTK executable itself, i.e. cntk.exe, is similar to the training process. But instead of using the "train" command, the "eval" command is placed in the configuration file. 
+Evaluating a model using the CNTK executable itself, i.e. cntk.exe, is similar to the training process. But instead of using the "train" command, the "eval" command is placed in the configuration file.
 
 ### Using the CNTK executable for evaluation has the following advantages:
 #### CPU/GPU capability
-Like training, CNTK can leverage the GPU during evaluation. Refer to the [Config File Overview](./Config-file-overview) page for more details.
+Like training, CNTK can leverage the GPU during evaluation. Refer to the [Config File Overview](./BrainScript-Config-file-overview) page for more details.
 #### Readers (and their transformations)    
 Similar to model training, the reader plugins (e.g. ImageReader) may perform some data transforms on the input data prior to feeding it to the network during training. These transforms are not part of CNTK (per se), but of the readers. In order to feed the same *transformed* data during evaluation, the transformations need to occur prior to feeding. When evaluating using the CNTK executable, the same reader (as used during evaluation) can be used, and thus the same transformation can be applied. As we will cover later in this page, when using the programmatic approach, these transforms will need to be performed programmatically outside of evaluation engine prior to submitting the data for evaluation (assuming the model was trained with transformed data).    
 #### Model tweaking

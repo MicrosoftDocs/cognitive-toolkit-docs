@@ -111,17 +111,18 @@ When you need another stream of different format, you can simply add the corresp
 *Currently, both old and new reader configurations are supported.
 When the "deserializers" key is used in the reader configuration, the reader type is implicitly set to "CompositeDataReader",
 so please make sure that CompositeDataReader module can be loaded
-(on Windows, CompositeDataReader.dll should be located in the same directory as CNTK executable;
-on Linux CompositeDataReader.so should be `lib` folder that sits side-by-side to the `bin` folder containing the CNTK executable).*
+(on Windows, `Cntk.Composite.dll` should be located in the same directory as CNTK executable;
+on Linux `Cntk.Composite.so` should be `lib` folder that sits side-by-side to the `bin` folder containing the CNTK executable. Please refer [here](./CNTK-Shared-Libraries-Naming-Format) for CNTK binary naming scheme.).*
 
 Currently CNTK supports the below deserializers:
 
-| Deserializer type          | Module               | Description                              |
-| -----------------          | ------               | -----------                              |
-| HTKFeatureDeserializer     | HTKDeserializers     | Deserializer for HTK feature files       |
-| HTKMLFDeserializer         | HTKDeserializers     | Deserializer for HTK MLF files           |
-| ImageDeserializer          | ImageReader          | Deserializer for images that uses OpenCV |
-| CNTKTextFormatDeserializer | CNTKTextFormatReader | Deserializer for CNTK text format files  |
+| Deserializer type          | Module               | Description                                                            |
+| -----------------          | ------               | -----------                                                            |
+| HTKFeatureDeserializer     | HTKDeserializers     | Deserializer for HTK feature files                                     |
+| HTKMLFDeserializer         | HTKDeserializers     | Deserializer for HTK MLF files                                         |
+| ImageDeserializer          | ImageReader          | Deserializer for images encoded as plain files or in zip archive.      |
+| Base64ImageDeserializer    | ImageReader          | Deserializer for images encoded as base64 strings in the mapping file. |
+| CNTKTextFormatDeserializer | CNTKTextFormatReader | Deserializer for CNTK text format files                                |
 
 Please refer to the tables [below](./Deserializers-and-Transforms#configuration-options) for the full description of the configuration parameters.
 
@@ -306,9 +307,15 @@ Same options that can be used with [CNTKTextFormatReader](./CNTKTextFormat-Reade
 
 ### ImageDeserializer options
 
-* `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key, image file (e.g. JPEG, PNG etc) and 0-based label.
+* `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key, image file (e.g. JPEG, PNG etc.) and 0-based label.
 
 For more information please see [ImageReader](./Image-reader#crop-transform).
+
+### Base64ImageDeserializer options
+
+This deserializer supports the same options that can be used with ImageDeserializer. The only difference is in the format of the mapping file:
+
+* `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key (optional, can be omitted), 0-based category label and base 64 encoded image file (e.g. JPEG, PNG etc.).
 
 # Configuring a reader (minibatch source) in Python
 

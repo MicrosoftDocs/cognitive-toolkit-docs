@@ -84,10 +84,10 @@ The `MNISTtest` block uses `action = "test"`. For the `test` action you need to 
 
 ## Using a trained model in your own code
 
-Once you have trained a model, you need the functionality to evaluate the model in your target environment. CNTK provides multiple ways to serve your models in different scenarios. You can use a trained model from C++, Python, C# or other .NET languages. You can run evaluation on your machine or in Azure. The section [Evaluating CNTK Models](https://github.com/Microsoft/CNTK/wiki/CNTK-Evaluation-Overview) (see sidebar) has many details including evaluation using C++/Python/C#/Azure.
+Once you have trained a model, you need the functionality to evaluate the model in your target environment. CNTK provides multiple ways to serve your models in different scenarios. You can use a trained model from C++, Python, C# or other .NET languages. You can run evaluation on your machine or in Azure. The section [Evaluating CNTK Models](./CNTK-Evaluation-Overview) (see sidebar) has many details including evaluation using C++/Python/C#/Azure.
 
 **Next steps**
-* [Model Evaluation Detailed](https://github.com/Microsoft/CNTK/wiki/CNTK-Evaluation-Overview)
+* [Model Evaluation Detailed](./CNTK-Evaluation-Overview)
 * [[Examples]]
 * [[Config file overview]]
 * [[Command line parsing rules]]

@@ -1,7 +1,7 @@
 This page describes how to expose a trained model's hidden layer's values.
 
 ### Overview
-A CNTK model is built on interconnected layers. Some of these layers can be evaluated using the `EvalDLL` because they are tagged as being 'output' layers. In order to expose other layers through the `EvalDLL`, these layers must be tagged as output layers by adding them to the `outputNodes` property.
+A CNTK model is built on interconnected layers. Some of these layers can be evaluated using the `EvalDll` because they are tagged as being 'output' layers. In order to expose other layers through the `EvalDll`, these layers must be tagged as output layers by adding them to the `outputNodes` property.
 
 For example, the `01_OneHidden_ndl_deprecated.cntk` configuration file refers to the `01_OneHidden.ndl` file for the network definition. In this network description file, we have two layers defined:
 
@@ -12,13 +12,9 @@ But only one layer is marked as an output:
 
     outputNodes = (ol)
 
-Thus, the `EvalDLL` can only return values pertaining to the `ol` layer during evaluation.
+Thus, the `EvalDll` will only return values pertaining to the `ol` layer during evaluation.
 
-In order to be able to evaluate the `h1` hidden layer, we need to expose it first as an output node. There are three possible ways of doing this:
-
-1. For models that have not been trained yet, build the model with the desired layers listed in the `outputNodes` property.
-2. Modify an already trained model on the fly while loading it, creating an in-RAM copy of the trained model that exposes the layers.    
-3. Instruct `EvalDLL`/`EvalWrapper` modules to modify the set of output nodes of an already trained model while loading.
+In order to be able to evaluate the `h1` hidden layer, we need to expose it first as an output node. There are three possible ways:
 
 ### 1. Training model with hidden layers exposed
 To output the `h1` layer, just add it as an output in the network description (`01_OneHidden.bs` file) when training it, and that layer would be available for reading during evaluation:
@@ -31,8 +27,8 @@ To output the `h1` layer, just add it as an output in the network description (`
 Models can be modified on the fly when being loaded using BrainScript expressions.
 This will be documented in a future update of this documentation.
 
-### 3. Changing output-node set of an already trained model while loading it for evaluation using the `EvalDLL`/`EvalWrapper` modules
-If a trained will be evaluated using the `EvalDLL`/`EvalWrapper` modules, then it is just a matter of adding the `outputNodeNames` property with a colon separated list of nodes to the network definition:
+### 3. Changing output-node set of an already trained model while loading it for evaluation using the `EvalDll`/`EvalDllWrapper` modules
+If a trained will be evaluated using the `EvalDll`/`EvalDllWrapper` modules, you can add the `outputNodeNames` property with a colon separated list of nodes to the network definition:
 
     outputNodeNames = "h1.z:ol.z"
 

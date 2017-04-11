@@ -10,10 +10,12 @@ These possible transforms are:
 * Color
 * Layout (HWC vs CHW)
 
-If evaluating images using CNTK.exe along with the ImageReader, then the transforms may be specified in the configuration file for the model. Instead, if the evaluation is taking place with the EvalDll (EvalWrapper), then the images may require some transformation(s) prior to evaluation.
+# Image evalution with CNTK.exe and the Imagereader
+In this case image transforms can be specified in the configuration file, and the Imagereader will perform the defined transformations.
 
-# Programmatic Evaluation
-The EvalDLL (EvalWrapper) provides programmatic evaluation of a model. However, this evaluation engine, DOES NOT perform the required image transformations (when evaluating a model trained with images that were transformed).
+# Programmatic image evaluation through EvalDll(EvalWrapper)
+In this case the required image transformations have to be performed programmatically before the image is passed into the Evalwrapper.
+
 This section provides some possible implementations for performing some of these transformations prior to evaluation.
 
 For example a static class named CntkBitmapExtensions could contain the extension methods shown below.

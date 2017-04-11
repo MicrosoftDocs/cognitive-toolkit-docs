@@ -21,10 +21,10 @@ The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/master/Exam
 - The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) is the C++ example showing concurrent evaluation using CNTK C++ Library API.
 
 ## EvalDll Eval C++/C# Examples
-The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) contains the following projects demonstrating how to use the CNTK EvalDLL in C++ and C#. 
-- [`CPPEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalClient): this sample uses the C++ EvalDLL.
-- [`CPPEvalExtendedClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalExtendedClient): this sample uses the C++ extended Eval interface in EvalDLL to evalute a RNN model. 
-- [`CSEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CSEvalClient): this sample uses the C# EvalDLL (only for Windows). It uses the [CNTK EvalDll Nuget Package](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/). 
+The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) contains the following projects demonstrating how to use the `EvalDll` library in C++ and C#.
+- [`CPPEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalClient): this sample uses the C++ `EvalDll`.
+- [`CPPEvalExtendedClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalExtendedClient): this sample uses the C++ extended Eval interface in `EvalDll` to evaluate a RNN model. 
+- [`CSEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CSEvalClient): this sample uses the C# `EvalDll` (only for Windows). It uses the [CNTK EvalDll Nuget Package](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/). 
  
 On Windows, The solution file [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) is used to build and run samples. Please note 
 - You need Visual Studio 2015 update 3 for using these samples.
@@ -34,4 +34,4 @@ On Windows, The solution file [EvalClients.sln](https://github.com/Microsoft/CNT
 On Linux, please refer to Makefile for building samples. The target name EVAL_CLIENT, and EVAL_EXTENDED_CLIENT are used to build these projects. 
  
 ## Python Eval Examples
-You can also use Python to evaluate a pre-trained model as described [here](./Evaluate-a-saved-convolutional-network).
+You can also use Python to evaluate a pre-trained model as described [here](./How-do-I-Evaluate-models-in-Python).

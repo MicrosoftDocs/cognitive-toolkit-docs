@@ -132,7 +132,7 @@ To enable 1-bit SGD in Python the user needs to create and pass a distributed le
     distributed.Communicator.finalize()       # must call this to finalize MPI, otherwise process may fail at exit
 
 Changing num_quantization_bits to 32 during the creation of distributed_learner makes it use non-quantized Data-Parallel SGD. There is no need for warm start in this case.
-For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.beta15.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
+For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc1/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 ## 2.2 Block-Momentum SGD
 
@@ -247,7 +247,7 @@ To enable Block-Momentum in Python, similarly to the 1-bit SGD, the user needs t
     ...
     distributed.Communicator.finalize()       # must call this to finalize MPI, otherwise process may fail at exit
 
-For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.beta15.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
+For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc1/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 #### 3.  Caveats
 - It is recommended to set `resetSGDMomentum` to true; otherwise it often
@@ -449,8 +449,8 @@ where `$cntk` should refer to the path of the CNTK executable (`$x` is the Linux
 
 Examples for distributed training for CNTK v2 with Python can be found here:
 
-- [ResNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.beta15.0/Examples/Image/Classification/ResNet/Python#cntk-examples-imageclassificationresnet)
-- [ConvNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.beta15.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy)
+- [ResNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.rc1/Examples/Image/Classification/ResNet/Python#cntk-examples-imageclassificationresnet)
+- [ConvNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.rc1/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy)
 
 Given a CNTK v2 Python script `training.py` the following commands can be used to start a
 parallel MPI job:

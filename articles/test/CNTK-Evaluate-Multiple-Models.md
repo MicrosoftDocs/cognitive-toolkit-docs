@@ -1,5 +1,5 @@
 ##Overview
-The CNTK evaluation library (EvalDLL and its .Net wrapper EvalWrapper in Windows and libeval.so in Linux) enables programmatic evaluation of a CNTK model, using a single thread for evaluation. In other words, multiple-concurrent evaluations of a single model instance are not supported.
+The CNTK EvalDll library (`Cntk.Eval` and its .Net wrapper `Cntk.Eval.Wrapper` in Windows and `libCntk.Eval` in Linux) enables programmatic single threaded evaluation of CNTK models (concurrent evaluations of a single model instance is not supported).
 However, it is possible to load multiple instances of a model and evaluate each model with a single thread. This enables multiple models to be evaluated in parallel, yet each model with a single thread.
 
 ##Example

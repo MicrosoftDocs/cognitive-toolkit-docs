@@ -20,7 +20,7 @@ You may find, as you read on, that you guessed most of it correctly.
 
         # define the model function. We choose to name it 'model()'.
         model (features) = {
-            # modasdfel parameters
+            # model parameters
             W0 = ParameterTensor {(HDim:SDim)} ; b0 = ParameterTensor {HDim}
             W1 = ParameterTensor {(LDim:HDim)} ; b1 = ParameterTensor {LDim}
 

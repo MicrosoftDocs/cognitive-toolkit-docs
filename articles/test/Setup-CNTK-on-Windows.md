@@ -249,7 +249,7 @@ Set up build environment variables for your Python environment (choose at least 
     setx CNTK_PY27_PATH [paths for your Python 2.7 environment]
 ```
 
-If you followed the installation so far, this would means
+If you followed the installation so far, this would mean
 ```
     setx CNTK_PY35_PATH C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35
 ```

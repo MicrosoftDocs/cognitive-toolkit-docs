@@ -9,6 +9,6 @@ New features of the CNTK Library for Evaluation include
 The following pages provide detailed information about model evaluation using CNTK Library.
 * [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows)
 * [CNTK-library evaluation on Linux](./CNTK-Library-Evaluation-on-Linux)
-* [CNTK-library evaluation with Python](./Evaluate-a-saved-convolutional-network)
+* [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python)
 * [Evaluation using NuGet-Packages](./NuGet-Package)
 

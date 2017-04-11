@@ -1,6 +1,6 @@
 At this page we present the answers to some of the most common questions we get about CNTK and related Subjects.  For questions and answers about problems you are seeing setting up or running CNTK, see the [Common Pitfalls](./CNTK-Pitfalls) page.
 
-#### What is the CNTK?
+#### What is CNTK?
 [CNTK](http://cntk.ai), the Microsoft Cognitive Toolkit, is a framework for deep learning. A Computational Network defines the function to be learned as a directed graph where each leaf node consists of an input value or parameter, and each non-leaf node represents a matrix or tensor operation upon its children. The beauty of CNTK is that once a computational network has been described, all the computation required to learn the network parameters is taken care of automatically. There is no need to derive gradients analytically or to code the interactions between variables for backpropagation.
 
 #### Why did Microsoft develop CNTK?

@@ -19,7 +19,7 @@ Aside from training a model, Microsoft Cognitve Toolkit provides different ways 
 |:----------------------|:----|:----|:-----|
 | [CNTK.EXE](./CNTK-Evaluation-using-cntk.exe) | BrainScript |    YES     | NO |
 | | GPU and CPU support |||
-| [CNTK-EvalDLL](./EvalDLL-Evaluation-Overview) |  C++, C#/.NET | YES | NO |
+| [CNTK-EvalDLL](./EvalDll-Evaluation-Overview) |  C++, C#/.NET | YES | NO |
 | | ASP and Azure support |||
 | | Nuget Package for CPU-Only support |||
 |[CNTK-library](./CNTK-Library-Evaluation-Overview) | C++, C#/.NET and Python | YES | YES | 
@@ -33,7 +33,7 @@ The following pages provide detailed information about model evaluation in diffe
 
 - [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows)
 - [CNTK-library evaluation on Linux](./CNTK-Library-Evaluation-on-Linux)
-- [CNTK-library evaluation with Python](./Evaluate-a-saved-convolutional-network)
+- [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python)
 
 ***
 
@@ -42,6 +42,6 @@ The following pages provide detailed information about model evaluation in diffe
 
 ***
 
-- [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows)
-- [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux)    
+- [EvalDll evaluation on Windows](./EvalDll-Evaluation-on-Windows)
+- [EvalDll evaluation on Linux](./EvalDll-Evaluation-on-Linux)    
 - [Evaluating a model using CNTK.EXE](./CNTK-Evaluation-using-cntk.exe)    

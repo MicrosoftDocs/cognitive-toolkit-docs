@@ -1,28 +1,5 @@
-# BrainScript 
-
-* [[Get nice syntax highlighting for BrainScript config files]]? 
-
-Express things 
-
-* [[Express the error rate of my binary classifier]]? 
-* [[Express a softmax with a temperature parameter]]? 
-* [[Express a gating mechanism]]? 
-* [[Express a softmax over a dynamic axis]]? 
-* [Zoneout](Implement-Zoneout) (http://arxiv.org/abs/1606.01305)? 
-* [[Build a constant 3D tensor]]? 
-* [Combine or concatenate vectors in BrainScript](Build-a-constant-3D-tensor)? 
-* [[Interpret the training loss]]?
-
-Train models 
-
-* [Perform layer-wise training](Layer-wise-training)? 
-* [[Train with a multitask objective]]? 
-* [[Train a regression model on images]]? 
-* [[Train a multilabel classifier]]? 
-* [[Get started in sequence to sequence modelling]]? 
-* [[Train a DSSM (or a convolutional-DSSM) model]]? 
-* Train an [[Image auto encoder using Deconvolution and Unpooling]]?
-* [[Object Detection using Fast R-CNN]]
+* [Express things](./How-do-I-Express-Things-in-BrainScript)
+* [Train models](./How-do-I-Train-Models-in-BrainScript) 
 
 Evaluate models 
 
@@ -41,7 +18,7 @@ Adapt models
 * [[Use an already trained network multiple times inside a larger network]]? 
 * [[Adapt a model I trained on one task to another]] 
 * [Save and reload weights from one model to another](Adapt-a-model-I-trained-on-one-task-to-another) 
-* [Continue training from a previously saved (snapshot from auto adjust) model](Continue-training-from-a-previously-saved model)? 
+* [Continue training from a previously saved model](Continue-training-from-a-previously-saved-model)? 
 
 Read things 
 

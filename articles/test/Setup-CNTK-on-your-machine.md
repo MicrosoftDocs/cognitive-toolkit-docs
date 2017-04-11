@@ -2,19 +2,19 @@
 
 Microsoft Cognitive Toolkit (CNTK) is easy to install.
 
-On Windows, if you have configured Anaconda3 Python 3.5 as your active Python environment, run this command to install the CNTK CPU-only version:
+On Windows, if you have configured Anaconda3 Python 3.5 as your active Python environment, run this command to install the CNTK CPU-only version into your Python root environment:
 ```
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0.beta15.0-cp35-cp35m-win_amd64.whl
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp35-cp35m-win_amd64.whl
 ```
-On Ubuntu 16.04, if you have configured Anaconda3 Python 3.5 as your active Python environment, run these commands to install the CNTK CPU-only version:
+On Ubuntu 16.04, if you have configured Anaconda3 Python 3.5 as your active Python environment, run these commands to install the CNTK CPU-only version into your Python root environment:
 ```
 sudo apt-get install openmpi-bin
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0.beta15.0-cp35-cp35m-linux_x86_64.whl
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp35-cp35m-linux_x86_64.whl
 ```
-You can easily fine tune your PIP installation, including information about configuring information and the easy installation of tutorials, sample and Jupyter notebooks.
+You can easily fine tune your PIP installation, including information about configuring your environment and the installation of tutorials, samples and Jupyter notebooks.
 For Windows, check out [this page](./Setup-Windows-Python), for Linux [this one](./Setup-Linux-Python).
 
-For all the other ways to install CNTK or setup the CNTK development environment, see the links to the install options below.
+For the complete lists of CNTK installation options, see the table below.
 
 ### Install CNTK for the first time or update to a new version
 -------------------------------
