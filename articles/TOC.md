@@ -4,10 +4,10 @@
 ### [CNTK move to Cuda8](/cognitive-toolkit/test/CNTK-move-to-Cuda8)
 ### [WWW 2017 Tutorial](/cognitive-toolkit/test/WWW-2017-Tutorial)
 ## [FAQ](/cognitive-toolkit/test/CNTK-FAQ)
-## [Breaking Changes]
-# [Get Started]
+## Breaking Changes
+# Get Started
 ## [Install pre-built binaries](/cognitive-toolkit/test/Setup-CNTK-on-your-machine)
-## [Build from source code]
+## Build from source code
 ### [Setup for Windows](/cognitive-toolkit/test/Setup-CNTK-on-Windows)
 #### [Migration from VS13 to VS15](/cognitive-toolkit/test/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/test/Windows-Environment-Variables)
@@ -15,14 +15,14 @@
 ## [Usage overview](/cognitive-toolkit/test/CNTK-usage-overview)
 ## [Setup on Azure](/cognitive-toolkit/test/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/test/CNTK-Docker-Containers)
-## [Binary setup]
+## Binary setup
 ### [Setup Windows Python](/cognitive-toolkit/test/Setup-Windows-Python)
 ### [Setup Windows binary script](/cognitive-toolkit/test/Setup-Windows-Binary-Script)
 ### [Setup Windows binary manual](/cognitive-toolkit/test/Setup-Windows-Binary-Manual)
 ### [Setup Linux Python](/cognitive-toolkit/test/Setup-Linux-Python)
 ### [Setup Linux binary script](/cognitive-toolkit/test/Setup-Linux-Binary-Script)
 ### [Setup Linux binary manual](/cognitive-toolkit/test/Setup-Linux-Binary-Manual)
-## [CNTK codebase]
+## CNTK codebase
 ### [Setup CNTK with script on Windows](/cognitive-toolkit/test/Setup-CNTK-with-script-on-Windows)
 ### [Setup BuildProtobuf VS15](/cognitive-toolkit/test/Setup-BuildProtobuf-VS15)
 ### [Setup Buildzlib VS15](/cognitive-toolkit/test/Setup-Buildzlib-VS15)
@@ -36,7 +36,7 @@
 ## [Tutorials](/cognitive-toolkit/test/tutorials)
 ### [Tutorial2](/cognitive-toolkit/test/tutorial2)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/test/KDD-2016-Tutorial)
-### [BrainScript Tutorials]
+### BrainScript Tutorials
 #### [Getting started](/cognitive-toolkit/test/tutorial)
 #### [Image recognition](/cognitive-toolkit/test/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/test/Hands-On-Labs-Language-Understanding)
@@ -45,19 +45,19 @@
 ### [Azure Notebook tutorials](/cognitive-toolkit/test/beta2)
 ## [Examples](/cognitive-toolkit/test/Examples)
 ## [API Overview](/cognitive-toolkit/test/CNTK-Library-API)
-## [Examples]
+## Examples
 ### [Python Examples](/cognitive-toolkit/test/pythondocs/examples.html)
 ## [Brainscript How To](/cognitive-toolkit/test/How-do-I-in-BrainScript)
 ### [Get nice syntax highlighting for BrainScript config files?](/cognitive-toolkit/test/Get-nice-syntax-highlighting-for-BrainScript-config-files)
-### [Express things]
+### Express things
 #### [Express the error rate of my binary classifier?](/cognitive-toolkit/test/Express-the-error-rate-of-my-binary-classifier)
 #### [Express a softmax with a temperature parameter?](/cognitive-toolkit/test/Express-a-softmax-with-a-temperature-parameter)
 #### [Express a gating mechanism?](/cognitive-toolkit/test/Express-a-gating-mechanism)
 #### [Express a softmax over a dynamic axis?](/cognitive-toolkit/test/Express-a-softmax-over-a-dynamic-axis)
-#### [Zoneout (http://arxiv.org/abs/1606.01305)?]
+#### Zoneout (http://arxiv.org/abs/1606.01305)?
 #### [Build a constant 3D tensor?](/cognitive-toolkit/test/Build-a-constant-3D-tensor)
 #### [Interpret the training loss?](/cognitive-toolkit/test/Interpret-the-training-loss)
-### [Train models]
+### Train models
 #### [Perform layer-wise training?](/cognitive-toolkit/test/Layer-wise-training)
 #### [Train with a multitask objective?](/cognitive-toolkit/test/Train-with-a-multitask-objective)
 #### [Train a regression model on images?](/cognitive-toolkit/test/Train-a-regression-model-on-images)
@@ -66,7 +66,7 @@
 #### [Train a DSSM (or a convolutional-DSSM) model?](/cognitive-toolkit/test/Train-a-DSSM-%28or-a-convolutional-DSSM%29-model)
 #### [Train an Image auto encoder using Deconvolution and Unpooling?](/cognitive-toolkit/test/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
 #### [Object Detection using Fast R-CNN](/cognitive-toolkit/test/Object-Detection-using-Fast-R-CNN)
-### [Evaluate models]
+### Evaluate models
 #### [Interpret the training loss?](/cognitive-toolkit/test/Interpret-the-training-loss)
 #### [Do early stopping?](/cognitive-toolkit/test/Do-early-stopping)
 #### [Monitor the error on a held out set during training?](/cognitive-toolkit/test/Monitor-the-error-on-a-held-out-set-during-training)
@@ -75,26 +75,26 @@
 #### [Associate an id with a prediction?](/cognitive-toolkit/test/Associate-an-id-with-a-prediction)
 #### [Deploy model evaluation on Windows?](/cognitive-toolkit/test/CNTK-Evaluation-Overview#eval-samples-in-cntk-binary-download-package-for-windows)
 #### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/test/Evaluate-a-model-in-an-Azure-WebApi)
-### [Adapt models]
+### Adapt models
 #### [Use a trained model as a feature extractor?](/cognitive-toolkit/test/How-do-I-use-a-trained-model-as-a-feature-extractor)
 #### [Use an already trained network multiple times inside a larger network?](/cognitive-toolkit/test/Use-an-already-trained-network-multiple-times-inside-a-larger-network)
 #### [Adapt a model I trained on one task to another](/cognitive-toolkit/test/Adapt-a-model-I-trained-on-one-task-to-another)
 ##### [Clone function](/cognitive-toolkit/test/CloneFunction)
 #### [Save and reload weights from one model to another](/cognitive-toolkit/test/Adapt-a-model-I-trained-on-one-task-to-another (appears to be the wrong link - unable to find correct link))
-### [Read things]
+### Read things
 #### [Specify multiple label streams with the HTKMLFReader?](/cognitive-toolkit/test/Specify-multiple-label-streams-with-the-HTKMLFReader)
 #### [Use the built-in readers to train a network model using multiple input files?](/cognitive-toolkit/test/Use-built-in-readers-with-multiple-inputs)
 #### [Put labels and features in separate files with CNTKTextFormatReader?](/cognitive-toolkit/test/Put-labels-and-features-in-separate-files-with-CNTKTextFormatReader)
-### [Deal with errors]
+### Deal with errors
 #### [Deal with the error "No node named 'x'; skipping"?](/cognitive-toolkit/test/Deal-with-the-error-'No-node-named-'x';-skipping')
 #### [Avoid the "AddSequence: Sequences must be a least one frame long." exception in sequence to sequence?](/cognitive-toolkit/test/Avoid-AddSequence-Exception)
 #### [Deal with the "No Output nodes found" error?](/cognitive-toolkit/test/Deal-with-the-'No-Output-nodes-found'-error)
 #### [Deal with the error "Reached the maximum number of allowed errors"?](/cognitive-toolkit/test/Deal-with-the-error-'Reached-the-maximum-number-of-allowed-errors')
 #### [Deal with "InputValue operation had its row dimension x changed by the reader to y"?](/cognitive-toolkit/test/Compatible-dimensions-in-reader-and-config)
 #### [Avoid the error CURAND failure 201?](/cognitive-toolkit/test/Avoid-the-error-CURAND-failure-201)
-## [Python How To]
-### [CNTK Python known issues and limitations]
-### [Express things]
+## Python How To
+### CNTK Python known issues and limitations
+### Express things
 #### [Implement an attention mechanism?](/cognitive-toolkit/test/Implement-an-attention-mechanism)
 #### [Interrogate the dimensions of internal layers of a network from within the Python API?](/cognitive-toolkit/test/Interrogate-the-dimensions-of-internal-layers-of-a-network-from-within-the-Python-API)
 #### [Introspect or inspect or list model input variables?](/cognitive-toolkit/test/Introspect-or-inspect-or-list-model-input-variables)
@@ -103,7 +103,7 @@
 #### [Restrict a prediction to a bounded interval?](/cognitive-toolkit/test/Restrict-a-prediction-to-a-bounded-interval)
 #### [Set the verbosity or traceLevel from Python?](/cognitive-toolkit/test/Set-the-verbosity-or-traceLevel-from-Python)
 #### [Expose new operands in V2 Python from previous V1 implementations?](/cognitive-toolkit/test/Expose-new-operands-in-V2-Python-from-previous-V1-implementations)
-### [Train models]
+### Train models
 #### [Interpret the use of MinibatchSource.next_minibatch?](/cognitive-toolkit/test/Interpret-the-use-of-MinibatchSource.next_minibatch)
 #### [Load pre-trained checkpointed model and continue retraining?](/cognitive-toolkit/test/Load-pre-trained-checkpointed-model-and-continue-retraining)
 #### [Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd?](/cognitive-toolkit/test/Relate-alpha%2C-beta1%2C-beta2-and-epsilon-to-learning-rate-and-momentum-in-adam_sgd)
@@ -113,17 +113,17 @@
 #### [Train an Image auto encoder using Deconvolution and Unpooling?](/cognitive-toolkit/test/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
 #### [Object Detection using Fast R-CNN](/cognitive-toolkit/test/Object-Detection-using-Fast-R-CNN)
 #### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/test/Build-your-own-image-classifier-using-Transfer-Learning)
-### [Evaluate models]
+### Evaluate models
 #### [Evaluate a saved convolutional network?](/cognitive-toolkit/test/Evaluate-a-saved-convolutional-network)
 #### [Extract features from a specific layer using a trained model?](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction)
 #### [Read and modify the training weights from Python](/cognitive-toolkit/test/Read-and-modify-the-training-weights-from-Python)
 #### [Load model and access network weights / parameters](/cognitive-toolkit/test/Load-model-and-access-network-weights-(parameters))
-### [Deal with errors]
+### Deal with errors
 #### [Debug a Python notebook?](/cognitive-toolkit/test/Debug-a-Python-notebook)
 #### [Get things to work correctly when I take the last element of a sequence?](/cognitive-toolkit/test/Get-things-to-work-correctly-when-I-take-the-last-element-of-a-sequence)
 ## [Multiple GPUs and Machines](/cognitive-toolkit/test/Multiple-GPUs-and-machines)
 ## [Using TensorBoard for Visualization](/cognitive-toolkit/test/Using-TensorBoard-for-Visualization)
-## [Using CNTK Models in Your Code]
+## Using CNTK Models in Your Code
 ### [CNTK Library Evaluation Overview](/cognitive-toolkit/test/CNTK-Library-Evaluation-Overview)
 ### [CNTK Library Evaluation on Windows](/cognitive-toolkit/test/CNTK-Library-Evaluation-on-Windows)
 ### [CNTK Library Evaluation on Linux](/cognitive-toolkit/test/CNTK-Library-Evaluation-on-Linux)
@@ -138,7 +138,7 @@
 #### [EvalDLL evaluation on Linux](/cognitive-toolkit/test/EvalDLL-Evaluation-on-Linux)
 #### [EvalDLL evaluation in Azure](/cognitive-toolkit/test/Evaluate-a-model-in-an-Azure-WebApi)
 #### [Managed EvalDLL API](/cognitive-toolkit/test/Managed-EvalDLL-API)
-## [Source Code & Development]
+## Source Code & Development
 ### [Developing and testing](/cognitive-toolkit/test/Developing-and-Testing)
 #### [Coding guidelines](/cognitive-toolkit/test/Coding-Guidelines)
 #### [How to test](/cognitive-toolkit/test/How-to-Test)
@@ -177,7 +177,7 @@
 ### [Times and TransposeTimes](/cognitive-toolkit/test/Times-and-TransposeTimes)
 ### [Unary operations](/cognitive-toolkit/test/Unary-Operations)
 ### [Variables](/cognitive-toolkit/test/Variables)
-## [Advanced Topics]
+## Advanced Topics
 ### [Working with sequences](/cognitive-toolkit/test/master/bindings/python/doc/sequence.rst)
 ### [Baseline metrics](/cognitive-toolkit/test/Baseline-Metrics)
 ## [Articles](/cognitive-toolkit/test/Articles)
@@ -190,7 +190,7 @@
 ## [Troubleshoot](/cognitive-toolkit/test/Troubleshoot-CNTK)
 ## [How to contribute to CNTK](/cognitive-toolkit/test/Contributing-to-CNTK)
 ## [How do I run Eval in Azure](/cognitive-toolkit/test/How-do-I-run-Eval-in-Azure)
-# [Reference]
+# Reference
 ## [Brainscript](/cognitive-toolkit/test/Using-CNTK-with-BrainScript)
 ### [ConvertDBN command](/cognitive-toolkit/test/ConvertDBN-command)
 ### [Plot command](/cognitive-toolkit/test/Plot-command)
@@ -199,7 +199,7 @@
 ### [BrainScript via command line](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ### [Top-level commands](/cognitive-toolkit/test/Top-level-commands)
 ### [SimpleNetworkBuilder ](/cognitive-toolkit/test/BrainScript-and-Python-Performance-Profiler)
-### [Network Definition with BrainScript]
+### Network Definition with BrainScript
 #### [BrainScriptNetworkBuilder](/cognitive-toolkit/test/BrainScript-Network-Builder)
 #### [BrainScript Walkthrough](/cognitive-toolkit/test/BrainScript-Basic-Concepts)
 #### [Expressions](/cognitive-toolkit/test/BrainScript-Expressions)
@@ -208,7 +208,7 @@
 #### [Full Function Reference](/cognitive-toolkit/test/BrainScript-Full-Function-Reference)
 #### [Layers Reference](/cognitive-toolkit/test/BrainScript-Layers-Reference)
 #### [Activation Functions](/cognitive-toolkit/test/BrainScript-Activation-Functions)
-### [Specifying Readers in BrainScript]
+### Specifying Readers in BrainScript
 #### [Reader Configuration](/cognitive-toolkit/test/BrainScript-Reader-Block)
 #### [CNTK Text Format Reader](/cognitive-toolkit/test/BrainScript-CNTKTextFormat-Reader)
 #### [HTKMLF Reader](/cognitive-toolkit/test/BrainScript-HTKMLF-Reader)
@@ -219,7 +219,7 @@
 #### [Understanding and Extending Readers](/cognitive-toolkit/test/BrainScript-and-Python---Understanding-and-Extending-Readers)
 #### [UCI Fast Reader (deprecated)](/cognitive-toolkit/test/BrainScript-UCI-Fast-Reader)
 #### [SGD Configuration](/cognitive-toolkit/test/BrainScript-SGD-Block)
-### [Miscellaneous]
+### Miscellaneous
 #### [GRUs on CNTK with BrainScript](/cognitive-toolkit/test/GRUs-on-CNTK-with-BrainScript)
 #### [BrainScript Config file overview](/cognitive-toolkit/test/BrainScript-Config-file-overview)
 #### [Simple Network Builder](/cognitive-toolkit/test/Simple-Network-Builder)
@@ -228,8 +228,8 @@
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ## [C++](/cognitive-toolkit/test/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/test/CNTK-Library-Managed-API)
-## [Python]
-# [Resources]
+## Python
+# Resources
 ## [Releases](/cognitive-toolkit/test/releases)
 ### [CNTK_1_5_Release_Notes](/cognitive-toolkit/test/CNTK_1_5_Release_Notes)
 ### [CNTK_1_6_Release_Notes](/cognitive-toolkit/test/CNTK_1_6_Release_Notes)
