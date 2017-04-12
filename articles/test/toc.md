@@ -1,6 +1,0 @@
-# [Level 1](BatchNormalization.md)
-## [Tutorials](BatchNormalization.md)
-## [Examples](BatchNormalization.md)
-### [Level 3](BatchNormalization.md)
-## [Articles](BatchNormalization.md)
-## [Presentations](BatchNormalization.md)

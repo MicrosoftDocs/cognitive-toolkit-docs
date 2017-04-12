@@ -43,10 +43,9 @@
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/test/Object-Detection-using-Fast-R-CNN)
 #### [Tutorial](/cognitive-toolkit/test/pythondocs/tutorials.html)
 ### [Azure Notebook tutorials](/cognitive-toolkit/test/beta2)
-## [Examples](/cognitive-toolkit/test/Examples)
 ## [API Overview](/cognitive-toolkit/test/CNTK-Library-API)
-## Examples
-### [Python Examples](/cognitive-toolkit/test/pythondocs/examples.html)
+## [Examples](/cognitive-toolkit/test/Examples)
+### [Python Examples](https://www.cntk.ai/pythondocs/examples.html)
 ## [Brainscript How To](/cognitive-toolkit/test/How-do-I-in-BrainScript)
 ### [Get nice syntax highlighting for BrainScript config files?](/cognitive-toolkit/test/Get-nice-syntax-highlighting-for-BrainScript-config-files)
 ### Express things
@@ -54,7 +53,7 @@
 #### [Express a softmax with a temperature parameter?](/cognitive-toolkit/test/Express-a-softmax-with-a-temperature-parameter)
 #### [Express a gating mechanism?](/cognitive-toolkit/test/Express-a-gating-mechanism)
 #### [Express a softmax over a dynamic axis?](/cognitive-toolkit/test/Express-a-softmax-over-a-dynamic-axis)
-#### Zoneout (http://arxiv.org/abs/1606.01305)?
+#### [Zoneout (http://arxiv.org/abs/1606.01305)?](http://arxiv.org/abs/1606.01305)
 #### [Build a constant 3D tensor?](/cognitive-toolkit/test/Build-a-constant-3D-tensor)
 #### [Interpret the training loss?](/cognitive-toolkit/test/Interpret-the-training-loss)
 ### Train models
@@ -92,7 +91,7 @@
 #### [Deal with the error "Reached the maximum number of allowed errors"?](/cognitive-toolkit/test/Deal-with-the-error-'Reached-the-maximum-number-of-allowed-errors')
 #### [Deal with "InputValue operation had its row dimension x changed by the reader to y"?](/cognitive-toolkit/test/Compatible-dimensions-in-reader-and-config)
 #### [Avoid the error CURAND failure 201?](/cognitive-toolkit/test/Avoid-the-error-CURAND-failure-201)
-## Python How To
+## [Python How To](/cognitive-toolkit/test/How-do-I-in-Python)
 ### CNTK Python known issues and limitations
 ### Express things
 #### [Implement an attention mechanism?](/cognitive-toolkit/test/Implement-an-attention-mechanism)
@@ -228,7 +227,7 @@
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ## [C++](/cognitive-toolkit/test/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/test/CNTK-Library-Managed-API)
-## Python
+## [Python](https://www.cntk.ai/pythondocs/)
 # Resources
 ## [Releases](/cognitive-toolkit/test/releases)
 ### [CNTK_1_5_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_5_Release_Notes)
@@ -252,3 +251,4 @@
 ## [Conference appearances](/cognitive-toolkit/test/Conference-Appearances)
 ## [CNTK license](/cognitive-toolkit/test/master/LICENSE)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/test/CNTK-1bit-SGD-License)
+# Uncategorized
