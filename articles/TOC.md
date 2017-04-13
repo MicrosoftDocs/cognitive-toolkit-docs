@@ -52,7 +52,7 @@
 #### [Express a softmax with a temperature parameter?](/cognitive-toolkit/test/Express-a-softmax-with-a-temperature-parameter)
 #### [Express a gating mechanism?](/cognitive-toolkit/test/Express-a-gating-mechanism)
 #### [Express a softmax over a dynamic axis?](/cognitive-toolkit/test/Express-a-softmax-over-a-dynamic-axis)
-#### [Zoneout (http://arxiv.org/abs/1606.01305)?](http://arxiv.org/abs/1606.01305)
+#### [Zoneout](http://arxiv.org/abs/1606.01305)
 #### [Build a constant 3D tensor?](/cognitive-toolkit/test/Build-a-constant-3D-tensor)
 #### [Interpret the training loss?](/cognitive-toolkit/test/Interpret-the-training-loss)
 ### Train models
@@ -78,10 +78,8 @@
 #### [Use an already trained network multiple times inside a larger network?](/cognitive-toolkit/test/Use-an-already-trained-network-multiple-times-inside-a-larger-network)
 #### [Adapt a model I trained on one task to another](/cognitive-toolkit/test/Adapt-a-model-I-trained-on-one-task-to-another)
 ##### [Clone function](/cognitive-toolkit/test/CloneFunction)
-#### [Save and reload weights from one model to another](/cognitive-toolkit/test/Adapt-a-model-I-trained-on-one-task-to-another (appears to be the wrong link - unable to find correct link))
 ### Read things
 #### [Specify multiple label streams with the HTKMLFReader?](/cognitive-toolkit/test/Specify-multiple-label-streams-with-the-HTKMLFReader)
-#### [Use the built-in readers to train a network model using multiple input files?](/cognitive-toolkit/test/Use-built-in-readers-with-multiple-inputs)
 #### [Put labels and features in separate files with CNTKTextFormatReader?](/cognitive-toolkit/test/Put-labels-and-features-in-separate-files-with-CNTKTextFormatReader)
 ### Deal with errors
 #### [Deal with the error "No node named 'x'; skipping"?](/cognitive-toolkit/test/Deal-with-the-error-'No-node-named-'x';-skipping')
@@ -91,7 +89,6 @@
 #### [Deal with "InputValue operation had its row dimension x changed by the reader to y"?](/cognitive-toolkit/test/Compatible-dimensions-in-reader-and-config)
 #### [Avoid the error CURAND failure 201?](/cognitive-toolkit/test/Avoid-the-error-CURAND-failure-201)
 ## Python How To
-### CNTK Python known issues and limitations
 ### Express things
 #### [Implement an attention mechanism?](/cognitive-toolkit/test/Implement-an-attention-mechanism)
 #### [Interrogate the dimensions of internal layers of a network from within the Python API?](/cognitive-toolkit/test/Interrogate-the-dimensions-of-internal-layers-of-a-network-from-within-the-Python-API)
@@ -175,9 +172,6 @@
 ### [Times and TransposeTimes](/cognitive-toolkit/test/Times-and-TransposeTimes)
 ### [Unary operations](/cognitive-toolkit/test/Unary-Operations)
 ### [Variables](/cognitive-toolkit/test/Variables)
-## Advanced Topics
-### [Working with sequences](/cognitive-toolkit/test/master/bindings/python/doc/sequence.rst)
-### [Baseline metrics](/cognitive-toolkit/test/Baseline-Metrics)
 ## [Articles](/cognitive-toolkit/test/Articles)
 ### [Recurrent Neural Networks with CNTK and applications to the world of ranking](/cognitive-toolkit/test/Recurrent-Neural-Networks-with-CNTK-and-applications-to-the-world-of-ranking)
 ### [GRUs on CNTK with BrainScript](/cognitive-toolkit/test/GRUs-on-CNTK-with-BrainScript)
@@ -187,12 +181,11 @@
 ## [Presentations](/cognitive-toolkit/test/Presentations)
 ## [Troubleshoot](/cognitive-toolkit/test/Troubleshoot-CNTK)
 ## [How to contribute to CNTK](/cognitive-toolkit/test/Contributing-to-CNTK)
-## [How do I run Eval in Azure](/cognitive-toolkit/test/How-do-I-run-Eval-in-Azure)
 # Reference
 ## [Brainscript](/cognitive-toolkit/test/Using-CNTK-with-BrainScript)
 ### [ConvertDBN command](/cognitive-toolkit/test/ConvertDBN-command)
 ### [Plot command](/cognitive-toolkit/test/Plot-command)
-### [Train, Test, Eval](/cognitive-toolkit/test/BrainScript-Train%2C-Test%2C-Eval)
+### [Train, Test, Eval](/cognitive-toolkit/test/BrainScript-Train-Test-Eval)
 ### [Top-level Configurations](/cognitive-toolkit/test/BrainScript-Top-level-configurations)
 ### [BrainScript via command line](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ### [Top-level commands](/cognitive-toolkit/test/Top-level-commands)
@@ -226,9 +219,9 @@
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ## [C++](/cognitive-toolkit/test/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/test/CNTK-Library-Managed-API)
-## Python
+## [Python](https://www.cntk.ai/pythondocs/apireference.html)
 # Resources
-## [Releases](https://github.com/Microsoft/CNTK/releases    )
+## [Releases](https://github.com/Microsoft/CNTK/releases)
 ### [CNTK_1_5_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_5_Release_Notes)
 ### [CNTK_1_6_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_6_Release_Notes)
 ### [CNTK_1_7_1_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_7_1_Release_Notes)
