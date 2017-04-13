@@ -1,8 +1,8 @@
-Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7 which will be released soon.
-An intermediate binary download can be found in the [instructions for the KDD CNTK Hands-On Tutorial](https://github.com/Microsoft/CNTK/wiki/KDD-2016-Tutorial) that
-this tutorial was originally designed for.
-
 # Hands-On Lab: Image recognition with Convolutional Networks, Batch Normalization, and Residual Nets
+
+Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7 which will be released soon.
+An intermediate binary download can be found in the [instructions for the KDD CNTK Hands-On Tutorial](KDD-2016-Tutorial) that
+this tutorial was originally designed for.
 
 This hands-on lab shows how to implement convolution-based image recognition with CNTK.
 We will start with a common convolutional image-recognition architecture, add Batch Normalization,
@@ -17,7 +17,7 @@ The techniques you will practice include:
 * parallel training
 
 We assume that you are familiar with basics of deep learning, and these specific concepts (if not,
-you can catch up with [this two-page introduction](./Tutorial2#going-deep-convolutional-neural-networks-cnns)):
+you can catch up with [this two-page introduction](Tutorial2/Tutorial2#going-deep-convolutional-neural-networks-cnns)):
 
 * convolutional networks
 * batch normalization

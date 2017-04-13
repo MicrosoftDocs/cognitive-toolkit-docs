@@ -1,10 +1,10 @@
-# [Overview](/cognitive-toolkit/test/overview)
+# [Overview](/cognitive-toolkit/test/index)
 ## [What's new](/cognitive-toolkit/test/news)
 ### [News 2016](/cognitive-toolkit/test/news-2016)
 ### [CNTK move to Cuda8](/cognitive-toolkit/test/CNTK-move-to-Cuda8)
 ### [WWW 2017 Tutorial](/cognitive-toolkit/test/WWW-2017-Tutorial)
 ## [FAQ](/cognitive-toolkit/test/CNTK-FAQ)
-## Breaking Changes
+## [Breaking Changes](/cognitive-toolkit/test/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
 ## [Install pre-built binaries](/cognitive-toolkit/test/Setup-CNTK-on-your-machine)
 ## Build from source code
@@ -30,22 +30,23 @@
 ### [Setup Test Python](/cognitive-toolkit/test/Setup-Test-Python)
 ### [Setup Windows Binary Script Options](/cognitive-toolkit/test/Setup-Windows-Binary-Script-Options)
 ### [Setup Windows Devinstall Script Option](/cognitive-toolkit/test/Setup-Windows-Devinstall-Script-Option)
-### [Python Getting started - language](/cognitive-toolkit/test/pythondocs/gettingstarted.html)
+### [Python Getting started - language](https://www.cntk.ai/pythondocs/gettingstarted.html)
 ## [Feedback](/cognitive-toolkit/test/Feedback-Channels)
-# [How To](/cognitive-toolkit/test/Tutorials%2C-Examples%2C-etc..)
+# [How To](/cognitive-toolkit/test/Tutorials-examples)
 ## [Tutorials](/cognitive-toolkit/test/tutorials)
-### [Tutorial2](/cognitive-toolkit/test/tutorial2)
+### [Tutorial2](/cognitive-toolkit/test/tutorial2/tutorial2)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/test/KDD-2016-Tutorial)
 ### BrainScript Tutorials
-#### [Getting started](/cognitive-toolkit/test/tutorial)
+#### [Getting started](/cognitive-toolkit/test/tutorial/tutorial)
 #### [Image recognition](/cognitive-toolkit/test/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/test/Hands-On-Labs-Language-Understanding)
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/test/Object-Detection-using-Fast-R-CNN)
-#### [Tutorial](/cognitive-toolkit/test/pythondocs/tutorials.html)
-### [Azure Notebook tutorials](/cognitive-toolkit/test/beta2)
-## [API Overview](/cognitive-toolkit/test/CNTK-Library-API)
+#### [Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
+### [Microsoft Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ## [Examples](/cognitive-toolkit/test/Examples)
-### [Python Examples](https://www.cntk.ai/pythondocs/examples.html)
+## [API Overview](/cognitive-toolkit/test/CNTK-Library-API)
+## Examples
+### [Python Examples](/cognitive-toolkit/test/pythondocs/examples.html)
 ## [Brainscript How To](/cognitive-toolkit/test/How-do-I-in-BrainScript)
 ### [Get nice syntax highlighting for BrainScript config files?](/cognitive-toolkit/test/Get-nice-syntax-highlighting-for-BrainScript-config-files)
 ### Express things
@@ -91,7 +92,7 @@
 #### [Deal with the error "Reached the maximum number of allowed errors"?](/cognitive-toolkit/test/Deal-with-the-error-'Reached-the-maximum-number-of-allowed-errors')
 #### [Deal with "InputValue operation had its row dimension x changed by the reader to y"?](/cognitive-toolkit/test/Compatible-dimensions-in-reader-and-config)
 #### [Avoid the error CURAND failure 201?](/cognitive-toolkit/test/Avoid-the-error-CURAND-failure-201)
-## [Python How To](/cognitive-toolkit/test/How-do-I-in-Python)
+## Python How To
 ### CNTK Python known issues and limitations
 ### Express things
 #### [Implement an attention mechanism?](/cognitive-toolkit/test/Implement-an-attention-mechanism)
@@ -227,9 +228,9 @@
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 ## [C++](/cognitive-toolkit/test/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/test/CNTK-Library-Managed-API)
-## [Python](https://www.cntk.ai/pythondocs/)
+## Python
 # Resources
-## [Releases](/cognitive-toolkit/test/releases)
+## [Releases](https://github.com/Microsoft/CNTK/releases    )
 ### [CNTK_1_5_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_5_Release_Notes)
 ### [CNTK_1_6_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_6_Release_Notes)
 ### [CNTK_1_7_1_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_1_7_1_Release_Notes)
@@ -249,6 +250,5 @@
 ### [CNTK_2_0_Beta_8_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_2_0_Beta_8_Release_Notes)
 ### [CNTK_2_0_Beta_9_Release_Notes](/cognitive-toolkit/test/ReleaseNotes/CNTK_2_0_Beta_9_Release_Notes)
 ## [Conference appearances](/cognitive-toolkit/test/Conference-Appearances)
-## [CNTK license](/cognitive-toolkit/test/master/LICENSE)
+## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/test/CNTK-1bit-SGD-License)
-# Uncategorized
