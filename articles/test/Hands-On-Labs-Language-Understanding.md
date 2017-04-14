@@ -1,6 +1,6 @@
-# Hands-On Lab: Language Understanding with Recurrent Networks
-
 Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7.1 which will be released soon.
+
+# Hands-On Lab: Language Understanding with Recurrent Networks
 
 This hands-on lab shows how to implement a recurrent network to process text,
 for the Air Travel Information Services (ATIS) tasks of slot tagging and intent classification.

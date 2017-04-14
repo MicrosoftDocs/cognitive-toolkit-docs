@@ -29,9 +29,9 @@ If you just want to download and install the latest precompiled binaries to your
 
 |Windows                  | Linux                   |
 |:------------------------|:------------------------|
-|[Python-only installation](./Setup-Windows-Python) | [Python-only installation](./Setup-Linux-Python) |
-|[Script-driven installation](./Setup-Windows-Binary-Script) | [Script-driven installation](./Setup-Linux-Binary-Script) 
-|[Manual installation](./Setup-Windows-Binary-Manual) | [Manual installation](./Setup-Linux-Binary-Manual)
+|[Python-only installation](./Setup-Windows-Python)<br>Simple pip install<br>of CNTK lib for<br>use in Python| [Python-only installation](./Setup-Linux-Python))<br>Simple pip install<br>of CNTK lib for<br>use in Python |
+|[Script-driven installation](./Setup-Windows-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript 
+|[Manual installation](./Setup-Windows-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies
 |                                                     | [Docker installation](./CNTK-Docker-Containers)
 #### Installation and building of the CNTK codebase
 

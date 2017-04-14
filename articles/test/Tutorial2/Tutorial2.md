@@ -1,6 +1,5 @@
-#Brainscript tutorial
-
 **Table of Contents**
+
 - [Introduction](#introduction)
 - [The MNIST Data](#the-mnist-data)
   - [Getting the Data](#getting-the-data)
@@ -21,27 +20,27 @@
   - [The Network Definition](#the-network-definition-2)
   - [Putting it all Together](#putting-it-all-together-2)
 
-## Introduction
+# Introduction
 
 This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](https://github.com/Microsoft/CNTK/wiki/Tutorial), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
 
 The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([Github link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
 
-## The MNIST Data
+# The MNIST Data
 
 MNIST is a popular image dataset of handwritten digits. It is divided into a training set of 60,000 examples, and a test set of 10,000 examples. This dataset is a subset of the original data from NIST, pre-processed and published by LeCun et al. For more details please refer to [this page](http://yann.lecun.com/exdb/mnist/). The MNIST dataset has become a standard benchmark for machine learning methods because it is real-world data, yet it is simple and requires minimal efforts in pre-processing and formatting. Each instance of the data consists of a 28x28 pixel image representing one digit, with a label between 0 and 9. Here are some examples: 
  
 ![MNIST Examples](./Tutorial2/mnist_examples.png)
  
-### Getting the Data
+## Getting the Data
 
 CNTK comes with a Python script that fetches and prepares the MNIST data for CNTK consumption. You find it here: [install_mnist.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/DataSets/MNIST/install_mnist.py).
 
-## Some Important CNTK Concepts
+# Some Important CNTK Concepts
 
 Before building the neural networks for written digit image recognition using the MNIST dataset, we will go through two important concepts of CNTK: (1) [Functions](https://github.com/Microsoft/CNTK/wiki/BS-Functions); and (2) model editing.
 
-### CNTK Functions
+## CNTK Functions
 
 BrainScript allows user-defined functions. User-defined functions are CNTK's mechanism of creating reusable blocks. Using functions is easy, cuts down on the verbosity of defining networks, increases code re-use, and helps to prevent errors. Using BrainScript's `include` directive, they can be shared across multiple configuration files. Functions are parameterized expressions. A function's value can be of any type understood by BrainScript, including scalars,
 
@@ -99,7 +98,7 @@ That final `.y` reads out `y` immediately, effectively turning `W` and `b` into 
 
 Functions can be declared locally inside other functions as seen in `RecurrentLSTM()` above. Functions can be called recursively, which is one way of creating stacks of networks.
 
-### Model Editing
+## Model Editing
 
 Model editing refers to modifying the structure or the model parameters of an existing trained network. One form is to load a network and create a new network referencing nodes of the old network. This can be done on the fly in all operations that operate on networks.
 
@@ -120,17 +119,17 @@ The following example shows how add an evaluation node to a network that counts 
 
 Other model-editing operations include adding new layers for discriminative pre-training and freezing parameters.
 
-## Starting Shallow: One-Hidden-Layer Neural Network
+# Starting Shallow: One-Hidden-Layer Neural Network
 
 Let's get back to the task at hand: classifying images of hand-written digits. To do so, we will build our first neural network with CNTK. Starting simple, our network will only have one hidden layer.
 
-### Neural Network vs. Softmax Regression
+## Neural Network vs. Softmax Regression
 
 We saw in the previous tutorial that softmax regression can learn to separate data with more than two classes. However, the separation boundaries are linear. What if those boundaries were trickier? In that case, we could distort the feature space in a way to bring the data closer to being linearly separable, and this is what a hidden layer can do for us. So basically, we take our softmax regression solution and insert in a hidden layer connected to the network's inputs. Such a layer will learn to apply a feature mapping that projects the data into a space where it is (hopefully) linearly separable. Then, the next layer will receive an easier problem to deal with using its linear decision boundaries.
 
 If we apply softmax classification like in the [previous tutorial](https://github.com/Microsoft/CNTK/wiki/Tutorial) to the MNIST problem, we will get an error rate of *7.5%*. We will show that by adding one hidden layer, the error is reduced to *2.25%*.
 
-### The Network Definition
+## The Network Definition
 
 First, we define our features and labels. Note that we apply a scaling of (1.0 / 256.0) on the features in order to have their values within the range 0 to 1. This normalization helps SGD to converge faster with better predictive performance. Then, we specify the topology of our network which looks similar to the one we used in [Part 1 of the tutorial](https://github.com/Microsoft/CNTK/wiki/Tutorial), except that it has an additional layer, that is, the hidden layer `DNNSigmoidLayer`. The layers are defined in a separate shared BS file, [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs).
 
@@ -157,7 +156,7 @@ First, we define our features and labels. Note that we apply a scaling of (1.0 /
     evaluationNodes = (errs)
     outputNodes     = (z)
 
-### SGD Parameters
+## SGD Parameters
 The SGD (Stochastic Gradient Descent) block tells CNTK how to optimize the network to find the best parameters. This includes information about mini-batch size (so the computation is more efficient), the learning rate, and how many epochs to train. Here is the SGD block for our example:
 
     SGD = [
@@ -180,7 +179,7 @@ Below is a list of the most common parameters used with the SGD block:
 - `maxEpochs`: the maximum number of epochs to run. 
 - `dropoutRate`: the dropout rate per epoch. The default value is 0 (off).
 
-#### Converting Learning-rate and Momentum Parameters From Other Toolkits
+### Converting Learning-rate and Momentum Parameters From Other Toolkits
 
 CNTK's model-update formulae differ somewhat from some other toolkits and from literature, in that in CNTK, the parameters are specified in a way that is *agnostic of the minibatch size*. This is important in the context of data-parallel training, where CNTK itself may modify the minibatch size. Specifying learning rate and momentum in an agnostic way avoids complexities of adjusting these values upon changes of minibatch size.
 
@@ -223,7 +222,7 @@ You will get close to this by using `learningRatePerMB` and `momentumPerMB`, whi
     learningRatePerSample = learningRatePerMB / minibatchSize
     momentumAsTimeConstant = -minibatchSize / ln (momentumPerMB)
 
-### Putting it all Together
+## Putting it all Together
 
 Here are the configuration files you need to run this example:
 - [The main configuration file, including the BrainScript](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/01_OneHidden_ndl_deprecated.cntk)
@@ -247,15 +246,15 @@ The output folder will be created inside `Image/MNIST/`, and we get the test res
 
 This model has an error of *2.25%*. Not too bad for image recognition! But now let's build an even better model by using Convolutional Neural Networks...
 
-## Going Deep: Convolutional Neural Networks (CNNs)
+# Going Deep: Convolutional Neural Networks (CNNs)
 
 As we have seen, a simple neural network can achieve impressive results on this task. However, these results are not all that good when compared to what is out there in the literature. But we can do much better if we introduce some concepts from CNN theory. So, let's start by introducing the main concept of CNNs, and then building such a network with CNTK.
 
-### CNNs: The Ingredients
+## CNNs: The Ingredients
 
 A *convolutional neural network* consists of model layers that apply local filters and are stacked in a certain order. Here we describe each of these layers briefly.
 
-#### Convolutional Layer
+### Convolutional Layer
 
 A convolutional layer applies a learned local linear filter, e.g. of `[3 x 3]` pixels, to every pixel position in an image. Such filter capture local patterns thanks to the local connectivity of its units. Whereas the input image has a single dimension (gray-scale level), hidden layers maintain their spatial layout but store an entire activation vector for each pixel position, where each dimension of the activation vector has its own filter kernel, or *feature map*. A feature map is basically a sliding window over sub-regions of the layer's inputs, where each application of the map results in one dimension of the output activation vector. A feature map is computed by performing a dot product between its filter parameters and the corresponding input rectangle, which is slid across the entire 2D plane. This linear filter operation is called *convolution*. Each feature map is called a depth slice. Here is a simple example of how the feature map is applied.
 
@@ -263,27 +262,27 @@ A convolutional layer applies a learned local linear filter, e.g. of `[3 x 3]` p
 
 For example, for a `[28 x 28]` image and a 16 elements-deep feature map, the resulting hidden layer would be a tensor of dimension `[28 x 28 x 16]`. It is common to drop the outer pixels for which the filter would fall outside the image bounds; in that case, the resulting tensor dimensions will be reduced accordingly. 
 
-#### Activation Function Layer
+### Activation Function Layer
 
 A non-linear activation function is then applied to each unit output element of the convolutional layer. One of the most commonly used functions is the *Rectified Linear Unit*, or ReLU, which is simply _max_(0,_x_). Its practical advantage over a sigmoid function is that it does not suffer from the vanishing gradient problem, and therefore learning can be more efficient.
 
-#### Max-Pooling Layer
+### Max-Pooling Layer
 
 "Max Pooling" is an operation placed after the activation function that aims at reducing dimensionality. It divides the input into a set of non-overlapping regions, where for each region it outputs the maximum activation value (independently for each depth slice). By reducing each region into a single point, the image dimension is reduced. What this achieves is two-fold: (1) it reduces the number of parameters and thus helps controlling overfitting; and (2) it selects the salient activation values regardless of their location in the region, which helps training models that are more resilient to things like rotation / translation. Here is an example (from [Wikipedia](https://en.wikipedia.org/wiki/Convolutional_neural_network#Pooling_layer)) of max pooling with a window size of `[2 x 2]` (which would reduce a hidden layer of `[28 x 28 x 16]` to `[14 x 14 x 16]`):
 
 ![Attribution: By Aphex34 (Own work) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons](./Tutorial2/Max_pooling.png)
 
-#### Dense Layer
+### Dense Layer
 
 Finally, after cascading several convolutional, activation function, and MaxPooling layers, a CNN will have one or more fully connected, or dense, layers. Every unit in a dense layer has connections to all activations of the previous layer, similar to regular neural networks.
 
-#### Softmax Layer
+### Softmax Layer
 
 Finally, the softmax layer for classification. We know the softmax from the first part of the tutorial. The output is a probability distribution over the possible classes. Below is a chart of a CNN with two alternating convolution / activation and MaxPooling layers, one dense layer, and one softmax layer.
 
 ![CNN](./Tutorial2/cnn.png)
 
-### The Network Definition
+## The Network Definition
 
 Our CNN will have a bit more of a complex definition than our previous networks. Starting from the features, you will notice that we define each sample as a `28 x 28` matrix rather than a vector. This is because a CNN exploits local correlations in the image. Thus, we need to preserve this information. Second, in addition to the layer we saw in the previous network, we define a cascade of convolutional and max-pooling layers. We have two of each type. The core layer is `ConvReLULayer` which is defined as a function in [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs). Here is what this macro looks like:
 
@@ -361,7 +360,7 @@ This allows us to put together the final network definition of our CNN that will
     evaluationNodes = (errs)
     outputNodes     = (ol)
 
-### Putting it all Together
+## Putting it all Together
 
 Here are the configuration files you will need to run this example:
 - [The main configuration file incl. network definition](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/02_Convolution_ndl_deprecated.cntk)
@@ -381,17 +380,17 @@ With an error of *0.83%*, this model (unsurprisingly) greatly outperforms the pr
 
 Now let's check out a technique that helps us to reduce the training time without significantly compromising the predictive performance of the model. 
 
-## Improving Training: CNN with Batch Normalization
+# Improving Training: CNN with Batch Normalization
 
 In this section we will add to our network a widely used technique called Batch Normalization. It helps to make training much more efficient. We will give a brief introduction before demonstrating how to add it to our CNN.
 
-### Batch Normalization in a Nutshell
+## Batch Normalization in a Nutshell
 
 One problem with training deep neural networks is that the distribution of each layer's inputs changes during training because the parameters of the previous layers change. This causes the training to slow down, as upper layers constantly have to adapt themselves to the changed ranges. One common technique to address the problem is called Batch Normalization (BN). BN consists of normalizing layer inputs w.r.t. their zero-mean/unit-variance, and to do so for each training minibatch. BN makes it possible to use much higher learning rates and allows us to be less careful about initialization. For more details, please refer to the paper [here](http://arxiv.org/pdf/1502.03167v3.pdf), and to the description of the [BatchNormalization](https://github.com/Microsoft/CNTK/wiki/BatchNormalization) operation.
 
 Disclaimer: Training with Batch Normalization is currently only supported on GPU (but models can be evaluated using the CPU).
 
-### The Network Definition
+## The Network Definition
 
 We start from the CNN we just built and add a batch normalization node to each layer's macro. Also, we change the sigmoid layer to a ReLU layer as it gives a slight bump to the model's accuracy.
 
@@ -454,7 +453,7 @@ We start from the CNN we just built and add a batch normalization node to each l
     evaluationNodes = (errs)
     outputNodes     = (ol)
 
-### Putting it all Together
+## Putting it all Together
 
 Here are the configuration files you need to run this example:
 - [The main configuration file](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/03_ConvBatchNorm_ndl_deprecated.cntk)

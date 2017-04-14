@@ -69,6 +69,7 @@ For using GPU, you need in addition to include the following NVIDIA CUDA related
 * `cudnn64_5.dll`
 * `curand64_80.dll`
 * `cusparse64_80.dll`
+* `nvml.dll`
 
 All these dlls can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). 
 
