@@ -40,8 +40,6 @@
 ### [Setup Windows Binary Script Options](/cognitive-toolkit/test/Setup-Windows-Binary-Script-Options)
 ### [Setup Windows Devinstall Script Option](/cognitive-toolkit/test/Setup-Windows-Devinstall-Script-Option)
 ### [Python Getting started - language](https://www.cntk.ai/pythondocs/gettingstarted.html)
-### [Using CNTK with multiple GPUs and or Machines](/cognitive-toolkit/test/Using-CNTK-with-multiple-GPUs-and-or-machines)
-### [Use Built-in readers with multiple inputs](/cognitive-toolkit/test/Use-built-in-readers-with-multiple-inputs)
 ## [Feedback](/cognitive-toolkit/test/Feedback-Channels)
 # [How To](/cognitive-toolkit/test/Tutorials-examples)
 ## [Tutorials](/cognitive-toolkit/test/tutorials)
