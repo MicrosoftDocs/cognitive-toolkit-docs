@@ -158,6 +158,7 @@
 #### [BrainScript minibatchSize and Python minibatch_size_in_samples in CNTK](/cognitive-toolkit/test/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 #### [ConvertDBN command](/cognitive-toolkit/test/ConvertDBN-command)
+#### [Baseline Metrics](/cognitive-toolkit/test/Baseline-Metrics)
 #### [Plot command](/cognitive-toolkit/test/Plot-command)
 #### [BrainScript via command line](/cognitive-toolkit/test/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/test/Top-level-commands)
@@ -187,3 +188,4 @@
 ## [Conference appearances](/cognitive-toolkit/test/Conference-Appearances)
 ## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/test/CNTK-1bit-SGD-License)
+
