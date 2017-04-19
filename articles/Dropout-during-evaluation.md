@@ -1,0 +1,1 @@
+During evaluation, the dropout rate is automatically set 0, so you don't have to do anything.
