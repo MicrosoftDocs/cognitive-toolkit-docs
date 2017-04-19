@@ -1,0 +1,1 @@
+Use the [[CloneFunction]] operation. The [examples section](https://github.com/Microsoft/CNTK/wiki/CloneFunction#examples) in the [[CloneFunction]] page provides an adaptation example.
