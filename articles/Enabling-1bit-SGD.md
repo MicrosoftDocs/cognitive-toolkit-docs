@@ -82,6 +82,6 @@ Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 Then perform the build as usual.
 
 **Next steps**
-* [[CNTK usage overview]]
-* [[Examples]]
-* [[Config file overview]]
+* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
+* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Config file overview](/en-us/cognitive-toolkit/Config-file-overview.md)

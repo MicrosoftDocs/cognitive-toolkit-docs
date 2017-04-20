@@ -5,7 +5,7 @@ There are three main tasks (or actions) that are supported by CNTK:
 * **Deploy** - Use a trained model, e.g. in your own solution, to classify new instances
 
 A brief overview for each of these tasks is given below and pointers to a more detailed description are provided.
-In addition there are other tasks that CNTK supports such as **edit** existing models and **write** node outputs to a file. A description of these is provided in the Advanced Topics section on the [[Top-level commands]] page.
+In addition there are other tasks that CNTK supports such as **edit** existing models and **write** node outputs to a file. A description of these is provided in the Advanced Topics section on the [Top-level commands](/en-us/cognitive-toolkit/Top-level-commands.md) page.
 
 ## Training a model using CNTK
 
@@ -52,15 +52,15 @@ The above code snippet defines a command called `MNISTtrain` with `action = "tra
 
 The three main configuration blocks for training define the network itself and the parameters for the training algorithm and the data reader.
 
-* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [[Simple Network Builder]] for standard models or the [[BrainScript Network Builder]] for custom ones. Please refer to the corresponding Wiki pages for details.
-* SGD - this block lets you parameterize the training algorithm (stochastic gradient descent). Configurable options include momentum, adaptive learning rate, adaptive minibatch size, parallel training. See [[SGD block]] for more details.
-* reader - the reader block defines which reader to use and where the corresponding input files are. CNTK provides several data readers for different formats and tasks (see [[Reader block]]).
+* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [Simple Network Builder](/en-us/cognitive-toolkit/Simple-Network-Builder.md) for standard models or the [BrainScript Network Builder](/en-us/cognitive-toolkit/BrainScript-Network-Builder.md) for custom ones. Please refer to the corresponding Wiki pages for details.
+* SGD - this block lets you parameterize the training algorithm (stochastic gradient descent). Configurable options include momentum, adaptive learning rate, adaptive minibatch size, parallel training. See [SGD block](/en-us/cognitive-toolkit/SGD-block.md) for more details.
+* reader - the reader block defines which reader to use and where the corresponding input files are. CNTK provides several data readers for different formats and tasks (see [Reader block](/en-us/cognitive-toolkit/Reader-block.md)).
 
 Finally, the line `command = MNISTtrain` specifies which of the defined tasks to execute. To execute several tasks consecutively, e.g. training and evaluation, simply add more tasks to the command separated by a colon: `command = "MNISTtrain:MNISTtest"`.
 
 ## Evaluating a trained model
 
-To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [[Train, Test, Eval]] for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
+To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [Train, Test, Eval](/en-us/cognitive-toolkit/Train,-Test,-Eval.md) for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
 ```
 testNetwork = {
     action = "test"
@@ -88,6 +88,6 @@ Once you have trained a model, you need the functionality to evaluate the model 
 
 **Next steps**
 * [Model Evaluation Detailed](./CNTK-Evaluation-Overview)
-* [[Examples]]
-* [[Config file overview]]
-* [[Command line parsing rules]]
+* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Config file overview](/en-us/cognitive-toolkit/Config-file-overview.md)
+* [Command line parsing rules](/en-us/cognitive-toolkit/Command-line-parsing-rules.md)

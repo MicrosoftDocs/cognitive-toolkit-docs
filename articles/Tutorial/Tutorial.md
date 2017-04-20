@@ -314,7 +314,7 @@ Reading and writing data is performed using *Data Readers*. A reader is defined 
 
 In our example we use the following parameters:
 
-- `readerType`: In our example we will use `CNTKTextFormatReader`, which is designed to read the text-based CNTK format, described in detail on [[this page|CNTKTextFormat-Reader]].
+- `readerType`: In our example we will use `CNTKTextFormatReader`, which is designed to read the text-based CNTK format, described in detail on [this page](/en-us/cognitive-toolkit/CNTKTextFormat-Reader.md).
 - `file`: the file that contains the dataset
 - `dim`: the dimension of the input vector.
 - `format`: the type of the input vector, can be dense or sparse.

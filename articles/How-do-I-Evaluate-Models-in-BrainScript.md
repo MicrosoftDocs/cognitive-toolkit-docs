@@ -4,7 +4,7 @@
 * [Evaluate my newly trained model but output the activations at an intermediate layer](./How-do-I-Evaluate-Models-in-BrainScript#evaluate-my-newly-trained-model-but-output-the-activations-at-an-intermediate-layer)? 
 * [Associate an id with a prediction](./How-do-I-Evaluate-Models-in-BrainScript#associate-an-id-with-a-prediction)? 
 * [Deploy model evaluation on Windows](https://github.com/Microsoft/CNTK/wiki/CNTK-Evaluation-Overview#eval-samples-in-cntk-binary-download-package-for-windows)? 
-* [[Evaluate a model in an Azure WebApi]] 
+* [Evaluate a model in an Azure WebApi](/en-us/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi.md) 
 
 ## Do early stopping
 

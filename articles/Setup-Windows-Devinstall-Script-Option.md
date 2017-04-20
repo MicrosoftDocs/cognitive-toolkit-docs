@@ -107,4 +107,4 @@ Example:
 Links:
 
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine)
-- [[Home]]
+- [Home](/en-us/cognitive-toolkit/Home.md)

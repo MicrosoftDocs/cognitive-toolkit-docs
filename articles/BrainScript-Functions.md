@@ -127,7 +127,7 @@ which could be used like this:
 
 This is the same as the initial example in [Basic Concepts](./BS-Basic-Concepts.md), but using functions.
 
-Next: Find out about [Model Editing](./BS-Model-Editing) or go straight to [[Full Function Reference]].
+Next: Find out about [Model Editing](./BS-Model-Editing) or go straight to [Full Function Reference](/en-us/cognitive-toolkit/Full-Function-Reference.md).
 
 ## NDLNetworkBuilder (Deprecated)
 Earlier versions of CNTK used the now deprecated `NDLNetworkBuilder` instead of `BrainScriptNetworkBuilder`. `NDLNetworkBuilder`'s function definition differed in a few ways. The following definition is valid in `NDLNetworkBuilder`:

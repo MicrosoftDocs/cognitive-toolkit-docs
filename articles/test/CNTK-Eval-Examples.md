@@ -10,7 +10,7 @@ The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/master/Exam
 
 On Windows, 
 - You need Visual Studio 2015 update 3 for using these samples.
-- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [[Troubleshoot CNTK]] page for more information.
+- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](/en-us/cognitive-toolkit/Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\\..\X64\CNTKLibraryCSEvalCPUOnlyExamples.Release\CNTKLibraryCSEvalCPUOnlyExamples.exe.
  
 On Linux, only C++ is supported. Please refer to Makefile for building samples. The target name CNTKLIBRARY_CPP_EVAL_EXAMPLES is used to build CNTKLibraryCPPEvalExamples. 
@@ -28,7 +28,7 @@ The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Eva
  
 On Windows, The solution file [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) is used to build and run samples. Please note 
 - You need Visual Studio 2015 update 3 for using these samples.
-- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [[Troubleshoot CNTK]] page for more information.
+- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](/en-us/cognitive-toolkit/Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\\..\X64\CPPEvalClient.Release\CppEvalClient.exe. 
 
 On Linux, please refer to Makefile for building samples. The target name EVAL_CLIENT, and EVAL_EXTENDED_CLIENT are used to build these projects. 

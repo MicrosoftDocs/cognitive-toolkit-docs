@@ -16,4 +16,4 @@ The CNTK executable (by nature) runs as a process, and thus will take some time 
 #### File based input/output
 The CNTK executable reads the input data from file(s) and writes the output data to a file. For services running in the cloud, this may cause some performance issues.
 
-**Note: If you do go the route of evaluating a CNTK model with the CNTK executable, make sure your parameters are adequate for the evaluation. In particular specifying an appropriate size for the MiniBatchSize. Please refer to the [[Troubleshoot CNTK]] page for more information.**
+**Note: If you do go the route of evaluating a CNTK model with the CNTK executable, make sure your parameters are adequate for the evaluation. In particular specifying an appropriate size for the MiniBatchSize. Please refer to the [Troubleshoot CNTK](/en-us/cognitive-toolkit/Troubleshoot-CNTK.md) page for more information.**

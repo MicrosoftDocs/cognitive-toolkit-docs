@@ -8,7 +8,7 @@ Please do not auto-format existing code (Edit -> Advanced -> Format Document/Ctr
 
 For code you write you can use CLANG-FORMAT (see http://clang.llvm.org/) to perform an initial formatting step. A format specification for CLANG-FORMAT (version 3.7) is available in the root of the CNTK repository (.clang-format)
 
-[[Coding Guidelines]]
+[Coding Guidelines](/en-us/cognitive-toolkit/Coding-Guidelines.md)
 
-[[How to Test]]
+[How to Test](/en-us/cognitive-toolkit/How-to-Test.md)
 

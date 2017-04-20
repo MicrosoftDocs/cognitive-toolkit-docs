@@ -1,1 +1,0 @@
-See the description at [[Understanding and Extending Readers]] and look for the section describing how to "compose several data deserializers" 

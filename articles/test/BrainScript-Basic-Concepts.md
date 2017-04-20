@@ -200,6 +200,6 @@ In addition, there are 3 more special functions with built-in "magic" in CNTK, w
 * `Constant()`: Declares a constant.
 * `PastValue()` and `FutureValue()`: Access a variable in a network function at a different time step, for form recurrent loops.
 
-Any other predefined name is either a built-in primitive function such as `Sigmoid()` or `Convolution()` with a C++ implementation, a predefined library function realized in BrainScript such as `BS.RNNs.LSTMP()`, or a record that acts as a namespace for library functions (e.g. `BS.RNNs`). See [[BrainScript-Full-Function-Reference]] for a full list.
+Any other predefined name is either a built-in primitive function such as `Sigmoid()` or `Convolution()` with a C++ implementation, a predefined library function realized in BrainScript such as `BS.RNNs.LSTMP()`, or a record that acts as a namespace for library functions (e.g. `BS.RNNs`). See [BrainScript-Full-Function-Reference](/en-us/cognitive-toolkit/BrainScript-Full-Function-Reference.md) for a full list.
 
 Next: [BrainScript Expressions](./BrainScript-Expressions)

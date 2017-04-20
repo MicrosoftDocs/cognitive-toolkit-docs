@@ -36,8 +36,8 @@ No. CNTK is used in production for the Speech Recognition as well as for Image a
 Using CNTK is easy and straightforward.  Here are some ways to get started.
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine)
 * [Tutorials](https://github.com/Microsoft/CNTK/wiki/Tutorials)
-* [[Examples]]
-* [[CNTK usage overview]]
+* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK)
 
 #### Do eval libs get produced for GPU?
@@ -47,7 +47,7 @@ Unlike training, eval (as distributed through the Nuget package) is currently CP
 Doing so prevents the same samples from always appearing in a mini-batch together. This leads to improvements in the validation accuracy.
 
 #### Can the built-in readers be used train a network model using multiple input files?
-Yes.  See the description at [[Understanding and Extending Readers]] and look for the section describing how to "compose several data deserializers" 
+Yes.  See the description at [Understanding and Extending Readers](/en-us/cognitive-toolkit/Understanding-and-Extending-Readers.md) and look for the section describing how to "compose several data deserializers" 
 
 #### How are sequences handled in CNTK?
 See this article [Working with Sequences](https://github.com/Microsoft/CNTK/blob/master/bindings/python/doc/sequence.rst).

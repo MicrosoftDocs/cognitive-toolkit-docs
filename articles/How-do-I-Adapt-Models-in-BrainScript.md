@@ -76,11 +76,11 @@ Use the [`CloneFunction`](./CloneFunction)`()` operation. E.g.:
 
 ## Adapt a model I trained on one task to another
 
-Use the [[CloneFunction]] operation. The [examples section](https://github.com/Microsoft/CNTK/wiki/CloneFunction#examples) in the [[CloneFunction]] page provides an adaptation example.
+Use the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) operation. The [examples section](https://github.com/Microsoft/CNTK/wiki/CloneFunction#examples) in the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) page provides an adaptation example.
 
 ## Save and reload weights from one model to another
 
-Use the [[CloneFunction]] operation. The [examples section](https://github.com/Microsoft/CNTK/wiki/CloneFunction#examples) in the [[CloneFunction]] page provides an adaptation example.
+Use the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) operation. The [examples section](https://github.com/Microsoft/CNTK/wiki/CloneFunction#examples) in the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) page provides an adaptation example.
 
 ## Continue training from a previously saved model
 

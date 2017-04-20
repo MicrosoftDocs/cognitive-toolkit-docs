@@ -15,7 +15,7 @@ The reader block is used for all types of readers and the `readerType`  paramete
         ]
     ]
 
-You can explore different reader settings in the configurations of the [[Examples]]. For details regarding specific readers see the corresponding wiki pages:
+You can explore different reader settings in the configurations of the [Examples](/en-us/cognitive-toolkit/Examples.md). For details regarding specific readers see the corresponding wiki pages:
 
 * [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader)
 * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader)

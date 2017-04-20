@@ -44,20 +44,20 @@ If you want to take a look at the CNTK source code, compile CNTK yourself, make 
 |[Migration from VS13 to VS15](./Setup-Migrate-VS13-to-VS15) | 
  
 
-* [[Enabling 1bit SGD]]
-* [[Developing and Testing]]
+* [Enabling 1bit SGD](/en-us/cognitive-toolkit/Enabling-1bit-SGD.md)
+* [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md)
 * [CNTK Production Test Configurations](./Test-Configurations)
 
 #### Installation as Azure Virtual Machine or Linux Docker container
 
 You may use CNTK via Microsoft Azure Virtual Machine offering (Windows and Linux) or install it as a Docker container (Linux). See the corresponding sections:
 
-* [[CNTK on Azure]]
-* [[CNTK Docker Containers]]
+* [CNTK on Azure](/en-us/cognitive-toolkit/CNTK-on-Azure.md)
+* [CNTK Docker Containers](/en-us/cognitive-toolkit/CNTK-Docker-Containers.md)
 
 #### Usage and Samples
 
 If you want to learn more about CNTK usage and how to execute the provided samples, you find more information on the following pages
 
-* [[CNTK usage overview]]
-* [[Examples]]
+* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
+* [Examples](/en-us/cognitive-toolkit/Examples.md)

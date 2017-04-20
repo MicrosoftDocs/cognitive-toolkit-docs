@@ -349,7 +349,7 @@ I.e. what Deconvolution() does implicitly is:
 
     deconv_A = DeconvLayer {inputDim, (5:5), cMap1, lowerPad=(2:2:0), upperPad=(2:2:0)}(unpool_A)
 
-See [[Image auto encoder using Deconvolution and Unpooling]] for a detailed example and walk through.
+See [Image auto encoder using Deconvolution and Unpooling](/en-us/cognitive-toolkit/Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
 
 # MaxPoolingLayer{}, AveragePoolingLayer{}
 
@@ -422,7 +422,7 @@ The unpooling operation is the inverse of a pooling operation. It requires two i
 
     unpool_A = MaxUnpoolingLayer {(2:2), stride=(2:2)}(deconv_B, relu_A)
 
-See [[Image auto encoder using Deconvolution and Unpooling]] for a detailed example and walk through.
+See [Image auto encoder using Deconvolution and Unpooling](/en-us/cognitive-toolkit/Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
 
 # EmbeddingLayer{}
 

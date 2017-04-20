@@ -282,7 +282,7 @@ Transform configuration identifies the transform type and any transform-specific
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
-| `scpFile`                             | A list of paths to SCP files to be processed. The files should be HTK compatible files and must be specified in the “archive” format.  The details of using an archive are described in [[HTKMLF Reader]].  **Required**. |
+| `scpFile`                             | A list of paths to SCP files to be processed. The files should be HTK compatible files and must be specified in the “archive” format.  The details of using an archive are described in [HTKMLF Reader](/en-us/cognitive-toolkit/HTKMLF-Reader.md).  **Required**. |
 | `dim`                                 | An integer that specifies the full feature vector dimension with the desired context window.<sup>[1](#footnote1)</sup> **Required** |
 | `contextWindow`                       | Can either be specified as a pair of positive integers or as a single positive integer (in which case it's interpreted as a pair with the same number repeated twice). Specifies left and right size (first and second integer of the pair) of the context window in samples. *Optional*, defaults to `1`. |
 | `prefixPathInSCP`                     | A prefix string to apply to the paths specified within the SCP files. *Optional*. |
