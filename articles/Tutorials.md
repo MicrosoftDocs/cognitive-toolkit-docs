@@ -1,3 +1,14 @@
+Title:   Tutorials
+Author:    chrisbasoglu
+ms.author   cbasoglu
+Date:    02/14/2017
+ms.date   02/14/2017
+ms.topic   conceptual
+ms.service  Cognitive-services
+ms.devlang   python, brainscript
+
+# Tutorials
+
 There are tutorials for Python users and for BrainScript users.
 
 ## Python Jupyter Notebook Tutorials
