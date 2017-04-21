@@ -16,7 +16,7 @@ Common unary elementwise functions and operations.
     Sin (x)
     Sqrt (x)
 
-### Parameters
+## Parameters
 
 * `x`: argument to apply the function or operation to
 
@@ -27,16 +27,16 @@ Sparse values are currently not supported.
 * `minValue`: inputs less than this value are replaced by this value
 * `maxValue`: likewise, inputs more than this value are replaced by this value
 
-### Return Value
+## Return Value
 
 Result of applying the function or operation. The output's tensor shape is the same as the input's.
 
-### Description
+## Description
 
 These are common functions and unary operations.
 
 Note that `BS.Boolean.Not()` expects inputs to be 0 or 1.
 
-### Example
+## Example
 
     MySoftmax (z) = Exp (LogSoftmax (z))

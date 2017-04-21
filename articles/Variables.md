@@ -2,7 +2,7 @@ Variables are defined in NDL when they appear on the left of an equal sign ```=`
 
 Variable names may be any alphanumeric sequence that starts with a letter. A variable can contain a matrix or scalar value.
 
-### Reserved words
+## Reserved words
 
 Any name that is a [Function](.\NDL-Functions) name is reserved and can not be used for a variable. The special node names below are also  reserved and can not be used as variable names.
 ```
@@ -13,7 +13,7 @@ EvalNodes
 OutputNodes
 ```
 
-### Variable names with dots
+## Variable names with dots
 
 When it is necessary to access a variable that is defined in a [Macro](.\NDL-Macros) it can be accessed using dot syntax. If the Macro ``FF`` is called from the following code:
 ```

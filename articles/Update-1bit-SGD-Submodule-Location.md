@@ -4,7 +4,7 @@ If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD) *prio
 
 If you cloned CNTK Repository after January 25, 2017, or if you do not use 1bit-SGD Repository code, you may safely ignore information in this article.
 
-#### Updating 1bit-SGD Submodule information
+## Updating 1bit-SGD Submodule information
 
 In the instructions below we assume that the local copy of CNTK Repository is located at:
 

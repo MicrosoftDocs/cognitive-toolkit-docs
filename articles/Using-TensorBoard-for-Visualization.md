@@ -1,6 +1,6 @@
 [TensorBoard](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tensorboard/README.md) is a suite of visualization tools that makes it easier to understand and debug deep learning programs. For example, it allows viewing the model graph, plotting various scalar values as the training progresses, and visualizing the embeddings. 
 
-### Python
+## Python
 
 [TensorBoardProgressWriter](https://www.cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter) class in Python now supports output in the native TensorBoard format, thus enabling rich visualization capabilities for CNTK jobs. At present, TensorBoardProgressWriter can be used to:
 * Record model graph.
@@ -55,7 +55,7 @@ The following scripts contain examples on how to use TensorBoardProgressWriter:
 [Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py)<br/>
 [Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py](https://github.com/Microsoft/CNTK/blob/master/Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py)
 
-### BrainScript
+## BrainScript
 
 You can also instruct CNTK to log the training progress and the model graph from BrainScript. The following two settings in SGD block control TensorBoard output:
 

@@ -1,7 +1,7 @@
 ## BrainScript Basics
 
   * [Overview](./BrainScript-Config-File-Overview)
-  * [Train, Test, Eval](https://github.com/Microsoft/CNTK/wiki/BrainScript-Train%2C-Test%2C-Eval)
+  * [Train, Test, Eval](/BrainScript-Train-Test-Eval)
   * [Top-level Configurations](./BrainScript-Top-level-configurations)
   * [SimpleNetworkBuilder](./Simple-Network-Builder)
   * [Performance Profiler](./BrainScript-and-Python-Performance-Profiler)
