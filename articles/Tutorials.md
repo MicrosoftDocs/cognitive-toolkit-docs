@@ -7,6 +7,7 @@ ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   python, brainscript
 
+
 # Tutorials
 
 There are tutorials for Python users and for BrainScript users.

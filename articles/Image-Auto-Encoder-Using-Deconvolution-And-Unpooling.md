@@ -1,3 +1,25 @@
+"Title:   Image Auto Encoder using deconvolution and unpooling
+
+Author:    chrisbasoglu
+
+ms.author:   cbasoglu
+
+Date:    01/20/2017
+
+ms.date:   01/20/2017
+
+ms.topic:   conceptual
+
+ms.service:  Cognitive-services
+
+ms.devlang:   python
+
+
+# Image Auto Encoder using deconvolution and unpooling"
+
+
+
+
 **Table of Contents**
 
 - [Summary](#summary)
