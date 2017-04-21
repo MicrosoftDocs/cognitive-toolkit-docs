@@ -1,4 +1,4 @@
-* [Tutorials](/en-us/cognitive-toolkit/Tutorials.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
-* [Articles](/en-us/cognitive-toolkit/Articles.md)
-* [Presentations](/en-us/cognitive-toolkit/Presentations.md)
+* [Tutorials](./Tutorials.md)
+* [Examples](./Examples.md)
+* [Articles](./Articles.md)
+* [Presentations](./Presentations.md)
