@@ -1,11 +1,11 @@
 Title:   Tutorials
 Author:    chrisbasoglu
-ms.author   cbasoglu
+ms.author:   cbasoglu
 Date:    02/14/2017
-ms.date   02/14/2017
-ms.topic   conceptual
-ms.service  Cognitive-services
-ms.devlang   python, brainscript
+ms.date:   02/14/2017
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python, brainscript
 
 # Tutorials
 
