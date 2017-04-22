@@ -1,3 +1,16 @@
+---
+Title:   Unary operations
+Author:    chrisbasoglu
+Date:    08/15/2016
+ms.author:   cbasoglu
+ms.date:   08/15/2016
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Unary operations
+
 Common unary elementwise functions and operations.
 
     Abs (x)

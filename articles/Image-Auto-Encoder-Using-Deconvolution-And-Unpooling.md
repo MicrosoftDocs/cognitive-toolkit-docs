@@ -1,8 +1,8 @@
 ---
 Title:   Image Auto Encoder using deconvolution and unpooling
 Author:    chrisbasoglu
-ms.author:   cbasoglu
 Date:    01/20/2017
+ms.author:   cbasoglu
 ms.date:   01/20/2017
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -18,7 +18,7 @@ ms.devlang:   python
 - [Run the example](#run-the-example)
 - [Technical details](#technical-details)
 
-# Summary
+## Summary
 
 <p align="center">
 <a target="_blank" href="./pictures/ImageAutoEncoder/imageAutoEncoder_16x.png"><img src="./pictures/ImageAutoEncoder/imageAutoEncoder_16x.png" alt="image" width="500"/></a>
@@ -27,13 +27,13 @@ ms.devlang:   python
 The example [Image\GettingStarted\07_Deconvolution_PY.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_PY.py) shows how to use Deconvolution and Unpooling to generate a simple image auto encoder ([07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk) is the corresponding BrainScript version). It uses the MNIST dataset, which has a resolution of 28x28x1, encodes it into a 7x7x1 representation using convolution and pooling and decodes to the original resolution. The training criterion is root-mean-square error (RMSE). 
 The figure above shows visualizations of the original image, the encoded image and the decoded image for the first five images of the MNIST test set.
 
-# Setup
+## Setup
 
 To run the example you need the MNIST data set. You can get the data by running the following command from the `Examples\Image\DataSets\MNIST` folder:
 
 `python install_mnist.py`
 
-# Run the example
+## Run the example
 
 The example is located in the `Examples\Image\GettingStarted` folder. To run this example, use the following command to run the Python version (from a Python CNTK environment):
 
@@ -50,7 +50,7 @@ The RMSE values for training and testing are 0.225 and 0.223 respectively. To vi
 Set `use_brain_script_model=True` for the BrainScript model and `False` for the Python model. 
 The visualizations will be stored in the `Output` folder under `Examples\Image\GettingStarted` together with a text representation of the encoder and the decoder output. 
 
-# Technical details
+## Technical details
 
 Below is the model definition for the simple image auto encoder in BrainScript (for the full config file see [Image\GettingStarted\07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk))
 
@@ -78,7 +78,7 @@ The decoder part compresses the original `784` (28x28) numbers to `49` (7x7), a 
 <a target="_blank" href="./pictures/ImageAutoEncoder/imageAutoEncoder_cmp.png"><img src="./pictures/ImageAutoEncoder/imageAutoEncoder_cmp.png" alt="image" width="500"/></a>
 </p>
 
-## Deconvolution and Unpooling
+### Deconvolution and Unpooling
 
 Lets look a bit closer at the MaxUnpoolingLayer and the DeconvLayer.
 
@@ -90,7 +90,7 @@ The MaxPoolingLayer requires two inputs, which are the output of the correspondi
 
 The first parameter of the DeconvLayer is the depth of the output volume, the second is the kernel shape (width:height) and the third is the depth of the input volume. The padding parameters have to be set in accordance to the kernel shape to achieve the desired width and height of the output tensor (28x28 in this case). For more details on the DeconvLayer see the [Layer Reference page](https://github.com/Microsoft/CNTK/wiki/Layers-Reference#deconvlayer).
 
-## Multi layer auto encoder
+### Multi layer auto encoder
 
 You can stack more layers of Conv/Deconv and Pool/Unpool for a more complex auto encoder. The following is an example with two layers of each type that you can use in `07_Deconvolution_BS.cntk` (simply replace the model in the file):
 

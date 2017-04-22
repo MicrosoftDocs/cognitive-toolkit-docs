@@ -1,8 +1,8 @@
 ---
 Title:   The Microsoft Cognitive Toolkit
 Author:    chrisbasoglu
-ms.author:   cbasoglu
 Date:    04/06/2017
+ms.author:   cbasoglu
 ms.date:   04/06/2017
 ms.topic:   landing-page
 ms.service:  Cognitive-services
@@ -10,7 +10,6 @@ ms.devlang:   NA
 ---
 
 # The Microsoft Cognitive Toolkit
-
 
 The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by Microsoft Research. [This video](https://youtu.be/9gDDO5ldT-4) provides a high-level view of the toolkit. 
 
