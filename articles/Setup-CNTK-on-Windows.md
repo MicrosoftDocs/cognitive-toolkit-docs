@@ -3,7 +3,7 @@ If you want to build manually CNTK from source code on Windows using Visual Stud
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead. 
 
 ### 64-bit OS
-CNTK requires a 64-bit Windows installation. We tested the build process on Windows 8.1, Windows 10, and Windows Server 2012 R2 and later. Other environments are not officially supported. For compatibility issues check [CNTK Production Build and Test configuration](https://github.com/Microsoft/CNTK/wiki/Test-Configurations).
+CNTK requires a 64-bit Windows installation. We tested the build process on Windows 8.1, Windows 10, and Windows Server 2012 R2 and later. Other environments are not officially supported. For compatibility issues check [CNTK Production Build and Test configuration](./Test-Configurations).
 
 ### Environment Variables and Components
 
@@ -333,7 +333,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 #### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](https://github.com/Microsoft/CNTK/wiki/Setup-Windows-Binary-Script) or [manually](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#optional-cntk-v2-python-support)). 
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script) or [manually](./Setup-CNTK-on-Windows#optional-cntk-v2-python-support)). 
 Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
 As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 
@@ -344,7 +344,7 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 #### Debugging CNTK source code in Visual Studio
  - If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
- - If you want to use Python Tools, CNTK, and Visual Studio, see [here](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-Python-Tools-For-Windows)   
+ - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows)   
  - To debug BrainScript in CNTK with Visual Studio, follow the steps [here](Debugging CNTK source code in Visual Studio).
 
 ### Contributing to CNTK code

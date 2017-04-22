@@ -31,7 +31,7 @@ This release contains the following **breaking changes**:
 
 ### CNTK Python API
 
-We improved the installation of CNTK on Python. As a first step you will find some simple instructions how to `pip install` the CPU version of CNTK on Anaconda 3 on [this page](https://github.com/Microsoft/CNTK/wiki/Setup-Windows-Python). Similar improvements for Linux as well as CNTK GPU versions will follow shortly.
+We improved the installation of CNTK on Python. As a first step you will find some simple instructions how to `pip install` the CPU version of CNTK on Anaconda 3 on [this page](./Setup-Windows-Python). Similar improvements for Linux as well as CNTK GPU versions will follow shortly.
 
 ### CNTK C++ API
 

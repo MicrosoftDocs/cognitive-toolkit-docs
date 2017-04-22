@@ -7,7 +7,7 @@ At this page we present the answers to some of the most common questions we get 
 We first created CNTK for ourselves.  CNTK was developed for the fastest training on the biggest data sets.  Many of Microsoft's critical services run on models trained with CNTK. The results were so positive, we wanted to share our toolkit with the world.
 
 #### How can I give feedback?
-Give us feedback through these [channels](https://github.com/Microsoft/CNTK/wiki/Feedback-Channels).
+Give us feedback through these [channels](./Feedback-Channels).
 
 #### Training deep learning models can be time intensive, can CNTK help with this?
 For mission critical AI research, we believe efficiency and performance are important criteria. CNTK was designed for peak performance for not only CPUs but also single-GPU, multi-GPU, and multi-machine-multi-GPU scenarios. Additionally, Microsoft’s 1-bit compression technique or Block momentum technique dramatically reduced communication costs -- enabling highly scalable parallel training on a large number of GPUs spanning multiple machines.
@@ -35,7 +35,7 @@ No. CNTK is used in production for the Speech Recognition as well as for Image a
 #### How can I use CNTK?
 Using CNTK is easy and straightforward.  Here are some ways to get started.
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine)
-* [Tutorials](https://github.com/Microsoft/CNTK/wiki/Tutorials)
+* [Tutorials](./Tutorials)
 * [Examples](/en-us/cognitive-toolkit/Examples.md)
 * [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK)

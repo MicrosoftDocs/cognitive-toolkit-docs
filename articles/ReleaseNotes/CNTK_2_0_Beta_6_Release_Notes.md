@@ -4,7 +4,7 @@ This is a summary of new features delivered with the Beta 6 release of CNTK V.2.
 
 ### Microsoft Cognitive Toolkit and NVIDIA CUDA 8
 
-This release adds support of CUDA 8 on Linux (support on Windows was introduced in Beta 5). Binary packages for both Linux and Windows are built using NVIDIA CUDA 8.0. If you are a developer and building CNTK on your own system you can still continue using CUDA 7.5. However note, that this will change soon. See more details [here](https://github.com/Microsoft/CNTK/wiki/CNTK-move-to-Cuda8).
+This release adds support of CUDA 8 on Linux (support on Windows was introduced in Beta 5). Binary packages for both Linux and Windows are built using NVIDIA CUDA 8.0. If you are a developer and building CNTK on your own system you can still continue using CUDA 7.5. However note, that this will change soon. See more details [here](./CNTK-move-to-Cuda8).
 
 ### Python 3.5 support (Linux)
 
@@ -14,7 +14,7 @@ This release adds support of CUDA 8 on Linux (support on Windows was introduced 
 ```
 If the script is called without any parameters (or with the parameter ```--py-version 34```) then Python 3.4 will be enabled.
 
-See the full installation instructions for [binary package on Linux here](https://github.com/Microsoft/CNTK/wiki/Setup-Linux-Binary-Script).
+See the full installation instructions for [binary package on Linux here](./Setup-Linux-Binary-Script).
 
 ### Support for training on one-hot and sparse arrays via NumPy
  
@@ -67,6 +67,6 @@ you now need to execute
 ```
 z.save_model(filename)
 ```
-```load_model()``` works the same way as before but you import it from ```cntk.ops.functions```. See more in the [Wiki article](https://github.com/Microsoft/CNTK/wiki/Evaluate-a-saved-convolutional-network).
+```load_model()``` works the same way as before but you import it from ```cntk.ops.functions```. See more in the [Wiki article](./Evaluate-a-saved-convolutional-network).
 
 We also continue fine tuning new features and fixing different bugs - thank you once again for the constant feedback. You are not required to adopt your code or models to take an advantage of these improvements.

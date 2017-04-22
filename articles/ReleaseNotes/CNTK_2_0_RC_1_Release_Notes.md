@@ -5,13 +5,13 @@ With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of
 
 ### Highlights of CNTK 2.0 Release Candidate 1
 
-The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](https://github.com/Microsoft/CNTK/wiki/CNTK-2.0-Beta-Highlights).
+The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](./CNTK-2.0-Beta-Highlights).
 
 ### Breaking changes
 
 This release contains the following **breaking changes**:
 
-* New file names of CNTK Shared Libraries. [Read more in this Wiki article](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format).
+* New file names of CNTK Shared Libraries. [Read more in this Wiki article](./CNTK-Shared-Libraries-Naming-Format).
   * This is important for developers and other users who use explicit CNTK Shared Library file names in their solutions.
   * If you are using CNTK NuGet packages for C++ or C# no action is required (beside updating to the latest NuGet package)
 * There is a set of breaking changes in Python and C# API. See the correspondent sections below.
@@ -64,7 +64,7 @@ This release contains the following **breaking changes in CNTK Python API**:
 * Performance optimizations.
 * Multiple bug fixes, including memory safety and concurrent evaluations.
 
-The updated APIs are described in [this Wiki page](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-Managed-API).
+The updated APIs are described in [this Wiki page](./CNTK-Library-Managed-API).
 
 #### Breaking changes
 

@@ -16,7 +16,7 @@
 [CNTK](http://www.cntk.ai) is a framework for describing learning machines. Although intended for neural networks, the learning machines are arbitrary in that the logic of the machine is described by a series of computational steps in a *Computational Network*. A Computational Network defines the function to be learned as a directed graph where each leaf node consists of an input value or parameter, and each non-leaf node represents a matrix or tensor operation upon its children. The beauty of CNTK is that once a computational network has been described, all the computation required to learn the network parameters is taken care of automatically. There is no need to derive gradients analytically or to code the interactions between variables for backpropagation.
 
 In this tutorial we will walk through several complete CNTK examples, showing 
-- how to describe a network in our network-description language [BrainScript](https://github.com/Microsoft/CNTK/wiki/BrainScript-Network-Builder); 
+- how to describe a network in our network-description language [BrainScript](./BrainScript-Network-Builder); 
 - how to set the learning parameters; and 
 - how to read in, and write out, data
 
@@ -26,7 +26,7 @@ The input files (data, scripts) can be found inside the CNTK source-code distrib
 
 ## Installing CNTK
 
-For the scope of this tutorial it is sufficient to install the CNTK binaries as it is described [here](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine). 
+For the scope of this tutorial it is sufficient to install the CNTK binaries as it is described [here](./Setup-CNTK-on-your-machine). 
 
 ## Logistic Regression
 
@@ -73,7 +73,7 @@ We will start with how to describe the Computational Network.
 
 ####Describing Logistic Regression as a Computational Network
 
-To describe our Computational Network, we use CNTK's network-description language [BrainScript](https://github.com/Microsoft/CNTK/wiki/BrainScript-Network-Builder). We will need to define:
+To describe our Computational Network, we use CNTK's network-description language [BrainScript](./BrainScript-Network-Builder). We will need to define:
 * the input features
 * the labels
 * the parameters to learn
@@ -348,7 +348,7 @@ The example so far has been described to use CNTK in CPU mode only. To make use 
 
     cntk  configFile=lr_ndl.cntk  deviceId=auto
 
-This will make CNTK use the GPU for computation. See more on the `deviceId` parameter [here (Windows)](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#trying-cntk-with-gpu) or [here (Linux)](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Linux#trying-cntk-with-gpu).
+This will make CNTK use the GPU for computation. See more on the `deviceId` parameter [here (Windows)](./Setup-CNTK-on-Windows#trying-cntk-with-gpu) or [here (Linux)](./Setup-CNTK-on-Linux#trying-cntk-with-gpu).
 
 This shows an important mechanism: Any key-value pair on the command-line parameter of the CNTK executable "patches" an existing configuration (with the exception of the key "configFile" which is always required to set a "base" configuration). Thus, the above is equivalent to having a `deviceId` key *in* the file itself. 
 
@@ -436,4 +436,4 @@ So on our test data (as we would expect given the decision boundary we plotted b
 
 # Where To Go Next
 
-Check out [Tutorial II](https://github.com/Microsoft/CNTK/wiki/Tutorial2) to learn how to build more complex models like convolutional neural networks.
+Check out [Tutorial II](./Tutorial2) to learn how to build more complex models like convolutional neural networks.

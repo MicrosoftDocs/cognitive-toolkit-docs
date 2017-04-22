@@ -22,7 +22,7 @@
 
 # Introduction
 
-This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](https://github.com/Microsoft/CNTK/wiki/Tutorial), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
+This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](./Tutorial), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
 
 The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([Github link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
 
@@ -38,7 +38,7 @@ CNTK comes with a Python script that fetches and prepares the MNIST data for CNT
 
 # Some Important CNTK Concepts
 
-Before building the neural networks for written digit image recognition using the MNIST dataset, we will go through two important concepts of CNTK: (1) [Functions](https://github.com/Microsoft/CNTK/wiki/BS-Functions); and (2) model editing.
+Before building the neural networks for written digit image recognition using the MNIST dataset, we will go through two important concepts of CNTK: (1) [Functions](./BS-Functions); and (2) model editing.
 
 ## CNTK Functions
 
@@ -127,11 +127,11 @@ Let's get back to the task at hand: classifying images of hand-written digits. T
 
 We saw in the previous tutorial that softmax regression can learn to separate data with more than two classes. However, the separation boundaries are linear. What if those boundaries were trickier? In that case, we could distort the feature space in a way to bring the data closer to being linearly separable, and this is what a hidden layer can do for us. So basically, we take our softmax regression solution and insert in a hidden layer connected to the network's inputs. Such a layer will learn to apply a feature mapping that projects the data into a space where it is (hopefully) linearly separable. Then, the next layer will receive an easier problem to deal with using its linear decision boundaries.
 
-If we apply softmax classification like in the [previous tutorial](https://github.com/Microsoft/CNTK/wiki/Tutorial) to the MNIST problem, we will get an error rate of *7.5%*. We will show that by adding one hidden layer, the error is reduced to *2.25%*.
+If we apply softmax classification like in the [previous tutorial](./Tutorial) to the MNIST problem, we will get an error rate of *7.5%*. We will show that by adding one hidden layer, the error is reduced to *2.25%*.
 
 ## The Network Definition
 
-First, we define our features and labels. Note that we apply a scaling of (1.0 / 256.0) on the features in order to have their values within the range 0 to 1. This normalization helps SGD to converge faster with better predictive performance. Then, we specify the topology of our network which looks similar to the one we used in [Part 1 of the tutorial](https://github.com/Microsoft/CNTK/wiki/Tutorial), except that it has an additional layer, that is, the hidden layer `DNNSigmoidLayer`. The layers are defined in a separate shared BS file, [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs).
+First, we define our features and labels. Note that we apply a scaling of (1.0 / 256.0) on the features in order to have their values within the range 0 to 1. This normalization helps SGD to converge faster with better predictive performance. Then, we specify the topology of our network which looks similar to the one we used in [Part 1 of the tutorial](./Tutorial), except that it has an additional layer, that is, the hidden layer `DNNSigmoidLayer`. The layers are defined in a separate shared BS file, [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs).
 
     featDim = 28 * 28                           # number of pixels
     labelDim = 10                               # number of distinct labels
@@ -295,9 +295,9 @@ Our CNN will have a bit more of a complex definition than our previous networks.
 
 (where `wScale` and `bValue` are expected to be declared outside).
 
-The `Convolution()` built-in function that convolves (filters) the image with a kernel. If interested, please have a quick look here for the [description](https://github.com/Microsoft/CNTK/wiki/Convolution) of its parameters, before reading on. 
+The `Convolution()` built-in function that convolves (filters) the image with a kernel. If interested, please have a quick look here for the [description](./Convolution) of its parameters, before reading on. 
 
-We will also need the `MaxPooling()` operation. Please find its description [here](https://github.com/Microsoft/CNTK/wiki/Pooling).
+We will also need the `MaxPooling()` operation. Please find its description [here](./Pooling).
 
 This allows us to put together the final network definition of our CNN that will learn to classify images of hand-written digits:
 
@@ -386,7 +386,7 @@ In this section we will add to our network a widely used technique called Batch 
 
 ## Batch Normalization in a Nutshell
 
-One problem with training deep neural networks is that the distribution of each layer's inputs changes during training because the parameters of the previous layers change. This causes the training to slow down, as upper layers constantly have to adapt themselves to the changed ranges. One common technique to address the problem is called Batch Normalization (BN). BN consists of normalizing layer inputs w.r.t. their zero-mean/unit-variance, and to do so for each training minibatch. BN makes it possible to use much higher learning rates and allows us to be less careful about initialization. For more details, please refer to the paper [here](http://arxiv.org/pdf/1502.03167v3.pdf), and to the description of the [BatchNormalization](https://github.com/Microsoft/CNTK/wiki/BatchNormalization) operation.
+One problem with training deep neural networks is that the distribution of each layer's inputs changes during training because the parameters of the previous layers change. This causes the training to slow down, as upper layers constantly have to adapt themselves to the changed ranges. One common technique to address the problem is called Batch Normalization (BN). BN consists of normalizing layer inputs w.r.t. their zero-mean/unit-variance, and to do so for each training minibatch. BN makes it possible to use much higher learning rates and allows us to be less careful about initialization. For more details, please refer to the paper [here](http://arxiv.org/pdf/1502.03167v3.pdf), and to the description of the [BatchNormalization](./BatchNormalization) operation.
 
 Disclaimer: Training with Batch Normalization is currently only supported on GPU (but models can be evaluated using the CPU).
 

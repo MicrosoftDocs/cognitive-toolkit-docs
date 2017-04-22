@@ -1,5 +1,5 @@
 ### CNTK Production Build and Test configuration
-CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](https://github.com/Microsoft/CNTK/wiki/Test-Configurations) where we list all dependency component and component versions that we use.
+CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations) where we list all dependency component and component versions that we use.
 
 ### CNTK as a Docker container
 Before moving any further you may consider deploying CNTK as a Docker container. Read the [corresponding section](./CNTK-Docker-Containers).
@@ -138,7 +138,7 @@ sudo apt-get install zlib1g-dev
 ### LIBZIP
 libzip is available in different network distribution packages, but we found that many of them contain old versions. Using these versions will likely result in build errors. So we strongly recommend to build libzip from sources as described below.
 
-Note that the following procedure will install libzip to `/usr/local`. This is exactly where CNTK build procedure expects it (see [the beginning of this page](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Linux#expected-component-locations-in-configure-and-makefile-scripts) for details). If you want to install libzip to a different path see instructions in `INSTALL` file in the root of libzip distribution folder. **However beware that in this case you have to manually edit `configure` AND `Makefile` of CNTK to support this path**.
+Note that the following procedure will install libzip to `/usr/local`. This is exactly where CNTK build procedure expects it (see [the beginning of this page](./Setup-CNTK-on-Linux#expected-component-locations-in-configure-and-makefile-scripts) for details). If you want to install libzip to a different path see instructions in `INSTALL` file in the root of libzip distribution folder. **However beware that in this case you have to manually edit `configure` AND `Makefile` of CNTK to support this path**.
 
 Use the following commands:
 ```

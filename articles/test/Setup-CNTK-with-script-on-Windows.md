@@ -8,7 +8,7 @@ Here are recommendations to make sure you can build CNTK successfully:
 * Avoid extremely long path names. The build procedure uses copy-operations (XCOPY) that can run into problems with path expression with over 256 characters in length.
 
 ### 64-bit OS
-CNTK requires a 64-bit Windows installation. We tested the build process on Windows 8.1, Windows 10, and Windows Server 2012 R2 and later. Other environments are not officially supported. For compatibility issues check [CNTK Production Build and Test configuration](https://github.com/Microsoft/CNTK/wiki/Test-Configurations).
+CNTK requires a 64-bit Windows installation. We tested the build process on Windows 8.1, Windows 10, and Windows Server 2012 R2 and later. Other environments are not officially supported. For compatibility issues check [CNTK Production Build and Test configuration](./Test-Configurations).
 
 ### Preparation
 There are steps required to create a CNTK development environment on your machine:
@@ -103,11 +103,11 @@ Depending on the speed of your system and your Internet connection, the whole pr
 
 ### Build and test
 
-At this point all the required components to build CNTK on you system are installed. You can follow the steps found [here](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#building-cntk) to build and test CNTK.
+At this point all the required components to build CNTK on you system are installed. You can follow the steps found [here](./Setup-CNTK-on-Windows#building-cntk) to build and test CNTK.
 
 **More information**
 * [Windows build specific environment variables](./Windows-Environment-Variables)
-* [Build and test CNTK](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#building-cntk)
+* [Build and test CNTK](./Setup-CNTK-on-Windows#building-cntk)
 * [Enabling 1bit SGD](/en-us/cognitive-toolkit/Enabling-1bit-SGD.md)
 * [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md)
 * [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)

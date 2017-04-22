@@ -17,13 +17,13 @@ Python 2.7, 3.4, 3.5 environment
 
 **Step 1**: Download and install pre-requisites
 
-**Docker** users please follow the instructions [here](https://github.com/Microsoft/CNTK/wiki/CNTK-Docker-Containers). 
+**Docker** users please follow the instructions [here](./CNTK-Docker-Containers). 
 Others please continue reading.
 
 CNTK V2 on Linux requires the following prerequisites to be installed from the links below: 
 
-- [C++ Compiler](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Linux#c-compiler)
-- [Open MPI](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Linux#open-mpi)
+- [C++ Compiler](./Setup-CNTK-on-Linux#c-compiler)
+- [Open MPI](./Setup-CNTK-on-Linux#open-mpi)
 **IMPORTANT!** We strongly recommend to follow Open MPI installation procedure described by the link above to ensure the correct work of CNTK.
 - For GPU systems ensure that you have the [latest NVIDIA driver](http://www.nvidia.com/drivers)
 

@@ -28,7 +28,7 @@ The following are the main resources for the transfer learning tutorial:
 
 # Setup
 
-To run the code in this example, you need a CNTK python environment (see [here](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine) for setup help). 
+To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine) for setup help). 
 
 To download the required data and the pretrained model run the following command form the [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/TransferLearning) folder:
 

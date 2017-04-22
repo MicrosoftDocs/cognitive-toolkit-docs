@@ -43,7 +43,7 @@ Due to their success in the image domain, residual units form the basis of the f
 
 # Deep Crossing in BrainScript
 
-[BrainScript](https://github.com/Microsoft/CNTK/wiki/BrainScript-Network-Builder) is a network description language used to define networks in CNTK. [In this section we will provide an overview of an implementation of Deep Crossing in BrainScript.](./Articles3/DeepCrossing.cntk)
+[BrainScript](./BrainScript-Network-Builder) is a network description language used to define networks in CNTK. [In this section we will provide an overview of an implementation of Deep Crossing in BrainScript.](./Articles3/DeepCrossing.cntk)
 
 ## Inputs
 

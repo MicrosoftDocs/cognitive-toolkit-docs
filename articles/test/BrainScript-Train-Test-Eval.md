@@ -34,7 +34,7 @@ These commands evaluate/test a model for accuracy, usually with a test dataset. 
 
 * `evalNodeNames` – an array of one or more node names to evaluate.
 
-* `distributedMBReading` - accepts Boolean value: true or false; default is false. It should be set to true for readers that support distributed minibatch reading. If you are using CNTK Text Format Reader, Image Reader, or [Composite Data Reader](https://github.com/Microsoft/CNTK/wiki/Understanding-and-Extending-Readers), you should set distributedMBReading=true.
+* `distributedMBReading` - accepts Boolean value: true or false; default is false. It should be set to true for readers that support distributed minibatch reading. If you are using CNTK Text Format Reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers), you should set distributedMBReading=true.
 
 The following example is taken form the [Simple2d example](Examples). In that example the `modelPath` is defined on the top level and picked up automatically by both the `train` and `test` command.
 

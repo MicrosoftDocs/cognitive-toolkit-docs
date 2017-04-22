@@ -38,7 +38,7 @@ Additional material: a detailed tutorial for object detection using CNTK Fast R-
 
 # Setup
 
-To run the code in this example, you need a CNTK python environment (see [here](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
+To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
 
 `pip install -r requirements.txt`
 
@@ -152,7 +152,7 @@ To visualize the bounding boxes and predicted labels you can run `B3_VisualizeOu
 ## Step details
 
 __A1:__ The script first `A1_GenerateInputROIs.py` generates ROI candidates for each image using [selective search](#selective-search). 
-It then stores them in a [CNTK Text Format](https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader) as input for `cntk.exe`. 
+It then stores them in a [CNTK Text Format](./CNTKTextFormat-Reader) as input for `cntk.exe`. 
 Additionally the required CNTK input files for the images and the ground truth labels are generated. 
 The script generates the following folders and files under the `FastRCNN` folder:
 
@@ -390,14 +390,14 @@ There are three input files for CNTK Fast R-CNN corresponding to the three deser
 1 image_02.jpg 0
 ...
 ```
-2) `train.rois.txt` ([CNTK text format](https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader)) 
+2) `train.rois.txt` ([CNTK text format](./CNTKTextFormat-Reader)) 
 contains in each line first a sequence number, then the `|rois` identifier followed by a sequence of numbers. 
 These are groups of four numbers corresponding to (x, y, w, h) of an ROI, 
 all relative with respect to the full width and height of the image. There is a total of 4 * number-of-rois numbers per line.
 ```
 0 |rois 0.2185 0.0 0.165 0.29 ...
 ```
-3) `train.roilabels.txt` ([CNTK text format](https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader)) 
+3) `train.roilabels.txt` ([CNTK text format](./CNTKTextFormat-Reader)) 
 contains in each line first a sequence number, then the `|roiLabels` identifier followed by a sequence of numbers. 
 These are groups of number-of-labels numbers (either zero or one) per ROI encoding the ground truth class in a one-hot representation. 
 There is a total of number-of-labels * number-of-rois numbers per line.

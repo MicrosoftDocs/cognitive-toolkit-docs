@@ -22,7 +22,7 @@ This release contains the following **breaking changes**:
 ### New and updated features
 
 * See sections below on new features in Python and C# API
-*  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](https://github.com/Microsoft/CNTK/wiki/Using-TensorBoard-for-Visualization).
+*  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](./Using-TensorBoard-for-Visualization).
 * Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
@@ -35,7 +35,7 @@ We have made the following updates to the [Layers Library](https://www.cntk.ai/p
   * Neural networks are viewed as function objects (which are composable and can share parameters).
   * Very expressive and easy to use (e.g. sequence-to-sequence with greedy decoder in 2 pages without custom operations).
   * Tight integration with native Python syntax: Python call syntax, parameters as members (`my_convo_layer.W`), types for input shapes (`Sequence[SparseTensor[30000]]`), slices.
-  * See an overview at [this slide](https://github.com/Microsoft/CNTK/wiki/ppt/Layers-vs-API.pdf).
+  * See an overview at [this slide](./ppt/Layers-vs-API.pdf).
 * New recurrent higher-order layers:
   * `RecurrenceFrom()` - recurrence with initial state from data, e.g. sequence-to-sequence
   * `Fold()` - recurrence to get final state.
@@ -48,7 +48,7 @@ We have made the following updates to the [Layers Library](https://www.cntk.ai/p
 ### CNTK C# Evaluation Library V2:
 
 * Added `LoadModel()` from memory buffer, available for C++ and C#. See [Example](https://github.com/Microsoft/CNTK/tree/v2.0.beta15.0/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples).
-* New [C# examples for evaluating multiple requests in parallel](https://github.com/Microsoft/CNTK/wiki/CNTK-Eval-Examples#examples-for-evaluating-multiple-requests-in-parallel).
+* New [C# examples for evaluating multiple requests in parallel](./CNTK-Eval-Examples#examples-for-evaluating-multiple-requests-in-parallel).
 
 ### CNTK NuGet package
 

@@ -19,7 +19,7 @@ Set the minibatchSize property to a smaller value (e.g. `minibatchSize=2`).
 You must upgrade Visual Studio *2015*, update 3. See here: [Setting up CNTK on Windows](./Setup-CNTK-on-Windows)
 
 #### I enabled Image Reader with zip support and get "Plugin not found: 'Cntk.Deserializers.Image-<VERSION>.dll' (old name 'ImageReader.dll')" error when running Image Reader unit tests or trying to use the reader. What might be wrong?
-Check that you correctly installed [zlib and libzip](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#optional-zlib-and-libzip), especially that you have not forgotten to [rename `zlib.dll` to `zlib1.dll`](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows#preparing-the-environment).
+Check that you correctly installed [zlib and libzip](./Setup-CNTK-on-Windows#optional-zlib-and-libzip), especially that you have not forgotten to [rename `zlib.dll` to `zlib1.dll`](./Setup-CNTK-on-Windows#preparing-the-environment).
 
 #### I have just downloaded and installed CNTK **binary package** and want to run a job, but get weird errors, like missing CUDA libraries.
 Please, check carefully what you have in your `PATH`. Especially, if it is a *shared* development machine. Often this is cause by older (previous) versions of CNTK or CNTK components that are reachable through the configured PATH.
@@ -55,13 +55,13 @@ Then you have to set your Azure web app to use 64-bit VM. In order to allow the 
     Environment.SetEnvironmentVariable("PATH", pathValue);
 ```
  
-Please see the "[Evaluate a model in an Azure WebApi](https://github.com/Microsoft/CNTK/wiki/Evaluate-a-model-in-an-Azure-WebApi)" page for detailed steps.  
+Please see the "[Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-Azure-WebApi)" page for detailed steps.  
 
 #### I can build my application using Cntk.Eval-<VERSION>.lib/dll (old name EvalDll.lib/dll), but got the exception like below when running
 
 	An unhandled exception of type 'Microsoft.MSR.CNTK.Extensibility.Managed.CNTKRuntimeException' occurred in Cntk.Wrapper-<VERSION>.dll
 	Additional information: configparameters: required parameter missing: unknown:modelPath
-We use [new shared library file names](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format) in the text below.
+We use [new shared library file names](./CNTK-Shared-Libraries-Naming-Format) in the text below.
 
 Possible reasons are:  
 * Different build configuration (release or debug) between your application and the `Cntk.Eval-<VERSION>.lib/dll`. If you build your application in release, please link against the release version of `Cntk.Eval-<VERSION>.dll`. Same for the debug configuration. This error  happens usually for C++ application.  
@@ -70,4 +70,4 @@ Possible reasons are:
 
 #### I get the following result with CNTKTextFormat-Reader -- WARNING: Exhausted all input expected for the current sequence while reading a floating point value at offset
 
-[CTF reader](https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader) requires that Each well-formed line must end with either a "Line Feed" \n or "Carriage Return, Line Feed" \r\n symbols (including the last line of the file).
+[CTF reader](./CNTKTextFormat-Reader) requires that Each well-formed line must end with either a "Line Feed" \n or "Carriage Return, Line Feed" \r\n symbols (including the last line of the file).

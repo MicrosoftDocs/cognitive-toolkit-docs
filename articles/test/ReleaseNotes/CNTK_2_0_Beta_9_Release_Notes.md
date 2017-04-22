@@ -11,7 +11,7 @@ There is a **breaking change** in this release:
 ### New and updated features
 
 * Lambda rank and NDCG at 1 are accessible from Python for real this time.
-* Changes in Learner API: for learners that use momentum (`momentum_sgd`, `nesterov_sgd` and `adam_sgd`) it is now possible to specify if the momentum should be applied  in the regular fashion or as a unit-gain filter (default). For more details on the unit-gain momentum, please refer to this [section in the Wiki](https://github.com/Microsoft/CNTK/wiki/SGD-Block#converting-learning-rate-and-momentum-parameters-from-other-toolkits). 
+* Changes in Learner API: for learners that use momentum (`momentum_sgd`, `nesterov_sgd` and `adam_sgd`) it is now possible to specify if the momentum should be applied  in the regular fashion or as a unit-gain filter (default). For more details on the unit-gain momentum, please refer to this [section in the Wiki](./SGD-Block#converting-learning-rate-and-momentum-parameters-from-other-toolkits). 
 * No more partial minibatches at the sweep boundary. Now minibatches are allowed to transparently cross the sweep boundary. `epoch_size` parameter for all hyperparameter schedules now defaults to full data sweep (i.e., by default, hyperparameters change their values on the sweep by sweep basis).
 
 ### New Examples and Tutorials
@@ -24,8 +24,8 @@ There is a **breaking change** in this release:
 
 The following updates are introduced to Python API:
 
-* Default Python version for binary installation script was changed to **3.5** for both Windows and Linux. As before you can manually select version 2.7, 3.4, or 3.5 during the installation. Please see [binary and source setup](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine) instructions to find out about how to select Python version.
-* [Docker Hub Runtime Image](https://github.com/Microsoft/CNTK/wiki/CNTK-Docker-Containers) will also contain Python v. 3.5.
+* Default Python version for binary installation script was changed to **3.5** for both Windows and Linux. As before you can manually select version 2.7, 3.4, or 3.5 during the installation. Please see [binary and source setup](./Setup-CNTK-on-your-machine) instructions to find out about how to select Python version.
+* [Docker Hub Runtime Image](./CNTK-Docker-Containers) will also contain Python v. 3.5.
 * Lambda rank and NDCG at 1 are now accessible from Python.
 * Preliminary version of the training session API for distributed learning is exposed in Python.
 

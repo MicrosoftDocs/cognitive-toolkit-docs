@@ -26,6 +26,6 @@ PBN executes with following steps:
 
 ## PBN usage
 
-The usage of PBN can find in [PBN Command](https://github.com/Microsoft/CNTK/wiki/Top-level-commands#pbn-command)
+The usage of PBN can find in [PBN Command](./Top-level-commands#pbn-command)
     
 

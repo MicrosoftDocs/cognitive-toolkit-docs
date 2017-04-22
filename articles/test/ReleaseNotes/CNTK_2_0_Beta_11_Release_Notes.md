@@ -23,18 +23,18 @@ This release contains the following **breaking changes**:
 * Support for reductions across all axes (including batch and sequence axes)
 * Improved denominator sharing in Batch Normalization. `batch_normalization (cntk.ops)` now takes an additional required parameter for the running mean sample count, which can be initialized with `constant(0)`
 * Added support for randomization window specified in terms of a number of chunks. Fix the default value for randomization window: unless explicitly overridden, it now defaults to 128 chunks. For more details, please see the section that describes `randomizationWindow` parameter:
-  * [CTF reader](https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader#reader-section)
-  * [Composite reader](https://github.com/Microsoft/CNTK/wiki/Understanding-and-Extending-Readers#general-reader-configuration)
+  * [CTF reader](./CNTKTextFormat-Reader#reader-section)
+  * [Composite reader](./Understanding-and-Extending-Readers#general-reader-configuration)
 * New Python and BrainScript for VGG16 and 19
 * Optimized memory management for convolution workspace, and now a larger (~30% for VGG) minibatch size can be used for training  
-* Profiler support in python. See more [here](https://github.com/Microsoft/CNTK/wiki/Performance-Profiler#for-python)
+* Profiler support in python. See more [here](./Performance-Profiler#for-python)
 * Added support in training session for cross validation and preservation of all checkpoints
 
 ### New Examples and Tutorials
 
 * Transfer learning example to train custom image classifiers
   * [Code](https://github.com/Microsoft/CNTK/tree/v2.0.beta11.0/Examples/Image/TransferLearning) 
-  * [Wiki](https://github.com/Microsoft/CNTK/wiki/Build-your-own-image-classifier-using-Transfer-Learning)
+  * [Wiki](./Build-your-own-image-classifier-using-Transfer-Learning)
 
 ### CNTK Evaluation library. NuGet package
 

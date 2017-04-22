@@ -43,7 +43,7 @@ Scale-out (15min)
 
 # Installation instructions
 
-Install Cognitive Toolkit (CNTK) from the [Github location](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine) on either Windows or Linux Machine
+Install Cognitive Toolkit (CNTK) from the [Github location](./Setup-CNTK-on-your-machine) on either Windows or Linux Machine
 
 We recommend you locally install the toolkit and Git clone the repository. However, for those who do not want to do so you can try out some of the tutorials at our [CNTK Azure Notebooks](http://notebooks.azure.com/cntk/libraries/tutorials) location for free. 
 

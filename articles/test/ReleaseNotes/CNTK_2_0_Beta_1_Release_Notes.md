@@ -30,11 +30,11 @@ CNTK now supports Google Protocol Buffers serialization for Model and Checkpoint
 
 With this release we introduce the possibility of automated environment configuration and installation of all CNTK pre-requisites from the script driven binary install option. 
 
-See more on the new installation options at this [Wiki page](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine).
+See more on the new installation options at this [Wiki page](./Setup-CNTK-on-your-machine).
 
 ### Fast R-CNN algorithm
 
-CNTK now supports [object recognition using Fast R-CNN](https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN) algorithm.
+CNTK now supports [object recognition using Fast R-CNN](./Object-Detection-using-Fast-R-CNN) algorithm.
 
 
 ### CNTK Evaluation library

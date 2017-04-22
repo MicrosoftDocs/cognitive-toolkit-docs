@@ -75,7 +75,7 @@ The MaxPoolingLayer requires two inputs, which are the output of the correspondi
 
 `DeconvLayer {1, (5:5), cMap, lowerPad=(2:2:0), upperPad=(2:2:0)}`
 
-The first parameter of the DeconvLayer is the depth of the output volume, the second is the kernel shape (width:height) and the third is the depth of the input volume. The padding parameters have to be set in accordance to the kernel shape to achieve the desired width and height of the output tensor (28x28 in this case). For more details on the DeconvLayer see the [Layer Reference page](https://github.com/Microsoft/CNTK/wiki/Layers-Reference#deconvlayer).
+The first parameter of the DeconvLayer is the depth of the output volume, the second is the kernel shape (width:height) and the third is the depth of the input volume. The padding parameters have to be set in accordance to the kernel shape to achieve the desired width and height of the output tensor (28x28 in this case). For more details on the DeconvLayer see the [Layer Reference page](./Layers-Reference#deconvlayer).
 
 ## Multi layer auto encoder
 

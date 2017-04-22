@@ -8,7 +8,7 @@ You can also try out the tutorials live with [Azure Notebooks](https://notebooks
 
 Additional Python tutorials:
 * The folder [Tutorials/NumpyInterop](https://github.com/Microsoft/CNTK/tree/master/Tutorials/NumpyInterop) contains a simple example of how to use numpy arrays as input for CNTK training and evaluation.
-* ['Build your own image classifier using Transfer Learning'](https://github.com/Microsoft/CNTK/wiki/Build-your-own-image-classifier-using-Transfer-Learning) provides two examples for custom image classifiers using transfer learning.
+* ['Build your own image classifier using Transfer Learning'](./Build-your-own-image-classifier-using-Transfer-Learning) provides two examples for custom image classifiers using transfer learning.
 
 ### BrainScript Tutorials
 * [Getting Started](./Tutorial/Tutorial): Simple Logistic Regression and multi-class classification

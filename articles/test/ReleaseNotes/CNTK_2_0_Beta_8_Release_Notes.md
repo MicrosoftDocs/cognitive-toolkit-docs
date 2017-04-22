@@ -16,7 +16,7 @@ The are **two breaking changes** in this release. Please, read this section care
 
 The following updates are introduced to Python API:
 
-* CNTK now supports Python versions 2.7, 3.4, and 3.5, for both Windows and Linux. Please see [binary and source setup](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine) instructions to find out about how to select Python version.
+* CNTK now supports Python versions 2.7, 3.4, and 3.5, for both Windows and Linux. Please see [binary and source setup](./Setup-CNTK-on-your-machine) instructions to find out about how to select Python version.
 * Max unpooling is now accessible from Python
 * New feature: ```as_block``` function enables hierarchical function graph. See detailed description in [CNTK Python API Documentation](https://www.cntk.ai/pythondocs/cntk.ops.html?highlight=as_block#cntk.ops.as_block).
 * New Example: [Feature extraction using a trained model in Python API](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Image/FeatureExtraction).
@@ -25,15 +25,15 @@ The following updates are introduced to Python API:
 
 Starting from this release Windows version of CNTK is being built with **Visual Studio 2015**. Make sure to install the Visual C++ Redistributable Package for Visual Studio 2015, if you're installing the binary drop manually (included in the package).
 
-If you maintain a developer environment, please read the article [Migrate VS 2013 to VS 2015](https://github.com/Microsoft/CNTK/wiki/Setup-Migrate-VS13-to-VS15). You may also consider [Script driven migration](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-with-script-on-Windows).
+If you maintain a developer environment, please read the article [Migrate VS 2013 to VS 2015](./Setup-Migrate-VS13-to-VS15). You may also consider [Script driven migration](./Setup-CNTK-with-script-on-Windows).
 
 ### CNTK Evaluation library. NuGet package
 
-The first version of [CNTK Library Managed Eval API](https://github.com/Microsoft/CNTK/wiki//CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see the [Wiki page](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-Evaluation-on-Windows) for details. 
+The first version of [CNTK Library Managed Eval API](https://github.com/Microsoft/CNTK/wiki//CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see the [Wiki page](./CNTK-Library-Evaluation-on-Windows) for details. 
 
 Examples on usage of the new CNTK C# API are available in [`CNTKLibraryEvalExamples.sln`](https://github.com/Microsoft/CNTK/blob/v2.0.beta8.0/Examples/Evaluation/CNTKLibraryEvalExamples.sln) located in [Examples/Evaluation](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Evaluation) (available also in CNTK Binary Packages). 
 
-The structure of [CNTK NuGet packages](https://github.com/Microsoft/CNTK/wiki/NuGet-Package) has changed with two additional packages introduced: 
+The structure of [CNTK NuGet packages](./NuGet-Package) has changed with two additional packages introduced: 
 * (*New*) `CNTK.CPU`. Contains [CNTK Library C# Eval API](https://github.com/microsoft/cntk/wiki/CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api), and used for CPU only machines.
 * (*New*) `CNTK.GPU`. Contains [CNTK Library C# Eval API](https://github.com/microsoft/cntk/wiki/CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api), and used for GPU enabled machines.
 * `Microsoft.Research.CNTK.CpuEval-mkl`. Contains [CNTK EvalDll API](https://github.com/microsoft/cntk/wiki/EvalDll-Evaluation-Overview). It supports CPU only.  
@@ -50,4 +50,4 @@ CNTK Runtime packages are now available as [Public Images at Docker Hub](https:/
 
 **IMPORTANT!** There will be a small time delay (expected 3-5 working days) between a new CNTK Release and its availability on Docker Hub. E.g. on the day of v.2.0 Beta 8 Release (this release) only v.2.0 Beta 7 Images are available at Docker Hub. We will announce the availability of Docker Hub images for each version both at CNTK Release Page and in the News.
 
-See more on CNTK as Docker Images in this [Wiki article](https://github.com/Microsoft/CNTK/wiki/CNTK-Docker-Containers).
+See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers).

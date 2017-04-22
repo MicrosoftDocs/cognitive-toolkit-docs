@@ -6,7 +6,7 @@ There are many new features, but fixes, enhancements, and improvements in this c
 
 ### Brainscript
 
-Brainscript is an evolution of our network definition language, and its concepts make it possible to express features not available in NDL (i.e. Sequence-to-Sequence). More about Brainscript: https://github.com/Microsoft/CNTK/wiki/BrainScript-Network-Builder
+Brainscript is an evolution of our network definition language, and its concepts make it possible to express features not available in NDL (i.e. Sequence-to-Sequence). More about Brainscript: ./BrainScript-Network-Builder
 
 ### Sequence to sequence 
 
@@ -35,16 +35,16 @@ Please note, that the Sequence-to-Sequence model is set up using the CNTK-specif
 
 CNTK 1.5 introduces a new parallelism technique known as *BlockMomentum* that combines the ideas of block updates (as in model averaging) with error residual (1-bit SGD) and takes training scalability to a new level while preserving accuracy.
 
-Read more here: https://github.com/Microsoft/CNTK/wiki/Multiple-GPUs-and-machines
+Read more here: ./Multiple-GPUs-and-machines
 
 ### Readers
 
 Significant effort has been put in redesigning and improving our Datareader / Deserializer infrastructure.
 
-* A new CNTK Text Format Reader replacing the UCIFastReader (https://github.com/Microsoft/CNTK/wiki/CNTKTextFormat-Reader)
-* Various improvements in the image reader (https://github.com/Microsoft/CNTK/wiki/Image-reader)
-* A new deserializer concept and a new speech format deserializer that will replace the current HTKMLFReader in the near future (https://github.com/Microsoft/CNTK/wiki/Deserializers-and-Transforms)
-* The CNTKEval functionality has increased API documentation, insights and additional samples (https://github.com/Microsoft/CNTK/wiki/CNTK-Evaluation-Overview). The CNTK Eval Wiki pages have been updated to describe in more detail the overall CNTK capability to evaluate trained models as well as detailing each of the programmatic interfaces for model evaluation (C++ and C#). The Wiki pages also include some common pitfalls as well as some suggestions on how to evaluate a model using images.
+* A new CNTK Text Format Reader replacing the UCIFastReader (./CNTKTextFormat-Reader)
+* Various improvements in the image reader (./Image-reader)
+* A new deserializer concept and a new speech format deserializer that will replace the current HTKMLFReader in the near future (./Deserializers-and-Transforms)
+* The CNTKEval functionality has increased API documentation, insights and additional samples (./CNTK-Evaluation-Overview). The CNTK Eval Wiki pages have been updated to describe in more detail the overall CNTK capability to evaluate trained models as well as detailing each of the programmatic interfaces for model evaluation (C++ and C#). The Wiki pages also include some common pitfalls as well as some suggestions on how to evaluate a model using images.
 
 ### Python support
 A highly requested feature for easier adoption and experimentation has been a Python API for CNTK. We have created such an API now which can be used to create and execute (train, write, evaluate) deep learning models without the need to learn CNTK's configuration format, in a way that is very similar to other NumPy-based toolkits. It supports both interactive mode, where it can be used directly from Python and interact with Numpy for data input, as well as standalone mode where data is read through a standard data reader and executed through the cntk executable.

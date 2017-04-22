@@ -33,4 +33,4 @@ In CNTK the complicated LSTM part is abstracted away. Note that before describin
 - [1] Image thanks to [https://colah.github.io/posts/2015-08-Understanding-LSTMs/](https://colah.github.io/posts/2015-08-Understanding-LSTMs/). 
 - [2] Image thanks to [http://deeplearning.net/tutorial/lstm.html](http://deeplearning.net/tutorial/lstm.html). 
 - [3] Image thanks to [http://karpathy.github.io/2015/05/21/rnn-effectiveness/](http://karpathy.github.io/2015/05/21/rnn-effectiveness/). 
-- [4] Image thanks to Frank Seide's presentation at [https://github.com/Microsoft/CNTK/wiki/ppt/LATAM_Frank_Seide_CNTK,%202016-5-19,%20Print.pptx](https://github.com/Microsoft/CNTK/wiki/ppt/LATAM_Frank_Seide_CNTK,%202016-5-19,%20Print.pptx).
+- [4] Image thanks to Frank Seide's presentation at [./ppt/LATAM_Frank_Seide_CNTK,%202016-5-19,%20Print.pptx](./ppt/LATAM_Frank_Seide_CNTK,%202016-5-19,%20Print.pptx).

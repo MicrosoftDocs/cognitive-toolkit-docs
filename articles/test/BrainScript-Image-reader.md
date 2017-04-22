@@ -1,5 +1,5 @@
 CAUTION: we still support this reader format, but it is being deprecated. Please use the new 
-reader format: https://github.com/Microsoft/CNTK/wiki/Understanding-and-Extending-Readers. 
+reader format: ./Understanding-and-Extending-Readers. 
 
 Image reader can be used to read images and apply some image-specific transforms like random cropping, scaling, horizontal flipping and others. It takes as an input a simple text file where each line contains a tab-separated mapping between image file (e.g. JPEG, PNG etc) and 0-based label. For example:
 ```

@@ -14,7 +14,7 @@ RecurrentLSTMLayer {300} :
 DenseLayer {129}
 )
 ```
-Read more in the Wiki on [Layers](https://github.com/Microsoft/CNTK/wiki/Layers-Reference) and [Sequential](https://github.com/Microsoft/CNTK/wiki/Sequential).
+Read more in the Wiki on [Layers](./Layers-Reference) and [Sequential](./Sequential).
 
 * Support of **CuDNN5 RNN** which significantly improves performance.
 * Support of **Common random-initialization types**, e.g.
@@ -27,16 +27,16 @@ W = ParameterTensor {(1024:Inferred)}
 z = W * x
 ```
 will infer the dimension marked as Inferred from the input.  
-(See the complete description of ```ParameterTensor``` in the [Wiki](https://github.com/Microsoft/CNTK/wiki/Parameters-And-Constants#parametertensor).)
+(See the complete description of ```ParameterTensor``` in the [Wiki](./Parameters-And-Constants#parametertensor).)
 
-* **Curly braces in configuration and BrainScript** making it more similar to other familiar languages. See more in the [Wiki Article](https://github.com/Microsoft/CNTK/wiki/BS-Basic-Concepts).
-* We have significantly simplified Handling of **Gated Recurrent Units (GRU)** was significantly improved by adding the convenience functions to Brainscript library. Read more in the [corresponding article](https://github.com/Microsoft/CNTK/wiki/GRUs-on-CNTK-with-BrainScript).
+* **Curly braces in configuration and BrainScript** making it more similar to other familiar languages. See more in the [Wiki Article](./BS-Basic-Concepts).
+* We have significantly simplified Handling of **Gated Recurrent Units (GRU)** was significantly improved by adding the convenience functions to Brainscript library. Read more in the [corresponding article](./GRUs-on-CNTK-with-BrainScript).
 
 ### Support of NVIDIA cuDNN 5.1
 
 CNTK now relies on version **5.1** of NVIDIA cuDNN Library.
 
-This in turns allows utilizing **NVIDIA GPU Cards based on *Pascal* architecture** like *GeForce GTX 1080*. However note, that NVIDIA Pascal architecture [**requires** CUDA 8.0](https://developer.nvidia.com/cuda-toolkit) while CNTK 1.7 is built with CUDA 7.5. Today [CUDA 8.0 is available as a Release Candidate version](https://developer.nvidia.com/cuda-toolkit), and if you would like to use CNTK with NVIDIA Pascal architecture cards you need to *download and install the current Release Candidate of CUDA 8.0 and build CNTK from Sources for [Windows](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Windows) or [Linux](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-Linux) using CUDA 8.0 RC instead of CUDA 7.5*. CNTK will fully support CUDA 8.0 when it is released to production.
+This in turns allows utilizing **NVIDIA GPU Cards based on *Pascal* architecture** like *GeForce GTX 1080*. However note, that NVIDIA Pascal architecture [**requires** CUDA 8.0](https://developer.nvidia.com/cuda-toolkit) while CNTK 1.7 is built with CUDA 7.5. Today [CUDA 8.0 is available as a Release Candidate version](https://developer.nvidia.com/cuda-toolkit), and if you would like to use CNTK with NVIDIA Pascal architecture cards you need to *download and install the current Release Candidate of CUDA 8.0 and build CNTK from Sources for [Windows](./Setup-CNTK-on-Windows) or [Linux](./Setup-CNTK-on-Linux) using CUDA 8.0 RC instead of CUDA 7.5*. CNTK will fully support CUDA 8.0 when it is released to production.
 
 ### Readers/Deserializers
 
@@ -65,7 +65,7 @@ are available in the [Wiki](https://github.com/Microsoft/CNTK/wiki).
 
 ### Unit Tests
 
-Unit tests have been enabled on Linux. The wiki [How-To-Test](https://github.com/Microsoft/CNTK/wiki/How-to-Test) article contains the instructions on unit tests for both Windows and Linux.
+Unit tests have been enabled on Linux. The wiki [How-To-Test](./How-to-Test) article contains the instructions on unit tests for both Windows and Linux.
 
 We now use *Mersenne Twister random engine* and *Boost random distribution functions* in unit tests for both Windows and Linux.
 

@@ -1,10 +1,10 @@
 * [Home](/en-us/cognitive-toolkit/Home.md)
 * [What's new](./News)
-* [Breaking changes](https://github.com/Microsoft/CNTK/wiki/Breaking-changes-in-Master-compared-to-beta15)
+* [Breaking changes](./Breaking-changes-in-Master-compared-to-beta15)
 * [CNTK installation](./Setup-CNTK-on-your-machine)
-* Python [API](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-API) / [Docs](https://www.cntk.ai/pythondocs)
+* Python [API](./CNTK-Library-API) / [Docs](https://www.cntk.ai/pythondocs)
 * [FAQ](./CNTK-FAQ)
-* [How do I...](https://github.com/Microsoft/CNTK/wiki/How-do-I)
+* [How do I...](./How-do-I)
 * [Troubleshoot CNTK](/en-us/cognitive-toolkit/Troubleshoot-CNTK.md)
 
 **Getting Started**

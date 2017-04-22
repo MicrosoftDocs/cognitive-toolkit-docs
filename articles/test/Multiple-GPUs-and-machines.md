@@ -45,7 +45,7 @@ Secondly, the `SGD` block in the config file should contain a sub-block named
 2. `distributedMBReading` : (optional) accepts Boolean value: `true` or `false`; default is `false`
 
     It is recommended to turn distributed minibatch reading on to minimize the
-    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](https://github.com/Microsoft/CNTK/wiki/Understanding-and-Extending-Readers), distributedMBReading should be set to true.
+    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers), distributedMBReading should be set to true.
 
 3.  `parallelizationStartEpoch`: (optional) accepts integer value; default is 1.
 

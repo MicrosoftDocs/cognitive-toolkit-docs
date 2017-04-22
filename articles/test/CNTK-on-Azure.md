@@ -1,7 +1,7 @@
 CNTK is available as [Microsoft Azure](http://azure.microsoft.com/) Virtual Machine offerings.
 
 ### Host a CNTK Model through Web APIs in Azure
-[Deploy CNTK Azure Web API](https://github.com/Microsoft/CNTK/wiki/Evaluate-a-model-in-an-Azure-WebApi)
+[Deploy CNTK Azure Web API](./Evaluate-a-model-in-an-Azure-WebApi)
 
 ### Training with CNTK on Azure with Windows
 
