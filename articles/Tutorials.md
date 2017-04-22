@@ -1,3 +1,4 @@
+---
 Title:   Tutorials
 Author:    chrisbasoglu
 ms.author:   cbasoglu
@@ -6,6 +7,7 @@ ms.date:   02/14/2017
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   python, brainscript
+---
 
 
 # Tutorials
