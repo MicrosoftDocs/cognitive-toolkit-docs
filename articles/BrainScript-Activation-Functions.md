@@ -1,4 +1,18 @@
-# Sigmoid(), Tanh(), ReLU(), Softmax(), LogSoftmax(), Hardmax()
+---
+title:   Activation  Functions with BrainScript
+author:    chrisbasoglu
+date:    03/09/2017
+ms.author:   cbasoglu
+ms.date:   03/09/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Activation  Functions with BrainScript
+
+## Sigmoid(), Tanh(), ReLU(), Softmax(), LogSoftmax(), Hardmax()
 
 Non-linear activation functions for neural networks.
 
@@ -52,7 +66,7 @@ in BrainScript using an elementwise reduction operation as follows:
 
     ColumnwiseLogSoftmax (z) = z - ReduceLogSum (axis=1)
 
-Here, [`ReduceLogSum()`](./ReduceElements) computes the (log of) the denominator, resulting in a tensor
+Here, [`ReduceLogSum()`](./ReduceElements.md) computes the (log of) the denominator, resulting in a tensor
 with dimension 1 for the reduced axis; `[1 x 20]` in the above example. Subtracting this from the
 `[10000 x 20]`-dimensional input vector is a valid operation--as usual, the `1` will automatically "broadcast",
 that is, duplicated to match the input dimension.

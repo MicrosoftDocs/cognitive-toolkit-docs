@@ -1,3 +1,17 @@
+---
+title:   BrainScript and Python: Understanding and Extending Readers
+author:    chrisbasoglu
+date:    04/10/2017
+ms.author:   cbasoglu
+ms.date:   04/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript and Python: Understanding and Extending Readers
+
 Starting from version 1.5, CNTK is moving away from the monolithic reader design towards a more composable model that allows you to specify
 and compose input data of different formats.
 
@@ -15,7 +29,7 @@ This version also introduces two main abstractions that can be extended in order
 
 In the next sections we discuss these abstractions in more detail.
 
-# Deserializers
+## Deserializers
 Let's have a look at the following fragment of configuration for the *HTKMLFReader* from the end-to-end *LSTM/FullUtterance* test
 (full config [here](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/Speech/LSTM/cntk.cntk)):
 ```
@@ -124,9 +138,9 @@ Currently CNTK supports the below deserializers:
 | Base64ImageDeserializer    | ImageReader          | Deserializer for images encoded as base64 strings in the mapping file. |
 | CNTKTextFormatDeserializer | CNTKTextFormatReader | Deserializer for CNTK text format files                                |
 
-Please refer to the tables [below](./Deserializers-and-Transforms#configuration-options) for the full description of the configuration parameters.
+Please refer to the tables [below](#General-Reader-Configuration) for the full description of the configuration parameters.
 
-# Transforms
+## Transforms
 A transform is a simple abstraction that take a sequence as an input, performs some transformation of samples in the sequence and returns the output sequence.
 Typical examples of transforms are different transformations of images such as crop, scale or transpose.
 Transforms can be configured on per input basis.
@@ -184,7 +198,7 @@ After that the ordered list of transforms is applied to the image: firstly the *
 The last transformation is *Transpose* that changes the image layout from HWC to CHW.
 
 Currently the following transforms are implemented.
-For their detailed description please see [ImageReader](./Image-reader#crop-transform).
+For their detailed description please see [ImageReader](./Brainscript-Image-reader.md#crop-transform).
 
 | Transform type | Module      |
 | -------------- | ------      |
@@ -194,7 +208,7 @@ For their detailed description please see [ImageReader](./Image-reader#crop-tran
 | Mean           | ImageReader |
 | Transpose      | ImageReader |
 
-# New Reader Configuration Format Description
+## New Reader Configuration Format Description
 
 A reader configuration section to compose several data deserializers looks like follows:
 ```
@@ -282,7 +296,7 @@ Transform configuration identifies the transform type and any transform-specific
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
-| `scpFile`                             | A list of paths to SCP files to be processed. The files should be HTK compatible files and must be specified in the “archive” format.  The details of using an archive are described in [HTKMLF Reader](/en-us/cognitive-toolkit/HTKMLF-Reader.md).  **Required**. |
+| `scpFile`                             | A list of paths to SCP files to be processed. The files should be HTK compatible files and must be specified in the “archive” format.  The details of using an archive are described in [HTKMLF Reader](./BrainScript-HTKMLF-Reader.md).  **Required**. |
 | `dim`                                 | An integer that specifies the full feature vector dimension with the desired context window.<sup>[1](#footnote1)</sup> **Required** |
 | `contextWindow`                       | Can either be specified as a pair of positive integers or as a single positive integer (in which case it's interpreted as a pair with the same number repeated twice). Specifies left and right size (first and second integer of the pair) of the context window in samples. *Optional*, defaults to `1`. |
 | `prefixPathInSCP`                     | A prefix string to apply to the paths specified within the SCP files. *Optional*. |
@@ -303,13 +317,13 @@ labelDim can be used as a synonym for dim.
 
 ### CNTKTextFormatDeserializer options
 
-Same options that can be used with [CNTKTextFormatReader](./CNTKTextFormat-Reader)
+Same options that can be used with [CNTKTextFormatReader](./CNTKTextFormat-Reader.md)
 
 ### ImageDeserializer options
 
 * `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key, image file (e.g. JPEG, PNG etc.) and 0-based label.
 
-For more information please see [ImageReader](./Image-reader#crop-transform).
+For more information please see [ImageReader](./BrainScript-Image-reader.md#crop-transform).
 
 ### Base64ImageDeserializer options
 
@@ -317,7 +331,7 @@ This deserializer supports the same options that can be used with ImageDeseriali
 
 * `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key (optional, can be omitted), 0-based category label and base 64 encoded image file (e.g. JPEG, PNG etc.).
 
-# Configuring a reader (minibatch source) in Python
+## Configuring a reader (minibatch source) in Python
 
 This section provides several examples on how a composite reader (aka [MinibatchSource](https://www.cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
 
@@ -397,7 +411,7 @@ input_map = {
 ```
 
 
-# Examples of Configurations and Tests
+## Examples of Configurations and Tests
 
 You will find complete network definitions and the corresponding data set examples in the CNTK Repository.
 There you will also find Unit and End-to-End Tests that use deserializers, i.e.

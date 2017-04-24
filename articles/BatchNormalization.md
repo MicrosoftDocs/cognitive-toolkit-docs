@@ -1,15 +1,28 @@
+---
+title:   Batch normalization 
+author:    chrisbasoglu
+date:    08/28/2016
+ms.author:   cbasoglu
+ms.date:   08/28/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Batch normalization 
 
     BatchNormalization(input, scale, bias, runMean, runVariance, spatial,
                        normalizationTimeConstant = 0,
                        blendTimeConstant = 0, epsilon = 0.00001, useCntkEngine = true)
 
-### Parameters
+## Parameters
 
 * `input` is the input of the batch normalization node
-* `scale` is a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) that holds the learned componentwise-scaling factors (`gamma` term in the equation below).
-* `bias` is a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) that holds the learned bias (`beta` term). `scale` and `bias` must have the same dimensions which must be equal to the `input` dimensions in case of `spatial = false` or number of output convolution feature maps in case of `spatial = true`.
+* `scale` is a [ParameterTensor{}](./Parameters-And-Constants.md#parametertensor) that holds the learned componentwise-scaling factors (`gamma` term in the equation below).
+* `bias` is a [ParameterTensor{}](./Parameters-And-Constants.md#parametertensor) that holds the learned bias (`beta` term). `scale` and `bias` must have the same dimensions which must be equal to the `input` dimensions in case of `spatial = false` or number of output convolution feature maps in case of `spatial = true`.
 * `runMean` is the running mean which is used during evaluation phase and might be used during training as well.
-You must pass a [ParameterTensor{}](./Parameters-And-Constants#parametertensor) with
+You must pass a [ParameterTensor{}](./Parameters-And-Constants.md#parametertensor) with
 the same dimensions as `scale` and `bias`,
 initial value 0, and `learningRateMultiplier=0` set.
 * `runVariance` is the running variance. It is represented the same way as `runMean`.
@@ -20,10 +33,10 @@ low-pass filtered version of the batch statistics. Note: The default is not typi
 * `epsilon` is a conditioner constant added to the variance when computing the inverse standard deviation.
 * `useCntkEngine` (default: true): set this to `false` to select the GPU-only CuDNN implementation
 
-### Return value
+## Return value
 The batch-normalized `input`.
 
-### Description
+## Description
 
 `BatchNormalization` implements the technique described in paper 
 [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (Sergey Ioffe, Christian Szegedy)](http://arxiv.org/abs/1502.03167).
@@ -58,7 +71,7 @@ However, this has not been found useful so far in our experiments.
 Note that during inference, CNTK will set both time constants automatically such that
 only use the existing running mean is used, and that it is not updated. There is no explicit action needed by the user.
 
-#### CuDNN implementation
+### CuDNN implementation
 By default, this function uses a CNTK implementation which works with both GPUs and CPUs.
 You can choose to use the CuDNN implementation, which is more performant.
 Note, however, that the CuDNN implementation does not support all options,

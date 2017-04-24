@@ -1,13 +1,27 @@
-# BrainScript--A Walk-Through
+---
+title:   BrainScript Basic Concepts
+author:    chrisbasoglu
+date:    03/10/2017
+ms.author:   cbasoglu
+ms.date:   03/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Basic Concepts
+
+## BrainScript--A Walk-Through
 This section introduces the basic concepts of the "BrainScript" language. A new language? Don't worry & read on, it's very straight-forward.
 
-In CNTK, custom networks are defined using the [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder) and described in the CNTK network description language "BrainScript." Likewise, networks descriptions are called brain scripts.
+In CNTK, custom networks are defined using the [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder.md) and described in the CNTK network description language "BrainScript." Likewise, networks descriptions are called brain scripts.
 
 BrainScript provides a simple way to define a network in a code-like fashion, using expressions, variables, primitive and self-defined functions, nested blocks, and other well understood concepts. It looks similar to a scripting language in syntax.
 
 OK, let's get our feet wet with a complete BrainScript example!
 
-## A Complete BrainScript Example Network Definition
+### A Complete BrainScript Example Network Definition
 The following example shows the network description of a simple Neural Network with one hidden layer and one classification layer. We will explain concepts along this example.
 Before you move on, maybe spend a few minutes with the example and try to guess what it means.
 You may find, as you read on, that you guessed most of it correctly.
@@ -49,7 +63,7 @@ You may find, as you read on, that you guessed most of it correctly.
         outputNodes     = (P)
     }
 
-## BrainScript Syntax Basics
+### BrainScript Syntax Basics
 Before we dig right in, a few general notes about BrainScript's syntax.
 
 BrainScript uses a simple syntax that is aimed at allowing to express neural networks in a way that looks like math formulas.
@@ -73,12 +87,12 @@ An `include "PATH"` directive may be used at any place to insert the content of 
 
 #### Expressions
 Next, you need to know about BrainScript expressions--the formulas that describe your network.
-[BrainScript expressions](./BrainScript-Expressions) 
+[BrainScript expressions](./BrainScript-Expressions.md) 
 are written math-like in a syntax similar to popular programming languages. The simplest expressions are literals, e.g. numbers and strings. A math-like example is `W1 * r + b`, where `*` refers to a scalar, matrix, or tensor product depending on the type of the variables. Another common kind of expression is the function invocation, e.g. `RectifiedLinear (.)`.
 
 BrainScript is a dynamically-typed language. An important expression type is the *record*, defined using the `{...}` syntax, and accessed through the dot syntax. For example, `r = { x = 13 ; y = 42 }` assigns a record with two members to `r`, where the first member can be accessed as `r.x`.
 
-In addition to the usual math operators, BrainScript has a conditional expression (`if c then t else f`), an array expression, and simple lambdas. Lastly, to interface with the CNTK C++ code, BrainScript can directly instantiate a limited set of predefined C++ objects, predominantly the `ComputationNode` that computational networks are composed of. For more details, see [Expressions](./BrainScript-Expressions).
+In addition to the usual math operators, BrainScript has a conditional expression (`if c then t else f`), an array expression, and simple lambdas. Lastly, to interface with the CNTK C++ code, BrainScript can directly instantiate a limited set of predefined C++ objects, predominantly the `ComputationNode` that computational networks are composed of. For more details, see [Expressions](./BrainScript-Expressions.md).
 
 BrainScript expressions are evaluated upon first use. The primary purpose of BrainScript is to describe the network, so the value of an expression is often not a final value, but rather a node in a computation graph for deferred computation (as in `W1 * r + b`). Only BrainScript expressions of scalars (e.g. `28*28`) are 'computed' at the time the BrainScript is parsed. Expressions that are never used (e.g. due to a condition) are never evaluated.
 
@@ -97,7 +111,7 @@ Most variables are record members (the outer BrainScript block is implicitly a r
 
 OK, ready to go through the model definition.
 
-## Defining the Network
+### Defining the Network
 A network is primarily described by formulae of how the network's outputs are computed from the inputs. We call this the *model function*, which is often defined as an actual function in BrainScript. As part of the model function, the user must declare the *model parameters*. Lastly, one must define the network's *inputs*, and *criteria/outputs*. All of these are defined as variables. The input and criteria/output variables must then be communicated to the system.
 
 #### The Network's Model Function and Model Parameters
@@ -111,10 +125,10 @@ The *model function* contains the actual network formulas and the respective mod
     W0 = ParameterTensor {(HDim:SDim)}
     b0 = ParameterTensor {(HDim)}
 
-In this case, `W0` is the weight matrix and `b0` is the bias vector. [`ParameterTensor{}`](./Parameters-And-Constants#parametertensor) denotes a special CNTK primitive, which instantiates a vector, matrix, or arbitrary-rank tensor, and takes the dimension parameters as a BrainScript
+In this case, `W0` is the weight matrix and `b0` is the bias vector. [`ParameterTensor{}`](./Parameters-And-Constants.md#parametertensor) denotes a special CNTK primitive, which instantiates a vector, matrix, or arbitrary-rank tensor, and takes the dimension parameters as a BrainScript
 array (numbers concatenated by a colon `:`). A vector's dimension is a single number, while
-a matrix dimension should be specified as `(numRows:numCols)`. By default, Parameters are initialized with uniform random numbers when instantiated directly, and `heNormal` when used through [layers](./BrainScript-Layers-Reference),
-but other options exist ([see here](./Parameters-And-Constants#random-initialization)) for the full list.
+a matrix dimension should be specified as `(numRows:numCols)`. By default, Parameters are initialized with uniform random numbers when instantiated directly, and `heNormal` when used through [layers](./BrainScript-Layers-Reference.md),
+but other options exist ([see here](./Parameters-And-Constants.md#random-initialization)) for the full list.
 Unlike regular functions, `ParameterTensor{}` takes its arguments
 in curly braces instead of parentheses. Curly braces are the BrainScript convention
 for functions that create parameters or objects, as opposed to functions.
@@ -200,6 +214,6 @@ In addition, there are 3 more special functions with built-in "magic" in CNTK, w
 * `Constant()`: Declares a constant.
 * `PastValue()` and `FutureValue()`: Access a variable in a network function at a different time step, for form recurrent loops.
 
-Any other predefined name is either a built-in primitive function such as `Sigmoid()` or `Convolution()` with a C++ implementation, a predefined library function realized in BrainScript such as `BS.RNNs.LSTMP()`, or a record that acts as a namespace for library functions (e.g. `BS.RNNs`). See [BrainScript-Full-Function-Reference](/en-us/cognitive-toolkit/BrainScript-Full-Function-Reference.md) for a full list.
+Any other predefined name is either a built-in primitive function such as `Sigmoid()` or `Convolution()` with a C++ implementation, a predefined library function realized in BrainScript such as `BS.RNNs.LSTMP()`, or a record that acts as a namespace for library functions (e.g. `BS.RNNs`). See [BrainScript-Full-Function-Reference](./BrainScript-Full-Function-Reference.md) for a full list.
 
-Next: [BrainScript Expressions](./BrainScript-Expressions)
+Next: [BrainScript Expressions](./BrainScript-Expressions.md)

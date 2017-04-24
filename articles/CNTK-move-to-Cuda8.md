@@ -1,3 +1,17 @@
+---
+title:   CNTK moves to Cuda 8
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK moves to Cuda 8
+
 ## The Cognitive Toolkit and CUDA 8
 
 With the release of CNTK v.2.0 Beta 5 (Windows) and CNTK v.2.0 Beta 6 (Linux) the toolkit started supporting NVIDIA CUDA 8.0 as the development toolkit for GPU accelerated applications. This allows the Microsoft Cognitive Toolkit to take advantage of the latest improvements in NVIDIA graphic cards and optimizations.

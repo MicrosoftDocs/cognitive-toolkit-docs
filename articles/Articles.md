@@ -1,3 +1,17 @@
+---
+title:   CNTK articles
+author:    chrisbasoglu
+date:    04/18/2017
+ms.author:   cbasoglu
+ms.date:   04/18/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK articles
+
 * [Recurrent Neural Networks with CNTK and applications to the world of ranking](./Recurrent-Neural-Networks-with-CNTK-and-applications-to-the-world-of-ranking.md)
 * [GRUs on CNTK with BrainScript](./GRUs-on-CNTK-with-BrainScript.md)
 * [Deep Crossing on CNTK](./Deep-Crossing-on-CNTK.md)

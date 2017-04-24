@@ -1,3 +1,18 @@
+---
+title:   BrainScript and Python Performance Profiler
+author:    chrisbasoglu
+date:    03/09/2017
+ms.author:   cbasoglu
+ms.date:   03/09/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript, python
+---
+
+# BrainScript and Python Performance Profiler
+
+
 CNTK has a performance profiler that can help debug performance issues. It generates a summary report and a detailed profile log.
 
 ## Config file parameters
