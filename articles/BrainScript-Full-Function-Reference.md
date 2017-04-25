@@ -27,9 +27,9 @@ The primitive operations and layers are declared in the global namespace. Additi
  - [`MaxPoolingLayer`](./BrainScript-Layers-Reference.md#maxpoolinglayer-averagepoolinglayer)` {filterShape, stride = 1, pad = false, lowerPad = 0, upperPad = 0}`  
  - [`AveragePoolingLayer`](./BrainScript-Layers-Reference.md#maxpoolinglayer-averagepoolinglayer)` {filterShape, stride = 1, pad = false, lowerPad = 0, upperPad = 0}`  
  - [`EmbeddingLayer`](./BrainScript-Layers-Reference.md#embeddinglayer)` {outDim, embeddingPath = '', transpose = false}`  
- - [`RecurrentLSTMLayer`](./BrainScript-Layers-Reference.md#recurrentlstmlayer)` {outputDim, cellShape = None, goBackwards = false, enableSelfStabilization = false}`  
+ - [`RecurrentLSTMLayer`](./BrainScript-Layers-Reference.md)` {outputDim, cellShape = None, goBackwards = false, enableSelfStabilization = false}`  
  - [`DelayLayer`](./BrainScript-Layers-Reference.md#delaylayer)` {T=1, defaultHiddenActivation=0}`  
- - [`Dropout`](./Dropout)  
+ - [`Dropout`](./Dropout.md)  
  - [`BatchNormalizationLayer`](./BrainScript-Layers-Reference.md#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)` {spatialRank = 0, initialScale = 1,  
                          normalizationTimeConstant = 0, blendTimeConstant = 0,  
                          epsilon = 0.00001, useCntkEngine = true}`  
@@ -38,7 +38,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - [`FeatureMVNLayer{}`](./BrainScript-Layers-Reference.md#featuremvnlayer)  
 
 ## Layer building
- - [`Sequential()`](./Sequential)  
+ - [`Sequential()`](./Sequential.md)  
 
 ## Activation functions
  - [`Sigmoid`](./BrainScript-Activation-Functions.md)`(x)`  
@@ -84,7 +84,7 @@ The primitive operations and layers are declared in the global namespace. Additi
    [`BS.Boolean.Xor`](./Binary-Operations.md)` (a, b)`  
 
 ## Elementwise operations, ternary
- - [`BS.Boolean.If`](./If-Operation)` (condition, thenVal, elseVal)`  
+ - [`BS.Boolean.If`](./If-Operation.md)` (condition, thenVal, elseVal)`  
 
 ## Matrix product and convolution operations
  - [`Times`](./Times-and-TransposeTimes.md)`(A, B, outputRank=1)`  
@@ -102,7 +102,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - `BS.Constants.ZeroSequenceLike (x)`
 
 ## Inputs
- - [`Input`](./Inputs#input)` (shape, dynamicAxis='', sparse=false, tag='feature')`  
+ - [`Input`](./Inputs.md#input)` (shape, dynamicAxis='', sparse=false, tag='feature')`  
  - `DynamicAxis{}`
  - `EnvironmentInput (propertyName)`  
    `Mean (x)`, `InvStdDev (x)`  
@@ -128,7 +128,7 @@ The primitive operations and layers are declared in the global namespace. Additi
 
 ## Training operations
  - [`BatchNormalization`](./BatchNormalization.md)` (input, scale, bias, runMean, runInvStdDev, spatial, normalizationTimeConstant = 0, blendTimeConstant = 0, epsilon = 0.00001, useCntkEngine = true, imageLayout='CHW')`  
- - [`Dropout`](./Dropout) `(x)`  
+ - [`Dropout`](./Dropout.md) `(x)`  
  - `Stabilize (x, enabled=true)`  
    `StabilizeElements (x, inputDim=x.dim, enabled=true)`  
  - `CosDistanceWithNegativeSamples (x, y, numShifts, numNegSamples)`  
@@ -145,13 +145,13 @@ The primitive operations and layers are declared in the global namespace. Additi
  - `TransposeDimensions (x, axis1, axis2)`  
    `Transpose (x) = TransposeDimensions (x, 1, 2)`  
  - `BS.Sequences.BroadcastSequenceAs (type, data1)`  
- - [`BS.Sequences.Gather (where, x)`](Gather-and-Scatter.md#gather-scatter)  
-   [`BS.Sequences.Scatter (where, y)`](Gather-and-Scatter.md#gather-scatter)  
+ - [`BS.Sequences.Gather (where, x)`](Gather-and-Scatter.md)  
+   [`BS.Sequences.Scatter (where, y)`](Gather-and-Scatter.md)  
    [`BS.Sequences.IsFirst (x)`](Gather-and-Scatter.md#isfirst-islast)  
    [`BS.Sequences.IsLast (x)`](Gather-and-Scatter.md#isfirst-islast)  
 
 ## Recurrence
- - [`OptimizedRNNStack`](./OptimizedRNNStack)`(weights, input, hiddenDims,  
+ - [`OptimizedRNNStack`](./OptimizedRNNStack.md)`(weights, input, hiddenDims,  
               numLayers=1, bidirectional=false, recurrentOp='lstm')`
  - `BS.Loop.Previous (x, timeStep=1, defaultHiddenActivation=0)`  
    `PastValue (shape, x, defaultHiddenActivation=0.1, ...) = BS.Loop.Previous (0, shape, ...)`  
@@ -182,7 +182,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - `Trace (node, say='', logFrequency=traceFrequency, logFirst=10, logGradientToo=false, onlyUpToRow=100000000, onlyUpToT=100000000, format=[])`
 
 ## Deprecated
- - [`ErrorPrediction`](./Loss-Functions-and-Metrics,md#classificationerror)` (labels, nonNormalizedLogClassPosteriors)`  
+ - [`ErrorPrediction`](./Loss-Functions-and-Metrics.md#classificationerror)` (labels, nonNormalizedLogClassPosteriors)`  
  - `ColumnElementTimes (...) = ElementTimes (...)`  
  - `DiagTimes (...) = ElementTimes (...)`  
  - `LearnableParameter(...) = Parameter(...)`  

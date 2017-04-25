@@ -65,7 +65,7 @@ The top-level configuration parameter `command` determines what command blocks a
 * a reader block, which specifies where and how to load features and labels. 
 
 In this specific example, the network builder indicated by the [BrainScriptNetworkBuilder](./BrainScript-Network-Builder.md) block is used to define the network, the stochastic gradient descent learning algorithm as indicated
-by the [SGD block](./BrainScript-SGD-block) is used to train the model, and the [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) is used to load the features and labels from files in CNTK Text format. Note that readers are implemented as separate DLLs, and the name of the reader is also the name of the DLL file that will be loaded to read data.
+by the [SGD block](./BrainScript-SGD-block.md) is used to train the model, and the [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) is used to load the features and labels from files in CNTK Text format. Note that readers are implemented as separate DLLs, and the name of the reader is also the name of the DLL file that will be loaded to read data.
 
 The most frequently used configuration blocks are:
 * Network Builders
