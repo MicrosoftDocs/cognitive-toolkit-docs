@@ -1,6 +1,20 @@
+---
+title:   CNTK Evaluate Image Transforms
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Evaluate Image Transforms
+
 This page describes some possible implementations for transforming images prior to evaluating them on a CNTK model that was trained with data fed with the ImageReader. A working example is provided as part of the [CSEvalClient](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CSEvalClient) example program, in particular refer to the `EvaluateImageClassificationModel` method.
 
-# Overview
+## Overview
 The CNTK ImageReader plugin enables feeding image data to the CNTK model for training, testing, and evaluation. The ImageReader has some configurable capabilities that when enabled, perform some on-the-fly transforms to the image data.
 These possible transforms are:
 * Cropping
@@ -10,17 +24,17 @@ These possible transforms are:
 * Color
 * Layout (HWC vs CHW)
 
-# Image evalution with CNTK.exe and the Imagereader
+## Image evalution with CNTK.exe and the Imagereader
 In this case image transforms can be specified in the configuration file, and the Imagereader will perform the defined transformations.
 
-# Programmatic image evaluation through EvalDll(EvalWrapper)
+## Programmatic image evaluation through EvalDll(EvalWrapper)
 In this case the required image transformations have to be performed programmatically before the image is passed into the Evalwrapper.
 
 This section provides some possible implementations for performing some of these transformations prior to evaluation.
 
 For example a static class named CntkBitmapExtensions could contain the extension methods shown below.
 
-## Resize
+### Resize
         /// <summary>
         /// Resizes an image
         /// </summary>
@@ -68,7 +82,7 @@ In this case a possible invocation could be:
 
 This command would resize the `C:\rocket.bmp` image to a size of 224 x 224 pixels maintaining a high quality image.
 
-## Layout conversion from HWC to CHW
+### Layout conversion from HWC to CHW
 There are primarily two layout types used in CNTK: HWC and CHW.
 The first, HWC is the default format used in CNTK. The second, CHW, is the format used by cuDNN in the GPU.
 

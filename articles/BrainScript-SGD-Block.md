@@ -1,7 +1,21 @@
+---
+title:   BrainScript SGD Block
+author:    chrisbasoglu
+date:    03/17/2017
+ms.author:   cbasoglu
+ms.date:   03/17/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript SGD Block
+
 The SGD configuration block controls the behavior of the SGD (Stochastic Gradient Descent) algorithm in CNTK.
 If you are familiar with other toolkits, be sure to check out
-* [How is the minibatch size defined in CNTK](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
-* [How is the epoch size defined in CNTK](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
+* [How is the minibatch size defined in CNTK](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK.md)
+* [How is the epoch size defined in CNTK](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK.md)
 * [How to convert learning rate and momentum parameters from other toolkits?](#converting-learning-rate-and-momentum-parameters-from-other-toolkits)
 
 The SGD configuration block has the following structure and default values:
@@ -115,15 +129,15 @@ The SGD configuration block has the following structure and default values:
         sigFigs = 6
     }
 
-### Parameters
+## Parameters
 
-#### Training process control
+### Training process control
 
 * `trainCriterionNodeName`: the name of the training criterion node. If not provided the default training criterion node in the network will be used.
 
 * `evalCriterionNodeName`: the name of the evaluation criterion node. If not provided the default evaluation criterion node in the network will be used.
 
-* `epochSize`: [click here to learn about epochSize](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
+* `epochSize`: [click here to learn about epochSize](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK.md)
 
 * `keepCheckPointFiles`: whether you want to keep the check point file after a new epoch starts. Valid values are `true` and `false` (default).
 
@@ -131,13 +145,13 @@ The SGD configuration block has the following structure and default values:
 
 * `maxEpochs`: maximum number of epochs to run.
 
-* `minibatchSize`: [click here to learn about minibatchSize](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
+* `minibatchSize`: [click here to learn about minibatchSize](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK.md)
 
 * `dropoutRate`: dropout rate during the training procedure. Default is `0.0`. Can use syntax such as 0.5*10:0.2 which means using dropout rate 0.5 for 10 epochs and then 0.2 for the rest.
 
 * `maxTempMemSizeInSamplesForCNN`: maximum temporary memory used (in number of samples) when packaging and unpackaging input features. Default is 0, which means using any value as needed. Useful to control the memory foot print esp. when run under GPU.
 
-#### Learning rate and momentum control
+### Learning rate and momentum control
 
 Note CNTK's way of specifying learning rates and momentum differs from other toolkits.
 [See here](#converting-learning-rate-and-momentum-parameters-from-other-toolkits) for a detailed description.
@@ -189,7 +203,7 @@ Internally, this will be converted into `momentumAsTimeConstant = -minibatchSize
     * `minibatchSizeTuningFrequency`: The number of epochs to skip, on a periodic basis, before dynamically adjusting the minibatch size. Default value is `1`.
     * `minibatchSizeTuningMax`: The maximum size allowed for an adaptively adjusted minibatch size. Default value is `1048576`.
 
-#### Gradient control
+### Gradient control
 
 * `gradientClippingWithTruncation`: whether to use the truncation based gradient clipping to control gradient explosion. Valid values are `true` (default) and `false`. If it is false the norm based clipping will be used instead which is more expensive.
 
@@ -214,25 +228,25 @@ is multiplied by the number of samples in the minibatch.
 
 * `gaussianNoiseInjectStd`: the standard deviation of the Gaussian noise added when using the `AdaGrad` approach. Default is `0`.
 
-#### Information display
+### Information display
 * `traceLevel`: trace level to decide what information to print out in the stderr. Valid values are `0` (default) and `1`.
 
 * `numMBsToShowResult`: display training statistics after how many minibatches. Default is `10`.
 
-#### Gradient Check
+### Gradient Check
 * `gradientCheck`: determines whether to use the gradient checker. The default value is `false`. When using the gradient checker you need to use a minibatch size that is larger than the sequence length for RNNs due to the truncated backpropagation through time (BPTT) algorithm used to train RNNs, and a smaller learning rate to prevent numerical issues caused by divergence. In addition, precision should be set to double.
 
-### Description
+## Description
 
 The behavior of the SGD algorithm (Stochastic Gradient Descent Learner) is controlled by the SGD block of the options. When an option is omitted the default value is assumed.
 
 Parameters that are not explicitly specified are left to the default values.
 
-#### Specifying data sizes
-* [What is the minibatch size in CNTK?](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
-* [What is the epoch size in CNTK?](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
+### Specifying data sizes
+* [What is the minibatch size in CNTK?](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK.md)
+* [What is the epoch size in CNTK?](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK.md)
 
-#### Converting Learning-rate and Momentum Parameters From Other Toolkits
+### Converting Learning-rate and Momentum Parameters From Other Toolkits
 
 CNTK's model-update formulae differ somewhat from some other toolkits and from literature, in that in CNTK, the parameters are specified in a way that is *agnostic of the minibatch size*. This is important in the context of data-parallel training, where CNTK itself may modify the minibatch size. Specifying learning rate and momentum in an agnostic way avoids complexities of adjusting these values upon changes of minibatch size.
 
@@ -278,9 +292,9 @@ You will get close to this by using `learningRatePerMB` and `momentumPerMB`, whi
     learningRatePerSample = learningRatePerMB / minibatchSize
     momentumAsTimeConstant = -minibatchSize / ln (momentumPerMB)
 
-### Example
+## Example
 
-Configuration used by the [ImageHandsOn tutorial](./Hands-On-Labs-Image-Recognition) with data parallelism
+Configuration used by the [ImageHandsOn tutorial](./Hands-On-Labs-Image-Recognition.md) with data parallelism
 and automatic minibatch scaling:
 
     SGD = {

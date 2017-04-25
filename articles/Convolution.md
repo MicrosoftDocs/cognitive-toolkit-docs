@@ -1,3 +1,17 @@
+---
+title:   Convolution 
+author:    chrisbasoglu
+date:    02/02/2017
+ms.author:   cbasoglu
+ms.date:   02/02/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Convolution
+
 
     Convolution (w, input,
                  {kernel dimensions}, 
@@ -42,7 +56,7 @@ All values of the form `{...}` must actually be given as a colon-separated seque
 
 Note: If you are using the deprecated `NDLNetworkBuilder`, there should be no trailing `.y` in the example.
 
-### Simplified 2D Convolution (deprecated NDL only)
+## Simplified 2D Convolution (deprecated NDL only)
 
 The now deprecated NDL language provided a simplified 2D variant of `Convolution()`:
 

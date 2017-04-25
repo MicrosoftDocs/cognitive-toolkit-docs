@@ -1,3 +1,17 @@
+---
+title:   Build your own imaage classifier using Transfer Learning
+author:    chrisbasoglu
+date:    02/14/2017
+ms.author:   cbasoglu
+ms.date:   02/14/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# Build your own imaage classifier using Transfer Learning
+
 **Table of Contents**
 
 - [Summary](#summary)
@@ -6,7 +20,7 @@
 - [Build your own custom image classifier](#build-your-own-custom-image-classifier)
 - [Using a different base model](#using-a-different-base-model)
 
-# Summary
+## Summary
 
 <p align="center">
 <a target="_blank" href="./Tutorial_TL/Canis_lupus_occidentalis.jpg"><img src="./Tutorial_TL/Canis_lupus_occidentalis.jpg" alt="image" height="200"/></a>
@@ -26,15 +40,15 @@ The following are the main resources for the transfer learning tutorial:
 |Data              |The [Flowers data set with 102 categories](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) and example images of sheep and wolfs (see [Setup](#setup)).
 |How to run        |Follow the description below.
 
-# Setup
+## Setup
 
-To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine) for setup help). 
+To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). 
 
 To download the required data and the pretrained model run the following command form the [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/TransferLearning) folder:
 
 `python install_data_and_model.py`
 
-# Run the example
+## Run the example
 
 <p align="center">
 <a target="_blank" href="./Tutorial_TL/image_08093.jpg"><img src="./Tutorial_TL/image_08093.jpg" alt="image" height="200"/></a>
@@ -51,7 +65,7 @@ To train and evaluate a transfer learning model on the Flowers data set run
 
 The model achieves 93% accuracy on the Flowers data set after training for 20 epochs.
 
-## The basic concept of transfer learning
+### The basic concept of transfer learning
 
 When we use a base model for transfer learning we essentially build upon the features and concept that were learned during the training of the base model. For a convolutional DNN, ResNet_18 in our case, this means for example that we _cut off_ the final dense layer that is responsible for predicting the class labels of the original base model and replace it by a new dense layer that will predict the class labels of our new task at hand. The input to the old and the new prediction layer is the same, we simply reuse the trained features. Then we train this modified network, either only the new weights of the new prediction layer or all weights of the entire network. 
 
@@ -76,7 +90,7 @@ The following code is the part of `TransferLearning.py` that creates the new mod
 
 
 
-# Build your own custom image classifier
+## Build your own custom image classifier
 
 In the previous section we trained a classifier that distinguishes 102 different categories of flowers using roughly 6000 images for training. In this section we will only use 15 images per category to build a classifier that can tell a wolf from a sheep. We use the same `ResNet_18` base model for transfer learning. To train and evaluate the model run
 
@@ -109,7 +123,7 @@ Note that the last three images do not have a ground truth class assigned, which
 </p>
 
 
-## Folder structure for custom image sets
+### Folder structure for custom image sets
 
 You can use the `TransferLearning_Extended.py` script with your own images. Here is what you need: 
 
@@ -154,7 +168,7 @@ For scoring you do not have to use a `test_map_file`, e.g. if you want to score 
     probs = eval_single_image(trained_model, img_file, image_width, image_height)
 ```
 
-## A few grains of salt
+### A few grains of salt
 
 Your training images should cover sufficiently the scenarios that you want to score later on. If the classifier sees fully new concepts or contexts it is likely to perform badly. Just a few examples:
  * You train only on images from a constraint environment (say, indoor) and try to score images from a different environment (outdoor).
@@ -166,7 +180,7 @@ Adding a _catch-all_ category can be a good idea, but only if the training data 
 
 Another aspect to keep in mind is that a particular base model might work very well for some transfer learning tasks and not as good for others. For example, the above `ResNet_18` model was pretrained on the ImageNet corpus, which contains many images of animals, people, cars and many other _every day objects_. Using this base model in transfer learning to build a clssifier for similar _every day objects_ can work out well. Using the same model as a base model to build a classifier for images of microorganisms or pencil drawings may yield only mediocre results.  
 
-# Using a different base model
+## Using a different base model
 
 To use a different model as base model you need to adapt the following parameters in `TransferLearning.py` (same for `TransferLearning_Extended.py`): 
 

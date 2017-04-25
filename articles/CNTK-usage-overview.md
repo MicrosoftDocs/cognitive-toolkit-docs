@@ -1,11 +1,25 @@
-To use CNTK you need to either download the executable binaries or download the source code and compile it on your machine ([details](Setup CNTK on your machine)).
+---
+title:   CNTK usage overview
+author:    chrisbasoglu
+date:    04/02/2017
+ms.author:   cbasoglu
+ms.date:   04/02/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK usage overview
+
+To use CNTK you need to either download the executable binaries or download the source code and compile it on your machine ([details](Setup CNTK on your machine.md)).
 There are three main tasks (or actions) that are supported by CNTK:
 * **Train** - Define a network and train it to produce a trained model using training data
 * **Evaluate** - Test a trained model to assess its performance using test data
 * **Deploy** - Use a trained model, e.g. in your own solution, to classify new instances
 
 A brief overview for each of these tasks is given below and pointers to a more detailed description are provided.
-In addition there are other tasks that CNTK supports such as **edit** existing models and **write** node outputs to a file. A description of these is provided in the Advanced Topics section on the [Top-level commands](/en-us/cognitive-toolkit/Top-level-commands.md) page.
+In addition there are other tasks that CNTK supports such as **edit** existing models and **write** node outputs to a file. A description of these is provided in the Advanced Topics section on the [Top-level commands](./Top-level-commands.md) page.
 
 ## Training a model using CNTK
 
@@ -15,7 +29,7 @@ Training a neural network with CNTK involves three components that must be confi
 * **reader**: how training data is read
 * **SGD**: the hyper-parameters of the stochastic-gradient process
 
-You need to provide this information through a configuration file as the first argument when calling the CNTK executable. The configuration file uses a specific syntax. Please see [Config file overview](./BrainScript-Config-file-overview) for details on config files.
+You need to provide this information through a configuration file as the first argument when calling the CNTK executable. The configuration file uses a specific syntax. Please see [Config file overview](./BrainScript-Config-file-overview.md) for details on config files.
 
 In the following we use the CNTK configuration and results from the MNIST example, in particular the configuration '01_OneHidden_ndl_deprecated.cntk' (see [Image/GettingStarted](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/README.md) and [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) for full details).
 
@@ -52,15 +66,15 @@ The above code snippet defines a command called `MNISTtrain` with `action = "tra
 
 The three main configuration blocks for training define the network itself and the parameters for the training algorithm and the data reader.
 
-* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [Simple Network Builder](/en-us/cognitive-toolkit/Simple-Network-Builder.md) for standard models or the [BrainScript Network Builder](/en-us/cognitive-toolkit/BrainScript-Network-Builder.md) for custom ones. Please refer to the corresponding Wiki pages for details.
-* SGD - this block lets you parameterize the training algorithm (stochastic gradient descent). Configurable options include momentum, adaptive learning rate, adaptive minibatch size, parallel training. See [SGD block](/en-us/cognitive-toolkit/SGD-block.md) for more details.
-* reader - the reader block defines which reader to use and where the corresponding input files are. CNTK provides several data readers for different formats and tasks (see [Reader block](/en-us/cognitive-toolkit/Reader-block.md)).
+* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [Simple Network Builder](./Simple-Network-Builder.md) for standard models or the [BrainScript Network Builder](./BrainScript-Network-Builder.md) for custom ones. Please refer to the corresponding Wiki pages for details.
+* SGD - this block lets you parameterize the training algorithm (stochastic gradient descent). Configurable options include momentum, adaptive learning rate, adaptive minibatch size, parallel training. See [SGD block](./BrainScript-SGD-block.md) for more details.
+* reader - the reader block defines which reader to use and where the corresponding input files are. CNTK provides several data readers for different formats and tasks (see [Reader block](./BrainScript-Reader-block.md)).
 
 Finally, the line `command = MNISTtrain` specifies which of the defined tasks to execute. To execute several tasks consecutively, e.g. training and evaluation, simply add more tasks to the command separated by a colon: `command = "MNISTtrain:MNISTtest"`.
 
 ## Evaluating a trained model
 
-To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [Train, Test, Eval](/en-us/cognitive-toolkit/Train,-Test,-Eval.md) for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
+To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [Train, Test, Eval](./BrainScript-Train-Test-Eval.md) for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
 ```
 testNetwork = {
     action = "test"
@@ -84,10 +98,10 @@ The `MNISTtest` block uses `action = "test"`. For the `test` action you need to 
 
 ## Using a trained model in your own code
 
-Once you have trained a model, you need the functionality to evaluate the model in your target environment. CNTK provides multiple ways to serve your models in different scenarios. You can use a trained model from C++, Python, C# or other .NET languages. You can run evaluation on your machine or in Azure. The section [Evaluating CNTK Models](./CNTK-Evaluation-Overview) (see sidebar) has many details including evaluation using C++/Python/C#/Azure.
+Once you have trained a model, you need the functionality to evaluate the model in your target environment. CNTK provides multiple ways to serve your models in different scenarios. You can use a trained model from C++, Python, C# or other .NET languages. You can run evaluation on your machine or in Azure. The section [Evaluating CNTK Models](./CNTK-Evaluation-Overview.md) (see sidebar) has many details including evaluation using C++/Python/C#/Azure.
 
 **Next steps**
-* [Model Evaluation Detailed](./CNTK-Evaluation-Overview)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
-* [Config file overview](/en-us/cognitive-toolkit/Config-file-overview.md)
-* [Command line parsing rules](/en-us/cognitive-toolkit/Command-line-parsing-rules.md)
+* [Model Evaluation Detailed](./CNTK-Evaluation-Overview.md)
+* [Examples](./Examples.md)
+* [Config file overview](./BrainScript-Config-file-overview.md)
+* [Command line parsing rules](./BrainScript-Command-line-parsing-rules.md)

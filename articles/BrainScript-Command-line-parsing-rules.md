@@ -1,3 +1,18 @@
+---
+title:   BrainScript via command line parsing rules
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript via command line parsing rules
+
+
 Below we describe the CNTK command line parsing rules. CNTK consists of a number of components to complete a task. Most of these components need some configuration information available in order to function, and these configuration parameters are provided through configuration files in CNTK. 
 
 Configuration files are collections of name-value pairs. The configuration data can be one of the following types:

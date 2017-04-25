@@ -1,3 +1,17 @@
+---
+title:   Debugging CNTK source code in Visual Studio
+author:    chrisbasoglu
+date:    11/14/2016
+ms.author:   cbasoglu
+ms.date:   11/14/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Debugging CNTK source code in Visual Studio
+
 The steps for debugging CUDA kernels:
 
 1. Install NVIDIA Nsight following the directions from [here](http://docs.nvidia.com/gameworks/index.html#developertools/desktop/nsight/install_debug_monitor.htm%3FTocPath%3DDeveloper%2520Tools%7CDesktop%2520Developer%2520Tools%7CNVIDIA%2520Nsight%2520Visual%2520Studio%2520Edition%7CNVIDIA%2520Nsight%2520Visual%2520Studio%2520Edition%25205.2%7CInstallation%2520and%2520Setup%2520Essentials%7C_____2)

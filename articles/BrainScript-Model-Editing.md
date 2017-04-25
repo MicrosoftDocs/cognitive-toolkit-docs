@@ -1,14 +1,28 @@
+---
+title:   Model  Editing with BrainScript
+author:    chrisbasoglu
+date:    03/27/2017
+ms.author:   cbasoglu
+ms.date:   03/27/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Model  Editing with BrainScript
+
 (Note: Older versions of CNTK used "MEL" (Model Editing Language) for this purposes. We are still in the process of converting the examples. For documentation on MEL, please see the [here](https://github.com/Microsoft/CNTK/blob/master/Documentation/Documents/Model%20Editing%20Language.md).)
 
 CNTK allows models to be edited after the fact. This is done by creating a new model while cloning (parts of) an existing model with modifications applied. For this, CNTK provides three basic functions:
 
 * `BS.Network.Load()` to load an existing model
-* [`BS.Network.CloneFunction()`](./CloneFunction) to extract a section of an existing model for reuse
+* [`BS.Network.CloneFunction()`](./CloneFunction.md) to extract a section of an existing model for reuse
 * `BS.Network.Edit()` to clone a model with node-by-node modifications applied
 
 The editing operation is not a separate step. Rather, a command that should work off a modified model would not specify a `modelPath` to load the model from, but rather a `BrainScriptNetworkBuilder` section that loads the model inside and constructs a new model off the loaded one on the fly.
 
-### Example: Discriminative pre-training
+## Example: Discriminative pre-training
 
 Discriminative pre-training is a technique where a deep network is created by training a sequence of shallower networks. Start with a 1-hidden layer network, train to partial convergence, then remove the output layer, add a new hidden layer, and add a new output layer. Repeat until the desired number of hidden layers is reached.
 
@@ -51,7 +65,7 @@ Next, STEP 2 constructs the rest of the new network using regular BrainScript. N
 
 Also note that the output layer is constructed anew. This way, its model parameters will get freshly created. (To not do that and instead reuse the existing parameters, one could use `inModel.Wout`, but note that does not make sense from the network design point of view in this particular example.)
 
-### Example: Using a pre-trained model
+## Example: Using a pre-trained model
 
 The following is an example of using a pre-trained model (from file `"./featext.dnn"`) as a feature extractor:
 
@@ -84,15 +98,15 @@ STEP 2 uses `CloneFunction()` to clone the feature-extraction related section fr
 
 In STEP 3 and 4, the new network is defined. This is done like any other BrainScript model, only that now we can use the `featExt()` function in doing so.
 
-#### Problems with node names with `.` `[` and `]`
+### Problems with node names with `.` `[` and `]`
 To reference a node in a network that contains `.` or `[` or `]`, replace those characters by `_`.
 E.g., if `network` contains a node called `result.z`, `network.result.z` will fail;
 instead say `network.result_z`.
 
-### Example: Modifying nodes of an existing network
+## Example: Modifying nodes of an existing network
 
 To modify inner parts of an existing network, one would actually clone the network, while modifications are applied as part of the cloning process. This is accomplished by `BS.Network.Edit()`. `Edit()` will iterate over all nodes of a network, and will offer each node, one by one, to lambda functions passed by the caller. Those lambda functions can then inspect the node and either return the node unmodified, or return a new node in its place. `Edit()` will iterate over nodes in unspecified order.If a replacement node references a network node that in turn was replaced, `Edit()` will, as a final step, update all such references to the respective replacements (aka "do the right thing").
 
 TODO: Example.
 
-Next: [Full Function Reference](./BrainScript-Full-Function-Reference)
+Next: [Full Function Reference](./BrainScript-Full-Function-Reference.md)

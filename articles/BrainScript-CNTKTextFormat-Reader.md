@@ -1,3 +1,17 @@
+---
+title:   CNTK Text Format Reader with BrainScript
+author:    chrisbasoglu
+date:    03/20/2017
+ms.author:   cbasoglu
+ms.date:   03/20/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# CNTK Text Format Reader with BrainScript
+
 This page documents the CNTKTextFormatReader from the point of view of BrainScript, but Python users may learn by reading this document as well -- the concepts, parameters and patterns are all the same.
 
 CNTKTextFormatReader (later simply *CTF Reader*) is designed to consume input text data formatted according to the specification below. It supports the following main features:
@@ -5,7 +19,7 @@ CNTKTextFormatReader (later simply *CTF Reader*) is designed to consume input te
 * Both sparse and dense inputs
 * Variable length sequences
 
-### CNTK Text Format (CTF)
+## CNTK Text Format (CTF)
 
 Each line in the input file contains one sample for one or more inputs. Since (explicitly or implicitly) every line is also attached to a sequence, it defines one or more **<sequence, input, sample>** relations. Each input line must be formatted as follows:
 
@@ -25,7 +39,7 @@ where
 * Both tabs and spaces can be used interchangeably as delimiters.
 * A comment starts with a pipe immediately followed by a hash symbol: `|#`, then followed by the actually content (body) of the comment. The body can contain any characters, however a pipe symbol inside the body needs to be escaped by appending the hash symbol to it (see the example below). The body of a comment continues until the end of line or the next un-escaped pipe, whichever comes first.
  
-### Simple Example
+## Simple Example
 
 This example is based on a minimal set of parameters and format options.
 
@@ -79,9 +93,9 @@ Note the following about the input format:
 * The order of input samples within a line is NOT important (conceptually, each line is an unordered collection of key-value pairs)
 * Each well-formed line must end with either a "Line Feed" `\n` or "Carriage Return, Line Feed" `\r\n` symbols.
 
-### Extended Example
+## Extended Example
 
-This example features all possible configuration parameters and shows various input format options. Please refer to the tables [below](./BrainScript-CNTKTextFormat-Reader#configuration-parameters) for the full description of the configuration parameters used in this example.
+This example features all possible configuration parameters and shows various input format options. Please refer to the tables [below](#configuration-parameters) for the full description of the configuration parameters used in this example.
 
 ```
 ...
@@ -156,13 +170,13 @@ The corresponding input file can then look approximately as follows:
 
 ```
 
-All options discussed in the example [above](./BrainScript-CNTKTextFormat-Reader#simple-example), still apply here. On top of that, we introduced two additional features:
+All options discussed in the example [above](#simple-example), still apply here. On top of that, we introduced two additional features:
 
-#### Input name aliases
+### Input name aliases
 Input names can be arbitrary long and thus repeating them throughout the input file may not be space-efficient. To mitigate this, the dataset can use "aliases" instead of full input names. Aliases then need to be specified within each input sub-subsection. In our example, the dataset uses aliases `a` and `b`, which are mapped to "Some_very_long_input_name" and "Some_other_also_very_long_input_name" respectively in the reader config section.
 
  
-#### Sequence IDs
+### Sequence IDs
 As already mentioned, each separate line in the input file represents a *sequence* containing a single sample for each input. However, if a line is prefixed with a non-negative number, the number is used as the corresponding *sequence id*. All subsequent lines that share the same sequence id are merged together to become a part of the same sequence. Therefore, repeating the same numerical prefix for N lines allows to build up a multi-sample sequence, with each input containing between 1 and N samples. Omitting the sequence prefix on the second and following lines has the same effect. Thus, the example dataset above defines *five* sequences with ids `100`,  `200`, `333`, `400` and `500`. 
 
 Setting `skipSequenceIds` parameter in the reader section to `true`, forces the reader to ignore all explicit sequence ids in the dataset and treat separate lines as individual sequences. Also, omitting the sequence id on the first line in the dataset has the same effect -- all subsequent sequence ids are ignored, lines treated as individual sequences, as in this example:
@@ -189,7 +203,7 @@ For example, the following datasets are **invalid**:
 456 |a 4 5 6 
 456 |b 101 201
 ```
-### A Few Real-World Examples
+## A Few Real-World Examples
 
 * Classification: Every line contains a sample, consisting of a label and features. No sequence ID needed, since every line is its own "sequence" of length 1.
 ```
@@ -244,14 +258,14 @@ NOTE: At the moment the number of lines must not exceed the length of the longes
 ...
 ```
 
-### Configuration Parameters
+## Configuration Parameters
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
 | `precision`                           | Specifies the floating point precision (`double` or `float`) of the input values. *Optional*, defaults to  `float`. |
 
 
-#### `reader` section
+### `reader` section
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
@@ -260,14 +274,14 @@ NOTE: At the moment the number of lines must not exceed the length of the longes
 | `randomize`                           | Specifies whether the input should be randomized (`true`, `false`). *Optional*, defaults to  `true`. |
 | `randomizationWindow`                 | Specifies the size (positive integer) of the randomization window (i.e., randomization range). This parameter affects how much of the dataset needs to reside in memory at once. *Optional*, depending on the `sampleBasedRandomizationWindow` value, defaults either to the size of the whole dataset in samples (i.e., the input is randomized across the whole dataset), or 4GB of disk space worth of chunks (i.e., `128` when the chunk size equals 32MB). This parameter is ignored when `randomize` is `false`. |
 | `sampleBasedRandomizationWindow`      | If `true`, the size of the randomization window is interpreted as a certain number of samples, otherwise -- as a number of chunks. *Optional*, defaults to `false`.  Similarly to `randomizationWindow`, this parameter is ignored, when `randomize` is `false`. |
-| `skipSequenceIds`                     | If `true`, the reader will ignore sequence IDs in the input file, interpreting each separate line as an independent sequence of size 1 ([see the section on the sequence ids](./BrainScript-CNTKTextFormat-Reader#sequence-ids)). *Optional*, defaults to `false`. |
+| `skipSequenceIds`                     | If `true`, the reader will ignore sequence IDs in the input file, interpreting each separate line as an independent sequence of size 1 ([see the section on the sequence ids](#sequence-ids)). *Optional*, defaults to `false`. |
 | `maxErrors`                           | Number of input errors after which an exception should be raised. *Optional*, defaults to `0`, which means that the first malformed value will trigger an exception. |
 | `traceLevel`                          | Output verbosity level. `0` - show only errors; `1` - show errors and warnings; `2` - show all output. *Optional*, defaults to `1`. |
 | `chunkSizeInBytes`                    | Number of consecutive bytes to read from disk in a single read operation. *Optional*, defaults to  `33554432` (32MB). |
 | `keepDataInMemory`                    | If `true`, the whole dataset will be cached in memory. *Optional*, defaults to `false`. |
 | `frameMode`                           | `true` signals the reader to use a packing method optimized for frames (sequences that contain only a single sample). *Optional*, defaults to `false`. |
 
-#### `input` sub-section
+### `input` sub-section
 
 `input` combines a number of individual inputs, each with an appropriately labeled configuration sub-section. All parameters described below are specific to an *Input name* sub-section associated with a particular input.
 

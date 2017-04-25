@@ -1,3 +1,17 @@
+---
+title:   Layers  Reference with BrainScript
+author:    chrisbasoglu
+date:    03/09/2017
+ms.author:   cbasoglu
+ms.date:   03/09/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Layers  Reference with BrainScript
+
 CNTK predefines a number of common "layers," which makes it very easy to write simple networks
 that consist of standard layers layered on top of each other.
 Layers are function objects that can be used like regular BrainScript functions but
@@ -14,7 +28,7 @@ which can then, e.g., be used for training against a cross-entropy criterion:
     ce = CrossEntropy (labels, p)
 
 If your network is a straight concatenation of operations (many are), you can use the alternative
-[`Sequential()`](./Sequential)
+[`Sequential()`](./Sequential.md)
 notation:
 
     myModel = Sequential (
@@ -26,7 +40,7 @@ and invoke it like this:
 
     p = myModel (features)
 
-#### Example models
+## Example models
 
 The following shows a slot tagger that embeds a word sequence, processes it with a recurrent LSTM,
 and then classifies each word:
@@ -52,7 +66,7 @@ And the following is a simple convolutional network for image recognition:
         LinearLayer {10}
     )
 
-#### Parameter sharing
+## Parameter sharing
 If you assign a layer to a variable and use it in multiple places,
 *the parameters will be shared*.
 If you say
@@ -97,15 +111,15 @@ layer has its input dimension inferred to match that of both `query` and `doc`.
 If their dimensions differ,
 then this network is malformed, and dimension inference/validation will fail with an error message.
 
-#### Implementation note
+## Implementation note
 Many layers are wrappers around underlying CNTK primitives, along with the respective
 required learnable parameters. For example,
-[`ConvolutionalLayer{}`](#convolutionallayer) wraps the [`Convolution()`](./Convolution) primitive.
+[`ConvolutionalLayer{}`](#convolutionallayer) wraps the [`Convolution()`](./Convolution.md) primitive.
 The benefits of using layers are:
 * layers contain learnable parameters of the correct dimension
-* layers are composable (cf. [`Sequential()`](./Sequential))
+* layers are composable (cf. [`Sequential()`](./Sequential.md))
 
-# DenseLayer{}, LinearLayer{}
+## DenseLayer{}, LinearLayer{}
 
 Factory function to create a fully-connected layer. `DenseLayer{}` takes with an optional non-linearity.
 
@@ -116,7 +130,7 @@ Factory function to create a fully-connected layer. `DenseLayer{}` takes with an
 
 * `outDim`: output dimension of this layer
 * `activation` (`DenseLayer{}` only): pass a function here to be used as the activation function, such as `activation=ReLU`
-* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of initialization options.
+* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `bias`: if false, do not include a bias parameter
 
@@ -149,7 +163,7 @@ In that case,
 and `b` will have the tensor dimensions `[outDim[0] x outDim[1] x ...]`.
 
 CNTK's matrix product will interpret these extra output or input dimensions as if they were flattened into a long vector.
-For more details on this, see the documentation of [`Times()`](./Times-And-TransposeTimes)
+For more details on this, see the documentation of [`Times()`](./Times-And-TransposeTimes.md)
 
 ### Example:
 
@@ -160,7 +174,7 @@ or alternatively:
     Layer = DenseLayer {1024, activation=Sigmoid)
     h = Layer (v)
 
-# ConvolutionalLayer{}
+## ConvolutionalLayer{}
 
 Creates a convolution layer with optional non-linearity.
 
@@ -176,7 +190,7 @@ Creates a convolution layer with optional non-linearity.
 * `filterShape`: *spatial* extent of the filter, e.g. `(5:5)` for a 2D filter. The input-channel dimension
 is *not* to be included here.
 * `activation`: optional non-linearity, e.g. `activation=ReLU`
-* `init` (`'heNormal'`|`'glorotUniform'`|...): type of random initialization for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of random-initialization options.
+* `init` (`'heNormal'`|`'glorotUniform'`|...): type of random initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of random-initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `stride`: increment when sliding the filter over the input. E.g. `(2:2)` to reduce the dimensions by 2
 * `pad`: if not set (default), then the filter will be shifted over the "valid" area of input, that is, no value outside
@@ -247,7 +261,7 @@ E.g. filtering a `[640 x 480]` image with a stride of `(2:2)` will result in a `
 region with padding, and `[318 x 238]` without padding.
 
 #### Notes
-This layer is a wrapper around the [`Convolution()`](./Convolution) primitive.
+This layer is a wrapper around the [`Convolution()`](./Convolution.md) primitive.
 
 The filter kernel parameters' name as shown in the log's validation section will end in `.W`.
 The dimension will currently *not* be shown as `[ (filterShape) x (#input channels) x numOutputChannels ]`
@@ -257,7 +271,7 @@ as described above, but instead [ numOutputChannels x ((product over filter shap
 
     c = ConvolutionalLayer {64, (3:3), pad = true, stride = (1:1), bias=false} (x)
 
-# DeconvLayer{}
+## DeconvLayer{}
 
 Creates a deconvolution layer.
 
@@ -280,7 +294,7 @@ is *not* to be included here.
 * `numInputChannels`: number of input channels (number of filters of the input volume)
 * `bias`: if false, do not include a bias parameter
 * `activation`: optional non-linearity, e.g. `activation=ReLU`
-* `init` (`'heNormal'`|`'glorotUniform'`|...): type of random initialization for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of random-initialization options.
+* `init` (`'heNormal'`|`'glorotUniform'`|...): type of random initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of random-initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `initBias`: the initial value for the bias
 * `stride`: increment when sliding the filter over the input. E.g. `(2:2)` to reduce the dimensions by 2
@@ -297,7 +311,7 @@ A function that implements the desired fully-connected layer. See description.
 Use these factory functions to create a deconvolution layer.
 
 The resulting layer applies a deconvolution operation on an N-dimensional tensor.
-This layer is a wrapper around the [`Convolution()`](./Convolution) primitive with `deconv=true`. 
+This layer is a wrapper around the [`Convolution()`](./Convolution.md) primitive with `deconv=true`. 
 
 One popular usecase for deconvolution is reconstructing an image ([see here for example](https://arxiv.org/abs/1505.04366)). Where convolution takes an input 2D receptive-field region and computes the correlation with a 2D filter, deconvolution takes a pixel and spreads it over a 2D region.
 
@@ -349,9 +363,9 @@ I.e. what Deconvolution() does implicitly is:
 
     deconv_A = DeconvLayer {inputDim, (5:5), cMap1, lowerPad=(2:2:0), upperPad=(2:2:0)}(unpool_A)
 
-See [Image auto encoder using Deconvolution and Unpooling](/en-us/cognitive-toolkit/Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
+See [Image auto encoder using Deconvolution and Unpooling](./Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
 
-# MaxPoolingLayer{}, AveragePoolingLayer{}
+## MaxPoolingLayer{}, AveragePoolingLayer{}
 
 Factory functions to create a max- or average-pooling layer.
 
@@ -392,7 +406,7 @@ see [`ConvolutionalLayer{}`](#convolutionallayer) for more detail.
 
     p = MaxPoolingLayer {(3:3), stride=(2:2)} (c)
 
-# MaxUnoolingLayer{}
+## MaxUnoolingLayer{}
 
 Creates a max-unooling layer.
 
@@ -422,9 +436,9 @@ The unpooling operation is the inverse of a pooling operation. It requires two i
 
     unpool_A = MaxUnpoolingLayer {(2:2), stride=(2:2)}(deconv_B, relu_A)
 
-See [Image auto encoder using Deconvolution and Unpooling](/en-us/cognitive-toolkit/Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
+See [Image auto encoder using Deconvolution and Unpooling](./Image-auto-encoder-using-Deconvolution-and-Unpooling.md) for a detailed example and walk through.
 
-# EmbeddingLayer{}
+## EmbeddingLayer{}
 
     EmbeddingLayer {outDim,
                     init='glorotUniform', initValueScale=1,
@@ -433,7 +447,7 @@ See [Image auto encoder using Deconvolution and Unpooling](/en-us/cognitive-tool
 ### Parameters
 
 * `outDim`: the dimension of the desired embedding vector
-* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of initialization options.
+* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `embeddingPath`: if given, embeddings are not learned but loaded from a file and not updated further during training
 * `transpose`: allows to load embeddings that are stored in transposed form
@@ -459,7 +473,7 @@ the vast majority of columns would be zero,
 CNTK implements has a specific optimization to represent the gradient in "column-sparse" form.
 
 Known issue: The above-mentioned column-sparse gradient form is currently not supported by
-our [1-bit SGD](./Multiple-GPUs-and-machines#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines#22-block-momentum-sgd) technique instead.
+our [1-bit SGD](./Multiple-GPUs-and-machines#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) technique instead.
 
 ### Example
 
@@ -491,7 +505,7 @@ each of which consisting of 300 space-separated numbers.
 Since this file saves the embeddings as rows rather than columns, `transpose=true` will transpose
 the matrix on the fly.
 
-# RecurrentLSTMLayer{}, RecurrentLSTMLayerStack{}
+## RecurrentLSTMLayer{}, RecurrentLSTMLayerStack{}
 
 Factory functions to create a single-layer or multi-layer recurrent LSTM.
 
@@ -516,7 +530,7 @@ Factory functions to create a single-layer or multi-layer recurrent LSTM.
 * `cellShapes` ( (`RecurrentLSTMLayerStack{}`, optional): array of values like `cellShape` for `RecurrentLSTMLayer()` to denote projection
 * `goBackwards` (optional): if true, the recurrence is run backwards
 * `usePeepholes` (optional): if true, then use peephole connections in the LSTM
-* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of initialization options.
+* `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `enableSelfStabilization` (optional): if true, insert a "stabilizer" operation similar to [`StabilizerLayer{}`](./#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)
 * `allowOptimizedEngine` (optional, default false): if true, then use cudnn5's optimized RNN engine where possible
@@ -589,7 +603,7 @@ To create a bidirectional one-layer LSTM (e.g. using half the hidden dimension c
     hBwd = RecurrentLSTMLayer {150, goBackwards=true} (e)
     h = Splice (hFwd:hBwd)
 
-# DelayLayer{}
+## DelayLayer{}
 
 Factory function to create a layer that delays its input.
 
@@ -642,7 +656,7 @@ The following shows how to stack three neighbor words into a trigram vector:
     xn = DelayLayer{T-1} (x)   # next value (negative delay)
     tg = Splice (xp : x : xn)  # concatenate all into a 3N-dimensional three-hot vector
 
-# BatchNormalizationLayer{}, LayerNormalizationLayer{}, StabilizerLayer{}
+## BatchNormalizationLayer{}, LayerNormalizationLayer{}, StabilizerLayer{}
 
 Factory functions to create layers for batch normalization, layer normalization, and self-stabilization.
 
@@ -699,7 +713,7 @@ we found it beneficial to use a sharpened softplus operation per the second auth
 which avoids both negative values and instability from the exponential.
 
 #### Notes
-`BatchNormalizationLayer{}` is a wrapper around the [`BatchNormalization()`](./BatchNormalization) primitive.
+`BatchNormalizationLayer{}` is a wrapper around the [`BatchNormalization()`](./BatchNormalization.md) primitive.
 `LayerNormalizationLayer{}` and `StabilizerLayer{}` are expressed directly in BrainScript.
 
 ### Example
@@ -714,7 +728,7 @@ A typical layer in a convolutional network with batch normalization:
         p = MaxPoolingLayer {(3:3), stride = (2:2)} (r)
     }.p
 
-# FeatureMVNLayer{}
+## FeatureMVNLayer{}
 
 Factory function to create a layer that normalizes feature input by their mean and standard deviation.
 

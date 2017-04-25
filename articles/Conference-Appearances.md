@@ -1,3 +1,17 @@
+---
+title:   Conference appearances
+author:    chrisbasoglu
+date:    11/11/2016
+ms.author:   cbasoglu
+ms.date:   11/11/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Conference appearances
+
 * [KDD -- ACM Conference on Knowledge Discovery and Data 2016](http://www.kdd.org/kdd2016)
 * [SIIM -- Society for Imaging Informatics in Medicine Conference on Machine Intelligence in Medical Imaging 2016](http://siim.org/page/2016CMIMI)
 * [GTC China 2016](http://www.gputechconf.cn/page/home.html)

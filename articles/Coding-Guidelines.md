@@ -1,10 +1,24 @@
-# CNTK Coding Style
+---
+title:   Coding Guidelines
+author:    chrisbasoglu
+date:    11/14/2016
+ms.author:   cbasoglu
+ms.date:   11/14/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   csharp, cpp
+---
+
+#Coding Guidelines
+
+## CNTK Coding Style
 
 This page documents the conventions used in the source code of CNTK. Please adhere to these conventions 
 when writing new code. Follow common sense and break up functions exceeding a reasonable limit 
 (a couple of screen pages), use meaningful names, comment well and keep comments and code in sync, etc.
 
-## Basics: indentation, spacing and braces
+### Basics: indentation, spacing and braces
 
 Code is consistently indented using four spaces. Tab characters are not allowed anywhere in the code. 
 The only exceptions are Makefiles, other build system, or data files where tab characters are syntactically 
@@ -98,7 +112,7 @@ void Inspect(Box & container)
 } } }
 ```
 
-## Naming conventions
+### Naming conventions
 
 * Class and namespace names use [UpperCamelCase aka PascalCase](https://en.wikipedia.org/wiki/CamelCase). 
 * Names commonly spelled in all-caps (SQL, CNTK, ...) can stay in all upper cases. 
@@ -118,7 +132,7 @@ Variable names should be nouns. Function names should be verbs, with the excepti
 nouns. For instance, a class property called position would have the setter SetPosition() and the getter Position(). 
 
 
-## Filename conventions
+### Filename conventions
 
 C++ files should have the .cpp extension, while header files should have the .h extension. Spaces and underscores are not allowed. Using numbers in filenames is discouraged.
 ```
@@ -146,7 +160,7 @@ template <typename TypeParam, int numberOfReasons>
 void CallGlobal(boost::array<TypeParam, numberOfReasons> const &array);
 ```
 
-## Preprocessor
+### Preprocessor
 
 Conditional compilation using the preprocessor is strongly discouraged, since it leads to code rot. 
 Use it only when it is unavoidable, for instance when an optional dependency is used. 

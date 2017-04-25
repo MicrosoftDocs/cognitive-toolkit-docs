@@ -1,14 +1,28 @@
-Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding wiki page](/en-us/cognitive-toolkit/Top-level-commands.md). 
+---
+title:   BrainScript Train Eval
+author:    chrisbasoglu
+date:    03/17/2017
+ms.author:   cbasoglu
+ms.date:   03/17/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Train Eval
+
+Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding wiki page](./Top-level-commands.md). 
 
 ## Train Command
 This command asks CNTK to train a model. An example for a `train` command section is provided on the [Config file overview](/en-us/cognitive-toolkit/Brainscript-Config-file-overview.md) page. The related parameters are:
 * `reader` – the reader configuration block used to determine how to load input data. For details see [Reader block](/en-us/cognitive-toolkit/Brainscript-Reader-block.md).
 
-* `SGD` – the SGD training setup. For details see [SGD block](/en-us/cognitive-toolkit/Brainscript-SGD-block.md).
+* `SGD` – the SGD training setup. For details see [SGD block](./Brainscript-SGD-block.md).
 
-* `BrainScriptNetworkBuilder` – the BrainScript configuration block. For details see [BrainScript Network Builder](/en-us/cognitive-toolkit/BrainScript-Network-Builder.md).
+* `BrainScriptNetworkBuilder` – the BrainScript configuration block. For details see [BrainScript Network Builder](./BrainScript-Network-Builder.md).
 
-* `SimpleNetworkBuilder` – the simple network builder configuration block. For details see [Simple Network Builder](/en-us/cognitive-toolkit/Simple-Network-Builder.md).
+* `SimpleNetworkBuilder` – the simple network builder configuration block. For details see [Simple Network Builder](./Simple-Network-Builder.md).
 
 * `cvReader` – (optional) the reader configuration block for cross-validation data.
 
@@ -20,7 +34,7 @@ This command asks CNTK to train a model. An example for a `train` command sectio
 
 ## Test or Eval Command
 These commands evaluate/test a model for accuracy, usually with a test dataset. The related parameters are:
-* `reader` – the reader configuration block to read the test data. For details see [Reader block](/en-us/cognitive-toolkit/Brainscript-Reader-block.md).
+* `reader` – the reader configuration block to read the test data. For details see [Reader block](./Brainscript-Reader-block.md).
 
 * `modelPath` – the path to the model to be evaluated.
 
@@ -34,9 +48,9 @@ These commands evaluate/test a model for accuracy, usually with a test dataset. 
 
 * `evalNodeNames` – an array of one or more node names to evaluate.
 
-* `distributedMBReading` - accepts Boolean value: true or false; default is false. It should be set to true for readers that support distributed minibatch reading. If you are using CNTK Text Format Reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers), you should set distributedMBReading=true.
+* `distributedMBReading` - accepts Boolean value: true or false; default is false. It should be set to true for readers that support distributed minibatch reading. If you are using CNTK Text Format Reader, Image Reader, or [Composite Data Reader](./BrainScript-and-Python---Understanding-and-Extending-Readers.md), you should set distributedMBReading=true.
 
-The following example is taken form the [Simple2d example](Examples). In that example the `modelPath` is defined on the top level and picked up automatically by both the `train` and `test` command.
+The following example is taken form the [Simple2d example](./Examples.md). In that example the `modelPath` is defined on the top level and picked up automatically by both the `train` and `test` command.
 
     Simple_Demo_Test = [
         action = "test"

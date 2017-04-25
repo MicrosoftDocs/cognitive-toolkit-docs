@@ -1,3 +1,17 @@
+---
+title:   CNTK Library API
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python, cpp, csharp
+---
+
+# CNTK Library API
+
 ## Python API
 
 [CNTK Python API](https://www.cntk.ai/pythondocs/) consists of abstractions for model definition and compute, learning algorithms, data reading and distributed training. 
@@ -23,6 +37,6 @@ Currently the best source of API documentation is inline in the API header file 
 
 The CNTK Library Managed API exposes Evaluation related APIs for developers using C# or other .NET languages. It is provided as Nuget packages. The Nuget package CNTK.CPUOnly is for evaluation on CPU, and the CNTK.GPU is for evalution on devices with NVIDIA GPU.
 
-For details regarding the CNTK Library managed API, please refer to the [CNTK Library Managed API](./CNTK-Library-Managed-API) page.
+For details regarding the CNTK Library managed API, please refer to the [CNTK Library Managed API](./CNTK-Library-Managed-API.md) page.
 
-There are several [Eval Examples](./CNTK-Eval-Examples) inside the [CNTKLibraryEvalExamples.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryEvalExamples.sln) project shows how to evaluate a model in C#.
+There are several [Eval Examples](./CNTK-Eval-Examples.md) inside the [CNTKLibraryEvalExamples.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryEvalExamples.sln) project shows how to evaluate a model in C#.

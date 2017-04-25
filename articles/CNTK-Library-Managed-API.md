@@ -1,8 +1,22 @@
-The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+---
+title:   CNTK Library API C#
+author:    chrisbasoglu
+date:    04/19/2017
+ms.author:   cbasoglu
+ms.date:   04/19/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   csharp
+---
 
-## `class Function`
+# CNTK Library API C#
 
-A `Function` denotes a symbolic computation with zero or more input arguments and one or more outputs. A Function may be primitive or composite (comprised of other Function instances whose inputs and outputs are wired together). A Function effectively is a computation graph composed of other primitive Functions (denoting computation) as nodes and [`Variable`](./CNTK-Library-Managed-API#class-variable) objects (denoting data) as the edges and leaves of the graph.
+The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-the-cntk-library-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+
+## class Function
+
+A `Function` denotes a symbolic computation with zero or more input arguments and one or more outputs. A Function may be primitive or composite (comprised of other Function instances whose inputs and outputs are wired together). A Function effectively is a computation graph composed of other primitive Functions (denoting computation) as nodes and [`Variable`](#class-variable) objects (denoting data) as the edges and leaves of the graph.
 
 The `Function` class contains the following properties and methods that are relevant to evaluation:
 
@@ -54,7 +68,7 @@ A boolean value indicating whether 'this' Function is a block Function.
 ***
 `public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, DeviceDescriptor computeDevice)`
 
-Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](./CNTK-Library-Managed-API#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
+Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
 
 Parameters:
 *  _inputs_: the input variables and their values of the Function.
@@ -64,7 +78,7 @@ Parameters:
 ***
 `public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, bool createPersistentOutputValues, DeviceDescriptor computeDevice)`
 
-Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](./CNTK-Library-Managed-API#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
+Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
 
 Parameters:
 *  _inputs_: the input variables and their values of the Function.
@@ -78,7 +92,7 @@ Parameters:
 Clones 'this' Function.
 
 Parameters:
-*  _parameterCloneMethod_: specifies how the parameters of Function are cloned: `ParameterCloningMethod.Share` - Parameters are shared between the Function being cloned and the new clone. This value should be used if the cloned Function is used for concurrent evaluation. `ParameterCloningMethod.Clone` - New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned. `ParameterCloningMethod.Freeze` - Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor). ParameterCloningMethod is defined [here](./CNTK-Library-Managed-API#enum-parametercloningmethod).
+*  _parameterCloneMethod_: specifies how the parameters of Function are cloned: `ParameterCloningMethod.Share` - Parameters are shared between the Function being cloned and the new clone. This value should be used if the cloned Function is used for concurrent evaluation. `ParameterCloningMethod.Clone` - New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned. `ParameterCloningMethod.Freeze` - Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor). ParameterCloningMethod is defined [here](#enum-parametercloningmethod).
 
 ***
 `public Function FindByName(string name, bool nestedSearchInsideBlockFunction)`
@@ -142,7 +156,7 @@ Parameters:
 *  _operand_: the function or variable that the alias function is created for.
 *  _name_: the name of the new function to be created.
 
-## `class Value`
+## class Value
 A `Value` is a multi-dimensional array with an optional mask and is the actual data fed into or produced from a computation.
 
 ***
@@ -383,7 +397,7 @@ Constructs a multi-dimensional value with an associated mask.
 ***
 `public DataType DataType { get; }`
 
-[DataType](./CNTK-Library-Managed-API#enum-datatype) of the data contained in 'this' Value object.
+[DataType](#enum-datatype) of the data contained in 'this' Value object.
 
 ***
 `public DeviceDescriptor Device { get; }`
@@ -480,8 +494,8 @@ Parameters:
 * _outputVariable_: denotes the shape and dynamic axes when copying data from 'this' Value to the _sequences_. 
 * _sequences_: the output buffer used to store the data copied from the Value.
 
-## `class Variable`
-Denotes a symbolic entity corresponding to the inputs and outputs of a [`Function`](./CNTK-Library-Managed-API#class-function).
+## class Variable
+Denotes a symbolic entity corresponding to the inputs and outputs of a [`Function`](#class-function).
 
 The properties of `Variable` that are often used in evaluation include:
 
@@ -498,12 +512,12 @@ Shape of 'this' Variable.
 ***
 `public DataType DataTye { get; }`
 
-DataType(./CNTK-Library-Managed-API#enum-datatype) of the data that 'this' Variable represents.
+DataType(#enum-datatype) of the data that 'this' Variable represents.
 
 ***
 `public VariableKind Kind { get; }`
 
-The [VariableKind](./CNTK-Library-Managed-API#enum-variablekind) of 'this' Variable.
+The [VariableKind](#enum-variablekind) of 'this' Variable.
 
 ***
 `public bool IsSparse { get; }`
@@ -545,7 +559,7 @@ Returns the dynamic axes of 'this' Variable.
 
 Returns the Function which 'this' Variable is an output of. Returns `null` when 'this' Variable is not of VariableKind Output.
 
-## `class DeviceDescriptor`
+## class DeviceDescriptor
 Denotes a computation device instance.
 
 The class `DeviceDescriptor` contains the following properties and methods:
@@ -558,7 +572,7 @@ The Id of 'this' device.
 ***
 `public DeviceKind Type { get; }`
 
-[DeviceKind](./CNTK-Library-Managed-API#enum-devicekind) of 'this' device.
+[DeviceKind](#enum-devicekind) of 'this' device.
 
 ***
 `public static DeviceDescriptor CPUDevice { get; }`
@@ -578,7 +592,7 @@ Parameter:
 
 Gets a list of descriptors of all available/supported devices.
  
-## `class NDShape`
+## class NDShape
 Denotes a multi-dimensional rectangular shape.
 
 ***
@@ -655,7 +669,7 @@ Creates and returns a new NDShape instance with the same dimensions as 'this' sh
 
 Creates and returns a new NDShape instance with the same dimensions as 'this' shape's axis range between the beginAxisId axis (inclusive) and the last axis (inclusive).
 
-## `class NDArrayView`
+## class NDArrayView
 Denotes a multi-dimensional writable or read-only array of elemental values. This type denotes a view and there may be multiple simultaneous views of the data underlying a NDArrayView instance. The underlying data is stored in sparse or dense format, and is located on a specific device.
 
 ***
@@ -768,8 +782,8 @@ Changes the device of 'this' NDArrayView to the specified device.
 Parameter:
 *  _device_: the target device of 'this' NDArrayView object.
 
-## `class Axis`
-Denotes an Axis of a [`Variable`](./CNTK-Library-Managed-API#class-variable). Besides the static axes corresponding to each of the axes of the Variable's shape, Variables of kind 'Input' and any 'Output' Variables dependent on an 'Input' Variable also have 2 additional dynamic axes whose dimensions are known only when the Variable is bound to actual data during compute (viz. sequence axis and batch axis denoting the axis along which multiple sequences are batched)
+## class Axis
+Denotes an Axis of a [`Variable`](#class-variable). Besides the static axes corresponding to each of the axes of the Variable's shape, Variables of kind 'Input' and any 'Output' Variables dependent on an 'Input' Variable also have 2 additional dynamic axes whose dimensions are known only when the Variable is bound to actual data during compute (viz. sequence axis and batch axis denoting the axis along which multiple sequences are batched)
 
 The following properties are defined in the class `Axis`
 
@@ -788,7 +802,7 @@ Returns a boolean value indicating whether 'this' Axis corresponds to a static a
 
 Returns a boolean value indicating whether 'this' Axis corresponds to a dynamic axis.
 
-## `class Utils`
+## class Utils
 
 ***
 `public static void SetMaxNumCPUThreads(int numCPUThreads)`
@@ -810,8 +824,8 @@ Specifies global logging verbosity level.
 
 Returns current logging verbosity level.
 
-## `enum VariableKind`
-Denotes the kind of a symbolic [`Variable`](./CNTK-Library-Managed-API#class-variable) object
+## enum VariableKind
+Denotes the kind of a symbolic [`Variable`](#class-variable) object
 
 ***
 `{`        
@@ -822,7 +836,7 @@ Denotes the kind of a symbolic [`Variable`](./CNTK-Library-Managed-API#class-var
 `Placeholder = 4`   
 `}`   
 
-## `enum DataType`
+## enum DataType
 Denotes data type of symbolic data entities or actual data.
 
 ***
@@ -832,7 +846,7 @@ Denotes data type of symbolic data entities or actual data.
 `Double = 2`   
 `}`   
 
-## `enum DeviceKind`
+## enum DeviceKind
 Denotes the type of a computation device.
 
 ***
@@ -841,7 +855,7 @@ Denotes the type of a computation device.
 `GPU`  // A GPU device.   
 `}` 
 
-## `enum StorageFormat`
+## enum StorageFormat
 Denotes the format of storage underlying an instance of a NDArrayView.
 
 ***
@@ -851,7 +865,7 @@ Denotes the format of storage underlying an instance of a NDArrayView.
 `SparseBlockCol`      
 `}` 
 
-## `enum ParameterCloningMethod`
+## enum ParameterCloningMethod
 Denotes how Parameters are handled when cloning a Function.
 
 ***
@@ -861,7 +875,7 @@ Denotes how Parameters are handled when cloning a Function.
 `Freeze` // Parameters are cloned and made immutable.   
 `}`
 
-## `enum TraceLevel`
+## enum TraceLevel
 Denotes logging verbosity levels.
 
 ***

@@ -1,7 +1,21 @@
-The C++ CNTK Library for Evaluation is based on [CNTK Library API](https://github.com/microsoft/cntk/wiki/CNTK-Library-API). The following methods are used to evaluate a model.
+---
+title:   CNTK Library Native Interface
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Library Native Interface
+
+The C++ CNTK Library for Evaluation is based on [CNTK Library API](./CNTK-Library-Managed-API.md). The following methods are used to evaluate a model.
 
 ***
-### The following methods load a model into Function.
+## The following methods load a model into Function.
 
 ***
 `static FunctionPtr CNTK::Function::LoadModel(const std::wstring& modelFile, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
@@ -14,7 +28,7 @@ This method loads a model file and returns the pointer to the Function that repr
 This method loads a model from a memory buffer and returns the pointer to the Function that represents the loaded model. The `modelBuffer` points to the buffer containing the serialized model content, and the `modelBufferLength` is the buffer length. The `computeDevice` specifies the device to run evaluation.
 
 ***
-### The following method evaluates the Function using the specified input.
+## The following method evaluates the Function using the specified input.
 
 ***
 `void CNTK::Function::Evaluate(const std::unordered_map<Variable, ValuePtr>& arguments, std::unordered_map<Variable, ValuePtr>& outputs, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
@@ -22,7 +36,7 @@ This method loads a model from a memory buffer and returns the pointer to the Fu
 This method starts evaluation of the `this` Function representing the model with specificed parameters. The `arguments` contains values of all input variables required for evaluation, and the `outputs` store the values of output variables. The storage of output values can either be pre-allocated by the caller, or by the system if the ValuePtr mapping is passed as null by the caller. The `computeDevice` specifies the device to run evaluation.
 
 ***
-### The following methods are helper functions to manipulate the Function to be evaluated.
+## The following methods are helper functions to manipulate the Function to be evaluated.
 
 ***
 `FunctionPtr CNTK::Function::Clone(ParameterCloningMethod parameterCloneMethod = ParameterCloningMethod::Clone, const std::unordered_map<Variable, Variable>& replacements = {}) const;`
@@ -55,7 +69,7 @@ Creates a composite Function that has the specified `_rootFunction_` as its root
 Creates a new Function instance which is just an alias of the specified `_operand_`.
 
 ***
-### The following methods create a Value object from input data in dense format.
+## The following methods create a Value object from input data in dense format.
 
 ***
 `template <typename ElementType> static ValuePtr CNTK::Value::CreateBatch(const NDShape& sampleShape, const std::vector<ElementType>& batchData, const DeviceDescriptor& device, bool readOnly = false)`
@@ -115,7 +129,7 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods create a Value object from input data in one-hot vector format.
+## The following methods create a Value object from input data in one-hot vector format.
 
 ***
 `template <typename ElementType> static ValuePtr CNTK::Value::CreateBatch(size_t dimension, const std::vector<size_t>& batchData, const DeviceDescriptor& device, bool readOnly = false);`
@@ -175,7 +189,7 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods create a Value object from input data in sparse CSC format.
+## The following methods create a Value object from input data in sparse CSC format.
 Currently the Compressed Sparse Column Format (CSC) is supported. The CSC format stores the matrix in column-major format, and the array containing the column indices is compressed. A matrix in CSC format is represented by the following parameters:
 * _nonZeroValues_: the data array that holds all nonzero values of the matrix in column-major format.
 * _rowIndices_: the array that contains the row indices of the corresponding elements in array _nonZeroValues_.   
@@ -246,7 +260,7 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods create a Value object from NDArrayView. 
+## The following methods create a Value object from NDArrayView. 
 
 ***
 `static ValuePtr  CNTK::Value::Create(const NDShape& sampleShape, const std::vector<NDArrayViewPtr>& sequences, const DeviceDescriptor& device, bool readOnly = false)`
@@ -272,7 +286,7 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods copy data stored in a Value object as dense or one-hot vector output. 
+## The following methods copy data stored in a Value object as dense or one-hot vector output. 
 
 ***
 `template <typename ElementType> void CNTK::Value::CopyVariableValueTo(const Variable& outputVariable, std::vector<std::vector<ElementType>>& sequences)`

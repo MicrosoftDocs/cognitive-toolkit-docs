@@ -1,4 +1,18 @@
-Besides commands, there are several top-level configurations that you can set. The following is the taken form the Simple2d [example](Examples):
+---
+title:   BrainScript Top level Configurations
+author:    chrisbasoglu
+date:    11/09/2016
+ms.author:   cbasoglu
+ms.date:   11/09/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Top level Configurations
+
+Besides commands, there are several top-level configurations that you can set. The following is the taken form the Simple2d [example](Examples.md):
 
     rootDir = ".."
     

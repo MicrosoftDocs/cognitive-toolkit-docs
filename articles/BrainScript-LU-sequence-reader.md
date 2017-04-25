@@ -1,4 +1,18 @@
-Note: if you are a newcomer, please consider using [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader). In the future LUSequenceReader will be deprecated and eventually not supported.
+---
+title:   BrainScript LU Sequence Reader
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript LU Sequence Reader
+
+Note: if you are a newcomer, please consider using [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md). In the future LUSequenceReader will be deprecated and eventually not supported.
 
 LUSequenceReader is similar to LMSequenceReader. It however is used for language understanding tasks which have input and output strings that are different. An example of setting up LUSequenceReader is as follows
 

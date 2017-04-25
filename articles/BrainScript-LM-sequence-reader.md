@@ -1,4 +1,18 @@
-Note: if you are a newcomer, please consider using [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader). In the future LMSequenceReader will be deprecated and eventually not supported.
+---
+title:   BrainScript LM Sequence Reader
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript LM Sequence Reader
+
+Note: if you are a newcomer, please consider using [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md). In the future LMSequenceReader will be deprecated and eventually not supported.
 
 LMSequenceReader is a reader that reads text string. It is mostly often used for language modeling tasks. An example of its setup is as follows
 

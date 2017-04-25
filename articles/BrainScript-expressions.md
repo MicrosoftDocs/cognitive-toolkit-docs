@@ -1,9 +1,23 @@
-This section is the specification of BrainScript expressions, although we intentionally use informal language to keep it readable and accessible. Its counterpart is the specification of BrainScript function-definition syntax, which can be found [here](./BrainScript-Functions).
+---
+title:   BrainScript Expressions
+author:    chrisbasoglu
+date:    03/10/2017
+ms.author:   cbasoglu
+ms.date:   03/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Expressions
+
+This section is the specification of BrainScript expressions, although we intentionally use informal language to keep it readable and accessible. Its counterpart is the specification of BrainScript function-definition syntax, which can be found [here](./BrainScript-Functions.md).
 
 Every brain script is an expression, which in turn consists of expressions assigned to record member variables. The outermost level of a network description is an implied record expression. BrainScript has the following kinds of expressions:
 
 * literals like numbers and strings
-* math-like infix and unary operations like [`a + b`](./Binary-Operations)
+* math-like infix and unary operations like [`a + b`](./Binary-Operations.md)
 * a ternary conditional expression
 * function invocations
 * records, record-member accesses
@@ -61,7 +75,7 @@ String literals may use single or double quotes, but have no way of escaping quo
 ### Infix and Unary Operations
 BrainScript supports the operators given below. BrainScript operators are chosen to mean what one would expect coming from popular languages, with the exception of `.*` (element-wise product), `*` (matrix product), and special broadcasting semantics of element-wise operations.
 
-#### Numeric [Infix Operators](./Binary-Operations) `+`, `-`, `*`, `/`, `.*`
+#### Numeric [Infix Operators](./Binary-Operations.md) `+`, `-`, `*`, `/`, `.*`
 * `+`, `-`, and `*` apply to scalars, matrices, and tensors.
 * `.*` denotes an element-wise product. Note for Python users: This is the equivalent of numpy's `*`.
 * `/` is only supported for scalars. An element-wise division can be written using built-in `Reciprocal(x)` computes an element-wise `1/x`.
@@ -75,25 +89,25 @@ Strings are concatenated with `+`. Example: `BS.Networks.Load (dir + "/model.dnn
 #### Comparison Operators
 The six comparison operators are `<`, `==`, `>`, and their negations `>=`, `!=`, `<=`. They can be applied to all immediate values as expected; their result is a Boolean.
 
-To apply comparison operators to tensors, one must use built-in functions instead, such as [`Greater()`](./Binary-Operations).
+To apply comparison operators to tensors, one must use built-in functions instead, such as [`Greater()`](./Binary-Operations.md).
 
-#### [Unary](./Unary-Operations) `-`, `!`
+#### [Unary](./Unary-Operations.md) `-`, `!`
 These denote negation and logical negation, respectively. `!` can currently only be used for scalars.
 
-#### [Elementwise Operations](./Binary-Operations) and [Broadcasting Semantics](./Binary-Operations#broadcasting-semantics)
+#### [Elementwise Operations](./Binary-Operations.md) and [Broadcasting Semantics](./Binary-Operations.md#broadcasting-semantics)
 When applied to matrices/tensors, `+`, `-`, and `.*` are applied element-wise.
 
-All element-wise operations support [*broadcasting semantics*](./Binary-Operations#broadcasting-semantics).
+All element-wise operations support [*broadcasting semantics*](./Binary-Operations.md#broadcasting-semantics).
 Broadcasting means that any dimension that is specified as 1 will automatically repeated to match any dimension.
 
 For example, a row vector of dimension `[1 x N]` can directly be added to a matrix of dimension `[M x N]`. The `1` dimension will automatically repeated `M` times. Further, tensor dimensions are automatically padded with `1` dimensions. For example, it is allowed to add a column vector of dimension `[M]` a `[M x N]` matrix. In this case, the column vector's dimensions are automatically padded to `[M x 1]` to match the rank of the matrix.
 
 Note to Python users: Unlike numpy, broadcasting dimensions are left-aligned.
 
-#### The [Matrix-Product Operator](./Times-And-TransposeTimes) `*`
+#### The [Matrix-Product Operator](./Times-And-TransposeTimes.md) `*`
 The `A * B` operation denotes the matrix product. It can also be applied to sparse matrices, which improves efficiency for handling text inputs or labels that are represented as one-hot vectors. In CNTK, the matrix product has an extended interpretation that allows it to be used with tensors of rank > 2. It is, for example, possible to multiply every column in a rank-3 tensor individually with a matrix.
 
-The matrix product and its tensor extension are described in detail [here](./Times-and-TransposeTimes).
+The matrix product and its tensor extension are described in detail [here](./Times-and-TransposeTimes.md).
 
 Note: To multiply with a scalar, use the element-wise product `.*`.
 
@@ -102,10 +116,10 @@ Python users be advised that `numpy` uses the `*` operator for the *element-wise
 #### The Conditional Operator `if`
 Conditionals in BrainScript are expressions, like the C++ `?` operator. The BrainScript syntax is `if COND then TVAL else EVAL`, where `COND` must be an immediate Boolean expression, and the result of the expression is `TVAL` if `COND` is true, and `EVAL` otherwise. The `if` expression is useful for implementing multiple similar flag-parameterized configurations in the same BrainScript, and also for recursion.
 
-(The `if` operator only works for immediate scalar values. To implement conditionals for deferred objects, use the built-in function [`BS.Boolean.If()`](./If-Operation), which allows to select a value from one of two tensors based on a flag tensor. It has the form `If (cond, tval, eval)`.)
+(The `if` operator only works for immediate scalar values. To implement conditionals for deferred objects, use the built-in function [`BS.Boolean.If()`](./If-Operation.md), which allows to select a value from one of two tensors based on a flag tensor. It has the form `If (cond, tval, eval)`.)
 
 #### Function Invocations
-BrainScript has three kinds of [functions](./BrainScript-Functions): built-in primitives (with C++ implementations), library functions (written in BrainScript), and user-defined (BrainScript). Examples of built-in functions are `Sigmoid()` and `MaxPooling()`. Library and user-defined functions are mechanically the same, just saved in different source files. All kinds are invoked, similarly to math and common languages, using the form `f (arg1, arg2, ...)`.
+BrainScript has three kinds of [functions](./BrainScript-Functions.md): built-in primitives (with C++ implementations), library functions (written in BrainScript), and user-defined (BrainScript). Examples of built-in functions are `Sigmoid()` and `MaxPooling()`. Library and user-defined functions are mechanically the same, just saved in different source files. All kinds are invoked, similarly to math and common languages, using the form `f (arg1, arg2, ...)`.
 
 Some functions accept optional parameters. Optional parameters are passed as named parameters, for example `f (arg1, arg2, option1=..., option2=...)`.
 
@@ -219,15 +233,15 @@ and would be invoked as:
 
 The reason for this pattern is that typical network types consist of
 applying one function after another to an input,
-which can be written more easily using the [`Sequential()`](./Sequential) function.
+which can be written more easily using the [`Sequential()`](./Sequential.md) function.
 
-CNTK comes with a rich set of predefined layers, which are [described here](./BrainScript-Layers-Reference).
+CNTK comes with a rich set of predefined layers, which are [described here](./BrainScript-Layers-Reference.md).
 
 #### Constructing Built-in C++ CNTK Objects
 Ultimately, all BrainScript values are C++ objects. The special BrainScript operator `new` is used for interfacing with the underlying CNTK C++ objects. It has the form `new TYPE ARGRECORD` where `TYPE` is one of a hard-coded set of the predefined C++ objects exposed to BrainScript, and `ARGRECORD` is a record expression that is passed to the C++ constructor.
 
-You will likely ever only get to see this form if you are using the parenthesis form of `BrainScriptNetworkBuilder`, i.e. `BrainScriptNetworkBuilder = (new ComputationNetwork { ... })`, as [described here](./BrainScript-Network-Builder).
-But now you know what it means: `new ComputationNetwork` creates a new C++ object of type `ComputationNetwork`, where `{ ... }` simply defines a record that is passed to the C++ constructor of the internal `ComputationNetwork` C++ object, which will then look for 5 specific members `featureNodes`, `labelNodes`, `criterionNodes`, `evaluationNodes`, and `outputNodes`, as [explained here](./BrainScript-Basic-Concepts#summary-of-special-names).
+You will likely ever only get to see this form if you are using the parenthesis form of `BrainScriptNetworkBuilder`, i.e. `BrainScriptNetworkBuilder = (new ComputationNetwork { ... })`, as [described here](./BrainScript-Network-Builder.md).
+But now you know what it means: `new ComputationNetwork` creates a new C++ object of type `ComputationNetwork`, where `{ ... }` simply defines a record that is passed to the C++ constructor of the internal `ComputationNetwork` C++ object, which will then look for 5 specific members `featureNodes`, `labelNodes`, `criterionNodes`, `evaluationNodes`, and `outputNodes`, as [explained here](./BrainScript-Basic-Concepts.md#summary-of-special-names).
 
 Under the hood, all built-in functions are really `new` expressions that construct objects of the CNTK C++ class `ComputationNode`. For illustration, see how the `Tanh()` built-in is actually defined as creating a C++ object:
 
@@ -267,7 +281,7 @@ This pattern is often used for making NN layers with built-in parameters more re
 
 Here, `h` can be thought of the 'return value' of this function.
 
-Next: Learn about [Defining BrainScript Functions](./BrainScript-Functions)
+Next: Learn about [Defining BrainScript Functions](./BrainScript-Functions.md)
 
 ### NDLNetworkBuilder (Deprecated)
 Earlier versions of CNTK used the now deprecated `NDLNetworkBuilder` instead of `BrainScriptNetworkBuilder`. `NDLNetworkBuilder` implemented a much reduced version of BrainScript. It had the following restrictions:

@@ -1,4 +1,18 @@
-Custom networks are described in CNTK's custom network description language "BrainScript." To define a custom network, include a section named `BrainScriptNetworkBuilder` in your training configuration. Detailed description on the network description language can be found on the [Basic Concepts](./BS-Basic-concepts) page and the corresponding sub-pages.
+---
+title:   BrainScript Network Builder
+author:    chrisbasoglu
+date:    09/13/2016
+ms.author:   cbasoglu
+ms.date:   09/13/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Network Builder
+
+Custom networks are described in CNTK's custom network description language "BrainScript." To define a custom network, include a section named `BrainScriptNetworkBuilder` in your training configuration. Detailed description on the network description language can be found on the [Basic Concepts](./BrainScript-Basic-concepts.md) page and the corresponding sub-pages.
 
 There are two forms of using the BrainScript network builder, one using parentheses `(...)`, and a short-hand form using curly braces `{...}`. To describe your network in an external file, specify a block similar to this:
 
@@ -16,7 +30,7 @@ Alternatively, you can define your network inline, directly inside the config fi
         # insert network description here
     }
 
-So what does the BrainScript code look like that goes into the brackets? To find out, jump right ahead to [BrainScript Basic Concepts](./BS-Basic-concepts).
+So what does the BrainScript code look like that goes into the brackets? To find out, jump right ahead to [BrainScript Basic Concepts](./BrainScript-Basic-concepts.md).
 
 Or stay on this page and read on about some less frequently needed details for you.
 
@@ -35,15 +49,15 @@ Lastly, as an advanced use, the `(...)` form is not limited to use `new`. Rather
 
 This is an advanced use that also sometimes occurs in the context of model-editing.
 
-Next: [BrainScript Basic Concepts](./BS-Basic-concepts).
+Next: [BrainScript Basic Concepts](./BrainScript-Basic-concepts.md).
 
-### Legacy `NDLNetworkBuilder`
+## Legacy `NDLNetworkBuilder`
 
 In older versions of CNTK, the network builder was called `NDLNetworkBuilder`. Its definition language is a subset of BrainScript. The old parser was less capable, but also more forgiving. There are also other small differences.
 
 `NDLNetworkBuilder` is now deprecated, but due to the similarity, it is not difficult to upgrade to `BrainScriptNetworkBuilder`. The following is a guide on how convert `NDLNetworkBuilder` network descriptions to `BrainScriptNetworkBuilder`'s.
 
-#### Updating from `NDLNetworkBuilder` to `BrainScriptNetworkBuilder`
+### Updating from `NDLNetworkBuilder` to `BrainScriptNetworkBuilder`
 
 Converting an existing network definition for the `NDLNetworkBuilder` to `BrainScriptNetworkBuilder` is simple in most cases. The main changes are the surrounding syntax. The core network description itself is largely upwards compatible and likely identical or near-identical if you don't take advantage of the new language features.
 
@@ -183,7 +197,7 @@ BrainScript is largely upwards compatible with NDL. These are the main differenc
 
 **Step 4. Remove `NDLNetworkBuilder` from "write" and "test" sections**. Please review your "write" and "test" sections for `NDLNetworkBuilder` sections, and remove them. Some of our stock NDL examples have extraneous `NDLNetworkBuilder` sections. They are not used and should not be there. If your configuration is based on one of these examples, you may have such sections as well. They used to be ignored, but with the BrainScript update, defining a new network in these sections now has a meaning (model editing), so they are no longer ignored and therefore should be removed.
 
-#### `NDLNetworkBuilder` reference (deprecated)
+### `NDLNetworkBuilder` reference (deprecated)
 
 The syntax of the deprecated `NDLNetworkBuilder` is:
 

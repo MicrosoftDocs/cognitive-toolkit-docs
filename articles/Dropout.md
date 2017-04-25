@@ -1,19 +1,33 @@
+---
+title:   Dropout 
+author:    chrisbasoglu
+date:    08/15/2016
+ms.author:   cbasoglu
+ms.date:   08/15/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Dropout 
+
 Dropout function.
 
     Dropout (x)
 
-### Parameters
+## Parameters
 
 * `x`: the input to apply the dropout function to
 
 Note: the dropout rate is not a parameter to this function, but instead specified in the `SGD` section.
 
-### Return Value
+## Return Value
 
 `Dropout()` will return the result of the dropout operation applied to the input.
 The result has the same tensor dimensions as the input.
 
-### Description
+## Description
 
 The `Dropout()` operation randomly selects elements of the input with a given probability called the *dropout rate*,
 and sets them to 0.
@@ -34,7 +48,7 @@ value is for a specific epoch.
 
 When running inference, the `Dropout()` operation passes its input unmodified (it is a no-op).
 
-### Example
+## Example
 
 The following is a simple convolutional network with a dropout layer towards the end:
 

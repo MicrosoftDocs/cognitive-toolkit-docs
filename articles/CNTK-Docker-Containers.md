@@ -1,3 +1,17 @@
+---
+title:   CNTK Docker Containers
+author:    chrisbasoglu
+date:    03/31/2017
+ms.author:   cbasoglu
+ms.date:   03/31/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Docker Containers
+
 You can set up CNTK as a [Docker Container](https://en.wikipedia.org/wiki/Docker_(software)) on your Linux system.
 
 There are two ways of using CNTK Docker Containers:
@@ -5,9 +19,9 @@ There are two ways of using CNTK Docker Containers:
 * [Using CNTK Images published at Docker Hub](#using-cntk-images-published-at-docker-hub)
 * [Building your own Images](#building-cntk-docker-images)
 
-### Using CNTK Images published at Docker Hub
+## Using CNTK Images published at Docker Hub
 
-We host public CNTK Images at Docker Hub. See complete list of Images available at [CNTK Repository page at Docker Hub](https://hub.docker.com/r/microsoft/cntk/). We currently host only **runtime** configurations. *Runtime* configuration corresponds to an environment with [CNTK Binary package installed and configured](https://github.com/microsoft/cnTK/wiki/Setup-CNTK-on-your-machine#binary-installation-or-update-of-cntk). This configuration contains neither CNTK source code, nor the pre-requisites required to build CNTK. This will be the contents of the developer configuration we plan to add later. If you need a developer configuration see next sections at this page on how to build it.
+We host public CNTK Images at Docker Hub. See complete list of Images available at [CNTK Repository page at Docker Hub](https://hub.docker.com/r/microsoft/cntk/). We currently host only **runtime** configurations. *Runtime* configuration corresponds to an environment with [CNTK Binary package installed and configured](./Setup-CNTK-on-your-machine.md#binary-installation-or-update-of-cntk). This configuration contains neither CNTK source code, nor the pre-requisites required to build CNTK. This will be the contents of the developer configuration we plan to add later. If you need a developer configuration see next sections at this page on how to build it.
 
 Note, that you need [NVIDIA Docker](https://github.com/nvidia/nvidia-docker) to use CNTK GPU-enabled images.
 
@@ -23,9 +37,9 @@ docker pull microsoft/cntk:2.0.beta15.0-cpu-python3.5
 ```
 will get you CNTK 2.0 Beta 15 CPU runtime configuration set up for Python 3.5.
 
-If you are unfamiliar with Docker, read [sections below](https://github.com/Microsoft/CNTk/wiki/CNTK-Docker-Containers#building-cntk-docker-images) at this page.
+If you are unfamiliar with Docker, read [sections below](#building-cntk-docker-images) at this page.
 
-#### Using Docker container to run CNTK Jupyter Notebook tutorials
+### Using Docker container to run CNTK Jupyter Notebook tutorials
 
 You can use CNTK Docker containers to run CNTK Jupyter Notebooks in your local environment.
 
@@ -56,7 +70,7 @@ To stop the Jupyter Notebook server send `Ctrl-C` sequence in the terminal where
 
 **WARNING!** The commands above will expose Jupyter Notebooks application to **everybody** who can access the IP address of the machine where you are running the Docker container. 
 
-### Building CNTK Docker Images
+## Building CNTK Docker Images
 
 You can build and run CNTK using the same container and this is a recommended approach to reproduce our reference configuration.
 

@@ -1,4 +1,18 @@
-**IMPORTANT!** UCIFastReader is **deprecated** and is being replaced by [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader). Please use [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader) for your networks.
+---
+title:   BrainScript UCI Fast Reader
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript UCI Fast Reader
+
+**IMPORTANT!** UCIFastReader is **deprecated** and is being replaced by [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md). Please use [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) for your networks.
 
 ----------
 

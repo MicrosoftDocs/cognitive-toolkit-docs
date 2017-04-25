@@ -1,8 +1,20 @@
-***On January 25, 2017 1bit-SGD code is moved to a new Repository in GitHub.***
-
-***If you cloned CNTK Repository with 1bit-SGD enabled prior to January 25, 2017 you need to update git submodule configuration as described in [this article](./Update-1bit-SGD-Submodule-Location).***
+---
+title:   Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit
+author:    chrisbasoglu
+date:    03/21/2017
+ms.author:   cbasoglu
+ms.date:   03/21/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
 
 # Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit (1bit-SGD)
+
+***On January 25, 2017 1bit-SGD code is moved to a new Repository in GitHub.***
+
+***If you cloned CNTK Repository with 1bit-SGD enabled prior to January 25, 2017 you need to update git submodule configuration as described in [this article](./Update-1bit-SGD-Submodule-Location.md).***
 
 1-bit Stochastic Gradient Descent (1bit-SGD) is an optional component of the Microsoft Cognitive Toolkit (CNTK) which significantly improves the performance during deep neural network (DNN) training using a single server with multiple GPUs and/or multiple servers with a single or multiple GPUs. This is achieved by the implementing the Gradient Quantization approach that significantly reduces the communication costs during parallel computations involved in the DNN training process. You may read more about 1-bit Stochastic Gradient Descent in this [article](http://research.microsoft.com/apps/pubs/?id=230137).
 
@@ -15,17 +27,17 @@
 
 ## Setting up 1-bit Stochastic Gradient Descent for CNTK on your system
 
-By using default setup procedures and parameters described in the [main installation section](./Setup-CNTK-on-your-machine) your system will contain neither 1bit-SGD code nor the corresponding functionality in compiled binaries.
+By using default setup procedures and parameters described in the [main installation section](./Setup-CNTK-on-your-machine.md) your system will contain neither 1bit-SGD code nor the corresponding functionality in compiled binaries.
 
 Please follow the procedure below to enable 1bit-SGD on your system:
 
 ### Making aware of Licensing Differences
 
-Please ensure you understand that 1bit-SGD is licensed under a different license than the rest of CNTK (see [License difference between CNTK and 1bit-SGD](./Enabling-1bit-SGD#license-difference-between-cntk-and-1bit-sgd)).
+Please ensure you understand that 1bit-SGD is licensed under a different license than the rest of CNTK (see [License difference between CNTK and 1bit-SGD](#license-difference-between-cntk-and-1bit-sgd)).
 
 ### Set up prerequisites
 
-Ensure you set up all required software prerequisites for your platform as described in the [main installation section](./Setup-CNTK-on-your-machine). You may skip the part of getting the CNTK code - this will be covered in the next section.
+Ensure you set up all required software prerequisites for your platform as described in the [main installation section](./Setup-CNTK-on-your-machine.md). You may skip the part of getting the CNTK code - this will be covered in the next section.
 
 ### Getting 1bit-SGD source code (together with or in addition to the main CNTK code)
 
@@ -35,7 +47,7 @@ Ensure you set up all required software prerequisites for your platform as descr
 
 This method works if you want to make a *new* clone of CNTK repository.
 
-**IMPORTANT!** Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](./Enabling-1bit-SGD#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
+**IMPORTANT!** Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
 
 To get a new CNTK repository clone with 1bit-SGD source code on your machine you need to use *git recursive clone*:
 ```
@@ -82,6 +94,6 @@ Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 Then perform the build as usual.
 
 **Next steps**
-* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
-* [Config file overview](/en-us/cognitive-toolkit/Config-file-overview.md)
+* [CNTK usage overview](./CNTK-usage-overview.md)
+* [Examples](./Examples.md)
+* [Config file overview](./BrainScript-Config-file-overview.md)

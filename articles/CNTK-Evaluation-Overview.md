@@ -1,3 +1,17 @@
+---
+title:   CNTK Evaluation Overview
+author:    chrisbasoglu
+date:    04/10/2017
+ms.author:   cbasoglu
+ms.date:   04/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Evaluation Overview
+
 Once you have trained a model, you need the functionality to evaluate the model in your target environment. As a reminder, 
 there are several ways to create models with CNTK, and there are two different formats to store the model in.
 
@@ -9,7 +23,7 @@ known as the model-V2 format. The following table presents an overview on creati
 | CNTK.EXE (BrainScript) |     YES     | NO |
 | CNTK-library (Python, C++) | deprecated | YES |
 
-For more details on creating the different model formats refer to the [CNTK model format](./CNTK-model-format) page.
+For more details on creating the different model formats refer to the [CNTK model format](./CNTK-model-format.md) page.
 
 ## CNTK model evaluation methods
 
@@ -17,12 +31,12 @@ Aside from training a model, Microsoft Cognitve Toolkit provides different ways 
 
 |  _model-evaluation_     | features | model-v1 | model-v2 |
 |:----------------------|:----|:----|:-----|
-| [CNTK.EXE](./CNTK-Evaluation-using-cntk.exe) | BrainScript |    YES     | NO |
+| [CNTK.EXE](./CNTK-Evaluation-using-cntk.exe.md) | BrainScript |    YES     | NO |
 | | GPU and CPU support |||
-| [CNTK-EvalDLL](./EvalDll-Evaluation-Overview) |  C++, C#/.NET | YES | NO |
+| [CNTK-EvalDLL](./EvalDll-Evaluation-Overview.md) |  C++, C#/.NET | YES | NO |
 | | ASP and Azure support |||
 | | Nuget Package for CPU-Only support |||
-|[CNTK-library](./CNTK-Library-Evaluation-Overview) | C++, C#/.NET and Python | YES | YES | 
+|[CNTK-library](./CNTK-Library-Evaluation-Overview.md) | C++, C#/.NET and Python | YES | YES | 
 | | ASP and Azure support |||
 | | GPU and CPU |||
 | | Nuget Packages |||
@@ -31,17 +45,17 @@ Aside from training a model, Microsoft Cognitve Toolkit provides different ways 
 
 The following pages provide detailed information about model evaluation in different scenarios:
 
-- [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows)
-- [CNTK-library evaluation on Linux](./CNTK-Library-Evaluation-on-Linux)
-- [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python)
+- [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows.md)
+- [CNTK-library evaluation on Linux](./CNTK-Library-Evaluation-on-Linux.md)
+- [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python.md)
 
 ***
 
-- [Evaluation using NuGet-Packages](./NuGet-Package)
-- [Evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi)
+- [Evaluation using NuGet-Packages](./NuGet-Package.md)
+- [Evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
 
 ***
 
-- [EvalDll evaluation on Windows](./EvalDll-Evaluation-on-Windows)
-- [EvalDll evaluation on Linux](./EvalDll-Evaluation-on-Linux)    
-- [Evaluating a model using CNTK.EXE](./CNTK-Evaluation-using-cntk.exe)    
+- [EvalDll evaluation on Windows](./EvalDll-Evaluation-on-Windows.md)
+- [EvalDll evaluation on Linux](./EvalDll-Evaluation-on-Linux.md)    
+- [Evaluating a model using CNTK.EXE](./CNTK-Evaluation-using-cntk.exe.md)    

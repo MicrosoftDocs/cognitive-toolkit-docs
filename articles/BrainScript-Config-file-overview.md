@@ -1,4 +1,18 @@
-To run CNTK you use a command line similar to `cntk configFile=yourExp.cntk` where yourExp.cntk is a CNTK configuration file, which typically contains several command blocks. A command block is a top level block of the configuration. Each command block must specify what action to be carried out with related information. To illustrate configuration and command blocks, we use a simple example below (taken from the [MNIST example](Examples)).
+---
+title:   BrainScript config file overview
+author:    chrisbasoglu
+date:    03/22/2017
+ms.author:   cbasoglu
+ms.date:   03/22/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript config file overview
+
+To run CNTK you use a command line similar to `cntk configFile=yourExp.cntk` where yourExp.cntk is a CNTK configuration file, which typically contains several command blocks. A command block is a top level block of the configuration. Each command block must specify what action to be carried out with related information. To illustrate configuration and command blocks, we use a simple example below (taken from the [MNIST example](Examples.md)).
 
     rootDir = ".."   # often, this is overwritten on the command line
 
@@ -50,23 +64,23 @@ The top-level configuration parameter `command` determines what command blocks a
 * a learner block, which specifies what training algorithm to use, 
 * a reader block, which specifies where and how to load features and labels. 
 
-In this specific example, the network builder indicated by the [BrainScriptNetworkBuilder](BrainScript Network Builder) block is used to define the network, the stochastic gradient descent learning algorithm as indicated
-by the [SGD block](./BrainScript-SGD-block) is used to train the model, and the [CNTK Text Format Reader](/en-us/cognitive-toolkit/BrainScript-CNTKTextFormat-Reader.md) is used to load the features and labels from files in CNTK Text format. Note that readers are implemented as separate DLLs, and the name of the reader is also the name of the DLL file that will be loaded to read data.
+In this specific example, the network builder indicated by the [BrainScriptNetworkBuilder](./BrainScript-Network-Builder.md) block is used to define the network, the stochastic gradient descent learning algorithm as indicated
+by the [SGD block](./BrainScript-SGD-block) is used to train the model, and the [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) is used to load the features and labels from files in CNTK Text format. Note that readers are implemented as separate DLLs, and the name of the reader is also the name of the DLL file that will be loaded to read data.
 
 The most frequently used configuration blocks are:
 * Network Builders
-  * [SimpleNetworkBuilder](./Simple-Network-Builder) - creates one of the predefined networks with limited customization.
-  * [BrainScriptNetworkBuilder](./BrainScript-Network-Builder) - creates a network defined using CNTK's network description language ([BrainScript](./BrainScript-Basic-concepts)). It provides full flexibility in designing your own network operations and structure.
+  * [SimpleNetworkBuilder](./Simple-Network-Builder.md) - creates one of the predefined networks with limited customization.
+  * [BrainScriptNetworkBuilder](./BrainScript-Network-Builder.md) - creates a network defined using CNTK's network description language ([BrainScript](./BrainScript-Basic-concepts.md)). It provides full flexibility in designing your own network operations and structure.
 * Learners
-  * [SGD](./BrainScript-SGD-block) - uses the stochastic gradient descent algorithm to train the model. It is the desired trainer for most applications.
+  * [SGD](./BrainScript-SGD-block.md) - uses the stochastic gradient descent algorithm to train the model. It is the desired trainer for most applications.
 * Data Readers
-  * [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader) - reads the text-based CNTK format, which supports multiple inputs combined in the same file.
-  * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader) - reads the text-based UCI format, which contains labels and features combined in one file.
-  * [HTKMLF Reader](./BrainScript-HTKMLF-Reader) - reads the HTK/MLF format files, often used in speech recognition applications.
-  * [LM Sequence Reader](./BrainScript-LM-Sequence-Reader) - reads text-based files that contain word sequences, for predicting word sequences. This is often used in language modeling.
-  * [LU Sequence Reader](./BrainScript-LU-Sequence-Reader) - reads text-based files that contain word sequences and their labels. This is often used for language understanding.
+  * [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) - reads the text-based CNTK format, which supports multiple inputs combined in the same file.
+  * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader.md) - reads the text-based UCI format, which contains labels and features combined in one file.
+  * [HTKMLF Reader](./BrainScript-HTKMLF-Reader.md) - reads the HTK/MLF format files, often used in speech recognition applications.
+  * [LM Sequence Reader](./BrainScript-LM-Sequence-Reader.md) - reads text-based files that contain word sequences, for predicting word sequences. This is often used in language modeling.
+  * [LU Sequence Reader](./BrainScript-LU-Sequence-Reader.md) - reads text-based files that contain word sequences and their labels. This is often used for language understanding.
 
 In the following subsections, we will describe CNTK configuration and the above blocks in detail. You can also jump to the individual blocks using the links in the text above.
 
 **See also**
-* [Command line parsing rules](./BrainScript-Command-line-parsing-rules)
+* [Command line parsing rules](./BrainScript-Command-line-parsing-rules.md)

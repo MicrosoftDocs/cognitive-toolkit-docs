@@ -1,3 +1,17 @@
+---
+title:   CNTK 1bit-SGD license
+author:    chrisbasoglu
+date:    01/25/2017
+ms.author:   cbasoglu
+ms.date:   01/25/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK 1bit-SGD license
+
 We offer two licensing options for Microsoft 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit (CNTK 1bit-SGD):
 
 **[CNTK 1bit-SGD General License](https://github.com/CNTK-components/CNTK1bitSGD/blob/master/LICENSE-GENERAL.md)**  

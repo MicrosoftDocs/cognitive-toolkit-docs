@@ -1,3 +1,17 @@
+---
+title:   BrainScript CNTK  Binary Reader
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript CNTK  Binary Reader
+
 The CNTKBinaryReader (later simply *binary reader*) is designed to be used on large data corpuses formatted according to the specification below. It supports the following main features:
 * Multiple input streams (inputs) per file
 * Both sparse and dense inputs
@@ -5,7 +19,7 @@ The CNTKBinaryReader (later simply *binary reader*) is designed to be used on la
 
 The Scripts/ctf2bin.py script can be used to convert data in the CNTKTextFormat into the CNTKBinaryFormat. Alternatively, one can implement the schema defined below.
 
-# Input Schema
+## Input Schema
 
 The binary format is composed of 3 major sections:
 
@@ -15,7 +29,7 @@ The binary format is composed of 3 major sections:
 
 Each section is concatenated together into one contiguous file.
 
-## Header
+### Header
 
 The header contains information regarding the data in the file. It enables the binary file to be used with minimal information provided in the config. Below is the format of the header.
 
@@ -32,7 +46,7 @@ number of chunks corresponds to the number of chunks (defined below) in the file
 
 number of inputs corresponds to the number of input streams in the file.
 
-### matHeader
+#### matHeader
 
 matHeader is a compound type describing the required information for each input stream. It is defined as:
 
@@ -53,7 +67,7 @@ deserializer is the deserializer that should be used to deserialize the binary d
 
 Each deserializer requires certain input parameters. These parameters are packed immediately after the deserializer type. Below are the specifications for the header data for the deserializers defined above.
 
-#### DenseBinaryDataDeserializer Header
+##### DenseBinaryDataDeserializer Header
 
 | count | type | name |
 |-------|------|------|
@@ -64,7 +78,7 @@ elemType is 0 if the values are floats, and 1 if the values are dobules.
 
 sampleSize is the size (i.e., number of columns) in one input sample.
 
-#### SparseBinaryDataDeserializer Header
+##### SparseBinaryDataDeserializer Header
 
 | count | type | name |
 |-------|------|------|
@@ -82,7 +96,7 @@ isSequence is 0 if the input is not a sequence, and 1 if the input is a sequence
 sampleSize is the size (i.e., number of columns) in one input sample.
 
 
-## Offsets Table
+### Offsets Table
 
 In the binary format, the data section is broken into chunks. The chunks should be sized such that reading one chunk can be done efficiently on the underlying platform. Since the chunks can be variable sized, an offsets table is required to indicate the starting position of each chunk in the data section. The offsets table also contains the number of sequences, and the number of samples in the chunk for efficient retrieval. Below is the specification for the offsets table:
 
@@ -104,7 +118,7 @@ numSequences is the number of sequences in the chunk.
 
 numSamples is the number of samples in the chunk. This is defined as the sum of the number of samples in each sequence. The number of samples in a sequence is defined as the maximum number of samples over all inputs for that sequence.
 
-## Data
+### Data
 
 The data portion contains the data outlined in chunks as described above. It is constructed by serializing all of the sequences for each input, in the order the inputs were defined in the header. Note that this means that the input formats can be serialized in an arbitrary order, depending on preference.
 
@@ -112,11 +126,11 @@ The data portion contains the data outlined in chunks as described above. It is 
 |-------|------|------|
 | numInputs | serialized input | data |
 
-### Serialized Input
+#### Serialized Input
 
 Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserialer defined in the [matHeader](#matHeader) section.
 
-#### DenseBinaryDataDeserializer Data
+##### DenseBinaryDataDeserializer Data
 
 The DenseBinaryDataDeserializer's data is serialized as each sequence concatenated consecutively in memory. Specifically:
 
@@ -130,7 +144,7 @@ numSequences is the number of sequences in the chunk (defined in the offsets tab
 
 elemType[sampleDim] is the data encoded as an array of length sampleSize of type elemType, where sampleSize and elemType are defined in the header.
 
-#### SparseBinaryDataDeserializer Data
+##### SparseBinaryDataDeserializer Data
 
 The SparseBinaryDataDeserializer's data is serialzed as a large matrix in [CSC format](http://docs.nvidia.com/cuda/cusparse/#compressed-sparse-column-format-csc), with an added caveat of how row indices are packed (see below). Before continuing, it is recommended that one reads over the specification on the page linked above.
 
@@ -168,7 +182,7 @@ row index[i] is the original row index for the element.
 
 Thus one can decode the sample for each element by dividing it by the sampleSize. Similarly, one can determine the actual row index by modding it with the sampleSize.
 
-#### ```reader``` section
+##### ```reader``` section
 
 | Parameter | Mandatory | Accepted values | Default value | Description |
 |:----------|:---------:|-----------------|---------------|-------------|
@@ -183,7 +197,7 @@ Thus one can decode the sample for each element by dividing it by the sampleSize
 
 <a name = "footnote2"><sup>2</sup></a> In order to force the reader to show a warning for each input error it ignores (in the sense of not raising an exception), non-default `maxErrors` value should be used in combination with the  `traceLevel` set to `1` or above.
 
-#### ```input``` sub-section
+##### ```input``` sub-section
 
 ```input``` combines a number of individual inputs, each with an appropriately labeled configuration sub-section. All parameters described below are specific to an *Input name* sub-section associated with a particular input.
 

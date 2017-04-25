@@ -317,7 +317,7 @@ labelDim can be used as a synonym for dim.
 
 ### CNTKTextFormatDeserializer options
 
-Same options that can be used with [CNTKTextFormatReader](./CNTKTextFormat-Reader.md)
+Same options that can be used with [CNTKTextFormatReader](./BrainScript-CNTKTextFormat-Reader.md)
 
 ### ImageDeserializer options
 

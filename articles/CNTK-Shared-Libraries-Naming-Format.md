@@ -1,3 +1,17 @@
+---
+title:   CNTK Shared Libraries Naming Format
+author:    chrisbasoglu
+date:    03/30/2017
+ms.author:   cbasoglu
+ms.date:   03/30/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Shared Libraries Naming Format
+
 Starting from CNTK **v.2.0 RC 1** we introduce new naming format for CNTK Shared Libraries for both Windows (`*.dll`, `*.lib`) and Linux (`*.so`) versions.
 
 We also changed the names of the existing CNTK libraries to make them more meaningful and clearly distinguish between debug and release versions. Debug versions are now marked by letter `d` at the end of the file name (right before file extension). See complete name match tables below.
@@ -10,7 +24,7 @@ The new format of a CNTK Shared Library file name is:
 ```
 See complete name match tables below.
 
-#### Match between old and new CNTK Shared Libraries names. Windows.
+## Match between old and new CNTK Shared Libraries names. Windows.
 In the table below we use `2.0rc1` as CNTK Component Version. **Note, that in your actual installation Component Version may, and very likely will be different.**
 
 | Old name | New name Release | New name Debug | 
@@ -63,7 +77,7 @@ In the table below we use `2.0rc1` as CNTK Component Version. **Note, that in yo
 
 ----------
 
-#### Match between old and new CNTK Shared Libraries names. Linux.
+## Match between old and new CNTK Shared Libraries names. Linux.
 In the table below we use `2.0rc1` as CNTK Component Version. **Note, that in your actual installation Component Version may, and very likely will be different.**
 
 | Old name | New name Release | New name Debug | 

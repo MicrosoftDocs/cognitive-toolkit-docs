@@ -1,9 +1,23 @@
+---
+title:   Clone Function
+author:    chrisbasoglu
+date:    08/27/2016
+ms.author:   cbasoglu
+ms.date:   08/27/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Clone Function
+
 Copies a part of a model's network into a BrainScript function.
 
     BS.Network.CloneFunction (inputNodes, outputNodes,
                               parameters="learnable" /*|"constant"|"shared"*/)
 
-### Parameters
+## Parameters
 
 * `inputNodes` is an array of 1 or more inputs. It lists the nodes of the originating network that are the inputs of the function to be extracted. When calling the resulting BrainScript function, the cloned function's parameters get substituted for these nodes.
 * `outputNodes` is either a single output node or a record of multiple output nodes. These denote which nodes in the originating network are the output of the cloned function. The resulting BrainScript function will return these.
@@ -12,13 +26,13 @@ Copies a part of a model's network into a BrainScript function.
   * `"constant"`: Learnable parameters are copied, but then frozen. The cloned function will not get any updates during subsequent training, e.g. if you want to use a feature extractor trained on a large standard training set in a subsequent training on a smaller custom set.
   * `"shared"`: The original learnable parameters will continue to be used in a shared fashion. They will be updated during subsequent training from both their original use and the cloned use. If the BrainScript function returned by `CloneFunction()` is invoked multiple times, all clones will share parameters.
 
-### Return Value
+## Return Value
 
 BrainScript function that takes as many input arguments as `inputNodes`, and returns either a scalar if `outputNodes` is a scalar, or a record if `outputNodes` is a record, with matching names.
 
-### Description
+## Description
 
-`CloneFunction()` is a function for use in [editing](./BS-Model-Editing) and creating models. It copies a part of a model's network into a BrainScript function, so that this part of the network can be reused. The result is a BrainScript function that can be used as if this section of the network had been defined inside a regular BrainScript function.
+`CloneFunction()` is a function for use in [editing](./BrainScript-Model-Editing.md) and creating models. It copies a part of a model's network into a BrainScript function, so that this part of the network can be reused. The result is a BrainScript function that can be used as if this section of the network had been defined inside a regular BrainScript function.
 
 The originating network can be a separate network. This allows to import (part of) an external network that was trained on different data. `CloneFunction()` allows to freeze the model parameters of the clone. This allows an external network to be used as a fixed feature extractor, or to act as a regularizer in an adaptation setting.
 
@@ -36,14 +50,14 @@ Example use cases:
  - image: lower layers of ImageNet networks serve as immutable feature extractors for another image task
  - DSSM: applying the same network subsection to two inputs
 
-#### Problems with node names with `.` `[` and `]`
+### Problems with node names with `.` `[` and `]`
 To reference a node in a network that contains `.` or `[` or `]`, replace those characters by `_`.
 E.g., if `network` contains a node called `result.z`, `network.result.z` will fail;
 instead say `network.result_z`.
 
-#### Implementation note
+### Implementation note
 `CloneFunction()` does not actually create BrainScript code under the hood. Instead, it creates a C++ object that behaves like a BrainScript function. `CloneFunction()` itself also does not clone the originating network. It only holds a reference. The actual cloning happens when the function that `CloneFunction()` returns is called.
-### Examples
+## Examples
 
 Basic usage:
 

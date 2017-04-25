@@ -1,3 +1,17 @@
+---
+title:   BrainScript Functions
+author:    chrisbasoglu
+date:    03/09/2017
+ms.author:   cbasoglu
+ms.date:   03/09/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript Functions
+
 Functions are BrainScript's way of creating reusable modules. Functions are parameterized expressions, and can be defined in a straight-forward manner, e.g.:
 
     Sqr (x) = x * x
@@ -17,7 +31,7 @@ two forms:
 The two forms are syntactically identical,
 but by convention, the second one (using curly braces `{ }`) form is used for functions
 that return function objects with built-in learnable parameters,
-such as CNTK's [predefined layers](./Layers-Referece).
+such as CNTK's [predefined layers](./BrainScript-Layers-Reference.md).
 
 The function arguments create a name scope like a record; i.e. function arguments are as if they were defined as members in an enclosing record.
 
@@ -64,7 +78,7 @@ Functions are invoked as you expect: By passing the arguments in parentheses; an
 
 Functions are lazily executed upon invocation. Specifically, if a function defines model parameters inside (that is, the variants of `ParameterTensor{}` and any function that has calls to it inside), each invocation of the function yields an independent instance of these model parameters. Often, the result of a function invocation is then assigned to a variable or passed as a function argument. Multiple uses of such value do not result in repeated execution.
 
-#### Purity/Referential Transparency
+### Purity/Referential Transparency
 Although BrainScript has commonalities with functional languages, be aware that BrainScript functions are not entirely pure, in that can have one very specific side effect: that of instantiating new model parameters. For example, while the expression `2 * sqr(x)` is equivalent to `sqr(x) + sqr(x)` (with `sqr(x) = x*x`), that is not the case for `2 * ParameterTensor{N}` vs. `ParameterTensor{N} + ParameterTensor{N}`.
 
 By convention, use round parentheses `( )` where referential transparency is given,
@@ -125,9 +139,9 @@ which could be used like this:
     evaluationNodes = (errs)
     outputNodes     = (P)
 
-This is the same as the initial example in [Basic Concepts](./BS-Basic-Concepts.md), but using functions.
+This is the same as the initial example in [Basic Concepts](./BrainScript-Basic-Concepts.md), but using functions.
 
-Next: Find out about [Model Editing](./BS-Model-Editing) or go straight to [Full Function Reference](/en-us/cognitive-toolkit/Full-Function-Reference.md).
+Next: Find out about [Model Editing](./BrainScript-Model-Editing.md) or go straight to [Full Function Reference](./Full-Function-Reference.md).
 
 ## NDLNetworkBuilder (Deprecated)
 Earlier versions of CNTK used the now deprecated `NDLNetworkBuilder` instead of `BrainScriptNetworkBuilder`. `NDLNetworkBuilder`'s function definition differed in a few ways. The following definition is valid in `NDLNetworkBuilder`:

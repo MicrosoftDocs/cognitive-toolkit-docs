@@ -1,3 +1,17 @@
+---
+title:   Breaking changes in Master compared to beta15
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Breaking changes in Master compared to beta15
+
 After we shipped beta15, we have made some breaking changes based on your feedback. We changed APIs, refactored codes, deprecated old APUs, and made changes to namespaces to create a more logical hierarchy. The changes are part of our Release Candidate 1. Our goal is to have as few as possible breaking changes as we approach now our final Cognitive Toolkit 2.0 release.
 
 These are the current breaking changes:
@@ -109,4 +123,4 @@ These are the current breaking changes:
 		- public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequences). Instead, please use `public IList<IList<T>> GetDenseData<T>(Variable outputVariable)`.
         - public void CopyVariableValueTo(Variable outputVariable, List<List<uint>> sequences). Instead, please use `public IList<IList<int>> GetOneHotData(Variable outputVariable)`.
 
-The updated APIs are described in [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API).
+The updated APIs are described in [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API.md).

@@ -1,3 +1,17 @@
+---
+title:   BrainScript minibatchSize and Python minibatch size in samples in CNTK
+author:    chrisbasoglu
+date:    03/10/2017
+ms.author:   cbasoglu
+ms.date:   03/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript minibatchSize and Python minibatch size in samples in CNTK
+
 Note: For BrainScipt users, the parameter for minibatch size is minibatchSize, for python users, it is minibatch_size_in_samples.  The below description uses the name minibatchSize, but the description is fully applicable to python users of minibatch_size_in_samples.  
 
 CNTK has a very specific definition of `minibatchSize` parameter: It denotes **the number of samples between model updates**.
@@ -5,7 +19,8 @@ A *sample* here is defined as one vector or tensor flowing through the system.
 For example, in an image recognition task, one image is one sample.
 
 The minibatch size for each epoch, given in *samples* (tensors along a dynamic axis). The default value is `256`. You can use different values for different epochs, e.g., `128*2:1024` (in BrainScript) or `128*2 + 1024` (in Python) means using minibatch size of 128 for the first two epochs and then 1024 for the rest.
-Note that 'Minibatch size' in CNTK means the number of samples processed between model updates. This definition also holds when parallelizing across workers (e.g. for `K` workers, the number of samples each worker would process is `minibatchSize/K`).
+Note that 'Minibatch size' in CNTK means the number of samples processed between model updates. This definition also holds when parallelizing across workers (e.g. for `K` workers, 
+the number of samples each worker would process is `minibatchSize/K`).
 In case of variable-length inputs, `minibatchSize` refers to the number of items in these sequences,
 *not* the number of sequences.
 SGD will try to fit up to as many sequences as possible into the minibatch that does not exceed `minibatchSize` total samples.
@@ -40,5 +55,5 @@ length of the minibatch size, the minibatch size will consist of this sequence).
 * data parallelism: Here, the minibatch size is approximate, as our chunk-based randomization algorithm cannot guarantee
 that each worker receives precisely the same number of samples.
 
-All of the above considerations also apply to `epochSize`, but `epochSize` has some differences, see [here](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK).
+All of the above considerations also apply to `epochSize`, but `epochSize` has some differences, see [here](./BrainScript-epochSize-and-Python-epoch_size-in-CNTK.md).
 

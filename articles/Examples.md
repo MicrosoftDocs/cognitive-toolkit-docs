@@ -1,4 +1,16 @@
-## CNTK Examples
+---
+title:   CNTK Examples
+author:    chrisbasoglu
+date:    02/14/2016
+ms.author:   cbasoglu
+ms.date:   02/14/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK Examples
 
 The [Tutorials/](https://github.com/Microsoft/CNTK/blob/master/Tutorials/) and
 [Examples/](https://github.com/Microsoft/CNTK/blob/master/Examples/) folders

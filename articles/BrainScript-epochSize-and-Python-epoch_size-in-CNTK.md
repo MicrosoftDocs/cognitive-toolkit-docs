@@ -1,10 +1,24 @@
+---
+title:   BrainScript epochSize and Python epoch size in CNTK 
+author:    chrisbasoglu
+date:    03/10/2017
+ms.author:   cbasoglu
+ms.date:   03/10/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# BrainScript epochSize and Python epoch size in CNTK 
+
 The number of **label** samples (tensors along a dynamic axis) in each epoch. The `epochSize` in CNTK is the number of **label** samples after which specific additional actions are taken, including
 * saving a checkpoint model (training can be restarted from here)
 * cross-validation
 * learning-rate control
 * minibatch-scaling
 
-Note that the definition of the number of label samples is similar to the number of samples used for [minibatchSize (minibatch_size_in_samples)](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK). The definition of `epochSize` differs from the definition of `minitbatchSize` in the sense that `epochSize` is **label** samples, not input samples.
+Note that the definition of the number of label samples is similar to the number of samples used for [minibatchSize (minibatch_size_in_samples)](./BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK.md). The definition of `epochSize` differs from the definition of `minitbatchSize` in the sense that `epochSize` is **label** samples, not input samples.
 
 So, importantly, for sequential data, a sample is an individual item of a sequence.
 Hence, CNTK's `epochSize` does *not* refer to a number of *sequences*,
