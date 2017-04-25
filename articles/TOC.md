@@ -96,7 +96,7 @@
 ### [CNTK Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models.md)
 ### [Clone Function](/cognitive-toolkit/CloneFuntion.md)
 ### [Convolution](/cognitive-toolkit/Convolution.md)
-### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK's-GPU-source-code-in-Visual-Studio.md)
+### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio.md)
 ### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio.md)
 ### [Dropout](/cognitive-toolkit/Dropout.md)
 ### [Gather and Scatter](/cognitive-toolkit/Gather-and-Scatter.md)

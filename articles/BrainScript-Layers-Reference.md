@@ -473,7 +473,7 @@ the vast majority of columns would be zero,
 CNTK implements has a specific optimization to represent the gradient in "column-sparse" form.
 
 Known issue: The above-mentioned column-sparse gradient form is currently not supported by
-our [1-bit SGD](./Multiple-GPUs-and-machines#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) technique instead.
+our [1-bit SGD](./Multiple-GPUs-and-machines.md#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) technique instead.
 
 ### Example
 
@@ -483,7 +483,7 @@ A learned embedding that represents words from a vocabulary of 87636 as a 300-di
     embEn = EmbeddingLayer{300} (input)  # embed word as a 300-dimensional continuous vector
 
 In addition to `sparse=true`, one should also declare an input as sparse in the `reader` config block.
-Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./CNTKTextFormat-Reader):
+Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./CNTKTextFormat-Reader.md):
 
     reader = {
         readerType = "CNTKTextFormatReader"
@@ -532,7 +532,7 @@ Factory functions to create a single-layer or multi-layer recurrent LSTM.
 * `usePeepholes` (optional): if true, then use peephole connections in the LSTM
 * `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
-* `enableSelfStabilization` (optional): if true, insert a "stabilizer" operation similar to [`StabilizerLayer{}`](./#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)
+* `enableSelfStabilization` (optional): if true, insert a "stabilizer" operation similar to [`StabilizerLayer{}`](#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)
 * `allowOptimizedEngine` (optional, default false): if true, then use cudnn5's optimized RNN engine where possible
 
 ### Return Value
@@ -576,11 +576,11 @@ This is because the CuDNN5 RNN is implemented as a CNTK primitive operation that
 However, many real systems use GPUs for training but CPU-only servers in deployment.
 The CuDNN5 RNN is not suitable here.
 (It is theoretically possible to use the CuDNN5 RNN for training, and replace it for deployment
-with an [editing operation](./BS-Model-Editing) with an equivalent explicit LSTM implementation in BrainScript.)
+with an [editing operation](./BrainScript-Model-Editing.md) with an equivalent explicit LSTM implementation in BrainScript.)
 
 #### Notes
 If `allowOptimizedEngine=true` then these two layer variants
-are wrappers around the [`OptimizedRNNStack()`](./OptimizedRNNStack) primitive.
+are wrappers around the [`OptimizedRNNStack()`](./OptimizedRNNStack.md) primitive.
 
 ### Example
 

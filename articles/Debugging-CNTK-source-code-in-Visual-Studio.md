@@ -12,7 +12,7 @@ ms.devlang:   NA
 
 # Debugging CNTK's GPU source code in Visual Studio
 
-To debug CNTK's mainline CPU source code, follow the steps below.  To additionally debug the **CUDA code for GPUs** in CNTK, follow the steps below first, and then click [here](./Debugging-CNTK's-GPU-source-code-in-Visual-Studio.md) for further steps.
+To debug CNTK's mainline CPU source code, follow the steps below.  To additionally debug the **CUDA code for GPUs** in CNTK, follow the steps below first, and then click [here](./Debugging-CNTKs-GPU-source-code-in-Visual-Studio.md) for further steps.
 
 In Launch Visual Studio, and load the cntk.sln solution.
 In the **Solution Explorer**, find the CNTK project and make sure it is the startup project (it should be bolded).  If it is not, right click on the project in the **Solution Explorer** and choose **Set as StartUp Project**.

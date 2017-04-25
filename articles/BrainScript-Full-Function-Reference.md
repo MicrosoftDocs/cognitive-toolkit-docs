@@ -102,7 +102,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - `BS.Constants.ZeroSequenceLike (x)`
 
 ## Inputs
- - [`Input`](./Inputs.md#input)` (shape, dynamicAxis='', sparse=false, tag='feature')`  
+ - [`Input`](./Inputs.md)` (shape, dynamicAxis='', sparse=false, tag='feature')`  
  - `DynamicAxis{}`
  - `EnvironmentInput (propertyName)`  
    `Mean (x)`, `InvStdDev (x)`  

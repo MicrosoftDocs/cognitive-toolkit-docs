@@ -15,7 +15,7 @@ ms.devlang:   brainscript,cpp, csharp,dotnet,python
 CNTK allows users to save a model into a file for future use. It can be done by 
 * specifying "modelPath" in the config file when using BrainScript/cntk.exe, or
 * [save_model()](https://www.cntk.ai/pythondocs/cntk.ops.html#cntk.ops.functions.Function.save_model) in python, or
-* [SaveModel()](https://github.com/Microsoft/CNTK/blob/master/Source/CNTKv2LibraryDll/API/CNTKLibrary.h) in C++ when using [CNTK Library API](./CNTK-Library-API).
+* [SaveModel()](https://github.com/Microsoft/CNTK/blob/master/Source/CNTKv2LibraryDll/API/CNTKLibrary.h) in C++ when using [CNTK Library API](./CNTK-Library-API.md).
  
 There are two different file formats to store the model in.
 * **The model-v1 format**. This format was originally used prior to the CNTK2 version. A model is stored in the model-v1 format when it is saved by BrainScript/cntk.exe.
