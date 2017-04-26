@@ -295,7 +295,7 @@ Our CNN will have a bit more of a complex definition than our previous networks.
 
 (where `wScale` and `bValue` are expected to be declared outside).
 
-The `Convolution()` built-in function that convolves (filters) the image with a kernel. If interested, please have a quick look here for the [description](./Convolution) of its parameters, before reading on. 
+The `Convolution()` built-in function that convolves (filters) the image with a kernel. If interested, please have a quick look here for the [description](./Convolution.md) of its parameters, before reading on. 
 
 We will also need the `MaxPooling()` operation. Please find its description [here](./Pooling).
 

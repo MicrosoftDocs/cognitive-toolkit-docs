@@ -1,3 +1,17 @@
+---
+title:   Records 
+author:    chrisbasoglu
+date:    05/18/2016
+ms.author:   cbasoglu
+ms.date:   05/18/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Records
+
 Optional Parameters are a feature that allows additional parameters to be specified for [NDL Functions](./NDL-Functions.md) and [NDL Macros](./NDL-Macros.md). While the optional parameters can be specified for any Function or Macro, they are limited to constant values and the underlying Function must support the passed optional parameters, or there is no effect on the network. When used with a Macro, the Macro will have a local variables defined that matches the optional parameter name and value.
 
 ### Parameter initialization

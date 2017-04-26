@@ -1,3 +1,15 @@
+---
+title:   Post Batch Normalization Statistics
+author:    chrisbasoglu
+date:    09/09/2016
+ms.author:   cbasoglu
+ms.date:   09/09/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
 # Post Batch Normalization Statistics
 
 Post batch normalization statistics (PBN) is the CNTK version of how to evaluate the population mean and variance of Batch Normalization which could be used in inference [Original Paper](https://arxiv.org/pdf/1502.03167v3.pdf).
@@ -26,6 +38,6 @@ PBN executes with following steps:
 
 ## PBN usage
 
-The usage of PBN can find in [PBN Command](./Top-level-commands#pbn-command)
+The usage of PBN can find in [PBN Command](./Top-level-commands.md#pbn-command)
     
 

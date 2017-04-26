@@ -14,7 +14,7 @@ RecurrentLSTMLayer {300} :
 DenseLayer {129}
 )
 ```
-Read more in the Wiki on [Layers](./Layers-Reference) and [Sequential](./Sequential).
+Read more in the Wiki on [Layers](./BrainScript-Layers-Reference.md) and [Sequential](./Sequential).
 
 * Support of **CuDNN5 RNN** which significantly improves performance.
 * Support of **Common random-initialization types**, e.g.

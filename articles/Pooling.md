@@ -1,3 +1,17 @@
+---
+title:   Pooling 
+author:    chrisbasoglu
+date:    09/15/2016
+ms.author:   cbasoglu
+ms.date:   09/15/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Pooling
+
     Pooling (input,
              poolKind, # "max" or "average"
              {kernel dimensions}, 
@@ -26,7 +40,7 @@ Since the pooling window can have arbitrary dimensions, this allows to build var
     MaxOutPool (inp, kW, kH, kC, hStride, vStride) =
         Pooling (inp, "max", (kW:kH:kC), stride=(hStride:vStride:kC), true:true:false))
 
-#### Simplified syntax for 2D pooling
+## Simplified syntax for 2D pooling
 There is a simplified syntax for 2D pooling:
 
     MaxPooling(m, windowWidth, windowHeight, stepW, stepH, imageLayout="cudnn" /* or "HWC"*/ )

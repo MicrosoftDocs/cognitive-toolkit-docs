@@ -1,4 +1,18 @@
-# ParameterTensor{}
+"---
+title:   Parameters And constants
+author:    chrisbasoglu
+date:    09/20/2016
+ms.author:   cbasoglu
+ms.date:   09/20/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Parameters And constants"
+
+## ParameterTensor{}
 
 Creates a scalar, vector, matrix, or tensor of learnable parameters.
 
@@ -45,7 +59,7 @@ To create a scalar, vector, matrix, or tensor with rank>2, pass the following as
 
 #### Automatic dimension inference
 When a `ParameterTensor` is used for weights as an immediate input of specific operations, it is allowed to specify
-some dimensions as `Inferred`. For example, the [matrix product](./Times-And-TransposeTimes) `ParameterTensor{42:Inferred} * x)`
+some dimensions as `Inferred`. For example, the [matrix product](./Times-and-TransposeTimes.md) `ParameterTensor{42:Inferred} * x)`
 will automatically infer the second dimension to be equal to the dimension of `x`.
 
 This is extremely handy for inputs of layers,
@@ -56,7 +70,7 @@ for example for the first fully connected layer on top of a pyramid of convoluti
 without padding, where each convolution and pooling operation may drop rows or columns of boundary
 pixels, and strides scale the dimensions.
 
-This feature is what allows CNTK's [predefined layers](./Layers-Reference) to be specified by their output dimension only
+This feature is what allows CNTK's [predefined layers](./BrainScript-Layers-Reference.md) to be specified by their output dimension only
 (e.g. [`DenseLayer`](./BrainScript-Layers-Reference.md#denselayer-linearlayer)`{1024}`).
 
 #### Random initialization
@@ -78,7 +92,7 @@ where the range/standard deviation is computed as a function of fan-in and fan-o
 (Where `zero` is a sometimes convenient alternative to specifying `initValue=0`.) For uniform distribution, the parameters will be initialized uniformly in [-range, range]; for normal distribution, the mean is always zero. 
 
 Note that the default for `init` is `uniform` when using `ParameterTensor{}` directly.
-However, default is `glorotUniform` for [layers](./Layers-Reference) that contain parameters inside, such as [`DenseLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer) and [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer).
+However, default is `glorotUniform` for [layers](./BrainScript-Layers-Reference.md) that contain parameters inside, such as [`DenseLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer) and [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer).
 
 #### Fan-in and fan-out for random initialization
 Random initialization assumes that the parameters are part of some form of matrix-product like operation
@@ -89,14 +103,14 @@ semantics of the regular matrix product.
 
 The optional parameter `initOutputRank` can be used to specify the number of leading axes that
 should be considered fan-out.
-For example, for a matrix product in [CNTK's extended tensor interpretation](./Times-and-TransposeTimes#extended-interpretation-of-matrix-product-for-tensors-of-rank--2) that maps a `[K]`-dimensional vector `x`
-to a `[I x J]`-dimensional rank-2 object can be written as [`Times`](./Times-and-TransposeTimes)` (W, x, outputRank=2)`,
+For example, for a matrix product in [CNTK's extended tensor interpretation](./Times-and-TransposeTimes.md#extended-interpretation-of-matrix-product-for-tensors-of-rank--2) that maps a `[K]`-dimensional vector `x`
+to a `[I x J]`-dimensional rank-2 object can be written as [`Times`](./Times-and-TransposeTimes.md)` (W, x, outputRank=2)`,
 where `W` has the shape `[I x J x K]`.
 Here, `initOutputRank=2` specifies that in scaling the random initialization values,
 the fan-out is `I*J` and the fan-in `K`.
 
 Negative values for `initOutputRank` indicate that the fan-out axes are trailing axes. For example,
-the filter kernel of the [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer) and the underlying [`Convolution()`](./Convolution)  operation
+the filter kernel of the [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer) and the underlying [`Convolution()`](./Convolution.md)  operation
 for a typical image-processing setup
 has a shape `[W x H x C x K]`, where `K` is the fan-out, while the fan-in is `W*H*C`.
 This is specified by `initOutputRank=-1`.
@@ -132,13 +146,13 @@ A bias parameter of the full size of an `[width x height]`-size image with `numC
 
     bFull = ParameterTensor {(width:height:numChannels)}
 
-# Constant{}
+## Constant{}
 
 Create a constant tensor.
 
     Constant {scalarValue, rows=1, cols=1}
 
-#### Parameters
+### Parameters
 
 * `scalarValue`: value of this constant
 * `rows` (default: 1): number of rows, if constant is not a scalar
@@ -154,8 +168,8 @@ filled with `scalarValue`.
 A constant value.
 It can be either a scalar, or a rank-1 object (vector) or rank-2 object (matrix) initialized with a single value (such as 0).
 Note that because for vector and matrix constants all values are identical,
-constants used in conjunction with [element-wise operations](./Binary-Operations) can often be specified as a scalar,
-while  taking advantage of [broadcasting](./Binary-Operations#broadcasting-semantics).
+constants used in conjunction with [element-wise operations](./Binary-Operations.md) can often be specified as a scalar,
+while  taking advantage of [broadcasting](./Binary-Operations.mdbroadcasting-semantics).
 
 ### Implementation note:
 
@@ -167,7 +181,7 @@ Interpolation between two values with interpolation weight `alpha` in range 0..1
 
     SoftMUX (x, y, alpha) = Constant (1-alpha) .* x + Constant (alpha) .* y
 
-Hamming loss (cf. [here](./Train-a-multilabel-classifier)):
+Hamming loss (cf. [here](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier)):
 
     HammingLoss (y, p) = ReduceSum (BS.Boolean.Xor (y, Greater (p, Constant(0.5))))
     hl = HammingLoss (multiLabels, probabilities)

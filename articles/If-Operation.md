@@ -39,7 +39,7 @@ This function supports broadcasting. For example, it is possible that the condit
 is a scalar, or one of the inputs is a constant tensor without time dimension.
 
 ## Example
-The elementwise maximum of two inputs can be computed as a combination of [`Greater()`](./Binary-Operations) and `If()`:
+The elementwise maximum of two inputs can be computed as a combination of [`Greater()`](./Binary-Operations.md) and `If()`:
 
     MyElementwiseMax (a, b) = BS.Boolean.If (Greater (a, b), a, b)
 

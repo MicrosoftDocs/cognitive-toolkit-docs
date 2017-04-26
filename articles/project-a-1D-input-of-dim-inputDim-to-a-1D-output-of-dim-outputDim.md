@@ -1,3 +1,17 @@
+"---
+title:   Project a 1D input of dim inputDim to a 1D output of dim outputDim 
+author:    chrisbasoglu
+date:    12/04/2016
+ms.author:   cbasoglu
+ms.date:   12/04/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   cpp
+---
+
+# Project a 1D input of dim inputDim to a 1D output of dim outputDim
+
 In C++ API a rank-1 tensor denotes a column and tensors are stored in column major format (i.e. axis 0 is the faster changing dimension, followed by axis 1 and so on). 
 
 ```python
