@@ -1,5 +1,5 @@
 ---
-title:   CNTK Text Format Reader with BrainScript
+title:   BrainScript CNTK Text Format Reader 
 author:    chrisbasoglu
 date:    03/20/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# CNTK Text Format Reader with BrainScript
+# BrainScript CNTK Text Format Reader 
 
 This page documents the CNTKTextFormatReader from the point of view of BrainScript, but Python users may learn by reading this document as well -- the concepts, parameters and patterns are all the same.
 

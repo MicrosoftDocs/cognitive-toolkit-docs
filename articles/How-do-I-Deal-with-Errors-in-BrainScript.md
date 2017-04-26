@@ -1,9 +1,23 @@
-* [Deal with the error "No node named 'x'; skipping"](./How-do-I-Deal-with-Errors-in-BrainScript#deal-with-the-error-no-node-named-x-skipping)? 
-* [Avoid the "AddSequence: Sequences must be a least one frame long." exception in sequence to sequence](How-do-I-Deal-with-Errors-in-BrainScript#avoid-addsequence-exception)? 
-* [Deal with the "No Output nodes found" error](./How-do-I-Deal-with-Errors-in-BrainScript#deal-with-the-no-output-nodes-found-error)? 
-* [Deal with the error "Reached the maximum number of allowed errors"](./How-do-I-Deal-with-Errors-in-BrainScript#deal-with-the-error-reached-the-maximum-number-of-allowed-errors)? 
-* [Deal with "InputValue operation had its row dimension x changed by the reader to y"](./How-do-I-Deal-with-Errors-in-BrainScript#deal-with-inputvalue-operation-had-its-row-dimension-x-changed-by-the-reader-to-y-compatible-dimensions-in-reader-and-config)? 
-* [Avoid the error CURAND failure 201](./How-do-I-Deal-with-Errors-in-BrainScript#avoid-the-error-curand-failure-201)? 
+---
+title:   How do I deal with errors in BrainScript
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I deal with errors in BrainScript
+
+* [Deal with the error "No node named 'x'; skipping"](#deal-with-the-error-no-node-named-x-skipping)? 
+* [Avoid the "AddSequence: Sequences must be a least one frame long." exception in sequence to sequence](#avoid-addsequence-exception)? 
+* [Deal with the "No Output nodes found" error](#deal-with-the-no-output-nodes-found-error)? 
+* [Deal with the error "Reached the maximum number of allowed errors"](#deal-with-the-error-reached-the-maximum-number-of-allowed-errors)? 
+* [Deal with "InputValue operation had its row dimension x changed by the reader to y"](#deal-with-inputvalue-operation-had-its-row-dimension-x-changed-by-the-reader-to-y-compatible-dimensions-in-reader-and-config)? 
+* [Avoid the error CURAND failure 201](#avoid-the-error-curand-failure-201)? 
 
 ## Deal with the error 'No node named 'x'; skipping'
 
@@ -25,7 +39,7 @@ The way to avoid it is to ensure that the `<s/>` token is in your vocabulary and
 
 We also recommend to not use LUSequenceReader, but instead convert your text using the
 [`txt2ctf.py`](https://github.com/Microsoft/CNTK/blob/master/Scripts/txt2ctf.py) tool
-and then reading it with the [`CNTKTextFormatReader`](CNTKTextFormat-Reader).
+and then reading it with the [`CNTKTextFormatReader`](./BrainScript-CNTKTextFormat-Reader.md).
 
 ## Deal with the 'No Output nodes found' error
 
@@ -62,7 +76,7 @@ NotifyFunctionValuesMBSizeModified: labels InputValue operation had its row dime
 This is most likely due to only updating the network definition part of your config file but not your reader definition.
 Please double-check:
 
-* all [`Input{}`](./Inputs#input) nodes have corresponding streams in the reader section with the same name
+* all [`Input{}`](./Inputs.md) nodes have corresponding streams in the reader section with the same name
 * the dimensions match
 
 A second case is when you provide a wrong hint to the reader by saying 

@@ -1,4 +1,18 @@
-[Read and modify the training weights from Python](./How-do-I-Adapt-models-in-Python#read-and-modify-the-training-weights-from-python)
+---
+title:   How do I adapt models in Python
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I adapt models in Python
+
+[Read and modify the training weights from Python](./How-do-I-Adapt-models-in-Python.md#read-and-modify-the-training-weights-from-python)
 
 ## Read and modify the training weights from Python
 

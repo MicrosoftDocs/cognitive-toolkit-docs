@@ -25,7 +25,7 @@ ms.devlang:   brainscript
 
 Consider you have trained, say, a deep auto-encoder, which is symmetric around an encoding layer ("input --> encoding --> input" model). Now you would like to use the first half of the network as a constant feature extractor in another network.
 
-To achieve this, define the new network that should use the feature extraction, and use the `BS.Network.Load()` and [`BS.Network.CloneFunction()`](./BS-CloneFunction) operations to incorporate a read-only clone of the pre-trained network as part of the new network. The following shows an example:
+To achieve this, define the new network that should use the feature extraction, and use the `BS.Network.Load()` and [`BS.Network.CloneFunction()`](./CloneFunction.md) operations to incorporate a read-only clone of the pre-trained network as part of the new network. The following shows an example:
 
     # extract a clone of the pre-trained model into a BrainScript
     # function that can then be used as a feature extractor.
@@ -54,7 +54,7 @@ To achieve this, define the new network that should use the feature extraction, 
 
 A key parameter is `parameters="constant"`, which will lock all learnable parameters (setting `learningRateMultiplier=0`) inside so that they won't get updated during further training. It also locks potentially used `BatchNormalization()` operations by placing them into inference mode.
 
-#### How to know the precise node names
+### How to know the precise node names
 
 CNTK automatically generates node names, which are attempted to be as close as possible to the original BrainScript expressions that generated them (it is not always possible). If the above fails because it cannot find the node name you used, please consult the log output generated from loading the model. You will see lines like this:
 
@@ -63,7 +63,7 @@ CNTK automatically generates node names, which are attempted to be as close as p
 
 The precise node names in these two examples are `features` and `L4.y`. E.g. to refer to the former, say `featExtNetwork.input`.
 
-#### Workaround: Referencing nodes with names containing `.` or `[`
+### Workaround: Referencing nodes with names containing `.` or `[`
 
 The above approach currently has a known bug if the `input` or `feat` node you try to use contains a `.` or a `[` in the node name. This will lead to an "unknown identifier" error. To work around this problem, please replace all `.`, `[`, and `]` into underscores `_`.
 
@@ -73,7 +73,7 @@ The workaround is to use `featExtNetwork.L4_y` instead.
 
 ## Use an already trained network multiple times inside a larger network
 
-Use the [`CloneFunction`](./CloneFunction)`()` operation. E.g.:
+Use the [`CloneFunction`](./CloneFunction.md)`()` operation. E.g.:
 
     BrainScriptNetworkBuilder = {
         smallnet = BS.Network.Load ("pathToYourModel")
@@ -90,11 +90,11 @@ Use the [`CloneFunction`](./CloneFunction)`()` operation. E.g.:
 
 ## Adapt a model I trained on one task to another
 
-Use the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) operation. The [examples section](./CloneFunction#examples) in the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) page provides an adaptation example.
+Use the [CloneFunction](./CloneFunction.md) operation. The [examples section](./CloneFunction.md#examples) in the [CloneFunction](./CloneFunction.md) page provides an adaptation example.
 
 ## Save and reload weights from one model to another
 
-Use the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) operation. The [examples section](./CloneFunction#examples) in the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) page provides an adaptation example.
+Use the [CloneFunction](./CloneFunction.md) operation. The [examples section](./CloneFunction#examples) in the [CloneFunction](./CloneFunction.md) page provides an adaptation example.
 
 ## Continue training from a previously saved model
 
