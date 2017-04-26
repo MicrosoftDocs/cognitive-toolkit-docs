@@ -1,4 +1,18 @@
-# 1. Introduction
+---
+title:   Multiple GPUs and Machines
+author:    chrisbasoglu
+date:    03/31/2017
+ms.author:   cbasoglu
+ms.date:   03/31/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript, python
+---
+
+# Multiple GPUs and Machines
+
+## 1. Introduction
 
 CNTK currently supports four parallel SGD algorithms:
 
@@ -7,28 +21,28 @@ CNTK currently supports four parallel SGD algorithms:
 3.  [ModelAveragingSGD](#23-model-averaging-sgd)
 4.  [DataParallelASGD](#24-data-parallel-training-with-parameter-server)
 
-##### Prerequisites
+### Prerequisites
 
 To run parallel training, make sure that an implementation of the Message Passing Interface (MPI) is installed:
 
 * On Windows, install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI), a Microsoft implementation of the Message Passing Interface standard, from [this download page](https://www.microsoft.com/en-us/download/details.aspx?id=49926), marked simply as "Version 7" in the page title. Click on the Download button, and then select the run-time (`MSMpiSetup.exe`).
 
-* On Linux, install OpenMPI version 1.10.x. Please follow the instructions [here](./Setup-CNTK-on-Linux#open-mpi) to build it yourself.
+* On Linux, install OpenMPI version 1.10.x. Please follow the instructions [here](./Setup-CNTK-on-Linux.md#open-mpi) to build it yourself.
 
-##### Notes on SGD Algorithm implementations location and licensing.
+### Notes on SGD Algorithm implementations location and licensing.
 
 * [CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
-* [CNTK 1bit-SGD License](https://github.com/microsoft/cntk/wiki/CNTK-1bit-SGD-License)
+* [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md)
 
 The second license is specific for the 1-bit Stochastic Gradient Descent (1bit-SGD) and Block-Momentum components and is more restrictive than the main CNTK license.
 
-*Data-Parallel SGD* may be used **with or without** 1bit-SGD. When *Data-Parallel SGD* is used **without** 1bit-SGD, it is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md). When it is used **with** 1bit-SGD, it is licensed under the [CNTK 1bit-SGD License](https://github.com/microsoft/cntk/wiki/CNTK-1bit-SGD-License).
+*Data-Parallel SGD* may be used **with or without** 1bit-SGD. When *Data-Parallel SGD* is used **without** 1bit-SGD, it is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md). When it is used **with** 1bit-SGD, it is licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md).
 
-*Block-Momentum SGD* is **always** licensed under the [CNTK 1bit-SGD License](https://github.com/microsoft/cntk/wiki/CNTK-1bit-SGD-License) irrespective of the usage scenario. Note, that to obtain the source code implementation for this algorithm, you need to follow the [instructions for enabling 1bit-SGD](./Enabling-1bit-SGD) even if you do not plan to use 1bit-SGD itself.
+*Block-Momentum SGD* is **always** licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md) irrespective of the usage scenario. Note, that to obtain the source code implementation for this algorithm, you need to follow the [instructions for enabling 1bit-SGD](./Enabling-1bit-SGD.md) even if you do not plan to use 1bit-SGD itself.
 
 *Model-Averaging SGD*'s implementation is stored with the main CNTK code and is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md).
 
-# 2. Configuring Parallel Training in CNTK
+## 2. Configuring Parallel Training in CNTK
 
 To enable parallel training in CNTK BrainScript, it is first necessary to turn on the following switch in
 either the configuration file or in the command line:
@@ -45,7 +59,7 @@ Secondly, the `SGD` block in the config file should contain a sub-block named
 2. `distributedMBReading` : (optional) accepts Boolean value: `true` or `false`; default is `false`
 
     It is recommended to turn distributed minibatch reading on to minimize the
-    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers), distributedMBReading should be set to true.
+    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./BrainScript-and-Python---Understanding-and-Extending-Readers.md), distributedMBReading should be set to true.
 
 3.  `parallelizationStartEpoch`: (optional) accepts integer value; default is 1.
 
@@ -402,11 +416,11 @@ Figure 2.4 the speed up for different training methods
 
 
 
-# 3. Running Parallel Training with CNTK
+## 3. Running Parallel Training with CNTK
 
 Parallelization in CNTK is implemented with MPI.
 
-##  3.1 BrainScript
+###  3.1 BrainScript
 
 Given any of the parallel-training BrainScript configurations above, the following commands
 can be used to start a parallel MPI job:
@@ -445,7 +459,7 @@ Where name_of_node(n) is simply a DNS name or IP address of the worker node.
 
 where `$cntk` should refer to the path of the CNTK executable (`$x` is the Linux shell's way of substituting environment variables, the equivalent of `%x%` in the Windows shell).
 
-##  3.2 Python
+###  3.2 Python
 
 Examples for distributed training for CNTK v2 with Python can be found here:
 
@@ -487,7 +501,7 @@ Where name_of_node(n) is simply a DNS name or IP address of the worker node.
     mpiexec --hosts %num_nodes% %name_of_node1% %num_workers_on_node1%  ...  python training.py
     ```
 
-#  References
+##  References
 
 [1] F. Seide, Hao Fu, Jasha Droppo, Gang Li, and Dong Yu, "*1-bit stochastic gradient descent and its application to data-parallel distributed training of speech DNNs*," in Proceedings of Interspeech, 2014.
 
@@ -503,7 +517,7 @@ stochastic gradient descent*," in Proceedings of Advances in NIPS, 2010, pp. 259
 of DNNs with natural gradient and parameter averaging*," in Proceedings of the
 International Conference on Learning Representations, 2014.
 
-[5]Chen J, Monga R, Bengio S, et al. Revisiting Distributed Synchronous SGD. ICLR, 2016.
+[5]Chen J, Monga R, Bengio S, et al. Reviiting Distributed Synchronous SGD. ICLR, 2016.
 
 [6]Dean Jeffrey, Greg Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Mark Mao, Andrew Senior et al. Large scale distributed deep networks. In Advances in neural information processing systems, pp. 1223-1231. 2012.
 

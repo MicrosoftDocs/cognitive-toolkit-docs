@@ -1,9 +1,23 @@
+---
+title:   Loss functions and metrics
+author:    chrisbasoglu
+date:    11/08/2016
+ms.author:   cbasoglu
+ms.date:   11/08/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Loss functions and metrics
+
 CNTK contains a number of common predefined *loss functions* (or *training criteria*, to optimize for in training),
 and *metrics* (or *evaluation criteria*, for performance tracking).
 In addition, custom loss functions/metrics
 can be defined as BrainScript expressions.
 
-# CrossEntropy(), CrossEntropyWithSoftmax()
+## CrossEntropy(), CrossEntropyWithSoftmax()
 
 Computes the categorical cross-entropy loss (or just the cross entropy between two probability distributions).
 
@@ -50,9 +64,9 @@ This is the recommended way in CNTK to compute the categorical  cross-entropy cr
 
 Note that categorical cross-entropy is not a suitable loss function for multi-class labels,
 where `y` contains more than one position containing a 1.
-For this case, consider using [`Sigmoid()`](./Activation-Functions) instead of Softmax,
+For this case, consider using [`Sigmoid()`](./BrainScript-Activation-Functions.md) instead of Softmax,
 with a [`Logistic()`](#logistic-weightedlogistic) loss.
-See also [this article](./Train-a-multilabel-classifier).
+See also [this article](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier).
 
 #### Alternative definition
 `CrossEntropyWithSoftmax()` is currently a CNTK primitive which has limitations.
@@ -89,7 +103,7 @@ The same with sparse labels:
     ce = ReduceLogSum (z) - TransposeTimes (labels, z)
     criterionNodes = (ce)
 
-# Logistic{}, WeightedLogistic{}
+## Logistic{}, WeightedLogistic{}
 
 Computes the logistic loss function.
 
@@ -117,7 +131,7 @@ This function is the logistic loss function.
 for two-class problems,
 where only one of the two (complementary) ground-truth labels is given to `Logistic()`.
 
-See also [this article](./Train-a-multilabel-classifier) on training multi-class classifiers.
+See also [this article](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier) on training multi-class classifiers.
 
 ### Example
 
@@ -127,9 +141,9 @@ See also [this article](./Train-a-multilabel-classifier) on training multi-class
     ll = Logistic (multiLabels, p)
     trainingCriterion = (ll)
 
-# ClassificationError{}
+## ClassificationError{}
 
-Computes the error rate for prediction of categorical labels. For binary labels you can use [hamming loss](./Train-a-multilabel-classifier)
+Computes the error rate for prediction of categorical labels. For binary labels you can use [hamming loss](How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier)
 
     ClassificationError (y, z)
 

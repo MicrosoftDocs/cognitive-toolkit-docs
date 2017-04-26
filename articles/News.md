@@ -45,7 +45,7 @@ Highlights of this Release:
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
 * Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
-* Updates and [new examples](./CNTK-Eval-Examples#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
+* Updates and [new examples](./CNTK-Eval-Examples.md#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
 * Various bug fixes.
 
 See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md).  
@@ -66,7 +66,7 @@ Highlights of this Release:
 * [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs).
 * New [CNTK NuGet Packages](./NuGet-Package.md) with CNTK V2 C++ Library.
 
-See more in the [Release Notes](./CNTK_2_0_beta_12_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_12_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-02-13.* V 2.0 Beta 11 Release available at Docker Hub**  
@@ -110,7 +110,7 @@ See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Container
 ***2017-01-25.* 1bit-SGD Code is relocated to GitHub. Submodule configuration update is required for affected users**  
 This news is related to users who are working with CNTK code base. If you use Binary or Docker Runtime Images installation you may ignore it.
 
-Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines#22-block-momentum-sgd) code is moved to a new Repository in GitHub.
+Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) code is moved to a new Repository in GitHub.
 
 If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD.md) *prior to January 25, 2017* you need to update git submodule configuration as described in [this Wiki article](./Update-1bit-SGD-Submodule-Location.md).
 
@@ -137,11 +137,11 @@ Highlights of this Release:
 * New Python API features.
 * New Python example [Feature extraction using a trained model in Python API](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Image/FeatureExtraction).
 * Support of [Visual Studio 2015](./Setup-Migrate-VS13-to-VS15.md) for Windows version.
-* Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
+* Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows.md#using-the-cntk-library-managed-api) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
 * CNTK Runtime packages are now available as [Public Images at Docker Hub](./CNTK-Docker-Containers.md). (**Beta 7** is currently available; Beta 8 Images availability will be announced separately in a few days)
 * Version 3 of [CNTK Custom MKL Library](https://cntk.ai/mkl/) is available.
 
-See more in the [Release Notes](./CNTK_2_0_beta_8_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_8_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-01-10.* CNTK for Windows supports Visual 2015**

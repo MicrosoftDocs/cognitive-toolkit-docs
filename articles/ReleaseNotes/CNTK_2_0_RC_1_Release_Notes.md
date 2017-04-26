@@ -64,7 +64,7 @@ This release contains the following **breaking changes in CNTK Python API**:
 * Performance optimizations.
 * Multiple bug fixes, including memory safety and concurrent evaluations.
 
-The updated APIs are described in [this Wiki page](./CNTK-Library-Managed-API).
+The updated APIs are described in [this Wiki page](./CNTK-Library-Managed-API.md).
 
 #### Breaking changes
 
