@@ -1,6 +1,20 @@
-* [Specify multiple label streams with the HTKMLFReader](./How-do-I-Read-Things-in-BrainScript#specify-multiple-label-streams-with-the-htkmlfreader)? 
-* [Use the built-in readers to train a network model using multiple input files](./How-do-I-Read-Things-in-BrainScript#use-built-in-readers-with-multiple-inputs)? 
-* [Put labels and features in separate files with CNTKTextFormatReader](./How-do-I-Read-Things-in-BrainScript#put-labels-and-features-in-separate-files-with-cntktextformatreader)?
+---
+title:   How do I read things in BrainScript
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I read things in BrainScript
+
+* [Specify multiple label streams with the HTKMLFReader](#specify-multiple-label-streams-with-the-htkmlfreader)? 
+* [Use the built-in readers to train a network model using multiple input files](#use-built-in-readers-with-multiple-inputs)? 
+* [Put labels and features in separate files with CNTKTextFormatReader](#put-labels-and-features-in-separate-files-with-cntktextformatreader)?
 
 ## Specify multiple label streams with the HTKMLFReader
 
@@ -27,7 +41,7 @@ in the Examples directory:
 
 ## Use built in readers with multiple inputs
 
-See the description at [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers) and look for the section describing how to "compose several data deserializers" 
+See the description at [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md) and look for the section describing how to "compose several data deserializers" 
 
 ## Put labels and features in separate files with CNTKTextFormatReader
 

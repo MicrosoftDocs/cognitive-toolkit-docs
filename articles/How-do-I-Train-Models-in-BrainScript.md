@@ -1,11 +1,24 @@
-* [Perform layer-wise training](./How-do-I-Train-Models-in-BrainScript#layer-wise-training)? 
-* [Train with a multitask objective](./How-do-I-Train-Models-in-BrainScript#train-with-a-multitask-objective)? 
-* [Train a regression model on images](./How-do-I-Train-Models-in-BrainScript#train-a-regression-model-on-images)? 
-* [Train a multilabel classifier](./How-do-I-Train-Models-in-BrainScript#train-a-multilabel-classifier)?  
-* [Get started in sequence to sequence modelling](./How-do-I-Train-Models-in-BrainScript#get-started-in-sequence-to-sequence-modelling)? 
-* [Train a DSSM (or a convolutional-DSSM) model](./How-do-I-Train-Models-in-BrainScript#train-a-dssm-or-a-convolutional-dssm-model)?  
-* [Train an Image auto encoder using Deconvolution and Unpooling](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)?
-* [Object Detection using Fast R-CNN](./Object-Detection-using-Fast-R-CNN)? 
+"---
+title:   How do I train models in BrainScript
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I train models in BrainScript"
+* [Perform layer-wise training](#layer-wise-training)? 
+* [Train with a multitask objective](#train-with-a-multitask-objective)? 
+* [Train a regression model on images](#train-a-regression-model-on-images)? 
+* [Train a multilabel classifier](#train-a-multilabel-classifier)?  
+* [Get started in sequence to sequence modelling](#get-started-in-sequence-to-sequence-modelling)? 
+* [Train a DSSM (or a convolutional-DSSM) model](#train-a-dssm-or-a-convolutional-dssm-model)?  
+* [Train an Image auto encoder using Deconvolution and Unpooling](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling.md)?
+* [Object Detection using Fast R-CNN](./Object-Detection-using-Fast-R-CNN.md)? 
 
 ## Layer wise training
 
@@ -132,7 +145,7 @@ This counts the number of times y[i] disagrees with p[i]>0.5.
 
 ## Get started in sequence to sequence modelling
 
-This [hands-on lab](Hands-On-Labs-Language-Understanding) describes the main ingredients for getting started on sequence processing such as the CNTK text format and how to configure the reader to use short aliases for the various input sequences.
+This [hands-on lab](Hands-On-Labs-Language-Understanding.md) describes the main ingredients for getting started on sequence processing such as the CNTK text format and how to configure the reader to use short aliases for the various input sequences.
 The [grapheme-to-phoneme (G2P) example](https://github.com/Microsoft/CNTK/blob/master/Examples/SequenceToSequence/CMUDict/BrainScript/G2P.cntk)
 demonstrates an actual sequence-to-sequence task.
 
@@ -252,9 +265,9 @@ Note:
 
 ## Train an Image Auto Encoder Using Deconvolution And Unpooling
 
-There are instructions [here](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling).
+There are instructions [here](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling.md).
 
 ## Train Object Detection using Fast R CNN
 
-There are instructions [here](./Object-Detection-using-Fast-R-CNN).
+There are instructions [here](./Object-Detection-using-Fast-R-CNN.md).
 

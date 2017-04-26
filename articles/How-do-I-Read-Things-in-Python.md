@@ -1,4 +1,18 @@
-[Load model and access network weights (parameters)](./How-do-I-Read-Things-in-Python#load-model-and-access-network-weights-parameters)
+---
+title:   How do I read things in Python
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I read things in Python
+
+[Load model and access network weights (parameters)](#load-model-and-access-network-weights-parameters)
 
 ## Load model and access network weights (parameters)
 
