@@ -5,7 +5,7 @@ date:    11/09/2016
 ms.author:   cbasoglu
 ms.date:   11/09/2016
 ms.custom:   cognitive-toolkit
-ms.topic:   reference
+ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---

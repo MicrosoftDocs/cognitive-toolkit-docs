@@ -12,7 +12,7 @@ ms.devlang:   NA
 
 # CNTK usage overview
 
-To use CNTK you need to either download the executable binaries or download the source code and compile it on your machine ([details](./Setup CNTK on your machine.md)).
+To use CNTK you need to either download the executable binaries or download the source code and compile it on your machine ([details](./Setup-CNTK-on-your-machine.md)).
 There are three main tasks (or actions) that are supported by CNTK:
 * **Train** - Define a network and train it to produce a trained model using training data
 * **Evaluate** - Test a trained model to assess its performance using test data

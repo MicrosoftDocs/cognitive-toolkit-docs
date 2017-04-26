@@ -1,3 +1,17 @@
+---
+title:   EvalDLL Managed API
+author:    chrisbasoglu
+date:    04/02/2017
+ms.author:   cbasoglu
+ms.date:   04/02/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   cpp
+---
+
+# EvalDLL Managed API
+
 There is a managed interface available for evaluating models without requiring a data reader or data file(s). This interface is implemented in CLI managed code inside the `EvalWrapper` library. This library in turn uses `Evaldll` library to perform the actual network evaluations (in native C++).
 
 The managed interface name (in C#) is the following:  
