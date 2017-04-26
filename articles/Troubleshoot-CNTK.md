@@ -70,4 +70,4 @@ Possible reasons are:
 
 #### I get the following result with CNTKTextFormat-Reader -- WARNING: Exhausted all input expected for the current sequence while reading a floating point value at offset
 
-[CTF reader](./CNTKTextFormat-Reader) requires that Each well-formed line must end with either a "Line Feed" \n or "Carriage Return, Line Feed" \r\n symbols (including the last line of the file).
+[CTF reader](./BrainScript-CNTKTextFormat-Reader.md) requires that Each well-formed line must end with either a "Line Feed" \n or "Carriage Return, Line Feed" \r\n symbols (including the last line of the file).

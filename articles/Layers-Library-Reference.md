@@ -392,7 +392,7 @@ A learned embedding that represents words from a vocabulary of 87636 as a 300-di
     embEn = Embedding(300)(input)         # embed word as a 300-dimensional continuous vector
 
 In addition to `is_sparse=True`, one would also typically read sparse data from disk.
-Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./CNTKTextFormat-Reader):
+Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./BrainScript-CNTKTextFormat-Reader.md):
 
     source = MinibatchSource(CTFDeserializer('en2fr.ctf', StreamDefs(
         input   = StreamDef(field='E', shape=87636, is_sparse=True),

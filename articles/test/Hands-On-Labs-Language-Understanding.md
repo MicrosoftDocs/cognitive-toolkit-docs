@@ -231,7 +231,7 @@ TestTagger = {
 We already looked at the data.
 But how do you generate this format?
 For reading text, this tutorial uses the `CNTKTextFormatReader`. It expects the input data to be
-of a specific format, which is described [here](./CNTKTextFormat-Reader).
+of a specific format, which is described [here](./BrainScript-CNTKTextFormat-Reader.md).
 
 For this tutorial, we created the corpora by two steps:
 * convert the raw data into a plain text file that contains of TAB-separated columns of space-separated text. For example:

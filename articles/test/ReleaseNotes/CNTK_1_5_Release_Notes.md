@@ -41,7 +41,7 @@ Read more here: ./Multiple-GPUs-and-machines
 
 Significant effort has been put in redesigning and improving our Datareader / Deserializer infrastructure.
 
-* A new CNTK Text Format Reader replacing the UCIFastReader (./CNTKTextFormat-Reader)
+* A new CNTK Text Format Reader replacing the UCIFastReader (./BrainScript-CNTKTextFormat-Reader.md)
 * Various improvements in the image reader (./Image-reader)
 * A new deserializer concept and a new speech format deserializer that will replace the current HTKMLFReader in the near future (./Deserializers-and-Transforms)
 * The CNTKEval functionality has increased API documentation, insights and additional samples (./CNTK-Evaluation-Overview). The CNTK Eval Wiki pages have been updated to describe in more detail the overall CNTK capability to evaluate trained models as well as detailing each of the programmatic interfaces for model evaluation (C++ and C#). The Wiki pages also include some common pitfalls as well as some suggestions on how to evaluate a model using images.

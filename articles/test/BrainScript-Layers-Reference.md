@@ -469,7 +469,7 @@ A learned embedding that represents words from a vocabulary of 87636 as a 300-di
     embEn = EmbeddingLayer{300} (input)  # embed word as a 300-dimensional continuous vector
 
 In addition to `sparse=true`, one should also declare an input as sparse in the `reader` config block.
-Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./CNTKTextFormat-Reader):
+Here is an example of reading sparse text input with the [`CNTKTextFormatReader`](./BrainScript-CNTKTextFormat-Reader.md):
 
     reader = {
         readerType = "CNTKTextFormatReader"
