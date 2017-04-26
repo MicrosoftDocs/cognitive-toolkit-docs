@@ -18,5 +18,5 @@ If you want to use Python Tools for Visual Studio (PTVS):
 * If you have a source install, to get intellisence, add in the full python lib dir as a part of your project at: MYCNTKPATH%\CNTK\bindings\python
 
 **Links**
-* [Setup CNTK on Windows](/en-us/cognitive-toolkit/Setup-CNTK-on-Windows.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Setup CNTK on Windows](./Setup-CNTK-on-Windows.md)
+* [Examples](./Examples.md)

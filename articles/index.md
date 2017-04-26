@@ -28,7 +28,7 @@ Here are a few pages to get started:
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api.md)
 * CNTK as a machine learning tool through [BrainScript](./Using-CNTK-with-BrainScript.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
-* Give us feedback through these [channels](Feedback-Channels.md.md).
+* Give us feedback through these [channels](Feedback-Channels.md)
 
 ***2017-03-31.* CNTK 2.0 Release Candidate 1**  
 With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of enhancements before release of the production version of CNTK 2.0. 
@@ -37,7 +37,7 @@ Highlights:
 * The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](./ReleaseNotes/CNTK-2.0-Beta-Highlights.md).
 * Enables Caffe-converted pretrained models on image classification including AlexNet, ResNet, VGG and BN-Inception. 
 * Slice now supports multiple-axis slicing.
-* Improves performance and memory footprint
+* Improves performance and memory footprint.
 * Improvements in the [device selection API](./CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.

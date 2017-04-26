@@ -1,10 +1,24 @@
-* [Do early stopping](./How-do-I-Evaluate-Models-in-BrainScript#do-early-stopping)? 
-* [Monitor the error on a held out set during training](./How-do-I-Evaluate-Models-in-BrainScript#monitor-the-error-on-a-held-out-set-during-training)?  
-* [Set the dropout rate to 0 during evaluation/testing](./How-do-I-Evaluate-Models-in-BrainScript#Dropout-during-evaluation)? 
-* [Evaluate my newly trained model but output the activations at an intermediate layer](./How-do-I-Evaluate-Models-in-BrainScript#evaluate-my-newly-trained-model-but-output-the-activations-at-an-intermediate-layer)? 
-* [Associate an id with a prediction](./How-do-I-Evaluate-Models-in-BrainScript#associate-an-id-with-a-prediction)? 
-* [Deploy model evaluation on Windows](./CNTK-Evaluation-Overview#eval-samples-in-cntk-binary-download-package-for-windows)? 
-* [Evaluate a model in an Azure WebApi](/en-us/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi.md) 
+---
+title:   How do I evaluate models in BrainScript
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I evaluate models in BrainScript
+
+* [Do early stopping](#do-early-stopping)? 
+* [Monitor the error on a held out set during training](#monitor-the-error-on-a-held-out-set-during-training)?  
+* [Set the dropout rate to 0 during evaluation/testing](#Dropout-during-evaluation)? 
+* [Evaluate my newly trained model but output the activations at an intermediate layer](#evaluate-my-newly-trained-model-but-output-the-activations-at-an-intermediate-layer)? 
+* [Associate an id with a prediction](#associate-an-id-with-a-prediction)? 
+* [Deploy model evaluation on Windows](#eval-samples-in-cntk-binary-download-package-for-windows)? 
+* [Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-Azure-WebApi.md) 
 
 ## Do early stopping
 

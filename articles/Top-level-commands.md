@@ -1,4 +1,4 @@
-The main top-level command `train` and `eval`/`test` are described on the [Train, Test, Eval](/en-us/cognitive-toolkit/Train,-Test,-Eval.md) page. Further top-level commands are detailed below.
+The main top-level command `train` and `eval`/`test` are described on the [Train, Test, Eval](./Train,-Test,-Eval.md) page. Further top-level commands are detailed below.
 
 ## Adapt Command
 This command adapts an already trained model using KL divergence regularization. It is advised that all other adaptations should be carried out using model editing. The adapt command is very similar to the train command except that it carries two more parameters:
@@ -109,7 +109,7 @@ Evaluating the mean and variance of evaluating and testing data-set for the batc
 * `modelPath`: the path to the model file containing trained model
 * `minibatchSize`: the mini-batch size while evaluating, same with training minibatchSize
 * `itersPerNode`: the statistics iterations for each batch normalization node
-* `reader`: the reader configuration block to read the test data. For details see [Reader block](/en-us/cognitive-toolkit/Reader-block.md)
+* `reader`: the reader configuration block to read the test data. For details see [Reader block](./Reader-block.md)
 * `enableDistributedMBReading`: distributed reading in parallel training
 
 

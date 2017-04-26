@@ -108,7 +108,7 @@ At this point all the required components to build CNTK on you system are instal
 **More information**
 * [Windows build specific environment variables](./Windows-Environment-Variables)
 * [Build and test CNTK](./Setup-CNTK-on-Windows#building-cntk)
-* [Enabling 1bit SGD](/en-us/cognitive-toolkit/Enabling-1bit-SGD.md)
-* [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md)
-* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
+* [Developing and Testing](./Developing-and-Testing.md)
+* [CNTK usage overview](./CNTK-usage-overview.md)
+* [Examples](./Examples.md)

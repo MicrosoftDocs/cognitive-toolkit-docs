@@ -1,8 +1,8 @@
-Optional Parameters are a feature that allows additional parameters to be specified for [NDL Functions](/en-us/cognitive-toolkit/NDL-Functions.md) and [NDL Macros](/en-us/cognitive-toolkit/NDL-Macros.md). While the optional parameters can be specified for any Function or Macro, they are limited to constant values and the underlying Function must support the passed optional parameters, or there is no effect on the network. When used with a Macro, the Macro will have a local variables defined that matches the optional parameter name and value.
+Optional Parameters are a feature that allows additional parameters to be specified for [NDL Functions](./NDL-Functions.md) and [NDL Macros](./NDL-Macros.md). While the optional parameters can be specified for any Function or Macro, they are limited to constant values and the underlying Function must support the passed optional parameters, or there is no effect on the network. When used with a Macro, the Macro will have a local variables defined that matches the optional parameter name and value.
 
 ### Parameter initialization
 
-In the network definition given in [NDL Basic concepts](/en-us/cognitive-toolkit/NDL-Basic-concepts.md) the following parameter matrices are defined: 
+In the network definition given in [NDL Basic concepts](./NDL-Basic-concepts.md) the following parameter matrices are defined: 
 ```
 B0=Parameter(HDim)  
 W0=Parameter(HDim, SDim)
@@ -14,7 +14,7 @@ Optional parameters are allowed to specify how the functions will be initialized
 B0=Parameter(HDim, init=zero)
 W0=Parameter(HDim, SDim, init=uniform)
 ```
-Here the Bias matrix will be zero initialized, and the weight matrix will be initialized with uniform random numbers. Please consult the [Full NDL Function Reference](/en-us/cognitive-toolkit/Full-NDL-Function-Reference.md) to find which functions accept optional parameters.
+Here the Bias matrix will be zero initialized, and the weight matrix will be initialized with uniform random numbers. Please consult the [Full NDL Function Reference](./Full-NDL-Function-Reference.md) to find which functions accept optional parameters.
 
 ### Tagging special values
 
@@ -45,4 +45,4 @@ OutputNodes = (CE.F)
 ```
 This approach avoids adding elements to the node arrays. Instead it sets the ```tag``` optional parameter on the functions or macros that return the value that fits into the specified category. In this case, since the output node is actually computed inside a macro, we must specify it explicitly.
 
-You will find additional information on *Tags* on the [NDL Special Nodes](/en-us/cognitive-toolkit/NDL-Special-Nodes.md) page.
+You will find additional information on *Tags* on the [NDL Special Nodes](./NDL-Special-Nodes.md) page.

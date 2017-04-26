@@ -46,7 +46,7 @@ then a C++ compiler is not installed. If you have Ubuntu 1404, install gcc 4.8  
 sudo apt-get install g++
 ```
 
-If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](/en-us/cognitive-toolkit/http://askubuntu.com/questions/26498/choose-gcc-and-g-version.md) 
+If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](/http://askubuntu.com/questions/26498/choose-gcc-and-g-version.md) 
 
 ### Git
 
@@ -487,7 +487,7 @@ Note that in the instructions above we suggest using "plain" `make` rather than 
 
 ### Getting CNTK Source code
 
-Before proceeding further, please note, that if you plan on making modifications to the CNTK code you should read the information on [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md) in this Wiki.
+Before proceeding further, please note, that if you plan on making modifications to the CNTK code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
 Use [Git](./Setup-CNTK-on-Linu#git) to clone the CNTK Repository and access the source code:
 ```
@@ -572,10 +572,10 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Contributing to CNTK code
 
-If you plan modifications to the code you should read the information on [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md) in this Wiki.
+If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
 **Next steps**
-* [Enabling 1bit SGD](/en-us/cognitive-toolkit/Enabling-1bit-SGD.md)
-* [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md)
-* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
+* [Developing and Testing](./Developing-and-Testing.md)
+* [CNTK usage overview](./CNTK-usage-overview.md)
+* [Examples](./Examples.md)

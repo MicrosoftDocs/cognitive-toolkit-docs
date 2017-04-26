@@ -15,8 +15,8 @@ ms.devlang:   brainscript
 Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding wiki page](./Top-level-commands.md). 
 
 ## Train Command
-This command asks CNTK to train a model. An example for a `train` command section is provided on the [Config file overview](/en-us/cognitive-toolkit/Brainscript-Config-file-overview.md) page. The related parameters are:
-* `reader` – the reader configuration block used to determine how to load input data. For details see [Reader block](/en-us/cognitive-toolkit/Brainscript-Reader-block.md).
+This command asks CNTK to train a model. An example for a `train` command section is provided on the [Config file overview](./Brainscript-Config-file-overview.md) page. The related parameters are:
+* `reader` – the reader configuration block used to determine how to load input data. For details see [Reader block](./Brainscript-Reader-block.md).
 
 * `SGD` – the SGD training setup. For details see [SGD block](./Brainscript-SGD-block.md).
 

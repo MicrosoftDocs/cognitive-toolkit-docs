@@ -50,7 +50,7 @@ cd cntk
 git submodule update --init Source/Multiverso
 ```
 
-This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md) in this Wiki.
+This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
 The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines#24-data-darallel-training-with-parameter-server) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in an CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
 ```
@@ -349,14 +349,14 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 ### Contributing to CNTK code
 
-If you plan modifications to the code you should read the information on [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md) in this Wiki.
+If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
 **Links**
-* [Enabling 1bit SGD](/en-us/cognitive-toolkit/Enabling-1bit-SGD.md)
-* [Setup CNTK Python Tools for Windows](/en-us/cognitive-toolkit/Setup-CNTK-Python-Tools-for-Windows.md)
-* [Developing and Testing](/en-us/cognitive-toolkit/Developing-and-Testing.md)
-* [CNTK usage overview](/en-us/cognitive-toolkit/CNTK-usage-overview.md)
-* [Examples](/en-us/cognitive-toolkit/Examples.md)
+* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
+* [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
+* [Developing and Testing](./Developing-and-Testing.md)
+* [CNTK usage overview](./CNTK-usage-overview.md)
+* [Examples](./Examples.md)
 
 
 
