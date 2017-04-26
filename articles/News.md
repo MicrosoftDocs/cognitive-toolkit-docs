@@ -21,13 +21,13 @@ Highlights:
 * Enables Caffe-converted pretrained models on image classification including AlexNet, ResNet, VGG and BN-Inception. 
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
-* Improvements in the [device selection API](./CNTK_2_0_RC_1_Release_Notes.md).
+* Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
-* Improvements in Python and C# API. See the [release notes](./CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
+* Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
 * Various bug fixes.
 
-The [release notes](./CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
+The [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
 Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/releases).
 
 ## March 2017
@@ -44,11 +44,11 @@ Highlights of this Release:
 * Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
-* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
+* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
 * Updates and [new examples](./CNTK-Eval-Examples#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
 * Various bug fixes.
 
-See more in the [Release Notes](./CNTK_2_0_beta_15_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## February 2017
@@ -79,9 +79,9 @@ Highlights of this Release:
 * New Tutorials and Examples:
   * [Transfer learning example to train custom image classifiers](https://github.com/Microsoft/CNTK/tree/v2.0.beta11.0/Examples/Image/TransferLearning).
 * New [CNTK NuGet Packages](./NuGet-Package.md).
-  * Note a *breaking change* due to Assembly Strong Name enabling. See [Release Notes](./CNTK_2_0_beta_11_Release_Notes.md).
+  * Note a *breaking change* due to Assembly Strong Name enabling. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_11_Release_Notes.md).
 
-See more in the [Release Notes](./CNTK_2_0_beta_11_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_11_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-02-08.* V 2.0 Beta 10 Release available at Docker Hub**  
@@ -99,7 +99,7 @@ Highlights of this Release:
   * [Training with Sampled Softmax](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Tutorials/CNTK_207_Training_with_Sampled_Softmax.ipynb)
 * New [CNTK NuGet Packages](./NuGet-Package.md).
 
-See more in the [Release Notes](./CNTK_2_0_beta_10_Release_Notes.md).
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_10_Release_Notes.md).
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## January 2017
@@ -124,7 +124,7 @@ Highlights of this Release:
   * [LSTM Timeseries with Simulated Data (Part A)](https://github.com/Microsoft/CNTK/blob/v2.0.beta9.0/Tutorials/CNTK_106A_LSTM_Timeseries_with_Simulated_Data.ipynb). (More will come in the next Releases)
 * New [CNTK NuGet Packages](./NuGet-Package.md).
 
-See more in the [Release Notes](./CNTK_2_0_beta_9_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes//CNTK_2_0_beta_9_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-01-19.* V 2.0 Beta 8 Release available at Docker Hub**  

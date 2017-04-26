@@ -1,5 +1,19 @@
-* [Debug a Python notebook](./How-do-I-Deal-with-Errors-in-Python#debug-a-python-notebook)?
-* [Get things to work correctly when I take the last element of a sequence](./How-do-I-Deal-with-Errors-in-Python#get-things-to-work-correctly-when-i-take-the-last-element-of-a-sequence)?
+---
+title:   How do I deal with errors in Python
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I deal with errors in Python
+
+* [Debug a Python notebook](#debug-a-python-notebook)?
+* [Get things to work correctly when I take the last element of a sequence](#get-things-to-work-correctly-when-i-take-the-last-element-of-a-sequence)?
 
 ## Debug a Python notebook
 

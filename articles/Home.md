@@ -34,16 +34,16 @@ Here are a few pages to get started:
 With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of enhancements before release of the production version of CNTK 2.0. 
 
 Highlights:
-* The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](./CNTK-2.0-Beta-Highlights.md).
+* The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](./ReleaseNotes/CNTK-2.0-Beta-Highlights.md).
 * Enables Caffe-converted pretrained models on image classification including AlexNet, ResNet, VGG and BN-Inception. 
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
 * Improvements in the [device selection API](./CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
-* Improvements in Python and C# API. See the [release notes](./CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
+* Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
 
-The [release notes](./CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
+The [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
 Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-03-16.* V 2.0 Beta 15 Release available at Docker Hub**  
@@ -56,11 +56,11 @@ Highlights of this Release:
 * Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
-* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
+* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
 * Updates and [new examples](./CNTK-Eval-Examples.md#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
 * Various bug fixes.
 
-See more in the [Release Notes](./CNTK_2_0_beta_15_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-02-28.* V 2.0 Beta 12 Release available at Docker Hub**  
@@ -77,7 +77,7 @@ Highlights of this Release:
 * [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs).
 * New [CNTK NuGet Packages](./NuGet-Package.md) with CNTK V2 C++ Library.
 
-See more in the [Release Notes](./CNTK_2_0_beta_12_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_12_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-02-13.* V 2.0 Beta 11 Release available at Docker Hub**  
