@@ -1,6 +1,18 @@
-Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7.1 which will be released soon.
+---
+title:   Hands-on Labs Language Understanding
+author:    chrisbasoglu
+date:    11/14/2016
+ms.author:   cbasoglu
+ms.date:   11/14/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
 
-# Hands-On Lab: Language Understanding with Recurrent Networks
+# Hands-on Labs Language Understanding with Recurrent Networks
+
+Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7.1 which will be released soon.
 
 This hands-on lab shows how to implement a recurrent network to process text,
 for the Air Travel Information Services (ATIS) tasks of slot tagging and intent classification.
@@ -20,7 +32,7 @@ We assume that you are familiar with basics of deep learning, and these specific
 * recurrent networks ([Wikipedia page](https://en.wikipedia.org/wiki/Recurrent_neural_network))
 * text embedding ([Wikipedia page](https://en.wikipedia.org/wiki/Word_embedding))
 
-### Prerequisites
+## Prerequisites
 
 We assume that you have already installed CNTK and can run the CNTK command.
 This tutorial was held at KDD 2016 and requires a recent build,
@@ -120,8 +132,8 @@ Or, as a CNTK network description. Please have a quick look and match it with th
             DenseLayer {labelDim}
         )
 
-Descriptions of these functions can be found at: [`Sequential()`](./Sequential), [`EmbeddingLayer{}`](./Layers-Reference#embeddinglayer), [`RecurrentLSTMLayer{}`](./Layers-Reference#recurrentlstmlayer-recurrentlstmlayerstack),
-and [`DenseLayer{}`](./LayersReference#denselayer-linearlayer)
+Descriptions of these functions can be found at: [`Sequential()`](./Sequential.md), [`EmbeddingLayer{}`](./BrainScript-Layers-Reference.md#embeddinglayer), [`RecurrentLSTMLayer{}`](./BrainScript-Layers-Reference.md#recurrentlstmlayer-recurrentlstmlayerstack),
+and [`DenseLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer)
 
 ## CNTK Configuration
 
@@ -231,7 +243,7 @@ TestTagger = {
 We already looked at the data.
 But how do you generate this format?
 For reading text, this tutorial uses the `CNTKTextFormatReader`. It expects the input data to be
-of a specific format, which is described [here](./CNTKTextFormat-Reader).
+of a specific format, which is described [here](./CNTKTextFormat-Reader.md).
 
 For this tutorial, we created the corpora by two steps:
 * convert the raw data into a plain text file that contains of TAB-separated columns of space-separated text. For example:
@@ -328,7 +340,7 @@ or test our pre-trained model as well, which you can find in the working folder:
 In the following, you will be given tasks to practice modifying CNTK configurations.
 The solutions are given at the end of this document... but please try without!
 
-### A Word About [`Sequential()`](./Sequential)
+### A Word About [`Sequential()`](./Sequential.md)
 
 Before jumping to the tasks, let's have a look again at the model we just ran.
 The model is described in what we call *function-composition style*.
@@ -344,7 +356,7 @@ where the colon (`:`) is BrainScript's syntax of expressing arrays. For example,
 
 You may be familiar with the "sequential" notation from other neural-network toolkits.
 If not,
-[`Sequential()`](./Sequential) is a powerful operation that,
+[`Sequential()`](./Sequential.md) is a powerful operation that,
 in a nutshell, allows to compactly express a very common situation in neural networks
 where an input is processed by propagating it through a progression of layers.
 `Sequential()` takes an array of functions as its argument,
@@ -379,12 +391,12 @@ We now want to add new layers to the model, specifically batch normalization.
 
 Batch normalization is a popular technique for speeding up convergence.
 It is often used for image-processing setups, for example our other [hands-on lab on image
-recognition](./Hands-On-Labs-Image-Recognition).
+recognition](./Hands-On-Labs-Image-Recognition.md).
 But could it work for recurrent models, too?
   
 So your task will be to insert batch-normalization layers before and after the recurrent LSTM layer.
-If you have completed the [hands-on labs on image processing](./Hands-On-Labs-Image-Recognition),
-you may remember that the [batch-normalization layer](./Layers-Reference#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer) has this form:
+If you have completed the [hands-on labs on image processing](./Hands-On-Labs-Image-Recognition.md),
+you may remember that the [batch-normalization layer](./BrainScript-Layers-Reference.md#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer) has this form:
 
     BatchNormalizationLayer{}
 

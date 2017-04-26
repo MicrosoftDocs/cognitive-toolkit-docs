@@ -1,35 +1,49 @@
-# Deploy through Azure Machine Learning Command Line
+---
+title:   Evaluate a model in an Azure WebApi
+author:    chrisbasoglu
+date:    03/22/2017
+ms.author:   cbasoglu
+ms.date:   03/22/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   dotnet
+---
+
+# Evaluate a model in an Azure WebApi
+
+## Deploy through Azure Machine Learning Command Line
 One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](https://github.com/Azure/Spark-Operationalization-On-Azure/blob/master/samples/cntk/tutorials/realtime/image_classification.md) to learn how.
 
-# Deploy through ASP.NET
+## Deploy through ASP.NET
 We will walk you to the required steps to deploy a CNTK model on Azure and send web requests to the Azure endpoint to 
 evaluate data against the deployed model. We will build this functionality in form of a WebApi, but focus on the most 
 basic Azure functionality. Please refer to more advanced Azure documentation to learn about all the advanced abilities, i.e. parameter passing etc.
 
-## Requirements
+### Requirements
 
 As we are currently using VS2013 to build CNTK, we focus on this version of Visual Studio. You might need to make small 
 adjustments for VS2015 to reproduce the steps we describe. 
 
-### Web Development Feature for Visual Studio
+#### Web Development Feature for Visual Studio
 
 You need to enable Web-Development features in Visual Studio. You can see if this feature is enabled (and enable if necessary) 
 by executing the VS installer again (`Control Panel -> Program and Features -> Microsoft Visual Studio 201x`, right click and select 
 `Change` to invoke the VS installer)
 
-### Azure SDK
+#### Azure SDK
 
 The Azure SDK for .NET needs to be installed on your development machine. The download page for this 
 is: [Azure SDK Download](https://azure.microsoft.com/downloads/)
 
-### Azure Account
+#### Azure Account
 
 Since we are going to host the CNTK model on Azure, you will need an Azure account. If you have an MSDN or Visual Studio subscription, that account will be sufficient to host your model for this tutorial. CNTK requires a 64-bit virtual machine to host, a free Azure account doesn’t include this capability and will not be sufficient.
 
 Initially we will develop the WebApi locally and then upload this to our Azure instance. So you will be able to follow the majority of the steps even without access to Azure.
 
 
-## Let’s get started
+### Let’s get started
 
 We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
 
@@ -51,7 +65,7 @@ We recommend you start from this solution, since we already added all the code w
              Environment.SetEnvironmentVariable("PATH", pathValue);
    
            
-## Hosting the WebApi locally
+### Hosting the WebApi locally
 
 These are the changes we performed so far. We still need to get the CNTK Eval functionality included in the project and 
 need a model to evaluate. 
@@ -75,7 +89,7 @@ This will call the `Get()` method in the ValuesController-Class which will in tu
 
 ![local](./pictures/EvaluateWebApi/pic3.png)
 
-## Hosting the WebApi on Azure
+### Hosting the WebApi on Azure
 
 With this we accomplished the first part of our mission, now we need this functionality hosted in Azure!
 From the Build menu of your project select the `Publish` command. Pick `Microsoft Azure App Service` as the publishing target

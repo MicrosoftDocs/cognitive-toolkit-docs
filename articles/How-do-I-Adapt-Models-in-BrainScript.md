@@ -1,8 +1,22 @@
-* [Use a trained model as a feature extractor](How-do-I-Adapt-Models-in-BrainScript#use-a-trained-model-as-a-feature-extractor)? 
-* [Use an already trained network multiple times inside a larger network](./How-do-I-Adapt-Models-in-BrainScript#use-an-already-trained-network-multiple-times-inside-a-larger-network)
-* [Adapt a model I trained on one task to another](./How-do-I-Adapt-Models-in-BrainScript#adapt-a-model-i-trained-on-one-task-to-another)?
-* [Save and reload weights from one model to another](./How-do-I-Adapt-Models-in-BrainScript#save-and-reload-weights-from-one-model-to-another)?
-* [Continue training from a previously saved model](How-do-I-Adapt-Models-in-BrainScript#continue-training-from-a-previously-saved-model)? 
+"---
+title:   How do I adapt models in BrainScript
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I adapt models in BrainScript"
+
+* [Use a trained model as a feature extractor](#use-a-trained-model-as-a-feature-extractor)? 
+* [Use an already trained network multiple times inside a larger network](#use-an-already-trained-network-multiple-times-inside-a-larger-network)
+* [Adapt a model I trained on one task to another](#adapt-a-model-i-trained-on-one-task-to-another)?
+* [Save and reload weights from one model to another](#save-and-reload-weights-from-one-model-to-another)?
+* [Continue training from a previously saved model](#continue-training-from-a-previously-saved-model)? 
 
 ## Use a trained model as a feature extractor
 

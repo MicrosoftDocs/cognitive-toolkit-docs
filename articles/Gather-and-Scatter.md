@@ -1,4 +1,18 @@
-# Gather(), Scatter()
+---
+title:   Gather and Scatter
+author:    chrisbasoglu
+date:    09/22/2016
+ms.author:   cbasoglu
+ms.date:   09/22/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Gather and Scatter
+
+## Gather(), Scatter()
 
 Shorten or lengthen a data sequence based on a mask.
 
@@ -80,19 +94,19 @@ Create a mask for use with `Gather()` to select the first and last sample of a s
     BS.Sequences.IsFirst (dataSequence)
     BS.Sequences.IsLast  (dataSequence)
 
-### Parameters
+## Parameters
 
 * `dataSequence`: any sequence, e.g. a word sequence
 
-### Return value
+## Return value
 
 A mask for use with `Gather()` that will select the first or last item, respectively, while dropping all other samples.
 
-### Description
+## Description
 
 `IsFirst()` and `IsLast()` create a mask for use with `Gather()` to select the first and last sample of a sequence, respectively, which is typically needed in sequence-to-sequence models to extract the "thought vector" (the
 last hidden state of a recurrence).
 
-### Examples
+## Examples
 
 See [here](#thought-vector).

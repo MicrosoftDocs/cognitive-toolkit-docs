@@ -1,8 +1,22 @@
+---
+title:   Hands-on Labs Image Recognition
+author:    chrisbasoglu
+date:    01/14/2017
+ms.author:   cbasoglu
+ms.date:   01/14/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Hands-on Labs Image Recognition
+
 Note that this tutorial requires the latest master version, or the upcoming CNTK 1.7 which will be released soon.
-An intermediate binary download can be found in the [instructions for the KDD CNTK Hands-On Tutorial](./KDD-2016-Tutorial) that
+An intermediate binary download can be found in the [instructions for the KDD CNTK Hands-On Tutorial](./KDD-2016-Tutorial.md) that
 this tutorial was originally designed for.
 
-# Hands-On Lab: Image recognition with Convolutional Networks, Batch Normalization, and Residual Nets
+## Hands-On Lab: Image recognition with Convolutional Networks, Batch Normalization, and Residual Nets
 
 This hands-on lab shows how to implement convolution-based image recognition with CNTK.
 We will start with a common convolutional image-recognition architecture, add Batch Normalization,
@@ -17,7 +31,7 @@ The techniques you will practice include:
 * parallel training
 
 We assume that you are familiar with basics of deep learning, and these specific concepts (if not,
-you can catch up with [this two-page introduction](./Tutorial2#going-deep-convolutional-neural-networks-cnns)):
+you can catch up with [this two-page introduction](./Tutorial2/Tutorial2.md#going-deep-convolutional-neural-networks-cnns)):
 
 * convolutional networks
 * batch normalization
@@ -26,7 +40,7 @@ you can catch up with [this two-page introduction](./Tutorial2#going-deep-convol
 
 We assume that you have already installed CNTK and can run the CNTK command.
 This tutorial was held at KDD 2016 and requires a recent build,
-please [see here](./Setup-CNTK-on-your-machine) for setup instructions. You can just follow the instructions 
+please [see here](./Setup-CNTK-on-your-machine.md) for setup instructions. You can just follow the instructions 
 for downloading a binary install package from that page. For image related taks you should do this on a machine with a capable CUDA-compatible GPU.
 
 Next, please download a ZIP archive (about 12 MB): Click on [this link](https://github.com/Microsoft/CNTK/blob/fseide/kdd/Tutorials/CNTK_HandsOn_KDD2016.zip),
@@ -66,7 +80,7 @@ Or, as a CNTK network description. Please have a quick look and match it with th
     d1 = DenseLayer {64, activation = ReLU, init = "gaussian", initValueScale = 12} (p3)
     z  = LinearLayer {10, init = "gaussian", initValueScale = 1.5} (d1)
 
-You can find more information on these operators here: [`ConvolutionalLayer{}`](./Layers-Reference#convolutionallayer), [`MaxPoolingLayer{}`](./Layers-Reference#maxpoolinglayer-averagepoolinglayer), [`DenseLayer{}`](./Layers-Reference#denselayer-linearlayer),  [`LinearLayer{}`](./Layers-Reference#denselayer-linearlayer).
+You can find more information on these operators here: [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer), [`MaxPoolingLayer{}`](./BrainScript-Layers-Reference.md#maxpoolinglayer-averagepoolinglayer), [`DenseLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer),  [`LinearLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer).
 
 ## CNTK Configuration
 
@@ -195,7 +209,7 @@ Eval = {
 After you have downloaded the CIFAR-10 data and run the `CifarConverter.py` script as requested
 at the beginning of this tutorial,
 you will find a directory named `cifar-10-batches-py/data`, which contains two subdirectories, `train` and `test`, full of PNG files.
-The CNTK [`ImageDeserializer`](./Understanding-and-Extending-Readers#deserializers) consumes standard image formats.
+The CNTK [`ImageDeserializer`](./BrainScript-and-Python---Understanding-and-Extending-Readers.md#deserializers) consumes standard image formats.
 
 You will also find two files `train_map.txt` and  `test_map.txt`. Looking at the latter,
 
@@ -218,7 +232,7 @@ which were defined as:
 
 The additional `transforms` section tells the `ImageDeserializer` to apply a sequence of (common) transforms
 to the images as they are being read.
-For more information, [see here](./Understanding-and-Extending-Readers#deserializers).
+For more information, [see here](./BrainScript-and-Python---Understanding-and-Extending-Readers.md#deserializers).
 
 ### Running it
 
@@ -286,11 +300,11 @@ The solutions are given at the end of this document... but please try without!
 
 A common technique to improve generalizability of models is dropout. To add dropout to a CNTK model, you need
 
-* add a call to the CNTK function [`Dropout()`](./Dropout) where you want to insert the dropout operation
+* add a call to the CNTK function [`Dropout()`](./Dropout.md) where you want to insert the dropout operation
 * add a parameter `dropoutRate` to the `SGD` section called to define the dropout probability
 
 In this specific task, please specify no dropout for the first 1 epoch, followed by a dropout rate of 50%.
-Please have a look at the [`Dropout()`](./Dropout) documentation to see how to do that.
+Please have a look at the [`Dropout()`](./Dropout.md) documentation to see how to do that.
 
 If everything went well, you will observe no change for the first 1 epoch, but a much lesser improvement
 of `ce` once dropout kicks in with the second epoch. This is expected. (For this specific configuration, recognition accuracy does not improve, actually.) The final result when training only 10 epochs is about 32%.
@@ -319,7 +333,7 @@ Please see the solution [here](#solution-2-simplify-model-definition-by-extracti
 (This Task requires a GPU, since CNTK's implementation of batch normalization is based on cudnn.)
 
 Batch normalization is a popular technique to speed up and improve convergence.
-In CNTK, batch normalization is implemented as [`BatchNormalizationLayer{}`](./Layers-Reference#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer).
+In CNTK, batch normalization is implemented as [`BatchNormalizationLayer{}`](./BrainScript-Layers-Reference.md#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer).
 
 The spatial form (where all pixel positions are normalized with shared parameters)
 is invoked by an optional parameter: `BatchNormalizationLayer{spatialRank=2}`.
@@ -327,7 +341,7 @@ is invoked by an optional parameter: `BatchNormalizationLayer{spatialRank=2}`.
 Please add batch normalization to all three convolution layers and between the two dense layers.
 Note that batch normalization should be inserted right before the non-linearity.
 Hence, you must remove the `activation` parameter and instead insert explicit
-calls to the CNTK function [`ReLU()`](./ReLU).
+calls to the CNTK function [`ReLU()`](./ReLU.md).
 
 Further, batch normalization changes convergence speed.
 So let us increase the learning rates
@@ -524,7 +538,7 @@ and then execute this command:
 
     mpiexec -np 4 cntk  configFile=ImageHandsOn.cntk  stderr=Models/log  parallelTrain=true
 
-# What's Next?
+## What's Next?
 
 This tutorial has practiced to take an existing configuration, and modifying it in specific ways:
 
@@ -569,7 +583,7 @@ more concise way of writing the same:
 This style will be introduced and used in the next hands-on tutorial,
 [*Text Understanding with Recurrent Networks*](/Hands-On-Labs-Text-Understanding). 
 
-# Solutions
+## Solutions
 
 ### Solution 1: Adding Dropout
 
