@@ -73,4 +73,4 @@ Links:
 
 - [CNTK binary installation with scripts on Windows](./Setup-Windows-Binary-Script)
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine)
-- [Home](/en-us/cognitive-toolkit/Home.md)
+- [Home](./index.md)

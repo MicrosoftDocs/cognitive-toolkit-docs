@@ -93,4 +93,4 @@ Model has 9 nodes. Using GPU 0.
 Next:
 - [CNTK binary installation scripts options](./Setup-Windows-Binary-Script-Options)
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine)
-- [Home](/en-us/cognitive-toolkit/Home.md)
+- [Home](./index.md)
