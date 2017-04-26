@@ -1,3 +1,15 @@
+---
+title:   How  to test
+author:    chrisbasoglu
+date:    10/01/2016
+ms.author:   cbasoglu
+ms.date:   10/01/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
 # How to test
 
 The unit tests and end-to-end tests provided in the <CNTK Repo root>\Tests folder are run as part 
@@ -10,7 +22,7 @@ Unit test are currently only supported (and checked) for GPU builds.
 
 ### On Windows
 Make sure you set up the Boost libraries and environment variables as well as the Boost test runner
-for Visual Studio. For instructions see [here](./Setup-CNTK-on-Windows#boost-library). 
+for Visual Studio. For instructions see [here](./Setup-CNTK-on-Windows.md#boost-library). 
 
 Restart Visual Studio and goto to the 'Test --> Test Settings' menu. There set 
 the default processor architecture to x64 and uncheck the option 'Keep Test 
@@ -19,9 +31,9 @@ Execution Engine Running'. In the Test Explorer window select Group by Traits
 the Test Explorer. You can run and debug using the context menu.
 
 ### On Linux
-First you need to install the Boost libraries. For instructions see [here](./Setup-CNTK-on-Linux#boost). 
+First you need to install the Boost libraries. For instructions see [here](./Setup-CNTK-on-Linux.md#boost). 
 
-Then you can build unit test binaries in the same way as the CNTK binary, as specified [here](./Setup-CNTK-on-Linux#building-cntk). The binaries are created in the same folder as the CNTK binary.
+Then you can build unit test binaries in the same way as the CNTK binary, as specified [here](./Setup-CNTK-on-Linux.md#building-cntk). The binaries are created in the same folder as the CNTK binary.
 The following unit tests are currently available:
 * mathtests -- unit tests for math operations
 * readertests -- unit tests for readers

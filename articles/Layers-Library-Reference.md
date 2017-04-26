@@ -1,3 +1,17 @@
+---
+title:   Layers library reference
+author:    chrisbasoglu
+date:    10/24/2016
+ms.author:   cbasoglu
+ms.date:   10/24/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Layers library reference
+
 CNTK predefines a number of common "layers," which makes it very easy to write simple networks
 that consist of standard layers layered on top of each other.
 Layers are function objects that can be used like regular `Functions` but
@@ -42,7 +56,7 @@ Note that for most real-life inference scenarios, the output layer's
 `softmax` non-linearity is not needed (it is instead made part of
 the training criterion).
 
-#### Specifying the same options to multliple layers
+## Specifying the same options to multliple layers
 Often, many layers share options. For example, typical image-recognition
 systems use the `relu` activation function throughout.
 You can use the Python `with` statement with the CNTK `default_options()` function to define scopes with locally changed defaults, using this syntax:
@@ -63,7 +77,7 @@ This would, for example, be valuable for the `pad` parameter which enables paddi
 but is not always set to the same for these two layer types.
 Per-layer type defaults are planned for the near future.
 
-#### Weight sharing
+## Weight sharing
 If you assign a layer to a variable and use it in multiple places,
 *the weight parameters will be shared*.
 If you say
@@ -107,7 +121,7 @@ layer has its input dimension inferred to match that of both `query` and `doc`.
 If their dimensions differ,
 then this network is malformed, and dimension inference/validation will fail with an error message.
 
-#### Example models
+## Example models
 
 The following shows a slot tagger that embeds a word sequence, processes it with a recurrent LSTM,
 and then classifies each word:
@@ -133,7 +147,7 @@ And the following is a simple convolutional network for image recognition, using
             Dense(10, activation=None)
         ])
 
-#### Notes
+## Notes
 Many layers are wrappers around underlying CNTK primitives, along with the respective
 required learnable parameters.
 For example,
@@ -146,9 +160,9 @@ However, since the layers themselves are implemented in Python using the same CN
 if you find that a layer you need is not available, you can always write it yourself
 or write the formula directly as a CNTK expression.
 
-The Python library described here is the equivalent of BrainScript's [Layers Library](./Layers-Reference).
+The Python library described here is the equivalent of BrainScript's [Layers Library](./BrainScript-Layers-Reference.md).
 
-# Dense()
+## Dense()
 
 Factory function to create a fully-connected layer. `Dense()` takes an optional activation function.
 
@@ -162,7 +176,7 @@ Factory function to create a fully-connected layer. `Dense()` takes an optional 
 * `activation` (default: `None`: pass a function here to be used as the activation function, such as `activation=relu`
 * `input_rank`: if given, number of trailing dimensions that are transformed by `Dense()` (`map_rank` must not be given)
 * `map_rank`: if given, the number of leading dimensions that are not transformed by `Dense()` (`input_rank` must not be given)
-* `init` (default: `glorot_uniform()`): initializer descriptor for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of random-initialization options.
+* `init` (default: `glorot_uniform()`): initializer descriptor for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of random-initialization options.
 * `bias`: if `False`, do not include a bias parameter
 * `init_bias` (default: `0`): initializer for the bias
 
@@ -193,7 +207,7 @@ In that case,
 and `b` will have the tensor dimensions `(..., shape[1], shape[0])`.
 
 CNTK's matrix product will interpret these extra output or input dimensions as if they were flattened into a long vector.
-For more details on this, see the documentation of [`Times()`](./Times-And-TransposeTimes)
+For more details on this, see the documentation of [`Times()`](./Times-And-TransposeTimes.md)
 
 The options `input_rank` and `map_rank`, which are mutually exclusive, can specify that not all of
 the input axes of a tensor should be transformed.
@@ -212,7 +226,7 @@ or alternatively:
     layer = Dense(1024, activation=sigmoid)
     h = layer(v)
 
-# Convolution()
+## Convolution()
 
 Creates a convolution layer with optional non-linearity.
 
@@ -230,7 +244,7 @@ Creates a convolution layer with optional non-linearity.
 * `rf_shape`: shape of receptive field of the filter, e.g. `(5,5)` for a 2D filter (not including the input feature-map depth)
 * `num_filters`: number of output channels (number of filters)
 * `activation`: optional non-linearity, e.g. `activation=relu`
-* `init`: initializer descriptor for the weights, e.g. `glorot_uniform()`. [See here](./Parameters-And-Constants#random-initialization) for a full list of random-initialization options.
+* `init`: initializer descriptor for the weights, e.g. `glorot_uniform()`. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of random-initialization options.
 * `pad`: if `False` (default), then the filter will be shifted over the "valid" area of input, that is, no value outside
 the area is used. If `pad` is `True` on the other hand, the filter will be applied to all input positions,
 and values outside the valid region will be considered zero.
@@ -310,7 +324,7 @@ Atrous convolution is at present not supported but planned for the near future.
 
     c = Convolution((3,3), 64, pad=True, strides=(1,1), bias=False)(x)
 
-# MaxPooling(), AveragePooling()
+## MaxPooling(), AveragePooling()
 
 Factory functions to create a max- or average-pooling layer.
 
@@ -348,7 +362,7 @@ see [`Convolution()`](#convolution) for more detail.
 
     p = MaxPooling((3,3), strides=(2,2))(c)
 
-# Embedding()
+## Embedding()
 
 Factory function to create a linear embedding layer, which is either learned or a constant passed from outside.
 
@@ -357,7 +371,7 @@ Factory function to create a linear embedding layer, which is either learned or 
 ### Parameters
 
 * `shape`: the dimension of the desired embedding vector. Must not be `None` unless `weights` are passed
-* `init`: initializer descriptor for the weights to be learned. [See here](./Parameters-And-Constants#random-initialization) for a full list of initialization options.
+* `init`: initializer descriptor for the weights to be learned. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `weights` (numpy array): if given, embeddings are not learned but specified by this array (which could be, e.g., loaded from a file) and not updated further during training
 
 ### Return Value
@@ -382,7 +396,7 @@ the vast majority of rows would be zero,
 CNTK implements a specific optimization to represent the gradient in "row-sparse" form.
 
 Known issue: The above-mentioned row-sparse gradient form is currently not supported by
-our [1-bit SGD](./Multiple-GPUs-and-machines#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines#22-block-momentum-sgd) technique instead.
+our [1-bit SGD](./Multiple-GPUs-and-machines.md#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) technique instead.
 
 ### Example
 
@@ -407,7 +421,7 @@ If, instead, the embedding vectors already exist and should be loaded from a fil
 where the file `'embedding-en.txt'` is the name of a file that would be expected to consist of 87,636 text rows,
 each of which consisting of 300 space-separated numbers.
 
-# Recurrence()
+## Recurrence()
 
 Factory function to create a single-layer or multi-layer recurrence.
 
@@ -467,7 +481,7 @@ To create a bidirectional one-layer LSTM (e.g. using half the hidden dimension c
     h = splice ([h_fwd, h_bwd])
 
 
-# LSTM()
+## LSTM()
 
 Factory function to create a stateless LSTM `Function`, typically for use with `Recurrence()`.
 
@@ -481,8 +495,8 @@ Factory function to create a stateless LSTM `Function`, typically for use with `
 * `cell_shape` (optional): the dimension of the LSTM's cell. If `None`, the cell shape
 is identical to `shape`. If specified, an additional linear projection will be inserted to project from the cell dimension to the output shape.
 * `use_peepholes` (optional): if `True`, then use peephole connections in the LSTM
-* `init`: initializer descriptor for the weights. [See here](./Parameters-And-Constants#random-initialization) for a full list of initialization options.
-* `enable_self_stabilization` (optional): if `True`, insert a [`Stabilizer()`](./#batchnormalization-layernormalization-stabilizer) for the hidden state and cell
+* `init`: initializer descriptor for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
+* `enable_self_stabilization` (optional): if `True`, insert a [`Stabilizer()`](#batchnormalization-layernormalization-stabilizer) for the hidden state and cell
 
 ### Return Value
 
@@ -499,7 +513,7 @@ Use `Recurrence()` to turn this into a recurrent layer that is applied along a d
 
 See `Recurrence()`.
 
-# Delay()
+## Delay()
 
 Factory function to create a layer that delays its input.
 
@@ -555,7 +569,7 @@ The following shows how to stack three neighbor words into a trigram vector:
     xn = Delay(T-1)(x)         # next value (negative delay)
     tg = splice ([xp, x, xn])  # concatenate all into a 3N-dimensional three-hot vector
 
-# BatchNormalization(), LayerNormalization(), Stabilizer()
+## BatchNormalization(), LayerNormalization(), Stabilizer()
 
 Factory functions to create layers for batch normalization, layer normalization, and self-stabilization.
 
@@ -632,7 +646,7 @@ A typical layer in a convolutional network with batch normalization:
         p = MaxPooling((3,3), strides=(2,2))(r)
         return p
 
-# Sequential()
+## Sequential()
 
 Composes an list of functions into a new function that calls these functions one after another ("forward function composition").
 
@@ -706,7 +720,7 @@ work on speech recognition:
     p = my_model(features)
 
 
-# LayerStack()
+## LayerStack()
 
 Repeats a layer multiple times.
 

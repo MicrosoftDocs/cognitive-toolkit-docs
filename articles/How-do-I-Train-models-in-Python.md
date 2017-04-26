@@ -1,12 +1,26 @@
- * [Interpret the use of MinibatchSource.next_minibatch](./How-do-I-Train-models-in-Python#interpret-the-use-of-minibatchsourcenext_minibatch)?
- * [Load pre-trained checkpointed model and continue retraining](./How-do-I-Train-models-in-Python#load-pre-trained-checkpointed-model-and-continue-retraining)?
- * [Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd](./How-do-I-Train-models-in-Python#relate-alpha-beta1-beta2-and-epsilon-to-learning-rate-and-momentum-in-adam_sgd)?
- * [Train two or more models jointly](./How-do-I-Train-models-in-Python#train-two-or-more-models-jointly)?
- * [Train with a weighted loss](./How-do-I-Train-models-in-Python#train-with-a-weighted-loss)?
- * [Train a multilabel classifier in Python](./How-do-I-Train-models-in-Python#train-a-multilabel-classifier-in-python)? 
- * [Train an Image auto encoder using Deconvolution and Unpooling](./How-do-I-Train-models-in-Python#train-an-image-auto-encoder-using-deconvolution-and-unpooling)?
- * [Object Detection using Fast R-CNN](./How-do-I-Train-models-in-Python#train-object-detection-using-fast-r-cnn)?
- * [Build your own image classifier using Transfer Learning](./How-do-I-Train-models-in-Python#train-an-image-classifier-using-transfer-learning)?
+"---
+title:   How do I train models in Python
+author:    chrisbasoglu
+date:    04/12/2017
+ms.author:   cbasoglu
+ms.date:   04/12/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I train models in Python
+
+ * [Interpret the use of MinibatchSource.next_minibatch](#interpret-the-use-of-minibatchsourcenext_minibatch)?
+ * [Load pre-trained checkpointed model and continue retraining](#load-pre-trained-checkpointed-model-and-continue-retraining)?
+ * [Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd](#relate-alpha-beta1-beta2-and-epsilon-to-learning-rate-and-momentum-in-adam_sgd)?
+ * [Train two or more models jointly](#train-two-or-more-models-jointly)?
+ * [Train with a weighted loss](#train-with-a-weighted-loss)?
+ * [Train a multilabel classifier in Python](#train-a-multilabel-classifier-in-python)? 
+ * [Train an Image auto encoder using Deconvolution and Unpooling](#train-an-image-auto-encoder-using-deconvolution-and-unpooling)?
+ * [Object Detection using Fast R-CNN](#train-object-detection-using-fast-r-cnn)?
+ * [Build your own image classifier using Transfer Learning](#train-an-image-classifier-using-transfer-learning)?
 
 ## Interpret the use of MinibatchSource.next_minibatch
 
@@ -105,12 +119,12 @@ which you then can call as hammingLoss(labels, prob) and pass as the error metri
 
 ## Train an Image Auto Encoder Using Deconvolution And Unpooling
 
-There are instructions [here](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling).
+There are instructions [here](./Image-Auto-Encoder-Using-Deconvolution-And-Unpooling.md).
 
 ## Train Object Detection using Fast R CNN
 
-There are instructions [here](./Object-Detection-using-Fast-R-CNN).
+There are instructions [here](./Object-Detection-using-Fast-R-CNN.md).
 
 ## Train an image classifier using Transfer Learning
 
-There are instructions [here](./Build-your-own-image-classifier-using-Transfer-Learning)
+There are instructions [here](./Build-your-own-image-classifier-using-Transfer-Learning.md)
