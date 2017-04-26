@@ -1,11 +1,25 @@
-* [Implement an attention mechanism](./How-do-I-Express-Things-In-Python#implement-an-attention-mechanism)?
-* [Interrogate the dimensions of internal layers of a network from within the Python API](./How-do-I-Express-Things-In-Python#introspect-or-inspect-or-list-model-input-variables)?
-* [Introspect or inspect or list model input variables](./How-do-I-Express-Things-In-Python#introspect-or-inspect-or-list-model-input-variables)?
-* [Port projection of 1D input to 1D output from Python API to C++ API](./How-do-I-Express-Things-In-Python#port-projection-of-1d-input-to-1d-output-from-python-api-to-c-api)?
-* [Port LSTM NDL primitives to Python](./How-do-I-Express-Things-In-Python#port-lstm-ndl-primitives-to-python)?
-* [Restrict a prediction to a bounded interval](./How-do-I-Express-Things-In-Python#restrict-a-prediction-to-a-bounded-interval)?
-* [Set the verbosity or traceLevel from Python](./How-do-I-Express-Things-In-Python#set-the-verbosity-or-tracelevel-from-python)?
-* [Expose new operands in V2 Python from previous V1 implementations](./How-do-I-Express-Things-In-Python#expose-new-operands-in-v2-python-from-previous-v1-implementations)?
+---
+title:   How do I express things in Python
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I express things in Python
+
+* [Implement an attention mechanism](#implement-an-attention-mechanism)?
+* [Interrogate the dimensions of internal layers of a network from within the Python API](#introspect-or-inspect-or-list-model-input-variables)?
+* [Introspect or inspect or list model input variables](#introspect-or-inspect-or-list-model-input-variables)?
+* [Port projection of 1D input to 1D output from Python API to C++ API](#port-projection-of-1d-input-to-1d-output-from-python-api-to-c-api)?
+* [Port LSTM NDL primitives to Python](#port-lstm-ndl-primitives-to-python)?
+* [Restrict a prediction to a bounded interval](#restrict-a-prediction-to-a-bounded-interval)?
+* [Set the verbosity or traceLevel from Python](#set-the-verbosity-or-tracelevel-from-python)?
+* [Expose new operands in V2 Python from previous V1 implementations](#expose-new-operands-in-v2-python-from-previous-v1-implementations)?
 
 ## Implement an attention mechanism
 

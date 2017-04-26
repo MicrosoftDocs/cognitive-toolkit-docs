@@ -1,4 +1,18 @@
-* [Evaluate a saved convolutional network](./How-do-I-Evaluate-models-in-Python#evaluate-a-saved-convolutional-network)?
+---
+title:   How do I evaluate models in Python
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# How do I evaluate models in Python
+
+* [Evaluate a saved convolutional network](#evaluate-a-saved-convolutional-network)?
 * [Extract features from a specific layer using a trained model](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction)?
 
 ## Evaluate a saved convolutional network

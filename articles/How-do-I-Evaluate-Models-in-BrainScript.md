@@ -107,10 +107,10 @@ predictionWithId = Splice(prediction:Id)
 
 ## Deploy model evaluation on Windows
 
-Deploying a trained model from CNTK on Windows is discussed [here](./CNTK-Evaluation-Overview#eval-samples-in-cntk-binary-download-package-for-windows)
+Deploying a trained model from CNTK on Windows is discussed [here](./CNTK-Evaluation-Overview.md#eval-samples-in-cntk-binary-download-package-for-windows)
 
 ## Evaluate a model in an Azure WebApi
 
-Evaluating a trained model from CNTK in Azure via Web Api is discussed [here](./Evaluate-a-model-in-an-Azure-WebApi) 
+Evaluating a trained model from CNTK in Azure via Web Api is discussed [here](./Evaluate-a-model-in-an-Azure-WebApi.md) 
 
 

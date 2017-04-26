@@ -1,12 +1,26 @@
-* [Get nice syntax highlighting for BrainScript config files](./How-do-I-Express-Things-in-BrainScript#get-nice-syntax-highlighting-for-brainscript-config-files) ? 
-* [Express the error rate of my binary classifier](./How-do-I-Express-Things-in-BrainScript#express-the-error-rate-of-my-binary-classifier)? 
-* [Express a softmax with a temperature parameter](./How-do-I-Express-Things-in-BrainScript#express-a-softmax-with-a-temperature-parameter)? 
-* [Express a gating mechanism](./How-do-I-Express-Things-in-BrainScript#express-a-gating-mechanism)? 
-* [Express a softmax over a dynamic axis](./How-do-I-Express-Things-in-BrainScript#express-a-softmax-over-a-dynamic-axis)? 
-* [Zoneout](./How-do-I-Express-Things-in-BrainScript#implement-zoneout)? 
-* [Build a constant 3D tensor](./How-do-I-Express-Things-in-BrainScript#build-a-constant-3d-tensor)? 
-* [Combine or concatenate vectors in BrainScript](./How-do-I-Express-Things-in-BrainScript#build-a-constant-3d-tensor)? 
-* [Interpret the training loss](./How-do-I-Express-Things-in-BrainScript#interpret-the-training-loss)?
+---
+title:   How do I express things in BrainScript
+author:    chrisbasoglu
+date:    04/05/2017
+ms.author:   cbasoglu
+ms.date:   04/05/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# How do I express things in BrainScript
+
+* [Get nice syntax highlighting for BrainScript config files](#get-nice-syntax-highlighting-for-brainscript-config-files) ? 
+* [Express the error rate of my binary classifier](#express-the-error-rate-of-my-binary-classifier)? 
+* [Express a softmax with a temperature parameter](#express-a-softmax-with-a-temperature-parameter)? 
+* [Express a gating mechanism](#express-a-gating-mechanism)? 
+* [Express a softmax over a dynamic axis](#express-a-softmax-over-a-dynamic-axis)? 
+* [Zoneout](#implement-zoneout)? 
+* [Build a constant 3D tensor](#build-a-constant-3d-tensor)? 
+* [Combine or concatenate vectors in BrainScript](#build-a-constant-3d-tensor)? 
+* [Interpret the training loss](#interpret-the-training-loss)?
 
 ## Get nice syntax highlighting for BrainScript config files
 
@@ -41,7 +55,7 @@ The simplest way is to use
 
 [`BS.Boolean.If`](./If-Operation)` (condition, thenExpression, elseExpression)`
 
-which works with scalars as well as tensors (all arguments can [broadcast](./Binary-Operations#broadcasting-semantics)).
+which works with scalars as well as tensors (all arguments can [broadcast](./Binary-Operations.md#broadcasting-semantics)).
 
 ## Express a softmax over a dynamic axis
 

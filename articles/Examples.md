@@ -32,4 +32,4 @@ The best way to learn about the APIs is to look at the following examples in the
 * [Video](https://github.com/Microsoft/CNTK/blob/v2.0.rc1/Examples/Video/GettingStarted/Python/Conv3D_UCF11.py) - Basic 3D convolution networks for deep learning on video tasks.
 
 An overview on all examples and tutorials is also provided by the
-[Cognitive Toolkit Model Gallery](https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/) page.
+[Cognitive Toolkit Model Gallery](http://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/features/model-gallery/) page.
