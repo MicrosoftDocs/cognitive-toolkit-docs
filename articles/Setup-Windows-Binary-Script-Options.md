@@ -72,5 +72,5 @@ install.bat -Verbose
 Links:
 
 - [CNTK binary installation with scripts on Windows](./Setup-Windows-Binary-Script)
-- [Setup CNTK on your machine](./Setup-CNTK-on-your-machine)
+- [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 - [Home](./index.md)

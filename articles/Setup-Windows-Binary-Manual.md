@@ -3,7 +3,7 @@
 This page will walk you through the process of manual installing the Microsoft Cognitive Toolkit (CNTK)
 based on a binary distribution. It is intended for those users who want to have a customized installation.
 
-If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead.
+If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead.
 
 > Note: These instructions apply to release 2.0.rc1.
 

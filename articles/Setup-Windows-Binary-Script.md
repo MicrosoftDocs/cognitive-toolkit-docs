@@ -2,7 +2,7 @@
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) for Windows based on a binary distribution.
 
-If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead. 
+If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
 > These instructions apply to release 2.0.rc1.
 
@@ -92,5 +92,5 @@ Model has 9 nodes. Using GPU 0.
 
 Next:
 - [CNTK binary installation scripts options](./Setup-Windows-Binary-Script-Options)
-- [Setup CNTK on your machine](./Setup-CNTK-on-your-machine)
+- [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 - [Home](./index.md)

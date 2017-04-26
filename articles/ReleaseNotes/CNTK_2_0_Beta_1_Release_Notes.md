@@ -30,7 +30,7 @@ CNTK now supports Google Protocol Buffers serialization for Model and Checkpoint
 
 With this release we introduce the possibility of automated environment configuration and installation of all CNTK pre-requisites from the script driven binary install option. 
 
-See more on the new installation options at this [Wiki page](./Setup-CNTK-on-your-machine).
+See more on the new installation options at this [Wiki page](./Setup-CNTK-on-your-machine.md).
 
 ### Fast R-CNN algorithm
 

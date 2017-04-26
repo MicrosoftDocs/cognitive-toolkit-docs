@@ -57,7 +57,7 @@ without padding, where each convolution and pooling operation may drop rows or c
 pixels, and strides scale the dimensions.
 
 This feature is what allows CNTK's [predefined layers](./Layers-Reference) to be specified by their output dimension only
-(e.g. [`DenseLayer`](./Layers-Reference#denselayer-linearlayer)`{1024}`).
+(e.g. [`DenseLayer`](./BrainScript-Layers-Reference.md#denselayer-linearlayer)`{1024}`).
 
 #### Random initialization
 Random initialization is selected by the `init` parameter,
@@ -78,7 +78,7 @@ where the range/standard deviation is computed as a function of fan-in and fan-o
 (Where `zero` is a sometimes convenient alternative to specifying `initValue=0`.) For uniform distribution, the parameters will be initialized uniformly in [-range, range]; for normal distribution, the mean is always zero. 
 
 Note that the default for `init` is `uniform` when using `ParameterTensor{}` directly.
-However, default is `glorotUniform` for [layers](./Layers-Reference) that contain parameters inside, such as [`DenseLayer{}`](./Layers-Reference#denselayer-linearlayer) and [`ConvolutionalLayer{}`](./Layers-Reference#convolutionallayer).
+However, default is `glorotUniform` for [layers](./Layers-Reference) that contain parameters inside, such as [`DenseLayer{}`](./BrainScript-Layers-Reference.md#denselayer-linearlayer) and [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer).
 
 #### Fan-in and fan-out for random initialization
 Random initialization assumes that the parameters are part of some form of matrix-product like operation
@@ -96,7 +96,7 @@ Here, `initOutputRank=2` specifies that in scaling the random initialization val
 the fan-out is `I*J` and the fan-in `K`.
 
 Negative values for `initOutputRank` indicate that the fan-out axes are trailing axes. For example,
-the filter kernel of the [`ConvolutionalLayer{}`](./Layers-Reference#convolutionallayer) and the underlying [`Convolution()`](./Convolution)  operation
+the filter kernel of the [`ConvolutionalLayer{}`](./BrainScript-Layers-Reference.md#convolutionallayer) and the underlying [`Convolution()`](./Convolution)  operation
 for a typical image-processing setup
 has a shape `[W x H x C x K]`, where `K` is the fan-out, while the fan-in is `W*H*C`.
 This is specified by `initOutputRank=-1`.

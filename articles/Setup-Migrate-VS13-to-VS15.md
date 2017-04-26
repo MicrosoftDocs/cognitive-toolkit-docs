@@ -1,6 +1,6 @@
 We recently switched the default development environment on Windows from Visual Studio 2013 to Visual Studio 2015. If you did build CNTK from source code on Windows using Visual Studio 2013 in the past and want to move to a Visual Studio 2015 based development environment, this page is for you. 
 
-If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead. 
+If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
 ### Introduction
 Next to the obvious switch to a new development environment, the new development environment comes with a different set of run-time libraries and dependencies. The following pages will guide you through the required changes and installation steps. 

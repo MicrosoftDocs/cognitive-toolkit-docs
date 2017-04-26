@@ -1,7 +1,7 @@
 ## Installing CNTK for Python on Linux (Ubuntu 14.04 or Ubuntu 16.04)
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux (Ubuntu 14.04 or Ubuntu 16.04).
-If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead. 
+If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
 Depending on the Python and CNTK version (CPU-Only, GPU, GPU-1bit-SGD) we supply different wheel (.whl) files to install CNTK.
 Please select the correct installation from the list below, and substitute the name and/or link during the installation:

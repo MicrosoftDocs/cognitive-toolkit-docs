@@ -1,6 +1,6 @@
 If you want to build CNTK from source code and want to use the *Developer Install script*, this page is for you. 
 
-If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine) instead. 
+If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
 #### For Your Consideration
 Here are recommendations to make sure you can build CNTK successfully:

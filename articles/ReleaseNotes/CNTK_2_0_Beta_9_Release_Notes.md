@@ -24,7 +24,7 @@ There is a **breaking change** in this release:
 
 The following updates are introduced to Python API:
 
-* Default Python version for binary installation script was changed to **3.5** for both Windows and Linux. As before you can manually select version 2.7, 3.4, or 3.5 during the installation. Please see [binary and source setup](./Setup-CNTK-on-your-machine) instructions to find out about how to select Python version.
+* Default Python version for binary installation script was changed to **3.5** for both Windows and Linux. As before you can manually select version 2.7, 3.4, or 3.5 during the installation. Please see [binary and source setup](./Setup-CNTK-on-your-machine.md) instructions to find out about how to select Python version.
 * [Docker Hub Runtime Image](./CNTK-Docker-Containers) will also contain Python v. 3.5.
 * Lambda rank and NDCG at 1 are now accessible from Python.
 * Preliminary version of the training session API for distributed learning is exposed in Python.

@@ -46,7 +46,7 @@ and for max pooling, you can use
 
 ### Examples
 
-Normalize a value by subtracting the mean of its elements (e.g. as part of [layer normalization](./Layers-Reference#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)):
+Normalize a value by subtracting the mean of its elements (e.g. as part of [layer normalization](./BrainScript-Layers-Reference.md#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)):
 
     mean = ReduceMean (x)
     xNorm = x - mean

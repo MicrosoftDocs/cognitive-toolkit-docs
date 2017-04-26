@@ -1,3 +1,17 @@
+---
+title:   Object  detection using Fast R-CNN
+author:    chrisbasoglu
+date:    03/01/2017
+ms.author:   cbasoglu
+ms.date:   03/01/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Object  detection using Fast R-CNN
+
 **Table of Contents**
 
 - [Summary](#summary)
@@ -8,7 +22,7 @@
 - [Technical details](#technical-details)
 - [Algorithm details](#algorithm-details)
 
-# Summary
+## Summary
 
 <p align="center">
 <a target="_blank" href="./Tutorial_FastRCNN/svm_4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/svm_4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="250"/></a>
@@ -36,9 +50,9 @@ The following are the main resources for CNTK Fast R-CNN:
 Additional material: a detailed tutorial for object detection using CNTK Fast R-CNN 
 (including optional SVM training and publishing the trained model as a Rest API) can be found [here](https://github.com/Azure/ObjectDetectionUsingCntk).
 
-# Setup
+## Setup
 
-To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
+To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
 
 `pip install -r requirements.txt`
 
@@ -67,7 +81,7 @@ are prebuilt for those versions. If your task requires the use of a different Py
 
 The tutorial further assumes that **the folder where cntk.exe resides is in your PATH environment variable**. (To add the folder to your PATH you can run the following command from a command line (assuming the folder where cntk.exe is on your machine is C:\src\CNTK\x64\Release): `set PATH=C:\src\CNTK\x64\Release;%PATH%`.)
 
-## Pre-compiled binaries for bounding box regression and non maximum suppression
+### Pre-compiled binaries for bounding box regression and non maximum suppression
 
 The folder `Examples\Image\Detection\FastRCNN\fastRCNN\utils` contains pre-comiled binaries that are required for running Fast R-CNN. They versions that are currently contained in the repo are Python 3.4 and 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following these steps:
 
@@ -93,19 +107,19 @@ The folder `Examples\Image\Detection\FastRCNN\fastRCNN\utils` contains pre-comil
 
 
 
-## Example data and baseline model
+### Example data and baseline model
 
 We use a pre-trained AlexNet model as the basis for Fast-R-CNN training. 
 Both the example dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the FastRCNN folder:
 
 `python install_fastrcnn.py`
 
-# Run the toy example
+## Run the toy example
 
 In the toy example we train a CNTK Fast  R-CNN model to detect grocery items in a refrigirator. 
 All required scripts are in `<cntkroot>/Examples/Image/Detection/FastRCNN`.
 
-## Quick guide
+### Quick guide
 
 To run the toy example, make sure that in `PARAMETERS.py` the `datasetName` is set to `"grocery"`.
 
@@ -149,7 +163,7 @@ To visualize the bounding boxes and predicted labels you can run `B3_VisualizeOu
 <a target="_blank" href="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="200"/></a>
 </p>
 
-## Step details
+### Step details
 
 __A1:__ The script first `A1_GenerateInputROIs.py` generates ROI candidates for each image using [selective search](#selective-search). 
 It then stores them in a [CNTK Text Format](./BrainScript-CNTKTextFormat-Reader.md) as input for `cntk.exe`. 
@@ -172,13 +186,13 @@ During testing for each image and each corresponding ROI a label is predicted an
 __A3:__ The evaluation step parses the CNTK output and computes the [mAP](#map-mean-average-precision) comparing the predicted results with the ground truth annoations. 
 [Non maximum suppression](#NMS-Non-Maximum-Suppression) is used to merge overlapping ROIs. You can set the threshold for non maximum suppresion in `PARAMETERS.py` ([details](#parameters)).
 
-## Using a pre-trained model
+### Using a pre-trained model
 
 Download links for pre-trained models are provided at the top of this page. 
 Store the model in the `cntkFiles/Output` folder under the corresponding proc sub-folder, for example `proc/grocery_2000/cntkFiles/Output` for the toy example.
 __Note:__ if you are using a pre-trained model you still need to run step A2 to compute the predicted labels, i.e. CNTK will skip the training and only run the testing.
 
-## Additional scripts
+### Additional scripts
 
 There are three optional scripts you can run to visualize and analyze the data:
 
@@ -186,14 +200,14 @@ There are three optional scripts you can run to visualize and analyze the data:
 * `B2_EvaluateInputROIs.py` computes the recall of the ground truth ROIs with respect to the candidate ROIs.
 * `B3_VisualizeOutputROIs.py` visualize the bounding boxes and predicted labels.
 
-# Run Pascal VOC
+## Run Pascal VOC
 
 The [Pascal VOC](http://host.robots.ox.ac.uk/pascal/VOC/) (PASCAL Visual Object Classes) data is a well known set of standardised images for object class recognition. 
 Training or testing CNTK Fast R-CNN on the Pascal VOC data requires a GPU with at least 4GB of RAM. 
 Alternatively you can run using the CPU, which will however take _some_ time. 
 In this case we strongly recommend to download the pre-trained model (see [Using a pre-trained model](#using-a-pre-trained-model)).
 
-## Getting the Pascal VOC data
+### Getting the Pascal VOC data
 
 You need the 2007 (trainval and test) and 2012 (trainval) data as well as the precomputed ROIs used in the original paper. 
 You need to follow the folder structure described below. 
@@ -219,7 +233,7 @@ VOCdevkit2007/VOC2007/ImageSets
 VOCdevkit2007/VOC2007/JPEGImages
 ```
 
-## Running CNTK on Pascal VOC
+### Running CNTK on Pascal VOC
 
 To run on the Pascal VOC data make sure that in `PARAMETERS.py` the `datasetName` is set to `"pascal"`.
 
@@ -234,7 +248,7 @@ To run on the Pascal VOC data make sure that in `PARAMETERS.py` the `datasetName
   [fastRCNN/voc_eval.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastRCNN/voc_eval.py) 
   to avoid encoding errors.
 
-# Train on your own data
+## Train on your own data
 
 To train a CNTK Fast R-CNN model on your own data set we provide two scripts to annotate rectangular regions on images and assign labels to these regions. 
 The scripts will store the annotations in the correct format as required by the first step of running Fast R-CNN (`A1_GenerateInputROIs.py`).
@@ -269,9 +283,9 @@ Before running CNTK Fast R-CNN using scripts A1-A3 you need to add your data set
 
 Ready to train on your own data! (Use the [same steps](#quick-guide) as for the toy example.)
 
-# Technical details
+## Technical details
 
-## Parameters
+### Parameters
 
 The main parameters in `PARAMETERS.py` are
 * `datasetName` - which data set to use
@@ -282,7 +296,7 @@ All parameters for ROI generation, such as minimum and maximum width and heigth 
 are described in `PARAMETERS.py` next to the parameters themselves. They are all set to a default value which is reasonable. 
 You can overwrite them in the `# project-specific parameter` section corresponding to the data set you are using.
 
-## CNTK configuration
+### CNTK configuration
 
 The CNTK brain script configuration file that is used to train and test Fast R-CNN is 
 [fastrcnn.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastrcnn.cntk). 
@@ -380,7 +394,7 @@ reader = {
 }
 ```
 
-## CNTK input file format
+### CNTK input file format
 
 There are three input files for CNTK Fast R-CNN corresponding to the three deserializers described above:
 
@@ -405,9 +419,9 @@ There is a total of number-of-labels * number-of-rois numbers per line.
 0 |roiLabels 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  ...
 ```
 
-# Algorithm details
+## Algorithm details
 
-## Fast R-CNN
+### Fast R-CNN
 R-CNNs for Object Detection were first presented in 2014 by [Ross Girshick et al.](http://arxiv.org/abs/1311.2524), 
 and were shown to outperform previous state-of-the-art approaches on one of the major object recognition challenges in the field: 
 [Pascal VOC](http://host.robots.ox.ac.uk/pascal/VOC/). Since then, two follow-up papers were published which contain significant 
@@ -434,12 +448,12 @@ fully connected layer (see [brain script code](#CNTK-configuration)).
 The original Caffe implementation used in the R-CNN papers can be found at github:
 [RCNN](https://github.com/rbgirshick/rcnn), [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn), and [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn). This tutorial uses some of the code from these repositories, notably (but not exclusively) for svm training and model evaluation.
 
-### SVM vs NN training
+#### SVM vs NN training
 
 Patrick Buehler provides instructions on how to train an SVM on the CNTK Fast R-CNN output (using the 4096 features from the last fully connected layer) 
 as well as a discussion on pros and cons [here](https://github.com/Azure/ObjectDetectionUsingCntk).
 
-## Selective Search
+### Selective Search
 [Selective Search](http://koen.me/research/pub/uijlings-ijcv2013-draft.pdf) is a method for finding a large set of possible 
 object locations in an image, independent of the class of the actual object. It works by clustering image pixels into segments, 
 and then performing hierarchical clustering to combine segments from the same object into object proposals. 
@@ -459,7 +473,7 @@ The goal of ROI generation is to find a small set of ROIs which however tightly 
 This computation has to be sufficiently quick, while at the same time finding object locations at different scales and aspect ratios. 
 Selective Search was shown to perform well for this task, with good accuracy to speed trade-offs.
 
-## NMS (Non Maximum Suppression)
+### NMS (Non Maximum Suppression)
 Object detection methods often output multiple detections which fully or partly cover the same object in an image. 
 These ROIs need to be merged to be able to count objects and obtain their exact locations in the image. 
 This is traditionally done using a technique called Non Maximum Suppression (NMS). The version of NMS we use 
@@ -474,7 +488,7 @@ Detection results before (left) and after (right) Non Maximum Suppression:
 <a target="_blank" href="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="300"/></a>
 </p>
 
-## mAP (mean Average Precision)
+### mAP (mean Average Precision)
 Once trained, the quality of the model can be measured using different criteria, such as precision, recall, accuracy, 
 area-under-curve, etc. A common metric which is used for the Pascal VOC object recognition challenge is to measure the 
 Average Precision (AP) for each class. The following description of Average Precision is taken 

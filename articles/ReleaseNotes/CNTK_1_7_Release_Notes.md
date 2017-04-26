@@ -27,7 +27,7 @@ W = ParameterTensor {(1024:Inferred)}
 z = W * x
 ```
 will infer the dimension marked as Inferred from the input.  
-(See the complete description of ```ParameterTensor``` in the [Wiki](./Parameters-And-Constants#parametertensor).)
+(See the complete description of ```ParameterTensor``` in the [Wiki](./Parameters-And-Constants.md#parametertensor).)
 
 * **Curly braces in configuration and BrainScript** making it more similar to other familiar languages. See more in the [Wiki Article](./BS-Basic-Concepts).
 * We have significantly simplified Handling of **Gated Recurrent Units (GRU)** was significantly improved by adding the convenience functions to Brainscript library. Read more in the [corresponding article](./GRUs-on-CNTK-with-BrainScript).

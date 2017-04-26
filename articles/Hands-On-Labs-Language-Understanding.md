@@ -36,7 +36,7 @@ We assume that you are familiar with basics of deep learning, and these specific
 
 We assume that you have already installed CNTK and can run the CNTK command.
 This tutorial was held at KDD 2016 and requires a recent build,
-please [see here](./Setup-CNTK-on-your-machine) for setup instructions. You can just follow the instructions 
+please [see here](./Setup-CNTK-on-your-machine.md) for setup instructions. You can just follow the instructions 
 for downloading a binary install package from that page. 
 
 Next, please download a ZIP archive (about 12 MB): Click on [this link](https://github.com/Microsoft/CNTK/blob/fseide/kdd/Tutorials/CNTK_HandsOn_KDD2016.zip),

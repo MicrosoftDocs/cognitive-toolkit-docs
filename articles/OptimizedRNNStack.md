@@ -1,3 +1,17 @@
+---
+title:   Optimized RNN Stack
+author:    chrisbasoglu
+date:    08/28/2016
+ms.author:   cbasoglu
+ms.date:   08/28/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Optimized RNN Stack
+
 Implements the optimized CuDNN5 RNN stack of one or more recurrent network layers.
 
     OptimizedRNNStack (weights, input,
@@ -5,16 +19,16 @@ Implements the optimized CuDNN5 RNN stack of one or more recurrent network layer
                        bidirectional = false,
                        recurrentOp='lstm')
 
-### Parameters
+## Parameters
 
-* `weights`: one weight matrix containing all model parameters as a single matrix. Use [dimension inference](./Parameters-And-Constants#automatic-dimension-inference), cf. description below.
+* `weights`: one weight matrix containing all model parameters as a single matrix. Use [dimension inference](./Parameters-And-Constants.md#automatic-dimension-inference), cf. description below.
 * `input`: data to apply the stack of one or more recurrent networks to. Must be a sequence, and must not be sparse.
 * `hiddenDims`: dimension of the hidden state in each layer and, if bidirectional, of each of the two directions
 * `numLayers` (default: 1): number of layers
 * `bidirectional` (default: false): if true, the model is bidirectional
 * `recurrentOp` (default: `lstm`): select the RNN type. Allowed values: `lstm`, `gru`, `rnnTanh`, `rnnReLU`
 
-### Description
+## Description
 
 This function gives access to the CuDNN5 RNN, a highly efficient implementation
 of a stack of one or more layers of recurrent networks.
@@ -33,21 +47,21 @@ The networks can be uni- or bidirectional, and be of the following kind (`recurr
 All weights are contained in a single matrix
 that should have `hiddenDims` rows and as many columns as needed to hold all parameters.
 Since this can be cumbersome to determine,
-you can have the dimension [inferred](./Parameters-And-Constants#automatic-dimension-inference) automatically.
+you can have the dimension [inferred](./Parameters-And-Constants.md#automatic-dimension-inference) automatically.
 To make sure that random initialization uses the correct fan-in, specify `initOutputRank=-1`:
 
     W = ParameterTensor {(Inferred:Inferred), initOutputRank=-1}
 
-If you use the `lstm` operation, we recommend to use this primitive through [`RecurrentLSTMLayerStack{}`](./Layers-Reference#recurrentlstmlayer-recurrentlstmlayerstack), which will take care of creating the weights.
+If you use the `lstm` operation, we recommend to use this primitive through [`RecurrentLSTMLayerStack{}`](./BrainScript-Layers-Reference.md#recurrentlstmlayer-recurrentlstmlayerstack), which will take care of creating the weights.
 
-#### Training on GPU, deploy on CPU
+### Training on GPU, deploy on CPU
 Currently, it is not possible to deploy an RNN trained as an `OptimizedRNNStack()`
 on systems without GPUs.
 We believe it is possible to perform a post-training model-editing action
 that replaces the `OptimizedRNNStack()` nodes by CPU-compatible native BrainScript expressions
 that precisely emulate the CuDNN5 RNN implementation.
 
-### Example
+## Example
 
 Speech recognition model that consists of a 3-hidden layer a bidirectional LSTM
 with a hidden-state dimension per layer and direction of 512:
