@@ -151,9 +151,9 @@
 #### [CNTK Binary Reader](/cognitive-toolkit/BrainScript-CNTKBinary-Reader)
 #### [Understanding and Extending Readers](/cognitive-toolkit/BrainScript-and-Python---Understanding-and-Extending-Readers)
 #### [UCI Fast Reader (deprecated)](/cognitive-toolkit/BrainScript-UCI-Fast-Reader)
-### [Setting up Learners with BrainScript]
+### Setting up Learners with BrainScript
 #### [SGD Configuration](/cognitive-toolkit/BrainScript-SGD-Block)
-### [Miscellaneous]
+### Miscellaneous
 #### [Simple Network Builder](/cognitive-toolkit/Simple-Network-Builder)
 #### [BrainScript epochSize and Python epoch_size in CNTK](/cognitive-toolkit/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
 #### [BrainScript minibatchSize and Python minibatch_size_in_samples in CNTK](/cognitive-toolkit/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
