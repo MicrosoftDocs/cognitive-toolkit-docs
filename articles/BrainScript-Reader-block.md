@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# BrainScript Reader Block
+# BrainScript Reader Block 
 
 The reader block is used for all types of readers and the `readerType`  parameter determines which reader to use. Each reader implements the same IDataReader interface. Many parameters in the reader block are shared across different types of readers. Some are specific to a particular reader. A simple reader block using the CNTKTextFormatReader could look like this:
 
