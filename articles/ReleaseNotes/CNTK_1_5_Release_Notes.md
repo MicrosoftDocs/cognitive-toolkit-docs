@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# CNTK_1_5_Release_Notes"
+# CNTK_1_5_Release_Notes
 
 The CNTK 1.5 release summarizes the work done on the CNTK codebase by the community and the Microsoft team over the last several months. A big "Thank You" to the community for the great support.
 

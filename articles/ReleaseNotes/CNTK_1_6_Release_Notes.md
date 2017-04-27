@@ -1,4 +1,4 @@
-"---
+---
 title:   CNTK_1_6_Release_Notes
 author:    chrisbasoglu
 date:    07/29/2016
