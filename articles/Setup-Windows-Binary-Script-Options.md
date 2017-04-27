@@ -1,6 +1,20 @@
+---
+title:   Setup Windows binary script
+author:    chrisbasoglu
+date:    03/31/2017
+ms.author:   cbasoglu
+ms.date:   03/31/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Windows binary script
+
 ## CNTK binary installation script options
 
-The Windows binary installations script can be run with several options to adapt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-Windows-Binary-Script). On this page we will explain the optional installation options.
+The Windows binary installations script can be run with several options to adapt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-Windows-Binary-Script.md). On this page we will explain the optional installation options.
 
 **Note:** If you have an existing Anaconda environment that you want to install CNTK to, take a look at the AnacondaBasePath option below.
 
@@ -17,7 +31,7 @@ install.bat
   [-NoConfirm]
   [-Execute]
 ```
-#### Parameter `AnacondaBasePath`
+### Parameter `AnacondaBasePath`
 
 `install.bat -AnacondaBasePath <LOCAL_DIRECTORY>`
 
@@ -28,7 +42,7 @@ Example:
 install.bat -AnacondaBasePath c:\Python\Anaconda3
 ```
 
-#### Parameter `PyVersion`
+### Parameter `PyVersion`
 
 This is an optional parameter and can be used to specify the Python version used in the CNTK Python environment. Supported values for this parameter are 27, 34, or 35. The default values is 35 (for a CNTK Python 35 environment).
 
@@ -42,7 +56,7 @@ Example:
 install.bat -PyVersion 34
 ```
 
-#### Parameter `Execute`
+### Parameter `Execute`
 
 If you just want to see what components would be installed, you can just set the parameter `-Execute:$false`. The installation script will execute, but no changes to your system will be performed.
 
@@ -51,7 +65,7 @@ Example:
 install.bat -Execute:$false
 ```
 
-#### Parameter `NoConfirm`
+### Parameter `NoConfirm`
 
 By default the script will ask you to confirm before the installation process starts. If you supply this parameter, the script will start the installation without any confirmation questions.
 
@@ -60,7 +74,7 @@ Example:
 install.bat -NoConfirm 
 ```
 
-#### Standard parameters
+### Standard parameters
 
 The main installation is being done by a Powershell script. Powershell supports several standard parameters for script files which can be used. In case of problems with the installation and to report problems it could be helpful to run the script with the `-Verbose` option. This can make it easier to analyze installation issues.
 
@@ -71,6 +85,6 @@ install.bat -Verbose
 
 Links:
 
-- [CNTK binary installation with scripts on Windows](./Setup-Windows-Binary-Script)
+- [CNTK binary installation with scripts on Windows](./Setup-Windows-Binary-Script.md)
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 - [Home](./index.md)

@@ -1,3 +1,17 @@
+---
+title:   Setup Windows binary manual
+author:    chrisbasoglu
+date:    03/31/2017
+ms.author:   cbasoglu
+ms.date:   03/31/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   brainscript, python, cpp
+---
+
+# Setup Windows binary manual
+
 ## Windows manual installation from binary distribution
 
 This page will walk you through the process of manual installing the Microsoft Cognitive Toolkit (CNTK)
@@ -30,7 +44,7 @@ version of MSMPI (7.0.12437.6), as this is the version which is currently tested
 
 **Step 2**: CNTK setup for Python
 
-Please follow [these instructions](./Setup-Windows-Python) to set up CNTK for Python on your machine.
+Please follow [these instructions](./Setup-Windows-Python.md) to set up CNTK for Python on your machine.
 
 **Step 3**: CNTK setup for BrainScript
 

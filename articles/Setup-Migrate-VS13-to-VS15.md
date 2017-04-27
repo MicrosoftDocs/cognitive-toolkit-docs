@@ -1,19 +1,33 @@
+---
+title:   Setup Migrate VS13 to VS15
+author:    chrisbasoglu
+date:    01/25/2017
+ms.author:   cbasoglu
+ms.date:   01/25/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Migrate VS13 to VS15
+
 We recently switched the default development environment on Windows from Visual Studio 2013 to Visual Studio 2015. If you did build CNTK from source code on Windows using Visual Studio 2013 in the past and want to move to a Visual Studio 2015 based development environment, this page is for you. 
 
 If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-### Introduction
+## Introduction
 Next to the obvious switch to a new development environment, the new development environment comes with a different set of run-time libraries and dependencies. The following pages will guide you through the required changes and installation steps. 
 
 The required changes performed here are additive, that means that we will install versions of libraries and tools specific to building CNTK with Visual Studio 2015. Next to installation of these tools, we need to adjust the system environment variables to refer to the new location.
 
 Instead of doing all these steps manually as described on this page, you can also initiate the script driven process as described [here](./Setup-CNTK-with-script-on-Windows.md).
 
-#### Environment Variables 
+### Environment Variables 
 
-For an overview of the environment variables used by the Windows build of CNTK please see this [page](./Windows-Environment-Variables).
+For an overview of the environment variables used by the Windows build of CNTK please see this [page](./Windows-Environment-Variables.md).
 
-### Visual Studio 2015 with Update 3
+## Visual Studio 2015 with Update 3
 
 ***Required***
 
@@ -27,12 +41,12 @@ On the feature selection screen make sure you add 'Common Tools for Visual C++ 2
 
 ![im1](./pictures/setup/VS2015InstallFeatures70.jpg)
 
-#### Pre-Existing Visual Studio 2015 installation
+### Pre-Existing Visual Studio 2015 installation
 If you already have VS 2015 installed, make sure you are on **Update 3**. See the `Help->About` menu to display the version number like "Version 14.0.25431.01 Update 3". 
 
 You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
 
-### NVIDIA CUDA 8
+## NVIDIA CUDA 8
 
 ***Required for GPU build***
 
@@ -48,7 +62,7 @@ CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 ```
 
-#### cuDNN
+### cuDNN
 
 ***Required for GPU build***
 
@@ -60,7 +74,7 @@ Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://
 ```
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
 
-###  MKL
+##  MKL
 
 ***Required***
 
@@ -78,7 +92,7 @@ Installing the CNTK custom MKL library:
 ```
 * Download the file [CNTKCustomMKL-Windows-3.zip](https://www.cntk.ai/mkl/CNTKCustomMKL-Windows-3.zip). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://www.cntk.ai/mkl).
 
-### Boost
+## Boost
 
 ***Required***
 
@@ -95,11 +109,11 @@ Boost is requirement to build CNTK. In addition, you will need to update to a Bo
 ```
 * To integrate the Boost test framework into Visual Studio you can install a runner for Boost tests in Visual Studio from the <a href="https://visualstudiogallery.msdn.microsoft.com/5f4ae1bd-b769-410e-8238-fb30beda987f" target="_blank">Visual Studio Gallery</a>.
 
-### Protobuf
+## Protobuf
 
 ***Required***
 
-You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.1.0 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS15)
+You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.1.0 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS15.md)
 
 Download the ZIP file containing the precompiled version of Protobuf for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/protobuf/protobuf-3.1.0-vs15.zip)
 
@@ -109,11 +123,11 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
 ```
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
 
-### zlib and libzip
+## zlib and libzip
 
 ***Required if you are building the CNTK Imagereader***
 
-If you are building CNTK with ZLib and LibZip, you will need to recompile these packages. You can compile this version by yourself, or use an already (precompiled) prepared version (described on this page). If you want to build the  libzip/zlib compression library for CNTK on your system, you can find the details [here](./Setup-Buildzlib-VS15)
+If you are building CNTK with ZLib and LibZip, you will need to recompile these packages. You can compile this version by yourself, or use an already (precompiled) prepared version (described on this page). If you want to build the  libzip/zlib compression library for CNTK on your system, you can find the details [here](./Setup-Buildzlib-VS15.md)
 
 Download the ZIP file containing the precompiled version of libzip/zlib compression library for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/zip/zlib-vs15.zip)
 
@@ -123,7 +137,7 @@ Download the ZIP file containing the precompiled version of libzip/zlib compress
 ```
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\zlib-vs15\bin` will succeed and show a couple of DLLs.
 
-### Building CNTK
+## Building CNTK
 
 At this point you have finished the conversion of the CNTK build system to Visual Studio 2015. Make sure you have all the environmnent variables changed to the correct location. Start Visual Studio 2015 and perform a rebuild of the CNTK solution.
 

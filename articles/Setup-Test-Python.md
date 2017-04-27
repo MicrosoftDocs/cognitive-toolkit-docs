@@ -1,3 +1,17 @@
+"---
+title:   Setup Test Python
+author:    chrisbasoglu
+date:    03/03/2017
+ms.author:   cbasoglu
+ms.date:   03/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# Setup Test Python
+
 ## Testing your CNTK install with Python
 
 We assume you have Python and CNTK installed on your machine, as well as the CNTK samples and tutorials. The Python installation is included in your PATH statement; if you have installed CNTK in a Python environment you will need to activate that Python environment before you run the samples.
@@ -6,7 +20,7 @@ We assume you have Python and CNTK installed on your machine, as well as the CNT
 - Activate the Python environment if necessary
 - Change into the sample directory
 
-#### Run an example
+### Run an example
 
 Change into the `Tutorials/NumpyInterop` directory and run the FeedForward example:
 ```
@@ -28,7 +42,7 @@ Finished Epoch [1]: loss = 0.296552 * 25600
 error rate on an unseen minibatch 0.040000
 ```
 
-#### Run Jupyter notebooks
+### Run Jupyter notebooks
 
 CNTK contains several tutorials based on Jupyter notebooks. To use them, execute the following commands:
 ```

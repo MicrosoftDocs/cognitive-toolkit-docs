@@ -1,3 +1,17 @@
+---
+title:   Setup CNTK on your machine
+author:    chrisbasoglu
+date:    04/20/2017
+ms.author:   cbasoglu
+ms.date:   04/20/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   python, brainscript, 
+---
+
+# Setup CNTK on your machine
+
 ## Simple CNTK Installation
 
 Microsoft Cognitive Toolkit (CNTK) is easy to install.
@@ -12,7 +26,7 @@ sudo apt-get install openmpi-bin
 pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp35-cp35m-linux_x86_64.whl
 ```
 You can easily fine tune your PIP installation, including information about configuring your environment and the installation of tutorials, samples and Jupyter notebooks.
-For Windows, check out [this page](./Setup-Windows-Python), for Linux [this one](./Setup-Linux-Python).
+For Windows, check out [this page](./Setup-Windows-Python.md), for Linux [this one](./Setup-Linux-Python.md).
 
 For the complete lists of CNTK installation options, see the table below.
 
@@ -29,9 +43,9 @@ If you just want to download and install the latest precompiled binaries to your
 
 |Windows                  | Linux                   |
 |:------------------------|:------------------------|
-|[Python-only installation](./Setup-Windows-Python)<br>Simple pip install<br>of CNTK lib for<br>use in Python| [Python-only installation](./Setup-Linux-Python))<br>Simple pip install<br>of CNTK lib for<br>use in Python |
-|[Script-driven installation](./Setup-Windows-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript 
-|[Manual installation](./Setup-Windows-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies
+|[Python-only installation](./Setup-Windows-Python.md)<br>Simple pip install<br>of CNTK lib for<br>use in Python| [Python-only installation](./Setup-Linux-Python.md))<br>Simple pip install<br>of CNTK lib for<br>use in Python |
+|[Script-driven installation](./Setup-Windows-Binary-Script.md)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script.md)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript 
+|[Manual installation](./Setup-Windows-Binary-Manual.md)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual.md)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies
 |                                                     | [Docker installation](./CNTK-Docker-Containers.md)
 #### Installation and building of the CNTK codebase
 
@@ -40,7 +54,7 @@ If you want to take a look at the CNTK source code, compile CNTK yourself, make 
 |Windows                  | Linux                   |
 |:------------------------|:------------------------|
 |[Script-driven development setup](./Setup-CNTK-with-script-on-Windows.md) |
-|[Manual development Setup](./Setup-CNTK-on-Windows) | [Manual Development Environment Setup](./Setup-CNTK-on-Linux) 
+|[Manual development Setup](./Setup-CNTK-on-Windows.md) | [Manual Development Environment Setup](./Setup-CNTK-on-Linux.md) 
 |[Migration from VS13 to VS15](./Setup-Migrate-VS13-to-VS15.md) | 
  
 

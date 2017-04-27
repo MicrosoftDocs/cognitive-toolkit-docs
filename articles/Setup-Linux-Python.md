@@ -1,3 +1,17 @@
+---
+title:   Setup Linux Python
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Linux Python
+
 ## Installing CNTK for Python on Linux (Ubuntu 14.04 or Ubuntu 16.04)
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux (Ubuntu 14.04 or Ubuntu 16.04).
@@ -5,7 +19,7 @@ If you are looking for any other kind of support to setup a CNTK build environme
 
 Depending on the Python and CNTK version (CPU-Only, GPU, GPU-1bit-SGD) we supply different wheel (.whl) files to install CNTK.
 Please select the correct installation from the list below, and substitute the name and/or link during the installation:
-Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License) which is MORE restrictive, than the major CNTK License.
+Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License.md) which is MORE restrictive, than the major CNTK License.
 
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)
@@ -29,7 +43,7 @@ On Ubuntu 16.04 install it like this:
 ```
 sudo apt-get install openmpi-bin
 ```
-On Ubuntu 14.04. please follow the instructions [here](./Setup-CNTK-on-Linux#open-mpi) to build it yourself.
+On Ubuntu 14.04. please follow the instructions [here](./Setup-CNTK-on-Linux.md#open-mpi) to build it yourself.
 Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH`.
 
 ### Anaconda3
@@ -41,7 +55,7 @@ Below we assume that the [prerequisites above](#prerequisites) are satisfied.
 If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
 Also, we assume Anaconda is installed and that it is listed before any other Python installations in your PATH.
 
-#### `pip install` without an environment
+#### pip install without an environment
 
 This is the easiest option and the only reason to avoid it is if you require specific versions of certain packages. If you have other packages that require an old version of numpy skip to [this section](#pip-install-in-an-environment).
 
@@ -77,7 +91,7 @@ You now have successfully installed CNTK, you can start developing / training / 
 
 Continue with [installing samples and tutorials](#installing-samples-and-tutorials)
 
-#### `pip install` in an environment
+#### pip install in an environment
 
 Below we will create a new Python 3.4 environment inside Anaconda called `cntk-py34` and will pip-install CNTK into this environment. If you want a different Python version or environment name, please adjust the parameters accordingly.
 
@@ -103,7 +117,7 @@ Below we assume that the [prerequisites above](#prerequisites) are satisfied.
 If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
 Also, we assume Anaconda2 is installed and that it is listed before any other Python installations in your PATH.
 
-#### Anaconda2: `pip install`
+#### Anaconda2: pip install
 
 The installation steps for CNTK on Anaconda2 are identical to
 
@@ -120,4 +134,4 @@ $ python -m cntk.sample_installer
 ```
 This will download the samples/tutorials, install the required Python packages, and copy the samples into a directory named `CNTK-Samples-VERSION` (`VERSION` is replaced with the actual CNTK version) beneath your current working directory.
 
-You can now follow the [standard description](./Setup-Test-Python) to test your installation from Python and run the tutorials or Jupyter notebooks.
+You can now follow the [standard description](./Setup-Test-Python.md) to test your installation from Python and run the tutorials or Jupyter notebooks.

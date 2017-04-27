@@ -1,3 +1,17 @@
+---
+title:   Setup Linux binary script
+author:    chrisbasoglu
+date:    03/31/2017
+ms.author:   cbasoglu
+ms.date:   03/31/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Linux binary script
+
 ## CNTK as a Docker container
 Before moving any further you may consider deploying CNTK as a prebuilt Docker container from dockerhub. Read the [corresponding section](./CNTK-Docker-Containers.md).
 

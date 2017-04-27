@@ -23,7 +23,7 @@ ms.devlang:   NA
 1bit-SGD is distributed under a different license than the rest of CNTK. Before considering usage of 1bit-SGD with CNTK please get yourself familiar with both licenses (see links below). Note, that you may find 1bit-SGD license more restrictive than CNTK license:
 
 * [CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
-* [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License)
+* [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md)
 
 ## Setting up 1-bit Stochastic Gradient Descent for CNTK on your system
 

@@ -53,10 +53,10 @@ cd scripts
 cntkpy35.bat
 ```
 
-You can now follow the [standard describtion](./Setup-Test-Python) to test your installation from Python and run the tutorials or Jupyter notebooks.
+You can now follow the [standard describtion](./Setup-Test-Python.md) to test your installation from Python and run the tutorials or Jupyter notebooks.
   
  - If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
- - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows)   
+ - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)   
   
 **Step 5** Verify the setup for BrainScript
 

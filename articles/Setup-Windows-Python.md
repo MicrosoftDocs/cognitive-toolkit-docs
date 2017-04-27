@@ -5,7 +5,7 @@ If you are looking for any other kind of support to setup a CNTK build environme
 
 Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply different wheel (.whl) files to install CNTK.
 Please select the correct installation from the list below, and substitute the name and/or link during the installation.
-Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License) which is MORE restrictive, than the major CNTK License.
+Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License.md) which is MORE restrictive, than the major CNTK License.
 
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0.1](#anaconda2)
@@ -112,4 +112,4 @@ C:\> python -m cntk.sample_installer
 ```
 This will download the samples/tutorials, install the required Python packages, and copy the samples into a directory named `CNTK-Samples-VERSION` (`VERSION` is replaced with the actual CNTK version) beneath your current working directory.
 
-You can now follow the [standard description](./Setup-Test-Python) to test your installation from Python and run the tutorials or Jupyter notebooks.
+You can now follow the [standard description](./Setup-Test-Python.md) to test your installation from Python and run the tutorials or Jupyter notebooks.
