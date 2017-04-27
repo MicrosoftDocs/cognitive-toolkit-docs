@@ -1,5 +1,5 @@
 ---
-title:   BrainScript and Python: Understanding and Extending Readers
+title:   BrainScript and Python Understanding and Extending Readers
 author:    chrisbasoglu
 date:    04/10/2017
 ms.author:   cbasoglu
