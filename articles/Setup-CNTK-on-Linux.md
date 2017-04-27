@@ -2,7 +2,7 @@
 CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations) where we list all dependency component and component versions that we use.
 
 ### CNTK as a Docker container
-Before moving any further you may consider deploying CNTK as a Docker container. Read the [corresponding section](./CNTK-Docker-Containers).
+Before moving any further you may consider deploying CNTK as a Docker container. Read the [corresponding section](./CNTK-Docker-Containers.md).
 
 ### Current limitations and precautions
 Please, read carefully this section before you proceed with your system configuration. The information below may save you a lot of time otherwise spent on build errors debugging.

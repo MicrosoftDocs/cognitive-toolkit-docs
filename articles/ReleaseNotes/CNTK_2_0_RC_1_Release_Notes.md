@@ -1,22 +1,33 @@
+---
+title:   CNTK_2_0_RC_1_Release_Notes
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
 
-## CNTK v.2.0 RC 1 Release Notes
+# CNTK_2_0_RC_1_Release_Notes
 
 With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of enhancements before release of the production version of CNTK 2.0. We expect no breaking changes before the release of the production version, but we are eager to hear your feedback!
 
-### Highlights of CNTK 2.0 Release Candidate 1
+## Highlights of CNTK 2.0 Release Candidate 1
 
-The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](./CNTK-2.0-Beta-Highlights).
+The release candidate contains [all changes and improvements introduced in CNTK 2.0 during beta phase](../CNTK-2.0-Beta-Highlights.md).
 
-### Breaking changes
+## Breaking changes
 
 This release contains the following **breaking changes**:
 
-* New file names of CNTK Shared Libraries. [Read more in this Wiki article](./CNTK-Shared-Libraries-Naming-Format).
+* New file names of CNTK Shared Libraries. [Read more in this Wiki article](../CNTK-Shared-Libraries-Naming-Format.md).
   * This is important for developers and other users who use explicit CNTK Shared Library file names in their solutions.
   * If you are using CNTK NuGet packages for C++ or C# no action is required (beside updating to the latest NuGet package)
 * There is a set of breaking changes in Python and C# API. See the correspondent sections below.
 
-### CNTK Core: new and improved features
+## CNTK Core: new and improved features
 
 * Improved performance and memory footprint in CSC/CSR sparse matrix operations.
 * Caffe-converted pretrained models on image classification including AlexNet, ResNet, VGG and BN-Inception. 
@@ -24,13 +35,13 @@ This release contains the following **breaking changes**:
 * Improvements in the device selection API (specifying excluded devices, querying device properties, locking device exclusively).
 * Limit the number of sweeps for training.
 
-### CNTK Python API
+## CNTK Python API
 
-#### New feature
+### New feature
 
 We enabled support for model debugging in Python (similar to gdb/pdb) by wrapping the model with `debug_model()` [Read more here](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 
-#### Breaking changes
+### Breaking changes
 
 This release contains the following **breaking changes in CNTK Python API**:
 
@@ -54,9 +65,9 @@ This release contains the following **breaking changes in CNTK Python API**:
   * cross validation configuration
   * test configuration
 
-### CNTK C#/.NET Managed API
+## CNTK C#/.NET Managed API
 
-#### New and improved features
+### New and improved features
 
 * Support of CSC Sparse input.
 * More flexible interface types in API to provide more freedom for developers. 
@@ -64,9 +75,9 @@ This release contains the following **breaking changes in CNTK Python API**:
 * Performance optimizations.
 * Multiple bug fixes, including memory safety and concurrent evaluations.
 
-The updated APIs are described in [this Wiki page](./CNTK-Library-Managed-API.md).
+The updated APIs are described in [this Wiki page](../CNTK-Library-Managed-API.md).
 
-#### Breaking changes
+### Breaking changes
 
 This release contains the following **breaking changes in CNTK C# API**:
 
@@ -78,7 +89,7 @@ This release contains the following **breaking changes in CNTK C# API**:
   * `CNTKLib.GetMaxNumCPUThreads()` -> `Utils.GetMaxNumCPUThreads()`
 * We have the following two groups of API changes due to signature simplification and certain type changes. These changes may require adaptations in dependent applications.
 
-##### C# API changes due to type change from `uint` to `int`
+#### C# API changes due to type change from `uint` to `int`
 
 * Class `NDShape` 
 ```
@@ -121,7 +132,7 @@ public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumer
 public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device,  bool readOnly = false)
 public static Value Create<T>(int dimension, IEnumerable<IEnumerable<int>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
 ```
-##### C# API changes due to type change from concrete class type to interface type
+#### C# API changes due to type change from concrete class type to interface type
 
 * Class `Function`
 ```
@@ -145,7 +156,7 @@ public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequenc
 public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
 ```
 
-### CNTK NuGet package
+## CNTK NuGet package
 
 A new set of NuGet Packages is provided with this Release. 
 

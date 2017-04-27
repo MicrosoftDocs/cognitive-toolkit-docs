@@ -17,7 +17,7 @@ Python 2.7, 3.4, 3.5 environment
 
 **Step 1**: Download and install pre-requisites
 
-**Docker** users please follow the instructions [here](./CNTK-Docker-Containers). 
+**Docker** users please follow the instructions [here](./CNTK-Docker-Containers.md). 
 Others please continue reading.
 
 CNTK V2 on Linux requires the following prerequisites to be installed from the links below: 

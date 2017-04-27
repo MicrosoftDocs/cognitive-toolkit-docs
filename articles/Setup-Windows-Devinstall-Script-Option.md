@@ -1,6 +1,6 @@
 ## CNTK developer install script options
 
-The developer installation script (devInstall.ps1) is a Powershell script located in the `Tools` subdirectory inside the root of the CNTK repository. The script can be run with several options to adopt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-CNTK-with-script-on-Windows). On this page we will list the additional installation options. You can get an overview about all the available options by executing `get-help -full .\devInstall.ps1` from inside a Powershell command window in the directory containing the installation script.
+The developer installation script (devInstall.ps1) is a Powershell script located in the `Tools` subdirectory inside the root of the CNTK repository. The script can be run with several options to adopt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-CNTK-with-script-on-Windows.md). On this page we will list the additional installation options. You can get an overview about all the available options by executing `get-help -full .\devInstall.ps1` from inside a Powershell command window in the directory containing the installation script.
 
 **Note:** If you have an existing Anaconda environment that you want to install CNTK to, take a look at the `AnacondaBasePath` option below.
 

@@ -1,8 +1,20 @@
-## CNTK v.2.0 Beta 7 Release Notes
+---
+title:   CNTK_2_0_Beta_7_Release_Notes
+author:    chrisbasoglu
+date:    12/22/2016
+ms.author:   cbasoglu
+ms.date:   12/22/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK_2_0_Beta_7_Release_Notes
 
 This is a summary of new features delivered with the Beta 7 release of CNTK V.2.0.
 
-### Python API
+## Python API
 
 In the past, the Python API was very permissive in what it accepted as data input types. This caused a lot of confusion (e.g. non-sequence data being wrongly then interpreted as sequences). Therefore we have made the Python API stricter. In particular:
 
@@ -11,14 +23,14 @@ In the past, the Python API was very permissive in what it accepted as data inpu
 * Python default initialization is set to *normal* (```std=1```) and *uniform* (```[-1,1]```).
 * ```gaussian``` is renamed to ```normal```.
 
-### New Examples and Tutorials
+## New Examples and Tutorials
 
 We have prepared the following Examples and Tutorials:
 
 * [Artistic Style Transfer](https://github.com/Microsoft/CNTK/blob/v2.0.beta7.0/Tutorials/CNTK_205_Artistic_Style_Transfer.ipynb)
 * [GoogLeNet (Inception V3)](https://github.com/Microsoft/CNTK/tree/v2.0.beta7.0/Examples/Image/Classification/GoogLeNet)
 
-### C++ / Backend
+## C++ / Backend
 
 We have made some changes and improvements in CNTK Backend:
 
@@ -28,8 +40,8 @@ We have made some changes and improvements in CNTK Backend:
   * Backward compatibility note: training (in particular initialization) may not be exactly reproducible with respect to the previous versions
 * Implemented an optimization to elide the initial zeroing and subsequent accumulation into the gradients for nodes with just one parent/ancestor node 
 
-### CNTK Evaluation library. NuGet package 
+## CNTK Evaluation library. NuGet package 
 
-A new Nuget package with the latest eval DLL (managed and native) is [available](./NuGet-Package). 
+A new Nuget package with the latest eval DLL (managed and native) is [available](../NuGet-Package.md). 
 
  **IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta7```.

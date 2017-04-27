@@ -1,5 +1,5 @@
 ## CNTK as a Docker container
-Before moving any further you may consider deploying CNTK as a prebuilt Docker container from dockerhub. Read the [corresponding section](./CNTK-Docker-Containers).
+Before moving any further you may consider deploying CNTK as a prebuilt Docker container from dockerhub. Read the [corresponding section](./CNTK-Docker-Containers.md).
 
 ## CNTK binary installation with scripts on Linux
 

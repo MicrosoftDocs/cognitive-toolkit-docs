@@ -32,16 +32,16 @@ If you just want to download and install the latest precompiled binaries to your
 |[Python-only installation](./Setup-Windows-Python)<br>Simple pip install<br>of CNTK lib for<br>use in Python| [Python-only installation](./Setup-Linux-Python))<br>Simple pip install<br>of CNTK lib for<br>use in Python |
 |[Script-driven installation](./Setup-Windows-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script)<br>Script that installs<br>CNTK Python lib and<br>CNTK exe for BrainScript 
 |[Manual installation](./Setup-Windows-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual)<br>Manually install<br>CNTK Python lib,<br>CNTK exe for BrainScript,<br>and dependencies
-|                                                     | [Docker installation](./CNTK-Docker-Containers)
+|                                                     | [Docker installation](./CNTK-Docker-Containers.md)
 #### Installation and building of the CNTK codebase
 
 If you want to take a look at the CNTK source code, compile CNTK yourself, make changes to the CNTK codebase, and contribute these changes back to the community, these are the pages for you:
 
 |Windows                  | Linux                   |
 |:------------------------|:------------------------|
-|[Script-driven development setup](./Setup-CNTK-with-script-on-Windows) |
+|[Script-driven development setup](./Setup-CNTK-with-script-on-Windows.md) |
 |[Manual development Setup](./Setup-CNTK-on-Windows) | [Manual Development Environment Setup](./Setup-CNTK-on-Linux) 
-|[Migration from VS13 to VS15](./Setup-Migrate-VS13-to-VS15) | 
+|[Migration from VS13 to VS15](./Setup-Migrate-VS13-to-VS15.md) | 
  
 
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)

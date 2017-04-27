@@ -7,7 +7,7 @@ Next to the obvious switch to a new development environment, the new development
 
 The required changes performed here are additive, that means that we will install versions of libraries and tools specific to building CNTK with Visual Studio 2015. Next to installation of these tools, we need to adjust the system environment variables to refer to the new location.
 
-Instead of doing all these steps manually as described on this page, you can also initiate the script driven process as described [here](./Setup-CNTK-with-script-on-Windows).
+Instead of doing all these steps manually as described on this page, you can also initiate the script driven process as described [here](./Setup-CNTK-with-script-on-Windows.md).
 
 #### Environment Variables 
 
