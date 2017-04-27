@@ -1,4 +1,18 @@
-### Creating a compiled Protobuf 3.1.0 for CNTK
+---
+title:   Setup BuildProtobuf VS15
+author:    chrisbasoglu
+date:    01/25/2017
+ms.author:   cbasoglu
+ms.date:   01/25/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup BuildProtobuf VS15
+
+## Creating a compiled Protobuf 3.1.0 for CNTK
 
 If you want to build the Protobuf 3.1.0 for CNTK yourself, follow these instructions. The compiled Protobuf version will be located in `c:\local\protobuf-3.1.0-vs15`
 
@@ -9,7 +23,7 @@ The following steps assume that the Protobuf sources have been unzipped to the d
 
 There are two ways to build the CNTK Protobuf library, either through ***a batch file*** or ***manually***.
 
-#### Building through a batch file
+### Building through a batch file
 
 In the directory `Tools\devInstall\Windows` you find the batch file `buildProtoVS15.bat`. This batch file takes two parameters to build the CNTK Protobuf library. The first parameter is the directory of the Protobuf source files you unpacked above, the second parameter is the destination directory for the created Protobuf library. In our case follow these steps from a standard Windows command prompt:
 ```
@@ -22,7 +36,7 @@ Set the environment variable `PROTOBUF_PATH` to the Protobuf location (this is t
     setx PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
 ```
 
-#### Manual build steps for a CNTK Protobuf library
+### Manual build steps for a CNTK Protobuf library
 
 1. Launch a 64-bit Visual Studio 2015 development environment. The most convenient was is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
 ```

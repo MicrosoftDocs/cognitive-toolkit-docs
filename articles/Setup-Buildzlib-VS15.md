@@ -1,4 +1,18 @@
-### Creating a zlib/libzip compression libaray for CNTK
+---
+title:   Setup Buildzlib VS15
+author:    chrisbasoglu
+date:    01/25/2017
+ms.author:   cbasoglu
+ms.date:   01/25/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Buildzlib VS15
+
+## Creating a zlib/libzip compression libaray for CNTK
 
 We use the following installation paths in our instructions:
 * libzip sources: `c:\local\src\libzip-1.1.3`
@@ -14,7 +28,7 @@ You can use any paths you like, but note the remark on target folder for binarie
 
 There are two ways to build the lib/libzip compression libaray for CNTK, either through ***a batch file*** or ***manually***.
 
-#### Building through a batch file
+### Building through a batch file
 
 In the directory ```Tools\devInstall\Windows``` you find the batch file ```buildZlibVS15.bat```. This batch file takes three parameters to build the CNTK Protobuf library. The first parameter is the directory of the ```libzip``` source files you unpacked above, the second parameter is the directory of the ```zlib``` source files,the third parameter is the destination directory for the created library. In our case follow these steps from a standard Windows command prompt:
 ```
@@ -26,20 +40,20 @@ Set the environment variable `ZLIB_PATH` to the location of the created library 
 ```
 setx ZLIB_PATH c:\local\zlib-vs15
 ```
-#### Manual build steps for a CNTK compression library
+### Manual build steps for a CNTK compression library
 
 **IMPORTANT!** The following aspects are important:
 * Build commands for zlib and libzip should use *the same* target folder for binaries (specified via `-DCMAKE_INSTALL_PREFIX` parameter in `cmake` command below)
 * Build order is important. You should *build zlib first* because libzip is dependent on it
 
-#### Command prompt environment for build
+### Command prompt environment for build
 Launch a 64-bit Visual Studio 2015 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required paramaters from a standard windows command shell:
 ```
     "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 ```
 If you can't find this batchfile on your system, please revisit the installation of VS2015, and make sure you have the 'Common Tools for Visual C++ 2015' option selected.
 
-#### Building zlib
+### Building zlib
 Execute the following commands from *VS2015 x64 Native Tools Command Prompt*:
 ```
 cd c:\local\src\zlib\zlib-1.2.8
@@ -49,7 +63,7 @@ cmake .. -G"Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX="c:\local\zlib-v
 msbuild /P:Configuration=Release INSTALL.vcxproj
 ```
 
-#### Building libzib
+### Building libzib
 Execute the following commands from *VS2015 x64 Native Tools Command Prompt*:
 ```
 cd c:\local\src\libzip-1.1.3
@@ -68,7 +82,7 @@ CMake Error at src/cmake_install.cmake:34 (file):
 ```
 It is expected and may be ignored - all required binaries (`zip.dll` and `zlib.dll`) should be already in `c:\local\zlib-vs15`
 
-#### Preparing the environment
+### Preparing the environment
 * Set the following environment variable:
 ```
 setx ZLIB_PATH c:\local\zlib-vs15

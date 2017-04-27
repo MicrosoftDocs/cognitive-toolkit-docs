@@ -1,17 +1,31 @@
+---
+title:   Sequential 
+author:    chrisbasoglu
+date:    08/26/2016
+ms.author:   cbasoglu
+ms.date:   08/26/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Sequential
+
 Composes an array of functions into a new function that calls these functions one after another ("forward function composition").
 
     Sequential (arrayOfFunctions)
 
-### Parameters
+## Parameters
 
 `arrayOfFunctions`: a BrainScript array of functions, e.g. constructed with the `:` operator: `(LinearLayer{1024} : Sigmoid)`
 
-### Return value
+## Return value
 
 This function returns another function. That returned function takes one argument, and returns the result
 of applying all given functions in sequence to the input.
 
-### Description
+## Description
 
 `Sequential()` is a powerful operation that allows to compactly express a very common situation in neural networks
 where an input is processed by propagating it through a progression of layers.
@@ -56,7 +70,7 @@ means something different from:
 In the latter form, the same function *with the same shared set of parameters* is applied twice,
 while in the former, the two layers have separate sets of parameters.
 
-### Example
+## Example
 
 Standard 4-hidden layer feed-forward network as used in the earlier deep-neural network
 work on speech recognition:

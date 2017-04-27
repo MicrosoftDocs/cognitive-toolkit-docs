@@ -1,36 +1,50 @@
-### CNTK Production Build and Test configuration
-CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations) where we list all dependency component and component versions that we use.
+---
+title:   Setup CNTK on Linux
+author:    chrisbasoglu
+date:    03/06/2017
+ms.author:   cbasoglu
+ms.date:   03/06/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   cpp, python
+---
 
-### CNTK as a Docker container
+# Setup CNTK on Linux
+
+## CNTK Production Build and Test configuration
+CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations.md) where we list all dependency component and component versions that we use.
+
+## CNTK as a Docker container
 Before moving any further you may consider deploying CNTK as a Docker container. Read the [corresponding section](./CNTK-Docker-Containers.md).
 
-### Current limitations and precautions
+## Current limitations and precautions
 Please, read carefully this section before you proceed with your system configuration. The information below may save you a lot of time otherwise spent on build errors debugging.
 
-#### Expected component locations in `configure` and `Makefile` scripts
-Today `configure` and `Makefile` scripts support only limited set of installation paths for all dependency components listed in this section. We know, that this is a limitation and will fix it soon (also if you feel like improving these scripts yourselves and [submit your proposed changes](.//Contributing-to-CNTK) your help is welcome and much appreciated).
+### Expected component locations in configure and Makefile scripts
+Today `configure` and `Makefile` scripts support only limited set of installation paths for all dependency components listed in this section. We know, that this is a limitation and will fix it soon (also if you feel like improving these scripts yourselves and [submit your proposed changes](./Contributing-to-CNTK.md) your help is welcome and much appreciated).
 
 `configure` looks for all dependency components among the paths listed in `default_path_list` variable defined within the script. 
 
 **IMPORTANT!** If you want to modify `default_path_list` variable in `configure` to add a custom path for a certain dependency component be sure to check the correspondent section of `Makefile`. Otherwise you may get build errors due to inability of finding INCLUDE files, libraries, etc.
 
-#### Installation methods and paths of dependency components
+### Installation methods and paths of dependency components
 Below we list all dependency components required to build CNTK and explain how to install them. We understand that there are many other ways to get the same components. However, if you prefer an alternative way of installation, please ensure that **you get the same thing**, because quite often alternative installation sources, namely network distibution  packagespackages (like Debian, RPM, etc.) contain older versions of the software, miss some libraries, etc. In some sections below we specifically highlight these limitations, but please take it as a general precaution.
 
-#### Using of `make -j`
+### Using of `make -j`
 In most of the sections we suggest using `make -j` command to invoke parallel build jobs and thus increasing the speed of the build process. However please be aware that on some systems and *especially on virtual machines* using `make -j` may result in "Out of memory" errors. If you face this, just use "plain" `make` or limit the number of jobs that run simultaneously (two simultaneous jobs usually work for the most of the systems - use the command `make -j 2`).  
 
-#### Simultaneous installation of different versions of the same development packages
-Be very careful in case you would like to have several installations of some of the development packages mentioned below on the same system. It may result in very hard to debug build errors as you can see in [this post](../pull/93#issuecomment-183302591). 
+### Simultaneous installation of different versions of the same development packages
+Be very careful in case you would like to have several installations of some of the development packages mentioned below on the same system. It may result in very hard to debug build errors as you can see in [this post](https://github.com/Microsoft/CNTK/pull/93#issuecomment-183302591). 
 
 And now let's proceed to the setup.
 
-If you would like to know what prerequisite configuration is used in the CNTK production environment, i.e. what we use internally for building and testing, see [this section](./Test-Configurations)
+If you would like to know what prerequisite configuration is used in the CNTK production environment, i.e. what we use internally for building and testing, see [this section](./Test-Configurations.md)
 
-### 64-bit OS
+## 64-bit OS
 You need a 64-bit Linux installation to use CNTK.
 
-### C++ Compiler
+## C++ Compiler
 Ensure your installation has a C++ compiler. Many distributions do not include it by default. Refer to your platform documentation on how to check for and obtain a C++ compiler.
 
 Example: for Ubuntu, run the following command:
@@ -48,11 +62,11 @@ sudo apt-get install g++
 
 If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](/http://askubuntu.com/questions/26498/choose-gcc-and-g-version.md) 
 
-### Git
+## Git
 
 Install Git on your system as described <a href="https://git-scm.com/download/linux" target="_blank">here</a>.
 
-###  MKL
+##  MKL
 
 The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
 CNTK supports using the Intel MKL via a custom library version ("CNTK custom MKL").
@@ -78,7 +92,7 @@ sudo tar -xzf CNTKCustomMKL-Linux-3.tgz -C /usr/local/CNTKCustomMKL
 
 * When configuring the build (cf. below), specify the option `--with-mkl` or `--with-mkl=<directory>`, e.g., `--with-mkl=/usr/local/CNTKCustomMKL`.
 
-### Open MPI
+## Open MPI
 
 Install [Open Message Passing Interface Library (Open MPI)](http://www.open-mpi.org/).
 
@@ -102,7 +116,7 @@ export PATH=/usr/local/mpi/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/mpi/lib:$LD_LIBRARY_PATH
 ```
 
-### Protobuf
+## Protobuf
 
 We use Protocol Buffers for serialization. For installation please follow these steps:
 
@@ -125,7 +139,7 @@ make -j $(nproc)
 sudo make install
 ```
 
-### ZLIB
+## ZLIB
 zlib today is a part of many popular Linux distributions so with the high probability you have it preinstalled. However note, that libzip requires **zlib  version 1.1.2 or later** and this usually is NOT preinstalled. zlib must be installed before building Boost below.
 
  See your platform documentation on how to get the required zlib package or get it directly from [zlib website](http://zlib.net/). 
@@ -135,10 +149,10 @@ Example: for Ubuntu use the following command:
 sudo apt-get install zlib1g-dev
 ```
 
-### LIBZIP
+## LIBZIP
 libzip is available in different network distribution packages, but we found that many of them contain old versions. Using these versions will likely result in build errors. So we strongly recommend to build libzip from sources as described below.
 
-Note that the following procedure will install libzip to `/usr/local`. This is exactly where CNTK build procedure expects it (see [the beginning of this page](./Setup-CNTK-on-Linux#expected-component-locations-in-configure-and-makefile-scripts) for details). If you want to install libzip to a different path see instructions in `INSTALL` file in the root of libzip distribution folder. **However beware that in this case you have to manually edit `configure` AND `Makefile` of CNTK to support this path**.
+Note that the following procedure will install libzip to `/usr/local`. This is exactly where CNTK build procedure expects it (see [the beginning of this page](#expected-component-locations-in-configure-and-makefile-scripts) for details). If you want to install libzip to a different path see instructions in `INSTALL` file in the root of libzip distribution folder. **However beware that in this case you have to manually edit `configure` AND `Makefile` of CNTK to support this path**.
 
 Use the following commands:
 ```
@@ -154,7 +168,7 @@ Add the following environment variable to your current session and your `.bashrc
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 
-### Boost Library
+## Boost Library
 
 The [Boost Library](http://www.boost.org/) is a prerequisite for building the Microsoft Cognitive Toolkit. Follow these steps to install the Boost Library on your system:
 ```
@@ -167,12 +181,12 @@ cd boost_1_60_0
 sudo ./b2 -d0 -j"$(nproc)" install  
 ```
 ----------
-### GPU Specific Packages
+## GPU Specific Packages
 This section outlines the packages you need to setup in order for CNTK to leverage GPUs.
 
-If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](./Setup-CNTK-on-Linux#optional-boost-library). Otherwise proceed further.
+If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#boost-library). Otherwise proceed further.
 
-#### Checking your GPU compatibility and getting the latest driver
+### Checking your GPU compatibility and getting the latest driver
 You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic card available to use CNTK GPU capabilities. You can check whether your card is CUDA-compatible [here](https://developer.nvidia.com/cuda-gpus) and [here (for older cards)](https://developer.nvidia.com/cuda-legacy-gpus). Your GPU card [Compute Capability (CC)](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability) must be 3.0 or more.
 
 If you have the required card, install the latest driver:
@@ -200,7 +214,7 @@ Example: for Ubuntu, use the following command (in case of `lightdm` as your X W
 sudo start lightdm
 ```
 
-#### CUDA 8.0
+### CUDA 8.0
 
 The procedure below explains how to install CUDA using `.run` file distribution. You can also use `DEB` or `RPM` packages installation. You will find the package for your system at [NVIDIA CUDA 8.0 Download page](https://developer.nvidia.com/cuda-downloads) and installation instructions in [CUDA Online Documentation](http://docs.nvidia.com/cuda/pdf/CUDA_Installation_Guide_Linux.pdf).
 
@@ -223,7 +237,7 @@ sudo ./cuda_8.0.44_linux.run
 Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 367.48?
 (y)es/(n)o/(q)uit:
 ```
-select `no` if you have already installed the latest driver by performing the steps in the [previous section](./Setup-CNTK-on-Linu#checking-your-gpu-compatibility-and-getting-the-latest-driver). If you have not done it, select `yes`, but we **strongly recommend** updating to the latest driver after installing CUDA toolkit.
+select `no` if you have already installed the latest driver by performing the steps in the [previous section](#checking-your-gpu-compatibility-and-getting-the-latest-driver). If you have not done it, select `yes`, but we **strongly recommend** updating to the latest driver after installing CUDA toolkit.
 
 If you declined the driver installation from the CUDA 8.0 package as described in the previous section, you will get the following warning at the end of the installation:
 ```
@@ -244,9 +258,9 @@ sudo start lightdm
 export PATH=/usr/local/cuda-8.0/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
 ```
-The next step is optional. You may skip further to the [next section](./Setup-CNTK-on-Linu#gpu-deployment-kit).
+The next step is optional. You may skip further to the [next section](#gpu-deployment-kit).
 
-##### OPTIONAL. Verifying CUDA 8.0 installation
+#### OPTIONAL. Verifying CUDA 8.0 installation
 
 You may verify your CUDA installation by compiling the CUDA samples (we assume the default paths were used during the CUDA installation). Note that building all samples is a lengthy operation:
 ```
@@ -303,10 +317,10 @@ Device 0: "GeForce GTX 960"
 deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0, NumDevs = 1, Device0 = GeForce GTX 960
 Result = PASS
 ```
-#### GPU Deployment Kit
+### GPU Deployment Kit
 Starting from CUDA version 8, the GPU Deployment Kit is a part of the CUDA package and is no longer required to be installed separately.
 
-#### CUB
+### CUB
 
 Get and install NVIDIA CUB using the commands below.
 **IMPORTANT!** Install NVIDIA CUB using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
@@ -318,7 +332,7 @@ unzip ./1.4.1.zip
 sudo cp -r cub-1.4.1 /usr/local
 ```
 
-#### cuDNN
+### cuDNN
 
 Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvidia.com/cuDNN).
 
@@ -340,12 +354,12 @@ export LD_LIBRARY_PATH=/usr/local/cudnn-5.1/cuda/lib64:$LD_LIBRARY_PATH
 ```
 ----------
 
-### OPTIONAL. NCCL.
+## OPTIONAL. NCCL.
 
 [NVIDIA's NCCL library](https://github.com/NVIDIA/nccl) provides optimized primitives for collective
 multi-GPU communication on Linux.
 CNTK can take advantage of these accelerated primitives for parallel jobs running on a single host
-(cf. [here](./Multiple-GPUs-and-machines) for an introduction into parallel training with CNTK).
+(cf. [here](./Multiple-GPUs-and-machines.md) for an introduction into parallel training with CNTK).
 
 Please follow build instructions [here](https://github.com/NVIDIA/nccl) to build the NVIDIA NCCL library.
 Then, use the CNTK configure option `--with-nccl=<path>` to enable building with NVIDIA NCCL.
@@ -360,7 +374,7 @@ This completes GPU Specific section
 
 
 ----------
-### OPTIONAL. CNTK v2 Python support.
+## OPTIONAL. CNTK v2 Python support.
 
 This section describes how to build CNTK v2 with Python support.
 
@@ -451,14 +465,14 @@ Minibatch: 40, Train Loss: 1.0378565979003906, Train Evaluation Criterion: 0.64
 Minibatch: 60, Train Loss: 0.6558118438720704, Train Evaluation Criterion: 0.56
 ```
 
-### OPTIONAL. OpenCV
+## OPTIONAL. OpenCV
 
 If you want to build the **CNTK Image Reader**, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/).
 
 Some aspects to consider:
 * OpenCV requires at least 5.5 GB of free disk space
 * Building OpenCV is a lengthy process and can take a couple of hours or even more
-* If you plan to use both CUDA and OpenCV, [install CUDA first](./Setup-CNTK-on-Linux#cuda-75)
+* If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-8.0)
 
 OpenCV can have many interfaces and options.
 In this section we cover only parts necessary to build CNTK.
@@ -485,25 +499,25 @@ sudo make install
 ```
 Note that in the instructions above we suggest using "plain" `make` rather than `make -j`. We found that using `make -j` with OpenCV results in unstable system behavior and may result in a build failure and system crash.
 
-### Getting CNTK Source code
+## Getting CNTK Source code
 
 Before proceeding further, please note, that if you plan on making modifications to the CNTK code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
-Use [Git](./Setup-CNTK-on-Linu#git) to clone the CNTK Repository and access the source code:
+Use [Git](#git) to clone the CNTK Repository and access the source code:
 ```
 git clone https://github.com/Microsoft/cntk
 cd cntk
 git submodule update --init -- Source/Multiverso
 ```
 
-Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-machines#24-data-darallel-training-with-parameter-server) for training.
+Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-machines.md#24-data-darallel-training-with-parameter-server) for training.
 
 **Optional** If you don't need DataParallelASGD support, then pass the option `--asgd=no` to the configure command.
 
 
-**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines#22-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD) and then proceed with the installation.
+**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
-### Building CNTK
+## Building CNTK
 
 To build CNTK use the following commands (we assume that the CNTK repository was cloned to `~/Repos/cntk`):
 ```
@@ -534,7 +548,7 @@ This should produce a release build of CNTK. In case you would like to get a deb
 ../../configure --with-buildtype=debug
 ```
 
-### Quick test of CNTK build functionality
+## Quick test of CNTK build functionality
 
 To ensure that CNTK is working properly in your system, you can quickly run an example from the
 [Hello World - Logistic Regression](https://github.com/Microsoft/CNTK/tree/master/Tutorials/HelloWorld-LogisticRegression) tutorial.
@@ -555,7 +569,7 @@ cntk configFile=lr_bs.cntk makeMode=false
 If the sample runs, i.e., if there are no error messages, you will get output related first to reading the configuration, followed
 by the output of the actual network training.
 
-#### Trying CNTK with GPU
+### Trying CNTK with GPU
 
 If you built CNTK for GPU usage, try using the GPU by executing the following commands:
 ```
@@ -570,7 +584,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 * `deviceId=X` where X is an integer >=0 means use GPU X, i.e. `deviceId=0` means GPU 0, etc.
 * `deviceId=auto` means use GPU, select GPU automatically
 
-### Contributing to CNTK code
+## Contributing to CNTK code
 
 If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 

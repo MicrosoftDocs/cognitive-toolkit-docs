@@ -46,7 +46,7 @@ If you want to take a look at the CNTK source code, compile CNTK yourself, make 
 
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK Production Test Configurations](./Test-Configurations)
+* [CNTK Production Test Configurations](./Test-Configurations.md)
 
 #### Installation as Azure Virtual Machine or Linux Docker container
 
