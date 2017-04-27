@@ -1,4 +1,18 @@
-The `SimpleNetworkBuilder` allows to use simple standard network types with few lines of configuration. Only a limited set of configuration options is supported. More complex networks can be defined using the [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder) instead.
+---
+title:   Simple Network Builder
+author:    chrisbasoglu
+date:    08/03/2016
+ms.author:   cbasoglu
+ms.date:   08/03/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Simple Network Builder
+
+The `SimpleNetworkBuilder` allows to use simple standard network types with few lines of configuration. Only a limited set of configuration options is supported. More complex networks can be defined using the [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder.md) instead.
 
 To use `SimpleNetworkBuilder`, include a configuration block of the same name in your training configuration. When an option is omitted the default value is assumed. We first provide a concise example and list all control parameters and options below.
 
@@ -46,4 +60,4 @@ For recurrent neural networks (RNNs), there are additional parameters.
   * `LSTM`: the long short-term memory neural network.
   * `CLASSLSTM`: the class-based long short-term memory neural network. It uses sparse input, sparse parameter and sparse output. This is often used for language modeling tasks.
 
-Next: Define your own complex networks with [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder).
+Next: Define your own complex networks with [`BrainScriptNetworkBuilder`](./BrainScript-Network-Builder.md).

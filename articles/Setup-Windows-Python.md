@@ -1,3 +1,17 @@
+---
+title:   Setup Windows Python
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   python
+---
+
+# Setup Windows Python
+
 ## Installing CNTK for Python on Windows
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Windows.
@@ -29,7 +43,7 @@ If you do not have a Anaconda3 Python installation, install [Anaconda3 4.1.1 Pyt
 
 Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
 
-#### `pip install` without an environment
+#### pip install without an environment
 
 This is the easiest option and the only reason to avoid it is if you require specific versions of certain packages. If you have other packages that require an old version of numpy skip to [this section](#pip-install-in-an-environment). 
 
@@ -65,7 +79,7 @@ You now have successfully installed CNTK, you can start developing / training / 
 
 Continue with [installing samples and tutorials](#installing-samples-and-tutorials)
 
-#### `pip install` in an environment
+#### pip install in an environment
 
 Below we will create a new Python 3.4 environment inside Anaconda called `cntk-py34` and will pip-install CNTK into this environment. If you want a different Python version, a different environment name, or a different CNTK versions, adjust the parameters accordingly.
 

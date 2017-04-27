@@ -1,3 +1,17 @@
+---
+title:   Setup Windows Devinstall Script Option
+author:    chrisbasoglu
+date:    02/16/2017
+ms.author:   cbasoglu
+ms.date:   02/16/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   get-started-article
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Setup Windows Devinstall Script Option
+
 ## CNTK binary installation with scripts on Windows
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) for Windows based on a binary distribution.
@@ -21,7 +35,7 @@ cd cntk\Scripts\install\windows
 install.bat
 ```
 
-The script will inspect your system and determine the pre-requisites which are missing. You will be notified about the proposed installation steps and locations. This can be adjusted by optional parameters to the install script, [see here](./Setup-Windows-Binary-Script-Options).
+The script will inspect your system and determine the pre-requisites which are missing. You will be notified about the proposed installation steps and locations. This can be adjusted by optional parameters to the install script, [see here](./Setup-Windows-Binary-Script-Options.md).
 
 The script will download needed components from the web, a connection to the Internet is required. It will execute these components, and according to the setting of UAC (User Account Control) you will be asked to acknowledge the execution and installation of these components.
 
@@ -91,6 +105,6 @@ Model has 9 nodes. Using GPU 0.
 ```
 
 Next:
-- [CNTK binary installation scripts options](./Setup-Windows-Binary-Script-Options)
+- [CNTK binary installation scripts options](./Setup-Windows-Binary-Script-Options.md)
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 - [Home](./index.md)

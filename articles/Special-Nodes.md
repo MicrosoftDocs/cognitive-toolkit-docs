@@ -1,9 +1,23 @@
+---
+title:   Special nodes
+author:    chrisbasoglu
+date:    09/15/2016
+ms.author:   cbasoglu
+ms.date:   09/15/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Special nodes
+
 CNTK uses *Special nodes* for automatic back propagation updates of Learnable Parameters and the proper inputs identification. Special nodes can be specified in two different ways:
 * Node arrays
 * Special Tags
 If both methods are used the values are combined.
 
-### Node Arrays
+## Node Arrays
 
 CNTK supports multiple nodes for each type, so the values in types are arrays. However in many there is only a single node for each node type. The array syntax (parenthesis) must be used when setting special nodes, even if there is only one element. If more than one element is included, the entries are comma separated and surrounded by parenthesis. For example:
 ```
@@ -14,7 +28,7 @@ EvalNodes=(ErrPredictOutputNodes, Plus2)
 OutputNodes=(ScaledLogLikelihood)
 ```
 
-### Special Tags
+## Special Tags
 
 You can use a special *Optional Parameter* named ```tag``` to easily  identify special values in the network. For example:
 ```
