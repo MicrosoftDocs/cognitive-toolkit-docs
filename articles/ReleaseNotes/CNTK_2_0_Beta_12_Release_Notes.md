@@ -1,8 +1,20 @@
-## CNTK v.2.0 Beta 12 Release Notes
+---
+title:   CNTK_2_0_Beta_12_Release_Notes
+author:    chrisbasoglu
+date:    02/23/2017
+ms.author:   cbasoglu
+ms.date:   02/23/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK_2_0_Beta_12_Release_Notes
 
 This is a summary of new features delivered with the Beta 12 release of CNTK V.2.0.
 
-### Breaking changes
+## Breaking changes
 
 This release contains the following **breaking changes**:
 
@@ -10,7 +22,7 @@ This release contains the following **breaking changes**:
 * `ReaderConfig` is renamed to `_ReaderConfig` (this helper class is intended for internal use only)
 *  Starting from this Release CNTK libraries from CNTK NuGet Packages will be signed using `sha256` Digest algorithm only. `sha1`-based signatures will no longer be used.
 
-### New and updated features
+## New and updated features
 
 * More built-in activation functions: Leaky ReLU, ELU and Parametric ReLU.
 * `Argmax` and `Argmin` are now supported.
@@ -29,11 +41,11 @@ This release contains the following **breaking changes**:
 * Introducing `stop_gradient` operator that acts as an identity in the forward pass but stops gradients from flowing back to its inputs in the backward pass.
 * New features in CNTK NuGet Package. See section on NuGet Package below.
 
-### CNTK Python API
+## CNTK Python API
 
-We improved the installation of CNTK on Python. As a first step you will find some simple instructions how to `pip install` the CPU version of CNTK on Anaconda 3 on [this page](./Setup-Windows-Python). Similar improvements for Linux as well as CNTK GPU versions will follow shortly.
+We improved the installation of CNTK on Python. As a first step you will find some simple instructions how to `pip install` the CPU version of CNTK on Anaconda 3 on [this page](../Setup-Windows-Python.md). Similar improvements for Linux as well as CNTK GPU versions will follow shortly.
 
-### CNTK C++ API
+## CNTK C++ API
 
 The following is added to CNTK C++ API:
 
@@ -43,11 +55,11 @@ The following is added to CNTK C++ API:
 * `FindAllWithName` - find a list of functions with the given name in the Function graph
 * Progress tracking code moved from Python to a new C++ `ProgressWriter` class. Users can now pass progress writers upon instantiating a Trainer, and do not have to use them explicitly in their training loop.
 
-### New Examples and Tutorials
+## New Examples and Tutorials
 
 * [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) are added to C# Evaluation examples. Also examples for using one-hot vector as input are available.  
 
-### CNTK NuGet package
+## CNTK NuGet package
 
 A new set of NuGet Packages is provided with this Release. The packages have the following new features:
 * CNTK V2 C++ Library is now published as a part of Nuget packages.

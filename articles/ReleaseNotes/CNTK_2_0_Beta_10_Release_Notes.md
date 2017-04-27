@@ -1,15 +1,27 @@
-## CNTK v.2.0 Beta 10 Release Notes
+---
+title:   CNTK_2_0_Beta_10_Release_Notes
+author:    chrisbasoglu
+date:    02/01/2017
+ms.author:   cbasoglu
+ms.date:   02/01/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK_2_0_Beta_10_Release_Notes
 
 This is a summary of new features delivered with the Beta 10 release of CNTK V.2.0.
 
-### New Examples and Tutorials
+## New Examples and Tutorials
 
 * A Python version of the deconvolution layer and image auto encoder example was added ([Example **07_Deconvolution** in *Image - Getting Started*](https://github.com/Microsoft/CNTK/tree/v2.0.beta10.0/Examples/Image/GettingStarted)).
 * [Python distributed training example for image classification using AlexNet](https://github.com/Microsoft/CNTK/tree/v2.0.beta10.0/Examples/Image/Classification/AlexNet/Python)
 * [Basic implementation of Generative Adversarial Networks (GAN) networks](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Tutorials/CNTK_206_Basic_GAN.ipynb)
 * [Training with Sampled Softmax](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Tutorials/CNTK_207_Training_with_Sampled_Softmax.ipynb)
 
-### Python API
+## Python API
 
 The following updates are introduced to Python API:
 
@@ -28,7 +40,7 @@ The following updates are introduced to Python API:
 
 * API support for object detection using Fast R-CNN was added
   * See the
-    [description](./Object-Detection-using-Fast-R-CNN)
+    [description](../Object-Detection-using-Fast-R-CNN.md)
     and
     [code](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)
     for the Fast R-CNN example.
@@ -36,16 +48,16 @@ The following updates are introduced to Python API:
 * Tensorboard Event Generation
   * Initial support for generating Tensorboard events from the ProgressPrinter
     class was added, cf.
-    [here](./Using-TensorBoard-for-Visualization)
+    [here](../Using-TensorBoard-for-Visualization.md)
 
-### Bug fixes
+## Bug fixes
 * Speed up TimesNodeBase for sparse by avoiding unroll. This improves speed of
   CrossEntropyWithSoftmax and ClassificationError for sparse labels. The
   language understanding example
   ([LanguageUnderstanding.py](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py))
   got four times faster now.
 
-### CNTK Evaluation library. NuGet package
+## CNTK Evaluation library. NuGet package
 
 A new set of NuGet Packages is provided with this Release. 
 

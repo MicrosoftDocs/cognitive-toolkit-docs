@@ -34,7 +34,7 @@ See more on the new installation options at this [Wiki page](./Setup-CNTK-on-you
 
 ### Fast R-CNN algorithm
 
-CNTK now supports [object recognition using Fast R-CNN](./Object-Detection-using-Fast-R-CNN) algorithm.
+CNTK now supports [object recognition using Fast R-CNN](../Object-Detection-using-Fast-R-CNN.md) algorithm.
 
 
 ### CNTK Evaluation library

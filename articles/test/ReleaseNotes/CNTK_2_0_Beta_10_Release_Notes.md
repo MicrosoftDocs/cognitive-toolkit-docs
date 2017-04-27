@@ -28,7 +28,7 @@ The following updates are introduced to Python API:
 
 * API support for object detection using Fast R-CNN was added
   * See the
-    [description](./Object-Detection-using-Fast-R-CNN)
+    [description](../Object-Detection-using-Fast-R-CNN.md)
     and
     [code](https://github.com/Microsoft/CNTK/blob/v2.0.beta10.0/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)
     for the Fast R-CNN example.
@@ -36,7 +36,7 @@ The following updates are introduced to Python API:
 * Tensorboard Event Generation
   * Initial support for generating Tensorboard events from the ProgressPrinter
     class was added, cf.
-    [here](./Using-TensorBoard-for-Visualization)
+    [here](../Using-TensorBoard-for-Visualization.md)
 
 ### Bug fixes
 * Speed up TimesNodeBase for sparse by avoiding unroll. This improves speed of

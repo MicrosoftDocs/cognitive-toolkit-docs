@@ -18,9 +18,9 @@ Here you can find CNTK and Deep Learning related presentations:
 
 ## Recent 
 
-* [AI NEXT 2017 conference](http://www.ainextconf.com/): On March 17, 2017, *Frank Seide* presented CNTK incl. the new functional "Layers" API. Slides are [here](https://github.com/Microsoft/CNTk/wiki/ppt/CNTK-AI-NEXT-Mar-2017-Frank-Seide-print.pdf). Video will be linked from here once available.
+* [AI NEXT 2017 conference](http://www.ainextconf.com/): On March 17, 2017, *Frank Seide* presented CNTK incl. the new functional "Layers" API. Slides are [here](./ppt/CNTK-AI-NEXT-Mar-2017-Frank-Seide-print.pdf). Video will be linked from here once available.
 
-* Keynote at [CGO-HPCA-PPoPP-CC joint conference](http://cgo.org/cgo2017/program.html) on Feb 8, 2017 where *Frank Seide* presented CNTK with focus on the computer science behind it. Slides are [here](https://github.com/Microsoft/CNTk/wiki/ppt/CNTK-and-the-CS-behind-it-CGO-HPCA-PPoPP-CC-Keynote-Feb-2017-Frank-Seide-print.pdf). Video will be linked from here once available.
+* Keynote at [CGO-HPCA-PPoPP-CC joint conference](http://cgo.org/cgo2017/program.html) on Feb 8, 2017 where *Frank Seide* presented CNTK with focus on the computer science behind it. Slides are [here](./ppt/CNTK-and-the-CS-behind-it-CGO-HPCA-PPoPP-CC-Keynote-Feb-2017-Frank-Seide-print.pdf). Video will be linked from here once available.
 
 * NVidia [Inception Webinar](http://cc.readytalk.com/play?id=8kpkke) on Feb 9, 2017 where *Sayan Pathak* presented an overview of CNTK V2 with latest performance benchmarks as well as a introduction to deep learning with Cognitive Toolkit (formerly CNTK).
 

@@ -11,10 +11,10 @@ Additional Python tutorials:
 * ['Build your own image classifier using Transfer Learning'](./Build-your-own-image-classifier-using-Transfer-Learning) provides two examples for custom image classifiers using transfer learning.
 
 ### BrainScript Tutorials
-* [Getting Started](./Tutorial/Tutorial): Simple Logistic Regression and multi-class classification
-* [Image Recognition](./Hands-On-Labs-Image-Recognition): Image recognition on CIFAR-10 with Convolutional and Residual Networks
-* [Language Understanding with ATIS](./Hands-On-Labs-Language-Understanding): Slot tagging and intent classification with Recurrent Networks
-* [Object Detection using Fast R-CNN](./Object-Detection-using-Fast-R-CNN): Object detection in images using the Fast R-CNN algorithm
+* [Getting Started](../Tutorial/Tutorial.md): Simple Logistic Regression and multi-class classification
+* [Image Recognition](../Hands-On-Labs-Image-Recognition.md): Image recognition on CIFAR-10 with Convolutional and Residual Networks
+* [Language Understanding with ATIS](../Hands-On-Labs-Language-Understanding.md): Slot tagging and intent classification with Recurrent Networks
+* [Object Detection using Fast R-CNN](../Object-Detection-using-Fast-R-CNN.md): Object detection in images using the Fast R-CNN algorithm
 
 <!---
 # Older deprecated NDL tutorial for reference purposes only

@@ -29,14 +29,14 @@ If you maintain a developer environment, please read the article [Migrate VS 201
 
 ### CNTK Evaluation library. NuGet package
 
-The first version of [CNTK Library Managed Eval API](https://github.com/Microsoft/CNTK/wiki//CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see the [Wiki page](./CNTK-Library-Evaluation-on-Windows) for details. 
+The first version of [CNTK Library Managed Eval API](.//CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see the [Wiki page](../CNTK-Library-Evaluation-on-Windows.md) for details. 
 
 Examples on usage of the new CNTK C# API are available in [`CNTKLibraryEvalExamples.sln`](https://github.com/Microsoft/CNTK/blob/v2.0.beta8.0/Examples/Evaluation/CNTKLibraryEvalExamples.sln) located in [Examples/Evaluation](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Evaluation) (available also in CNTK Binary Packages). 
 
 The structure of [CNTK NuGet packages](./NuGet-Package) has changed with two additional packages introduced: 
-* (*New*) `CNTK.CPU`. Contains [CNTK Library C# Eval API](https://github.com/microsoft/cntk/wiki/CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api), and used for CPU only machines.
-* (*New*) `CNTK.GPU`. Contains [CNTK Library C# Eval API](https://github.com/microsoft/cntk/wiki/CNTK-Library-Evaluation-on-Windows#using-the-cntk-library-managed-api), and used for GPU enabled machines.
-* `Microsoft.Research.CNTK.CpuEval-mkl`. Contains [CNTK EvalDll API](https://github.com/microsoft/cntk/wiki/EvalDll-Evaluation-Overview). It supports CPU only.  
+* (*New*) `CNTK.CPU`. Contains [CNTK Library C# Eval API](../CNTK-Library-Evaluation-on-Windows.md#using-the-cntk-library-managed-api), and used for CPU only machines.
+* (*New*) `CNTK.GPU`. Contains [CNTK Library C# Eval API](../CNTK-Library-Evaluation-on-Windows.md#using-the-cntk-library-managed-api), and used for GPU enabled machines.
+* `Microsoft.Research.CNTK.CpuEval-mkl`. Contains [CNTK EvalDll API](../EvalDll-Evaluation-Overview.md). It supports CPU only.  
 
 **IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta8```.
 
