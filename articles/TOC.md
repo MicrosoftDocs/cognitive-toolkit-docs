@@ -162,7 +162,7 @@
 #### [Plot command](/cognitive-toolkit/Plot-command)
 #### [BrainScript via command line](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
-## [C++](/cognitive-toolkit/CNTK-Library-API.md#c-api)
+## [C++](/cognitive-toolkit/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/CNTK-Library-Managed-API)
 ## [Python](https://www.cntk.ai/pythondocs/apireference.html)
 # Resources
