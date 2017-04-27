@@ -1,3 +1,17 @@
+---
+title:   CNTK production test configurations
+author:    chrisbasoglu
+date:    01/13/2017
+ms.author:   cbasoglu
+ms.date:   01/13/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# CNTK production test configurations
+
 Here are the current configurations that are used in CNTK team environment for automated building and testing. The presented set of product versions is not restrictive, i.e. CNTK may well work in many other configurations, however this is exactly how we test our builds. Also each pull request reviewed is being tried in the same configurations and with the same set of tests as our regular builds.
 
 ## Windows

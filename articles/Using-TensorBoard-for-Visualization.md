@@ -1,3 +1,17 @@
+---
+title:   Using TensorBoard for Visualization
+author:    chrisbasoglu
+date:    03/07/2017
+ms.author:   cbasoglu
+ms.date:   03/07/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript, python
+---
+
+# Using TensorBoard for Visualization
+
 [TensorBoard](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tensorboard/README.md) is a suite of visualization tools that makes it easier to understand and debug deep learning programs. For example, it allows viewing the model graph, plotting various scalar values as the training progresses, and visualizing the embeddings. 
 
 ## Python

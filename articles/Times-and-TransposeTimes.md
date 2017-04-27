@@ -1,20 +1,34 @@
+---
+title:   Times and TransposeTimes
+author:    chrisbasoglu
+date:    08/14/2016
+ms.author:   cbasoglu
+ms.date:   08/14/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Times and TransposeTimes
+
 CNTK matrix product.
 
     A * B
     Times (A, B, outputRank=1)
     TransposeTimes (A, B, outputRank=1)
 
-### Parameters
+## Parameters
 
 * `A` first argument of matrix product. Can be a time sequence.
 * `B` second argument of matrix product. Can be a time sequence.
 * `outputRank` (default: 1): number of axes of `A` that constitute the output dimension. See 'Extended interpretation for tensors' below.
 
-### Return Value
+## Return Value
 
 Resulting matrix product (tensor). This is a time sequence if either input was a time sequence.
 
-### Description
+## Description
 
 The `Times()` function implements the matrix product, with extensions for tensors. The `*` operator is a short-hand for it. `TransposeTimes()` transposes the first argument.
 
@@ -22,12 +36,12 @@ If `A` and `B` are matrices (rank-2 tensor) or column vectors (rank-1 tensor), `
 
 `TransposeTimes (A, B)` computes the matrix product `A^T * B`, where `^T` denotes transposition. `TransposeTimes (A, B)` has the same result as `Transpose (A) * B`, but it is more efficient as it avoids a temporary copy of the transposed version of `A`.
 
-#### Time sequences
+### Time sequences
 Both `A` and `B` can be either single matrices or time sequences. A common case for recurrent networks is that `A` is a weight matrix, while `B` is a sequence of inputs.
 
 Note: If `A` is a time sequence, the operation is not efficient, as it will launch a separate GEMM invocation for every time step. The exception is `TransposeTimes()` where both inputs are column vectors, for which a special optimization exists.
 
-#### Sparse support
+### Sparse support
 `Times()` and `TransposeTimes()` support sparse matrix. The result is a dense matrix unless both are sparse. The two most important use cases are:
 
 * `B` being a one-hot representation of an input word (or, more commonly, an entire sequence of one-hot vectors). Then, `A * B` denotes a word embedding, where the columns of `A` are the embedding vectors of the words. The following is the recommended way of realizing embeddings in CNTK:
@@ -44,12 +58,12 @@ Note: If `A` is a time sequence, the operation is not efficient, as it will laun
       ErrorPrediction         (L, z) = BS.Constants.One - TransposeTimes (L, Hardmax (z))
       ```
 
-#### Multiplying with a scalar
+### Multiplying with a scalar
 The matrix product can *not* be used to multiply a matrix with a scalar. You will get an error regarding mismatching dimensions. To multiply with a scalar, use the element-wise product `.*` instead. For example, the weighted average of two matrices could be written like this:
 
     z = Constant (alpha) .* x + Constant (1-alpha) .* y
 
-#### Multiplying with a diagonal matrix
+### Multiplying with a diagonal matrix
 If your input matrix is diagonal and stored as a vector, do not use `Times()` but an element-wise multiplication (`ElementTimes()` or the `.*` operator).
 For example
 
@@ -58,7 +72,7 @@ For example
 
 This leverages broadcasting semantics to multiply every element of `v` with the respective row of `dMat`.
 
-#### Extended interpretation of matrix product for tensors of rank > 2
+### Extended interpretation of matrix product for tensors of rank > 2
 If `A` and/or `B` are tensors of higher rank, the `*` operation denotes a generalized matrix product where all but the first dimension of `A` must match with the leading dimensions of `B`, and are interpreted by flattening. For example a product of a `[I x J x K]` and a `[J x K x L]` tensor (which we will abbreviate henceforth as  `[I x J x K] * [J x K x L]`) gets reinterpreted by reshaping the two tensors as matrices as `[I x (J * K)] * [(J * K) x L]`, for which the matrix product is defined and yields a result of dimension `[I x L]`. This makes sense if one considers the rows of a weight matrix to be patterns that activation vectors are matched against. The above generalization allows these patterns themselves to be multi-dimensional, such as images or running windows of speech features.
 
 It is also possible to have more than one non-matched dimension in `B`. For example `[I x J] * [J x K x L]` is interpreted as this matrix product: `[I x J] * [J x (K * L)]` which thereby yields a result of dimensions `[I x K x L]`. For example, this allows to apply a matrix to all vectors inside a rolling window of `L` speech features of dimension `J`.

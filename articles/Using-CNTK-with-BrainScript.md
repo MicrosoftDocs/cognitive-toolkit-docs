@@ -1,7 +1,21 @@
+---
+title:   Using CNTK with BrainScript
+author:    chrisbasoglu
+date:    03/15/2017
+ms.author:   cbasoglu
+ms.date:   03/15/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript
+---
+
+# Using CNTK with BrainScript
+
 ## BrainScript Basics
 
   * [Overview](./BrainScript-Config-File-Overview.md)
-  * [Train, Test, Eval](/BrainScript-Train-Test-Eval.md)
+  * [Train, Test, Eval](./BrainScript-Train-Test-Eval.md)
   * [Top-level Configurations](./BrainScript-Top-level-configurations.md)
   * [SimpleNetworkBuilder](./Simple-Network-Builder.md)
   * [Performance Profiler](./BrainScript-and-Python-Performance-Profiler.md)

@@ -1,4 +1,18 @@
-Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines#22-block-momentum-sgd) code is moved to a new Repository in GitHub.
+---
+title:   Update bit SGD Submodule Location
+author:    chrisbasoglu
+date:    01/25/2017
+ms.author:   cbasoglu
+ms.date:   01/25/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Update bit SGD Submodule Location
+
+Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) code is moved to a new Repository in GitHub.
 
 If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD.md) *prior to January 25, 2017* you need to update git submodule configuration as described below.
 

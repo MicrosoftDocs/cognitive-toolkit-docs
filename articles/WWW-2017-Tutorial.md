@@ -1,11 +1,25 @@
-# Abstract
+---
+title:   WWW 2017 Tutorial
+author:    chrisbasoglu
+date:    04/03/2017
+ms.author:   cbasoglu
+ms.date:   04/03/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# WWW 2017 Tutorial
+
+## Abstract
 
 Deep Neural Networks (DNNs) have revolutionized the way machines understand language and generate various responses such as answering questions, translating languages, and comparing document corpora. At the heart lies core techniques that fall into the bucket of sequence understanding. Dealing with variable size sequences of different lengths in DNNs requires deep understanding of creating such networks which can be daunting to many scientists and engineers. This tutorial will focus on introducing core concepts, end-to-end recipes, and key innovations facilitated by the cross-platform fully open-sourced Cognitive Toolkit (formerly called CNTK) with superior scalability (up to 1000 GPUs) for very large data corpora. Specifically, we will present tutorials on basic sequence understanding, intermediate sequence-to-sequence understanding (both with and without attention), and the advanced Reasoning Network (ReasoNet) which has achieved industry leading results in the area of reading comprehension.
 
-# Presentation:
+## Presentation:
 You can find the link to the presentation [here](https://cntk.ai/Tutorials/WWW2017/WWW_2017_CNTK_Tutorial_Language_and_sequence.pdf)
 
-# Tentative Schedule
+## Tentative Schedule
 
 *Duration*: Half day (3.5 hours). 
 
@@ -41,13 +55,13 @@ Scale-out (15min)
 
 
 
-# Installation instructions
+## Installation instructions
 
-Install Cognitive Toolkit (CNTK) from the [Github location](./Setup-CNTK-on-your-machine) on either Windows or Linux Machine
+Install Cognitive Toolkit (CNTK) from the [Github location](./Setup-CNTK-on-your-machine.md) on either Windows or Linux Machine
 
 We recommend you locally install the toolkit and Git clone the repository. However, for those who do not want to do so you can try out some of the tutorials at our [CNTK Azure Notebooks](http://notebooks.azure.com/cntk/libraries/tutorials) location for free. 
 
-# About presenters
+## About presenters
 
 **Sayan Pathak**
 

@@ -1,4 +1,18 @@
-The main top-level command `train` and `eval`/`test` are described on the [Train, Test, Eval](./Train,-Test,-Eval.md) page. Further top-level commands are detailed below.
+---
+title:   Top level commands with BrainScript
+author:    chrisbasoglu
+date:    11/09/2016
+ms.author:   cbasoglu
+ms.date:   11/09/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   reference
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Top level commands with BrainScript
+
+The main top-level command `train` and `eval`/`test` are described on the [Train, Test, Eval](./BrainScript-Train-Test-Eval.md) page. Further top-level commands are detailed below.
 
 ## Adapt Command
 This command adapts an already trained model using KL divergence regularization. It is advised that all other adaptations should be carried out using model editing. The adapt command is very similar to the train command except that it carries two more parameters:
@@ -109,7 +123,7 @@ Evaluating the mean and variance of evaluating and testing data-set for the batc
 * `modelPath`: the path to the model file containing trained model
 * `minibatchSize`: the mini-batch size while evaluating, same with training minibatchSize
 * `itersPerNode`: the statistics iterations for each batch normalization node
-* `reader`: the reader configuration block to read the test data. For details see [Reader block](./Reader-block.md)
+* `reader`: the reader configuration block to read the test data. For details see [Reader block](./BrainScript-Reader-block.md)
 * `enableDistributedMBReading`: distributed reading in parallel training
 
 

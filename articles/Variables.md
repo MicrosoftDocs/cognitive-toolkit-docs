@@ -1,10 +1,24 @@
+---
+title:   Variables
+author:    chrisbasoglu
+date:    05/18/2016
+ms.author:   cbasoglu
+ms.date:   05/18/2016
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
+# Variables
+
 Variables are defined in NDL when they appear on the left of an equal sign ```=```. From that point on that variable name will be associated with the value it was assigned. Variables are **immutable**, thus assigning new values to an existing variable is not supported.
 
 Variable names may be any alphanumeric sequence that starts with a letter. A variable can contain a matrix or scalar value.
 
 ## Reserved words
 
-Any name that is a [Function](.\NDL-Functions) name is reserved and can not be used for a variable. The special node names below are also  reserved and can not be used as variable names.
+Any name that is a [Function](.\NDL-Functions.md) name is reserved and can not be used for a variable. The special node names below are also  reserved and can not be used as variable names.
 ```
 FeatureNodes
 LabelNodes
@@ -15,7 +29,7 @@ OutputNodes
 
 ## Variable names with dots
 
-When it is necessary to access a variable that is defined in a [Macro](.\NDL-Macros) it can be accessed using dot syntax. If the Macro ``FF`` is called from the following code:
+When it is necessary to access a variable that is defined in a [Macro](.\NDL-Macros.md) it can be accessed using dot syntax. If the Macro ``FF`` is called from the following code:
 ```
 L1 = FF(features, HDim, SDim)
 ```
