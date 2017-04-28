@@ -1,5 +1,5 @@
 ---
-title:   Build your own imaage classifier using Transfer Learning
+title:   Build your own image classifier using Transfer Learning
 author:    chrisbasoglu
 date:    02/14/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   python
 ---
 
-# Build your own imaage classifier using Transfer Learning
+# Build your own image classifier using Transfer Learning
 
 **Table of Contents**
 
