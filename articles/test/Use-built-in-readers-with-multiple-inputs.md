@@ -1,1 +1,0 @@
-See the description at [Understanding and Extending Readers](/en-us/cognitive-toolkit/Understanding-and-Extending-Readers.md) and look for the section describing how to "compose several data deserializers" 

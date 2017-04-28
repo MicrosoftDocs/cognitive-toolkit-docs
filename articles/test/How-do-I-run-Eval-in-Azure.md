@@ -1,1 +1,0 @@
-See [Evaluate-a-model-in-an-Azure-WebApi](./Evaluate-a-model-in-an-Azure-WebApi).

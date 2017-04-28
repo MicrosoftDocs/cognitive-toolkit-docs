@@ -1,1 +1,0 @@
-Use the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) operation. The [examples section](./CloneFunction#examples) in the [CloneFunction](/en-us/cognitive-toolkit/CloneFunction.md) page provides an adaptation example.

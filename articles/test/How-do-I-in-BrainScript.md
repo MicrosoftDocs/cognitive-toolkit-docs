@@ -1,6 +1,0 @@
-* [Express things](./How-do-I-Express-Things-in-BrainScript)
-* [Train models](./How-do-I-Train-Models-in-BrainScript) 
-* [Evaluate models](./How-do-I-Evaluate-Models-in-BrainScript) 
-* [Adapt models](./How-do-I-Adapt-Models-in-BrainScript) 
-* [Read things](./How-do-I-Read-Things-in-BrainScript) 
-* [Deal with errors](./How-do-I-Deal-with-Errors-in-BrainScript)
