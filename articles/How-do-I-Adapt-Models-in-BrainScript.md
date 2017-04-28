@@ -94,7 +94,7 @@ Use the [CloneFunction](./CloneFunction.md) operation. The [examples section](./
 
 ## Save and reload weights from one model to another
 
-Use the [CloneFunction](./CloneFunction.md) operation. The [examples section](./CloneFunction#examples) in the [CloneFunction](./CloneFunction.md) page provides an adaptation example.
+Use the [CloneFunction](./CloneFunction.md) operation. The [examples section](./CloneFunction.md#examples) in the [CloneFunction](./CloneFunction.md) page provides an adaptation example.
 
 ## Continue training from a previously saved model
 

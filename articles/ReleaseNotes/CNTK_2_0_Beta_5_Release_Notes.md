@@ -16,7 +16,7 @@ This is a summary of new features delivered with the Beta 5 release of CNTK V.2.
 
 ## Windows: The Microsoft Cognitive Toolkit and NVIDIA Cuda 8
 
-With this Beta release the Windows version of the Cognitive Toolkit supports NVIDIA Cuda 8. The binary beta 5 packages are built using the NVidia Cuda 8 toolkit. If you are a developer and building CNTK on your own system you can still continue using Cuda 7.5. This will change soon, please read details [here](./CNTK-move-to-Cuda8.md).
+With this Beta release the Windows version of the Cognitive Toolkit supports NVIDIA Cuda 8. The binary beta 5 packages are built using the NVidia Cuda 8 toolkit. If you are a developer and building CNTK on your own system you can still continue using Cuda 7.5. This will change soon, please read details [here](../CNTK-move-to-Cuda8.md).
 
 ## Linux: The Microsoft Cognitive Toolkit and NVIDIA Cuda 8
 
