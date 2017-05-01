@@ -94,7 +94,7 @@
 ### [CNTK Evaluate Hidden Layers](/cognitive-toolkit/CNTK-Evaluate-Hidden-Layers)
 ### [CNTK Evaluate Image Transforms](/cognitive-toolkit/CNTK-Evaluate-Image-Transforms)
 ### [CNTK Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models)
-### [Clone Function](/cognitive-toolkit/CloneFuntion)
+### [Clone Function](/cognitive-toolkit/CloneFunction)
 ### [Convolution](/cognitive-toolkit/Convolution)
 ### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
 ### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
