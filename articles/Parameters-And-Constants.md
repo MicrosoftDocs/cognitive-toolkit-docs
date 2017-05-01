@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# Parameters And constants"
+# Parameters And constants
 
 ## ParameterTensor{}
 

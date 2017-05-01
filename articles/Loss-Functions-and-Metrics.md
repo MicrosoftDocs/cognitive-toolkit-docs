@@ -143,7 +143,7 @@ See also [this article](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multil
 
 ## ClassificationError{}
 
-Computes the error rate for prediction of categorical labels. For binary labels you can use [hamming loss](./How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier)
+Computes the error rate for prediction of categorical labels. For binary labels you can use [hamming loss](./How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier).
 
     ClassificationError (y, z)
 
