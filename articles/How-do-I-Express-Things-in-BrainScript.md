@@ -53,7 +53,7 @@ TemperatureSoftmax (z, T) = Softmax (z / Constant (T))
 
 The simplest way is to use 
 
-[`BS.Boolean.If`](./If-Operation)` (condition, thenExpression, elseExpression)`
+[`BS.Boolean.If`](./If-Operation.md)` (condition, thenExpression, elseExpression)`
 
 which works with scalars as well as tensors (all arguments can [broadcast](./Binary-Operations.md#broadcasting-semantics)).
 

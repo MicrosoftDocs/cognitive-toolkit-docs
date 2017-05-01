@@ -36,7 +36,7 @@ ms.devlang:   brainscript
 
 ## Introduction
 
-This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](./Tutorial), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
+This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](../Tutorial/Tutorial.md), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
 
 The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([Github link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
 
@@ -52,7 +52,7 @@ CNTK comes with a Python script that fetches and prepares the MNIST data for CNT
 
 ## Some Important CNTK Concepts
 
-Before building the neural networks for written digit image recognition using the MNIST dataset, we will go through two important concepts of CNTK: (1) [Functions](./BS-Functions); and (2) model editing.
+Before building the neural networks for written digit image recognition using the MNIST dataset, we will go through two important concepts of CNTK: (1) [Functions](../BrainScript-Functions.md); and (2) model editing.
 
 ### CNTK Functions
 

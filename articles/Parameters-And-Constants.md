@@ -169,7 +169,7 @@ A constant value.
 It can be either a scalar, or a rank-1 object (vector) or rank-2 object (matrix) initialized with a single value (such as 0).
 Note that because for vector and matrix constants all values are identical,
 constants used in conjunction with [element-wise operations](./Binary-Operations.md) can often be specified as a scalar,
-while  taking advantage of [broadcasting](./Binary-Operations.mdbroadcasting-semantics).
+while  taking advantage of [broadcasting](./Binary-Operations.md#broadcasting-semantics).
 
 ### Implementation note:
 

@@ -31,14 +31,14 @@ Here you can find CNTK and Deep Learning related presentations:
 
 ## Past
 
-* [KDD 2016](http://www.kdd.org/kdd2016/): *Frank Seide and Amit Agarwal* presented a tutorial titled,  "**CNTK: Microsoft's Open-Source Deep-Learning Toolkit**" on August 16, 2016. Tutorial description [here](http://www.kdd.org/kdd2016/tutorials/view/cntk), Prerequisites page [here](./KDD-2016-Tutorial); slides [here](https://cntk.ai/kdd/CNTK-Hands-On-KDD2016-Frank-Seide-and-Amit-Agarwal.zip); video [here, note: 3 parts](http://videolectures.net/kdd2016_tutorial_deep_learning_toolkit/).
+* [KDD 2016](http://www.kdd.org/kdd2016/): *Frank Seide and Amit Agarwal* presented a tutorial titled,  "**CNTK: Microsoft's Open-Source Deep-Learning Toolkit**" on August 16, 2016. Tutorial description [here](http://www.kdd.org/kdd2016/tutorials/view/cntk), Prerequisites page [here](./KDD-2016-Tutorial.md); slides [here](https://cntk.ai/kdd/CNTK-Hands-On-KDD2016-Frank-Seide-and-Amit-Agarwal.zip); video [here, note: 3 parts](http://videolectures.net/kdd2016_tutorial_deep_learning_toolkit/).
 This 3-hour hands-on tutorial covers the following topics:
     * *what*: ...is CNTK? Including an introduction into the core concept of CNTK, the "computational network."
     * *how*: ...does a typical use of CNTK look like? Configuration of key components, workflow.
     * *deep dive*: ...into unique CNTK technologies. Automatic unrolling of time & efficient minibatching of variable-length sequences; data-parallel training with 1-bit SGD and Block Momentum.
     * *hands-on tutorials*:
       * *hello world*: getting set up, running a first logistic regression task
-      * *language understanding*: slot and intent tagging on the ATIS language-understanding corpus. [Available online](./Hands-On-Labs-Language-Understanding)
+      * *language understanding*: slot and intent tagging on the ATIS language-understanding corpus. [Available online](./Hands-On-Labs-Language-Understanding.md)
       * *image recognition*: with convolutional nets, batch normalization,
         and residual networks using the CIFAR-10 corpus [Available online](./Hands-On-Labs-Image-Recognition.md)
 

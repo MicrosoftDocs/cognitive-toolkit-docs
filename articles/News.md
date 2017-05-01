@@ -137,7 +137,7 @@ Highlights of this Release:
 * New Python API features.
 * New Python example [Feature extraction using a trained model in Python API](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Image/FeatureExtraction).
 * Support of [Visual Studio 2015](./Setup-Migrate-VS13-to-VS15.md) for Windows version.
-* Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows.md#using-the-cntk-library-managed-api) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
+* Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows.md) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
 * CNTK Runtime packages are now available as [Public Images at Docker Hub](./CNTK-Docker-Containers.md). (**Beta 7** is currently available; Beta 8 Images availability will be announced separately in a few days)
 * Version 3 of [CNTK Custom MKL Library](https://cntk.ai/mkl/) is available.
 
