@@ -16,7 +16,7 @@ This page collects some of the most frequent pitfalls users encounter.
 
 ## During training of my binary classifier I always see a ClassificationError of 0 even from the first minibatch
 
-ClassificationError only works correctly for multiclass problems. For binary classification please use [this simple recipe](./How-do-I-Express-Things-in-BrainScript.md#Express-the-error-rate-of-my-binary-classifier)
+ClassificationError only works correctly for multiclass problems. For binary classification please use [this simple recipe](./How-do-I-Express-Things-in-BrainScript.md#express-the-error-rate-of-my-binary-classifier)
 
 ## Although the model was trained with a larger set than the evaluation set, CNTK runs out of memory during evaluation.
 

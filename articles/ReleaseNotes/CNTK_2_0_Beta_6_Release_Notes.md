@@ -79,6 +79,6 @@ you now need to execute
 ```
 z.save_model(filename)
 ```
-```load_model()``` works the same way as before but you import it from ```cntk.ops.functions```. See more in the [Wiki article](../How-do-I-Evaluate-models-in-Python.md#Evaluate-a-saved-convolutional-network).
+```load_model()``` works the same way as before but you import it from ```cntk.ops.functions```. See more in the [article](../How-do-I-Evaluate-models-in-Python.md#Evaluate-a-saved-convolutional-network).
 
 We also continue fine tuning new features and fixing different bugs - thank you once again for the constant feedback. You are not required to adopt your code or models to take an advantage of these improvements.
