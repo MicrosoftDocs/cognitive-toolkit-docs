@@ -60,7 +60,7 @@ then a C++ compiler is not installed. If you have Ubuntu 1404, install gcc 4.8  
 sudo apt-get install g++
 ```
 
-If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](/http://askubuntu.com/questions/26498/choose-gcc-and-g-version.md) 
+If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](http://askubuntu.com/questions/26498/choose-gcc-and-g-version) 
 
 ## Git
 
@@ -184,7 +184,7 @@ sudo ./b2 -d0 -j"$(nproc)" install
 ## GPU Specific Packages
 This section outlines the packages you need to setup in order for CNTK to leverage GPUs.
 
-If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#boost-library). Otherwise proceed further.
+If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#Getting-CNTK-Source-code). Otherwise proceed further.
 
 ### Checking your GPU compatibility and getting the latest driver
 You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic card available to use CNTK GPU capabilities. You can check whether your card is CUDA-compatible [here](https://developer.nvidia.com/cuda-gpus) and [here (for older cards)](https://developer.nvidia.com/cuda-legacy-gpus). Your GPU card [Compute Capability (CC)](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability) must be 3.0 or more.

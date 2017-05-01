@@ -1,4 +1,4 @@
-"---
+---
 title:   CNTK Library Evaluation on Linux
 author:    chrisbasoglu
 date:    04/09/2017

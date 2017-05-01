@@ -1,4 +1,4 @@
-"---
+---
 title:   Project a 1D input of dim inputDim to a 1D output of dim outputDim 
 author:    chrisbasoglu
 date:    12/04/2016

@@ -1,4 +1,4 @@
-"---
+---
 title:   KDD 2016 Tutorial
 author:    chrisbasoglu
 date:    11/07/2016

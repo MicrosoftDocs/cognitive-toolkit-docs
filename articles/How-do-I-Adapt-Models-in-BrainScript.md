@@ -1,4 +1,4 @@
-"---
+---
 title:   How do I adapt models in BrainScript
 author:    chrisbasoglu
 date:    04/12/2017
