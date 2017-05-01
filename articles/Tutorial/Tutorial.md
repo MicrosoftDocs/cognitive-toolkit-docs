@@ -447,6 +447,6 @@ So on our test data (as we would expect given the decision boundary we plotted b
 
 ![3 class decision boundaries](./3class_decision.png)
 
-#@ Where To Go Next
+## Where To Go Next
 
 Check out [Tutorial II](../Tutorial2/Tutorial2.md) to learn how to build more complex models like convolutional neural networks.

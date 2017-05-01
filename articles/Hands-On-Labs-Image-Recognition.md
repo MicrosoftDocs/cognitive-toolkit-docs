@@ -581,7 +581,7 @@ more concise way of writing the same:
     )
 
 This style will be introduced and used in the next hands-on tutorial,
-[*Text Understanding with Recurrent Networks*](/Hands-On-Labs-Text-Understanding). 
+[*Text Understanding with Recurrent Networks*](./Hands-On-Labs-Text-Understanding.md). 
 
 ## Solutions
 

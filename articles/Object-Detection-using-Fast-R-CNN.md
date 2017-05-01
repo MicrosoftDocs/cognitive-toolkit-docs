@@ -434,7 +434,7 @@ generated. (3) These region proposals, or Regions-of-Interests (ROIs), are then 
 which outputs a vector of e.g. 4096 floating point values for each ROI. Finally, (4) a classifier is learned which takes the 
 4096 float ROI representation as input and outputs a label and confidence to each ROI.  
 <p align="center">
-<a target="_blank" href="./Tutorial_FastRCNN/nn_0WIN_20160803_11_28_42_Pro.jpg"><img src="./Tutorial_FastRCNN/rcnnPipeline.JPG" alt="image" width="600" align="center"/>
+<a target="_blank" href="./Tutorial_FastRCNN/nn_0WIN_20160803_11_28_42_Pro.jpg"><img src="./Tutorial_FastRCNN/rcnnPipeline.JPG" alt="image" width="600" align="center"/></a>
 </p>
 
 While this approach works well in terms of accuracy, it is very costly to compute since the Neural Network has to be evaluated 
