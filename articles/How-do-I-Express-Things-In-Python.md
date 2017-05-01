@@ -103,7 +103,7 @@ SetupTrainer():
     return trainer, criterion
 ```
 
-Then later, you needed to introspect to get back the names input and label by using “[arguments](https://www.cntk.ai/pythondocs/graph.html#cntk.ops.functions.Function)”:
+Then later, you needed to introspect to get back the names input and label by using “arguments”:
 ```python
 # train the model
 trainer, criterion = SetupTrainer()

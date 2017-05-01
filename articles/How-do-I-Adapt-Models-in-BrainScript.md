@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# How do I adapt models in BrainScript"
+# How do I adapt models in BrainScript
 
 * [Use a trained model as a feature extractor](#use-a-trained-model-as-a-feature-extractor)? 
 * [Use an already trained network multiple times inside a larger network](#use-an-already-trained-network-multiple-times-inside-a-larger-network)

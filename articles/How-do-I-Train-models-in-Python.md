@@ -12,9 +12,9 @@ ms.devlang:   python
 
 # How do I train models in Python
 
- * [Interpret the use of MinibatchSource.next_minibatch](#interpret-the-use-of-minibatchsourcenext_minibatch)?
+ * [Interpret the use of MinibatchSource.next_minibatch](#interpret-the-use-of-minibatchsourcenextminibatch)?
  * [Load pre-trained checkpointed model and continue retraining](#load-pre-trained-checkpointed-model-and-continue-retraining)?
- * [Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd](#relate-alpha-beta1-beta2-and-epsilon-to-learning-rate-and-momentum-in-adam_sgd)?
+ * [Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd](#relate-alpha-beta1-beta2-and-epsilon-to-learning-rate-and-momentum-in-adamsgd)?
  * [Train two or more models jointly](#train-two-or-more-models-jointly)?
  * [Train with a weighted loss](#train-with-a-weighted-loss)?
  * [Train a multilabel classifier in Python](#train-a-multilabel-classifier-in-python)? 
