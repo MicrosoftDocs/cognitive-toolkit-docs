@@ -38,7 +38,7 @@ Check that you correctly installed [zlib and libzip](./Setup-CNTK-on-Windows.md#
 ## I have just downloaded and installed CNTK **binary package** and want to run a job, but get weird errors, like missing CUDA libraries.
 Please, check carefully what you have in your `PATH`. Especially, if it is a *shared* development machine. Often this is cause by older (previous) versions of CNTK or CNTK components that are reachable through the configured PATH.
 
-## On Widows I installed a new version of NVIDIA driver and now CNTK build fails with the errors like ``` ..\Common\BestGpu.cpp(24): fatal error C1083: Cannot open include file: 'nvml.h': No such file or directory```
+## On Windows I installed a new version of NVIDIA driver and now CNTK build fails with the errors like ``` ..\Common\BestGpu.cpp(24): fatal error C1083: Cannot open include file: 'nvml.h': No such file or directory```
 You have selected *Perform a clean installation* option in NVIDIA Driver Installer. That results in the removal of *GPU Deployment Kit (GDK)*. To repair the system, perform the following steps:
 * Launch CUDA Installer
 * Select *Custom (Advanced)* Installation
