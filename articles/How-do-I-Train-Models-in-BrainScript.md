@@ -10,7 +10,8 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# How do I train models in BrainScript"
+# How do I train models in BrainScript
+
 * [Perform layer-wise training](#layer-wise-training)? 
 * [Train with a multitask objective](#train-with-a-multitask-objective)? 
 * [Train a regression model on images](#train-a-regression-model-on-images)? 

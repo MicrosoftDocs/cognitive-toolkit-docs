@@ -21,7 +21,7 @@ NotifyFunctionValuesMBSizeModified: labels InputValue operation had its row dime
 This is most likely due to only updating the network definition part of your config file but not your reader definition.
 Please double-check:
 
-* all [`Input{}`](./Inputs.md#input) nodes have corresponding streams in the reader section with the same name
+* all [`Input{}`](./Inputs.md) nodes have corresponding streams in the reader section with the same name
 * the dimensions match
 
 A second case is when you provide a wrong hint to the reader by saying 
