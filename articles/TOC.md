@@ -116,7 +116,7 @@
 ### [Times and TransposeTimes](/cognitive-toolkit/Times-and-TransposeTimes)
 ### [Unary operations](/cognitive-toolkit/Unary-Operations)
 ### [Variables](/cognitive-toolkit/Variables)
-## [Blog](/cognitive-toolkit/Articles)
+## [Blog](/cognitive-toolkit/Blog)
 ### [Recurrent Neural Networks with CNTK and applications to the world of ranking](https://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/2016/08/recurrent-neural-networks-with-cntk-and-applications-to-the-world-of-ranking/)
 ### [GRUs on CNTK with BrainScript](https://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/2016/08/grus-on-cntk-with-brainscript/)
 ### [Deep Crossing on CNTK](https://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/2016/08/deep-crossing-on-cntk/)

@@ -1,5 +1,5 @@
 ---
-title:   CNTK articles
+title:   CNTK blog
 author:    chrisbasoglu
 date:    04/18/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# CNTK articles
+# CNTK blog
 
 * [Recurrent Neural Networks with CNTK and applications to the world of ranking](https://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/2016/08/recurrent-neural-networks-with-cntk-and-applications-to-the-world-of-ranking/)
 * [GRUs on CNTK with BrainScript](https://msrstagingredirect.azurewebsites.net/en-us/cognitive-toolkit/2016/08/grus-on-cntk-with-brainscript/)
