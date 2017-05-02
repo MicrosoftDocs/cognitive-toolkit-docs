@@ -20,8 +20,7 @@
 ### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
 ### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
 ### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
-### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
-## CNTK codebase
+### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)## CNTK codebase
 ### [CNTK Evaluation Overview](/cognitive-toolkit/CNTK-Evaluation-Overview)
 ### [Setup CNTK with script on Windows](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
 ### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
@@ -50,7 +49,7 @@
 ## [Examples](/cognitive-toolkit/Examples)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## [How do I](/cognitive-toolkit/How-do-I)
-### [How do I in BrainScript](/cognitive-toolkit/How-do-I-in-BrainScript)
+### How do I in BrainScript
 #### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
 #### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
 #### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
