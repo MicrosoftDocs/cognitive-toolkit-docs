@@ -29,7 +29,9 @@
     ],
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+    "uhfHeaderId": "MSDocsHeader-cognitive-toolkit" 
+  },
     "fileMetadata": {},
     "template": [],
     "dest": "cntk"
