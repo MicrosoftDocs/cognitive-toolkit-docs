@@ -30,7 +30,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-    "uhfHeaderId": "MSDocsHeader-cognitive-toolkit" 
+    "uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
+	"breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json"
   },
     "fileMetadata": {},
     "template": [],
