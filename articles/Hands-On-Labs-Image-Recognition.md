@@ -29,12 +29,10 @@ The techniques you will practice include:
 * implementing a custom network structures (ResNet skip connection)
 * creating many layers at once using recursive loops
 * parallel training
-
-We assume that you are familiar with basics of deep learning, and these specific concepts (if not,
-you can catch up with [this two-page introduction](./Tutorial2/Tutorial2.md#going-deep-convolutional-neural-networks-cnns)):
-
 * convolutional networks
 * batch normalization
+<!-- File retired - We assume that you are familiar with basics of deep learning, and these specific concepts (if not,
+you can catch up with [this two-page introduction](./Tutorial2/Tutorial2.md#going-deep-convolutional-neural-networks-cnns)):-->
 
 ### Prerequisites
 

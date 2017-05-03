@@ -449,4 +449,4 @@ So on our test data (as we would expect given the decision boundary we plotted b
 
 ## Where To Go Next
 
-Check out [Tutorial II](../Tutorial2/Tutorial2.md) to learn how to build more complex models like convolutional neural networks.
+Check out [Tutorial II](../Hands-On-Labs-Image-Recognition.md) to learn how to build more complex models like convolutional neural networks.
