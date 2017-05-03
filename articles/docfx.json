@@ -20,6 +20,7 @@
         "files": [
           "**/*.png",
           "**/*.jpg"
+		  "**/*.yml"
         ],
         "exclude": [
           "**/obj/**",
@@ -30,8 +31,8 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-    "uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
-	"breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json"
+        "uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
+	    "breadcrumb_path": "~/breadcrumb/TOC.json"
   },
     "fileMetadata": {},
     "template": [],
