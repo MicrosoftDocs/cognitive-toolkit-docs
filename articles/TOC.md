@@ -61,7 +61,7 @@
 #### [EvalDLL Managed API](/cognitive-toolkit/EvalDll-Managed-API)
 #### [EValDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
-## [How do I](/cognitive-toolkit/How-do-I)
+## How do I
 ### How do I in BrainScript
 #### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
 #### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
