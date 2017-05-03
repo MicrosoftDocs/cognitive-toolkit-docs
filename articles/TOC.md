@@ -1,4 +1,4 @@
-# [Overview](/cognitive-toolkit/home)
+# [Overview](/cognitive-toolkit/index)
 ## [What's new](/cognitive-toolkit/news)
 ### [News 2016](/cognitive-toolkit/news-2016)
 ### [CNTK move to Cuda8](/cognitive-toolkit/CNTK-move-to-Cuda8)
