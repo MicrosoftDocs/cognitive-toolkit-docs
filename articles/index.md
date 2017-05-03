@@ -21,7 +21,7 @@ It can be included as a library in your Python or C++ programs, or used as a sta
 
 Here are a few pages to get started:
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
-* [Tutorials, Examples, etc..](./Tutorials-Examples.md)
+* [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/CNTK/) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
   * [Using CNTK from Python](https://www.cntk.ai/pythondocs)
