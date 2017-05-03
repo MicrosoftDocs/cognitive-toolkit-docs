@@ -69,8 +69,6 @@
 #### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
 #### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
 #### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
-#### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
-#### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
 ### How do I in Python
 #### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
 #### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
@@ -78,6 +76,8 @@
 #### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
 #### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
 #### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
+### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
+### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
 ## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
 ## Source Code & Development
