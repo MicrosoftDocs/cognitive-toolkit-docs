@@ -87,7 +87,7 @@ Installing the CNTK custom MKL library:
 ```
     setx CNTK_MKL_PATH c:\local\CNTKCustomMKL
 ```
-* Download the file [CNTKCustomMKL-Windows-3.zip](https://www.cntk.ai/mkl/CNTKCustomMKL-Windows-3.zip). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://www.cntk.ai/mkl).
+* Download the file [CNTKCustomMKL-Windows-3.zip](https://www.cntk.ai/mkl/CNTKCustomMKL-Windows-3.zip). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://msrstagingredirect.azurewebsites.net/en-us/security-risk-detection/download-toolkit/).
 
 ## MS-MPI
 

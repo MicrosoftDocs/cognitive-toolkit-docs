@@ -80,7 +80,7 @@ Installing the CNTK custom MKL library:
 ```
 sudo mkdir /usr/local/CNTKCustomMKL
 ```
-* Download the required CNTK custom MKL from the [CNTK web site](https://www.cntk.ai/mkl).
+* Download the required CNTK custom MKL from the [CNTK web site](https://msrstagingredirect.azurewebsites.net/en-us/security-risk-detection/download-toolkit/).
   Un-tar it into your CNTK MKL path, creating a numbered sub directory within.
   For example, if you are on latest master, download `CNTKCustomMKL-Linux-3.tgz` and extract its contents to `/usr/local/CNTKCustomMKL/3`:
 ```
