@@ -84,7 +84,7 @@ sudo mkdir /usr/local/CNTKCustomMKL
   Un-tar it into your CNTK MKL path, creating a numbered sub directory within.
   For example, if you are on latest master, download `CNTKCustomMKL-Linux-3.tgz` and extract its contents to `/usr/local/CNTKCustomMKL/3`:
 ```
-wget https://www.cntk.ai/mkl/CNTKCustomMKL-Linux-3.tgz
+wget https://msrstagingredirect.azurewebsites.net/en-us/security-risk-detection/download-toolkit/
 sudo tar -xzf CNTKCustomMKL-Linux-3.tgz -C /usr/local/CNTKCustomMKL
 ```
   Note: if you want to build other CNTK source versions, you may need to install alternate CNTK custom MKL versions.
