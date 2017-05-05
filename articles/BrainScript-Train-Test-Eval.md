@@ -1,5 +1,5 @@
 ---
-title:   BrainScript Train Eval
+title:   BrainScript Train, Test, Eval
 author:    chrisbasoglu
 date:    03/17/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# BrainScript Train Eval
+# BrainScript Train, Test, Eval
 
 Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding wiki page](./Top-level-commands.md). 
 
