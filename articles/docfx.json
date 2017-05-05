@@ -1,6 +1,7 @@
 {
 	"build": {
-		"content": [{
+		"content": [
+			{
 			"files": [
 				"**/*.md",
 				"**/*.yml"
@@ -13,8 +14,10 @@
 				"LICENSE-CODE",
 				"ThirdPartyNotices"
 			]
-		}],
-		"resource": [{
+			}
+		],
+		"resource": [
+			{
 			"files": [
 				"**/*.png",
 				"**/*.jpg",
@@ -24,17 +27,17 @@
 				"**/obj/**",
 				"**/includes/**"
 			]
-		}],
+			}
+		],
 		"overwrite": [],
 		"externalReference": [],
 		"globalMetadata": {
 			"uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
 			"breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json",
 			"searchScope": ["Cognitive Toolkit"]
-		}
-
 	},
 	"fileMetadata": {},
 	"template": [],
 	"dest": "cntk"
+	}
 }
