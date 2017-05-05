@@ -129,7 +129,7 @@
 ### [BrainScript Config file overview](/cognitive-toolkit/BrainScript-Config-file-overview)
 ### [Train, Test, Eval](/cognitive-toolkit/BrainScript-Train-Test-Eval)
 ### [Top-level Configurations](/cognitive-toolkit/BrainScript-Top-level-configurations)
-### [Simple Network Builder ](/cognitive-toolkit/Simple-Network-Builder)
+### [Simple Network Builder] (/cognitive-toolkit/Simple-Network-Builder)
 ### [Performance Profiler](/cognitive-toolkit/BrainScript-and-Python-Performance-Profiler)
 ### Network Definition with BrainScript
 #### [BrainScript Network Builder](/cognitive-toolkit/BrainScript-Network-Builder)
