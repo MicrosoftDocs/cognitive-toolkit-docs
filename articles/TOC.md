@@ -132,7 +132,7 @@
 ### [SimpleNetworkBuilder ](/cognitive-toolkit/Simple-Network-Builder)
 ### [Performance Profiler](/cognitive-toolkit/BrainScript-and-Python-Performance-Profiler)
 ### Network Definition with BrainScript
-#### [BrainScriptNetworkBuilder](/cognitive-toolkit/BrainScript-Network-Builder)
+#### [BrainScript Network Builder](/cognitive-toolkit/BrainScript-Network-Builder)
 #### [BrainScript Walkthrough](/cognitive-toolkit/BrainScript-Basic-Concepts)
 #### [Expressions](/cognitive-toolkit/BrainScript-Expressions)
 #### [Defining Functions](/cognitive-toolkit/BrainScript-Functions)
