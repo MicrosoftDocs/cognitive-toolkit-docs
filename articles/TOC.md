@@ -190,5 +190,5 @@
 ### [CNTK_2_0_Beta_9_Release_Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Beta_9_Release_Notes)
 ### [CNTK_2_0_RC_1_Release_Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_RC_1_Release_Notes)
 ## [Conference appearances](/cognitive-toolkit/Conference-Appearances)
-## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
+## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md )
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/CNTK-1bit-SGD-License)
