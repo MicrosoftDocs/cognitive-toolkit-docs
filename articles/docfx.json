@@ -34,6 +34,9 @@
     "globalMetadata": {
         "uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
 	 "breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json"
+  	 "searchScope": ["Cognitive Toolkit"],
+  }
+
   },
     "fileMetadata": {},
     "template": [],
