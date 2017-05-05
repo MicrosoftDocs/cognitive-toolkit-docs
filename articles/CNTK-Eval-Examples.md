@@ -1,5 +1,5 @@
 ---
-title:   CNTK eval examples
+title:   Model eval examples
 author:    chrisbasoglu
 date:    04/09/2017
 ms.author:   cbasoglu
