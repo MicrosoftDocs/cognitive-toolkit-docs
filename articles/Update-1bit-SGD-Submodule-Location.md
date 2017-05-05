@@ -1,5 +1,5 @@
 ---
-title:   Update bit SGD Submodule Location
+title:   Update 1bit SGD Submodule Location
 author:    chrisbasoglu
 date:    01/25/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# Update bit SGD Submodule Location
+# Update 1bit SGD Submodule Location
 
 Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) code is moved to a new Repository in GitHub.
 
