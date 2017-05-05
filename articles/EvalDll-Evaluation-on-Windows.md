@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp, cpp
 ---
 
-# EvalDLL  valuation on Windows
+# EvalDLL  evaluation on Windows
 
 The EvalDll library on Windows is provided both as C++ and C# library. A NuGet package is also available at Nuget.org. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 

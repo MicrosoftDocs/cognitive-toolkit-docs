@@ -1,5 +1,5 @@
 ---
-title:   EValDLL Native API
+title:   EvalDLL Native API
 author:    chrisbasoglu
 date:    04/02/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   cpp
 ---
 
-# EValDLL Native API
+# EvalDLL Native API
 
 There is a native interface available for evaluating models without requiring a data reader or data file(s). This interface is implemented in C++ inside the `Cntk.Eval` dll in Windows and `libCntk.Eval` in Linux respectively. The `Cntk.Eval` dll in turn is also used by the `EvalWrapper` assembly (which provides a managed layer) in Windows.
 

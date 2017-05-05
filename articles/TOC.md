@@ -43,7 +43,7 @@
 #### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
-#### [Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
+#### [Python Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
 ### [Microsoft Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
