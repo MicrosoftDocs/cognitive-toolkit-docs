@@ -1,5 +1,5 @@
 ---
-title:   Setup Windows Devinstall Script Option
+title:   Setup Windows binary script
 author:    chrisbasoglu
 date:    02/16/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# Setup Windows Devinstall Script Option
+# Setup Windows binary script
 
 ## CNTK binary installation with scripts on Windows
 
