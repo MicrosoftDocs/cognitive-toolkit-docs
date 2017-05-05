@@ -1,5 +1,5 @@
 ---
-title:   Setup Windows binary script
+title:   Setup Windows binary script options
 author:    chrisbasoglu
 date:    03/31/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# Setup Windows binary script
+# Setup Windows binary script options
 
 ## CNTK binary installation script options
 
