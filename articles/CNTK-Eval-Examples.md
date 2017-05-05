@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp, cpp
 ---
 
-# CNTK eval examples
+# Model eval examples
 
 ## Eval samples in CNTK binary download package 
 The CNTK binary download package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) includes samples for using the eval library in C++, C#/.NET and Python.
