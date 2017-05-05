@@ -1,5 +1,5 @@
 ---
-title:   Top level commands with BrainScript
+title:   Top-level commands with BrainScript
 author:    chrisbasoglu
 date:    11/09/2016
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# Top level commands with BrainScript
+# Top-level commands with BrainScript
 
 The main top-level command `train` and `eval`/`test` are described on the [Train, Test, Eval](./BrainScript-Train-Test-Eval.md) page. Further top-level commands are detailed below.
 
