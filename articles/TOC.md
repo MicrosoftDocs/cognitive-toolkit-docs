@@ -34,7 +34,7 @@
 ### [Setup Windows Devinstall Script Option](/cognitive-toolkit/Setup-Windows-Devinstall-Script-Option)
 ### [Python Getting started - language](https://www.cntk.ai/pythondocs/gettingstarted.html)
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
-# [How To](/cognitive-toolkit/Tutorials-examples)
+# How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
 ### BrainScript Tutorials
