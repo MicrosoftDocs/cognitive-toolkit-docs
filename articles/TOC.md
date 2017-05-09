@@ -2,7 +2,6 @@
 ## [What's new](/cognitive-toolkit/news)
 ### [News 2016](/cognitive-toolkit/news-2016)
 ### [CNTK move to Cuda8](/cognitive-toolkit/CNTK-move-to-Cuda8)
-### [WWW 2017 Tutorial](/cognitive-toolkit/WWW-2017-Tutorial)
 ## [FAQ](/cognitive-toolkit/CNTK-FAQ)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
