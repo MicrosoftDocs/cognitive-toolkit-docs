@@ -1,0 +1,7 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+  - name: Cognitive Toolkit
+    tocHref: /cognitive-toolkit/
+    topicHref: /cognitive-toolkit/index
