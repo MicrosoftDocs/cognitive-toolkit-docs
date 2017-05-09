@@ -31,5 +31,5 @@ ms.devlang:   NA
 * ODSC West 2016
 * NIPS 2016
 * CVPR 2017
-* WWW 2017
+* [WWW 2017](./WWW-2017-Tutorial.md)
 * GTC 2017
