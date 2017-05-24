@@ -46,7 +46,7 @@ Highlights:
 * A new set of NuGet Packages.
 * Multiple bug fixes.
 
-See more in the [Release Notes](./ReleaseNotes/ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).  
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ***2017-04-21.* CNTK 2.0 Release Candidate 2**  
