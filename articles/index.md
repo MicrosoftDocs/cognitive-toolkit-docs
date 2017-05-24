@@ -1,4 +1,4 @@
----
+ ---
 title:   The Microsoft Cognitive Toolkit
 author:    chrisbasoglu
 date:    04/06/2017
@@ -15,7 +15,7 @@ ms.devlang:   NA
 
 The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by Microsoft Research. [This video](https://youtu.be/9gDDO5ldT-4) provides a high-level view of the toolkit. 
 
-https://github.com/MicrosoftDocs/cognitive-toolkit-docs-pr/blob/master/articles/ReleaseNotes/CNTK_2_0_beta_12_Release_Notes.mdThe latest release of the Microsoft Cognitive Toolkit 2.0 is RC3 (release candidate 3). If you are a previous user of the toolkit, see [this page](./Breaking-changes-in-Master-compared-to-beta15.md) for more information about (breaking) changes in this release.
+The latest release of the Microsoft Cognitive Toolkit 2.0 is RC3 (release candidate 3). If you are a previous user of the toolkit, see [this page](./Breaking-changes-in-Master-compared-to-beta15.md) for more information about (breaking) changes in this release.
 
 
 It can be included as a library in your Python or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the Toolkit from the source provided in Github.
