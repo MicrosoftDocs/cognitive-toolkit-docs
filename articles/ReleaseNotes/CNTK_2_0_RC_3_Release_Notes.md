@@ -1,4 +1,14 @@
-## CNTK v.2.0 RC 3 Release Notes
+---
+title:   CNTK_2_0_RC_2_Release_Notes
+author:    chrisbasoglu
+date:    05/24/2017
+ms.author:   cbasoglu
+ms.date:   05/24/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---## CNTK v.2.0 RC 3 Release Notes
 
 With the Release Candidate 3 we ship the last preview before the Microsoft Cognitive Toolkit V2 final release. 
 
