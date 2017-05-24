@@ -47,7 +47,7 @@ Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/
 
 ## March 2017
 
-***2017-03-31.* V 2.0 RC 1**  
+***2017-03-31.* V 2.0 Release Candidate 1**  
 With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of enhancements before release of the production version of CNTK v.2.0. We expect no breaking changes before the release of the production version, but we are eager to hear your feedback!
 
 Highlights:
