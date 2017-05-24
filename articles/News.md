@@ -17,7 +17,7 @@ ms.devlang:   NA
 Release Candidate 3 is the final preview of Cognitive Toolkit v.2.0.
 
 Highlights:
-* API that were previously declared deprecated are now ***removed***. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes). 
+* API that were previously declared deprecated are now ***removed***. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md). 
 * Introduction of CNTK Java API in experimental mode. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).
 * New operators like `to_sequence` and `sequence.unpack`.
 * Support of convolution in 1D. 
