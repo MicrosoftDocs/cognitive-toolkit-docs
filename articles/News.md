@@ -12,7 +12,41 @@ ms.devlang:   NA
 
 # News
 
+## May 2017
+***2017-05-24.* CNTK 2.0 Release Candidate 3**  
+Release Candidate 3 is the final preview of Cognitive Toolkit v.2.0.
+
+Highlights:
+* API that were previously declared deprecated are now ***removed***. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes). 
+* Introduction of CNTK Java API in experimental mode. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).
+* New operators like `to_sequence` and `sequence.unpack`.
+* Support of convolution in 1D. 
+* Support of UDF serialization (available both in Python and native in C++).
+* New tools ([Crosstalk](https://github.com/Microsoft/CNTK/tree/master/bindings/python/cntk/contrib/crosstalk) and [RNN Conversion](https://github.com/Microsoft/CNTK/blob/master/bindings/python/cntk/misc/optimized_rnnstack_converter.py)).
+* Support of NVIDIA cuDNN v.6.0 when CNTK is built by the user from source code.
+* A new set of NuGet Packages.
+* Multiple bug fixes.
+
+See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).  
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
 ## April 2017
+***2017-04-21.* CNTK 2.0 Release Candidate 2**  
+With Release Candidate 2 we reacted to customer feedback and improved/added features, functionality, and performance.
+
+Highlights:
+* New operators like `pow`, `sequence.reduce_max`, `sequence.softmax`.
+* New feature for Linux source builds (GPU Direct RDMA support in distributed gradients aggregation, NCCL support for Python in V2 gradients aggregation).
+* Support for Python 3.6 for source and binary installation; see [here](./Setup-CNTK-on-your-machine.md).
+* `UserMinibatchSource` to write custom minibatch sources; see [here](https://cntk.ai/pythondocs/extend.html#user-defined-minibatch-sources).
+* New C# APIs: `class NDArrayView` and methods, `SetMaxNumCPUThreads()`, `GetMaxNumCPUThreads()`, `SetTraceLevel()`, `GetTraceLevel()`
+* A new set of NuGet Packages is provided with this Release. 
+
+The [release notes](./ReleaseNotes/CNTK_2_0_RC_2_Release_Notes.md) contain an overview. 
+Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/releases).
+
+## March 2017
+
 ***2017-03-31.* V 2.0 RC 1 **  
 With Release Candidate 1 the Microsoft Cognitive Toolkit enters the final set of enhancements before release of the production version of CNTK v.2.0. We expect no breaking changes before the release of the production version, but we are eager to hear your feedback!
 
