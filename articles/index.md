@@ -36,8 +36,8 @@ Here are a few pages to get started:
 Release Candidate 3 is the final preview of Cognitive Toolkit v.2.0.
 
 Highlights:
-* API that were previously declared deprecated are now ***removed***. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes). 
-* Introduction of CNTK Java API in experimental mode. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes).
+* API that were previously declared deprecated are now ***removed***. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md). 
+* Introduction of CNTK Java API in experimental mode. See details in [release notes](./ReleaseNotes/CNTK_2_0_RC_3_Release_Notes.md).
 * New operators like `to_sequence` and `sequence.unpack`.
 * Support of convolution in 1D. 
 * Support of UDF serialization (available both in Python and native in C++).
@@ -71,9 +71,9 @@ Highlights:
 * Enables Caffe-converted pretrained models on image classification including AlexNet, ResNet, VGG and BN-Inception. 
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
-* Improvements in the [device selection API](https://github.com/Microsoft/CNTK/wiki/CNTK_2_0_RC_1_Release_Notes).
+* Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
-* Improvements in Python and C# API. See the [release notes](https://github.com/Microsoft/CNTK/wiki/CNTK_2_0_RC_1_Release_Notes) for detailed description.
+* Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format).
 
 The [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
