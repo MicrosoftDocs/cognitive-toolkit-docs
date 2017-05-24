@@ -1,4 +1,4 @@
- ---
+---
 title:   The Microsoft Cognitive Toolkit
 author:    chrisbasoglu
 date:    04/06/2017
