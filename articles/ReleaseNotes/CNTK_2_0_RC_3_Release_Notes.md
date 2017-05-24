@@ -8,7 +8,9 @@ ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   NA
----## CNTK v.2.0 RC 3 Release Notes
+---
+
+## CNTK v.2.0 RC 3 Release Notes
 
 With the Release Candidate 3 we ship the last preview before the Microsoft Cognitive Toolkit V2 final release. 
 
