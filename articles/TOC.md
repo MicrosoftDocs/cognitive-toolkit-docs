@@ -7,19 +7,20 @@
 # Get Started
 ## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+### Binary setup
+#### [Setup Windows Python](/cognitive-toolkit/Setup-Windows-Python)
+#### [Setup Windows binary script](/cognitive-toolkit/Setup-Windows-Binary-Script)
+#### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
+#### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
+#### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
+#### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
 ### [Setup for Windows](/cognitive-toolkit/Setup-CNTK-on-Windows)
 #### [Migration from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
 ### [Setup on Linux](/cognitive-toolkit/Setup-CNTK-on-Linux)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
-## Binary setup
-### [Setup Windows Python](/cognitive-toolkit/Setup-Windows-Python)
-### [Setup Windows binary script](/cognitive-toolkit/Setup-Windows-Binary-Script)
-### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
-### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
-### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
-### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
+
 ## CNTK codebase
 ### [Setup CNTK with script on Windows](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
 ### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
