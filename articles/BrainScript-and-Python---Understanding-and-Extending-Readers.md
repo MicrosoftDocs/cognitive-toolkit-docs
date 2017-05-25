@@ -29,6 +29,87 @@ This version also introduces two main abstractions that can be extended in order
 
 In the next sections we discuss these abstractions in more detail.
 
+## Configuring a reader (minibatch source) in Python
+
+This section provides several examples on how a composite reader (aka [MinibatchSource](https://www.cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
+
+The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py), it shows the Python equivalent of the AlexNet reader from [Transforms](#transforms) section.
+
+```
+import cntk.io
+
+mean_file = ...
+map_file = ...
+
+# model dimensions
+image_height = 227
+image_width  = 227
+num_channels = 3  # RGB
+num_classes  = 1000
+
+transforms = [
+     ImageDeserializer.crop(crop_type='randomside', 
+                            side_ratio=0.88671875, 
+                            jitter_type='uniratio'),
+     ImageDeserializer.scale(width=image_width, 
+                            height=image_height, 
+                            channels=num_channels, 
+                            interpolations='linear'),
+     ImageDeserializer.mean(mean_file)
+]
+
+reader = MinibatchSource(
+    ImageDeserializer(map_file, StreamDefs(
+        # first column in map file is referred to as 'image'
+        features = StreamDef(field='image', transforms=transforms),
+        # and second as 'label' 
+        labels   = StreamDef(field='label', shape=num_classes)))) 
+```
+
+The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
+
+```
+n_rois = 100
+n_classes = 17
+rois_dim = 4 * n_rois
+label_dim = n_classes * n_rois
+
+map_file = ...
+roi_file = ...
+label_file = ...
+
+# read images
+scale = ImageDeserializer.scale(width=1000, 
+                                height=1000, 
+                                channels=3,
+                                scale_mode="pad", 
+                                pad_value=114, 
+                                interpolations='linear')
+image_source = ImageDeserializer(map_file)
+image_source.ignore_labels()
+image_source.map_features('features', [scale])
+
+# read rois and labels
+roi_source = CTFDeserializer(roi_file)
+roi_source.map_input('rois', dim=rois_dim, format="dense")
+label_source = CTFDeserializer(label_file)
+label_source.map_input('roiLabels', dim=label_dim, format="dense")
+
+# define a composite reader
+reader = MinibatchSource([image_source, roi_source, label_source])
+
+...
+
+# define mapping from reader streams to network inputs
+input_map = {
+    image_input: reader.streams.features,
+    roi_input: reader.streams.rois,
+    label_input: reader.streams.roiLabels
+}
+```
+
+# Brainscipt
+
 ## Deserializers
 Let's have a look at the following fragment of configuration for the *HTKMLFReader* from the end-to-end *LSTM/FullUtterance* test
 (full config [here](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/Speech/LSTM/cntk.cntk)):
@@ -264,7 +345,7 @@ Transform configuration identifies the transform type and any transform-specific
     # Transform-specific options
 ]
 ```
-## Configuration Options
+## Configuration Options 
 
 ### General Reader Configuration
 
@@ -331,84 +412,6 @@ This deserializer supports the same options that can be used with ImageDeseriali
 
 * `file`: a simple text file where each line contains a tab-separated mapping between logical sequence key (optional, can be omitted), 0-based category label and base 64 encoded image file (e.g. JPEG, PNG etc.).
 
-## Configuring a reader (minibatch source) in Python
-
-This section provides several examples on how a composite reader (aka [MinibatchSource](https://www.cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
-
-The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py), it shows the Python equivalent of the AlexNet reader from [Transforms](#transforms) section.
-
-```
-import cntk.io
-
-mean_file = ...
-map_file = ...
-
-# model dimensions
-image_height = 227
-image_width  = 227
-num_channels = 3  # RGB
-num_classes  = 1000
-
-transforms = [
-     ImageDeserializer.crop(crop_type='randomside', 
-                            side_ratio=0.88671875, 
-                            jitter_type='uniratio'),
-     ImageDeserializer.scale(width=image_width, 
-                            height=image_height, 
-                            channels=num_channels, 
-                            interpolations='linear'),
-     ImageDeserializer.mean(mean_file)
-]
-
-reader = MinibatchSource(
-    ImageDeserializer(map_file, StreamDefs(
-        # first column in map file is referred to as 'image'
-        features = StreamDef(field='image', transforms=transforms),
-        # and second as 'label' 
-        labels   = StreamDef(field='label', shape=num_classes)))) 
-```
-
-The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
-
-```
-n_rois = 100
-n_classes = 17
-rois_dim = 4 * n_rois
-label_dim = n_classes * n_rois
-
-map_file = ...
-roi_file = ...
-label_file = ...
-
-# read images
-scale = ImageDeserializer.scale(width=1000, 
-                                height=1000, 
-                                channels=3,
-                                scale_mode="pad", 
-                                pad_value=114, 
-                                interpolations='linear')
-image_source = ImageDeserializer(map_file)
-image_source.ignore_labels()
-image_source.map_features('features', [scale])
-
-# read rois and labels
-roi_source = CTFDeserializer(roi_file)
-roi_source.map_input('rois', dim=rois_dim, format="dense")
-label_source = CTFDeserializer(label_file)
-label_source.map_input('roiLabels', dim=label_dim, format="dense")
-
-# define a composite reader
-reader = MinibatchSource([image_source, roi_source, label_source])
-
-...
-
-# define mapping from reader streams to network inputs
-input_map = {
-    image_input: reader.streams.features,
-    roi_input: reader.streams.rois,
-    label_input: reader.streams.roiLabels
-}
-```
 
 
 ## Examples of Configurations and Tests
