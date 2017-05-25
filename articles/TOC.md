@@ -5,21 +5,22 @@
 ## [FAQ](/cognitive-toolkit/CNTK-FAQ)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
-## [Install pre-built binaries](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
+## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+### Binary setup
+#### [Setup Windows Python](/cognitive-toolkit/Setup-Windows-Python)
+#### [Setup Windows binary script](/cognitive-toolkit/Setup-Windows-Binary-Script)
+#### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
+#### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
+#### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
+#### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
 ### [Setup for Windows](/cognitive-toolkit/Setup-CNTK-on-Windows)
 #### [Migration from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
 ### [Setup on Linux](/cognitive-toolkit/Setup-CNTK-on-Linux)
-## [Usage overview](/cognitive-toolkit/CNTK-usage-overview)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
-## Binary setup
-### [Setup Windows Python](/cognitive-toolkit/Setup-Windows-Python)
-### [Setup Windows binary script](/cognitive-toolkit/Setup-Windows-Binary-Script)
-### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
-### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
-### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
-### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
+
 ## CNTK codebase
 ### [Setup CNTK with script on Windows](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
 ### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
@@ -36,14 +37,17 @@
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
-### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
-### BrainScript Tutorials
+
+### [Python](https://www.cntk.ai/pythondocs/tutorials.html)
+#### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
+### BrainScript
+#### [Overview](/cognitive-toolkit/CNTK-usage-overview)
 #### [Getting started](/cognitive-toolkit/tutorial/tutorial)
 #### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
-#### [Python Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
-### [Microsoft Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
+#### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
+
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
 ### [Model Evaluation Overview](/cognitive-toolkit/CNTK-Library-Evaluation-Overview)
@@ -61,13 +65,6 @@
 #### [EvalDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## How do I
-### How do I in BrainScript
-#### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
-#### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
-#### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
-#### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
-#### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
-#### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
 ### How do I in Python
 #### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
 #### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
@@ -75,10 +72,21 @@
 #### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
 #### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
 #### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
-### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
-### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
+#### Recipes
+##### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
+##### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
+
 ## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
+
+### How do I in BrainScript
+#### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
+#### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
+#### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
+#### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
+#### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
+#### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
+
 ## Source Code & Development
 ### [Developing and testing](/cognitive-toolkit/Developing-and-Testing)
 #### [Coding guidelines](/cognitive-toolkit/Coding-Guidelines)
