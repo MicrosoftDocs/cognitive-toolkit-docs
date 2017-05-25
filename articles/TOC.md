@@ -37,15 +37,16 @@
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
 
-### BrainScript Tutorials
+### [Python](https://www.cntk.ai/pythondocs/tutorials.html)
+#### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
+### BrainScript
 #### [Overview](/cognitive-toolkit/CNTK-usage-overview)
 #### [Getting started](/cognitive-toolkit/tutorial/tutorial)
 #### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
 #### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
-### [Python Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
-### [Microsoft Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
+
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
 ### [Model Evaluation Overview](/cognitive-toolkit/CNTK-Library-Evaluation-Overview)
@@ -63,13 +64,6 @@
 #### [EvalDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
 ## [API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## How do I
-### How do I in BrainScript
-#### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
-#### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
-#### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
-#### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
-#### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
-#### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
 ### How do I in Python
 #### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
 #### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
@@ -77,10 +71,21 @@
 #### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
 #### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
 #### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
-### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
-### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
+#### Recipes
+##### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
+##### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
+
 ## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
+
+### How do I in BrainScript
+#### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
+#### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
+#### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
+#### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
+#### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
+#### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
+
 ## Source Code & Development
 ### [Developing and testing](/cognitive-toolkit/Developing-and-Testing)
 #### [Coding guidelines](/cognitive-toolkit/Coding-Guidelines)
