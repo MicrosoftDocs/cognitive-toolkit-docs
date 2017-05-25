@@ -11,7 +11,6 @@
 #### [Migration from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
 ### [Setup on Linux](/cognitive-toolkit/Setup-CNTK-on-Linux)
-## [Usage overview](/cognitive-toolkit/CNTK-usage-overview)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
 ## Binary setup
@@ -37,13 +36,15 @@
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
-### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
+
 ### BrainScript Tutorials
+#### [Overview](/cognitive-toolkit/CNTK-usage-overview)
 #### [Getting started](/cognitive-toolkit/tutorial/tutorial)
 #### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 #### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
 #### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
-#### [Python Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
+#### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
+### [Python Tutorial](https://www.cntk.ai/pythondocs/tutorials.html)
 ### [Microsoft Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
