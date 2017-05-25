@@ -108,7 +108,9 @@ input_map = {
 }
 ```
 
-## Deserializers (Brainscript)
+# Brainscipt
+
+## Deserializers
 Let's have a look at the following fragment of configuration for the *HTKMLFReader* from the end-to-end *LSTM/FullUtterance* test
 (full config [here](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/Speech/LSTM/cntk.cntk)):
 ```
@@ -219,7 +221,7 @@ Currently CNTK supports the below deserializers:
 
 Please refer to the tables [below](#General-Reader-Configuration) for the full description of the configuration parameters.
 
-## Transforms (Brainscript)
+## Transforms
 A transform is a simple abstraction that take a sequence as an input, performs some transformation of samples in the sequence and returns the output sequence.
 Typical examples of transforms are different transformations of images such as crop, scale or transpose.
 Transforms can be configured on per input basis.
@@ -287,7 +289,7 @@ For their detailed description please see [ImageReader](./Brainscript-Image-read
 | Mean           | ImageReader |
 | Transpose      | ImageReader |
 
-## New Reader Configuration Format Description (Brainscript)
+## New Reader Configuration Format Description
 
 A reader configuration section to compose several data deserializers looks like follows:
 ```
