@@ -1,3 +1,15 @@
+---
+title:   Binary Operations
+author:    chrisbasoglu
+date:    05/24/2017
+ms.author:   cbasoglu
+ms.date:   05/24/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   NA
+---
+
 # Using CNTK with Keras (Beta)
 
 **This page is under development**
