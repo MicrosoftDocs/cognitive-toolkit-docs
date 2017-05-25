@@ -5,7 +5,8 @@
 ## [FAQ](/cognitive-toolkit/CNTK-FAQ)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
-## [Install pre-built binaries](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
+## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### [Setup for Windows](/cognitive-toolkit/Setup-CNTK-on-Windows)
 #### [Migration from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
