@@ -71,7 +71,6 @@ Please note that `Communicator.finalize()` should be called only in case the dis
 
 For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
-
 ## 3. Configuring Parallel Training in CNTK in BrainScript
 
 To enable parallel training in CNTK BrainScript, it is first necessary to turn on the following switch in
@@ -89,7 +88,7 @@ Secondly, the `SGD` block in the config file should contain a sub-block named
 2. `distributedMBReading` : (optional) accepts Boolean value: `true` or `false`; default is `false`
 
     It is recommended to turn distributed minibatch reading on to minimize the
-    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./BrainScript-and-Python---Understanding-and-Extending-Readers.md), distributedMBReading should be set to true.
+    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers.md), distributedMBReading should be set to true.
 
 3.  `parallelizationStartEpoch`: (optional) accepts integer value; default is 1.
 
@@ -199,7 +198,6 @@ Where name_of_node(n) is simply a DNS name or IP address of the worker node.
     mpiexec --hosts %num_nodes% %name_of_node1% %num_workers_on_node1%  ...  python training.py
     ```
 
-
 ## 5 Data-Parallel Training with 1-bit SGD
 
 CNTK implements the 1-bit SGD technique [1]. This technique allows to distribute each minibatch over `K` workers. The resulting partial gradients are then exchanged and aggregated after each minibatch. "1 bit" refers to a technique developed at Microsoft for reducing the amount of data that is exchanged for each gradient value to a single bit.
@@ -268,6 +266,7 @@ Changing num_quantization_bits to 32 during the creation of distributed_learner 
 *Block-Momentum SGD* is the implementation of the "blockwise model update and filtering", or BMUF, algorithm, short *Block Momentum* [2].
 
 ### 6.1 The Block-Momentum SGD Algorithm
+
 The following figure summarizes the procedure in the Block-Momentum algorithm.
 
 ![bm](figures/bm.jpg)
@@ -486,6 +485,7 @@ Furthermore, as parameter servers is a distributed framework that store model pa
 - **warm start**. In some cases, it is better to have the asynchronous model training started from a seed model (which is trained by standard SGD algorithm). In some sense, Asynchronous SGD brings more noise for the training due to the delayed updates from asynchronism among workers. Some models are very sensitive to such noise at the beginning, which might result in diverge of model training. Under such circumstance, a **warm start** is needed.
 
 ### 8.2 Configuring Data-Parallel ASGD in BrainScript
+
 - To use Data-Parallel ASGD in CNTK, it is required to have a sub-block DataParallelASGD in the SGD block with the following options
 
 - * `syncPeriodPerWorkers`. It specifies the number of samples that each worker need to process before communicating with the parameter servers. The default value is 256. It's recommended as size of minibatch. It’s obvious that frequent sync up will lead to significant high communication cost. In our test, it’s not necessary to set the value to 1 in most cases.
@@ -514,6 +514,7 @@ The following is an example of `DataParallelASGD` configuration section:
         ]
     ]
  ```
+
 ### 8.3 Configuring Data-Parallel ASGD in Python
 
 This is work in progress.
@@ -525,7 +526,6 @@ The following figure shows the experiments to test ASGD with CIFAR-10 dataset. T
 
 ![compare](figures/asgd-cifar-compare.png)
 Figure 2.4 the speed up for different training methods
-
 
 ##  References
 
