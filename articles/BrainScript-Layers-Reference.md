@@ -473,7 +473,7 @@ the vast majority of columns would be zero,
 CNTK implements has a specific optimization to represent the gradient in "column-sparse" form.
 
 Known issue: The above-mentioned column-sparse gradient form is currently not supported by
-our [1-bit SGD](./Multiple-GPUs-and-machines.md#21-data-parallel-training-with-1-bit-sgd) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) technique instead.
+our [1-bit SGD](./Multiple-GPUs-and-machines.md) parallelization technique. Please use the [block-momentum](./Multiple-GPUs-and-machines.md) technique instead.
 
 ### Example
 
