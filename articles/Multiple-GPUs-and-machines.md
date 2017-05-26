@@ -10,7 +10,9 @@ ms.service:  Cognitive-services
 ms.devlang:   brainscript, python
 ---
 
-# 1. Introduction
+# Multiple GPUs and Machines
+
+## 1. Introduction
 
 CNTK currently supports four parallel SGD algorithms:
 
@@ -40,7 +42,7 @@ The second license is specific for the 1-bit Stochastic Gradient Descent (1bit-S
 
 *Model-Averaging SGD*'s implementation is stored with the main CNTK code and is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md).
 
-# 2. Configuring Parallel Training in CNTK in Python
+## 2. Configuring Parallel Training in CNTK in Python
 
 To use data parallel SGD in Python, the user needs to create and pass a distributed learner to the trainer:
 
@@ -69,8 +71,7 @@ Please note that `Communicator.finalize()` should be called only in case the dis
 
 For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
-
-# 3. Configuring Parallel Training in CNTK in BrainScript
+## 3. Configuring Parallel Training in CNTK in BrainScript
 
 To enable parallel training in CNTK BrainScript, it is first necessary to turn on the following switch in
 either the configuration file or in the command line:
@@ -87,7 +88,7 @@ Secondly, the `SGD` block in the config file should contain a sub-block named
 2. `distributedMBReading` : (optional) accepts Boolean value: `true` or `false`; default is `false`
 
     It is recommended to turn distributed minibatch reading on to minimize the
-    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./Understanding-and-Extending-Readers.md), distributedMBReading should be set to true.
+    I/O cost in each worker. If you are using CNTK Text Format reader, Image Reader, or [Composite Data Reader](./BrainScript-and-Python---Understanding-and-Extending-Readers.md), distributedMBReading should be set to true.
 
 3.  `parallelizationStartEpoch`: (optional) accepts integer value; default is 1.
 
@@ -112,11 +113,11 @@ The name of the sub-block should equal to `parallelizationMethod`. (mandatory)
 
 Python provides more flexibility and usages are shown below for different parallelization methods.
 
-# 4. Running Parallel Training with CNTK
+## 4. Running Parallel Training with CNTK
 
 Parallelization in CNTK is implemented with MPI.
 
-##  4.1 Running Parallel Training with BrainScript
+###  4.1 Running Parallel Training with BrainScript
 
 Given any of the parallel-training BrainScript configurations above, the following commands
 can be used to start a parallel MPI job:
@@ -155,7 +156,7 @@ Where name_of_node(n) is simply a DNS name or IP address of the worker node.
 
 where `$cntk` should refer to the path of the CNTK executable (`$x` is the Linux shell's way of substituting environment variables, the equivalent of `%x%` in the Windows shell).
 
-##  4.2 Running Parallel Training with Python
+###  4.2 Running Parallel Training with Python
 
 Examples for distributed training for CNTK v2 with Python can be found here:
 
@@ -197,12 +198,11 @@ Where name_of_node(n) is simply a DNS name or IP address of the worker node.
     mpiexec --hosts %num_nodes% %name_of_node1% %num_workers_on_node1%  ...  python training.py
     ```
 
-
-# 5 Data-Parallel Training with 1-bit SGD
+## 5 Data-Parallel Training with 1-bit SGD
 
 CNTK implements the 1-bit SGD technique [1]. This technique allows to distribute each minibatch over `K` workers. The resulting partial gradients are then exchanged and aggregated after each minibatch. "1 bit" refers to a technique developed at Microsoft for reducing the amount of data that is exchanged for each gradient value to a single bit.
 
-## 5.1 The "1-bit SGD" Algorithm
+### 5.1 The "1-bit SGD" Algorithm
 
 Directly exchanging partial gradients after each minibatch requires prohibitive communication bandwidth.
 To address this, 1-bit SGD aggressively quantizes each gradient value... to a single bit (!) per value. Practically, this means that large gradient values are clipped, while small values are artificially inflated.
@@ -214,7 +214,7 @@ As a consequence, despite the aggressive quantization, each gradient value is ev
 
 For maximum effeciency, the technique should be combined with *automatic minibatch scaling*, where every now and then, the trainer tries to increase the minibatch size. Evaluating on a small subset of the upcoming epoch of data, the trainer will select the largest minibatch size that does not harm convergence. Here, it comes in handy that CNTK specifies the learning rate and momentum hyperparameters in a minibatch-size agnostic way.
 
-## 5.2 Using 1-bit SGD in BrainScript
+### 5.2 Using 1-bit SGD in BrainScript
 
 1-bit SGD itself has no parameter other than enabling it and after which epoch it should commence. In addition, automatic minibatch-scaling should be enabled. These are configured by adding the following parameters to the SGD block:
 
@@ -236,7 +236,7 @@ Note that Data-Parallel SGD can also be used without 1-bit quantization. However
 
 Section 2.2.3 below shows results of 1-bit SGD on a speech task, comparing with the Block-Momentum SGD method which is described next. Both methods have no or nearly no loss of accuracy at near-linear speed-up.
 
-## 5.3 Using 1-bit SGD in Python
+### 5.3 Using 1-bit SGD in Python
 
 To use data parallel SGD in Python, optionally with 1-bit SGD, the user needs to create and pass a distributed learner to the trainer:
 
@@ -261,16 +261,17 @@ To use data parallel SGD in Python, optionally with 1-bit SGD, the user needs to
 
 Changing num_quantization_bits to 32 during the creation of distributed_learner makes it use non-quantized Data-Parallel SGD. There is no need for warm start in this case.
 
-# 6 Block-Momentum SGD
+## 6 Block-Momentum SGD
 
 *Block-Momentum SGD* is the implementation of the "blockwise model update and filtering", or BMUF, algorithm, short *Block Momentum* [2].
 
-## 6.1 The Block-Momentum SGD Algorithm
+### 6.1 The Block-Momentum SGD Algorithm
+
 The following figure summarizes the procedure in the Block-Momentum algorithm.
 
 ![bm](figures/bm.jpg)
 
-## 6.2 Configuring Block-Momentum SGD in BrainScript
+### 6.2 Configuring Block-Momentum SGD in BrainScript
 
 To use Block-Momentum SGD, it is required to have a sub-block named
 `BlockMomentumSGD` in the `SGD` block with the following options:
@@ -324,7 +325,7 @@ Following is an example of Block-Momentum SGD configuration section:
         ]
     ]
 
-## 6.3 Using Block-Momentum SGD in BrainScript
+### 6.3 Using Block-Momentum SGD in BrainScript
 
 #### 1. Re-tuning learning parameters
 
@@ -398,7 +399,7 @@ To enable Block-Momentum in Python, similarly to the 1-bit SGD, the user needs t
 For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 
-# 7  Model-Averaging SGD
+## 7  Model-Averaging SGD
 
 *Model-Averaging SGD* is an implementation of the model averaging algorithm
 detailed in [3,4] without the use of natural gradient. The idea here is to let
@@ -414,7 +415,7 @@ To use Model-Averaging SGD, it is required to have a sub-block named
 * `syncPeriod` specifies the number of samples that each worker need to
 process before a model averaging is conducted. The default value is 40,000.
 
-## 7.1 Using Model-Averaging SGD in BrainScript
+### 7.1 Using Model-Averaging SGD in BrainScript
 
 To make Model-Averaging SGD maximally effective and efficient, users need to tune some
 hyper-parameters:
@@ -460,18 +461,18 @@ The following is an example of `ModelAveragingSGD` configuration section:
         ]
     ]
 
-## 7.2 Using Model-Averaging SGD in Python
+### 7.2 Using Model-Averaging SGD in Python
 
 This is work in progress.
 
-#  8 Data-Parallel Training with Parameter Server
+##  8 Data-Parallel Training with Parameter Server
 
 Parameter server is a widely used framework in distributed machine learning [5][6][7]. The most important benefit it brings is the asynchronous parallel training with many workers. It introduces the parameter server as a distributed model store. Instead of directly leveraging AllReduce primitives to sync parameter updates among workers, parameter server framework provides users the interfaces like "Add" and "Get" to let local workers update and retrieve global parameters from parameter server. In this way, local workers don't need to wait for each other during the training process which saves lots of time especially when the worker number is large.
 
 Furthermore, as parameter servers is a distributed framework that store model parameters, workers can only retrieve those parameters they need during the mini-batch training process, this brings very good flexibility in design distributed training method and also enhances the efficiency when conducting training with sparse model updates. In this release, we will focus on the asynchronous parallel training first, later we will give more introduction on how to leverage parameter server framework for efficient model training with sparse updates.
 
 
-## 8.1 Using Data-Parallel ASGD
+### 8.1 Using Data-Parallel ASGD
 
 - To use parameter servers for the Asynchronous SGD (abbr. as ASGD), you should build CNTK with [Multiverso](http://github.com/microsoft/multiverso) supported, Multiverso is a general parameter server framework for distributed machine learning task developed by Microsoft Research Asia team.
 * `Clone Code`: please clone the code under the root folder of CNTK by using:
@@ -483,7 +484,8 @@ Furthermore, as parameter servers is a distributed framework that store model pa
 
 - **warm start**. In some cases, it is better to have the asynchronous model training started from a seed model (which is trained by standard SGD algorithm). In some sense, Asynchronous SGD brings more noise for the training due to the delayed updates from asynchronism among workers. Some models are very sensitive to such noise at the beginning, which might result in diverge of model training. Under such circumstance, a **warm start** is needed.
 
-## 8.2 Configuring Data-Parallel ASGD in BrainScript
+### 8.2 Configuring Data-Parallel ASGD in BrainScript
+
 - To use Data-Parallel ASGD in CNTK, it is required to have a sub-block DataParallelASGD in the SGD block with the following options
 
 - * `syncPeriodPerWorkers`. It specifies the number of samples that each worker need to process before communicating with the parameter servers. The default value is 256. It's recommended as size of minibatch. It’s obvious that frequent sync up will lead to significant high communication cost. In our test, it’s not necessary to set the value to 1 in most cases.
@@ -512,11 +514,12 @@ The following is an example of `DataParallelASGD` configuration section:
         ]
     ]
  ```
-## 8.3 Configuring Data-Parallel ASGD in Python
+
+### 8.3 Configuring Data-Parallel ASGD in Python
 
 This is work in progress.
 
-## 8.4 Experiments
+### 8.4 Experiments
 
 The following figure shows the experiments to test ASGD with CIFAR-10 dataset. The model used in this experiment is a 20-layer ResNet. The asynchronous algorithm reduces the cost on waiting for all worker nodes.  ASGD, in this case, is clearly faster than the synchronous algorithms, like MA and SSGD. *In the experiments, all parallel modes synchronize the parameters every iteration (mini-batch update). And for SSGD, we used 32-bit parameter updates. Asynchronous algorithm gains significant advantage in terms of training throughput measured by the sample processing speed, especially when the work node number goes up to 16.
 
@@ -524,8 +527,7 @@ The following figure shows the experiments to test ASGD with CIFAR-10 dataset. T
 ![compare](figures/asgd-cifar-compare.png)
 Figure 2.4 the speed up for different training methods
 
-
-#  References
+##  References
 
 [1] F. Seide, Hao Fu, Jasha Droppo, Gang Li, and Dong Yu, "*1-bit stochastic gradient descent and its application to data-parallel distributed training of speech DNNs*," in Proceedings of Interspeech, 2014.
 

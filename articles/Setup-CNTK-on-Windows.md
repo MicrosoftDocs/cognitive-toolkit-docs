@@ -66,12 +66,12 @@ git submodule update --init Source/Multiverso
 
 This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
-The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md##24-data-parallel-training-with-parameter-server) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in an CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
+The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in an CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
 ```
 setx CNTK_ENABLE_ASGD false
 ```
 
-**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
+**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ##  MKL
 
@@ -347,7 +347,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md#cuDNN)). 
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md##cudnn)). 
 Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
 As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 
