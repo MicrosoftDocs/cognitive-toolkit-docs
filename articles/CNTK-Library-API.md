@@ -27,7 +27,7 @@ The API introduces new [Protocol Buffers](https://developers.google.com/protocol
 
 ## C++ API
 
-The CNTK Library C++ API includes in this release exposes CNTK's core computational, neural network composition & training, efficient data reading capabilities, and scalable model training facilities for developers. The C++ APIs are fully featured for both model training as well as evaluation, allowing both training and model serving to be driven from native code. This enables your native model serving code to simultaneously refine the online model tuning using new data seen as part of serving requests (i.e. online learning).
+The CNTK Library C++ API exposes CNTK's core computational, neural network composition & training, efficient data reading capabilities, and scalable model training facilities for developers. The C++ APIs are fully featured for both model training as well as evaluation, allowing both training and model serving to be driven from native code. This enables your native model serving code to simultaneously refine the online model tuning using new data seen as part of serving requests (i.e. online learning).
 
 The examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the use of the C++ APIs for evaluating previously trained CNTK models. We are also actively working on creating C++ examples illustrating how model training can be performed using the native C++ API and these will become available in a few weeks. 
 
