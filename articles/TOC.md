@@ -168,6 +168,7 @@
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
 ## [C++](/cognitive-toolkit/CNTK-Library-API#c-api)
 ## [C#](/cognitive-toolkit/CNTK-Library-Managed-API)
+## [Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ## [Python](https://www.cntk.ai/pythondocs/)
 ### [Working with Sequences](https://www.cntk.ai/pythondocs/sequence.html)
 ### [Layers library reference](https://www.cntk.ai/pythondocs/layerref.html)
