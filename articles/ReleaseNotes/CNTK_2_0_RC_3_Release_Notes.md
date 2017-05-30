@@ -29,7 +29,7 @@ With the Release Candidate 3 we ship the last preview before the Microsoft Cogni
 
 ### CNTK Java API
 
-Java API is added to support model evaluation in Java on Windows and Linux. Note, that the API is still *experimental* and subject to change. Feedback from community is greatly appreciated. See the details at the following pages: [Java API on Windows](../CNTK-Library-Evaluation-on-Windows#using-java), and [Java API on Linux](../CNTK-Library-Evaluation-on-Linux#using-java).
+Java API is added to support model evaluation in Java on Windows and Linux. Note, that the API is still *experimental* and subject to change. Feedback from community is greatly appreciated. See the details at the following pages: [Java API on Windows](../CNTK-Library-Evaluation-on-Windows.md#using-java), and [Java API on Linux](../CNTK-Library-Evaluation-on-Linux.md#using-java).
 
 ### cuDNN v.6.0 support when building CNTK from source code
 
