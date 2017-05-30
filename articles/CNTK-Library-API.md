@@ -45,7 +45,7 @@ There are several [Eval Examples](./CNTK-Eval-Examples.md) inside the [CNTKLibra
 
 The CNTK Java API supports model evaluation in Java. This API is still experimental and subject to change. It is provided as a jar file (cntk.jar) that can be included in Java projects.
 
-Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows.md#using-Java) and [Linux](./CNTK-Library-Evaluation-on-Linux.md#using-Java) instructions for how to use the Java API.
+Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows.md#using-java) and [Linux](./CNTK-Library-Evaluation-on-Linux.md#using-java) instructions for how to use the Java API.
 
 The [Java example](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a model in Java.
 
