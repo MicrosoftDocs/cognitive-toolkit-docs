@@ -56,7 +56,7 @@ On Windows:
 
 On Linux:
 
-```export KERAS_BACKEND=CNTK```
+```export KERAS_BACKEND=cntk```
 
 
 7.	Try out the Keras examples
