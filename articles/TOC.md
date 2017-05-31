@@ -2,7 +2,6 @@
 ## [What's new](/cognitive-toolkit/news)
 ### [News 2016](/cognitive-toolkit/news-2016)
 ### [CNTK move to Cuda8](/cognitive-toolkit/CNTK-move-to-Cuda8)
-## [FAQ](/cognitive-toolkit/CNTK-FAQ)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
 ## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
@@ -197,3 +196,4 @@
 ## [Conference appearances](/cognitive-toolkit/Conference-Appearances)
 ## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/CNTK-1bit-SGD-License)
+# [FAQ](/cognitive-toolkit/CNTK-FAQ)
