@@ -12,17 +12,17 @@ ms.devlang:   NA
 
 # Using CNTK with Keras (Beta)
 
-**This page is under development**
+We are happy to bring CNTK as the backend for Keras as a beta release to our fans asking for this feature. While there is feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
 
 ## Steps to follow
 
 We assume you have followed the Anaconda installed on your Windows or Linux machines.
 
-1. We highly recommend creating a new anaconda environment.
+1. While you can install Keras support in your default python environment, we highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default python setup.  
 
 ```conda create --name cntkkeraspy35 python=3.5 numpy scipy h5py jupyter```
 
-2. Activate the new environment
+2. Activate the new environment, if you have created an environment. If you have chosen to install Keras (CNTK) in default environment, then skip to the next step. 
 
 ```activate cntkkeraspy35```
 
@@ -32,9 +32,15 @@ We assume you have followed the Anaconda installed on your Windows or Linux mach
 
 This is a public github repo which host cntk keras support. We are working with keras team to contribute this back soon.
 
-4. Install a GPU build of CNTK
+4. Install a suitable build of CNTK (with Keras support).
 
-```pip install <URL to CNTK GPU wheel>```
+```pip install <URL to CNTK wheel>```
+
+Please choose one of the several available wheel options from the following pages to match your python + machine environment.
+
+> For Windows: The binaries and install instructions can be found [here](./Setup-Windows-Python.md).
+
+> For Linux: The binaries are found [here](./Setup-Linux-Python.md). Additionally please follow the pre-requisites section from this page before installing the wheel. 
 
 5. Update Keras to use CNTK as backend
 
