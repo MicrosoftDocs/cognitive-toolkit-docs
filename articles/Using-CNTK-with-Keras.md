@@ -1,9 +1,9 @@
 ---
 title:   Binary Operations
-author:    chrisbasoglu
-date:    05/24/2017
-ms.author:   cbasoglu
-ms.date:   05/24/2017
+author:    sayanpathak
+date:    05/30/2017
+ms.author:   sayanpa
+ms.date:   05/30/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -17,61 +17,68 @@ ms.devlang:   NA
 ## Steps to follow
 
 We assume you have followed the Anaconda installed on your Windows or Linux machines.
- 
+
 1. We highly recommend creating a new anaconda environment.
 
 ```conda create --name cntkkeraspy35 python=3.5 numpy scipy h5py jupyter```
- 
+
 2. Activate the new environment
 
 ```activate cntkkeraspy35```
 
-3. Install [Keras](https://keras.io/#installation) 
- 
+3. Install [Keras](https://keras.io/#installation)
+
+```pip install git+https://github.com/souptc/keras.git```
+
+This is a public github repo which host cntk keras support. We are working with keras team to contribute this back soon.
+
 4. Install a GPU build of CNTK
 
-```
-pip install <URL to CNTK GPU wheel>
-```
- 
+```pip install <URL to CNTK GPU wheel>```
+
 5. Update Keras to use CNTK as backend
 
-On Windows: 
+You have two ways to set keras backend:
 
-```SET KERAS_BACKEND=cntk```
+> 5.1. By keras.json file.
 
-On Linux:
+>   Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine). **Only set the "backend" field to "cntk"**
 
-```export KERAS_BACKEND=CNTK```
+```
+   { 
+    "epsilon": 1e-07, 
+    "image_data_format": "channels_last", 
+    "backend": "cntk", 
+    "floatx": "float32" 
+    }
+```
+	
 
+> 5.2. By environment variable
 
-**CHENTA** ensure “image_dim_ordering” is set to “tf”
+>> On Windows:
 
-**[DO YOU NEED THIS] If you don’t have a keras.json, it means you have not run keras on the machine. ** Run Python and import keras and it will create the file.
+> ```SET KERAS_BACKEND=cntk```
 
-6.	Unzip the Keras examples to your machine
+>> On Linux:
 
-**CHENTA** Need instruction for downloading Keras examples publicly
+> ```export KERAS_BACKEND=cntk```
+
 
 7.	Try out the Keras examples
 
-python c:\local\keras_examples\examples\addition_rnn.py
- 
-9.	Test your own scripts!
- 
- 
- 
+You can try some example scripts in keras' repo: 
+https://github.com/fchollet/keras/tree/master/examples 
+ 
+For example, clone the "imdb_lstm.py" from the link above, and run: 
+```
+python imdb_lstm.py 
+```
+
 ## Known issues:
 
-•	The following Keras APIs are only supported on GPU: normalize_batch_in_training, batch_normalization
+•	Performance optimization on CPU device 
 
-•	The following Keras APIs are not yet supported: clear_session, cast, resize_images, resize_volumes, print_tensor, softplus, hard_sigmod, ctc_batch_cost, ctc_decode, map_fn, foldl, foldr
+•	The following operations are currently not supported in the the beta release.
 
-•	The following examples do not work yet: mnist_swwae.py, neural_doodle.py, neural_style_transfer.py, pretrained_word_embeddings.py
-
-•	The following Keras layers are not supported yet: convolution with dilation rate, cropping, noise, merge dot
-
-•	CPU performance needs to be improved
-
-•	Models cannot be saved to HDFS
-
+> Gradient as symbolic ops, Masking on recurrent layer, Padding with non-specified shape (to use cntk backend in keras with padding, please specify a well-defined input shape), Convolution with dilation, Randomness op across batch axis, few backend apis such as reverse, top_k, ctc, map, foldl, foldr etc.
