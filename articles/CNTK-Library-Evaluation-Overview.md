@@ -12,7 +12,7 @@ ms.devlang:   NA
 
 # CNTK Library Evaluation Overview
 
-The [CNTK Library API](./CNTK-Library-API.md) allows to evaluate both CNTK model-v1 and model-V2 [format](./CNTK-model-format.md). The CNTK Library can be consumed on Windows and Linux by C++, Python, C# and other .NET languages. 
+The [CNTK Library API](./CNTK-Library-API.md) allows to evaluate both CNTK model-v1 and model-V2 [format](./CNTK-model-format.md). The CNTK Library can be consumed on Windows and Linux by C++, Python, C#, Java and other .NET languages. 
 
 New features of the CNTK Library for Evaluation include
 * Support both CPU and GPU device.

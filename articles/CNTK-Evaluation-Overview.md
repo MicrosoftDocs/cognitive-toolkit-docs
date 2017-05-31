@@ -36,7 +36,7 @@ Aside from training a model, Microsoft Cognitve Toolkit provides different ways 
 | [CNTK-EvalDLL](./EvalDll-Evaluation-Overview.md) |  C++, C#/.NET | YES | NO |
 | | ASP and Azure support |||
 | | Nuget Package for CPU-Only support |||
-|[CNTK-library](./CNTK-Library-Evaluation-Overview.md) | C++, C#/.NET and Python | YES | YES | 
+|[CNTK-library](./CNTK-Library-Evaluation-Overview.md) | C++, C#/.NET, Java and Python | YES | YES | 
 | | ASP and Azure support |||
 | | GPU and CPU |||
 | | Nuget Packages |||
