@@ -39,24 +39,30 @@ This is a public github repo which host cntk keras support. We are working with 
 5. Update Keras to use CNTK as backend
 
 You have two ways to set keras backend:
-1. By keras.json file.
-   Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine)
+
+> 5.1. By keras.json file.
+
+>   Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine). **Only set the "backend" field to "cntk"**
+
+```
    { 
     "epsilon": 1e-07, 
     "image_data_format": "channels_last", 
     "backend": "cntk", 
     "floatx": "float32" 
-	}
-	Set the "backend" field to "cntk"
+    }
+```
+	
 
-2. By environment variable
-On Windows:
+> 5.2. By environment variable
 
-```SET KERAS_BACKEND=cntk```
+>> On Windows:
 
-On Linux:
+> ```SET KERAS_BACKEND=cntk```
 
-```export KERAS_BACKEND=cntk```
+>> On Linux:
+
+> ```export KERAS_BACKEND=cntk```
 
 
 7.	Try out the Keras examples
