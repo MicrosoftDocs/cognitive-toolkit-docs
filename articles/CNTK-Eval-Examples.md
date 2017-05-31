@@ -19,9 +19,9 @@ The CNTK binary download package on the [CNTK Releases page](https://github.com/
 The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryEvalExamples.sln) contains code samples demonstrating how to use the CNTK Library Eval API in C++ and C#. 
 - [`CNTKLibraryCSEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples) uses the [CNTK Library CPU-Only Nuget package](https://www.nuget.org/packages/CNTK.CPUOnly) to evaluate models on CPU-only devices in C#. 
 
-- [`CNTKLibraryCSEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalGPUExamples) uses the [CNTK Library GPU Nuget package](https://www.nuget.org/packages/CNTK.GPU/) to evaluate models on GPU devices in C#. 
-- [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) uses the CNTK Library C++ API to evaluate models on CPU-only devices. It uses the [CNTK Library CPU-Only Nuget package](https://www.nuget.org/packages/CNTK.CPUOnly/).
-- [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) uses the CNTK Library C++ API to evaluate models on GPU devices. It uses the [CNTK Library GPU Nuget package](https://www.nuget.org/packages/CNTK.GPU/2.0.0).
+- [`CNTKLibraryCSEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalGPUExamples) uses the [CNTK Library GPU Nuget package](https://www.nuget.org/packages/CNTK.GPU) to evaluate models on GPU devices in C#. 
+- [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) uses the CNTK Library C++ API to evaluate models on CPU-only devices. It uses the [CNTK Library CPU-Only Nuget package](https://www.nuget.org/packages/CNTK.CPUOnly).
+- [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) uses the CNTK Library C++ API to evaluate models on GPU devices. It uses the [CNTK Library GPU Nuget package](https://www.nuget.org/packages/CNTK.GPU).
 
 On Windows, 
 - You need Visual Studio 2015 update 3 for using these samples.
