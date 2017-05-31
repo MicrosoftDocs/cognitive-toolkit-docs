@@ -10,32 +10,28 @@
 ### Binary setup
 #### [On Windows Python](/cognitive-toolkit/Setup-Windows-Python)
 #### [On Windows with script](/cognitive-toolkit/Setup-Windows-Binary-Script)
+##### [Set script options](/cognitive-toolkit/Setup-Windows-Binary-Script-Options)
 #### [On Windows manually](/cognitive-toolkit/Setup-Windows-Binary-Manual)
 #### [On Linux Python](/cognitive-toolkit/Setup-Linux-Python)
 #### [On Linux with script](/cognitive-toolkit/Setup-Linux-Binary-Script)
 #### [On Linux manually](/cognitive-toolkit/Setup-Linux-Binary-Manual)
+
 ### Setup from sources
 #### [On Windows with script](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
+##### [Set script options](/cognitive-toolkit/Setup-Windows-Devinstall-Script-Option)
 #### [On Windows manually](/cognitive-toolkit/Setup-CNTK-on-Windows)
+##### [Set environment variables](/cognitive-toolkit/Windows-Environment-Variables)
+##### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
+##### [Setup Buildzlib VS15](/cognitive-toolkit/Setup-Buildzlib-VS15)
 #### [Migrate from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
-#### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
 #### [On Linux manually](/cognitive-toolkit/Setup-CNTK-on-Linux)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
+### Optional 
+#### [Test setup with Python](/cognitive-toolkit/Setup-Test-Python)
+#### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
+#### [Shared lib naming](/cognitive-toolkit/CNTK-Shared-Libraries-Naming-Format)
 
-## CNTK codebase
-
-### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
-### [CNTK 2.0 Beta Highlights](/cognitive-toolkit/CNTK-2.0-Beta-Highlights)
-### [CNTK Python known issues and limitations](/cognitive-toolkit/CNTK-Python-known-issues-and-limitations)
-### [CNTK Library Native Interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
-### [CNTK Shared Libraries Naming Format](/cognitive-toolkit/CNTK-Shared-Libraries-Naming-Format)
-### [Setup Buildzlib VS15](/cognitive-toolkit/Setup-Buildzlib-VS15)
-### [Setup CNTK Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
-### [Setup Test Python](/cognitive-toolkit/Setup-Test-Python)
-### [Setup Windows Binary Script Options](/cognitive-toolkit/Setup-Windows-Binary-Script-Options)
-### [Setup Windows Devinstall Script Option](/cognitive-toolkit/Setup-Windows-Devinstall-Script-Option)
-### [Python Getting started - language](https://www.cntk.ai/pythondocs/gettingstarted.html)
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
@@ -169,6 +165,7 @@
 #### [BrainScript via command line](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
 ## [C++](/cognitive-toolkit/CNTK-Library-API#c-api)
+### [CNTK Library Native Interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 ## [C#](/cognitive-toolkit/CNTK-Library-Managed-API)
 ## [Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ## [Python](https://www.cntk.ai/pythondocs/)
