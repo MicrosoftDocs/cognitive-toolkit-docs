@@ -383,9 +383,16 @@ This section describes how to build CNTK v2 with Python support.
 
 - Install [Anaconda3 4.1.1 (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh)
 
-- If you already have a CNTK Python 3.5 environment (called `cntk-py35`) you can update it with the latest required packages with the following commands:
+- If you already have a CNTK Python environment (called `cntk-py36`, `cntk-py35`, `cntk-py34`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
 ```
+# For cntk-py36:
+conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py36-environment.yml --name cntk-py36
+# For cntk-py35:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml --name cntk-py35
+# For cntk-py34:
+conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py34-environment.yml --name cntk-py34
+# For cntk-py27:
+conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml --name cntk-py27
 ```
 
 - If you already have a CNTK Python environment (called `cntk-py35`, `cntk-py34`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
@@ -402,6 +409,8 @@ conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk
 
 - Create your Python environment of choice in your existing Python 3.5 Anaconda or Miniconda installation using *one* of the following commands, depending on your desired Python version:
 ```
+# For a Python 3.6 based version:
+conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py36-environment.yml
 # For a Python 3.5 based version:
 conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml
 # For a Python 3.4 based version:
@@ -414,7 +423,7 @@ For example, if you have Python 3.5 based environment called `cntk-py35` run thi
 ```
 source activate cntk-py35
 ```
-Similarly, for a Python 3.4 or 2.7 based environment.
+Similarly, for a Python 3.6, 3.4, or 2.7 based environment.
 
 **Step 2**: Uninstall previous CNTK 2.0 package
 - If you previously installed any version of the CNTK 2.0 pip-package on your machine, uninstall it by running: `pip uninstall cntk`
@@ -427,6 +436,7 @@ Similarly, for a Python 3.4 or 2.7 based environment.
 ```
 and *one* of the following (whatever applies to your environment):
 ```
+--with-py36-path[=directory]
 --with-py35-path[=directory]
 --with-py34-path[=directory]
 --with-py27-path[=directory]
@@ -498,6 +508,12 @@ make all
 sudo make install
 ```
 Note that in the instructions above we suggest using "plain" `make` rather than `make -j`. We found that using `make -j` with OpenCV results in unstable system behavior and may result in a build failure and system crash.
+
+### OPTIONAL. Java
+
+To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 7](http://openjdk.java.net/install/).
+
+The configure script provides `--with-jdk` option to specify the JDK directory manually, if it cannot be found by default.
 
 ## Getting CNTK Source code
 
