@@ -25,7 +25,7 @@ Any program using the evaluation library needs to link the libraries `libCntk.Co
 ```
 Please use the same build flavor (Debug/Release) and [the same compiler version](./Setup-CNTK-on-Linux.md#c-compiler) as the one used to create the libraries. The [Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) in the CNTK source code illustrates the usage pattern in Linux. The [Makefile](https://github.com/Microsoft/CNTK/blob/master/Makefile) contains the target CNTKLIBRARY_CPP_EVAL_EXAMPLES showing how to build the example.
 
-Please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface) page for APIs in the CNTK C++ Library.
+Please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface.md) page for APIs in the CNTK C++ Library.
 
 ### Using Python
 You can use Python to evaluate a pre-trained model. Examples can be found [here](./How-do-I-Evaluate-models-in-Python.md).
