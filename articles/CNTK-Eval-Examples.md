@@ -54,4 +54,4 @@ You can also use Python to evaluate a pre-trained model as described [here](./Ho
 ## CNTK Library Eval Java Examples
 The [Java example](https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/EvalClientTests/JavaEvalTest) shows how to evaluate a model using the Java API. Please note that the Java API is still experimental and subject to change.
 
-Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows#using-Java) and [Linux](./CNTK-Library-Evaluation-on-Linux#using-Java) instructions for how to build the Java example.
+Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows#using-java) and [Linux](./CNTK-Library-Evaluation-on-Linux#using-java) instructions for how to build the Java example.
