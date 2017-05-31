@@ -8,21 +8,23 @@
 ## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### Binary setup
-#### [Setup Windows Python](/cognitive-toolkit/Setup-Windows-Python)
-#### [Setup Windows binary script](/cognitive-toolkit/Setup-Windows-Binary-Script)
-#### [Setup Windows binary manual](/cognitive-toolkit/Setup-Windows-Binary-Manual)
-#### [Setup Linux Python](/cognitive-toolkit/Setup-Linux-Python)
-#### [Setup Linux binary script](/cognitive-toolkit/Setup-Linux-Binary-Script)
-#### [Setup Linux binary manual](/cognitive-toolkit/Setup-Linux-Binary-Manual)
-### [Setup for Windows](/cognitive-toolkit/Setup-CNTK-on-Windows)
-#### [Migration from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
+#### [On Windows Python](/cognitive-toolkit/Setup-Windows-Python)
+#### [On Windows with script](/cognitive-toolkit/Setup-Windows-Binary-Script)
+#### [On Windows manually](/cognitive-toolkit/Setup-Windows-Binary-Manual)
+#### [On Linux Python](/cognitive-toolkit/Setup-Linux-Python)
+#### [On Linux with script](/cognitive-toolkit/Setup-Linux-Binary-Script)
+#### [On Linux manually](/cognitive-toolkit/Setup-Linux-Binary-Manual)
+### Setup from sources
+#### [On Windows with script](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
+#### [On Windows manually](/cognitive-toolkit/Setup-CNTK-on-Windows)
+#### [Migrate from VS13 to VS15](/cognitive-toolkit/Setup-Migrate-VS13-to-VS15)
 #### [Windows Environment Variables](/cognitive-toolkit/Windows-Environment-Variables)
-### [Setup on Linux](/cognitive-toolkit/Setup-CNTK-on-Linux)
+#### [On Linux manually](/cognitive-toolkit/Setup-CNTK-on-Linux)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
 
 ## CNTK codebase
-### [Setup CNTK with script on Windows](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
+
 ### [Setup BuildProtobuf VS15](/cognitive-toolkit/Setup-BuildProtobuf-VS15)
 ### [CNTK 2.0 Beta Highlights](/cognitive-toolkit/CNTK-2.0-Beta-Highlights)
 ### [CNTK Python known issues and limitations](/cognitive-toolkit/CNTK-Python-known-issues-and-limitations)
