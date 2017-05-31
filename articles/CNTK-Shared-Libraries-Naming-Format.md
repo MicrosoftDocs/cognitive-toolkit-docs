@@ -19,6 +19,7 @@ The format of a CNTK Shared Library file name is:
 <Library_name>-<CNTK_Component_Version>[d].<File_Extension>
 ```
 
+#### Binary file names on Windows
 In the table below we use `2.0rc3` as CNTK Component Version.
 
 | Name Release | Name Debug | 
@@ -73,8 +74,8 @@ In the table below we use `2.0rc3` as CNTK Component Version.
 
 ----------
 
-#### Match between old and new CNTK Shared Libraries names. Linux.
-In the table below we use `2.0rc3` as CNTK Component Version. **Note, that in your actual installation Component Version may, and very likely will be different.**
+#### Binary file names on Linux
+In the table below we use `2.0rc3` as CNTK Component Version.
 
 | Name Release | Name Debug | 
 |:----------------:|:--------------:|
