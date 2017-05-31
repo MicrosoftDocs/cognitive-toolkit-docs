@@ -50,15 +50,13 @@ You have two ways to set keras backend:
 
 Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine). **Only set the "backend" field to "cntk"**
 
-```
-   { 
+``` { 
     "epsilon": 1e-07, 
     "image_data_format": "channels_last", 
     "backend": "cntk", 
     "floatx": "float32" 
-    }
-```
-	
+    } 
+```	
 
 > 5.2. By environment variable
 
@@ -76,9 +74,8 @@ You can try some example scripts in keras' repo: 
 https://github.com/fchollet/keras/tree/master/examples 
  
 For example, clone the "imdb_lstm.py" from the link above, and run: 
-```
-python imdb_lstm.py 
-```
+
+```python imdb_lstm.py ```
 
 ## Known issues:
 
