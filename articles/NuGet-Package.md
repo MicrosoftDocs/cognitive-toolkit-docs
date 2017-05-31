@@ -23,11 +23,11 @@ The CNTK Eval NuGet package is a NuGet package containing the necessary librarie
 ## Installation
 The package may be obtained through the NuGet Package Manager inside Visual Studio by searching for "CNTK", or downloaded directly from NuGet:
 
-* [https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0-rc1](https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0-rc1)   
-* [https://www.nuget.org/packages/CNTK.GPU/2.0.0-rc1](https://www.nuget.org/packages/CNTK.GPU/2.0.0-rc1)
-* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0-rc1](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0-rc1)
+* [https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0-rc3](https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0-rc3)   
+* [https://www.nuget.org/packages/CNTK.GPU/2.0.0-rc3](https://www.nuget.org/packages/CNTK.GPU/2.0.0-rc3)
+* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0-rc3](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0-rc3)
 
-The current version is `2.0-rc1`. When installing, please select the option "Include Prerelease" in "Manage Nuget Packages".
+The current version is `2.0-rc3`. When installing, please select the option "Include Prerelease" in "Manage Nuget Packages".
 
 The CNTK NuGet packages may be installed on a Visual C++ or .NET project (C#, VB.Net, F#, ...). The Nuget package contains both debug and release versions of C++ library and dlls, and the release version of C# assembly and its dependent dlls. Once installed the project will contain a reference to the managed dll and the required dependent binary libraries will be copied to the output directory after building the project. 
 
