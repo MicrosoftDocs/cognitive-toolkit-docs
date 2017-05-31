@@ -12,7 +12,7 @@ ms.devlang:   csharp
 
 # CNTK Library API C#
 
-The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
 
 ## class Function
 
@@ -113,7 +113,7 @@ Parameters:
 *  _nestedSearchInsideBlockFunction_: if it is true, all functions inside block functions are also examined.
 
 ***
-`public static Function LoadModel(string modelFile, DeviceDescriptor computeDevice)`
+`public static Function Load(string modelFile, DeviceDescriptor computeDevice)`
 
 Loads a Function from a model file.
 
@@ -122,7 +122,7 @@ Parameters:
 *  _computeDevice_: the device on which the Function is loaded.
 
 ***
-`public static Function LoadModel(byte[] modelBuffer, DeviceDescriptor computeDevice)`
+`public static Function Load(byte[] modelBuffer, DeviceDescriptor computeDevice)`
 
 Loads a Function from a memory buffer representing a model.
 
