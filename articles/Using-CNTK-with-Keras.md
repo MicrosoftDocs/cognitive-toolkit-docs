@@ -10,15 +10,19 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
+**These instructions are subject to change as we are working with the Keras maintainers to integrate the CNTK backend in the official Keras repository**.
+
 # Using CNTK with Keras (Beta)
 
-We are happy to bring CNTK as the backend for Keras as a beta release to our fans asking for this feature. While there is feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
+We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
 
 ## Steps to follow
 
-We assume you have followed the Anaconda installed on your Windows or Linux machines.
+We assume you have followed the Anaconda installation instructions on your Windows or Linux machines.
 
-Step 1. While you can install Keras support in your default python environment, we highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default python setup.  
+Steps 1 and 2 can be optional. We **strongly** urge you to follow them especially if you have an **existing Keras installation**. 
+
+Step 1. We highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default python setup (or any existing Keras installation).  
 
 ```conda create --name cntkkeraspy35 python=3.5 numpy scipy h5py jupyter```
 
@@ -26,13 +30,11 @@ Step 2. Activate the new environment, if you have created an environment. If you
 
 ```activate cntkkeraspy35```
 
-Step 3. Install [Keras](https://keras.io/#installation)
+Step 3. Install our fork of Keras (we are working on getting this integrated in the official Keras repository)
 
 ```pip install git+https://github.com/souptc/keras.git```
 
-This is a public github repo which host cntk keras support. We are working with keras team to contribute this back soon.
-
-Step 4. Install a suitable build of CNTK (with Keras support).
+Step 4. Install a suitable build of CNTK (older CNTK versions don't have Keras support).
 
 ```pip install <URL to CNTK wheel>```
 
@@ -48,7 +50,7 @@ You have two ways to set keras backend:
 
 > 5.1. By keras.json file.
 
-Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine). **Only set the "backend" field to "cntk"**
+Please modify the "keras.json" file under %Your User Folder%/.keras, or $HOME/.keras on Linux. If you don't have a keras.json, that means you have not run keras on this machine. **Only set the "backend" field to "cntk"**
 
 ``` { 
     "epsilon": 1e-07, 
