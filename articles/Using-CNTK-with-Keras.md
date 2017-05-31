@@ -1,6 +1,6 @@
 ---
 title:   Binary Operations
-author:    sayanpathak
+author:    sayanpa
 date:    05/30/2017
 ms.author:   sayanpa
 ms.date:   05/30/2017
