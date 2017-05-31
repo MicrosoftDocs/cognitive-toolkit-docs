@@ -50,14 +50,15 @@ You have two ways to set keras backend:
 
 > 5.1. By keras.json file.
 
-Please modify the "keras.json" file under %Your User Folder%/.keras, or $HOME/.keras on Linux. If you don't have a keras.json, that means you have not run keras on this machine. **Only set the "backend" field to "cntk"**
+Please modify the "keras.json" file under %USERPROFILE%/.keras on windows, or $HOME/.keras on Linux. **Only set the "backend" field to "cntk"**. If you do not have a ```keras.json```, that means you have not run keras on this machine. Use step 5.2 or create a .keras directory and a ```keras.json``` file with the following content.
 
-``` { 
+``` 
+{ 
     "epsilon": 1e-07, 
     "image_data_format": "channels_last", 
     "backend": "cntk", 
     "floatx": "float32" 
-    } 
+} 
 ```	
 
 > 5.2. By environment variable
