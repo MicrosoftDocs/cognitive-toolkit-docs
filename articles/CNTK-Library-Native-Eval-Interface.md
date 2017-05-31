@@ -18,12 +18,12 @@ The C++ CNTK Library for Evaluation is based on [CNTK Library API](./CNTK-Librar
 ## The following methods load a model into Function.
 
 ***
-`static FunctionPtr CNTK::Function::LoadModel(const std::wstring& modelFile, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
+`static FunctionPtr CNTK::Function::Load(const std::wstring& modelFile, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
 
 This method loads a model file and returns the pointer to the Function that represents the loaded model. A Function in CNTK denotes a computation graph composed of primitive Functions or composite functions with zero or more input arguments and one or more outputs. The `modelFile` is the model file path. The `computeDevice` specifies the device to run evaluation.
 
 ***
-`static FunctionPtr CNTK::Function::LoadModel(char *modelBuffer, size_t modelBufferLength, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
+`static FunctionPtr CNTK::Function::Load(char *modelBuffer, size_t modelBufferLength, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
 
 This method loads a model from a memory buffer and returns the pointer to the Function that represents the loaded model. The `modelBuffer` points to the buffer containing the serialized model content, and the `modelBufferLength` is the buffer length. The `computeDevice` specifies the device to run evaluation.
 
