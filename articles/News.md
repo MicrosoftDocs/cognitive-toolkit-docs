@@ -14,12 +14,12 @@ ms.devlang:   NA
 
 ## June 2017
 ***2017-06-01.* CNTK 2.0**  
-The first production release of Cognitive Toolkit v.2.
+The first production release of Cognitive Toolkit 2.0.
 
 Highlights:
-* CNTK backend for Keras
-* Extremely fast binary convolution with Halide
-* Java API
+* CNTK backend for Keras.
+* Extremely fast binary convolution with Halide.
+* Java API.
 * A new set of NuGet Packages.
 * Multiple bug fixes.
 
