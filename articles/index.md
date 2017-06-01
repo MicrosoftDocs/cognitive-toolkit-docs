@@ -21,14 +21,15 @@ The latest release of the Microsoft Cognitive Toolkit 2.0 is RC3 (release candid
 It can be included as a library in your Python or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the Toolkit from the source provided in Github.
 
 Here are a few pages to get started:
+* [Reasons to switch from Tensorflow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/CNTK/) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
   * [Using CNTK from Python](https://www.cntk.ai/pythondocs)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
-* CNTK as a machine learning tool through [BrainScript](./Using-CNTK-with-BrainScript.md)
-
+* [CNTK with Keras (Beta)](./Using-CNTK-with-Keras.md)
+* CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
 * Give us feedback through these [channels](Feedback-Channels.md)
 
