@@ -352,8 +352,8 @@ sudo cp -r cuda /usr/local/cudnn-5.1
 ```
 export LD_LIBRARY_PATH=/usr/local/cudnn-5.1/cuda/lib64:$LD_LIBRARY_PATH
 ```
-----------
 
+----------
 ## OPTIONAL. NCCL.
 
 [NVIDIA's NCCL library](https://github.com/NVIDIA/nccl) provides optimized primitives for collective
@@ -371,7 +371,6 @@ the CNTK binary. Support for additional parallelization methods and CNTK v2 will
 
 
 This completes GPU Specific section
-
 
 ----------
 ## OPTIONAL. CNTK v2 Python support.
@@ -462,9 +461,8 @@ export LD_LIBRARY_PATH=$PWD/cntk/libs:$LD_LIBRARY_PATH
 
 Python
 
-- Run the Python examples from inside the `[CNTK clone root]/Tutorials` or `[CNTK clone root]/Examples` directories, to verify your
-  installation. For example, go to the folder `[CNTK clone root]/Tutorials/NumpyInterop` and run `python
-  FeedForwardNet.py`. You should see the following output on the console:
+- Run the Python examples from inside the `[CNTK clone root]/Tutorials` or `[CNTK clone root]/Examples` directories, to verify your  installation. For example, go to the folder `[CNTK clone root]/Tutorials/NumpyInterop` and run `python FeedForwardNet.py`. You should see the following output on the console:
+
 ```
 Minibatch: 0, Train Loss: 0.7915553283691407, Train Evaluation Criterion: 0.48
 
@@ -475,6 +473,7 @@ Minibatch: 40, Train Loss: 1.0378565979003906, Train Evaluation Criterion: 0.64
 Minibatch: 60, Train Loss: 0.6558118438720704, Train Evaluation Criterion: 0.56
 ```
 
+----------
 ## OPTIONAL. OpenCV
 
 If you want to build the **CNTK Image Reader**, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/).
@@ -509,7 +508,7 @@ sudo make install
 ```
 Note that in the instructions above we suggest using "plain" `make` rather than `make -j`. We found that using `make -j` with OpenCV results in unstable system behavior and may result in a build failure and system crash.
 
-### OPTIONAL. Java
+## OPTIONAL. Java
 
 To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 7](http://openjdk.java.net/install/).
 
