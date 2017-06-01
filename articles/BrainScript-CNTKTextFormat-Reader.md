@@ -272,6 +272,7 @@ NOTE: At the moment the number of lines must not exceed the length of the longes
 | `readerType`                          | Specifies one of the supported CNTK readers to load (e.g., `CNTKTextFormatReader`). **Required**. |
 | `file`                                | Path to the file containing the input dataset (Windows or Linux style). **Required**. |
 | `randomize`                           | Specifies whether the input should be randomized (`true`, `false`). *Optional*, defaults to  `true`. |
+| `randomizationSeed`                   | Initial randomization seed value (incremented every sweep when the input data is re-randomized). *Optional*, defaults to  `0`. |
 | `randomizationWindow`                 | Specifies the size (positive integer) of the randomization window (i.e., randomization range). This parameter affects how much of the dataset needs to reside in memory at once. *Optional*, depending on the `sampleBasedRandomizationWindow` value, defaults either to the size of the whole dataset in samples (i.e., the input is randomized across the whole dataset), or 4GB of disk space worth of chunks (i.e., `128` when the chunk size equals 32MB). This parameter is ignored when `randomize` is `false`. |
 | `sampleBasedRandomizationWindow`      | If `true`, the size of the randomization window is interpreted as a certain number of samples, otherwise -- as a number of chunks. *Optional*, defaults to `false`.  Similarly to `randomizationWindow`, this parameter is ignored, when `randomize` is `false`. |
 | `skipSequenceIds`                     | If `true`, the reader will ignore sequence IDs in the input file, interpreting each separate line as an independent sequence of size 1 ([see the section on the sequence ids](#sequence-ids)). *Optional*, defaults to `false`. |
@@ -290,6 +291,7 @@ NOTE: At the moment the number of lines must not exceed the length of the longes
 | `alias`                               | An alternative shorthand name (string) used to identify the input in the dataset. *Optional* |
 | `format`                              | Specifies input type (`dense`, `sparse`). **Required**. |
 | `dim`                                 | Dimension (positive integer) of the input value (i.e., the number of input values in a sample for *dense* input, the upper bound on the index range for *sparse* input). **Required**. |
+| `definesMBSize`                       | Flag (default false), indicating whether the minibatch size should be counted in samples from this particular stream *Optional*. |
 
 
 You will find [complete network definitions](https://github.com/Microsoft/CNTK/tree/master/Tests/UnitTests/ReaderTests/Config/CNTKTextFormatReader) and [the corresponding data set examples](https://github.com/Microsoft/CNTK/tree/master/Tests/UnitTests/ReaderTests/Data/CNTKTextFormatReader) in the CNTK Repository. There, you will also find an [End-to-End test](https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/ParallelTraining) that uses the CNTKTextFormat reader.
