@@ -50,7 +50,7 @@ Step 4. Install a suitable build of CNTK (older CNTK versions don't have Keras s
 
 Step 5. Update Keras to use CNTK as backend
 
-You have two ways to set keras backend:
+You have two ways to set up CNTK as a Keras backend:
 
 > 5.1. By keras.json file.
 
@@ -69,7 +69,7 @@ Please modify the "keras.json" file under %USERPROFILE%/.keras on Windows, or $H
 
 > On Windows:
 
-> ```SET KERAS_BACKEND=cntk```
+> ```set KERAS_BACKEND=cntk```
 
 > On Linux:
 
@@ -77,7 +77,7 @@ Please modify the "keras.json" file under %USERPROFILE%/.keras on Windows, or $H
 
 Step 6. Try out the Keras examples
 
-You can try some example scripts in keras' repo: 
+You can try some example scripts in the Keras' repository: 
 https://github.com/fchollet/keras/tree/master/examples
  
 For example, clone the "mnist_mlp.py" from the link above, and run: 
@@ -88,6 +88,6 @@ For example, clone the "mnist_mlp.py" from the link above, and run: 
 
 •	Performance optimization on CPU device 
 
-•	The following operations are currently not supported in the the beta release.
+•	The following operations are currently not supported in the beta release.
 
-> Gradient as symbolic ops, Masking on recurrent layer, Padding with non-specified shape (to use cntk backend in keras with padding, please specify a well-defined input shape), Convolution with dilation, Randomness op across batch axis, few backend apis such as reverse, top_k, ctc, map, foldl, foldr etc.
+> Gradient as symbolic ops, Masking on recurrent layer, Padding with non-specified shape (to use the CNTK backend in Keras with padding, please specify a well-defined input shape), Convolution with dilation, Randomness op across batch axis, few backend APIs such as reverse, top_k, ctc, map, foldl, foldr, etc.
