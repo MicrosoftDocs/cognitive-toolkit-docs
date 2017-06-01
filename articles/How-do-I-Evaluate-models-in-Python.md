@@ -41,7 +41,7 @@ predictions = np.squeeze(z.eval({z.arguments[0]:[pic]}))
 top_class = np.argmax(predictions)
 ```
 
-If you are loading an old model trained by NDL or Brainscript, then you will need to find the model output node as follow:
+If you are loading an old model trained by NDL or BrainScript, then you will need to find the model output node as follow:
 ```python
 >>> for index in range(len(z.outputs)):
 ...     print("Index {} for output: {}.".format(index, z.outputs[index].name))

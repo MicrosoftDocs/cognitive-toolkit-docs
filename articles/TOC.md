@@ -129,7 +129,7 @@
 ## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
 ## [How to contribute to CNTK](/cognitive-toolkit/Contributing-to-CNTK)
 # Reference
-## [Brainscript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
+## [BrainScript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
 ### [BrainScript Config file overview](/cognitive-toolkit/BrainScript-Config-file-overview)
 ### [Train, Test, Eval](/cognitive-toolkit/BrainScript-Train-Test-Eval)
 ### [Top-level Configurations](/cognitive-toolkit/BrainScript-Top-level-configurations)

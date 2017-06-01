@@ -43,7 +43,7 @@ and then reading it with the [`CNTKTextFormatReader`](./BrainScript-CNTKTextForm
 
 ## Deal with the 'No Output nodes found' error
 
-Remember that Brainscript is case sensitive. So code like 
+Remember that BrainScript is case sensitive. So code like 
 ```
 # Special Nodes
 OutputNodes = (ol)
