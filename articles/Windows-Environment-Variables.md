@@ -53,6 +53,7 @@ There are several additional environment variables which can be used to define t
 |CNTK_PY27_PATH |  | [Path to the CNTK Python 2.7 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 |CNTK_PY34_PATH |  | [Path to the CNTK Python 3.4 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 |CNTK_PY35_PATH |  | [Path to the CNTK Python 3.5 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
+|CNTK_PY36_PATH |  | [Path to the CNTK Python 3.6 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 
 Assuming the defaul values:
  * DataParallel ASGD *is* being built
