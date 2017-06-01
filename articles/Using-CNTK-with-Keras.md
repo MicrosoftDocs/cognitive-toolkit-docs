@@ -90,4 +90,4 @@ For example, clone the "mnist_mlp.py" from the link above, and run: 
 
 •	The following operations are currently not supported in the beta release.
 
-> Gradient as symbolic ops, masking on recurrent layer, padding with non-specified shape (to use the CNTK backend in Keras with padding, please specify a well-defined input shape), convolution with dilation, randomness op across batch axis, few backend APIs such as reverse, top_k, ctc, map, foldl, foldr, etc.
+> Gradient as symbolic ops, stateful recurrent layer, masking on recurrent layer, padding with non-specified shape (to use the CNTK backend in Keras with padding, please specify a well-defined input shape), convolution with dilation, randomness op across batch axis, few backend APIs such as reverse, top_k, ctc, map, foldl, foldr, etc.
