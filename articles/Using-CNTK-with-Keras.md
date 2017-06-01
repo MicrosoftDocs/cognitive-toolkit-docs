@@ -28,7 +28,9 @@ Step 1. We highly recommend starting by creating a new anaconda environment. The
 
 Step 2. Activate the new environment, if you have created an environment. If you have chosen to install Keras (CNTK) in default environment, then skip to the next step. 
 
-```activate cntkkeraspy35```
+On Windows: ```activate cntkkeraspy35```
+
+On Linux: ``` source activate cntkkeraspy35```
 
 Step 3. Install our fork of Keras (we are working on getting this integrated in the official Keras repository)
 
