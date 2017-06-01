@@ -26,12 +26,12 @@
 #### [On Linux manually](/cognitive-toolkit/Setup-CNTK-on-Linux)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
-### Optional 
-#### [Test setup with Python](/cognitive-toolkit/Setup-Test-Python)
-#### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
-#### [Shared lib naming](/cognitive-toolkit/CNTK-Shared-Libraries-Naming-Format)
+## Optional 
+### [Test setup with Python](/cognitive-toolkit/Setup-Test-Python)
+### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
+### [Shared lib naming](/cognitive-toolkit/CNTK-Shared-Libraries-Naming-Format)
 
-### [Using Keras](./Using-CNTK-with-Keras.md)
+## [Using Keras](./Using-CNTK-with-Keras.md)
 
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
 # How To
