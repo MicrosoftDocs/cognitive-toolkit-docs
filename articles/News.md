@@ -14,7 +14,7 @@ ms.devlang:   NA
 
 ## June 2017
 ***2017-06-01.* CNTK 2.0**  
-The first production release of Cognitive Toolkit 2.0
+The first production release of Cognitive Toolkit 2.0.
 
 Highlights:
 * CNTK backend for Keras.
