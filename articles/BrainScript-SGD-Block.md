@@ -151,7 +151,7 @@ The SGD configuration block has the following structure and default values:
 
 * `maxTempMemSizeInSamplesForCNN`: maximum temporary memory used (in number of samples) when packaging and unpackaging input features. Default is 0, which means using any value as needed. Useful to control the memory foot print esp. when run under GPU.
 
-* `saveBestModelPerCriterion`: option to save the best model for each criterion as measured on cross validation data. When training ends models are named <modelName>_<criterionName>. Valid values are `true` and `false` (default).
+* `saveBestModelPerCriterion`: option to save the best model for each criterion as measured on cross validation data. When training ends models are named `<modelName>_<criterionName>`. Valid values are `true` and `false` (default).
 
 ### Learning rate and momentum control
 
