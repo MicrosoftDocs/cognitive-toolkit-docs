@@ -1,5 +1,5 @@
 ---
-title:   Eight Reasons to Switch from TensorFlow to CNTK
+title:   Reasons to Switch from TensorFlow to CNTK
 author:    sayanpa
 date:    05/30/2017
 ms.author:   sayanpa
@@ -9,6 +9,7 @@ ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   Python
 ---
+# Reasons to Switch from TensorFlow to CNTK
 
 Deep learning has revolutionized artificial intelligence (AI) over the past few years. Following Microsoft’s vision that AI shall be accessible for all instead of a few elite companies, we created the Microsoft Cognitive Toolkit (CNTK), an open source deep learning toolkit free for anyone to use. Today, it is the third most popular deep learning toolkit in terms of GitHub stars, behind TensorFlow and Caffe, and ahead of MxNet, Theano, Torch, etc.
 

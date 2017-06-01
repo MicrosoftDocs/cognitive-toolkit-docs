@@ -108,7 +108,7 @@ input_map = {
 }
 ```
 
-# Brainscipt
+# BrainScript
 
 ## Deserializers
 Let's have a look at the following fragment of configuration for the *HTKMLFReader* from the end-to-end *LSTM/FullUtterance* test

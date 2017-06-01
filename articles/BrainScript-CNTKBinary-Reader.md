@@ -74,7 +74,7 @@ Each deserializer requires certain input parameters. These parameters are packed
 | 1     | int32_t | elemType |
 | 1     | int32_t | sampleSize |
 
-elemType is 0 if the values are floats, and 1 if the values are dobules.
+elemType is 0 if the values are floats, and 1 if the values are doubles.
 
 sampleSize is the size (i.e., number of columns) in one input sample.
 
@@ -89,7 +89,7 @@ sampleSize is the size (i.e., number of columns) in one input sample.
 
 storageType is the storage type of the matrix. Currently only sparse CSC (with value 0) is supported.
 
-elemType is 0 if the values are floats, and 1 if the values are dobules.
+elemType is 0 if the values are floats, and 1 if the values are doubles.
 
 isSequence is 0 if the input is not a sequence, and 1 if the input is a sequence.
 
@@ -108,8 +108,8 @@ numChunks is the number of chunks defined in the header. offsets table row is a 
 
 | count | type | name |
 |-------|------|------|
-| 1     | int64_t | offset | 
-| 1     | int32_t | numSequences | 
+| 1     | int64_t | offset |
+| 1     | int32_t | numSequences |
 | 1     | int32_t | numSamples |
 
 offset is the number of bytes from the start of the data portion that the chunk begins.
@@ -167,7 +167,7 @@ row indices is an int32_t array of length nnz containing the row indices for eac
 
 condensed column indices is an array of int32_t of length (numSequences+1) (where numSequences is defined in the offsets table) containing the offset that each sequence begins.
 
-In order to pack variable length sequences, we make one change to the definition of the row index. 
+In order to pack variable length sequences, we make one change to the definition of the row index.
 In particular, each <row index[i]> is encoded as follows:
 
 `new row index[i] = <sample number> * sampleSize + <row index[i]>`
@@ -189,6 +189,7 @@ Thus one can decode the sample for each element by dividing it by the sampleSize
 | ```readerType``` | Yes | one of the supported CNTK readers | | Specifies the reader flavor to load (e.g., ```CNTKBinaryReader```) |
 | ```file``` | Yes | File path | | Path to the file containing the input dataset (Windows or Linux style) |
 | ```randomize``` | No | ```true```, ```false``` | ```true``` | Specifies whether the input should be randomized |
+| ```randomizationSeed``` | No | Positive integer | ```0``` | Initial randomization seed value (incremented every sweep when the input data is re-randomized). |
 | ```randomizationWindow``` | No | Positive integer | | Specifies the randomization range (in number of samples)<sup>[1](#footnote1)</sup>. This controls how much of the dataset resides in memory.   |
 | ```traceLevel``` | No | ```0```, ```1```, ```2``` | ```1``` | Output verbosity level. ```0``` - show only errors; ```1``` - show errors and warnings; ```2``` - show all output<sup>[2](#footnote2)</sup> |
 | ```keepDataInMemory``` | No | ```true```, ```false``` | ```false``` | If ```true```, the whole dataset will be cached in memory |

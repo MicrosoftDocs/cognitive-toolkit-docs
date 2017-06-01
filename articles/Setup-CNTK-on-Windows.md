@@ -44,7 +44,7 @@ You are also required to have the 'Common Tools for Visual C++ 2015' installed o
 
 Git is required to work with the CNTK code base. You may use the following tools:
 
-* [Git for Windows](https://git-scm.com/download/win]). This is the standard command line client for Git, which we will use on this page to describe the enlisting in the CNTK repository. 
+* [Git for Windows](https://git-scm.com/download/win). This is the standard command line client for Git, which we will use on this page to describe the enlisting in the CNTK repository. 
 
 * A Git client is available as a part of the Visual Studio 2015 installation. Read the blog post [Microsoft Application Lifecycle Management](https://blogs.msdn.microsoft.com/visualstudioalm/2013/02/06/create-connect-and-publish-using-visual-studio-with-git/) about using the built-in Git client.
 
@@ -220,19 +220,20 @@ Quick installation check: If you followed the instruction above and used the sam
 If you plan on using CNTK with Python you will need a Python environment. We use Anaconda Python for our default Python installation. 
 
 If you do not have an Anaconda installation: install [Anaconda Python for Windows](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe). 
-You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Ancaonda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
+You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Anaconda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
 
 ### CNTK Python environments
 
-CNTK supports Python 2.7, Python 3.4 and Python 3.5. We recommend you create a dedicated environment in your Python installation to work with CNTK. This way CNTK and the installed supporting packages won't impact any other Python project. We provide several files (`yml`-files) containing the description of required Python packages. The packages are located in the `scripts\install\windows` directory inside your CNTK clone. Please select the file matching your targeted Python version.
+CNTK supports Python 2.7, Python 3.4, Python 3.5 and Python 3.6. We recommend you create a dedicated environment in your Python installation to work with CNTK. This way CNTK and the installed supporting packages won't impact any other Python project. We provide several files (`yml`-files) containing the description of required Python packages. The packages are located in the `scripts\install\windows` directory inside your CNTK clone. Please select the file matching your targeted Python version.
 
 |Python version | Filename |
 |:--------|:------------|
 |Python 2.7 | conda-windows-cntk-py27-environment.yml
 |Python 3.4 | conda-windows-cntk-py34-environment.yml
 |Python 3.5 | conda-windows-cntk-py35-environment.yml
+|Python 3.6 | conda-windows-cntk-py36-environment.yml
 
-As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7 or Python 3.4 environment, please adjust the name of the YML to match the Python version you intend to use.
+As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7, Python 3.4, or Python 3.6 environment, please adjust the name of the YML to match the Python version you intend to use.
 
 The following assumes you cloned the CNTK source code from Github into the directory `c:\repos\cntk`.
 
@@ -252,12 +253,13 @@ If you have an environment (e.g. `cntk-py35`) you can update it with the latest 
 
 ### CNTK Environment Variables for Python
 
-Before you start the build of CNTK and build the Python libraries for CNTK, you need to set/define environment variables `CNTK_PY.._PATH` and `PYTHON_PATH`
+Before you start the build of CNTK and build the Python libraries for CNTK, you need to set/define environment variables `CNTK_PY.._PATH` and `PYTHONPATH`
 
 #### CNTK_PY.._PATH
 
 Set up build environment variables for your Python environment (choose at least one that applies):
 ```
+    setx CNTK_PY36_PATH [paths for your Python 3.6 environment]
     setx CNTK_PY35_PATH [paths for your Python 3.5 environment]
     setx CNTK_PY34_PATH [paths for your Python 3.4 environment]
     setx CNTK_PY27_PATH [paths for your Python 2.7 environment]
@@ -268,7 +270,7 @@ If you followed the installation so far, this would mean
     setx CNTK_PY35_PATH C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35
 ```
 
-The value for the `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK_PY27_PATH` environment variables can be determined by running in
+The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK_PY27_PATH` environment variables can be determined by running in
 `conda ..activate cmd.exe [name-or-path-of-your-environment]`
 
 #### PYTHONPATH
@@ -276,6 +278,14 @@ The value for the `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK_PY27_PATH` enviro
 `PYTHONPATH` sets the paths to the places Python will look for modules to import. If you build CNTK, you need to add the output path of the build process to this environment variable. If you cloned CNTK into `c:\repos\cntk` this will be
 ```
     setx PYTHONPATH c:\repos\cntk\bindings\python;%PYTHONPATH%
+```
+
+### OPTIONAL. Java
+To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
+
+Set the environment variable JAVA_HOME to point to the directory of Java installation. The following setting assumes that you have installed JDK 1.8.0_131 to C:\local\jdk1.8.0_131:
+```
+    setx JAVA_HOME "c:\local\jdk1.8.0_131"
 ```
 
 #### Uninstall previous CNTK versions

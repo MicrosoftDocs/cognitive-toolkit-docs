@@ -16,9 +16,9 @@ The CNTK 1.5 release summarizes the work done on the CNTK codebase by the commun
 
 There are many new features, but fixes, enhancements, and improvements in this code base. We also improved our documentation and tutorial effort significantly. We won’t stop here, we will increase this effort! There are many more good things to come, but here is an initial list of new things you can find in the CNTK 1.5 binaries:
 
-## Brainscript
+## BrainScript
 
-Brainscript is an evolution of our network definition language, and its concepts make it possible to express features not available in NDL (i.e. Sequence-to-Sequence). More about Brainscript: ./BrainScript-Network-Builder
+BrainScript is an evolution of our network definition language, and its concepts make it possible to express features not available in NDL (i.e. Sequence-to-Sequence). More about BrainScript: ./BrainScript-Network-Builder
 
 ## Sequence to sequence 
 

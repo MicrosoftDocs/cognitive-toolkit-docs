@@ -26,15 +26,18 @@ Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD L
 
 |Python | Flavor | URL
 |:------|:-------|:--------|
-| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp27-cp27m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc1-cp27-cp27m-win_amd64.whl`
-|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc1-cp27-cp27m-win_amd64.whl`
-| 3.4 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp34-cp34m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc1-cp34-cp34m-win_amd64.whl`
-|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc1-cp34-cp34m-win_amd64.whl`
-| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp35-cp35m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc1-cp35-cp35m-win_amd64.whl`
-|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc1-cp35-cp35m-win_amd64.whl`
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp27-cp27m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc3-cp27-cp27m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc3-cp27-cp27m-win_amd64.whl`
+| 3.4 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp34-cp34m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc3-cp34-cp34m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc3-cp34-cp34m-win_amd64.whl`
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp35-cp35m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc3-cp35-cp35m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc3-cp35-cp35m-win_amd64.whl`
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp36-cp36m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0rc3-cp36-cp36m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0rc3-cp36-cp36m-win_amd64.whl`
 
 ### Anaconda3 
 

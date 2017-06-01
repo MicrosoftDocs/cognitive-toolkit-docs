@@ -22,7 +22,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |BOOST_LIB_PATH | c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |CNTK_MKL_PATH | c:\local\CNTKCustomMKL | [Custom MKL for CNTK](./Setup-CNTK-on-Windows.md#mkl) (required)
 |CUB_PATH | c:\local\cub-1.4.1 | [NVIDIA CUB Library](./Setup-CNTK-on-Windows.md#cub) (required for GPU build)
-|CUDNN_PATH | C:\local\cudnn-8.0-v5.1\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cuDNN) (required for GPU build)
+|CUDNN_PATH | C:\local\cudnn-8.0-v5.1\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
 |CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |CUDA_PATH_V8_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build)
@@ -48,11 +48,12 @@ There are several additional environment variables which can be used to define t
 
 |Environment Variable | Default value | |
 |:------------|:------------|:-------------|
-|CNTK_ENABLE_ASGD  | true | [Data Parallel ASGD](./Setup-CNTK-on-Windows.md#Enlisting-in-the-CNTK-Github-repository)
+|CNTK_ENABLE_ASGD  | true | [Data Parallel ASGD](./Setup-CNTK-on-Windows.md#enlisting-in-the-cntk-github-repository)
 |CNTK_ENABLE_1BITSGD | false | [1bit SGD](./Enabling-1bit-SGD.md)
 |CNTK_PY27_PATH |  | [Path to the CNTK Python 2.7 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 |CNTK_PY34_PATH |  | [Path to the CNTK Python 3.4 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 |CNTK_PY35_PATH |  | [Path to the CNTK Python 3.5 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
+|CNTK_PY36_PATH |  | [Path to the CNTK Python 3.6 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 
 Assuming the defaul values:
  * DataParallel ASGD *is* being built
