@@ -172,7 +172,7 @@ Highlights of this Release:
 * Support of [Visual Studio 2015](./Setup-Migrate-VS13-to-VS15.md) for Windows version.
 * Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows.md) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
 * CNTK Runtime packages are now available as [Public Images at Docker Hub](./CNTK-Docker-Containers.md). (**Beta 7** is currently available; Beta 8 Images availability will be announced separately in a few days)
-* Version 3 of [CNTK Custom MKL Library](https://cntk.ai/mkl/) is available.
+* Version 3 of [CNTK Custom MKL Library](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/) is available.
 
 See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_8_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).

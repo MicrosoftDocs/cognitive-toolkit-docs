@@ -54,7 +54,7 @@ The structure of [CNTK NuGet packages](../NuGet-Package.md) has changed with two
 
 ## Custom MKL Library v.3
 
-If you are working with CNTK codebase, please be aware that [**Version 3 of CNTK Custom MKL Library**](https://cntk.ai/mkl/) is now available. You should use this version in your environment from now on.
+If you are working with CNTK codebase, please be aware that [**Version 3 of CNTK Custom MKL Library**](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/) is now available. You should use this version in your environment from now on.
 
 ## CNTK Runtime Images at Docker Hub
 
