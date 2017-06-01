@@ -38,13 +38,15 @@ Step 3. Install our fork of Keras (we are working on getting this integrated in 
 
 Step 4. Install a suitable build of CNTK (older CNTK versions don't have Keras support).
 
+> 4.1 Please choose one of the several available wheel options from the following pages to match your python + machine environment.
+
+- For Windows: Choose a suitable [binary](./Setup-Windows-Python.md) (wheel file).
+
+- For Linux: Please install the [pre-requisites](./Setup-Linux-Python.md#prerequisites) first. Then choose a suitable [binary](./Setup-Linux-Python.md) (wheel file). 
+
+> 4.2 Install the wheel file
+
 ```pip install <URL to CNTK wheel>```
-
-Please choose one of the several available wheel options from the following pages to match your python + machine environment.
-
-> For Windows: The binaries and install instructions can be found [here](./Setup-Windows-Python.md).
-
-> For Linux: The binaries are found [here](./Setup-Linux-Python.md). Additionally please follow the pre-requisites section from this page before installing the wheel. 
 
 Step 5. Update Keras to use CNTK as backend
 
