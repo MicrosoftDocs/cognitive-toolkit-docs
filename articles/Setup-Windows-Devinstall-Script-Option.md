@@ -27,7 +27,7 @@ Overview:
      [-NoPythonEnvironment]
   |
      [-PyEnvironmentName <NAME> ]
-     [-PyVersion (27|34|35)] 
+     [-PyVersion (27|34|35|36)] 
   ]
   [-localCache <DIRECTORY>]
   [-InstallLocation <DIRECTORY>]
@@ -62,7 +62,7 @@ Example:
 
 ### Parameter `PyVersion`
 
-This is an optional parameter and can be used to specify the Python version used in the CNTK Python environment. Supported values for this parameter are 27, 34, or 35. The default values is 35 (for a CNTK Python 35 environment).
+This is an optional parameter and can be used to specify the Python version used in the CNTK Python environment. Supported values for this parameter are 27, 34, 35, or 36. The default values is 35 (for a CNTK Python 35 environment).
 
 `PyVersion` influences the result of the installation by
 
