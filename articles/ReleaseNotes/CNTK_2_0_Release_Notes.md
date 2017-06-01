@@ -20,13 +20,13 @@ This is the first production release of the Microsoft Cognitive Toolkit V2. We w
 * Extremely fast binary convolution with Halide
 * Java API
 
+### CNTK backend for Keras
+
+We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. For installation instructions and additional details see [this page](https://docs.microsoft.com/en-us/cognitive-toolkit/Using-CNTK-with-Keras).
+
 ### Binary convolution with Halide
 
 This release includes [an example](https://github.com/Microsoft/CNTK/tree/master/Examples/Extensibility/BinaryConvolution) that implements training of a binary convolution network (see [BinaryConnect by Courbariaux et al.](https://arxiv.org/abs/1511.00363)), and a highly optimized native C++ implementation for fast evaluation of binary convolution models. The C++ binary convolution implementation utilizes the [Halide framework](http://halide-lang.org/) for making optimal use of multi-threading and vector instructions available on modern CPUs. It runs up to 10x faster than an equivalent convolution network trained and evaluated at 32-bit floating point precision.
-
-### CNTK backend for Keras (beta)
-
-We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. For installations instructions and additional details see [this page](https://docs.microsoft.com/en-us/cognitive-toolkit/Using-CNTK-with-Keras).
 
 ### CNTK Java API
 
