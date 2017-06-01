@@ -30,7 +30,7 @@ a_lstm = Sequential([ Embedding(500), BiRecurrence(LSTM(300), LSTM(300)), Dense(
 q_embed = q_lstm(question)
 a_embed = a_lstm(answer) 
 ```
-where `BiRecurrence` is a convenience function that you can find in the solution of the third task of [this tutorial](https://github.com/Microsoft/CNTK/blob/v2.0.rc3/Tutorials/CNTK_202_Language_Understanding.ipynb). It runs one LSTM forward, another LSTM backward and concatenates the results. After this preprocessing we have a variable-length sequence of 200 dimensional vectors for the query and another variable length sequence of 200 dimensional vectors for the answer.
+where `BiRecurrence` is a convenience function that you can find in the solution of the third task of [this tutorial](https://github.com/Microsoft/CNTK/blob/v2.0/Tutorials/CNTK_202_Language_Understanding.ipynb). It runs one LSTM forward, another LSTM backward and concatenates the results. After this preprocessing we have a variable-length sequence of 200 dimensional vectors for the query and another variable length sequence of 200 dimensional vectors for the answer.
 
 To implement an attention mechanism we need to compute scalar values for each position and exponentiate them with an appropriate correction so that the sum of their exponentials equals 1.
 ```python
@@ -144,20 +144,20 @@ How do I find the support for following NDL LSTM primitives to Python:
 
 * Are there any substitutes for these primitives? If not how to implement them in python? Can we operate on variables as if they are numpy arrays?
 
-* Ans: Use [splice](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice)
+* Ans: Use [splice](https://docs.microsoft.com/en-us/python/api/cntk.ops#cntk_ops_splice)
   
 
 **DiagTime** vs **ElementTimes** 
 
 * Is there any difference between them for vector element wise multiplication? Also is DiagTimes in supported in python?
 
-* Use [element wise multiplication](https://cntk.ai/pythondocs/cntk.ops.html?highlight=element#cntk.ops.element_times)
+* Use [element wise multiplication](https://docs.microsoft.com/en-us/python/api/cntk.ops#cntk_ops_element_times)
 
 **Parameter initialization** 
 
 * How to Initialize parameters from file in python and set `computeGradient` as false.        
 
-* Use [constants](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice). You can specify the initial value via a NumPy array. There are many ways to load a text (or other) file into a NumPy array.
+* Use [constant](https://docs.microsoft.com/en-us/python/api/cntk.ops#cntk_ops_constant). You can specify the initial value via a NumPy array. There are many ways to load a text (or other) file into a NumPy array.
 
 ## Restrict a prediction to a bounded interval
 

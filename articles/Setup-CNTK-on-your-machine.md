@@ -22,12 +22,12 @@ Once installed you can return to the [Getting Started](https://docs.microsoft.co
 
 On **Windows**: 
 ```
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp35-cp35m-win_amd64.whl
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0-cp35-cp35m-win_amd64.whl
 ```
 On **Ubuntu 16.04**:
 ```
 sudo apt-get install openmpi-bin
-pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp35-cp35m-linux_x86_64.whl
+pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0-cp35-cp35m-linux_x86_64.whl
 ```
 You can easily fine tune your PIP installation, further change your environment configuration, tutorial installation, examples, code samples and Jupyter notebooks.
 For Windows, check out [this page](./Setup-Windows-Python.md), for Linux [this one](./Setup-Linux-Python.md).

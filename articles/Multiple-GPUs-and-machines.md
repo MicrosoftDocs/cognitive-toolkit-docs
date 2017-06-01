@@ -69,7 +69,7 @@ For user defined training loop (instead of training_session), users need to pass
 
 Please note that `Communicator.finalize()` should be called only in case the distributed training finished successfully. In case a distributed worker fails, this method should not be called. 
 
-For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
+For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 ## 3. Configuring Parallel Training in CNTK in BrainScript
 
@@ -160,8 +160,8 @@ where `$cntk` should refer to the path of the CNTK executable (`$x` is the Linux
 
 Examples for distributed training for CNTK v2 with Python can be found here:
 
-- [ResNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ResNet/Python#cntk-examples-imageclassificationresnet)
-- [ConvNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy)
+- [ResNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ResNet/Python#cntk-examples-imageclassificationresnet)
+- [ConvNet on CIFAR-10](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy)
 
 Given a CNTK v2 Python script `training.py` the following commands can be used to start a
 parallel MPI job:
@@ -396,7 +396,7 @@ To enable Block-Momentum in Python, similarly to the 1-bit SGD, the user needs t
     ...
     distributed.Communicator.finalize()         # must be called to finalize MPI in case of successful distributed training
 
-For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0.rc3/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
+For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 
 ## 7  Model-Averaging SGD

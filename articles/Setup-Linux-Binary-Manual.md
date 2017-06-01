@@ -17,7 +17,7 @@ ms.devlang:   NA
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK)
 based on a binary distribution we have prepared and you can download from our website. 
 
-> These instructions apply to release 2.0.rc3.
+> These instructions apply to release 2.0.
 
 Note: You can find an overview about all the available installation options for CNTK on [this page](./Setup-CNTK-on-your-machine.md).
 

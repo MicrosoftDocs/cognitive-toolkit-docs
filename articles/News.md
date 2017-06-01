@@ -12,6 +12,20 @@ ms.devlang:   NA
 
 # News
 
+## June 2017
+***2017-06-01.* CNTK 2.0**  
+The first production release of Cognitive Toolkit v.2.
+
+Highlights:
+* CNTK backend for Keras
+* Extremely fast binary convolution with Halide
+* Java API
+* A new set of NuGet Packages.
+* Multiple bug fixes.
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Release_Notes).  
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
 ## May 2017
 ***2017-05-24.* CNTK 2.0 Release Candidate 3**  
 Release Candidate 3 is the final preview of Cognitive Toolkit v.2.0.
@@ -56,7 +70,7 @@ Highlights:
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
-* New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
+* New Python [model debugging functions](https://docs.microsoft.com/en-us/python/api/cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
 * Various bug fixes.
@@ -172,7 +186,7 @@ Highlights of this Release:
 * Support of [Visual Studio 2015](./Setup-Migrate-VS13-to-VS15.md) for Windows version.
 * Introduction of [C# API in CNTK Evaluation Library](./CNTK-Library-Evaluation-on-Windows.md) and a new set of [CNTK NuGet Packages](./NuGet-Package.md).
 * CNTK Runtime packages are now available as [Public Images at Docker Hub](./CNTK-Docker-Containers.md). (**Beta 7** is currently available; Beta 8 Images availability will be announced separately in a few days)
-* Version 3 of [CNTK Custom MKL Library](https://cntk.ai/mkl/) is available.
+* Version 3 of [CNTK Custom MKL Library](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/) is available.
 
 See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_8_Release_Notes.md).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
