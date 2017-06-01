@@ -39,7 +39,7 @@ This release contains the following **breaking changes**:
 
 ### New feature
 
-We enabled support for model debugging in Python (similar to gdb/pdb) by wrapping the model with `debug_model()` [Read more here](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
+We enabled support for model debugging in Python (similar to gdb/pdb) by wrapping the model with `debug_model()` [Read more here](https://docs.microsoft.com/en-us/python/api/cntk.debugging.debug).
 
 ### Breaking changes
 
