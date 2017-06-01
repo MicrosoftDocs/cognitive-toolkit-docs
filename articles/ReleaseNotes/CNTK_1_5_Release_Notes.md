@@ -71,4 +71,4 @@ This is our first and still experimental release of the Python API, so some extr
 > Update: please note that this version of the Python API is superceded by the
 > new CNTK v2 Python API, and removed in CNTK version 2.0.beta4.0 and up. A
 > detailed description of the Python API can be found in the [CNTK Python API
-> Documentation](https://cntk.ai/pythondocs/).
+> Documentation](https://docs.microsoft.com/en-us/python/cognitive-toolkit/).

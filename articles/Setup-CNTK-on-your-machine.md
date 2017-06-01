@@ -16,7 +16,7 @@ ms.devlang:   python, brainscript,
 
 Microsoft Cognitive Toolkit (CNTK) is supported for both Windows and Linux (Ubuntu 16.04). You can do a simple pip install using the commands in this section that assumes Anaconda 3 Python 3.5 environment. Please go to the next section for more installation options. 
 
-Once installed you can return to the [Getting Started](https://cntk.ai/pythondocs/gettingstarted.html) section.
+Once installed you can return to the [Getting Started](https://docs.microsoft.com/en-us/python/cognitive-toolkit/gettingstarted) section.
 
 > For either **Windows** or **Ubuntu 16.04**, we assume you have configured **Anaconda Python 3.5** as your active Python environment. If you meet this requirement simply run the following commands from your Python root environment to install CNTK **CPU-only** version.
 
@@ -36,7 +36,7 @@ For the complete lists of CNTK installation options, see the table below.
 
 ### Install CNTK for the first time or update to a new version
 -------------------------------
-The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can return to the [Getting Started](https://cntk.ai/pythondocs/gettingstarted.html) section.
+The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can return to the [Getting Started](https://docs.microsoft.com/en-us/python/cognitive-toolkit/gettingstarted) section.
 
 You can install the complete source code of CNTK and build the binaries on your machine, but we 
 also provide regular binary drops of the CNTK executables, including sample data and sample models.
