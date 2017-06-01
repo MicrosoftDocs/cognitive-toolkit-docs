@@ -189,6 +189,7 @@ Thus one can decode the sample for each element by dividing it by the sampleSize
 | ```readerType``` | Yes | one of the supported CNTK readers | | Specifies the reader flavor to load (e.g., ```CNTKBinaryReader```) |
 | ```file``` | Yes | File path | | Path to the file containing the input dataset (Windows or Linux style) |
 | ```randomize``` | No | ```true```, ```false``` | ```true``` | Specifies whether the input should be randomized |
+| ```randomizationSeed``` | No | Positive integer | ```0``` | Initial randomization seed value (incremented every sweep when the input data is re-randomized). |
 | ```randomizationWindow``` | No | Positive integer | | Specifies the randomization range (in number of samples)<sup>[1](#footnote1)</sup>. This controls how much of the dataset resides in memory.   |
 | ```traceLevel``` | No | ```0```, ```1```, ```2``` | ```1``` | Output verbosity level. ```0``` - show only errors; ```1``` - show errors and warnings; ```2``` - show all output<sup>[2](#footnote2)</sup> |
 | ```keepDataInMemory``` | No | ```true```, ```false``` | ```false``` | If ```true```, the whole dataset will be cached in memory |
