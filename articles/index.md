@@ -27,8 +27,8 @@ Here are a few pages to get started:
 * [The CNTK Library APIs](./CNTK-Library-API.md)
   * [Using CNTK from Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
-* CNTK as a machine learning tool through [BrainScript](./Using-CNTK-with-BrainScript.md)
-
+* [CNTK with Keras (Beta)](./Using-CNTK-with-Keras.md)
+* CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
 * Give us feedback through these [channels](Feedback-Channels.md)
 

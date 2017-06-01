@@ -10,70 +10,79 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
+**These instructions are subject to change as we are working with the Keras maintainers to integrate the CNTK backend in the official Keras repository**.
+
 # Using CNTK with Keras (Beta)
 
-**This page is under development**
+We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
 
 ## Steps to follow
 
-We assume you have followed the Anaconda installed on your Windows or Linux machines.
+We assume you have followed the Anaconda installation instructions on your Windows or Linux machines.
 
-1. We highly recommend creating a new anaconda environment.
+Steps 1 and 2 can be optional. We **strongly** urge you to follow them especially if you have an **existing Keras installation**. 
+
+Step 1. We highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default python setup (or any existing Keras installation).  
 
 ```conda create --name cntkkeraspy35 python=3.5 numpy scipy h5py jupyter```
 
-2. Activate the new environment
+Step 2. Activate the new environment, if you have created an environment. If you have chosen to install Keras (CNTK) in default environment, then skip to the next step. 
 
-```activate cntkkeraspy35```
+On Windows: ```activate cntkkeraspy35```
 
-3. Install [Keras](https://keras.io/#installation)
+On Linux: ``` source activate cntkkeraspy35```
+
+Step 3. Install our fork of Keras (we are working on getting this integrated in the official Keras repository)
 
 ```pip install git+https://github.com/souptc/keras.git```
 
-This is a public github repo which host cntk keras support. We are working with keras team to contribute this back soon.
+Step 4. Install a suitable build of CNTK (older CNTK versions don't have Keras support).
 
-4. Install a GPU build of CNTK
+> 4.1 Please choose one of the several available wheel options from the following pages to match your python + machine environment.
 
-```pip install <URL to CNTK GPU wheel>```
+- For Windows: Choose a suitable [binary](./Setup-Windows-Python.md) (wheel file).
 
-5. Update Keras to use CNTK as backend
+- For Linux: Please install the [pre-requisites](./Setup-Linux-Python.md#prerequisites) first. Then choose a suitable [binary](./Setup-Linux-Python.md) (wheel file). 
+
+> 4.2 Install the wheel file
+
+```pip install <URL to CNTK wheel>```
+
+Step 5. Update Keras to use CNTK as backend
 
 You have two ways to set keras backend:
 
 > 5.1. By keras.json file.
 
->   Please modify the "keras.json" file under %Your User Folder%/.keras, (If you don't have a keras.json, that means you have not run keras on this machine). **Only set the "backend" field to "cntk"**
+Please modify the "keras.json" file under %USERPROFILE%/.keras on Windows, or $HOME/.keras on Linux. **Only set the "backend" field to "cntk"**. If you do not have a ```keras.json```, that means you have not run keras on this machine. Use step 5.2 or create a .keras directory and a ```keras.json``` file with the following content.
 
-```
-   { 
+``` 
+{ 
     "epsilon": 1e-07, 
     "image_data_format": "channels_last", 
     "backend": "cntk", 
     "floatx": "float32" 
-    }
-```
-	
+} 
+```	
 
 > 5.2. By environment variable
 
->> On Windows:
+> On Windows:
 
 > ```SET KERAS_BACKEND=cntk```
 
->> On Linux:
+> On Linux:
 
 > ```export KERAS_BACKEND=cntk```
 
-
-7.	Try out the Keras examples
+Step 6. Try out the Keras examples
 
 You can try some example scripts in keras' repo: 
-https://github.com/fchollet/keras/tree/master/examples 
+https://github.com/fchollet/keras/tree/master/examples
  
-For example, clone the "imdb_lstm.py" from the link above, and run: 
-```
-python imdb_lstm.py 
-```
+For example, clone the "mnist_mlp.py" from the link above, and run: 
+
+```python mnist_mlp.py```
 
 ## Known issues:
 
