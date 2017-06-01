@@ -26,7 +26,7 @@ Here are a few pages to get started:
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/CNTK/) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
-  * [Using CNTK from Python](https://www.cntk.ai/pythondocs)
+  * [Using CNTK from Python](https://cntk.ai/pythondocs)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
 * CNTK as a machine learning tool through [BrainScript](./Using-CNTK-with-BrainScript.md)
 
@@ -73,7 +73,7 @@ Highlights:
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
-* New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
+* New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format).
 
@@ -87,10 +87,10 @@ See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Container
 ***2017-03-15.* V 2.0 Beta 15 Release**  
 Highlights of this Release:
 * In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).
-* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
+* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
-* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
+* Significant updates in the [Layers Library](https://cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
 * Updates and [new examples](./CNTK-Eval-Examples.md#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
 * Various bug fixes.
 

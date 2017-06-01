@@ -68,11 +68,11 @@ We have introduced a lot of new features during the Beta period. The list below 
 * [Performance Profiler for BrainScript and Python](./BrainScript-and-Python-Performance-Profiler.md).
 * Support in training session for cross validation and preservation of all checkpoints.
 * Ability to write your own optimizer in Python by inheriting from `UserLearner` and overriding the update method.
-* Ability to implement Learners in Python using `UserLearner` [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
+* Ability to implement Learners in Python using `UserLearner` [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * All deserializers are exposed in C++.
   * HTK deserializers are also exposed in Python.
 * Support for TensorBoard output in both Python and BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).
-* Support for Model debugging in Python, that can be done conveniently similarly to gdb/pdb, by wrapping the model with `debug_model()` and training/evaluating it. [Read more here](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
+* Support for Model debugging in Python, that can be done conveniently similarly to gdb/pdb, by wrapping the model with `debug_model()` and training/evaluating it. [Read more here](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 
 We have also implemented significant performance improvements.
 

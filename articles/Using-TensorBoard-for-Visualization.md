@@ -16,7 +16,7 @@ ms.devlang:   brainscript, python
 
 ## Python
 
-[TensorBoardProgressWriter](https://www.cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter) class in Python now supports output in the native TensorBoard format, thus enabling rich visualization capabilities for CNTK jobs. At present, TensorBoardProgressWriter can be used to:
+[TensorBoardProgressWriter](https://cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter) class in Python now supports output in the native TensorBoard format, thus enabling rich visualization capabilities for CNTK jobs. At present, TensorBoardProgressWriter can be used to:
 * Record model graph.
 * Record arbitrary scalar values during training.
 * Automatically record the values of a loss function and error rate during training.
@@ -44,7 +44,7 @@ You then need to provide the above object to Trainer upon construction:
 trainer = Trainer(my_model, (ce, pe), learner, tensorboard_writer)
 ```
 
-The Trainer object will make sure to update the TensorBoardProgressWriter with the values of loss/evaluation metric after training/testing on each minibatch. Therefore, you do not need to explicitly call TensorBoardProgressWriter to record these values. To record any other scalar values, you can use [write_value()](https://www.cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter.write_value) method, e.g.: 
+The Trainer object will make sure to update the TensorBoardProgressWriter with the values of loss/evaluation metric after training/testing on each minibatch. Therefore, you do not need to explicitly call TensorBoardProgressWriter to record these values. To record any other scalar values, you can use [write_value()](https://cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter.write_value) method, e.g.: 
 
 ```python
     # Log mean of each parameter tensor, to confirm that the parameters change indeed.

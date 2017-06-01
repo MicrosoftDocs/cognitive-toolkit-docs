@@ -16,7 +16,7 @@ There are tutorials for Python users and for BrainScript users.
 
 ## Python Jupyter Notebook Tutorials
 
-CNTK Python Jupyter notebook [tutorials](https://www.cntk.ai/pythondocs/tutorials.html) cover a range of different application including image classification, language understanding, reinforcement learning and others. 
+CNTK Python Jupyter notebook [tutorials](https://cntk.ai/pythondocs/tutorials.html) cover a range of different application including image classification, language understanding, reinforcement learning and others. 
 
 You can also try out the tutorials live with [Azure Notebooks](https://notebooks.azure.com/library/cntkbeta2).
 
