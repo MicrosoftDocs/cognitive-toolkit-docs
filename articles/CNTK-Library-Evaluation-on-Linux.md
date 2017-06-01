@@ -27,10 +27,10 @@ Please use the same build flavor (Debug/Release) and [the same compiler version]
 
 Please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface.md) page for APIs in the CNTK C++ Library.
 
-### Using Python
+## Using Python
 You can use Python to evaluate a pre-trained model. Examples can be found [here](./How-do-I-Evaluate-models-in-Python.md).
 
-### Using Java
+## Using Java
 CNTK also provides APIs for evaluating model in Java application. Please note that the CNTK Java API is still experimental and subject to change.
 
 The [Java example](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
