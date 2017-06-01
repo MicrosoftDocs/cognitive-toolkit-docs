@@ -18,7 +18,7 @@ There are tutorials for Python users and for BrainScript users.
 
 CNTK Python Jupyter notebook [tutorials](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials) cover a range of different application including image classification, language understanding, reinforcement learning and others. 
 
-You can also try out the tutorials live with [Azure Notebooks](https://notebooks.azure.com/library/cntkbeta2).
+You can also try out the tutorials live with [Azure Notebooks](https://notebooks.azure.com/cntk/libraries/tutorials).
 
 Additional Python tutorials:
 * The folder [Tutorials/NumpyInterop](https://github.com/Microsoft/CNTK/tree/master/Tutorials/NumpyInterop) contains a simple example of how to use numpy arrays as input for CNTK training and evaluation.
