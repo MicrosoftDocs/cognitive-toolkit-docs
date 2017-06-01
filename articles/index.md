@@ -23,7 +23,7 @@ Here are a few pages to get started:
 * [Reasons to switch from Tensorflow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
-  * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/CNTK/) with **pre-installed** CNTK 
+  * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/cntk/libraries/tutorials) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
   * [Using CNTK from Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
