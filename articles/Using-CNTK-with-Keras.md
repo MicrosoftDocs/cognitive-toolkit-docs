@@ -80,7 +80,7 @@ Step 6. Try out the Keras examples
 You can try some example scripts in keras' repo: 
 https://github.com/fchollet/keras/tree/master/examples
  
-For example, clone the "imdb_lstm.py" from the link above, and run: 
+For example, clone the "mnist_mlp.py" from the link above, and run: 
 
 ```python mnist_mlp.py```
 
