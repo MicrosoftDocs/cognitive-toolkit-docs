@@ -36,7 +36,7 @@ Starting from CNTK V.2.0 RC 3, a Java API is added to support model evaluation i
 
 * Random variables can now be used as a part of the graph. The following are now under the `cntk.random` module: `uniform`, `normal`, `bernoulli`, and `gumbel` as well as their corresponding ones with `_like` (e.g. `uniform_like`).
 * New learner: Universal learner uses a CNTK graph as the update mechanism.
-* New high-level `train()` and `test()` functions that wrap `Trainer`, `training_session`, and `Evaluator`. For usage examples see [Examples/1stSteps](https://github.com/Microsoft/CNTK/tree/master/Examples/1stSteps)  and [Tutorials/CNTK_200_GuidedTour.ipynb](https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_200_GuidedTour.ipynb).
+* New high-level `train()` and `test()` functions that wrap `Trainer`, `training_session`, and `Evaluator`. For usage examples see [Examples/1stSteps](https://github.com/Microsoft/CNTK/tree/master/Examples/1stSteps) and [Tutorials/CNTK_200_GuidedTour.ipynb](https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_200_GuidedTour.ipynb).
 * `training_session`, `train()`, and `test()` now also accept data in the form of numpy/scipy arrays (in addition to data reader). Built on the basis of the new class `MinibatchSourceFromData` that wraps numpy/scipy arrays in a reader.
 
 ### Breaking changes
