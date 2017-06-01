@@ -80,7 +80,7 @@ https://github.com/fchollet/keras/tree/master/examples
  
 For example, clone the "imdb_lstm.py" from the link above, and run: 
 
-```python imdb_lstm.py```
+```python mnist_mlp.py```
 
 ## Known issues:
 
