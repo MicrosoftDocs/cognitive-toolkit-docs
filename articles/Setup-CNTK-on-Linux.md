@@ -525,12 +525,12 @@ cd cntk
 git submodule update --init -- Source/Multiverso
 ```
 
-Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-machines.md#24-data-darallel-training-with-parameter-server) for training.
+Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-machines.md#8-data-parallel-training-with-parameter-server) for training.
 
 **Optional** If you don't need DataParallelASGD support, then pass the option `--asgd=no` to the configure command.
 
 
-**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#22-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
+**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#6-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ## Building CNTK
 
