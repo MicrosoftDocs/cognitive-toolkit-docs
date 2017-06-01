@@ -361,7 +361,7 @@ The example so far has been described to use CNTK in CPU mode only. To make use 
 
     cntk  configFile=lr_ndl.cntk  deviceId=auto
 
-This will make CNTK use the GPU for computation. See more on the `deviceId` parameter [here (Windows)](../Setup-CNTK-on-Windows.md#trying-cntk-with-gpu) or [here (Linux)](../Setup-CNTK-on-Linux.md#GPU-Specific-Packages).
+This will make CNTK use the GPU for computation. See more on the `deviceId` parameter [here (Windows)](../Setup-CNTK-on-Windows.md#trying-cntk-with-gpu) or [here (Linux)](../Setup-CNTK-on-Linux.md#gpu-specific-packages).
 
 This shows an important mechanism: Any key-value pair on the command-line parameter of the CNTK executable "patches" an existing configuration (with the exception of the key "configFile" which is always required to set a "base" configuration). Thus, the above is equivalent to having a `deviceId` key *in* the file itself. 
 
