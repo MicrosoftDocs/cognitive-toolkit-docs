@@ -74,7 +74,7 @@ Add the CNTK Eval functionality to the project. This is available as a Nuget pac
 
 ![Nuget](./pictures/EvaluateWebApi/pic1.png)
 
-Now we need a model to evaluate. Download the [ResNet_18.model](https://www.cntk.ai/resnet/ResNet_18.model) and save it in the directory `CNTK\Models` in the solution. The model file needs also to be included in the solution (`Project -> Add existing Item`)
+Now we need a model to evaluate. Download the [ResNet_18.model](https://cntk.ai/resnet/ResNet_18.model) and save it in the directory `CNTK\Models` in the solution. The model file needs also to be included in the solution (`Project -> Add existing Item`)
 
 CNTK requires a 64-bit runtime environment. Make sure in the Configuration Manager that the project is compiled for the x64 platform. In addition, the WebApi we are creating has to be hosted in a 64-bit instance of IIS. You can enforce this by selecting "Use 64 bit version of IIS Express for web sites and projects" in `Tools -> Options -> Project and Solutions -> WebProjects`
 

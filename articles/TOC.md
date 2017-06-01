@@ -4,7 +4,7 @@
 ### [CNTK move to Cuda8](/cognitive-toolkit/CNTK-move-to-Cuda8)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
-## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
+## [Intro](https://docs.microsoft.com/en-us/python/cognitive-toolkit/gettingstarted)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### Binary setup
 #### [On Windows Python](/cognitive-toolkit/Setup-Windows-Python)
@@ -35,7 +35,7 @@
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
 
-### [Python](https://www.cntk.ai/pythondocs/tutorials.html)
+### [Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials)
 #### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ### BrainScript
 #### [Overview](/cognitive-toolkit/CNTK-usage-overview)
@@ -167,11 +167,11 @@
 ### [CNTK Library Native Interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 ## [C#](/cognitive-toolkit/CNTK-Library-Managed-API)
 ## [Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
-## [Python](https://www.cntk.ai/pythondocs/)
-### [Working with Sequences](https://www.cntk.ai/pythondocs/sequence.html)
-### [Layers library reference](https://www.cntk.ai/pythondocs/layerref.html)
-### [Python API Reference](https://www.cntk.ai/pythondocs/cntk.html)
-### [Extending Cognitive Toolkit](https://www.cntk.ai/pythondocs/extend.html)
+## [Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
+### [Working with Sequences](https://docs.microsoft.com/en-us/python/cognitive-toolkit/sequence)
+### [Layers library reference](https://docs.microsoft.com/en-us/python/cognitive-toolkit/layerref)
+### [Python API Reference](https://docs.microsoft.com/en-us/python/api/cntk)
+### [Extending Cognitive Toolkit](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend)
 # Resources
 ## [Releases](https://github.com/Microsoft/CNTK/releases)
 ### [CNTK_2_0_RC_1_Release_Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_RC_1_Release_Notes)

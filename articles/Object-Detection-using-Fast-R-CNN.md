@@ -43,7 +43,7 @@ The following are the main resources for CNTK Fast R-CNN:
 |||
 |:-----------------|:---
 |Recipe            |[CNTK Python API](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN) (see A2_RunCntk_py3.py) or [Brain Script config file](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN) (see fastrcnn.cntk).
-|pre-trained models |Download pre-trained Fast R-CNN models for the [grocery](https://www.cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model) data or the [Pascal VOC](https://www.cntk.ai/Models/FRCN_Pascal/Fast-RCNN.model) data set. 
+|pre-trained models |Download pre-trained Fast R-CNN models for the [grocery](https://cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model) data or the [Pascal VOC](https://cntk.ai/Models/FRCN_Pascal/Fast-RCNN.model) data set. 
 |Data              |[Example data](#example-data-and-baseline-model) (food items in a fridge) and [Pascal VOC data](#run-pascal-voc).
 |How to run        |Follow the description below.
 
@@ -126,7 +126,7 @@ To run the toy example, make sure that in `PARAMETERS.py` the `datasetName` is s
 * Run `A1_GenerateInputROIs.py` to generate the input ROIs for training and testing.
 * Run `A2_RunCntk_py3.py` to train a Fast R-CNN model using the CNTK Python API and compute test results.
   * Alternatively run `A2_RunCntk.py` to train and test using cntk.exe and BrainScript.
-  * Alternatively you can download the pre-trained CNTK Fast R-CNN model for the grocery example [here](https://www.cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model). ([Details](#using-a-pre-trained-model))
+  * Alternatively you can download the pre-trained CNTK Fast R-CNN model for the grocery example [here](https://cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model). ([Details](#using-a-pre-trained-model))
 * Run `A3_ParseAndEvaluateOutput.py` to compute the mAP ([mean average precision](#map-mean-average-precision)) of the trained model.
 
 The output from script A3 should contain the following:

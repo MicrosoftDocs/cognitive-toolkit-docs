@@ -26,7 +26,7 @@ This is a summary of new features delivered with the Beta 10 release of CNTK V.2
 The following updates are introduced to Python API:
 
 * Operators can now be implemented in pure Python by means of UserFunctions,
-  cf. [here](https://www.cntk.ai/pythondocs/extend.html)
+  cf. [here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend)
   * The API is still experimental and subject to change.
 
 * Plotting the CNTK graph

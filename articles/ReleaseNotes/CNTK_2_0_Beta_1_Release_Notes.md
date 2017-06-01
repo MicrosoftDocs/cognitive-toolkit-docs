@@ -26,14 +26,14 @@ The following interfaces are supported:
 * C++
 
 Read more about CNTK Library API in this [Wiki Article](../CNTK-Library-API.md).  
-Detailed description of the Python API can be found in [CNTK Python API Documentation](https://cntk.ai/pythondocs/).
+Detailed description of the Python API can be found in [CNTK Python API Documentation](https://docs.microsoft.com/en-us/python/cognitive-toolkit/).
 
 ## Python Examples and Tutorials (Jupyter Notebooks)
 
 We have prepared a set of Python Examples and Tutorials (the latter implemented as (Jupyter Notebooks). You will find all information at these locations:
 
-* [Python Examples](https://cntk.ai/pythondocs/examples.html)
-* [Python Tutorials (Jupyter Notebooks)](https://cntk.ai/pythondocs/tutorials.html)
+* [Python Examples](https://docs.microsoft.com/en-us/python/cognitive-toolkit/examples)
+* [Python Tutorials (Jupyter Notebooks)](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials)
 
 ## Protocol Buffers serialization
 

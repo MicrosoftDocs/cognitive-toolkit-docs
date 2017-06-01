@@ -38,7 +38,7 @@ Highlights:
 * New operators like `pow`, `sequence.reduce_max`, `sequence.softmax`.
 * New feature for Linux source builds (GPU Direct RDMA support in distributed gradients aggregation, NCCL support for Python in V2 gradients aggregation).
 * Support for Python 3.6 for source and binary installation; see [here](./Setup-CNTK-on-your-machine.md).
-* `UserMinibatchSource` to write custom minibatch sources; see [here](https://cntk.ai/pythondocs/extend.html#user-defined-minibatch-sources).
+* `UserMinibatchSource` to write custom minibatch sources; see [here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-minibatch-sources).
 * New C# APIs: `class NDArrayView` and methods, `SetMaxNumCPUThreads()`, `GetMaxNumCPUThreads()`, `SetTraceLevel()`, `GetTraceLevel()`
 * A new set of NuGet Packages is provided with this Release. 
 
@@ -56,7 +56,7 @@ Highlights:
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
-* New Python [model debugging functions](https://www.cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
+* New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
 * Various bug fixes.
@@ -74,10 +74,10 @@ See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Container
 ***2017-03-15.* V 2.0 Beta 15 Release**  
 Highlights of this Release:
 *  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).
-* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://www.cntk.ai/pythondocs/extend.html#user-learners).
+* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
-* Significant updates in the [Layers Library](https://www.cntk.ai/pythondocs/layerref.html) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
+* Significant updates in the [Layers Library](https://docs.microsoft.com/en-us/python/cognitive-toolkit/layerref) of Python API. See [Release Notes](./ReleaseNotes/CNTK_2_0_beta_15_Release_Notes.md) for detailed description.
 * Updates and [new examples](./CNTK-Eval-Examples.md#examples-for-evaluating-multiple-requests-in-parallel) in C# API.
 * Various bug fixes.
 
@@ -123,7 +123,7 @@ See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Container
 
 ***2017-02-01.* V 2.0 Beta 10 Release**  
 Highlights of this Release:
-* New and updated core and Python API features ([Operators with UserFunctions](https://www.cntk.ai/pythondocs/extend.html), [Tensorboard support](./Using-TensorBoard-for-Visualization.md), [Python API Fast R CNN](./Object-Detection-using-Fast-R-CNN.md)).
+* New and updated core and Python API features ([Operators with UserFunctions](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend), [Tensorboard support](./Using-TensorBoard-for-Visualization.md), [Python API Fast R CNN](./Object-Detection-using-Fast-R-CNN.md)).
 * Improved speed of CrossEntropyWithSoftmax and ClassificationError for sparse labels.
 * New Tutorials and Examples:
   * A Python version of the deconvolution layer and image auto encoder example was added ([Example **07_Deconvolution** in *Image - Getting Started*](https://github.com/Microsoft/CNTK/tree/v2.0.beta10.0/Examples/Image/GettingStarted)).

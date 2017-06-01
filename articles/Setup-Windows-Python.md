@@ -58,7 +58,7 @@ C:\> pip install <url>
 ```
 where `<url>` is the corresponding wheel file URL in the table on the top of this page. E.g. if you have Python 3.5 and want to install the CPU-only version, run
 ```
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp35-cp35m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp35-cp35m-win_amd64.whl
 ```
 
 Continue with a [quick installation test](#quick-installation-test)
@@ -90,7 +90,7 @@ Open a standard command shell, create the environment, make it active, and pip-i
 ```
 C:\> conda create --name cntk-py34 python=3.4 numpy scipy h5py jupyter
 C:\> activate cntk-py34
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc1-cp34-cp34m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.0rc3-cp34-cp34m-win_amd64.whl
 ```
 A quick test that the installation succeeded can be done by querying the CNTK version:
 ```

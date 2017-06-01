@@ -30,7 +30,7 @@ The following updates are introduced to Python API:
 
 * CNTK now supports Python versions 2.7, 3.4, and 3.5, for both Windows and Linux. Please see [binary and source setup](../Setup-CNTK-on-your-machine.md) instructions to find out about how to select Python version.
 * Max unpooling is now accessible from Python
-* New feature: ```as_block``` function enables hierarchical function graph. See detailed description in [CNTK Python API Documentation](https://www.cntk.ai/pythondocs/cntk.ops.html?highlight=as_block#cntk.ops.as_block).
+* New feature: ```as_block``` function enables hierarchical function graph. See detailed description in [CNTK Python API Documentation](https://cntk.ai/pythondocs/cntk.ops.html?highlight=as_block#cntk.ops.as_block).
 * New Example: [Feature extraction using a trained model in Python API](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Image/FeatureExtraction).
 
 ## Windows Version. Visual Studio 2015 support
