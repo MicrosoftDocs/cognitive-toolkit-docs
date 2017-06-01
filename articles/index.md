@@ -37,9 +37,9 @@ Here are a few pages to get started:
 The first production release of Cognitive Toolkit v.2.
 
 Highlights:
-* CNTK backend for Keras
-* Extremely fast binary convolution with Halide
-* Java API
+* CNTK backend for Keras.
+* Extremely fast binary convolution with Halide.
+* Java API.
 * A new set of NuGet Packages.
 * Multiple bug fixes.
 
