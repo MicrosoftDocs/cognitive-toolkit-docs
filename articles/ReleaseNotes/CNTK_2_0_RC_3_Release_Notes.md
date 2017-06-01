@@ -62,7 +62,7 @@ A new set of NuGet Packages is provided with this Release.
 
 ### Removed deprecated API and their replacements
 
-In [CNTK 2.0 RC 3](https://github.com/Microsoft/CNTK/releases/tag/v2.0) we have removed the API mentioned in the table below. All API were previously declared as deprecated. Also see what API are replacing the deprecated and removed ones.
+In [CNTK 2.0 RC 3](https://github.com/Microsoft/CNTK/releases/tag/v2.0.rc3) we have removed the API mentioned in the table below. All API were previously declared as deprecated. Also see what API are replacing the deprecated and removed ones.
 
 | Removed API (was previously deprecated) | Replacement API |
 |:---------|:------------|
