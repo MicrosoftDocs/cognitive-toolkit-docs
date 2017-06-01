@@ -280,7 +280,7 @@ The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK
     setx PYTHONPATH c:\repos\cntk\bindings\python;%PYTHONPATH%
 ```
 
-### OPTIONAL. Java
+## OPTIONAL. Java
 To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
 
 Set the environment variable JAVA_HOME to point to the directory of Java installation. The following setting assumes that you have installed JDK 1.8.0_131 to C:\local\jdk1.8.0_131:
@@ -288,7 +288,7 @@ Set the environment variable JAVA_HOME to point to the directory of Java install
     setx JAVA_HOME "c:\local\jdk1.8.0_131"
 ```
 
-#### Uninstall previous CNTK versions
+## Uninstall previous CNTK versions
 
 If you previously installed any version of the CNTK Python package on your machine, uninstall it by first removing any CNTK related paths in the PYTHONPATH environment variable. Do: `echo %PYTHONPATH%` to see its current value, and then use the `setx` command to set PYTHONPATH such that the CNTK related paths are gone.  If that makes PYTHONPATH empty, so be it.
 
