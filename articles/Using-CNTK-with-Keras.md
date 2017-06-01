@@ -76,11 +76,11 @@ Please modify the "keras.json" file under %USERPROFILE%/.keras on windows, or $H
 Step 6. Try out the Keras examples
 
 You can try some example scripts in keras' repo: 
-https://github.com/fchollet/keras/tree/master/examples 
+https://github.com/fchollet/keras/tree/master/examples
  
 For example, clone the "imdb_lstm.py" from the link above, and run: 
 
-```python imdb_lstm.py ```
+```python imdb_lstm.py```
 
 ## Known issues:
 
