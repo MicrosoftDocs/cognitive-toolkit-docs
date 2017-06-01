@@ -31,8 +31,6 @@
 #### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
 #### [Shared lib naming](/cognitive-toolkit/CNTK-Shared-Libraries-Naming-Format)
 
-### [Using Keras](./Using-CNTK-with-Keras.md)
-
 ## [Feedback](/cognitive-toolkit/Feedback-Channels)
 # How To
 ## [Tutorials](/cognitive-toolkit/tutorials)
