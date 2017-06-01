@@ -17,7 +17,7 @@ There are tutorials for Python users and for BrainScript users.
 ### Python Jupyter Notebook (**Recommended**)
 
 Assuming you have completed [Getting Started](https://www.cntk.ai/pythondocs/gettingstarted.html), use
-CNTK Python Jupyter notebook [tutorials](https://www.cntk.ai/pythondocs/tutorials.html) to gain familiarity with the toolkit. You may want to start with the CNTK_1## series tutorials before trying out higher series that cover a range of different application including image classification, language understanding, reinforcement learning and others. 
+CNTK Python Jupyter notebook [tutorials](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials?view=cntk-py-2.0) to gain familiarity with the toolkit. You may want to start with the CNTK_1## series tutorials before trying out higher series that cover a range of different application including image classification, language understanding, reinforcement learning and others. 
 
 Additional python recipes: 
 * ['Build your own image classifier using Transfer Learning'](https://github.com/Microsoft/CNTK/wiki/Build-your-own-image-classifier-using-Transfer-Learning) provides two examples for custom image classifiers using transfer learning.
