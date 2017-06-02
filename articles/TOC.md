@@ -4,8 +4,7 @@
 ### [CNTK move to Cuda8](/cognitive-toolkit/CNTK-move-to-Cuda8)
 ## [Breaking Changes](/cognitive-toolkit/Breaking-changes-in-Master-compared-to-beta15)
 # Get Started
-<!--## [Intro](https://docs.microsoft.com/en-us/python/cognitive-toolkit/gettingstarted)-->
-## [Intro](https://www.cntk.ai/pythondocs/gettingstarted.html)
+## [Intro](https://docs.microsoft.com/en-us/python/cognitive-toolkit/gettingstarted)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### Binary setup
 #### [On Windows Python](/cognitive-toolkit/Setup-Windows-Python)
