@@ -70,7 +70,7 @@ Highlights:
 * Slice now supports multiple-axis slicing.
 * Improves performance and memory footprint
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
-* New Python [model debugging functions](https://docs.microsoft.com/en-us/python/api/cntk.debugging.debug).
+* New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
 * New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
 * Various bug fixes.
