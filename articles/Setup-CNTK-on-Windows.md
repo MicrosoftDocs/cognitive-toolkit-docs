@@ -357,7 +357,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md##cudnn)). 
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md#cudnn)). 
 Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
 As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 
