@@ -25,7 +25,8 @@ Here are a few pages to get started:
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/cntk/libraries/tutorials) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
-  * [Using CNTK from Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
+  <!--* [Using CNTK from Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)-->
+  * [Using CNTK from Python](https://www.cntk.ai/pythondocs/index.html)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
 * [CNTK with Keras (Beta)](./Using-CNTK-with-Keras.md)
 * CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
