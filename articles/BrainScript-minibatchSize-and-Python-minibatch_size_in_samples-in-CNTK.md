@@ -44,7 +44,7 @@ would be inversely proportional to the sequence length. CNTK's approach avoids t
 
 When multiple `Input{}`s are used, it is possible that not all inputs have the same sequence length.
 For example, in sequence classification the label of each sequence is a single token.
-In this case, the input with the largest number of samples controls.
+In this case, the input with the largest number of samples controls the minibatch size. (You can change this behavior by specifying `definesMbSize=True` for some input, then the minibatch size will be counted based on the sequences from this particular input. When several inputs are specified, only a single one can have `definesMbSize` set to `True`.)
 
 Despite our clear definition of `minibatchSize` being the number of samples between model updates,
 there are two occasions where we must relax the definition:

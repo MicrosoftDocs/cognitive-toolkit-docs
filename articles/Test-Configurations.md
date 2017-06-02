@@ -43,6 +43,9 @@ Here are the current configurations that are used in CNTK team environment for a
 ### libzip Library
 * libzip v.1.1.3
 
+### Java+
+* Java SE Development Kit 8 v1.8.0\_131, 64-bit
+
 ## Linux
 ### Operating System
 * Ubuntu 14.04 LTS (64 bit)
@@ -69,3 +72,6 @@ Here are the current configurations that are used in CNTK team environment for a
 
 ### libzip Library
 * libzip v.1.1.2
+
+### Java
+* OpenJDK 7, 64-bit

@@ -15,6 +15,7 @@ ms.devlang:   brainscript
 ## BrainScript Basics
 
   * [Overview](./BrainScript-Config-File-Overview.md)
+  * [Getting Started](./CNTK-usage-overview.md)
   * [Train, Test, Eval](./BrainScript-Train-Test-Eval.md)
   * [Top-level Configurations](./BrainScript-Top-level-configurations.md)
   * [SimpleNetworkBuilder](./Simple-Network-Builder.md)

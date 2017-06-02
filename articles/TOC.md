@@ -105,7 +105,6 @@
 ### [Gather and Scatter](/cognitive-toolkit/Gather-and-Scatter)
 ### [If operation](/cognitive-toolkit/If-Operation)
 ### [Inputs](/cognitive-toolkit/Inputs)
-### [Layers library reference](/cognitive-toolkit/Layers-Library-Reference)
 ### [Loss functions and metrics](/cognitive-toolkit/Loss-Functions-and-Metrics)
 ### [Optimized RNN Stack](/cognitive-toolkit/OptimizedRNNStack)
 ### [Parameters And constants](/cognitive-toolkit/Parameters-And-Constants)

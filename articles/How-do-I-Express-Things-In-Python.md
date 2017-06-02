@@ -41,8 +41,8 @@ za = C.times(a_embed, w_a)
 ```
 Now we need to compute the appropriate correction which is the log of the sum of the exponentials. This can be done with another recurrence. 
 ```python
-p = C.placeholder_variable((1))
-prev_zq_or_tiny = C.element_select(C.sequence.is_first(zq), -1e+30, C.past_value(p))
+p = C.placeholder((1))
+prev_zq_or_tiny = C.element_select(C.sequence.is_first(zq), -1e+30, C.sequence.past_value(p))
 log_cumsum_exp = C.log_add_exp(zq, prev_zq_or_tiny)
 actual_log_cumsum_exp = log_cumsum_exp.replace_placeholders({p:log_cumsum_exp.output})
 log_sum_exp = C.sequence.last(actual_log_cumsum_exp)
@@ -103,7 +103,7 @@ SetupTrainer():
     return trainer, criterion
 ```
 
-Then later, you needed to introspect to get back the names input and label by using “arguments”:
+Then later, you needed to introspect to get back the names input and label by using [arguments](https://www.cntk.ai/pythondocs/cntk.ops.functions.html#cntk.ops.functions.Function.arguments):
 ```python
 # train the model
 trainer, criterion = SetupTrainer()
@@ -137,14 +137,14 @@ How do I find the support for following NDL LSTM primitives to Python:
 
 * How to pass argument in delay of a variable defined later in the network? E.g. for peep hole LSTM, cell state variable is defined later, but delay is needed to get t-1 cell state. Python doesn’t allow variables to be used first and defined later. 
 
-* Ans: One needs to use a `placeholder_variable` and later a call to `replace_placeholders`. [Here](#Implement-an-attention-mechanism) is a simple example.
+* Answer: One needs to use a `placeholder` and later a call to `replace_placeholders`. [Here](#Implement-an-attention-mechanism) is a simple example.
 
 
 **RowStack**, **RowSlice** 
 
 * Are there any substitutes for these primitives? If not how to implement them in python? Can we operate on variables as if they are numpy arrays?
 
-* Ans: Use [splice](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice)
+* Answer: Use [splice](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice)
   
 
 **DiagTime** vs **ElementTimes** 

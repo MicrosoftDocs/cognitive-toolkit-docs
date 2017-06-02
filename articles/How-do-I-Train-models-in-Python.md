@@ -30,7 +30,7 @@ My current understanding is that when I call MinibatchSource.next_minibatch(mini
 
 **Yes**
 
-Does the implementation ensure that when I call next_minibatch N times (N = number_of_training_samples / minibatch_size) my whole data set gets covered at the end of the N calls of next_minibatch? Also, when I call next_minibatch 2*N times does it means that my whole training set gets covered twice?
+Does the implementation ensure that when I call next_minibatch N times (N = number_of_training_samples / minibatch_size) my whole data set gets covered at the end of the N calls of next_minibatch? Also, when I call next_minibatch `2*N` times does it means that my whole training set gets covered twice?
 
 **Yes**.
 
@@ -110,8 +110,8 @@ For multilabel classification you should avoid using CrossEntropy as it can only
 
 ```python
 def my_hamming_loss:
-    y = placeholder_variable()
-    p = placeholder_variable()
+    y = placeholder()
+    p = placeholder()
     hammingLoss = reduce_sum (not_equal (y, (greater (p, 0.5))))
     return hammingLoss 
 ```

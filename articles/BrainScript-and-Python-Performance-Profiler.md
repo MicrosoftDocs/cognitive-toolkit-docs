@@ -32,14 +32,14 @@ In most cases it is sufficient to add a single line to the config file:
 
 There are profiler APIs that control the profiler's behavior. A typical usage with training_session is like:
 
-    from cntk.utils import start_profiler, stop_profiler
+    from cntk.debugging import start_profiler, stop_profiler
     start_profiler()
     training_session.train()
     stop_profiler()
 
 Note that profiler is not enabled after start_profiler, and in training_session enable_profiler() is called after the first checkpoint. This is to skip the first epoch that may have more latency due to prefetching. When not using training_session, user need to do it like:
 
-    from cntk.utils import start_profiler, stop_profiler, enable_profiler
+    from cntk.debugging import start_profiler, stop_profiler, enable_profiler
     start_profiler()        
     for epoch in range(max_epochs):       # loop over epochs
         sample_count = 0
