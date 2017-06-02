@@ -38,6 +38,6 @@ PBN executes with following steps:
 
 ## PBN usage
 
-The usage of PBN can find in [PBN Command](./Top-level-commands.md#pbnstat-command)
+The usage of PBN can find in [BNStat Command](./Top-level-commands.md#bnstat-command)
     
 

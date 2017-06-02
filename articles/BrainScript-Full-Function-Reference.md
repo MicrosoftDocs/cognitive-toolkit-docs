@@ -111,7 +111,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - [`CrossEntropyWithSoftmax`](./Loss-Functions-and-Metrics.md#crossentropy-crossentropywithsoftmax)` (targetDistribution, nonNormalizedLogClassPosteriors)`  
    [`CrossEntropy`](./Loss-Functions-and-Metrics.md#crossentropy-crossentropywithsoftmax)` (targetDistribution, classPosteriors)`  
  - [`Logistic`](./Loss-Functions-and-Metrics.md#logistic-weightedlogistic)` (label, probability)`  
-   [`WeightedLogistic`] (./Loss-Functions-and-Metrics.md#logistic-weightedlogistic)`(label, probability, instanceWeight)`  
+   [`WeightedLogistic`](./Loss-Functions-and-Metrics.md#logistic-weightedlogistic)`(label, probability, instanceWeight)`  
  - [`ClassificationError`](./Loss-Functions-and-Metrics.md#classificationerror)` (labels, nonNormalizedLogClassPosteriors)`  
  - `MatrixL1Reg(matrix)`  
  - `MatrixL2Reg(matrix)`  

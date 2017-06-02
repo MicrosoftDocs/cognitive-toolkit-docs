@@ -137,7 +137,7 @@ How do I find the support for following NDL LSTM primitives to Python:
 
 * How to pass argument in delay of a variable defined later in the network? E.g. for peep hole LSTM, cell state variable is defined later, but delay is needed to get t-1 cell state. Python doesn’t allow variables to be used first and defined later. 
 
-* Answer: One needs to use a `placeholder` and later a call to `replace_placeholders`. [Here](#Implement-an-attention-mechanism) is a simple example.
+* Answer: One needs to use a `placeholder` and later a call to `replace_placeholders`. [Here](#implement-an-attention-mechanism) is a simple example.
 
 
 **RowStack**, **RowSlice** 

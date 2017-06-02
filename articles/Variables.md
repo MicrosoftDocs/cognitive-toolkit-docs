@@ -18,7 +18,7 @@ Variable names may be any alphanumeric sequence that starts with a letter. A var
 
 ## Reserved words
 
-Any name that is a [Function](.\NDL-Functions.md) name is reserved and can not be used for a variable. The special node names below are also  reserved and can not be used as variable names.
+Any name that is a function name is reserved and can not be used for a variable. The special node names below are also  reserved and can not be used as variable names.
 ```
 FeatureNodes
 LabelNodes
@@ -29,7 +29,7 @@ OutputNodes
 
 ## Variable names with dots
 
-When it is necessary to access a variable that is defined in a [Macro](.\NDL-Macros.md) it can be accessed using dot syntax. If the Macro ``FF`` is called from the following code:
+When it is necessary to access a variable that is defined in a macro it can be accessed using dot syntax. If the Macro ``FF`` is called from the following code:
 ```
 L1 = FF(features, HDim, SDim)
 ```

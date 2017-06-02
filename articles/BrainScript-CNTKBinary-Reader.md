@@ -128,7 +128,7 @@ The data portion contains the data outlined in chunks as described above. It is 
 
 #### Serialized Input
 
-Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserialer defined in the [matHeader](#matHeader) section.
+Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserialer defined in the [matHeader](#matheader) section.
 
 ##### DenseBinaryDataDeserializer Data
 

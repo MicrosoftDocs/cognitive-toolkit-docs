@@ -181,7 +181,7 @@ Interpolation between two values with interpolation weight `alpha` in range 0..1
 
     SoftMUX (x, y, alpha) = Constant (1-alpha) .* x + Constant (alpha) .* y
 
-Hamming loss (cf. [here](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier)):
+Hamming loss (cf. [here](./How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier)):
 
     HammingLoss (y, p) = ReduceSum (BS.Boolean.Xor (y, Greater (p, Constant(0.5))))
     hl = HammingLoss (multiLabels, probabilities)

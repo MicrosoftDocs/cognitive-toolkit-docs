@@ -16,10 +16,10 @@ ms.devlang:   brainscript, python
 
 CNTK currently supports four parallel SGD algorithms:
 
-1.  [DataParallelSGD](#21-data-parallel-training-with-1-bit-sgd)
-2.  [BlockMomentumSGD](#22-block-momentum-sgd)
-3.  [ModelAveragingSGD](#23-model-averaging-sgd)
-4.  [DataParallelASGD](#24-data-parallel-training-with-parameter-server)
+1.  [DataParallelSGD](#5-data-parallel-training-with-1-bit-sgd)
+2.  [BlockMomentumSGD](#6-block-momentum-sgd)
+3.  [ModelAveragingSGD](#7-model-averaging-sgd)
+4.  [DataParallelASGD](#8-data-parallel-training-with-parameter-server)
 
 ##### Prerequisites
 
@@ -399,7 +399,7 @@ To enable Block-Momentum in Python, similarly to the 1-bit SGD, the user needs t
 For a fully functional example please see [ConvNet example](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ConvNet/Python#convnet_cifar10_dataaug_distributedpy).
 
 
-## 7  Model-Averaging SGD
+## 7 Model-Averaging SGD
 
 *Model-Averaging SGD* is an implementation of the model averaging algorithm
 detailed in [3,4] without the use of natural gradient. The idea here is to let

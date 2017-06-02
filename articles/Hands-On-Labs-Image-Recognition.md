@@ -339,7 +339,7 @@ is invoked by an optional parameter: `BatchNormalizationLayer{spatialRank=2}`.
 Please add batch normalization to all three convolution layers and between the two dense layers.
 Note that batch normalization should be inserted right before the non-linearity.
 Hence, you must remove the `activation` parameter and instead insert explicit
-calls to the CNTK function [`ReLU()`](./ReLU.md).
+calls to the CNTK function [`ReLU()`](./BrainScript-Activation-Functions.md).
 
 Further, batch normalization changes convergence speed.
 So let us increase the learning rates
@@ -579,7 +579,7 @@ more concise way of writing the same:
     )
 
 This style will be introduced and used in the next hands-on tutorial,
-[*Text Understanding with Recurrent Networks*](./Hands-On-Labs-Text-Understanding.md). 
+[*Text Understanding with Recurrent Networks*](./Hands-On-Labs-Language-Understanding.md). 
 
 ## Solutions
 
