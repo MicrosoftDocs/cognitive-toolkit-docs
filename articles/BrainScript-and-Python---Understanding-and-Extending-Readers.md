@@ -31,7 +31,7 @@ In the next sections we discuss these abstractions in more detail.
 
 ## Configuring a reader (minibatch source) in Python
 
-This section provides several examples on how a composite reader (aka [MinibatchSource](https://docs.microsoft.com/en-us/python/api/cntk.io.minibatchsource)) can be configured in Python.
+This section provides several examples on how a composite reader (aka [MinibatchSource](https://cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
 
 The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py), it shows the Python equivalent of the AlexNet reader from [Transforms](#transforms) section.
 

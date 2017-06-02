@@ -17,9 +17,9 @@ With the Release Candidate 2 we ship one of the last previews before the Microso
 ### CNTK Core: new and improved features
 
 * New operators added:
-  [pow](https://docs.microsoft.com/en-us/python/api/cntk.ops#cntk_ops_pow),
-  [sequence.reduce_max](https://docs.microsoft.com/en-us/python/api/cntk.ops.sequence#cntk_ops_sequence_reduce_max), and
-  [sequence.softmax](https://docs.microsoft.com/en-us/python/api/cntk.ops.sequence#cntk_ops_sequence_softmax).
+  [pow](https://cntk.ai/pythondocs/cntk.ops.html#cntk.ops.pow),
+  [sequence.reduce_max](https://cntk.ai/pythondocs/cntk.ops.sequence.html#cntk.ops.sequence.reduce_max), and
+  [sequence.softmax](https://cntk.ai/pythondocs/cntk.ops.sequence.html#cntk.ops.sequence.softmax).
 * New feature for Linux source builds:
   * GPU Direct RDMA support in distributed gradients aggregation (enabled through `./configure --gdr=yes`).
   * NCCL support for Python in V2 gradients aggregation
@@ -36,7 +36,7 @@ With the Release Candidate 2 we ship one of the last previews before the Microso
 * Support for Python 3.6 for source and binary installation; see
   [setup instructions](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine).
 * `UserMinibatchSource` now allows to write custom minibatch sources and pass them to the CNTK core.
-  See [here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-minibatch-sources) for documentation.
+  See [here](https://cntk.ai/pythondocs/extend.html#user-defined-minibatch-sources) for documentation.
 * CNTK deterministic mode (`cntk.cntk_py.force_deterministic_algorithms()`) can be enabled in all configurations, except for overlapped max pooling.
 * Training session switched to distributed test evaluation and cross validation.
 
