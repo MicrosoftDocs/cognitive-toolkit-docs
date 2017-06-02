@@ -25,7 +25,7 @@ Here are a few pages to get started:
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/cntk/libraries/tutorials) with **pre-installed** CNTK 
 * [The CNTK Library APIs](./CNTK-Library-API.md)
-  * [Using CNTK from Python](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
+  * [Using CNTK from Python](https://cntk.ai/pythondocs)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
 * [CNTK with Keras (Beta)](./Using-CNTK-with-Keras.md)
 * CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
@@ -71,7 +71,7 @@ Highlights:
 * New operators like `pow`, `sequence.reduce_max`, `sequence.softmax`.
 * New feature for Linux source builds (GPU Direct RDMA support in distributed gradients aggregation, NCCL support for Python in V2 gradients aggregation).
 * Support for Python 3.6 for source and binary installation; see [here](./Setup-CNTK-on-your-machine.md).
-* `UserMinibatchSource` to write custom minibatch sources; see [here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-minibatch-sources).
+* `UserMinibatchSource` to write custom minibatch sources; see [here](https://cntk.ai/pythondocs/extend.html#user-defined-minibatch-sources).
 * New C# APIs: `class NDArrayView` and methods, `SetMaxNumCPUThreads()`, `GetMaxNumCPUThreads()`, `SetTraceLevel()`, `GetTraceLevel()`
 * A new set of NuGet Packages is provided with this Release. 
 

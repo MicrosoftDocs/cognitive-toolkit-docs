@@ -31,7 +31,7 @@ The following programming languages are supported:
 We have introduced features for each of these API and provided examples illustrating their usage. Use the following resources:
 
 * [CNTK API Summary page](./CNTK-Library-API.md)
-* [CNTK Python API Documentation](https://docs.microsoft.com/en-us/python/cognitive-toolkit/)
+* [CNTK Python API Documentation](https://cntk.ai/pythondocs/)
   * The documentation includes links to all existing Tutorials and Examples. Also see next section
 * [CNTK Managed API](./CNTK-Library-Managed-API.md)
   * [CNTK Eval Examples](./CNTK-Eval-Examples.md)
@@ -42,7 +42,7 @@ We have introduced features for each of these API and provided examples illustra
 Recognizing the importance of Python in Deep Learning we have published (a constantly growing) set of Python Examples and Tutorials (the latter are implemented as Jupyter Notebooks). You will find all information at these locations:
 
 * [Python Examples](./examples.md)
-* [Python Tutorials (Jupyter Notebooks)](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials)
+* [Python Tutorials (Jupyter Notebooks)](https://cntk.ai/pythondocs/tutorials.html)
 
 On Linux you easily can use our preconfigured [CNTK Docker Containers](./CNTK-Docker-Containers.md#using-docker-container-to-run-cntk-jupyter-notebook-tutorials) to run CNTK Jupyter Notebooks.
 
@@ -68,7 +68,7 @@ We have introduced a lot of new features during the Beta period. The list below 
 * [Performance Profiler for BrainScript and Python](./BrainScript-and-Python-Performance-Profiler.md).
 * Support in training session for cross validation and preservation of all checkpoints.
 * Ability to write your own optimizer in Python by inheriting from `UserLearner` and overriding the update method.
-* Ability to implement Learners in Python using `UserLearner` [Read more here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-learners).
+* Ability to implement Learners in Python using `UserLearner` [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * All deserializers are exposed in C++.
   * HTK deserializers are also exposed in Python.
 * Support for TensorBoard output in both Python and BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).

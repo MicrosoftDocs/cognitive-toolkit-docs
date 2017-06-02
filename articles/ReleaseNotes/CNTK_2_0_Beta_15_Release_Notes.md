@@ -34,13 +34,13 @@ This release contains the following **breaking changes**:
 
 * See sections below on new features in Python and C# API
 *  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](../Using-TensorBoard-for-Visualization.md).
-* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://docs.microsoft.com/en-us/python/cognitive-toolkit/extend#user-defined-learners).
+* Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
 
 ## Python API
 
-We have made the following updates to the [Layers Library](https://docs.microsoft.com/en-us/python/cognitive-toolkit/layerref). **IMPORTANT!** The changes in this section are NOT yet reflected in the main Python API documentation. We will update it soon; for the time being please use the following information.
+We have made the following updates to the [Layers Library](https://cntk.ai/pythondocs/layerref.html). **IMPORTANT!** The changes in this section are NOT yet reflected in the main Python API documentation. We will update it soon; for the time being please use the following information.
 
 * The Layers library is CNTK’s functional-style API:
   * Neural networks are viewed as function objects (which are composable and can share parameters).
