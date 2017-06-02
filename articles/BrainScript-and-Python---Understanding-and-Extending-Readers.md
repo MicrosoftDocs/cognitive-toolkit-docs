@@ -355,6 +355,8 @@ Transform configuration identifies the transform type and any transform-specific
 | `multiThreadedDeserialization`        | Specifies if multiple threads should be used when collecting sequences for a minibatch from the deserializers (`true`, `false`). *Optional*. |
 | `frameMode`                           | Specifies if data should be randomized and returned at the frame or sequence level. When ``true``, input sequence are split into frames. *Optional*. Both `frameMode` and `truncated` can not be set to `true` at the same time. |
 | `truncated`                           | When ``true``, enables truncated back-propagation through time (BPTT). *Optional*. Both `frameMode` and `truncated` can not be set to `true` at the same time. |
+| `useNumericSequenceKeys`              | Sequence keys are used to correlated sequences between different deserializers. For some deserializers (i.e. HTK and MLF) the sequence keys are arbitrary strings. Storing them requires much memory on big corpus. If you are sure your sequence keys are numeric, please set this parameter to true, in that case all string keys will be converted to integers decreasing memory pressure. *Optional, default `false`.*|
+| `hashSequenceKeys`                    | For the memory reasons described above, the string keys can also be hashed by setting this parameter to true. Please use it only for deserializers that support string sequence keys (HTK, MLF). *Optional, default `false`.*|
 
 ### General Deserializer Configuration
 
