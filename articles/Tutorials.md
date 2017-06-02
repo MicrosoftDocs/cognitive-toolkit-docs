@@ -26,7 +26,7 @@ You can also try out the tutorials live with pre-installed CNTK in [Azure Notebo
 
 ### BrainScript 
 
-Assuming you have completed [Getting Started](./Tutorial/Tutorial), you can gain familiarity with more advanced use cases involving [image recognition](./Hands-On-Labs-Image-Recognition), [object detection with Fast R-CNN](./Object-Detection-using-Fast-R-CNN) and [language understanding / text classification](./Hands-On-Labs-Language-Understanding).
+Assuming you have completed [Getting Started](./Tutorial/Tutorial.md), you can gain familiarity with more advanced use cases involving [image recognition](./Hands-On-Labs-Image-Recognition.md), [object detection with Fast R-CNN](./Object-Detection-using-Fast-R-CNN.md) and [language understanding / text classification](./Hands-On-Labs-Language-Understanding.md).
 
 <!---
 * [Getting Started](./Tutorial/Tutorial): Simple Logistic Regression and multi-class classification
