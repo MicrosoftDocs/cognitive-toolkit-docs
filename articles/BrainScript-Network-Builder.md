@@ -12,7 +12,7 @@ ms.devlang:   brainscript
 
 # BrainScript Network Builder
 
-Custom networks are described in CNTK's custom network description language "BrainScript." To define a custom network, include a section named `BrainScriptNetworkBuilder` in your training configuration. Detailed description on the network description language can be found on the [Basic Concepts](./BrainScript-Basic-concepts.md) page and the corresponding sub-pages.
+Custom networks are described in CNTK's custom network description language "BrainScript." To define a custom network, include a section named `BrainScriptNetworkBuilder` in your training configuration. Detailed description on the network description language can be found on the [Basic Concepts](./BrainScript-Basic-Concepts.md) page and the corresponding sub-pages.
 
 There are two forms of using the BrainScript network builder, one using parentheses `(...)`, and a short-hand form using curly braces `{...}`. To describe your network in an external file, specify a block similar to this:
 
@@ -30,7 +30,7 @@ Alternatively, you can define your network inline, directly inside the config fi
         # insert network description here
     }
 
-So what does the BrainScript code look like that goes into the brackets? To find out, jump right ahead to [BrainScript Basic Concepts](./BrainScript-Basic-concepts.md).
+So what does the BrainScript code look like that goes into the brackets? To find out, jump right ahead to [BrainScript Basic Concepts](./BrainScript-Basic-Concepts.md).
 
 Or stay on this page and read on about some less frequently needed details for you.
 
@@ -49,7 +49,7 @@ Lastly, as an advanced use, the `(...)` form is not limited to use `new`. Rather
 
 This is an advanced use that also sometimes occurs in the context of model-editing.
 
-Next: [BrainScript Basic Concepts](./BrainScript-Basic-concepts.md).
+Next: [BrainScript Basic Concepts](./BrainScript-Basic-Concepts.md).
 
 ## Legacy `NDLNetworkBuilder`
 

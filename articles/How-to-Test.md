@@ -89,8 +89,8 @@ To run all tests from the nightly builds execute
 2. Install CygWin from http://cygwin.com/install.html During installation select 
 "Install from Internet" (default selection).
 IMPORTANT: At Select Packages screen type "yaml" in the search field and expand 
-the Python section. Select "python-yaml: Python Lib YAML bindings" 
-(NOT "python3-yaml"). Similarly, type "python-setuptools" in the search field, expand the Python section, and select "python-setuptools" for installation. Then finish installation.
+the Python section. Select "python2-yaml: Python Lib YAML bindings" 
+(NOT "python3-yaml"). Similarly, type "python2-setuptools" in the search field, expand the Python section, and select "python2-setuptools" for installation. Then finish installation.
 3. Make sure you have Microsoft MPI installed (there should be an environment 
 variable named MSMPI_BIN. For this you need to download and run the **exe** and not the msi)
 4. Launch a Cygwin Bash shell.
