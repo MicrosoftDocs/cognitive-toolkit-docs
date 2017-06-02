@@ -22,8 +22,7 @@ basic Azure functionality. Please refer to more advanced Azure documentation to 
 
 ### Requirements
 
-As we are currently using VS2013 to build CNTK, we focus on this version of Visual Studio. You might need to make small 
-adjustments for VS2015 to reproduce the steps we describe. 
+As we are currently using VS2015 to build CNTK, we focus on this version of Visual Studio.
 
 #### Web Development Feature for Visual Studio
 
@@ -46,6 +45,8 @@ Initially we will develop the WebApi locally and then upload this to our Azure i
 ### Let’s get started
 
 We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
+
+**Please note that the sample project is using CNTK EvalDll API. For users who use model trained with Python, please use [CNTK Library API](./cntk-library-evaluation-on-windows.md).**
 
 We recommend you start from this solution, since we already added all the code we need. For completeness here is the list of operations to create the tutorial project:
 
