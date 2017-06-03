@@ -1,8 +1,8 @@
 ---
 title:   Reasons to Switch from TensorFlow to CNTK
-author:    sayanpa
-date:    05/30/2017
-ms.author:   sayanpa
+author:    CNTK team 
+date:    06/02/2017
+ms.author:   CNTK team
 ms.date:   05/30/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
@@ -70,6 +70,6 @@ Same applies to the gradient update algorithms. Although CNTK provides most algo
 Deep learning shines when there's a lot of training data. For some applications, the data is so large that it does not fit in RAM and sometimes not even on a single machine. Even when the data fits in RAM, a naïve training loop will spend a lot of its time transferring data from RAM to GPU. CNTK's built-in readers solve all the above problems by providing highly performant facilities for iterating through a dataset, without the need for the data to fit in RAM. They can be used either with a single disk or a distributed file system such as HDFS. Prefetching is used extensively so that the GPU is always utilized without stalling. CNTK's readers can also ensure that the model always receives the data in a properly shuffled order (that improves convergence) even if the underlying dataset is not shuffled. Finally, all these facilities are available to all current and future readers. Even if you write a reader for your exotic file format, you won't have to worry about implementing prefetching yourself.
 
 ## Reason 8: Identical internal and external toolkit
-It was made very clear from the first day of TensorFlow’s announcement, that Google created two TensorFlow versions: a public version and an internal version. As a TensorFlow user, one either must tolerate the slow speed of the public version, or pay to run the TensorFlow job on Google’s cloud.
+It was made very clear from the first day of TensorFlow’s announcement, that Google created two TensorFlow versions: an external version and an internal version. The main difference between the two is the network stack. The external TensorFlow uses gRPC, which is open-source yet known to be sub-optimal for distributed deep learning computation, especially on an RDMA-capable network. The internal version is much faster. As a TensorFlow user, if you have a large scale job that you want to run, you would have to replace the gRPC stack in the external version in order to run it on your own cluster efficiently, or pay to run the TensorFlow job on Google’s cloud.
 
-In contrast, we have promised that there will always be a single version of CNTK, for both internal and external users. If you adopt CNTK, you will be using exactly the same toolkit used by Microsoft product groups, such as Bing, Cortana, Windows, etc. We hope this will give you confidence that you are not compromised in anyway because you choose CNTK. We welcome your contribution to CNTK, and together we make it the deep learning toolkit that truly democratize AI.
+In contrast, we have promised that there will always be a single version of CNTK, for both internal and external users. CNTK uses Open MPI, NCCL and NCCL2.0, which are all publicly available.  If you adopt CNTK, you will be using exactly the same toolkit used by Microsoft product groups, such as Bing, Cortana, Windows, etc. We hope this will give you confidence that you are not compromised in anyway because you choose CNTK. We welcome your contribution to CNTK, and together we make it the deep learning toolkit that truly democratize AI.
