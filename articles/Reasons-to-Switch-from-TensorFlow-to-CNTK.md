@@ -1,8 +1,8 @@
 ---
 title:   Reasons to Switch from TensorFlow to CNTK
-author:    CNTK team 
+author:    cha-zhang 
 date:    06/02/2017
-ms.author:   CNTK team
+ms.author:   cha-zhang
 ms.date:   05/30/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
@@ -22,7 +22,6 @@ Given TensorFlow’s extreme popularity, we often encounter people asking us: wh
 - **Inference**. CNTK has C#/.NET/Java inference support that makes it easy to integrate CNTK evaluation into user applications.
 - **Extensibility**. CNTK can be easily extended from Python for layers and learners.
 - **Built-in readers**. CNTK has efficient built in data readers that also support distributed learning.
-- **Identical internal and external toolkit**. You would not be compromised in any way because the same toolkit is used by internal product groups at Microsoft.
 
 In the remainder of this article, we expand and explain these benefits in more detail.
 
@@ -36,7 +35,7 @@ If your project involves sequence processing, such as speech, natural language u
 ## Reason 2: Accuracy
 Deep learning toolkits are tricky to develop because even when there is a bug in the toolkit code you can achieve reasonable accuracy with the same network architecture design. Many other toolkits create examples that appears to be identical to the original implementation of a paper, and then offer a converted model for people to download and evaluate. This is highly irresponsible in our opinion. In CNTK we pay a lot of attention in tracking down bugs and make sure the toolkit can be used to actually train the model from scratch and achieve state-of-the-art accuracy.
 
-One example is the Inception V3 network (https://arxiv.org/abs/1512.00567) originally developed by a few researchers at Google. Tensorflow shared the training script for Inception V3, and offered pre-trained models to download. However, no one were able to retrain the model and achieve the same accuracy with their script. The best accuracy that were achieved by a third party (Keras in this case) is about 0.6% worse that what the original paper reported. Researchers in the CNTK team worked hard and were able to train a CNTK Inception V3 model with 5.972% top 5 error, even better than the original paper reported! The training script is shared as an example (https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Classification/GoogLeNet) and you may verify it yourself.
+One example is the Inception V3 network (https://arxiv.org/abs/1512.00567) originally developed by a few researchers at Google. Tensorflow shared the training script for Inception V3, and offered pre-trained models to download. However, it is difficult to retrain the model and achieve the same accuracy, because that requires additional understanding of details such as data pre-processing and augmentation. The best accuracy that were achieved by a third party (Keras in this case) is about 0.6% worse that what the original paper reported. Researchers in the CNTK team worked hard and were able to train a CNTK Inception V3 model with 5.972% top 5 error, even better than the original paper reported! The training script is shared as an example (https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Classification/GoogLeNet) and you may verify it yourself.
 
 For recurrent neural networks, CNTK’s automatic batching algorithm allows one to pack sequences with different lengths and achieve high execution efficiency. More importantly, it allows better randomization of the training data, and can often lead to 1-2% accuracy improvement compared with naïve data packing. This helped the speech group at Microsoft Research to achieve human parity in conversational speech recognition (https://arxiv.org/pdf/1610.05256.pdf).
 
@@ -69,7 +68,4 @@ Same applies to the gradient update algorithms. Although CNTK provides most algo
 ## Reason 7: Built-in readers
 Deep learning shines when there's a lot of training data. For some applications, the data is so large that it does not fit in RAM and sometimes not even on a single machine. Even when the data fits in RAM, a naïve training loop will spend a lot of its time transferring data from RAM to GPU. CNTK's built-in readers solve all the above problems by providing highly performant facilities for iterating through a dataset, without the need for the data to fit in RAM. They can be used either with a single disk or a distributed file system such as HDFS. Prefetching is used extensively so that the GPU is always utilized without stalling. CNTK's readers can also ensure that the model always receives the data in a properly shuffled order (that improves convergence) even if the underlying dataset is not shuffled. Finally, all these facilities are available to all current and future readers. Even if you write a reader for your exotic file format, you won't have to worry about implementing prefetching yourself.
 
-## Reason 8: Identical internal and external toolkit
-It was made very clear from the first day of TensorFlow’s announcement, that Google created two TensorFlow versions: an external version and an internal version. The main difference between the two is the network stack. The external TensorFlow uses gRPC, which is open-source yet known to be sub-optimal for distributed deep learning computation, especially on an RDMA-capable network. The internal version is much faster. As a TensorFlow user, if you have a large scale job that you want to run, you would have to replace the gRPC stack in the external version in order to run it on your own cluster efficiently, or pay to run the TensorFlow job on Google’s cloud.
-
-In contrast, we have promised that there will always be a single version of CNTK, for both internal and external users. CNTK uses Open MPI, NCCL and NCCL2.0, which are all publicly available.  If you adopt CNTK, you will be using exactly the same toolkit used by Microsoft product groups, such as Bing, Cortana, Windows, etc. We hope this will give you confidence that you are not compromised in anyway because you choose CNTK. We welcome your contribution to CNTK, and together we make it the deep learning toolkit that truly democratize AI.
+To conclude the article, we promise you that if you adopt CNTK, you will be using exactly the same toolkit used by Microsoft product groups, such as Bing, Cortana, Windows, etc. We hope this will give you confidence that you are not compromised in any way because you choose CNTK. We welcome your contribution to CNTK, and together we make it the deep learning toolkit that truly democratize AI.
