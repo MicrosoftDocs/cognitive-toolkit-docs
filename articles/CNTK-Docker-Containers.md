@@ -33,9 +33,9 @@ This will get the latest image, which today means latest available GPU runtime c
 
 To get a specific configuration you need to add a tag. E.g.
 ```
-docker pull microsoft/cntk:2.0rc3-cpu-python3.5
+docker pull microsoft/cntk:2.0-cpu-python3.5
 ```
-will get you CNTK 2.0 RC 3 CPU runtime configuration set up for Python 3.5.
+will get you CNTK 2.0 CPU runtime configuration set up for Python 3.5.
 
 If you are unfamiliar with Docker, read [sections below](#building-cntk-docker-images) at this page.
 
@@ -52,7 +52,7 @@ nvidia-docker run -d -p 8888:8888 --name cntk-jupyter-notebooks -t microsoft/cnt
 
 Now start Jupyter Notebook server in your Docker container:
 ```
-docker exec -it cntk-jupyter-notebooks bash -c "source /cntk/activate-cntk && jupyter-notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/cntk/Tutorials"
+docker exec -it cntk-jupyter-notebooks bash -c "source /cntk/activate-cntk && jupyter-notebook --no-browser --port=8888 --ip=0.0.0.0 --notebook-dir=/cntk/Tutorials --allow-root"
 ```
 
 In your terminal you will see the console output of Jupyter Notebooks server. This output would contain a line like this:  
