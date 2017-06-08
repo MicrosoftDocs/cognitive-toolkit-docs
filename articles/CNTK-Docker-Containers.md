@@ -134,7 +134,7 @@ If it works, you are done. If it doesn't, it means that there is a mismatch betw
 ```
 nvidia-docker run --rm cntk nvidia-smi
 ```
-This should work and enables CNTK to use the GPU from inside a docker container. If this does not work, search the Issues section on the [nvidia-docker GitHub] (https://github.com/NVIDIA/nvidia-docker/issues) -- many solutions are already documented. Note that if your /usr and /var directories are in different partitions, you will need some extra steps like [here] (https://github.com/NVIDIA/nvidia-docker/issues/211). To get an interactive shell to a container that will *not* be automatically deleted after you exit do
+This should work and enables CNTK to use the GPU from inside a docker container. If this does not work, search the Issues section on the [nvidia-docker GitHub](https://github.com/NVIDIA/nvidia-docker/issues) -- many solutions are already documented. Note that if your /usr and /var directories are in different partitions, you will need some extra steps like [here](https://github.com/NVIDIA/nvidia-docker/issues/211). To get an interactive shell to a container that will *not* be automatically deleted after you exit do
 ```
 nvidia-docker run --name cntk_container1 -ti cntk bash
 ```

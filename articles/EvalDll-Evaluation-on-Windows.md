@@ -63,7 +63,7 @@ There are several [examples](https://github.com/Microsoft/CNTK/blob/master/Examp
 There is currently a NuGet package at Nuget.org (search for CNTK) that provides both the native and managed versions for Debug and Release for the CNTK evaluation libraries (CPU only using MKL). With the NuGet it is possible to simply add the CNTK Eval NuGet to a .Net or Win32 project and call the APIs.
 Please refer to the [NuGet Package](./NuGet-Package.md) page for details on how to get started with CNTK and NuGet.
 
-If you do not want to use NuGet Package, you can add `Cntk.Eval.Wrapper-<VERSION>.dll` as reference to your project. Please make sure in this case that the path to the `Cntk.Eval.Wrapper` dll and its [dependencies](#shipping-evalDll-library-with-your-windows-application) below are included in the search path of dlls for your application.
+If you do not want to use NuGet Package, you can add `Cntk.Eval.Wrapper-<VERSION>.dll` as reference to your project. Please make sure in this case that the path to the `Cntk.Eval.Wrapper` dll and its [dependencies](#shipping-evaldll-library-with-your-windows-application) below are included in the search path of dlls for your application.
 
 ## Shipping EvalDll Library with your Windows application
 EvalDll requires the Visual C++ Redistributable Package for Visual Studio 2015 to be installed on the system where your application is going to run. And the target platform in the project property should be X64.

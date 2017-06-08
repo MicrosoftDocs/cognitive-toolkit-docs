@@ -40,7 +40,7 @@ CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMulti
 ### C# Examples
 The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
 
-If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` dll and all dependent dlls can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` dll and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-CNTK-library-with-your-windows-application) (see list at the end of this page) are included in the search path of dlls for your application.
+If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` dll and all dependent dlls can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` dll and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of dlls for your application.
 
 ## Using C++
 The CNTK Library C++ API supports model evaluation in C++ applications. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.

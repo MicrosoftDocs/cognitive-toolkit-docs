@@ -184,7 +184,7 @@ sudo ./b2 -d0 -j"$(nproc)" install
 ## GPU Specific Packages
 This section outlines the packages you need to setup in order for CNTK to leverage GPUs.
 
-If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#Getting-CNTK-Source-code). Otherwise proceed further.
+If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#getting-cntk-source-code). Otherwise proceed further.
 
 ### Checking your GPU compatibility and getting the latest driver
 You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic card available to use CNTK GPU capabilities. You can check whether your card is CUDA-compatible [here](https://developer.nvidia.com/cuda-gpus) and [here (for older cards)](https://developer.nvidia.com/cuda-legacy-gpus). Your GPU card [Compute Capability (CC)](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability) must be 3.0 or more.
@@ -481,7 +481,7 @@ If you want to build the **CNTK Image Reader**, you need to install [Open Source
 Some aspects to consider:
 * OpenCV requires at least 5.5 GB of free disk space
 * Building OpenCV is a lengthy process and can take a couple of hours or even more
-* If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-8.0)
+* If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-80)
 
 OpenCV can have many interfaces and options.
 In this section we cover only parts necessary to build CNTK.

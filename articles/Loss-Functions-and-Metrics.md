@@ -66,7 +66,7 @@ Note that categorical cross-entropy is not a suitable loss function for multi-cl
 where `y` contains more than one position containing a 1.
 For this case, consider using [`Sigmoid()`](./BrainScript-Activation-Functions.md) instead of Softmax,
 with a [`Logistic()`](#logistic-weightedlogistic) loss.
-See also [this article](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier).
+See also [this article](./How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier).
 
 #### Alternative definition
 `CrossEntropyWithSoftmax()` is currently a CNTK primitive which has limitations.
@@ -131,7 +131,7 @@ This function is the logistic loss function.
 for two-class problems,
 where only one of the two (complementary) ground-truth labels is given to `Logistic()`.
 
-See also [this article](./How-do-I-Train-Models-in-BrainScript.md#Train-a-multilabel-classifier) on training multi-class classifiers.
+See also [this article](./How-do-I-Train-Models-in-BrainScript.md#train-a-multilabel-classifier) on training multi-class classifiers.
 
 ### Example
 
