@@ -42,7 +42,7 @@ ms.devlang:   brainscript
   * [Image Reader](./BrainScript-Image-Reader.md)
   * [CNTK Binary Reader](./BrainScript-CNTKBinary-Reader.md)
   * [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md)
-  * [UCI Fast Reader (deprecated.md)](./BrainScript-UCI-Fast-Reader.md)
+  * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader.md)
 
 ## Setting up Learners with BrainScript
 

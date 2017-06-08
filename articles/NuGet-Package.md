@@ -29,7 +29,7 @@ The package may be obtained through the NuGet Package Manager inside Visual Stud
 
 The current version is `2.0.0`.
 
-The CNTK NuGet packages may be installed on a Visual C++ or .NET project (C#, VB.Net, F#, ...). The Nuget package contains both debug and release versions of C++ library and dlls, and the release version of C# assembly and its dependent dlls. Once installed the project will contain a reference to the managed dll and the required dependent binary libraries will be copied to the output directory after building the project. 
+The CNTK NuGet packages may be installed on a Visual C++ or .NET project (C#, VB.Net, F#, ...). The Nuget package contains both debug and release versions of C++ library and DLLs, and the release version of C# assembly and its dependent DLLs. Once installed the project will contain a reference to the managed DLL and the required dependent binary libraries will be copied to the output directory after building the project. 
 
 For instructions on how to install a NuGet package, please refer to the NuGet documentation at:
 [https://docs.nuget.org/consume/installing-nuget](https://docs.nuget.org/consume/installing-nuget)

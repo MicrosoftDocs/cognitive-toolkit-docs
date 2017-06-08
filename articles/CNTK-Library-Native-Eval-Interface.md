@@ -33,7 +33,7 @@ This method loads a model from a memory buffer and returns the pointer to the Fu
 ***
 `void CNTK::Function::Evaluate(const std::unordered_map<Variable, ValuePtr>& arguments, std::unordered_map<Variable, ValuePtr>& outputs, const DeviceDescriptor& computeDevice = DeviceDescriptor::UseDefaultDevice())`
 
-This method starts evaluation of the `this` Function representing the model with specificed parameters. The `arguments` contains values of all input variables required for evaluation, and the `outputs` store the values of output variables. The storage of output values can either be pre-allocated by the caller, or by the system if the ValuePtr mapping is passed as null by the caller. The `computeDevice` specifies the device to run evaluation.
+This method starts evaluation of the `this` Function representing the model with specified parameters. The `arguments` contains values of all input variables required for evaluation, and the `outputs` store the values of output variables. The storage of output values can either be pre-allocated by the caller, or by the system if the ValuePtr mapping is passed as null by the caller. The `computeDevice` specifies the device to run evaluation.
 
 ***
 ## The following methods are helper functions to manipulate the Function to be evaluated.
@@ -85,7 +85,7 @@ Parameters:
 ***
 `template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(const NDShape& sampleShape, const std::vector<ElementType>& sequenceData, const DeviceDescriptor& device, bool readOnly = false)`
 
-Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in _sequenceData_. The sequence length is the number of elements in _sequenceData_ divided by the size of _sampleShape_ (A runtime error occurs if the remainder is not zero). The created sequece is a new sequence. _ElementType_ is the data type of the created Value object. Currently, `float` and `double` are supported.
+Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in _sequenceData_. The sequence length is the number of elements in _sequenceData_ divided by the size of _sampleShape_ (A runtime error occurs if the remainder is not zero). The created sequence is a new sequence. _ElementType_ is the data type of the created Value object. Currently, `float` and `double` are supported.
  
 Parameters: 
 *  _sampleShape_: the tensor shape of the Value. 
@@ -291,7 +291,7 @@ Parameters:
 ***
 `template <typename ElementType> void CNTK::Value::CopyVariableValueTo(const Variable& outputVariable, std::vector<std::vector<ElementType>>& sequences)`
 
-Copies the data stored in the Value into the buffer provided by _sequences_. The _sequences_ is a list of sequences with variable length. The number of items contained in the outer list of _sequences_ is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `vector<ElementType>`, contains a variable number of samples. Each sample consits of a fixed number of elements with type of _ElementType_. The number of elements of a sample is determined by the shape of _outputVariable_. The shape of the variable should match the shape of the Value. _ElementType_ is the data type of the created Value object. Currently, `float` and `double` are supported.
+Copies the data stored in the Value into the buffer provided by _sequences_. The _sequences_ is a list of sequences with variable length. The number of items contained in the outer list of _sequences_ is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `vector<ElementType>`, contains a variable number of samples. Each sample consists of a fixed number of elements with type of _ElementType_. The number of elements of a sample is determined by the shape of _outputVariable_. The shape of the variable should match the shape of the Value. _ElementType_ is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
 *  _outputVariable_: denotes the shape and dynamic axes when copying data from this Value to the _sequences_. 

@@ -49,7 +49,7 @@ If you just want to download and install the latest precompiled binaries to your
 |:------------------------|:------------------------|
 |[Python-only installation](./Setup-Windows-Python.md)<br>Simple pip install of CNTK lib for use in Python| [Python-only installation](./Setup-Linux-Python.md)<br>Simple pip install of CNTK lib for use in Python |
 |[Script-driven installation](./Setup-Windows-Binary-Script.md)<br>Script that installs CNTK Python lib and CNTK.exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script.md)<br>Script that installs CNTK Python lib and CNTK.exe for BrainScript 
-|[Manual installation](./Setup-Windows-Binary-Manual.md)<br>Manually install CNTK Python lib, CNTK.exe for BrainScript, and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual.md)<br>Manually installCNTK Python lib,CNTK.exe for BrainScript, and dependencies
+|[Manual installation](./Setup-Windows-Binary-Manual.md)<br>Manually install CNTK Python lib, CNTK.exe for BrainScript, and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual.md)<br>Manually install CNTK Python lib,CNTK.exe for BrainScript, and dependencies
 |                                                     | [Docker installation](./CNTK-Docker-Containers.md)
 #### Installation and building of the CNTK codebase
 

@@ -87,7 +87,7 @@ Zoneout (x, xprev) =
 
 ## Build a constant 3D tensor
 
-I want to build a constant 3D tensor in CNTK. I learned how to produce 1D and 2D constant arrays, I can stack (conacenate or combine) them and repeat them. Now I need to stack the 2D Tensors to make a 3D tensor?
+I want to build a constant 3D tensor in CNTK. I learned how to produce 1D and 2D constant arrays, I can stack (concatenate or combine) them and repeat them. Now I need to stack the 2D Tensors to make a 3D tensor?
 
 Say you have three tensors, e.g.
 

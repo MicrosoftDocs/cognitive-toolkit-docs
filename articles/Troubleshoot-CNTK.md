@@ -57,10 +57,10 @@ One possible reason here is the excessive memory pressure caused by loading the 
    randomizationWindow=10000 #(assuming that 10K samples << total available memory)
 ```
 
-## I get errors when using Eval C# library Cntk.Eval.Wrapper.dll (old name EvalWrapper.dll) in Azure web app like the following: "Could not load file or assembly 'some CNTK dlls', or an exception System.Runtime.InteropServices.SEHException, or "InternalServiceFault: External component has thrown an exception.". 
+## I get errors when using Eval C# library Cntk.Eval.Wrapper.dll (old name EvalWrapper.dll) in Azure web app like the following: "Could not load file or assembly 'some CNTK DLLs', or an exception System.Runtime.InteropServices.SEHException, or "InternalServiceFault: External component has thrown an exception.". 
 
-First please make sure that all CNTK dependency dlls are deployed to the Azure web app.
-Then you have to set your Azure web app to use 64-bit VM. In order to allow the Azure web app to load CNTK unmanaged dlls, you should change the PATH variable by adding the following code in the `Application_Start()` method in `global.asax`:
+First please make sure that all CNTK dependency DLLs are deployed to the Azure web app.
+Then you have to set your Azure web app to use 64-bit VM. In order to allow the Azure web app to load CNTK unmanaged DLLs, you should change the PATH variable by adding the following code in the `Application_Start()` method in `global.asax`:
 ```   
     string pathValue = Environment.GetEnvironmentVariable("PATH");
     string domainBaseDir = AppDomain.CurrentDomain.BaseDirectory;

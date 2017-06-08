@@ -12,7 +12,7 @@ ms.devlang:   NA
 
 # Setup Buildzlib VS15
 
-## Creating a zlib/libzip compression libaray for CNTK
+## Creating a zlib/libzip compression library for CNTK
 
 We use the following installation paths in our instructions:
 * libzip sources: `c:\local\src\libzip-1.1.3`
@@ -26,7 +26,7 @@ You can use any paths you like, but note the remark on target folder for binarie
 * Download [zlib source code](http://zlib.net/) and unpack it to `c:\local\src\zlib\zlib-1.2.8`
 
 
-There are two ways to build the lib/libzip compression libaray for CNTK, either through ***a batch file*** or ***manually***.
+There are two ways to build the lib/libzip compression library for CNTK, either through ***a batch file*** or ***manually***.
 
 ### Building through a batch file
 
@@ -47,11 +47,11 @@ setx ZLIB_PATH c:\local\zlib-vs15
 * Build order is important. You should *build zlib first* because libzip is dependent on it
 
 ### Command prompt environment for build
-Launch a 64-bit Visual Studio 2015 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required paramaters from a standard windows command shell:
+Launch a 64-bit Visual Studio 2015 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
 ```
     "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 ```
-If you can't find this batchfile on your system, please revisit the installation of VS2015, and make sure you have the 'Common Tools for Visual C++ 2015' option selected.
+If you can't find this batch file on your system, please revisit the installation of VS2015, and make sure you have the 'Common Tools for Visual C++ 2015' option selected.
 
 ### Building zlib
 Execute the following commands from *VS2015 x64 Native Tools Command Prompt*:
@@ -63,7 +63,7 @@ cmake .. -G"Visual Studio 14 2015 Win64" -DCMAKE_INSTALL_PREFIX="c:\local\zlib-v
 msbuild /P:Configuration=Release INSTALL.vcxproj
 ```
 
-### Building libzib
+### Building libzip
 Execute the following commands from *VS2015 x64 Native Tools Command Prompt*:
 ```
 cd c:\local\src\libzip-1.1.3

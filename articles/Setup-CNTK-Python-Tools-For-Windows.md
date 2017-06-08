@@ -29,7 +29,7 @@ If you want to use Python Tools for Visual Studio (PTVS):
 * Afterwards, click Auto Detect and the rest of the entries will be filled out automatically. 
 * In Visual Studio, create a new Empty python project
 * Add in your python file(s).
-* If you have a source install, to get intellisence, add in the full python lib dir as a part of your project at: MYCNTKPATH%\CNTK\bindings\python
+* If you have a source install, to get IntelliSense, add in the full python lib dir as a part of your project at: MYCNTKPATH%\CNTK\bindings\python
 
 **Links**
 * [Setup CNTK on Windows](./Setup-CNTK-on-Windows.md)

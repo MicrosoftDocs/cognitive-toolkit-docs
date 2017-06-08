@@ -24,7 +24,7 @@ Unit test are currently only supported (and checked) for GPU builds.
 Make sure you set up the Boost libraries and environment variables as well as the Boost test runner
 for Visual Studio. For instructions see [here](./Setup-CNTK-on-Windows.md#boost). 
 
-Restart Visual Studio and goto to the 'Test --> Test Settings' menu. There set 
+Restart Visual Studio and go to to the 'Test --> Test Settings' menu. There set 
 the default processor architecture to x64 and uncheck the option 'Keep Test 
 Execution Engine Running'. In the Test Explorer window select Group by Traits 
 (next to the search field). After a rebuild you should see all unit tests in 

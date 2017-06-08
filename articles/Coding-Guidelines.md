@@ -38,7 +38,7 @@ The following things are not indented:
 * Case labels
 * Access control specifiers.
 
-Function declarations with long parameter lists may be split over multiple lines. The paramerter declaration
+Function declarations with long parameter lists may be split over multiple lines. The parameter declaration
 on the split lines should be indented to the opening parenthesis of the function declaration. Calls to functions 
 with long parameter lists may be split over multiple lines, the split lines should be indented to the opening
 parenthesis of the associated function statement.
@@ -125,7 +125,7 @@ e.g. floatMatrix and normalizedDoubleMatrix.
 
 Name prefixes
 * ```m_``` for member variables
-* ```s_``` for static varibales in any context
+* ```s_``` for static variables in any context
 * ```g_``` for global variables, which should be avoided in the first place (as much as possible)
 
 Variable names should be nouns. Function names should be verbs, with the exception of getters, which can be 

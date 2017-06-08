@@ -72,7 +72,7 @@ Highlights:
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
-* New file names for [CNTK libraries and dlls](./CNTK-Shared-Libraries-Naming-Format.md).
+* New file names for [CNTK libraries and DLLs](./CNTK-Shared-Libraries-Naming-Format.md).
 * Various bug fixes.
 
 The [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 

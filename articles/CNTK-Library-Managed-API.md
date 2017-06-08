@@ -83,7 +83,7 @@ Evaluates the Function using the specified _arguments_ as input. It computes the
 Parameters:
 *  _inputs_: the input variables and their values of the Function.
 *  _outputs_: output values for each output variable. The caller may specify the Value object for storing the output or pass _null_ in which case the method allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a _null_ Value was specified, and _createPersistentOutputValues_ is false, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call.
-* _createPersistentOutputValues_: Only relevant if a _null_ Value was specified in outputs. If it is set to _true_, the method will create presistent Value objects, otherwise the Value objects are temporary and are only valid until the next Forward/Backward call.
+* _createPersistentOutputValues_: Only relevant if a _null_ Value was specified in outputs. If it is set to _true_, the method will create persistent Value objects, otherwise the Value objects are temporary and are only valid until the next Forward/Backward call.
 *  _computeDevice_: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
 
 ***

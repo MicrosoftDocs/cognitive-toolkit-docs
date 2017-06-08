@@ -24,7 +24,7 @@ These possible transforms are:
 * Color
 * Layout (HWC vs CHW)
 
-## Image evalution with CNTK.exe and the Imagereader
+## Image evaluation with CNTK.exe and the Image Reader
 In this case image transforms can be specified in the configuration file, and the Imagereader will perform the defined transformations.
 
 ## Programmatic image evaluation through EvalDll(EvalWrapper)

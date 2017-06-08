@@ -105,7 +105,7 @@ instead say `network.result_z`.
 
 ## Example: Modifying nodes of an existing network
 
-To modify inner parts of an existing network, one would actually clone the network, while modifications are applied as part of the cloning process. This is accomplished by `BS.Network.Edit()`. `Edit()` will iterate over all nodes of a network, and will offer each node, one by one, to lambda functions passed by the caller. Those lambda functions can then inspect the node and either return the node unmodified, or return a new node in its place. `Edit()` will iterate over nodes in unspecified order.If a replacement node references a network node that in turn was replaced, `Edit()` will, as a final step, update all such references to the respective replacements (aka "do the right thing").
+To modify inner parts of an existing network, one would actually clone the network, while modifications are applied as part of the cloning process. This is accomplished by `BS.Network.Edit()`. `Edit()` will iterate over all nodes of a network, and will offer each node, one by one, to lambda functions passed by the caller. Those lambda functions can then inspect the node and either return the node unmodified, or return a new node in its place. `Edit()` will iterate over nodes in unspecified order. If a replacement node references a network node that in turn was replaced, `Edit()` will, as a final step, update all such references to the respective replacements (aka "do the right thing").
 
 TODO: Example.
 

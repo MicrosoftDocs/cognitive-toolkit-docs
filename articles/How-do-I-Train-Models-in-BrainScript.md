@@ -52,10 +52,10 @@ evaluationNodes = (task1loss:task2loss)
 
 ## Train a regression model on images
 
-Below we describe how to predict one or more floating point value for an input image using CNTK. An example use case is to predict a bounding box, for example as (x, y, w, h), of an object in a given image. You could also think of predicting the price for a car just by looking at an image of that car (would be interesting actually). Here we use a very simple example in which we train a network to predict the average rgb values of an image (normalized to [0, 1]). However, the same steps apply for other use cases. These steps are:
+Below we describe how to predict one or more floating point value for an input image using CNTK. An example use case is to predict a bounding box, for example as (x, y, w, h), of an object in a given image. You could also think of predicting the price for a car just by looking at an image of that car (would be interesting actually). Here we use a very simple example in which we train a network to predict the average RGB values of an image (normalized to [0, 1]). However, the same steps apply for other use cases. These steps are:
 
 1. Define both the image and the ground truth regression labels as inputs to your network
-2. Define a network that predicts a matching number of values wrt your regression labels
+2. Define a network that predicts a matching number of values w.r.t. your regression labels
 3. Define a loss function that compares the predicted values with the ground truth
 4. Adapt the reader section in your .cntk config file to read both image and regression labels
 

@@ -29,7 +29,7 @@ Today `configure` and `Makefile` scripts support only limited set of installatio
 **IMPORTANT!** If you want to modify `default_path_list` variable in `configure` to add a custom path for a certain dependency component be sure to check the correspondent section of `Makefile`. Otherwise you may get build errors due to inability of finding INCLUDE files, libraries, etc.
 
 ### Installation methods and paths of dependency components
-Below we list all dependency components required to build CNTK and explain how to install them. We understand that there are many other ways to get the same components. However, if you prefer an alternative way of installation, please ensure that **you get the same thing**, because quite often alternative installation sources, namely network distibution  packagespackages (like Debian, RPM, etc.) contain older versions of the software, miss some libraries, etc. In some sections below we specifically highlight these limitations, but please take it as a general precaution.
+Below we list all dependency components required to build CNTK and explain how to install them. We understand that there are many other ways to get the same components. However, if you prefer an alternative way of installation, please ensure that **you get the same thing**, because quite often alternative installation sources, namely network distribution  packages (like Debian, RPM, etc.) contain older versions of the software, miss some libraries, etc. In some sections below we specifically highlight these limitations, but please take it as a general precaution.
 
 ### Using of `make -j`
 In most of the sections we suggest using `make -j` command to invoke parallel build jobs and thus increasing the speed of the build process. However please be aware that on some systems and *especially on virtual machines* using `make -j` may result in "Out of memory" errors. If you face this, just use "plain" `make` or limit the number of jobs that run simultaneously (two simultaneous jobs usually work for the most of the systems - use the command `make -j 2`).  
@@ -96,7 +96,7 @@ sudo tar -xzf CNTKCustomMKL-Linux-3.tgz -C /usr/local/CNTKCustomMKL
 
 Install [Open Message Passing Interface Library (Open MPI)](http://www.open-mpi.org/).
 
-We recommend installing from sources as described below because a lot of distribution packages contain older versions and miss the libraries required by CNTK. Current CNTK Open MPI version requirement is at least **1.10**. Please, check whether you have older version installations on your system and if you do, either deinstall them or ensure (via, e.g. symbolic links) that CNTK build procedure is using the required version. Otherwise you may get hard to debug build errors as you can see in [this post](https://github.com/Microsoft/CNTK/issues/269#issuecomment-202529551).
+We recommend installing from sources as described below because a lot of distribution packages contain older versions and miss the libraries required by CNTK. Current CNTK Open MPI version requirement is at least **1.10**. Please, check whether you have older version installations on your system and if you do, either uninstall them or ensure (via, e.g. symbolic links) that CNTK build procedure is using the required version. Otherwise you may get hard to debug build errors as you can see in [this post](https://github.com/Microsoft/CNTK/issues/269#issuecomment-202529551).
 * Get the installation sources:
 ```
 wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
@@ -543,7 +543,7 @@ cd build/release
 ```
 Ensure that the `configure` output corresponds to the packages you installed in the previous sections. I.e. ensure that `configure` finds CUDA if installed, etc.
 
-Do the following to build cntk using all cores to minimize build time.  Note that on some computer, this can overwhelm your system leading to hangs or breaks during the build.
+Do the following to build CNTK using all cores to minimize build time.  Note that on some computer, this can overwhelm your system leading to hangs or breaks during the build.
 ```
 make -j all
 ```
