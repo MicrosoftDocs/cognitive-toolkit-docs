@@ -46,7 +46,7 @@ This release contains the following **breaking changes**:
 
 * Transfer learning example to train custom image classifiers
   * [Code](https://github.com/Microsoft/CNTK/tree/v2.0.beta11.0/Examples/Image/TransferLearning) 
-  * [Wiki](../Build-your-own-image-classifier-using-Transfer-Learning.md)
+  * [Article](../Build-your-own-image-classifier-using-Transfer-Learning.md)
 
 ## CNTK Evaluation library. NuGet package
 

@@ -92,7 +92,7 @@ To install the driver using this installer, run the following command, replacing
 
 #### cuDNN 5.1 for CUDA 8.0
 
-Install the appropriate version of [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.NVIDIA.com/cuDNN). Installation procedure is described in this [CNTK Wiki Section](./Setup-CNTK-on-Linux.md#cudnn). 
+Install the appropriate version of [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.NVIDIA.com/cuDNN). Installation procedure is described in this [section](./Setup-CNTK-on-Linux.md#cudnn). 
 
 #### Final steps
 Now you can rebuild CNTK with CUDA 8.0 and the correspondent version of cuDNN. Ensure you remove existing `Makefile` and rerun `configure` script before rebuilding.

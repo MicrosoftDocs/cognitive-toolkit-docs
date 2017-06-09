@@ -47,7 +47,7 @@ With the Release Candidate 2 we ship one of the last previews before the Microso
 * New APIs: `class NDArrayView` and methods, `SetMaxNumCPUThreads()`, `GetMaxNumCPUThreads()`, `SetTraceLevel()`, `GetTraceLevel()`
 * Memory and performance optimization.
 
-The updated APIs are described in [this Wiki page](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-Managed-API).
+The updated APIs are described [here](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-Managed-API).
 
 ### CNTK NuGet package
 

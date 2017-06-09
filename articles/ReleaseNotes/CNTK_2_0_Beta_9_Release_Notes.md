@@ -23,7 +23,7 @@ There is a **breaking change** in this release:
 ## New and updated features
 
 * Lambda rank and NDCG at 1 are accessible from Python for real this time.
-* Changes in Learner API: for learners that use momentum (`momentum_sgd`, `nesterov_sgd` and `adam_sgd`) it is now possible to specify if the momentum should be applied  in the regular fashion or as a unit-gain filter (default). For more details on the unit-gain momentum, please refer to this [section in the Wiki](../BrainScript-SGD-Block.md#converting-learning-rate-and-momentum-parameters-from-other-toolkits). 
+* Changes in Learner API: for learners that use momentum (`momentum_sgd`, `nesterov_sgd` and `adam_sgd`) it is now possible to specify if the momentum should be applied  in the regular fashion or as a unit-gain filter (default). For more details on the unit-gain momentum, please refer to this [section](../BrainScript-SGD-Block.md#converting-learning-rate-and-momentum-parameters-from-other-toolkits). 
 * No more partial minibatches at the sweep boundary. Now minibatches are allowed to transparently cross the sweep boundary. `epoch_size` parameter for all hyperparameter schedules now defaults to full data sweep (i.e., by default, hyperparameters change their values on the sweep by sweep basis).
 
 ## New Examples and Tutorials
