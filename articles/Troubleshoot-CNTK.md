@@ -33,7 +33,7 @@ Set the minibatchSize property to a smaller value (e.g. `minibatchSize=2`).
 You must upgrade Visual Studio *2015*, update 3. See here: [Setting up CNTK on Windows](./Setup-CNTK-on-Windows.md)
 
 ## I enabled Image Reader with zip support and get "Plugin not found: 'Cntk.Deserializers.Image-<VERSION>.dll' (old name 'ImageReader.dll')" error when running Image Reader unit tests or trying to use the reader. What might be wrong?
-Check that you correctly installed [zlib and libzip](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip), especially that you have not forgotten to [rename `zlib.dll` to `zlib1.dll`](./Setup-CNTK-on-Windows.md#preparing-the-environment).
+Check that you correctly installed [zlib and libzip](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip).
 
 ## I have just downloaded and installed CNTK **binary package** and want to run a job, but get weird errors, like missing CUDA libraries.
 Please, check carefully what you have in your `PATH`. Especially, if it is a *shared* development machine. Often this is cause by older (previous) versions of CNTK or CNTK components that are reachable through the configured PATH.

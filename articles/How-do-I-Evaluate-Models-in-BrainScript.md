@@ -14,10 +14,10 @@ ms.devlang:   brainscript
 
 * [Do early stopping](#do-early-stopping)? 
 * [Monitor the error on a held out set during training](#monitor-the-error-on-a-held-out-set-during-training)?  
-* [Set the dropout rate to 0 during evaluation/testing](#Dropout-during-evaluation)? 
+* [Set the dropout rate to 0 during evaluation/testing](#dropout-during-evaluation)? 
 * [Evaluate my newly trained model but output the activations at an intermediate layer](#evaluate-my-newly-trained-model-but-output-the-activations-at-an-intermediate-layer)? 
 * [Associate an id with a prediction](#associate-an-id-with-a-prediction)? 
-* [Deploy model evaluation on Windows](#eval-samples-in-cntk-binary-download-package-for-windows)? 
+* [Deploy model evaluation on Windows](#deploy-model-evaluation-on-windows)? 
 * [Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-Azure-WebApi.md) 
 
 ## Do early stopping

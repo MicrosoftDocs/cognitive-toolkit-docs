@@ -40,7 +40,7 @@ CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMulti
 ### C# Examples
 The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
 
-If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` dll and all dependent dlls can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` dll and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-CNTK-library-with-your-windows-application) (see list at the end of this page) are included in the search path of dlls for your application.
+If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` dll and all dependent dlls can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` dll and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of dlls for your application.
 
 ## Using C++
 The CNTK Library C++ API supports model evaluation in C++ applications. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
@@ -55,7 +55,7 @@ The following steps describe how to use the C++ CNTK Library for model evaluatio
 3. Load the model by `CNTK::Function::Load()`. The returned Function object represents the computation graph of the model.
 4. Prepare data for each input variable. You can use `CNTK::Value::CreateBatch()`, `CNTK::Value::CreateSequence()`, or `CNTK::Value::CreateBatchOfSequences()` to create a Value object from your input data representing a batch of samples, a sequence of samples, or a batch of sequences of samples respectively.
 5. Call `CNTK::Function::Evaluate()` for evaluation. The `Evaluate()` expects as input an unordered_map for input variables and input values, and an unordered_map for output variables and output values. The output value object could be `null` which means that CNTK Library allocates the actual storage for this output value. On return, the Value objects associated with the output variables contain the results of evaluation.
-6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
+6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableValueTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
 
 For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
 

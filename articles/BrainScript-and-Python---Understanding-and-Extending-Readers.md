@@ -219,7 +219,7 @@ Currently CNTK supports the below deserializers:
 | Base64ImageDeserializer    | ImageReader          | Deserializer for images encoded as base64 strings in the mapping file. |
 | CNTKTextFormatDeserializer | CNTKTextFormatReader | Deserializer for CNTK text format files                                |
 
-Please refer to the tables [below](#General-Reader-Configuration) for the full description of the configuration parameters.
+Please refer to the tables [below](#general-reader-configuration) for the full description of the configuration parameters.
 
 ## Transforms
 A transform is a simple abstraction that take a sequence as an input, performs some transformation of samples in the sequence and returns the output sequence.

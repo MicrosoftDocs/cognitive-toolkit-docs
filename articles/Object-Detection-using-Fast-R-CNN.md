@@ -184,7 +184,7 @@ The trained model is tested seperately on both the training set and the test set
 During testing for each image and each corresponding ROI a label is predicted and stored in the files `test.z` and `train.z` in the `cntkFiles` folder.
 
 __A3:__ The evaluation step parses the CNTK output and computes the [mAP](#map-mean-average-precision) comparing the predicted results with the ground truth annoations. 
-[Non maximum suppression](#NMS-Non-Maximum-Suppression) is used to merge overlapping ROIs. You can set the threshold for non maximum suppresion in `PARAMETERS.py` ([details](#parameters)).
+[Non maximum suppression](#nms-non-maximum-suppression) is used to merge overlapping ROIs. You can set the threshold for non maximum suppresion in `PARAMETERS.py` ([details](#parameters)).
 
 ### Using a pre-trained model
 
@@ -443,7 +443,7 @@ a single time per image. According to the authors, this leads to a 213 times spe
 training without loss of accuracy. This is achieved by using an ROI pooling layer which projects the ROI onto the convolutional 
 feature map and performs max pooling to generate the desired output size that the following layer is expecting. 
 In the AlexNet example used in this tutorial the ROI pooling layer is put between the last convolutional layer and the first 
-fully connected layer (see [BrainScript code](#CNTK-configuration)).
+fully connected layer (see [BrainScript code](#cntk-configuration)).
 
 The original Caffe implementation used in the R-CNN papers can be found at github:
 [RCNN](https://github.com/rbgirshick/rcnn), [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn), and [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn). This tutorial uses some of the code from these repositories, notably (but not exclusively) for svm training and model evaluation.

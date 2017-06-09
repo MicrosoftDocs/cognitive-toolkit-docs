@@ -118,14 +118,10 @@ connected by other networks. The related parameters are
 
 * `encoderNetworkBuilder` and `decoderNetworkBuilder`: These specify the simple network builder to used.
 
-## PBStat Command
+## BNStat Command
 Evaluating the mean and variance of evaluating and testing data-set for the batch normalization node is tricky. Although the mean and variance could be calculated via running average or exp while training, we still tend to provide a more stable and robust method to generate the mean and variance of batch normalization -- Post batch normalization statistics. The command need to be called after training. It will generate the mean and variance for each BN layer.
 * `modelPath`: the path to the model file containing trained model
 * `minibatchSize`: the mini-batch size while evaluating, same with training minibatchSize
 * `itersPerNode`: the statistics iterations for each batch normalization node
 * `reader`: the reader configuration block to read the test data. For details see [Reader block](./BrainScript-Reader-block.md)
 * `enableDistributedMBReading`: distributed reading in parallel training
-
-
-
-
