@@ -33,7 +33,7 @@ This release contains the following **breaking changes**:
 ## New and updated features
 
 * See sections below on new features in Python and C# API
-*  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](../Using-TensorBoard-for-Visualization.md).
+*  In addition to pre-existing Python support, added support for TensorBoard output in BrainScript. [Read more here](../Using-TensorBoard-for-Visualization.md).
 * Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.

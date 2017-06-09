@@ -39,7 +39,7 @@ This release contains the following **breaking changes**:
   * [Composite reader](../BrainScript-and-Python---Understanding-and-Extending-Readers.md#general-reader-configuration)
 * New Python and BrainScript for VGG16 and 19
 * Optimized memory management for convolution workspace, and now a larger (~30% for VGG) minibatch size can be used for training  
-* Profiler support in python. See more [here](../BrainScript-and-Python-Performance-Profiler.md#for-python)
+* Profiler support in Python. See more [here](../BrainScript-and-Python-Performance-Profiler.md#for-python)
 * Added support in training session for cross validation and preservation of all checkpoints
 
 ## New Examples and Tutorials
@@ -58,4 +58,4 @@ A new set of NuGet Packages is provided with this Release.
 
 ## Bug fixes
 
-* Re-enable image rendering in python notebooks when used with GitHub web viewer
+* Re-enable image rendering in Python notebooks when used with GitHub web viewer

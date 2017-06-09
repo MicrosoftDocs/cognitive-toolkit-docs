@@ -87,7 +87,7 @@ See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Container
 
 ***2017-03-15.* V 2.0 Beta 15 Release**  
 Highlights of this Release:
-*  In addition to pre-existing python support, added support for TensorBoard output in BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).
+*  In addition to pre-existing Python support, added support for TensorBoard output in BrainScript. [Read more here](./Using-TensorBoard-for-Visualization.md).
 * Learners can now be implemented in pure Python by means of `UserLearners`. [Read more here](https://cntk.ai/pythondocs/extend.html#user-learners).
 * New debugging helpers: `dump_function()`, `dump_signature()`.
 * Tensors can be indexed using advanced indexing. E.g. `x[[0,2,3]]` would return a tensor that contains the first, third and fourth element of the first axis.
