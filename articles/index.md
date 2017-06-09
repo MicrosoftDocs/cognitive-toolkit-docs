@@ -17,7 +17,7 @@ The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by M
 
 The latest release of the Microsoft Cognitive Toolkit is [2.0](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Release_Notes). 
 
-It can be included as a library in your Python or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the Toolkit from the source provided in Github.
+It can be included as a library in your Python or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the Toolkit from the source provided in GitHub.
 
 Here are a few pages to get started:
 * [Reasons to switch from TensorFlow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
