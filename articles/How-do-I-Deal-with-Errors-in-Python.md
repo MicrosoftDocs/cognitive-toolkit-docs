@@ -21,7 +21,7 @@ You will need to install ipdb via
 ```
 pip install ipdb
 ```
-Make sure the above installation happens for the correct python environment (the one used to run the notebook). 
+Make sure the above installation happens for the correct Python environment (the one used to run the notebook). 
 Afterwards, in your notebook you should add this line to import the debugger.
 ```python
 from IPython.core.debugger import Tracer

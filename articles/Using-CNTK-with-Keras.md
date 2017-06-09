@@ -22,7 +22,7 @@ We assume you have followed the Anaconda installation instructions on your Windo
 
 Steps 1 and 2 can be optional. We **strongly** urge you to follow them especially if you have an **existing Keras installation**. 
 
-**Step 1.** We highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default python setup (or any existing Keras installation).  
+**Step 1.** We highly recommend starting by creating a new anaconda environment. The conda environment allows you to use the feature without interfering with your default Python setup (or any existing Keras installation).  
 
 ```conda create --name cntkkeraspy35 python=3.5 numpy scipy h5py jupyter```
 
@@ -38,7 +38,7 @@ On Linux: ``` source activate cntkkeraspy35```
 
 **Step 4.** Install a suitable build of CNTK (older CNTK versions don't have Keras support).
 
-> 4.1 Please choose one of the several available wheel options from the following pages to match your python + machine environment.
+> 4.1 Please choose one of the several available wheel options from the following pages to match your Python + machine environment.
 
 - For Windows: Choose a suitable [binary](./Setup-Windows-Python.md) (wheel file).
 

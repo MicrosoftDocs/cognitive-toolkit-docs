@@ -17,11 +17,11 @@ ms.devlang:   python, cpp, csharp
 [CNTK Python API](https://cntk.ai/pythondocs/) consists of abstractions for model definition and compute, learning algorithms, data reading and distributed training. 
 - *Flexibility and compactness*: These abstractions orthogonally compose offering both flexibility and conciseness in definition and training of arbitrary neural networks. 
 - *Efficient data interfaces*: Simple yet light-weight data interfaces allow users to efficiently feed data in the form of native numpy arrays to the compute engine. 
-- *Built-in data readers*: CNTK's built-in optimized and scalable data readers for image, text format and speech HTK data formats are also available from the python APIs for ease of directly training with existing data without users having to author any data reading code.
+- *Built-in data readers*: CNTK's built-in optimized and scalable data readers for image, text format and speech HTK data formats are also available from the Python APIs for ease of directly training with existing data without users having to author any data reading code.
 - *Highly scalable learning*: The API exposes CNTK's highly scalable distributed training capabilities (parallelization algorithms like 1-Bit SGD). The [distributed training example](https://github.com/Microsoft/CNTK/tree/v2.0/Examples/Image/Classification/ResNet/Python#trainresnet_cifar10_distributedpy) illustrates the training parallelization API.
 - *Concise network definition*: The API includes a high level [layers library](https://cntk.ai/pythondocs/layerref.html) that enables concise advanced neural networks definition including recurrences similar to CNTK V1. The toolkit supports representation of recurrent models in symbolic form as cycles in the neural network instead of requiring static unrolling of the recurrence steps. This results in much more general, concise and efficient representation and execution of recurrent neural networks. 
 
-All the core computation, learning, and data reading API abstractions in the CNTK python API are very easily extensible from both Python and C++ allowing users to easily implement new operators, learners and data readers which freely compose with the built-in facilities of the library.
+All the core computation, learning, and data reading API abstractions in the CNTK Python API are very easily extensible from both Python and C++ allowing users to easily implement new operators, learners and data readers which freely compose with the built-in facilities of the library.
 
 The API introduces new [Protocol Buffers](https://developers.google.com/protocol-buffers/) based model serialization format which supports backwards and upwards compatibility for saved models.
 
