@@ -235,7 +235,7 @@ CNTK supports Python 2.7, Python 3.4, Python 3.5 and Python 3.6. We recommend yo
 
 As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7, Python 3.4, or Python 3.6 environment, please adjust the name of the YML to match the Python version you intend to use.
 
-The following assumes you cloned the CNTK source code from Github into the directory `c:\repos\cntk`.
+The following assumes you cloned the CNTK source code from GitHub into the directory `c:\repos\cntk`.
 
 * To create a new conda environment (e.g. `cntk-py35`) and activate it, run the following commands from the Windows command shell:
 ```
