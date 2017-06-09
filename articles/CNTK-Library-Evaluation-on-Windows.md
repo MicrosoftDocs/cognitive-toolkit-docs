@@ -55,7 +55,7 @@ The following steps describe how to use the C++ CNTK Library for model evaluatio
 3. Load the model by `CNTK::Function::Load()`. The returned Function object represents the computation graph of the model.
 4. Prepare data for each input variable. You can use `CNTK::Value::CreateBatch()`, `CNTK::Value::CreateSequence()`, or `CNTK::Value::CreateBatchOfSequences()` to create a Value object from your input data representing a batch of samples, a sequence of samples, or a batch of sequences of samples respectively.
 5. Call `CNTK::Function::Evaluate()` for evaluation. The `Evaluate()` expects as input an unordered_map for input variables and input values, and an unordered_map for output variables and output values. The output value object could be `null` which means that CNTK Library allocates the actual storage for this output value. On return, the Value objects associated with the output variables contain the results of evaluation.
-6. Get output data from evaluation results. Use `CNTK::Value::CopyFrom(Value Source)` to copy the data stored in the Source Value object into the buffer to 'this' Value.
+6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableValueTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
 
 For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
 
