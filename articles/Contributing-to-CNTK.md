@@ -38,4 +38,4 @@ Here are the simple steps you need to follow to see your code as a part of CNTK:
 * We ask to ensure that your branch has no merge conflicts with ```master``` (GitHub Pull Request web interface informs you about it). We ask to ensure this conflict-free state both *before* and *after* the contribution review. (I.e. in case during the time of the review on-going ```master``` updates result in a merge conflict, we will ask you to resolve it and make a new commit before we proceed with  the integration)
 * If the contribution is accepted and in merge-conflict-free state, it will be merged into the ```master``` branch
 
-That's it! We're looking forward getting your contribution!
+That's it! We're looking forward to getting your contribution!
