@@ -34,7 +34,7 @@ With the Release Candidate 2 we ship one of the last previews before the Microso
 #### New and improved features
 
 * Support for Python 3.6 for source and binary installation; see
-  [setup instructions](https://github.com/Microsoft/CNTK/wiki/Setup-CNTK-on-your-machine).
+  [setup instructions](../Setup-CNTK-on-your-machine.md).
 * `UserMinibatchSource` now allows to write custom minibatch sources and pass them to the CNTK core.
   See [here](https://cntk.ai/pythondocs/extend.html#user-defined-minibatch-sources) for documentation.
 * CNTK deterministic mode (`cntk.cntk_py.force_deterministic_algorithms()`) can be enabled in all configurations, except for overlapped max pooling.
@@ -47,7 +47,7 @@ With the Release Candidate 2 we ship one of the last previews before the Microso
 * New APIs: `class NDArrayView` and methods, `SetMaxNumCPUThreads()`, `GetMaxNumCPUThreads()`, `SetTraceLevel()`, `GetTraceLevel()`
 * Memory and performance optimization.
 
-The updated APIs are described [here](https://github.com/Microsoft/CNTK/wiki/CNTK-Library-Managed-API).
+The updated APIs are described [here](../CNTK-Library-Managed-API.md).
 
 ### CNTK NuGet package
 
