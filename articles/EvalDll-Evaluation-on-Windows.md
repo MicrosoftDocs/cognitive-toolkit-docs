@@ -25,7 +25,7 @@ The usage pattern for this DLL is the following:
 5. Evaluate some input against the model and obtain the corresponding output.
 6. Dispose the model when done.
 
-For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page in this wiki.
+For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page.
 
 The [CPPEvalClient](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalClient) program located in the folder [Examples/Evaluation/CPPEvalClient](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CPPEvalClient) demonstrates the usage of this evaluation interface. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for how to build and run examples.
 

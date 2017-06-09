@@ -83,7 +83,7 @@ There are breaking changes in master compared to beta15, click [here](./Breaking
 
 ***2017-03-16.* V 2.0 Beta 15 Release available at Docker Hub**  
 CNTK V 2.0 Beta 15 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-03-15.* V 2.0 Beta 15 Release**  
 Highlights of this Release:
@@ -101,7 +101,7 @@ Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/
 ## February 2017
 ***2017-02-28.* V 2.0 Beta 12 Release available at Docker Hub**  
 CNTK V 2.0 Beta 12 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-02-23.* V 2.0 Beta 12 Release**  
 Highlights of this Release:
@@ -118,7 +118,7 @@ Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/
 
 ***2017-02-13.* V 2.0 Beta 11 Release available at Docker Hub**  
 CNTK V 2.0 Beta 11 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-02-10.* V 2.0 Beta 11 Release**  
 Highlights of this Release:
@@ -133,7 +133,7 @@ Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/
 
 ***2017-02-08.* V 2.0 Beta 10 Release available at Docker Hub**  
 CNTK V 2.0 Beta 10 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-02-01.* V 2.0 Beta 10 Release**  
 Highlights of this Release:
@@ -152,14 +152,14 @@ Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/
 ## January 2017
 ***2017-01-25.* V 2.0 Beta 9 Release available at Docker Hub**  
 CNTK V 2.0 Beta 9 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-01-25.* 1bit-SGD Code is relocated to GitHub. Submodule configuration update is required for affected users**  
 This news is related to users who are working with CNTK code base. If you use Binary or Docker Runtime Images installation you may ignore it.
 
 Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) code is moved to a new Repository in GitHub.
 
-If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD.md) *prior to January 25, 2017* you need to update git submodule configuration as described in [this Wiki article](./Update-1bit-SGD-Submodule-Location.md).
+If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD.md) *prior to January 25, 2017* you need to update git submodule configuration as described in [this article](./Update-1bit-SGD-Submodule-Location.md).
 
 ***2017-01-20.* V 2.0 Beta 9 Release**  
 Highlights of this Release:
@@ -176,7 +176,7 @@ Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/
 
 ***2017-01-19.* V 2.0 Beta 8 Release available at Docker Hub**  
 CNTK V 2.0 Beta 8 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 ***2017-01-16.* V 2.0 Beta 8 Release**  
 Highlights of this Release:

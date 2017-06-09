@@ -96,6 +96,6 @@ Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/
 
 ***2017-03-16.* V 2.0 Beta 15 Release available at Docker Hub**  
 CNTK V 2.0 Beta 15 Runtime packages are now available as [Public Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).  
-See more on CNTK as Docker Images in this [Wiki article](./CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md).
 
 See [all news](./News.md).

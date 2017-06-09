@@ -22,7 +22,7 @@ The release candidate contains [all changes and improvements introduced in CNTK 
 
 This release contains the following **breaking changes**:
 
-* New file names of CNTK Shared Libraries. [Read more in this Wiki article](../CNTK-Shared-Libraries-Naming-Format.md).
+* New file names of CNTK Shared Libraries. Read more [here](../CNTK-Shared-Libraries-Naming-Format.md).
   * This is important for developers and other users who use explicit CNTK Shared Library file names in their solutions.
   * If you are using CNTK NuGet packages for C++ or C# no action is required (beside updating to the latest NuGet package)
 * There is a set of breaking changes in Python and C# API. See the correspondent sections below.
@@ -75,7 +75,7 @@ This release contains the following **breaking changes in CNTK Python API**:
 * Performance optimizations.
 * Multiple bug fixes, including memory safety and concurrent evaluations.
 
-The updated APIs are described in [this Wiki page](../CNTK-Library-Managed-API.md).
+The updated APIs are described [here](../CNTK-Library-Managed-API.md).
 
 ### Breaking changes
 

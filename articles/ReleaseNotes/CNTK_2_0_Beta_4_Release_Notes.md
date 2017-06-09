@@ -24,7 +24,7 @@ This release add the support of Distributed scenarios. See more in the sections 
 
 ## Memory compression
 
-This release introduces a *Memory Compression*, an ability to trade off memory usage with compute. See how to enable the feature in [Top level configurations](../BrainScript-Top-level-configurations.md#forcedeterministicalgorithms) Wiki article (```hyperCompressMemory``` variable).
+This release introduces a *Memory Compression*, an ability to trade off memory usage with compute. See how to enable the feature in the [Top level configurations](../BrainScript-Top-level-configurations.md#forcedeterministicalgorithms) page (```hyperCompressMemory``` variable).
 
 ## Reorganizing location of Examples and Tutorials
 

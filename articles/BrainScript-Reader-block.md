@@ -29,7 +29,7 @@ The reader block is used for all types of readers and the `readerType`  paramete
         ]
     ]
 
-You can explore different reader settings in the configurations of the [Examples](./Examples.md). For details regarding specific readers see the corresponding wiki pages:
+You can explore different reader settings in the configurations of the [Examples](./Examples.md). For details regarding specific readers see these corresponding pages:
 
 * [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md)
 * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader.md)

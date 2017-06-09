@@ -26,7 +26,7 @@ RecurrentLSTMLayer {300} :
 DenseLayer {129}
 )
 ```
-Read more in the Wiki on [Layers](../BrainScript-Layers-Reference.md) and [Sequential](../Sequential.md).
+Read more on [Layers](../BrainScript-Layers-Reference.md) and [Sequential](../Sequential.md).
 
 * Support of **CuDNN5 RNN** which significantly improves performance.
 * Support of **Common random-initialization types**, e.g.
@@ -39,9 +39,9 @@ W = ParameterTensor {(1024:Inferred)}
 z = W * x
 ```
 will infer the dimension marked as Inferred from the input.  
-(See the complete description of ```ParameterTensor``` in the [Wiki](../Parameters-And-Constants.md#parametertensor).)
+(See the complete description of ```ParameterTensor``` [here](../Parameters-And-Constants.md#parametertensor).)
 
-* **Curly braces in configuration and BrainScript** making it more similar to other familiar languages. See more in the [Wiki Article](../BrainScript-Basic-Concepts.md).
+* **Curly braces in configuration and BrainScript** making it more similar to other familiar languages. See more [here](../BrainScript-Basic-Concepts.md).
 * We have significantly simplified Handling of **Gated Recurrent Units (GRU)** was significantly improved by adding the convenience functions to BrainScript library. Read more in the [corresponding article](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/08/grus-on-cntk-with-brainscript/).
 
 ## Support of NVIDIA cuDNN 5.1
@@ -72,12 +72,12 @@ Linux CNTK Evaluator is included in Linux binary distribution.
 
 The following changes and improvements are introduced in V.1.7:
 * Eval client samples (both C++ and C#) are included in the CNTK binary drop for Windows. The samples demonstrate how to use the CNTK evaluation library in C++ and C#. Instructions for using samples 
-are available in the [Wiki](../index.md).
+are available [here](../index.md).
 * *EvalWrapper.dll* now has a *Strong Name*. Implementation details available in the description in the header of [*EvalWrapperAssemblyInfo.cpp*](https://github.com/Microsoft/CNTK/blob/master/Source/Extensibility/EvalWrapper/EvalWrapperAssemblyInfo.cpp).
 
 ## Unit Tests
 
-Unit tests have been enabled on Linux. The wiki [How-To-Test](../How-to-Test.md) article contains the instructions on unit tests for both Windows and Linux.
+Unit tests have been enabled on Linux. The article [How-To-Test](../How-to-Test.md) contains the instructions on unit tests for both Windows and Linux.
 
 We now use *Mersenne Twister random engine* and *Boost random distribution functions* in unit tests for both Windows and Linux.
 
