@@ -23,7 +23,7 @@ Optionally, if users want to convert the dot description to a figure, they need 
 
 * `outputFile`: the path to the output figure.
 
-* `renderCmd`: A string indicates how the third party tool is used to convert from a DOT file to a figure. For example, if graphviz is used, the RenderCmd can be written as `RenderCmd="d:\Tools\graphviz\bin\dot.exe -Tjpg <IN> -o<OUT>"` where the plot command will substitute `“<IN>“` with the `outputDOTFile` command parameters and `“<OUT>”` with the `outputFile` command parameters; `-Tjpg` indicates a jpg file format is selected.
+* `renderCmd`: A string indicates how the third party tool is used to convert from a DOT file to a figure. For example, if graphviz is used, the RenderCmd can be written as `RenderCmd="d:\Tools\graphviz\bin\dot.exe -Tjpg <IN> -o<OUT>"` where the plot command will substitute `“<IN>“` with the `outputDOTFile` command parameters and `“<OUT>”` with the `outputFile` command parameters; `-Tjpg` indicates a JPG file format is selected.
 
 Here is a complete example:
 

@@ -39,7 +39,7 @@ you can catch up with [this two-page introduction](./Tutorial2/Tutorial2.md#goin
 We assume that you have already installed CNTK and can run the CNTK command.
 This tutorial was held at KDD 2016 and requires a recent build,
 please [see here](./Setup-CNTK-on-your-machine.md) for setup instructions. You can just follow the instructions 
-for downloading a binary install package from that page. For image related taks you should do this on a machine with a capable CUDA-compatible GPU.
+for downloading a binary install package from that page. For image related tasks you should do this on a machine with a capable CUDA-compatible GPU.
 
 Next, please download a ZIP archive (about 12 MB): Click on [this link](https://github.com/Microsoft/CNTK/blob/fseide/kdd/Tutorials/CNTK_HandsOn_KDD2016.zip),
 and then on the Download button.

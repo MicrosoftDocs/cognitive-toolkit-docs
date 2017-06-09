@@ -30,7 +30,7 @@ The CNTK binary packages you download starting with Beta 5 contain the NVIDIA CU
 Setting up a Windows development environment for the Microsoft Cognitive Toolkit from scratch is described [here](./Setup-CNTK-on-Windows.md). If you already have a working development environment for CNTK using CUDA 7.5, you need to follow these steps to upgrade to CUDA 8.0:
 
 #### CUDA 8.0
-The NVIDIA CUDA 7.5 development environment and the CUDA 8.0 development environment can live side-by-side on your machine, but you can also deinstall the CUDA 7.5 toolkit.
+The NVIDIA CUDA 7.5 development environment and the CUDA 8.0 development environment can live side-by-side on your machine, but you can also uninstall the CUDA 7.5 toolkit.
 
 Download and install the NVIDIA CUDA 8.0 Toolkit:
 * Download the required package from [this download page](https://developer.NVIDIA.com/CUDA-downloads)
@@ -74,7 +74,7 @@ Install the latest driver for your GPU card:
 
 ### CUDA 8.0
 
-NVIDIA recommends deinstalling previous CUDA versions before installing CUDA 8.0 as described [here](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#handle-uninstallation).
+NVIDIA recommends uninstalling previous CUDA versions before installing CUDA 8.0 as described [here](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#handle-uninstallation).
 
 We recommend installing CUDA using [Runfiles](http://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile). Perform download and installation of CUDA 8.0 as described in the link from the previous sentence.
 

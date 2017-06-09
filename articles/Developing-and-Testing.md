@@ -16,7 +16,7 @@ Once you have setup the CNTK sources on your machine you should follow the CNTK 
 
 If you make modifications to the code please follow the coding guidelines and make sure tests are still passing with your changes in place.
 
-Our source code doesn't include TAB characters for formatting. If you use Visual Studio as your editor, goto Tools|Options|Text Editor|C/C++|Tabs and make sure it is set to Smart Indenting Tab, Indent Size set to 4, and "Insert Spaces" option selected. You can also load the CppCntk.vssettings file (in the CNTK home directory) which contains settings for C++ editor. To import/export the settings, use Tools -> Import and Export Settings... Visual Studio menu option.
+Our source code doesn't include TAB characters for formatting. If you use Visual Studio as your editor, go to Tools|Options|Text Editor|C/C++|Tabs and make sure it is set to Smart Indenting Tab, Indent Size set to 4, and "Insert Spaces" option selected. You can also load the CppCntk.vssettings file (in the CNTK home directory) which contains settings for C++ editor. To import/export the settings, use Tools -> Import and Export Settings... Visual Studio menu option.
 
 Please do not auto-format existing code (Edit -> Advanced -> Format Document/Ctrl+E,D).
 

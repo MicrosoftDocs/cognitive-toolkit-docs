@@ -96,7 +96,7 @@ In the previous section we trained a classifier that distinguishes 102 different
 
 `python TransferLearning_Extended.py`
 
-The model is tested on five images of sheep and wolf each and predicts all labels correctly. The output file contains per line a json representation of the prediction results:
+The model is tested on five images of sheep and wolf each and predicts all labels correctly. The output file contains per line a JSON representation of the prediction results:
 
 ```
 [{"class": "Sheep", "predictions": {"Sheep":1.000, "Wolf":0.000}, "image": "..."}]
@@ -114,7 +114,7 @@ The model is tested on five images of sheep and wolf each and predicts all label
 [{"class": "unknown", "predictions": {"Wolf":0.980, "Sheep":0.020}, "image": "..."}]
 ``` 
 
-Note that the last three images do not have a ground truth class assigned, which is of course a valid scenario, e.g. for scoring unseen images in a webservice. The actual images are the three bird images shown below. The ground truth class for these in the json output is set to `unknown`. Note that the predictions for the concepts that the classifier was trained on are pretty good despite the few training images. This is in large parts due to the pretrained base model. The predictions for _unseen concepts_, e.g. images of birds, are of course not very meaningful, since the classifier knows only sheep and wolf. More on this [later](#a-few-grains-of-salt).
+Note that the last three images do not have a ground truth class assigned, which is of course a valid scenario, e.g. for scoring unseen images in a webservice. The actual images are the three bird images shown below. The ground truth class for these in the JSON output is set to `unknown`. Note that the predictions for the concepts that the classifier was trained on are pretty good despite the few training images. This is in large parts due to the pretrained base model. The predictions for _unseen concepts_, e.g. images of birds, are of course not very meaningful, since the classifier knows only sheep and wolf. More on this [later](#a-few-grains-of-salt).
 
 <p align="center">
 <a target="_blank" href="./Tutorial_TL/Weaver_bird.jpg"><img src="./Tutorial_TL/Weaver_bird.jpg" alt="image" height="170"/></a>
@@ -128,8 +128,8 @@ Note that the last three images do not have a ground truth class assigned, which
 You can use the `TransferLearning_Extended.py` script with your own images. Here is what you need: 
 
 1. `class_mapping` - An array containing the names of your categories, e.g. `['wolf', 'sheep']`
-2. `train_map_file` - A text file that contains per line first an image url and tab separated the corresponding category index, e.g. `0` for wolf or `1` for sheep:
-3. `test_map_file` - A text file the maps test images to their corresponding category. For unkown categories in test images use `-1` as categroy index.
+2. `train_map_file` - A text file that contains per line first an image URL and tab separated the corresponding category index, e.g. `0` for wolf or `1` for sheep:
+3. `test_map_file` - A text file the maps test images to their corresponding category. For unknown categories in test images use `-1` as category index.
 
 The script can generate all three items above for you if you structure your images in the following way:
 
@@ -178,7 +178,7 @@ Your training images should cover sufficiently the scenarios that you want to sc
 
 Adding a _catch-all_ category can be a good idea, but only if the training data for that category contains images that are again sufficiently similar to the images you expect at scoring time. As in the above example, if we train a classifier with images of sheep and wolf and use it to score an image of a bird, the classifier can still only assign a sheep or wolf label, since it doesn't know any other categories. If we were to add a catch-all category and add training images of birds to it then the classifier might predict the class correctly for the bird image. However, if we present it, e.g., an image of a car, it faces the same problem as before as it knows only sheep, wolf and bird (which we just happened to call called catch-all). Hence, your training data, also for catch-all, needs to cover sufficiently those concepts and images that you expect later on at scoring time. 
 
-Another aspect to keep in mind is that a particular base model might work very well for some transfer learning tasks and not as good for others. For example, the above `ResNet_18` model was pretrained on the ImageNet corpus, which contains many images of animals, people, cars and many other _every day objects_. Using this base model in transfer learning to build a clssifier for similar _every day objects_ can work out well. Using the same model as a base model to build a classifier for images of microorganisms or pencil drawings may yield only mediocre results.  
+Another aspect to keep in mind is that a particular base model might work very well for some transfer learning tasks and not as good for others. For example, the above `ResNet_18` model was pretrained on the ImageNet corpus, which contains many images of animals, people, cars and many other _every day objects_. Using this base model in transfer learning to build a classifier for similar _every day objects_ can work out well. Using the same model as a base model to build a classifier for images of microorganisms or pencil drawings may yield only mediocre results.  
 
 ## Using a different base model
 

@@ -33,7 +33,7 @@ LMSequenceReader is a reader that reads text string. It is mostly often used for
 The LMSequenceReader has following parameters:
 * `randomize`: it is either `None` or `Auto`. This specifies the mode of whether doing sentence randomization of the whole corpus.
 
-* `nbruttsineachrecurrentiter`: this specifies the limit of the number of sentences in a minibatch. The reader arranges same-length input sentences, up to the specified limit, into each minibatch. For recurrent networks, trainer resets hidden layer activities only at the begining of sentences. Activities of hidden layers are carried over to the next minibatch if an end of sentence is not reached. Using multiple sentences in a minibatch can speed up training processes.
+* `nbruttsineachrecurrentiter`: this specifies the limit of the number of sentences in a minibatch. The reader arranges same-length input sentences, up to the specified limit, into each minibatch. For recurrent networks, trainer resets hidden layer activities only at the beginning of sentences. Activities of hidden layers are carried over to the next minibatch if an end of sentence is not reached. Using multiple sentences in a minibatch can speed up training processes.
 
 * `unk`: this specifies the symbol to represent unseen input symbols. Usually, this symbol is “<unk>”. Unseen words will be mapped to the symbol.
 

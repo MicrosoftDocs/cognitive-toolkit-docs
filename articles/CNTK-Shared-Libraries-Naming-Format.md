@@ -12,7 +12,7 @@ ms.devlang:   NA
 
 # CNTK Shared Libraries Naming Format
 
-CNTK uses a common naming scheme for CNTK Shared Libraries on Windows (`*.dll`, `*.lib`) and Linux (`*.so`). The name of a file consists out of the libary name, the CNTK component version, and the letter `d` at the end of the file name (right before file extension). See the complete name match tables below.
+CNTK uses a common naming scheme for CNTK Shared Libraries on Windows (`*.dll`, `*.lib`) and Linux (`*.so`). The name of a file consists out of the library name, the CNTK component version, and the letter `d` at the end of the file name (right before file extension). See the complete name match tables below.
 
 The format of a CNTK Shared Library file name is:
 ```

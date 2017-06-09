@@ -16,7 +16,7 @@ The EvalDll library on Windows is provided both as C++ and C# library. A NuGet p
 
 ## Using the EvalDll library
 The EvalDll library enables programmatic model evaluation on CPU (GPU is not supported).  
-The usage pattern for this dll is the following:
+The usage pattern for this DLL is the following:
 
 1. Link the `Cntk.Eval-<VERSION>.lib` import library into the application. Ensure you use the correct file name - see the beginning of this article.
 2. Include the evaluation header file "Eval.h"
@@ -63,7 +63,7 @@ There are several [examples](https://github.com/Microsoft/CNTK/blob/master/Examp
 There is currently a NuGet package at Nuget.org (search for CNTK) that provides both the native and managed versions for Debug and Release for the CNTK evaluation libraries (CPU only using MKL). With the NuGet it is possible to simply add the CNTK Eval NuGet to a .Net or Win32 project and call the APIs.
 Please refer to the [NuGet Package](./NuGet-Package.md) page for details on how to get started with CNTK and NuGet.
 
-If you do not want to use NuGet Package, you can add `Cntk.Eval.Wrapper-<VERSION>.dll` as reference to your project. Please make sure in this case that the path to the `Cntk.Eval.Wrapper` dll and its [dependencies](#shipping-evaldll-library-with-your-windows-application) below are included in the search path of dlls for your application.
+If you do not want to use NuGet Package, you can add `Cntk.Eval.Wrapper-<VERSION>.dll` as reference to your project. Please make sure in this case that the path to the `Cntk.Eval.Wrapper` DLL and its [dependencies](#shipping-evaldll-library-with-your-windows-application) below are included in the search path of DLLs for your application.
 
 ## Shipping EvalDll Library with your Windows application
 EvalDll requires the Visual C++ Redistributable Package for Visual Studio 2015 to be installed on the system where your application is going to run. And the target platform in the project property should be X64.
@@ -77,4 +77,4 @@ If you own application uses EvalDll library you need to distribute these DLLs wi
 * `libiomp5md.dll`
 * `mkl_cntk_p.dll`
 
-All these dlls can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+All these DLLs can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).

@@ -12,7 +12,7 @@ ms.devlang:   brainscript
 
 # BrainScript CNTK  Binary Reader
 
-The CNTKBinaryReader (later simply *binary reader*) is designed to be used on large data corpuses formatted according to the specification below. It supports the following main features:
+The CNTKBinaryReader (later simply *binary reader*) is designed to be used on large data corpora formatted according to the specification below. It supports the following main features:
 * Multiple input streams (inputs) per file
 * Both sparse and dense inputs
 * Variable length sparse sequences
@@ -128,7 +128,7 @@ The data portion contains the data outlined in chunks as described above. It is 
 
 #### Serialized Input
 
-Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserialer defined in the [matHeader](#matheader) section.
+Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserializer defined in the [matHeader](#matheader) section.
 
 ##### DenseBinaryDataDeserializer Data
 
@@ -146,7 +146,7 @@ elemType[sampleDim] is the data encoded as an array of length sampleSize of type
 
 ##### SparseBinaryDataDeserializer Data
 
-The SparseBinaryDataDeserializer's data is serialzed as a large matrix in [CSC format](http://docs.nvidia.com/cuda/cusparse/#compressed-sparse-column-format-csc), with an added caveat of how row indices are packed (see below). Before continuing, it is recommended that one reads over the specification on the page linked above.
+The SparseBinaryDataDeserializer's data is serialized as a large matrix in [CSC format](http://docs.nvidia.com/cuda/cusparse/#compressed-sparse-column-format-csc), with an added caveat of how row indices are packed (see below). Before continuing, it is recommended that one reads over the specification on the page linked above.
 
 The data is therefore serialized as:
 

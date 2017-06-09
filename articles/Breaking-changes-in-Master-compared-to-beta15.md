@@ -35,7 +35,7 @@ These are the current breaking changes:
     - Layers APIs aren't loaded by default, so you need `from cntk.layers import *`.
     - `Input` is gone use `cntk.input` or `cntk.sequence.input` for recurrent network.
     - `Placeholder` is gone use `cntk.placeholder`
-    - `Parameter` and `Constant` moved to CNTK namepace.
+    - `Parameter` and `Constant` moved to CNTK namespace.
  
 - Evaluating a node that has only the batch axis and no sequence axis, previously always returned the result containing a sequence dimension. This was fixed, i.e., it will now only output the batch axis.
 - Evaluating a node that has a sequence axis, previously returned a list of NumPy arrays when the sequences were of different length, but a single NumPy array containing all sequences, when the sequences were of same length (most of the time, because the sequence axis was not used at all, resulting in all sequences having only one element). This was inconsistent is now fixed, such that whenever a sequence axis is present, the output is a Python list. If your program breaks because of this change, it might be a sign that you specified your input with a sequence axis (the default in `input_variable()`), but are not using it.

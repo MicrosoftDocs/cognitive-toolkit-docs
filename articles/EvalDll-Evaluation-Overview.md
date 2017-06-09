@@ -29,4 +29,4 @@ Although an already trained model has a specific set of output nodes, it is some
 ## Current limitations
 - Single threaded evaluation.
 The CNTK evaluation EvalDll library, and by extension the managed EvalWrapper library, are single threaded and single re-entrancy. Concurrent evaluations of a single model instance is not supported. However, it is possible to load multiple instances of a model and evaluate each model with a single thread. This enables multiple models to be evaluated in parallel, yet each model with a single thread.
-- Any program that links the pre-built evaluation libraries (`Cntk.Eval` and `Cntk.Eval.Wrapper` dlls in Windows, and `libCntk.Eval` in Linux) of the CNTK binary package should use the same compiler version as that is used to build the pre-built libraries. 
+- Any program that links the pre-built evaluation libraries (`Cntk.Eval` and `Cntk.Eval.Wrapper` DLLs in Windows, and `libCntk.Eval` in Linux) of the CNTK binary package should use the same compiler version as that is used to build the pre-built libraries. 

@@ -35,7 +35,7 @@ cd cntk\Scripts\install\windows
 install.bat
 ```
 
-The script will inspect your system and determine the pre-requisites which are missing. You will be notified about the proposed installation steps and locations. This can be adjusted by optional parameters to the install script, [see here](./Setup-Windows-Binary-Script-Options.md).
+The script will inspect your system and determine the prerequisites which are missing. You will be notified about the proposed installation steps and locations. This can be adjusted by optional parameters to the install script, [see here](./Setup-Windows-Binary-Script-Options.md).
 
 The script will download needed components from the web, a connection to the Internet is required. It will execute these components, and according to the setting of UAC (User Account Control) you will be asked to acknowledge the execution and installation of these components.
 

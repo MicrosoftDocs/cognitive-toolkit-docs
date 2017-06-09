@@ -10,13 +10,13 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-**These instructions are subject to change as we are working with the Keras maintainers to integrate the CNTK backend in the official Keras repository**.
+**These instructions are subject to change as we are working with the Keras maintainers to integrate the CNTK back end in the official Keras repository**.
 
 # Using CNTK with Keras (Beta)
 
-We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
+We are happy to bring CNTK as a back end for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. Here are the instructions for you to follow.
 
-## Enable CNTK as Keras backend
+## Enable CNTK as Keras back end
 
 We assume you have followed the Anaconda installation instructions on your Windows or Linux machines.
 
@@ -42,15 +42,15 @@ On Linux: ``` source activate cntkkeraspy35```
 
 - For Windows: Choose a suitable [binary](./Setup-Windows-Python.md) (wheel file).
 
-- For Linux: Please install the [pre-requisites](./Setup-Linux-Python.md#prerequisites) first. Then choose a suitable [binary](./Setup-Linux-Python.md) (wheel file). 
+- For Linux: Please install the [prerequisites](./Setup-Linux-Python.md#prerequisites) first. Then choose a suitable [binary](./Setup-Linux-Python.md) (wheel file). 
 
 > 4.2 Install the wheel file
 
 ```pip install <URL to CNTK wheel>```
 
-**Step 5.** Update Keras to use CNTK as backend
+**Step 5.** Update Keras to use CNTK as back end
 
-You have two ways to set up CNTK as a Keras backend:
+You have two ways to set up CNTK as a Keras back end:
 
 > 5.1. By keras.json file.
 

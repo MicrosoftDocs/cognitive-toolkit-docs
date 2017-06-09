@@ -212,7 +212,7 @@ The trick is that for each minibatch, the algorithm compares the quantized gradi
 
 As a consequence, despite the aggressive quantization, each gradient value is eventually exchanged with full accuracy; just at a delay. Experiments show that, as long as this model is combined with a warm start (a seed model trained on a small subset of the training data without parallelization), this technique has shown to lead to no or very small loss of accuracy, while allowing a speed-up not too far from linear (the limiting factor being that GPUs become inefficient when computing on too small sub-batches).
 
-For maximum effeciency, the technique should be combined with *automatic minibatch scaling*, where every now and then, the trainer tries to increase the minibatch size. Evaluating on a small subset of the upcoming epoch of data, the trainer will select the largest minibatch size that does not harm convergence. Here, it comes in handy that CNTK specifies the learning rate and momentum hyperparameters in a minibatch-size agnostic way.
+For maximum efficiency, the technique should be combined with *automatic minibatch scaling*, where every now and then, the trainer tries to increase the minibatch size. Evaluating on a small subset of the upcoming epoch of data, the trainer will select the largest minibatch size that does not harm convergence. Here, it comes in handy that CNTK specifies the learning rate and momentum hyperparameters in a minibatch-size agnostic way.
 
 ### 5.2 Using 1-bit SGD in BrainScript
 

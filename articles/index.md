@@ -20,7 +20,7 @@ The latest release of the Microsoft Cognitive Toolkit is [2.0](https://docs.micr
 It can be included as a library in your Python or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the Toolkit from the source provided in Github.
 
 Here are a few pages to get started:
-* [Reasons to switch from Tensorflow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
+* [Reasons to switch from TensorFlow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), etc..
   * Try the [tutorials on Azure Notebooks](https://notebooks.azure.com/cntk/libraries/tutorials) with **pre-installed** CNTK 
@@ -89,7 +89,7 @@ Highlights:
 * Improvements in the [device selection API](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md).
 * New Python [model debugging functions](https://cntk.ai/pythondocs/cntk.debugging.html#module-cntk.debugging.debug).
 * Improvements in Python and C# API. See the [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) for detailed description.
-* New file names for [CNTK libraries and dlls](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format).
+* New file names for [CNTK libraries and DLLs](https://github.com/Microsoft/CNTK/wiki/CNTK-Shared-Libraries-Naming-Format).
 
 The [release notes](./ReleaseNotes/CNTK_2_0_RC_1_Release_Notes.md) contain an overview. 
 Get the release from the [CNTK Releases Page](https://github.com/Microsoft/CNTK/releases).

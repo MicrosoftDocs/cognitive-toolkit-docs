@@ -13,7 +13,7 @@ ms.devlang:   NA
 # Setup Linux binary script
 
 ## CNTK as a Docker container
-Before moving any further you may consider deploying CNTK as a prebuilt Docker container from dockerhub. Read the [corresponding section](./CNTK-Docker-Containers.md).
+Before moving any further you may consider deploying CNTK as a prebuilt Docker container from Docker Hub. Read the [corresponding section](./CNTK-Docker-Containers.md).
 
 ## CNTK binary installation with scripts on Linux
 

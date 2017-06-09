@@ -201,7 +201,7 @@ Internally, this will be converted into `momentumAsTimeConstant = -minibatchSize
 
   * When used in the 'AdaptiveMinibatchSizing' mode.
     * `numMiniBatch4LRSearch`: the number of minibatches used to search the minibatch size when in adaptive minibatch size mode. Default value is `500`. It’s typically set to 10-20% of the total minibatches in an epoch this is shared with the search for learning rate in `SearchBeforeEpoch` mode.
-    * `autoAdjustMinibatch`: enable or disable whether minibatch size is adaptively adjusted. Default value is `false`. Adapative minibatch sizing will begin on epochs starting after user minbatch sizes expcitily specified are complete. For example if the user specifed minibatchSize=256:1024, then 256 and 1024 are used in the first 2 Epochs and adaptive minibatch sizing is used afterwards.
+    * `autoAdjustMinibatch`: enable or disable whether minibatch size is adaptively adjusted. Default value is `false`. Adaptive minibatch sizing will begin on epochs starting after user minibatch sizes explicitly specified are complete. For example if the user specified minibatchSize=256:1024, then 256 and 1024 are used in the first 2 Epochs and adaptive minibatch sizing is used afterwards.
     * `minibatchSizeTuningFrequency`: The number of epochs to skip, on a periodic basis, before dynamically adjusting the minibatch size. Default value is `1`.
     * `minibatchSizeTuningMax`: The maximum size allowed for an adaptively adjusted minibatch size. Default value is `1048576`.
 
