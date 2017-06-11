@@ -14,7 +14,7 @@ ms.devlang:   NA
 
 ## CNTK developer install script options
 
-The developer installation script (devInstall.ps1) is a Powershell script located in the `Tools` subdirectory inside the root of the CNTK repository. The script can be run with several options to adopt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-CNTK-with-script-on-Windows.md). On this page we will list the additional installation options. You can get an overview about all the available options by executing `get-help -full .\devInstall.ps1` from inside a Powershell command window in the directory containing the installation script.
+The developer installation script (devInstall.ps1) is a PowerShell script located in the `Tools` subdirectory inside the root of the CNTK repository. The script can be run with several options to adopt the installation to your specific needs. Standard usage of the script is explained [here](./Setup-CNTK-with-script-on-Windows.md). On this page we will list the additional installation options. You can get an overview about all the available options by executing `get-help -full .\devInstall.ps1` from inside a PowerShell command window in the directory containing the installation script.
 
 **Note:** If you have an existing Anaconda environment that you want to install CNTK to, take a look at the `AnacondaBasePath` option below.
 
@@ -40,7 +40,7 @@ Please note, if you specify `NoPythonEnvironment`, you can't specify the `PyVers
 
 This optional parameter allows you to specify the location of an Anaconda installation to be used or created on your machine. 
 
-If you don't specify a directory through this paramaeter, Anaconda will be installed in `C:\local\Anaconda3-4.1.1-Windows-x86_64`. If the (default or by you specified) directory exists, the script will continue under the assumption that the directory contains a working Anaconda 3 (4.1.1) (or compatible) installation. The script will create the CNTK Python environment in that location (unless the parameter `NoPythonEnvironment` is specified).
+If you don't specify a directory through this parameter, Anaconda will be installed in `C:\local\Anaconda3-4.1.1-Windows-x86_64`. If the (default or by you specified) directory exists, the script will continue under the assumption that the directory contains a working Anaconda 3 (4.1.1) (or compatible) installation. The script will create the CNTK Python environment in that location (unless the parameter `NoPythonEnvironment` is specified).
 
 Example:
 ```
@@ -109,9 +109,9 @@ Example:
 ./devInstall.ps1 -InstallLocation c:\buildCntk -Execute
 ```
 
-### Powershell standard parameters
+### PowerShell standard parameters
 
-Powershell supports several standard parameters for script files. In case of problems with the installation and to report problems it could be helpful to run the script with the `-Verbose` option. This can make it easier to analyze installation issues.
+PowerShell supports several standard parameters for script files. In case of problems with the installation and to report problems it could be helpful to run the script with the `-Verbose` option. This can make it easier to analyze installation issues.
 
 Example:
 ```

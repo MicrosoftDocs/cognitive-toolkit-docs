@@ -27,7 +27,7 @@ For more details on creating the different model formats refer to the [CNTK mode
 
 ## CNTK model evaluation methods
 
-Aside from training a model, Microsoft Cognitve Toolkit provides different ways of evaluating the model:
+Aside from training a model, Microsoft Cognitive Toolkit provides different ways of evaluating the model:
 
 |  _model-evaluation_     | features | model-v1 | model-v2 |
 |:----------------------|:----|:----|:-----|

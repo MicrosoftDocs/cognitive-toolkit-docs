@@ -55,7 +55,7 @@ We recommend you start from this solution, since we already added all the code w
 - Then we performed the following code changes to build the tutorial project:
     - In the ValueController.cs we added a few required using directives 
     - Replaced the code in `public async Task<IEnumerable<string>> Get()` to actually call our CNTK evaluation function
-    - Added the function `public async Task<string[]> EvaluateCustomDNN(string imageUrl)`. We adopted this function from our CNTK Eval samples (method `EvaluateImageClassificationModel` from the CNTK reposiroty in the file `Examples\Evaluation\CSEvalClient\Program.cs`)
+    - Added the function `public async Task<string[]> EvaluateCustomDNN(string imageUrl)`. We adopted this function from our CNTK Eval samples (method `EvaluateImageClassificationModel` from the CNTK repository in the file `Examples\Evaluation\CSEvalClient\Program.cs`)
     - Added the file `CNTKImageProcessing.cs` to add a Bitmap-resize functionality. This is originating from the CNTK repository in `Examples/Evaluation/CSEvalClient/CntkBitmapExtensions.cs with minor adjustments` to namespace and class name
     - The directory of the created binaries in our solution needs to get added to the `PATH` environment of the application. This is required since our project includes native DLLs, and those are only loaded if they are reachable in the standard search path. We added the following code in the `Application_Start()` method in `global.asax`:
    
@@ -110,5 +110,5 @@ Once you performed these changes, you will be able to call you WebApi under
  
 ![AzureSettings](./pictures/EvaluateWebApi/pic7.png)
 
-This project showed you how to integrate the CNTK Eval functionality in an Azure WebApi and setup Azure to run the CNTK eval binaries. In a next step you can now add new APIs to dynamically supply data to the eval-function or upload new model version. These are WebApi/Azure development taks, and you should refer to the Azure documentation for this.
+This project showed you how to integrate the CNTK Eval functionality in an Azure WebApi and setup Azure to run the CNTK eval binaries. In a next step you can now add new APIs to dynamically supply data to the eval-function or upload new model version. These are WebApi/Azure development tasks, and you should refer to the Azure documentation for this.
 

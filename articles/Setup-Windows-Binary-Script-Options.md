@@ -76,7 +76,7 @@ install.bat -NoConfirm
 
 ### Standard parameters
 
-The main installation is being done by a Powershell script. Powershell supports several standard parameters for script files which can be used. In case of problems with the installation and to report problems it could be helpful to run the script with the `-Verbose` option. This can make it easier to analyze installation issues.
+The main installation is being done by a PowerShell script. PowerShell supports several standard parameters for script files which can be used. In case of problems with the installation and to report problems it could be helpful to run the script with the `-Verbose` option. This can make it easier to analyze installation issues.
 
 Example:
 ```

@@ -35,7 +35,7 @@ On the feature selection screen make sure you add 'Common Tools for Visual C++ 2
 
 ![im1](./pictures/setup/VS2015InstallFeatures.jpg)
 
-### Pre-Existing Visual Studio 2015 installation
+### Preexisting Visual Studio 2015 installation
 If you already have VS 2015 installed, make sure you are on **Update 3**. See the `Help->About` menu to display the version number like "Version 14.0.25431.01 Update 3". 
 
 You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
@@ -50,7 +50,7 @@ Git is required to work with the CNTK code base. You may use the following tools
 
 * [GitHub Desktop client](https://desktop.github.com/)
 
-### Enlisting in the CNTK Github repository
+### Enlisting in the CNTK GitHub repository
 
 Here we assume you installed [Git for Windows](https://git-scm.com/download/win). We assume you installed Git using the default options in the Git installer (Especially 'Use Git from the Windows Command Prompt' and with the option "Checkout Windows-style, commit UNIX-style line endings" at the "Configuring line endings" prompt enabled.
 
@@ -66,7 +66,7 @@ git submodule update --init Source/Multiverso
 
 This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
 
-The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in an CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
+The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in a CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
 ```
 setx CNTK_ENABLE_ASGD false
 ```
@@ -302,7 +302,7 @@ This concludes the installation portion. Let's continue with building CNTK
 
 ## Building CNTK
 
-Start Visual Studio 2015 and open the CNTK solution (`CNTK.sln`) in the root of the cloned CNTK project from Github. If you just changed and environment variable, you should close any already opened Visual Studio instance, otherwise the content of changed environment variables will not be reflected inside Visual Studio.
+Start Visual Studio 2015 and open the CNTK solution (`CNTK.sln`) in the root of the cloned CNTK project from GitHub. If you just changed and environment variable, you should close any already opened Visual Studio instance, otherwise the content of changed environment variables will not be reflected inside Visual Studio.
 * Right-click the CNTK Solution in Solution Explorer and select `Properties`
 * In the opened window select `Configuration Properties` and press `Configuration Manager...` button
 * In Configuration Manager select the desired configuration:

@@ -41,7 +41,7 @@ On the feature selection screen make sure you add 'Common Tools for Visual C++ 2
 
 ![im1](./pictures/setup/VS2015InstallFeatures70.jpg)
 
-### Pre-Existing Visual Studio 2015 installation
+### Preexisting Visual Studio 2015 installation
 If you already have VS 2015 installed, make sure you are on **Update 3**. See the `Help->About` menu to display the version number like "Version 14.0.25431.01 Update 3". 
 
 You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
@@ -125,7 +125,7 @@ Quick installation check: If you followed the instruction above and used the sam
 
 ## zlib and libzip
 
-***Required if you are building the CNTK Imagereader***
+***Required if you are building the CNTK Image Reader***
 
 If you are building CNTK with ZLib and LibZip, you will need to recompile these packages. You can compile this version by yourself, or use an already (precompiled) prepared version (described on this page). If you want to build the  libzip/zlib compression library for CNTK on your system, you can find the details [here](./Setup-Buildzlib-VS15.md)
 
@@ -139,5 +139,5 @@ Download the ZIP file containing the precompiled version of libzip/zlib compress
 
 ## Building CNTK
 
-At this point you have finished the conversion of the CNTK build system to Visual Studio 2015. Make sure you have all the environmnent variables changed to the correct location. Start Visual Studio 2015 and perform a rebuild of the CNTK solution.
+At this point you have finished the conversion of the CNTK build system to Visual Studio 2015. Make sure you have all the environment variables changed to the correct location. Start Visual Studio 2015 and perform a rebuild of the CNTK solution.
 

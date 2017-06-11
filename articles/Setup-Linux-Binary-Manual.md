@@ -29,7 +29,7 @@ software.
 through 3 below and directly jump to step 4 to update your existing CNTK package installation from your 
 Python 2.7, 3.4, 3.5, or 3.6 environment.
 
-**Step 1**: Download and install pre-requisites
+**Step 1**: Download and install prerequisites
 
 **Docker** users please follow the instructions [here](./CNTK-Docker-Containers.md). 
 Others please continue reading.

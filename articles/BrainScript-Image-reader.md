@@ -21,7 +21,7 @@ Image reader can be used to read images and apply some image-specific transforms
 /home/user/data/train/n01440764/n01440764_10027.JPEG<tab>0
 ```
 
-ImageReader supports "..." syntax in the mapping file. If the file path stored in the map file starts with "...", then "..." is subsituted by the directory of the mapping file itself.
+ImageReader supports "..." syntax in the mapping file. If the file path stored in the map file starts with "...", then "..." is substituted by the directory of the mapping file itself.
 
 For example, if a file *C:\work\CNTK\data\train.map* contains
 ```

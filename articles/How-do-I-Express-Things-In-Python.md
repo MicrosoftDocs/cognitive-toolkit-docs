@@ -427,8 +427,8 @@ if (isFinalValidationPass && (!input3AsLearnableParameterNode || input3AsLearnab
 
 ```
 For other functions where additional parameters are passed from the python API one
-need to modify the construtor of the implementation source. For example to expose
-`EditDistanceError` where penalties are passed into the construtor some of the
+need to modify the constructor of the implementation source. For example to expose
+`EditDistanceError` where penalties are passed into the constructor some of the
 code changes are as shown below.
 
 ```
@@ -447,7 +447,7 @@ EditDistanceErrorNode(const ScriptableObjects::IConfigRecordPtr configp)
 Some additional plumbing of the passed variables into local values and explicit
 copying into individual nodes may be needed.
 
-> Update `SeriealizationTest.cpp` (in //Tests/UnitTests/V2LibararyTests): Check
+> Update `SeriealizationTest.cpp` (in //Tests/UnitTests/V2LibraryTests): Check
 for the unique ID assertions
 
 ```
@@ -472,7 +472,7 @@ Some of the compiler warnings are to be ignored.
 %ignore_function CNTK::Internal::CosineDistanceWithNegativeSamples;
 ```
 
-### Optionaly expose functionality in BrainScript V2
+### Optionally expose functionality in BrainScript V2
 
 > Update `ComputationNetworkBuilder.h` (in //Source/ComputationNetworkLib):
 

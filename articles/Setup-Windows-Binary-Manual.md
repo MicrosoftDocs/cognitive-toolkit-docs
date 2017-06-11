@@ -23,7 +23,7 @@ If you are looking for any other kind of support to setup a CNTK build environme
 
 If you previously installed an earlier version of the CNTK Python package, you can jump to step 3 to update existing CNTK package installation from your Python environment
 
-**Step 1**: Install pre-requisites
+**Step 1**: Install prerequisites
 
 Download the appropriate binary package from [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). 
 The installation described on this page only works with the binary package. The

@@ -12,7 +12,7 @@ ms.devlang:   cpp
 
 # EvalDLL Native API
 
-There is a native interface available for evaluating models without requiring a data reader or data file(s). This interface is implemented in C++ inside the `Cntk.Eval` dll in Windows and `libCntk.Eval` in Linux respectively. The `Cntk.Eval` dll in turn is also used by the `EvalWrapper` assembly (which provides a managed layer) in Windows.
+There is a native interface available for evaluating models without requiring a data reader or data file(s). This interface is implemented in C++ inside the `Cntk.Eval` DLL in Windows and `libCntk.Eval` in Linux respectively. The `Cntk.Eval` DLL in turn is also used by the `EvalWrapper` assembly (which provides a managed layer) in Windows.
 
 The native interface name is the following:    
 
@@ -35,7 +35,7 @@ This method builds the network from either the network description in the config
 ***
 
 `void GetNodeDimensions(std::map<std::wstring, size_t>& dimensions, NodeGroup nodeGroup)`    
-This method fills a dictionary of dimensions, with each fimension item mapping the layer name (key) to the dimension size. The node group is defined through the `NodeGroup` enumeration:    
+This method fills a dictionary of dimensions, with each dimension item mapping the layer name (key) to the dimension size. The node group is defined through the `NodeGroup` enumeration:    
 
     enum NodeGroup     
     {      

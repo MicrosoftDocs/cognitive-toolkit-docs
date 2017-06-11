@@ -83,7 +83,7 @@ q_embed = qmodel(question)
 a_embed = amodel(answer)
 ```
 
-The trainer takes a single function whose parameters should be modified by the training proceduce. How can we pass the union of `qmodel` and `amodel` or the union of `cross_entropy` and `reconstruction_error`? The answer is to find a point where all the parameters are part of the same function. That happens at the very least in the final loss.
+The trainer takes a single function whose parameters should be modified by the training procedure. How can we pass the union of `qmodel` and `amodel` or the union of `cross_entropy` and `reconstruction_error`? The answer is to find a point where all the parameters are part of the same function. That happens at the very least in the final loss.
 i.e. `loss.parameters` contains all parameters the loss depends on. Typically however our model should not 
 include the loss, as it only makes sense for training. Therefore a better approach is to use combine to create a combined model
 ```python 

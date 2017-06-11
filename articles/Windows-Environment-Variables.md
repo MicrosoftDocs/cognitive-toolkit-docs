@@ -55,7 +55,7 @@ There are several additional environment variables which can be used to define t
 |CNTK_PY35_PATH |  | [Path to the CNTK Python 3.5 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 |CNTK_PY36_PATH |  | [Path to the CNTK Python 3.6 environment](./Setup-CNTK-on-Windows.md#cntk-python-environments)
 
-Assuming the defaul values:
+Assuming the default values:
  * DataParallel ASGD *is* being built
  * 1bit SGD *is not* being built
  * With undefined `CNTK_PY.._PATH`, Python libraries are *not* being built

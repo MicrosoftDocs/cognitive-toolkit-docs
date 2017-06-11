@@ -27,7 +27,7 @@ ms.devlang:   brainscript, python
 
 First, you need to instantiate a TensorBoardProgressWriter class by providing some of the following arguments:
 
-* **freq** – how frequently to log to output files. E.g. the value of 2 will cause every second call to update method to write to disk.
+* **freq** – how frequently to log to output files. For example, the value of 2 will cause every second call to update method to write to disk.
 * **log_dir** - a directory where the output files will be created.
 * **rank** - in case of distributed training, this should be set to a rank of a worker. If set, TensorBoardProgressWriter makes sure that only progress from worker 0 is recorded.
 * **model** – a CNTK model to visualize.

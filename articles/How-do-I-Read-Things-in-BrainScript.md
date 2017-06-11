@@ -45,7 +45,7 @@ See the description at [Understanding and Extending Readers](./BrainScript-and-P
 
 ## Put labels and features in separate files with CNTKTextFormatReader
 
-Use the composite reader to specifiy the two files, one for lables, and one for features.  And make sure to match sequence id's in labels file and the features file.
+Use the composite reader to specify the two files, one for labels, and one for features.  And make sure to match sequence id's in labels file and the features file.
 
 ```
 reader = [

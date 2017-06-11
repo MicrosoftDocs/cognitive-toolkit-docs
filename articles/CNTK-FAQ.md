@@ -54,9 +54,6 @@ Using CNTK is easy and straightforward.  Here are some ways to get started.
 * [CNTK usage overview](./CNTK-usage-overview.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
 
-## Do eval libs get produced for GPU?
-Unlike training, eval (as distributed through the Nuget package) is currently CPU only (e.g. on Windows it is built using the Release_CpuOnly target). If you need full GPU support, use the evaluation libraries built with the release target (e.g. Release on Windows) from the main distribution.
-
 ## Why does CNTK randomize the mini-batches after each epoch?
 Doing so prevents the same samples from always appearing in a mini-batch together. This leads to improvements in the validation accuracy.
 
@@ -64,9 +61,9 @@ Doing so prevents the same samples from always appearing in a mini-batch togethe
 Yes.  See the description at [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md) and look for the section describing how to "compose several data deserializers" 
 
 ## How are sequences handled in CNTK?
-See this article [Working with Sequences](https://github.com/Microsoft/CNTK/blob/master/bindings/python/doc/sequence.rst).
+See this article [Working with Sequences](https://cntk.ai/pythondocs/sequence.html).
 
-#### When looking at dropout, does chosen hidden unit omitted for the entire minibatch as updates takes place only after minibatchSize?
+## When looking at dropout, does chosen hidden unit omitted for the entire minibatch as updates takes place only after minibatchSize?
 Typically a different set of hidden units are set to 0 for different samples in the same minibatch. For recurrent neural networks, some people constrain to drop same set of hidden units across time for the same sequence.
 
 ## Dropout documentation mentions about hidden units, does dropout apply to units in Convolutional Layer if there are multiple of them?
