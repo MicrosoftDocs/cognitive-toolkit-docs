@@ -10,7 +10,7 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-**These instructions are subject to change as we are working with the Keras maintainers to integrate the CNTK back end in the official Keras repository**.
+**These instructions are subject to change the CNTK back end is integrated in the official Keras repository**.
 
 # Using CNTK with Keras (Beta)
 
