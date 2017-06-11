@@ -32,9 +32,9 @@ On Windows: ```activate cntkkeraspy35```
 
 On Linux: ``` source activate cntkkeraspy35```
 
-**Step 3.** Install our fork of Keras (we are working on getting this integrated in the official Keras repository)
+**Step 3.** Install the latest master branch of Keras
 
-```pip install git+https://github.com/souptc/keras.git```
+```pip install git+https://github.com/fchollet/keras.git```
 
 **Step 4.** Install a suitable build of CNTK (older CNTK versions don't have Keras support).
 
