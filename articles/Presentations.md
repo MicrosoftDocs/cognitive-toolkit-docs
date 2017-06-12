@@ -30,7 +30,7 @@ Here you can find CNTK and Deep Learning related presentations:
 
 * [WWW 2017](http://www.www2017.com.au/program/tutorials.php) - April 3-7, 2017: Half-day tutorial titled "**Scalable deep document (sequence) reasoning with Cognitive Toolkit**". Details of the tutorial can be found [here](./WWW-2017-Tutorial.md)
 
-* [AI NEXT 2017 conference](http://www.ainextconf.com/): On March 17, 2017, *Frank Seide* presented CNTK incl. the new functional "Layers" API. Slides are [here](https://github.com/Microsoft/CNTK/wiki/ppt/CNTK-AI-NEXT-Mar-2017-Frank-Seide-print.pdf). Video will be linked from here once available.
+* [AI NEXT 2017 conference](http://www.ainextconf.com/): On March 17, 2017, *Frank Seide* presented CNTK incl. the new functional "Layers" API. [Video](https://www.youtube.com/watch?v=w5_E-g2UaAg) and [Slides](https://github.com/Microsoft/CNTK/wiki/ppt/CNTK-AI-NEXT-Mar-2017-Frank-Seide-print.pdf).
 
 * NVidia [Inception Webinar](http://cc.readytalk.com/play?id=8kpkke) on Feb 9, 2017 where *Sayan Pathak* presented an overview of CNTK V2 with latest performance benchmarks as well as a introduction to deep learning with Cognitive Toolkit (formerly CNTK).
 
