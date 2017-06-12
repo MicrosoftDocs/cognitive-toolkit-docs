@@ -36,7 +36,7 @@ To run parallel training, make sure that an implementation of the Message Passin
 
 The second license is specific for the 1-bit Stochastic Gradient Descent (1bit-SGD) and Block-Momentum components and is more restrictive than the main CNTK license.
 
-*Data-Parallel SGD* may be used **with or without** 1bit-SGD. When *Data-Parallel SGD* is used **without** 1bit-SGD, it is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md). When it is used **with** 1bit-SGD, it is licensed under the [CNTK 1bit-SGD License./CNTK-1bit-SGD-License.md).
+*Data-Parallel SGD* may be used **with or without** 1bit-SGD. When *Data-Parallel SGD* is used **without** 1bit-SGD, it is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md). When it is used **with** 1bit-SGD, it is licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md).
 
 *Block-Momentum SGD* is **always** licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md) irrespective of the usage scenario. Note, that to obtain the source code implementation for this algorithm, you need to follow the [instructions for enabling 1bit-SGD](./Enabling-1bit-SGD.md) even if you do not plan to use 1bit-SGD itself.
 

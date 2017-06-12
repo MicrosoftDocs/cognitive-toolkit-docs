@@ -14,7 +14,7 @@ ms.devlang:   NA
 
 If you are building the Microsoft Cognitive Toolkit on your own machine, it requires the installation of several external components. The build process finds these installed components on your machine through environment variables. This allows you to install these components according to your wishes and preferences.
 
-This page lists the environment variables which are used by the CNTK build process. It also lists the *preferred* location for these components. The preferred location is mirroring the configuration of our internal automated build and test machines. The preferred location is also the location used here to describe the installation process. In the script in the script driven installation. But as was said before, this is only the *preferred* location, you can adjust it to your liking.
+This page lists the environment variables which are used by the CNTK build process. It also lists the *preferred* location for these components. The preferred location is mirroring the configuration of our internal automated build and test machines. The preferred location is also the location used in the documentation to describe the installation process. As was said before, this is only the *preferred* location and you can adjust it to your liking.
 
 |Environment Variable | Preferred Location |   |
 |:--------|:------------|:--------------|
