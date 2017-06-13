@@ -34,6 +34,7 @@
 # [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
 
 # Reference
+## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## [BrainScript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
 ### [BrainScript Config file overview](/cognitive-toolkit/BrainScript-Config-file-overview)
 ### [Train, Test, Eval](/cognitive-toolkit/BrainScript-Train-Test-Eval)
@@ -70,10 +71,6 @@
 #### [Plot command](/cognitive-toolkit/Plot-command)
 #### [BrainScript via command line](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
-## [C++](/cognitive-toolkit/CNTK-Library-API#c-api)
-### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
-## [C#](/cognitive-toolkit/CNTK-Library-Managed-API)
-## [Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ## [Python](https://cntk.ai/pythondocs/)
 ### [Working with Sequences](https://cntk.ai/pythondocs/sequence.html)
 ### [Layers library reference](https://cntk.ai/pythondocs/layerref.html)
@@ -84,6 +81,9 @@
 ### [Model Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
 ### [Model Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
 ### [NuGet Package](/cognitive-toolkit/NuGet-Package)
+### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
+### [CNTK Library C# Eval interface](/cognitive-toolkit/CNTK-Library-Managed-API)
+### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 ### [Model Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
 ### [Model Evaluation using cntk.exe](/cognitive-toolkit/CNTK-Evaluation-using-cntk.exe)
@@ -93,9 +93,9 @@
 #### [EvalDLL evaluation in Azure](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 #### [EvalDLL Managed API](/cognitive-toolkit/EvalDll-Managed-API)
 #### [EvalDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
-### [CNTK Evaluate Hidden Layers](/cognitive-toolkit/CNTK-Evaluate-Hidden-Layers)
-### [CNTK Evaluate Image Transforms](/cognitive-toolkit/CNTK-Evaluate-Image-Transforms)
-### [CNTK Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models)
+#### [EvalDLL Evaluate Hidden Layers](/cognitive-toolkit/CNTK-Evaluate-Hidden-Layers)
+#### [EvalDLL Evaluate Image Transforms](/cognitive-toolkit/CNTK-Evaluate-Image-Transforms)
+#### [EvalDLL Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models)
 
 # How do I
 ## How do I in Python
