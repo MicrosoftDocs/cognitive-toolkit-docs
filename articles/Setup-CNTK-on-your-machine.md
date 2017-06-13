@@ -12,9 +12,9 @@ ms.devlang:   python, brainscript,
 
 # Setup CNTK on your machine
 
-The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can return to the [Getting Started](https://cntk.ai/pythondocs/gettingstarted.html) section.
+The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can [test your installation from Python](./Setup-Test-Python) or try the [tutorial](./tutorials)  or [example](/cognitive-toolkit/Examples) sections of the documentation.
 
-It is recommended you install CNTK from precompiled binaries, but you can also install and build the CNTK codebase on your machine. More details about this option can be found in the "CNTK Source Code & Development" section.
+It is recommended you install CNTK from precompiled binaries. If you want to build CNTK from source code, the required steps are described [here](./Setup-CNTK-from-source).
 
 ## Install CNTK from Precompiled Binaries
 
@@ -26,17 +26,3 @@ To install the latest precompiled binaries to your machine, follow the instructi
 |[Script-driven installation](./Setup-Windows-Binary-Script.md)<br>Script that installs CNTK Python lib and CNTK.exe for BrainScript | [Script-driven installation](./Setup-Linux-Binary-Script.md)<br>Script that installs CNTK Python lib and CNTK.exe for BrainScript 
 |[Manual installation](./Setup-Windows-Binary-Manual.md)<br>Manually install CNTK Python lib, CNTK.exe for BrainScript, and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual.md)<br>Manually install CNTK Python lib,CNTK.exe for BrainScript, and dependencies
 |                                                     | [Docker installation](./CNTK-Docker-Containers.md)
-
-## Installation as Azure Virtual Machine or Linux Docker container
-
-You may use CNTK via Microsoft Azure Virtual Machine offering (Windows and Linux) or install it as a Docker container (Linux). See the corresponding sections:
-
-* [CNTK on Azure](./CNTK-on-Azure.md)
-* [CNTK Docker Containers](./CNTK-Docker-Containers.md)
-
-## Usage and Samples
-
-If you want to learn more about CNTK usage and how to execute the provided samples, you find more information on the following pages
-
-* [CNTK usage overview](./CNTK-usage-overview.md)
-* [Examples](./Examples.md)
