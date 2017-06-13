@@ -1,5 +1,5 @@
 ---
-title:   Getting Started with CNTK
+title:   Getting Started With the Microsoft Cognitive Toolkit
 author:    wolfma
 date:    12/06/2017
 ms.author:   cbasoglu
@@ -10,7 +10,7 @@ ms.topic:   getting started
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-# Getting Started With The Microsoft Cognitive Toolkit
+# Getting Started With the Microsoft Cognitive Toolkit
 
 In this section the different ways to [install CNTK from precompiled binaries](./Setup-CNTK-on-your-machine) are explained. If you want to build CNTK from source code, the required steps are described [here](./Setup-CNTK-from-source).
 

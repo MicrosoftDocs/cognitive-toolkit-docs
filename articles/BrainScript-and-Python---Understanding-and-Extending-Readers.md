@@ -202,11 +202,7 @@ When you need another stream of different format, you can simply add the corresp
 (it is not possible with the HTK feature and HTK MLF deserializers right now to expose more than one input stream each).
 
 > [!NOTE]
-> Currently, both old and new reader configurations are supported.
-> When the "deserializers" key is used in the reader configuration, the reader type is implicitly set to "CompositeDataReader",
-> so please make sure that CompositeDataReader module can be loaded
-> (on Windows, `Cntk.Composite.dll` should be located in the same directory as CNTK executable;
-> on Linux `Cntk.Composite.so` should be `lib` folder that sits side-by-side to the `bin` folder containing the CNTK executable. Please refer [here](./CNTK-Shared-Libraries-Naming-Format.md) for CNTK binary naming scheme.).
+> Currently, both old and new reader configurations are supported. When the "deserializers" key is used in the reader configuration, the reader type is implicitly set to "CompositeDataReader". To make sure the CompositeDataReader module can be loaded on Windows the `Cntk.Composite.dll` should be located in the same directory as the CNTK executable. On Linux `Cntk.Composite.so` should be in the `lib` folder that sits side-by-side to the `bin` folder containing the CNTK executable.
 
 Currently CNTK supports the below deserializers:
 
