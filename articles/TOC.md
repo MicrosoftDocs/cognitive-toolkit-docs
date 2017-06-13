@@ -4,12 +4,12 @@
 
 # [Getting Started](/cognitive-toolkit/getting-started)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
-### [Setup on Windows]
-#### [In Python](/cognitive-toolkit/Setup-Windows-Python)
+### Setup on Windows
+#### [Python only](/cognitive-toolkit/Setup-Windows-Python)
 #### [Scripted Install](/cognitive-toolkit/Setup-Windows-Binary-Script)
 #### [Manual Install](/cognitive-toolkit/Setup-Windows-Binary-Manual)
-### [Setup on Linux]
-#### [In Python](/cognitive-toolkit/Setup-Linux-Python)
+### Setup on Linux
+#### [Python only](/cognitive-toolkit/Setup-Linux-Python)
 #### [Scripted Install](/cognitive-toolkit/Setup-Linux-Binary-Script)
 #### [Manual Install](/cognitive-toolkit/Setup-Linux-Binary-Manual)
 ### [Test Installation From Python](/cognitive-toolkit/Setup-Test-Python)
@@ -150,20 +150,21 @@
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 
 # [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
-## [Dev-Setup on Windows]
-### [Install script](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
-### [Manually](/cognitive-toolkit/Setup-CNTK-on-Windows)
-## Dev-Setup on Linux
-### [Manually](/cognitive-toolkit/Setup-CNTK-on-Linux)
+## Development Setup
+### Windows
+#### [Scripted](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
+#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Windows)
+### Linux
+#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Linux)
 ## [Developing and testing](/cognitive-toolkit/Developing-and-Testing)
 ### [Coding guidelines](/cognitive-toolkit/Coding-Guidelines)
 ### [How to test](/cognitive-toolkit/How-to-Test)
+### [CNTK production test configurations](/cognitive-toolkit/Test-Configurations)
 ### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
 ### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
 ### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
 ### [Enabling 1bit SGD](/cognitive-toolkit/Enabling-1bit-SGD)
 ### [Update 1bit SGD Submodule Location](/cognitive-toolkit/Update-1bit-SGD-Submodule-Location)
-### [CNTK production test configurations](/cognitive-toolkit/Test-Configurations)
 
 # Resources
 ## [Archive](/cognitive-toolkit/archive)

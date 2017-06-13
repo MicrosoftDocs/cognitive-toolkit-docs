@@ -14,11 +14,11 @@ ms.devlang:
 
 If you want to take a look at the CNTK source code, compile CNTK yourself, make changes to the CNTK codebase, and contribute these changes back to the community, these are the pages for you:
 
+
 |Windows                  | Linux                   |
 |:------------------------|:------------------------|
 |[Script-driven development setup](./Setup-CNTK-with-script-on-Windows.md) |
 |[Manual development Setup](./Setup-CNTK-on-Windows.md) | [Manual Development Environment Setup](./Setup-CNTK-on-Linux.md)
 
-* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
-* [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK Production Test Configurations](./Test-Configurations.md)
+
+For more information about the development process and environment refer to the [Developing and Testing](./Developing-and-Testing) section.
