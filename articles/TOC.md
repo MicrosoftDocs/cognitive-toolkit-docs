@@ -31,8 +31,6 @@
 
 # [Examples](/cognitive-toolkit/Examples)
 
-# [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
-
 # Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## [BrainScript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
