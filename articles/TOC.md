@@ -4,22 +4,19 @@
 
 # [Getting Started](/cognitive-toolkit/getting-started)
 ## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
-### Setup from binaries
-#### Windows
-##### [On Windows for Python](/cognitive-toolkit/Setup-Windows-Python)
-##### [On Windows with script](/cognitive-toolkit/Setup-Windows-Binary-Script)
-##### [On Windows manually](/cognitive-toolkit/Setup-Windows-Binary-Manual)
-#### Linux
-##### [On Linux Python](/cognitive-toolkit/Setup-Linux-Python)
-##### [On Linux with script](/cognitive-toolkit/Setup-Linux-Binary-Script)
-##### [On Linux manually](/cognitive-toolkit/Setup-Linux-Binary-Manual)
-#### [Test Installation From Python](/cognitive-toolkit/Setup-Test-Python)
-### [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
-### [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
-### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
-### [Examples](/cognitive-toolkit/Examples)
-### [Using CNTK from Python](https://cntk.ai/pythondocs/gettingstarted.html)
-### [Using Keras](./Using-CNTK-with-Keras.md)
+### [Setup on Windows]
+#### [In Python](/cognitive-toolkit/Setup-Windows-Python)
+#### [Scripted Install](/cognitive-toolkit/Setup-Windows-Binary-Script)
+#### [Manual Install](/cognitive-toolkit/Setup-Windows-Binary-Manual)
+### [Setup on Linux]
+#### [In Python](/cognitive-toolkit/Setup-Linux-Python)
+#### [Scripted Install](/cognitive-toolkit/Setup-Linux-Binary-Script)
+#### [Manual Install](/cognitive-toolkit/Setup-Linux-Binary-Manual)
+### [Test Installation From Python](/cognitive-toolkit/Setup-Test-Python)
+## [Using CNTK from Python](https://cntk.ai/pythondocs/gettingstarted.html)
+## [Using Keras](./Using-CNTK-with-Keras.md)
+## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
+## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
 
 # [Tutorials](/cognitive-toolkit/tutorials)
 ## [Python](https://cntk.ai/pythondocs/tutorials.html)
@@ -152,8 +149,8 @@
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 
-# CNTK Source Code & Development(/cognitive-toolkit/Setup-CNTK-from-source)
-## Dev-Setup on Windows
+# [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
+## [Dev-Setup on Windows]
 ### [Install script](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
 ### [Manually](/cognitive-toolkit/Setup-CNTK-on-Windows)
 ## Dev-Setup on Linux
@@ -163,6 +160,7 @@
 ### [How to test](/cognitive-toolkit/How-to-Test)
 ### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
 ### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
+### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
 ### [Enabling 1bit SGD](/cognitive-toolkit/Enabling-1bit-SGD)
 ### [Update 1bit SGD Submodule Location](/cognitive-toolkit/Update-1bit-SGD-Submodule-Location)
 ### [CNTK production test configurations](/cognitive-toolkit/Test-Configurations)
