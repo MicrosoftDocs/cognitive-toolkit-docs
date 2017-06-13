@@ -94,6 +94,6 @@ Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 Then perform the build as usual.
 
 **Next steps**
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
 * [Config file overview](./BrainScript-Config-file-overview.md)

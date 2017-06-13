@@ -379,7 +379,7 @@ If you plan modifications to the code you should read the information on [Develo
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
 
 

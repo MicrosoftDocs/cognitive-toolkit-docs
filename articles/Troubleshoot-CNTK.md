@@ -71,14 +71,15 @@ Then you have to set your Azure web app to use 64-bit VM. In order to allow the 
  
 Please see the "[Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-Azure-WebApi.md)" page for detailed steps.  
 
-## I can build my application using Cntk.Eval-<VERSION>.lib/dll (old name EvalDll.lib/dll), but got the exception like below when running
+## I can build my application using Cntk.Eval-<VERSION>.lib/dll, but got an exception similar to the ones below while running
 
-	An unhandled exception of type 'Microsoft.MSR.CNTK.Extensibility.Managed.CNTKRuntimeException' occurred in Cntk.Wrapper-<VERSION>.dll
-	Additional information: configparameters: required parameter missing: unknown:modelPath
-We use [new shared library file names](./CNTK-Shared-Libraries-Naming-Format.md) in the text below.
+> An unhandled exception of type 'Microsoft.MSR.CNTK.Extensibility.Managed.CNTKRuntimeException' occurred in Cntk.Wrapper-<VERSION>.dll
 
-Possible reasons are:  
-* Different build configuration (release or debug) between your application and the `Cntk.Eval-<VERSION>.lib/dll`. If you build your application in release, please link against the release version of `Cntk.Eval-<VERSION>.dll`. Same for the debug configuration. This error  happens usually for C++ application.  
+> Additional information: configparameters: required parameter missing: unknown:modelPath
+
+Possible reasons are:
+
+* Different build configuration (release or debug) between your application and the `Cntk.Eval-<VERSION>.lib/dll`. If you build your application in release, please link against the release version of `Cntk.Eval-<VERSION>.dll`. Same for the debug configuration. This error  happens usually for C++ application.
 * Different GCC compiler versions on Linux: The `Cntk.Eval` library on Linux is built with GCC 4.8. If you use a different GCC version for your application, you might see the above error
 * The modelPath is incorrect.  Currently, the modelPath has to be specified as a full path. In the CSEvalClient example, the relative path is combined with the current working directory to build the full path. And the CreateNetwork() must be passed a string containing the "modelPath=" attribute specifying the model's file path. Currently, mapped drive is not supported for modelpath.
 

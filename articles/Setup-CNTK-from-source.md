@@ -1,6 +1,6 @@
 ---
-title:   Setup CNTK from source
-author:    wolfma
+title:   CNTK Source Code and Development
+author:    wolfma61
 date:    06/12/2017
 ms.author:   wolfma
 ms.date:   06/12/2017
@@ -10,15 +10,6 @@ ms.service:  Cognitive-services
 ms.devlang: 
 ---
 
-# Setup CNTK from source
+# CNTK Source Code and Development
 
-If you want to take a look at the CNTK source code, compile CNTK yourself, make changes to the CNTK codebase, and contribute these changes back to the community, these are the pages for you:
-
-
-|Windows                  | Linux                   |
-|:------------------------|:------------------------|
-|[Script-driven development setup](./Setup-CNTK-with-script-on-Windows.md) |
-|[Manual development Setup](./Setup-CNTK-on-Windows.md) | [Manual Development Environment Setup](./Setup-CNTK-on-Linux.md)
-
-
-For more information about the development process and environment refer to the [Developing and Testing](./Developing-and-Testing) section.
+The complete source code of the Microsoft Cognitive Toolkit is published on [GitHub](https://www.github.com/Microsoft/CNTK). If you plan on building CNTK yourself you will need to [setup a local CNTK development environment](./Setup-development-environment). Information about **developing and testing** is [available here](./Developing-and-Testing). Finally, if you want to **contribute** your development efforts back into the CNTK community, you will find this [page](./Contributing-to-CNTK) useful.

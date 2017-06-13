@@ -40,13 +40,13 @@ source activate cntkkeraspy35
 
 ```pip install git+https://github.com/fchollet/keras.git```
 
-**Step 4.** Install CNTK2 into the acitvated environment
+**Step 4.** Install CNTK version 2.0 (GA or later) into the activated environment
 
 Choose the appropriate wheel file from the following pages to match your Python and machine environment.
 
-- For Windows: Choose a wheel url from [here](./Setup-Windows-Python.md)
+- For Windows: Choose a wheel URL from [here](./Setup-Windows-Python.md)
 
-- [For Linux]: Install the [prerequisites](./Setup-Linux-Python.md#prerequisites) and then choose a wheel url from [here](./Setup-Linux-Python.md).
+- [For Linux]: Install the [prerequisites](./Setup-Linux-Python.md#prerequisites) and then choose a wheel URL from [here](./Setup-Linux-Python.md).
 
 Install the wheel file
 
@@ -92,6 +92,6 @@ For example, clone the "mnist_mlp.py" from the link above, and run:
 
 ## Known issues
 
-• Performance optimization on CPU device in combination with Keras is an ongoing work item.
+* Performance optimization on CPU device in combination with Keras is an ongoing work item.
 
-• Currently not supported: Gradient as symbolic ops, stateful recurrent layer, masking on recurrent layer, padding with non-specified shape (to use the CNTK backend in Keras with padding, please specify a well-defined input shape), convolution with dilation, randomness op across batch axis, few backend APIs such as reverse, top_k, ctc, map, foldl, foldr, etc.
+* Currently not supported: Gradient as symbolic ops, stateful recurrent layer, masking on recurrent layer, padding with non-specified shape (to use the CNTK backend in Keras with padding, please specify a well-defined input shape), convolution with dilation, randomness op across batch axis, few backend APIs such as `reverse`, `top_k`, `ctc`, `map`, `foldl`, `foldr`, etc.
