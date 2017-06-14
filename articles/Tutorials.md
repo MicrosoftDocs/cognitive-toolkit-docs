@@ -1,8 +1,7 @@
 ---
-Title:   Tutorials
-Author:    chrisbasoglu
+title:   Tutorials
+author:    chrisbasoglu
 ms.author:   cbasoglu
-Date:    02/14/2017
 ms.date:   02/14/2017
 ms.topic:   conceptual
 ms.service:  Cognitive-services

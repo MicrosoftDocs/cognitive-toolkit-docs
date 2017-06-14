@@ -2,7 +2,7 @@
 title:   Binary Operations
 author:    sayanpa
 ms.author:   sayanpa
-ms.date:   05/30/2017
+ms.date:   06/10/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

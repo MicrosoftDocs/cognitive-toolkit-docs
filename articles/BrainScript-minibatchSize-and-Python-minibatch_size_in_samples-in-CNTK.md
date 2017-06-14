@@ -2,7 +2,7 @@
 title:   BrainScript minibatchSize and Python minibatch size in samples in CNTK
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/10/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
