@@ -2,7 +2,7 @@
 title:   BrainScript CNTK Text Format Reader
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/20/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

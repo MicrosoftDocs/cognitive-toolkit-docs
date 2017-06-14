@@ -2,7 +2,7 @@
 title:   Windows Environment Variables
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   02/06/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services

@@ -2,7 +2,7 @@
 title:   The Microsoft Cognitive Toolkit
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   04/06/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   landing-page
 

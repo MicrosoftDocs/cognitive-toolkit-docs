@@ -1,7 +1,6 @@
 ---
-Title:   Image Auto Encoder using deconvolution and unpooling
-Author:    chrisbasoglu
-Date:    01/20/2017
+title:   Image Auto Encoder using deconvolution and unpooling
+author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/20/2017
 ms.topic:   conceptual
