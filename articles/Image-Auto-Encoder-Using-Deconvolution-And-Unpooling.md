@@ -1,7 +1,6 @@
 ---
-Title:   Image Auto Encoder using deconvolution and unpooling
-Author:    chrisbasoglu
-Date:    01/20/2017
+title:   Image Auto Encoder using deconvolution and unpooling
+author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/20/2017
 ms.topic:   conceptual
@@ -108,4 +107,4 @@ You can stack more layers of Conv/Deconv and Pool/Unpool for a more complex auto
             deconv_A = DeconvLayer        {inputDim, (5:5), cMap1, lowerPad=(2:2:0), upperPad=(2:2:0)}(unpool_A)
         }.deconv_A
 
-To visualize the results you need to replace `z.pool1` by `z.pool_B` in `07_Deconvolution_Visualizer.py` before running it to address the correct node name for the encoder output`. To investigate all node names in the model simply uncomment `print_all_node_names(model_file)` in the Python script.
+To visualize the results you need to replace `z.pool1` by `z.pool_B` in `07_Deconvolution_Visualizer.py` before running it to address the correct node name for the encoder output. To investigate all node names in the model simply uncomment `print_all_node_names(model_file)` in the Python script.

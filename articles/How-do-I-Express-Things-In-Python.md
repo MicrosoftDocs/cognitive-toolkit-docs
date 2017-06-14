@@ -1,9 +1,8 @@
 ---
 title:   How do I express things in Python
 author:    chrisbasoglu
-date:    04/05/2017
 ms.author:   cbasoglu
-ms.date:   04/05/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -127,7 +126,7 @@ timesParam = CNTK::Parameter({ outputDim, input.Shape()[0] });
 t = Times(timesParam, input);
 ```
 
-Note how both the tensor shapes and the order of the operands to the Times operation are reversed compared to the python code. In python, to conform to the generally accepted norm established by numpy, a rank-1 tensor denoted a row vector and data layout is row major (i.e. axis 0 is the slowest changing dimension, followed by axis 1 and so on). We internally do the required shape transformations at the SWIG layer to map the python shapes and ops to the C++ implementation correctly.
+Note how both the tensor shapes and the order of the operands to the Times operation are reversed compared to the Python code. In Python, to conform to the generally accepted norm established by numpy, a rank-1 tensor denoted a row vector and data layout is row major (i.e. axis 0 is the slowest changing dimension, followed by axis 1 and so on). We internally do the required shape transformations at the SWIG layer to map the Python shapes and ops to the C++ implementation correctly.
 
 ## Port LSTM NDL primitives to Python
 
@@ -142,20 +141,20 @@ How do I find the support for following NDL LSTM primitives to Python:
 
 **RowStack**, **RowSlice** 
 
-* Are there any substitutes for these primitives? If not how to implement them in python? Can we operate on variables as if they are numpy arrays?
+* Are there any substitutes for these primitives? If not how to implement them in Python? Can we operate on variables as if they are numpy arrays?
 
 * Answer: Use [splice](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice)
   
 
 **DiagTime** vs **ElementTimes** 
 
-* Is there any difference between them for vector element wise multiplication? Also is DiagTimes in supported in python?
+* Is there any difference between them for vector element wise multiplication? Also is DiagTimes in supported in Python?
 
 * Use [element wise multiplication](https://cntk.ai/pythondocs/cntk.ops.html?highlight=element#cntk.ops.element_times)
 
 **Parameter initialization** 
 
-* How to Initialize parameters from file in python and set `computeGradient` as false.        
+* How to Initialize parameters from file in Python and set `computeGradient` as false.        
 
 * Use [constants](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice). You can specify the initial value via a NumPy array. There are many ways to load a text (or other) file into a NumPy array.
 
@@ -426,7 +425,7 @@ if (isFinalValidationPass && (!input3AsLearnableParameterNode || input3AsLearnab
     LogicError("%ls %ls operation expects a constant scalar for Input(3) which corresponds to number of negative samples.", NodeName().c_str(), OperationName().c_str());
 
 ```
-For other functions where additional parameters are passed from the python API one
+For other functions where additional parameters are passed from the Python API one
 need to modify the constructor of the implementation source. For example to expose
 `EditDistanceError` where penalties are passed into the constructor some of the
 code changes are as shown below.

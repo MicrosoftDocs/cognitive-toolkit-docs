@@ -1,7 +1,6 @@
 ---
 title:   Project a 1D input of dim inputDim to a 1D output of dim outputDim 
 author:    chrisbasoglu
-date:    12/04/2016
 ms.author:   cbasoglu
 ms.date:   12/04/2016
 ms.custom:   cognitive-toolkit
@@ -29,4 +28,4 @@ timesParam = CNTK::Parameter({ outputDim, input.Shape()[0] });
 t = Times(timesParam, input);
 ```
 
-Note how both the tensor shapes and the order of the operands to the Times operation are reversed compared to the python code. In python, to conform to the generally accepted norm established by numpy, a rank-1 tensor denoted a row vector and data layout is row major (i.e. axis 0 is the slowest changing dimension, followed by axis 1 and so on). We internally do the required shape transformations at the SWIG layer to map the python shapes and ops to the C++ implementation correctly.
+Note how both the tensor shapes and the order of the operands to the Times operation are reversed compared to the Python code. In Python, to conform to the generally accepted norm established by numpy, a rank-1 tensor denoted a row vector and data layout is row major (i.e. axis 0 is the slowest changing dimension, followed by axis 1 and so on). We internally do the required shape transformations at the SWIG layer to map the Python shapes and ops to the C++ implementation correctly.

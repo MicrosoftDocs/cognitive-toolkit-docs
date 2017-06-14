@@ -1,7 +1,6 @@
 ---
 title:   Variables
 author:    chrisbasoglu
-date:    05/18/2016
 ms.author:   cbasoglu
 ms.date:   05/18/2016
 ms.custom:   cognitive-toolkit

@@ -1,7 +1,6 @@
 ---
 title:   EvalDLL evaluation on Linux
 author:    chrisbasoglu
-date:    04/14/2017
 ms.author:   cbasoglu
 ms.date:   04/14/2017
 ms.custom:   cognitive-toolkit
@@ -29,4 +28,4 @@ Any program using the evaluation library needs to link the libraries `Cntk.Core`
 ```
 , and set the appropriate search path for these libraries. Please use the same build flavor (Debug/Release) and [the same compiler version](./Setup-CNTK-on-Linux.md#c-compiler) as the one used to create the libraries. The [Examples/Evaluation/CPPEvalClient](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CPPEvalClient) in the CNTK source code illustrates the usage pattern in Linux. The [Makefile](https://github.com/Microsoft/CNTK/blob/master/Makefile) contains the target EVAL_SAMPLE_CLIENT showing how to build the example.
 
-For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page in this wiki.
+For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page.

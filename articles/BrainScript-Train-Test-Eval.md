@@ -1,7 +1,6 @@
 ---
 title:   BrainScript Train, Test, Eval
 author:    chrisbasoglu
-date:    03/17/2017
 ms.author:   cbasoglu
 ms.date:   03/17/2017
 ms.custom:   cognitive-toolkit
@@ -12,7 +11,7 @@ ms.devlang:   brainscript
 
 # BrainScript Train, Test, Eval
 
-Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding wiki page](./Top-level-commands.md). 
+Here we describe the main top-level commands `train` and `test`/`eval` and their corresponding parameters. For additional top-level commands see the [corresponding page](./Top-level-commands.md). 
 
 ## Train Command
 This command asks CNTK to train a model. An example for a `train` command section is provided on the [Config file overview](./Brainscript-Config-file-overview.md) page. The related parameters are:

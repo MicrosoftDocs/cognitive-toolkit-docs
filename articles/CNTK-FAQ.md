@@ -1,7 +1,6 @@
 ---
 title:   CNTK FAQ
 author:    chrisbasoglu
-date:    04/05/2017
 ms.author:   cbasoglu
 ms.date:   04/05/2017
 ms.custom:   cognitive-toolkit
@@ -51,7 +50,7 @@ Using CNTK is easy and straightforward.  Here are some ways to get started.
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 * [Tutorials](./Tutorials.md)
 * [Examples](./Examples.md)
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
 
 ## Why does CNTK randomize the mini-batches after each epoch?

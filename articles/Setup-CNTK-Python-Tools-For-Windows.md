@@ -1,9 +1,8 @@
 ---
 title:   Setup CNTK Python Tools For Windows
 author:    chrisbasoglu
-date:    03/31/2017
 ms.author:   cbasoglu
-ms.date:   03/31/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -27,9 +26,9 @@ If you want to use Python Tools for Visual Studio (PTVS):
 * Select Configure from the dropdown menu and set the prefix path to the environment dir inside Anaconda.  If you did a binary install, this path is likely to be:
 `C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35\`. 
 * Afterwards, click Auto Detect and the rest of the entries will be filled out automatically. 
-* In Visual Studio, create a new Empty python project
-* Add in your python file(s).
-* If you have a source install, to get IntelliSense, add in the full python lib dir as a part of your project at: MYCNTKPATH%\CNTK\bindings\python
+* In Visual Studio, create a new Empty Python project
+* Add in your Python file(s).
+* If you have a source install, to get IntelliSense, add in the full Python lib dir as a part of your project at: MYCNTKPATH%\CNTK\bindings\python
 
 **Links**
 * [Setup CNTK on Windows](./Setup-CNTK-on-Windows.md)

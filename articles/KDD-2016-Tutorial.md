@@ -1,7 +1,6 @@
 ---
 title:   KDD 2016 Tutorial
 author:    chrisbasoglu
-date:    11/07/2016
 ms.author:   cbasoglu
 ms.date:   11/07/2016
 ms.custom:   cognitive-toolkit
@@ -48,7 +47,7 @@ In any case make sure that the CNTK executables are included in your environment
 
 ### Do the hands-on tutorials online
 
-The two hands-on tutorials have been posted as Wiki pages that can be followed along:
+The two hands-on tutorials have been posted as pages here that can be followed along:
 
 * [Image Recognition on CIFAR-10](./Hands-On-Labs-Image-Recognition.md): Image recognition on CIFAR-10 with convolutional and Residual Nets
 * [Language Understanding with ATIS](./Hands-On-Labs-Language-Understanding.md): Slot tagging and intent classification with recurrent networks

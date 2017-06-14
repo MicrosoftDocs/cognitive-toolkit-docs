@@ -1,9 +1,8 @@
 ---
 title:   CNTK Examples
 author:    chrisbasoglu
-date:    02/14/2016
 ms.author:   cbasoglu
-ms.date:   02/14/2016
+ms.date:   06/01/2016
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

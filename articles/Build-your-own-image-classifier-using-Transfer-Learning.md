@@ -1,7 +1,6 @@
 ---
 title:   Build your own image classifier using Transfer Learning
 author:    chrisbasoglu
-date:    02/14/2017
 ms.author:   cbasoglu
 ms.date:   02/14/2017
 ms.custom:   cognitive-toolkit
@@ -42,7 +41,7 @@ The following are the main resources for the transfer learning tutorial:
 
 ## Setup
 
-To run the code in this example, you need a CNTK python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). 
+To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). 
 
 To download the required data and the pretrained model run the following command form the [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/TransferLearning) folder:
 

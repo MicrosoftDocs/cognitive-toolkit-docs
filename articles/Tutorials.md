@@ -1,8 +1,7 @@
 ---
-Title:   Tutorials
-Author:    chrisbasoglu
+title:   Tutorials
+author:    chrisbasoglu
 ms.author:   cbasoglu
-Date:    02/14/2017
 ms.date:   02/14/2017
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -20,7 +19,7 @@ Assuming you have completed [Getting Started](https://www.cntk.ai/pythondocs/get
 CNTK Python Jupyter notebook [tutorials](https://docs.microsoft.com/en-us/python/cognitive-toolkit/tutorials?view=cntk-py-2.0) to gain familiarity with the toolkit. You may want to start with the CNTK_1## series tutorials before trying out higher series that cover a range of different application including image classification, language understanding, reinforcement learning and others. 
 
 Additional Python recipes: 
-* ['Build your own image classifier using Transfer Learning'](https://github.com/Microsoft/CNTK/wiki/Build-your-own-image-classifier-using-Transfer-Learning) provides two examples for custom image classifiers using transfer learning.
+* ['Build your own image classifier using Transfer Learning'](./Build-your-own-image-classifier-using-Transfer-Learning.md) provides two examples for custom image classifiers using transfer learning.
 
 You can also try out the tutorials live with pre-installed CNTK in [Azure Notebooks](https://notebooks.azure.com/CNTK/libraries/tutorials) for free.
 

@@ -1,7 +1,6 @@
 ---
 title:   CNTK 2.0 Beta Highlights
 author:    chrisbasoglu
-date:    10/25/2016
 ms.author:   cbasoglu
 ms.date:   10/25/2016
 ms.custom:   cognitive-toolkit
@@ -59,7 +58,7 @@ More informationSee more on [CNTK Evaluation Library here](./CNTK-Library-Evalua
 We have introduced a lot of new features during the Beta period. The list below highlights some of them:
 
 * Support of [object recognition using Fast R-CNN](./Object-Detection-using-Fast-R-CNN.md) algorithm.
-* Integration with [NVIDIA NCCL](https://github.com/NVIDIA/nccl), a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. See how to enable NCCL in the [CNTK Wiki](./Setup-CNTK-on-Linux.md#cudnn).
+* Integration with [NVIDIA NCCL](https://github.com/NVIDIA/nccl), a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. See how to enable NCCL [here](./Setup-CNTK-on-Linux.md#cudnn).
 * Support of Asynchronous Stochastic Gradient Descent (ASGD)/Hogwild! training parallelization support using Microsoft’s Parameter Server ([Project Multiverso](https://github.com/Microsoft/multiverso)).
 * Support of Distributed scenarios in Python API. See more in the sections on Distributed scenarios in [ConvNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ConvNet/Python/README.md) and [ResNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ResNet/Python/README.md) examples.
 * Support for training on one-hot and sparse arrays via NumPy.
@@ -91,7 +90,7 @@ Read more about [different ways to install CNTK here](./Setup-CNTK-on-your-machi
 
 CNTK is now available as [Docker Images at Docker Hub](https://hub.docker.com/r/microsoft/cntk/).
 
-You may also build your own Docker Images using pre-configured Docker files from CNTK Code base. See this [Wiki page on using CNTK as Docker Images and Containers](./CNTK-Docker-Containers.md).
+You may also build your own Docker Images using pre-configured Docker files from CNTK Code base. See this [page on using CNTK as Docker Images and Containers](./CNTK-Docker-Containers.md).
  
 ### CNTK as NuGet packages
 

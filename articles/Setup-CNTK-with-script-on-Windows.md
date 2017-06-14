@@ -1,7 +1,6 @@
 ---
 title:   Setup CNTK with script on Windows
 author:    chrisbasoglu
-date:    02/16/2017
 ms.author:   cbasoglu
 ms.date:   02/16/2017
 ms.custom:   cognitive-toolkit
@@ -124,5 +123,5 @@ At this point all the required components to build CNTK on you system are instal
 * [Build and test CNTK](./Setup-CNTK-on-Windows.md#building-cntk)
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)

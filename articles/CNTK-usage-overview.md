@@ -1,7 +1,6 @@
 ---
 title:   CNTK usage overview
 author:    chrisbasoglu
-date:    04/02/2017
 ms.author:   cbasoglu
 ms.date:   04/02/2017
 ms.custom:   cognitive-toolkit
@@ -66,7 +65,7 @@ The above code snippet defines a command called `MNISTtrain` with `action = "tra
 
 The three main configuration blocks for training define the network itself and the parameters for the training algorithm and the data reader.
 
-* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [Simple Network Builder](./Simple-Network-Builder.md) for standard models or the [BrainScript Network Builder](./BrainScript-Network-Builder.md) for custom ones. Please refer to the corresponding Wiki pages for details.
+* Network builder - here you define the topology and the details of the network such as the size and number of layers and the type of nodes. You can use the [Simple Network Builder](./Simple-Network-Builder.md) for standard models or the [BrainScript Network Builder](./BrainScript-Network-Builder.md) for custom ones. Please refer to the corresponding pages for details.
 * SGD - this block lets you parameterize the training algorithm (stochastic gradient descent). Configurable options include momentum, adaptive learning rate, adaptive minibatch size, parallel training. See [SGD block](./BrainScript-SGD-block.md) for more details.
 * reader - the reader block defines which reader to use and where the corresponding input files are. CNTK provides several data readers for different formats and tasks (see [Reader block](./BrainScript-Reader-block.md)).
 

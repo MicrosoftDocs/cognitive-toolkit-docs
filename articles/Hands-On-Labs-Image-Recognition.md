@@ -1,7 +1,6 @@
 ---
 title:   Hands-on Labs Image Recognition
 author:    chrisbasoglu
-date:    01/14/2017
 ms.author:   cbasoglu
 ms.date:   01/14/2017
 ms.custom:   cognitive-toolkit

@@ -1,7 +1,6 @@
 ---
 title:   CNTK_1_6_Release_Notes
 author:    chrisbasoglu
-date:    07/29/2016
 ms.author:   cbasoglu
 ms.date:   07/29/2016
 ms.custom:   cognitive-toolkit
@@ -36,7 +35,7 @@ For Windows you can get CNTK Eval is a NuGet Package or directly from the Binary
 
 Linux CNTK Evaluator is included in Linux binary distribution.
 
-See more on the CNTK Model Evaluation in the [correspondent Wiki Section](../CNTK-Evaluation-Overview.md). 
+See more on the CNTK Model Evaluation in the [correspondent section](../CNTK-Evaluation-Overview.md). 
 
 ## Deconvolution and Unpooling
 

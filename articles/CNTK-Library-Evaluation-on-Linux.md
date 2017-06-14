@@ -1,9 +1,8 @@
 ---
 title:   CNTK Library Evaluation on Linux
 author:    chrisbasoglu
-date:    04/09/2017
 ms.author:   cbasoglu
-ms.date:   04/09/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

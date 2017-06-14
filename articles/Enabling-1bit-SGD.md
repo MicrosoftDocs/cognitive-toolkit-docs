@@ -1,7 +1,6 @@
 ---
 title:   Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit
 author:    chrisbasoglu
-date:    03/21/2017
 ms.author:   cbasoglu
 ms.date:   03/21/2017
 ms.custom:   cognitive-toolkit
@@ -94,6 +93,6 @@ Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 Then perform the build as usual.
 
 **Next steps**
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
 * [Config file overview](./BrainScript-Config-file-overview.md)

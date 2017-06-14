@@ -1,7 +1,6 @@
 ---
 title:   CNTK_1_7_1_Release_Notes
 author:    chrisbasoglu
-date:    09/30/2016
 ms.author:   cbasoglu
 ms.date:   09/30/2016
 ms.custom:   cognitive-toolkit
@@ -39,13 +38,13 @@ HammingLoss (y, p) = ReduceSum (NotEqual (y, (Greater (p, Constant(0.5)))))
 
 The following changes and improvements are introduced in V.1.7.1:
 
-* Model evaluation support for Azure Applications. The [Evaluate a model in an Azure WebApi section in the Wiki](../Evaluate-a-model-in-an-Azure-WebApi.md) provides detailed steps. 
+* Model evaluation support for Azure Applications. The [Evaluate a model in an Azure WebApi page](../Evaluate-a-model-in-an-Azure-WebApi.md) provides detailed steps. 
 * The Extended Eval interface adds support for evaluation of RNN model.
 
 ## Deterministic Algorithms
 
 * Adding ```forceDeterministicAlgorithms=true``` to the configuration will force use of deterministic algorithms if possible. This flag will force use of only a single thread for MKL and OMP operations.
-* **IMPORTANT!** The determinism changes require a new version of the CNTK Custom MKL (v2). For binary downloads this is included in the package. If you build CNTK from sources please follow the installation instructions described in the Wiki for [Windows](../Setup-CNTK-on-Windows.md#mkl) or [Linux](../Setup-CNTK-on-Linux.md#mkl).
+* **IMPORTANT!** The determinism changes require a new version of the CNTK Custom MKL (v2). For binary downloads this is included in the package. If you build CNTK from sources please follow the installation instructions for [Windows](../Setup-CNTK-on-Windows.md#mkl) or [Linux](../Setup-CNTK-on-Linux.md#mkl).
 
 ## Performance optimization
 

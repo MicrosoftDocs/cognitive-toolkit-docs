@@ -1,9 +1,8 @@
 ---
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
-date:    03/06/2017
 ms.author:   cbasoglu
-ms.date:   03/06/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -516,7 +515,7 @@ The configure script provides `--with-jdk` option to specify the JDK directory m
 
 ## Getting CNTK Source code
 
-Before proceeding further, please note, that if you plan on making modifications to the CNTK code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
+Before proceeding further, please note, that if you plan on making modifications to the CNTK code you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 Use [Git](#git) to clone the CNTK Repository and access the source code:
 ```
@@ -601,10 +600,10 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ## Contributing to CNTK code
 
-If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
+If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 **Next steps**
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)

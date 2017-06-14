@@ -1,7 +1,6 @@
 ---
 title:   Pooling 
 author:    chrisbasoglu
-date:    09/15/2016
 ms.author:   cbasoglu
 ms.date:   09/15/2016
 ms.custom:   cognitive-toolkit

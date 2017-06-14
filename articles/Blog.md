@@ -1,7 +1,6 @@
 ---
 title:   CNTK blog
 author:    chrisbasoglu
-date:    04/18/2017
 ms.author:   cbasoglu
 ms.date:   04/18/2017
 ms.custom:   cognitive-toolkit

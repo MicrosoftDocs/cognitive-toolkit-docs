@@ -1,9 +1,8 @@
 ---
 title:   BrainScript SGD Block
 author:    chrisbasoglu
-date:    03/17/2017
 ms.author:   cbasoglu
-ms.date:   03/17/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

@@ -1,7 +1,6 @@
 ---
 title:   Developing and testing
 author:    chrisbasoglu
-date:    01/19/2016
 ms.author:   cbasoglu
 ms.date:   01/19/2016
 ms.custom:   cognitive-toolkit

@@ -1,7 +1,6 @@
 ---
 title:   CNTK 1bit-SGD license
 author:    chrisbasoglu
-date:    01/25/2017
 ms.author:   cbasoglu
 ms.date:   01/25/2017
 ms.custom:   cognitive-toolkit
@@ -19,5 +18,3 @@ This license is applicable to any organization or user and explains the rights o
 
 **[CNTK 1bit-SGD Non-Commercial Usage License](https://github.com/CNTK-components/CNTK1bitSGD/blob/master/LICENSE-NON-COMMERCIAL.md)**  
 This license is valid for Non-Commercial usage of CNTK only. It provides more flexible usage rights, and specifies the Terms for contributing to CNTK 1bit-SGD part.
-
-

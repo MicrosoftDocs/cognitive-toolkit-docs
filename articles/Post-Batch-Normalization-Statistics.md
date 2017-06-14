@@ -1,7 +1,6 @@
 ---
 title:   Post Batch Normalization Statistics
 author:    chrisbasoglu
-date:    09/09/2016
 ms.author:   cbasoglu
 ms.date:   09/09/2016
 ms.custom:   cognitive-toolkit

@@ -1,9 +1,8 @@
 ---
 title:   Setup Linux Python
 author:    chrisbasoglu
-date:    04/03/2017
 ms.author:   cbasoglu
-ms.date:   04/03/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -51,8 +50,7 @@ Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH
 
 ### Anaconda3
 
-We have been testing CNTK with Anaconda3 4.1.1 and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6.
-If you do not have an Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh).
+We have been testing CNTK with Anaconda3 4.1.1 and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have an Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh).
 
 Below we assume that the [prerequisites above](#prerequisites) are satisfied.
 If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.

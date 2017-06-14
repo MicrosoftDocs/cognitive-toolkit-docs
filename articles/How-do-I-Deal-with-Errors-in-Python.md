@@ -1,7 +1,6 @@
 ---
 title:   How do I deal with errors in Python
 author:    chrisbasoglu
-date:    04/05/2017
 ms.author:   cbasoglu
 ms.date:   04/05/2017
 ms.custom:   cognitive-toolkit
@@ -21,7 +20,7 @@ You will need to install ipdb via
 ```
 pip install ipdb
 ```
-Make sure the above installation happens for the correct python environment (the one used to run the notebook). 
+Make sure the above installation happens for the correct Python environment (the one used to run the notebook). 
 Afterwards, in your notebook you should add this line to import the debugger.
 ```python
 from IPython.core.debugger import Tracer

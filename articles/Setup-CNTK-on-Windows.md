@@ -1,9 +1,8 @@
 ---
 title:   Setup CNTK on Windows
 author:    chrisbasoglu
-date:    04/03/2017
 ms.author:   cbasoglu
-ms.date:   04/03/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -64,7 +63,7 @@ cd cntk
 git submodule update --init Source/Multiverso
 ```
 
-This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
+This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in a CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
 ```
@@ -235,7 +234,7 @@ CNTK supports Python 2.7, Python 3.4, Python 3.5 and Python 3.6. We recommend yo
 
 As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7, Python 3.4, or Python 3.6 environment, please adjust the name of the YML to match the Python version you intend to use.
 
-The following assumes you cloned the CNTK source code from Github into the directory `c:\repos\cntk`.
+The following assumes you cloned the CNTK source code from GitHub into the directory `c:\repos\cntk`.
 
 * To create a new conda environment (e.g. `cntk-py35`) and activate it, run the following commands from the Windows command shell:
 ```
@@ -373,13 +372,13 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 ## Contributing to CNTK code
 
-If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md) in this Wiki.
+If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 **Links**
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
-* [CNTK usage overview](./CNTK-usage-overview.md)
+* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
 
 

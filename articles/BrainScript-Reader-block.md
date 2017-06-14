@@ -1,7 +1,6 @@
 ---
 title:   BrainScript Reader Block
 author:    chrisbasoglu
-date:    03/15/2017
 ms.author:   cbasoglu
 ms.date:   03/15/2017
 ms.custom:   cognitive-toolkit
@@ -29,7 +28,7 @@ The reader block is used for all types of readers and the `readerType`  paramete
         ]
     ]
 
-You can explore different reader settings in the configurations of the [Examples](./Examples.md). For details regarding specific readers see the corresponding wiki pages:
+You can explore different reader settings in the configurations of the [Examples](./Examples.md). For details regarding specific readers see these corresponding pages:
 
 * [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md)
 * [UCI Fast Reader (deprecated)](./BrainScript-UCI-Fast-Reader.md)

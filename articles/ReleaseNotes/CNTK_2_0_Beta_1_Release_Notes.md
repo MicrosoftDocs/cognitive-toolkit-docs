@@ -1,7 +1,6 @@
 ---
 title:   CNTK_2_0_Beta_1_Release_Notes
 author:    chrisbasoglu
-date:    11/16/2016
 ms.author:   cbasoglu
 ms.date:   11/16/2016
 ms.custom:   cognitive-toolkit
@@ -25,7 +24,7 @@ The following interfaces are supported:
 * Python
 * C++
 
-Read more about CNTK Library API in this [Wiki Article](../CNTK-Library-API.md).  
+Read more about CNTK Library API [here](../CNTK-Library-API.md).  
 Detailed description of the Python API can be found in [CNTK Python API Documentation](https://cntk.ai/pythondocs/).
 
 ## Python Examples and Tutorials (Jupyter Notebooks)
@@ -43,7 +42,7 @@ CNTK now supports Google Protocol Buffers serialization for Model and Checkpoint
 
 With this release we introduce the possibility of automated environment configuration and installation of all CNTK pre-requisites from the script driven binary install option. 
 
-See more on the new installation options at this [Wiki page](../Setup-CNTK-on-your-machine.md).
+See more on the new installation options [here](../Setup-CNTK-on-your-machine.md).
 
 ## Fast R-CNN algorithm
 

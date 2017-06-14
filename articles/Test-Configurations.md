@@ -1,9 +1,8 @@
 ---
 title:   CNTK production test configurations
 author:    chrisbasoglu
-date:    01/13/2017
 ms.author:   cbasoglu
-ms.date:   01/13/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services

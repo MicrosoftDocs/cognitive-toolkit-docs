@@ -1,7 +1,6 @@
 ---
 title:   Plot command
 author:    chrisbasoglu
-date:    01/20/2016
 ms.author:   cbasoglu
 ms.date:   01/20/2016
 ms.custom:   cognitive-toolkit

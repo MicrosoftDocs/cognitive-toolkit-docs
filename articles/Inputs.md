@@ -1,7 +1,6 @@
 ---
 title:   Inputs
 author:    chrisbasoglu
-date:    01/14/2017
 ms.author:   cbasoglu
 ms.date:   01/14/2017
 ms.custom:   cognitive-toolkit

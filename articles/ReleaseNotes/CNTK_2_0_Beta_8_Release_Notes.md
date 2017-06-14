@@ -1,7 +1,6 @@
 ---
 title:   CNTK_2_0_Beta_8_Release_Notes
 author:    chrisbasoglu
-date:    04/02/2017
 ms.author:   cbasoglu
 ms.date:   04/02/2017
 ms.custom:   cognitive-toolkit
@@ -41,7 +40,7 @@ If you maintain a developer environment, please read the article [Migrate VS 201
 
 ## CNTK Evaluation library. NuGet package
 
-The first version of [CNTK Library Managed Eval API](../CNTK-Library-Evaluation-on-Windows.md) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see the [Wiki page](../CNTK-Library-Evaluation-on-Windows.md) for details. 
+The first version of [CNTK Library Managed Eval API](../CNTK-Library-Evaluation-on-Windows.md) is available. It provides a new C# API supporting evaluation of CNTK models using .NET. The new API also supports evaluation on GPU devices, as well as running multiple evaluation requests in parallel. Please see [here](../CNTK-Library-Evaluation-on-Windows.md) for details. 
 
 Examples on usage of the new CNTK C# API are available in [`CNTKLibraryEvalExamples.sln`](https://github.com/Microsoft/CNTK/blob/v2.0.beta8.0/Examples/Evaluation/CNTKLibraryEvalExamples.sln) located in [Examples/Evaluation](https://github.com/Microsoft/CNTK/tree/v2.0.beta8.0/Examples/Evaluation) (available also in CNTK Binary Packages). 
 
@@ -62,4 +61,4 @@ CNTK Runtime packages are now available as [Public Images at Docker Hub](https:/
 
 **IMPORTANT!** There will be a small time delay (expected 3-5 working days) between a new CNTK Release and its availability on Docker Hub. E.g. on the day of v.2.0 Beta 8 Release (this release) only v.2.0 Beta 7 Images are available at Docker Hub. We will announce the availability of Docker Hub images for each version both at CNTK Release Page and in the News.
 
-See more on CNTK as Docker Images in this [Wiki article](../CNTK-Docker-Containers.md).
+See more on CNTK as Docker Images in this [article](../CNTK-Docker-Containers.md).

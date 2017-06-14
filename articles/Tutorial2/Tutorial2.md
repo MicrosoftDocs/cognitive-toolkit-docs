@@ -1,7 +1,6 @@
 ---
 title:   Tutorial 2
 author:    chrisbasoglu
-date:    11/14/2016
 ms.author:   cbasoglu
 ms.date:   11/14/2016
 ms.custom:   cognitive-toolkit
@@ -38,7 +37,7 @@ ms.devlang:   brainscript
 
 This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](../Tutorial/Tutorial.md), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
 
-The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([Github link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
+The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([GitHub link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
 
 ## The MNIST Data
 
