@@ -11,6 +11,8 @@ ms.devlang:   python, cpp, csharp
 
 # CNTK Library API
 
+From C++ and Java you can access the CNTK model evaluation facilities. CNTK core computational, neural network composition & training, as well as model evaluation facilities are exposed through Python and C++.
+
 ## Python API
 
 [CNTK Python API](https://cntk.ai/pythondocs/) consists of abstractions for model definition and compute, learning algorithms, data reading and distributed training. 

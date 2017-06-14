@@ -2,7 +2,7 @@
 title:   Setup Windows Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   04/03/2017
+ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -13,12 +13,9 @@ ms.devlang:   python
 
 ## Installing CNTK for Python on Windows
 
-This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Windows.
-If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
+This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Windows. If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply different wheel (.whl) files to install CNTK.
-Please select the correct installation from the list below, and substitute the name and/or link during the installation.
-Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License.md) which is MORE restrictive, than the major CNTK License.
+Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply different wheel (.whl) files to install CNTK. Please select the correct installation from the list below, and substitute the name and/or link during the installation. Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License.md) which is MORE restrictive, than the major CNTK License.
 
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0.1](#anaconda2)
@@ -38,10 +35,9 @@ Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD L
 |  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.0-cp36-cp36m-win_amd64.whl`
 |  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0-cp36-cp36m-win_amd64.whl`
 
-### Anaconda3 
+### Anaconda3
 
-We have been testing CNTK with Anaconda3 4.1.1 (64-bit) and Python versions 2.7, 3.4 and 3.5. We will support Python 3.6 on Anaconda in the near future.
-If you do not have a Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Windows (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe).
+We have been testing CNTK with Anaconda3 4.1.1 (64-bit) and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have a Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Windows (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe).
 
 Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
 
