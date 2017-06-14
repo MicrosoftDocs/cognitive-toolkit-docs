@@ -65,23 +65,26 @@ You have two ways to set up CNTK as a Keras back end:
 
 Please modify the "keras.json" file under %USERPROFILE%/.keras on Windows, or $HOME/.keras on Linux. **Only set the "backend" field to "cntk"**. If you do not have a ```keras.json```, that means you have not run Keras on this machine. Use Step 5.2 or create a .keras directory and a ```keras.json``` file with the following content.
 
-``` 
-{ 
+```
+{
     "epsilon": 1e-07, 
     "image_data_format": "channels_last", 
     "backend": "cntk", 
     "floatx": "float32" 
-} 
-```	
+}
+```
 
 > 5.2. By environment variable
 
-```Windows
+For Windows:
+
+```
 set KERAS_BACKEND=cntk
 ```
 
+For Linux:
 
-```Linux
+```
 export KERAS_BACKEND=cntk
 ```
 
