@@ -11,9 +11,9 @@ ms.devlang:   python, brainscript,
 
 # Setup CNTK on your machine
 
-The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can [test your installation from Python](./Setup-Test-Python) or try the [tutorials](./tutorials) or [examples](./Examples) section of the documentation.
+The Microsoft Cognitive Toolkit (CNTK) supports both 64-bit Windows and 64-bit Linux platforms. Upon completing the installation, you can [test your installation from Python](./Setup-Test-Python.md) or try the [tutorials](./Tutorials.md) or [examples](./Examples.md) section of the documentation.
 
-It is recommended you install CNTK from precompiled binaries. If you want to build CNTK from source code, the required steps are described [here](./Setup-CNTK-from-source).
+It is recommended you install CNTK from precompiled binaries. If you want to build CNTK from source code, the required steps are described [here](./Setup-CNTK-from-source.md).
 
 ## Install CNTK from Precompiled Binaries
 
