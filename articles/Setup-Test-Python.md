@@ -1,7 +1,6 @@
 ---
 title:   Setup Test Python
 author:    chrisbasoglu
-date:    03/03/2017
 ms.author:   cbasoglu
 ms.date:   03/03/2017
 ms.custom:   cognitive-toolkit

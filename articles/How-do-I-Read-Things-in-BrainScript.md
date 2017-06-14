@@ -1,7 +1,6 @@
 ---
 title:   How do I read things in BrainScript
 author:    chrisbasoglu
-date:    04/12/2017
 ms.author:   cbasoglu
 ms.date:   04/12/2017
 ms.custom:   cognitive-toolkit

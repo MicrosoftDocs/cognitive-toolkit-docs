@@ -1,7 +1,6 @@
 ---
 title:   Setup Linux Python
 author:    chrisbasoglu
-date:    04/03/2017
 ms.author:   cbasoglu
 ms.date:   04/03/2017
 ms.custom:   cognitive-toolkit

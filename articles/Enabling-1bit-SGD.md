@@ -1,7 +1,6 @@
 ---
 title:   Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit
 author:    chrisbasoglu
-date:    03/21/2017
 ms.author:   cbasoglu
 ms.date:   03/21/2017
 ms.custom:   cognitive-toolkit

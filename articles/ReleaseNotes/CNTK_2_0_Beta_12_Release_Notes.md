@@ -1,7 +1,6 @@
 ---
 title:   CNTK_2_0_Beta_12_Release_Notes
 author:    chrisbasoglu
-date:    02/23/2017
 ms.author:   cbasoglu
 ms.date:   02/23/2017
 ms.custom:   cognitive-toolkit

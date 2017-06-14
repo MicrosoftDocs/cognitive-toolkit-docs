@@ -1,7 +1,6 @@
 ---
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
-date:    03/06/2017
 ms.author:   cbasoglu
 ms.date:   03/06/2017
 ms.custom:   cognitive-toolkit

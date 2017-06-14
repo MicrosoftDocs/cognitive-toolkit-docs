@@ -1,7 +1,6 @@
 ---
 title:   Conference appearances
 author:    chrisbasoglu
-date:    11/11/2016
 ms.author:   cbasoglu
 ms.date:   11/11/2016
 ms.custom:   cognitive-toolkit

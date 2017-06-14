@@ -1,7 +1,6 @@
 ---
 title:   Setup Linux binary script
 author:    chrisbasoglu
-date:    03/31/2017
 ms.author:   cbasoglu
 ms.date:   03/31/2017
 ms.custom:   cognitive-toolkit

@@ -1,7 +1,6 @@
 ---
 title:   BrainScript via command line parsing rules
 author:    chrisbasoglu
-date:    03/15/2017
 ms.author:   cbasoglu
 ms.date:   03/15/2017
 ms.custom:   cognitive-toolkit

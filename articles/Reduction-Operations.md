@@ -1,7 +1,6 @@
 ---
 title:   Reduction operations
 author:    chrisbasoglu
-date:    02/10/2017
 ms.author:   cbasoglu
 ms.date:   02/10/2017
 ms.custom:   cognitive-toolkit

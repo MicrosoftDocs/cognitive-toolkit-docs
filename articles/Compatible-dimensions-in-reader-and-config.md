@@ -1,7 +1,6 @@
 ---
 title:   Compatible dimensions in reader and config
 author:    chrisbasoglu
-date:    10/04/2016
 ms.author:   cbasoglu
 ms.date:   10/04/2016
 ms.custom:   cognitive-toolkit

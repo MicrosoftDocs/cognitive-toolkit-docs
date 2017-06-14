@@ -1,7 +1,6 @@
 ---
 title:   How to contribute to CNTK
 author:    chrisbasoglu
-date:    02/17/2016
 ms.author:   cbasoglu
 ms.date:   02/17/2016
 ms.custom:   cognitive-toolkit

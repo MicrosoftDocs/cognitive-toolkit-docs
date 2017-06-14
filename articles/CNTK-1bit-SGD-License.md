@@ -1,7 +1,6 @@
 ---
 title:   CNTK 1bit-SGD license
 author:    chrisbasoglu
-date:    01/25/2017
 ms.author:   cbasoglu
 ms.date:   01/25/2017
 ms.custom:   cognitive-toolkit

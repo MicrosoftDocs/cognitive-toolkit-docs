@@ -1,7 +1,6 @@
 ---
 title:   CNTK_2_0_Release_Notes
 author:    alexeyo
-date:    05/26/2017
 ms.author:   alexeyo
 ms.date:   05/26/2017
 ms.custom:   cognitive-toolkit

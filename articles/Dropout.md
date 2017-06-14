@@ -1,7 +1,6 @@
 ---
 title:   Dropout 
 author:    chrisbasoglu
-date:    08/15/2016
 ms.author:   cbasoglu
 ms.date:   08/15/2016
 ms.custom:   cognitive-toolkit

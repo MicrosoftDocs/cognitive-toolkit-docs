@@ -1,7 +1,6 @@
 ---
 title:   CNTK Library Evaluation Overview
 author:    chrisbasoglu
-date:    04/09/2017
 ms.author:   cbasoglu
 ms.date:   04/09/2017
 ms.custom:   cognitive-toolkit
