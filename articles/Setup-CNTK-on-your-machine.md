@@ -1,7 +1,6 @@
 ---
 title:   Setup CNTK on your machine
 author:    chrisbasoglu
-date:    04/20/2017
 ms.author:   cbasoglu
 ms.date:   04/20/2017
 ms.custom:   cognitive-toolkit

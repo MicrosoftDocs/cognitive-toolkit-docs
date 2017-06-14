@@ -1,7 +1,6 @@
 ---
 title:   Loss functions and metrics
 author:    chrisbasoglu
-date:    11/08/2016
 ms.author:   cbasoglu
 ms.date:   11/08/2016
 ms.custom:   cognitive-toolkit

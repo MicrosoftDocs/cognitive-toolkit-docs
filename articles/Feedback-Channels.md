@@ -1,7 +1,6 @@
 ---
 title:   Feedback Channels
 author:    chrisbasoglu
-date:    01/19/2017
 ms.author:   cbasoglu
 ms.date:   01/19/2017
 ms.custom:   cognitive-toolkit

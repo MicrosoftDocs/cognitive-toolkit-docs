@@ -1,7 +1,6 @@
 ---
 title:   Build your own image classifier using Transfer Learning
 author:    chrisbasoglu
-date:    02/14/2017
 ms.author:   cbasoglu
 ms.date:   02/14/2017
 ms.custom:   cognitive-toolkit

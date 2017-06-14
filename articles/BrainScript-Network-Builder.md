@@ -1,7 +1,6 @@
 ---
 title:   BrainScript Network Builder
 author:    chrisbasoglu
-date:    09/13/2016
 ms.author:   cbasoglu
 ms.date:   09/13/2016
 ms.custom:   cognitive-toolkit

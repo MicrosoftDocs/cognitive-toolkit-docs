@@ -1,7 +1,6 @@
 ---
 title:   KDD 2016 Tutorial
 author:    chrisbasoglu
-date:    11/07/2016
 ms.author:   cbasoglu
 ms.date:   11/07/2016
 ms.custom:   cognitive-toolkit

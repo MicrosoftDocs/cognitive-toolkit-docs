@@ -1,7 +1,6 @@
 ---
 title:   Parameters And constants
 author:    chrisbasoglu
-date:    09/20/2016
 ms.author:   cbasoglu
 ms.date:   09/20/2016
 ms.custom:   cognitive-toolkit

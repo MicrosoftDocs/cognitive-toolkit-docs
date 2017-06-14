@@ -1,7 +1,6 @@
 ---
 title:   CNTK Shared Libraries Naming Format
 author:    chrisbasoglu
-date:    03/30/2017
 ms.author:   cbasoglu
 ms.date:   03/30/2017
 ms.custom:   cognitive-toolkit

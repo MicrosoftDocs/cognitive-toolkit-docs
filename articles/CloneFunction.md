@@ -1,7 +1,6 @@
 ---
 title:   Clone Function
 author:    chrisbasoglu
-date:    08/27/2016
 ms.author:   cbasoglu
 ms.date:   08/27/2016
 ms.custom:   cognitive-toolkit

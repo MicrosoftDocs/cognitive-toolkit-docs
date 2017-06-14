@@ -1,7 +1,6 @@
 ---
 title:   CNTK FAQ
 author:    chrisbasoglu
-date:    04/05/2017
 ms.author:   cbasoglu
 ms.date:   04/05/2017
 ms.custom:   cognitive-toolkit

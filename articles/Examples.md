@@ -1,7 +1,6 @@
 ---
 title:   CNTK Examples
 author:    chrisbasoglu
-date:    02/14/2016
 ms.author:   cbasoglu
 ms.date:   02/14/2016
 ms.custom:   cognitive-toolkit

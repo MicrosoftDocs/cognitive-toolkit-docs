@@ -1,7 +1,6 @@
 ---
 title:   EvalDLL evaluation on Linux
 author:    chrisbasoglu
-date:    04/14/2017
 ms.author:   cbasoglu
 ms.date:   04/14/2017
 ms.custom:   cognitive-toolkit

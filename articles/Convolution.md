@@ -1,7 +1,6 @@
 ---
 title:   Convolution 
 author:    chrisbasoglu
-date:    02/02/2017
 ms.author:   cbasoglu
 ms.date:   02/02/2017
 ms.custom:   cognitive-toolkit

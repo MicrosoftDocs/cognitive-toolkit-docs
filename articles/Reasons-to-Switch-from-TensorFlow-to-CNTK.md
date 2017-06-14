@@ -1,7 +1,6 @@
 ---
 title:   Reasons to Switch from TensorFlow to CNTK
 author:    cha-zhang 
-date:    06/02/2017
 ms.author:   cha-zhang
 ms.date:   05/30/2017
 ms.custom:   cognitive-toolkit

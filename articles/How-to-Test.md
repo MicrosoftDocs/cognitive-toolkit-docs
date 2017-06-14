@@ -1,7 +1,6 @@
 ---
 title:   How  to test
 author:    chrisbasoglu
-date:    10/01/2016
 ms.author:   cbasoglu
 ms.date:   10/01/2016
 ms.custom:   cognitive-toolkit

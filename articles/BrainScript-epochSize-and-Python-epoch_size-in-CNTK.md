@@ -1,7 +1,6 @@
 ---
 title:   BrainScript epochSize and Python epoch size in CNTK 
 author:    chrisbasoglu
-date:    03/10/2017
 ms.author:   cbasoglu
 ms.date:   03/10/2017
 ms.custom:   cognitive-toolkit

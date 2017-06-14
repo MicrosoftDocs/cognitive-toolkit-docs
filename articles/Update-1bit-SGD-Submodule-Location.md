@@ -1,7 +1,6 @@
 ---
 title:   Update 1bit SGD Submodule Location
 author:    chrisbasoglu
-date:    01/25/2017
 ms.author:   cbasoglu
 ms.date:   01/25/2017
 ms.custom:   cognitive-toolkit

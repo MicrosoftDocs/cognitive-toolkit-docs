@@ -1,7 +1,6 @@
 ---
 title:   Gather and Scatter
 author:    chrisbasoglu
-date:    09/22/2016
 ms.author:   cbasoglu
 ms.date:   09/22/2016
 ms.custom:   cognitive-toolkit
