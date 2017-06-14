@@ -1,12 +1,11 @@
 ---
 title:   CNTK Archive Page
 author:    wolfma61
-date:    06/12/2017
 ms.author:   wolfma
 ms.date:   06/12/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   archive
-ms.service:  Cognitive-services
+ms.service:  cognitive-services
 ms.devlang:   NA
 ---
 

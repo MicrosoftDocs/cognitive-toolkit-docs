@@ -27,11 +27,15 @@ Steps 1 and 2 can be optional. We **strongly** urge you to follow them especiall
 
 **Step 2.** Activate the new environment, if you have created an environment. If you have chosen to install Keras (CNTK) in default environment, then skip to the next step.
 
-```Windows
+For Windows:
+
+```
 activate cntkkeraspy35
 ```
 
-```Linux
+For Linux:
+
+```
 source activate cntkkeraspy35
 ```
 
