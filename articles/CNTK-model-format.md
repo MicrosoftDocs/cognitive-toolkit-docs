@@ -27,5 +27,6 @@ The following table gives an overview about which model format is created and co
  
 |                       |Model Creation  | Model Evaluation | Lanugage Support |
 |:----------------------|:---------------|:-----------------|:-----------------|
-| model-v1 format | cntk.exe| [EvalDll](./EvalDll-Evaluation-Overview.md), [CNTK Library](./CNTK-Library-Evaluation-Overview.md) | BrainScript, C++, C#/.NET
+| model-v1 format | cntk.exe| [cntk.exe](./CNTK-Evaluation-using-cntk.exe.md) [EvalDll](./EvalDll-Evaluation-Overview.md), [CNTK Library](./CNTK-Library-Evaluation-Overview.md) | BrainScript, C++, C#/.NET
 | model-v2 format | CNTK Library | [CNTK Library](./CNTK-Library-Evaluation-Overview.md)  | C++, C#/.NET, Java, Python
+

@@ -9,7 +9,7 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp, cpp
 ---
 
-# CNTK Library Evaluation on Windows
+# Model Evaluation on Windows
 
 Currently, CNTK provides libraries in C++, C#/.NET, Python and Java for loading and evaluating models on Windows.
 

@@ -9,7 +9,7 @@ ms.service:  Cognitive-services
 ms.devlang:   cpp
 ---
 
-# CNTK Library Evaluation on Linux
+# Model Evaluation on Linux
 
 The CNTK Library on Linux is available in C++, Python and Java.
 

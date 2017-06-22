@@ -11,7 +11,7 @@ ms.devlang:   python, cpp, csharp
 
 # CNTK Library API
 
-From C++ and Java you can access the CNTK model evaluation facilities. CNTK core computational, neural network composition & training, as well as model evaluation facilities are exposed through Python and C++.
+CNTK provides libraries in Python, C++ for network composition and training, as well as for model evaluation. It also provides libraries in C#/.NET and Java to access the CNTK model evaluation facilities.
 
 ## Python API
 
@@ -29,8 +29,6 @@ The API introduces new [Protocol Buffers](https://developers.google.com/protocol
 ## C++ API
 
 The CNTK Library C++ API exposes CNTK's core computational, neural network composition & training, efficient data reading, and scalable model training facilities for developers. The C++ APIs are fully featured for both model training as well as evaluation, allowing for both training and model serving to be driven from native code. This enables your native code to tune the online model using new data as part of a evaluation request (i.e. online learning).
-
-The examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the use of the C++ APIs for evaluating previously trained CNTK models. We are also actively working on creating C++ examples illustrating how model training can be performed using the native C++ API and these will become available in a few weeks. 
 
 Currently the best source of API documentation is inline in the API header file ([CNTKLibrary.h](https://github.com/Microsoft/CNTK/blob/master/Source/CNTKv2LibraryDll/API/CNTKLibrary.h)) that contains the full C++ API definition. The API header files are also included in the binary release package under the Include directory.
 
