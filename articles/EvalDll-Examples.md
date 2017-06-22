@@ -1,4 +1,14 @@
-# EvalDll C++/C# Examples
+---
+title:   EvalDll C++/C# Examples
+author:    chrisbasoglu
+ms.author:   cbasoglu
+ms.date:   06/22/2017
+ms.custom:   cognitive-toolkit
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   brainscript,cpp, csharp,dotnet,python
+
+---# EvalDll C++/C# Examples
 
 Prior to the CNTK 2.0 version, the CNTK EvalDLL is used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created 

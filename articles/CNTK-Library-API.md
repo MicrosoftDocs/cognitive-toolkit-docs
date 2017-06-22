@@ -2,7 +2,7 @@
 title:   CNTK Library API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   06/22/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -32,7 +32,7 @@ The CNTK Library C++ API exposes CNTK's core computational, neural network compo
 
 Currently the best source of API documentation is inline in the API header file ([CNTKLibrary.h](https://github.com/Microsoft/CNTK/blob/v2.0/Source/CNTKv2LibraryDll/API/CNTKLibrary.h)) that contains the full C++ API definition. The API header files are also included in the binary release package under the Include directory.
 
-## C#/.NET Managed API
+## C#/.NET API
 
 The CNTK Library Managed API exposes Evaluation related APIs for developers using C# or other .NET languages. It is provided as Nuget packages. The Nuget package CNTK.CPUOnly is for evaluation on CPU, and the CNTK.GPU is for evaluation on devices with NVIDIA GPU.
 
