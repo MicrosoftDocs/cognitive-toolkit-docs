@@ -75,7 +75,6 @@
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
-### [Model Evaluation Overview](/cognitive-toolkit/CNTK-Library-Evaluation-Overview)
 ### [Model Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
 ### [Model Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
 ### [NuGet Package](/cognitive-toolkit/NuGet-Package)

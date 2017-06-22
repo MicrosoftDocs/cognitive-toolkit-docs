@@ -25,7 +25,7 @@ The following pages provide detailed information about model evaluation using CN
 * [NuGet-Packages](./NuGet-Package.md)
 * [Evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
 
-# Legacy Applications using CNTK 1.0
+### Legacy Applications using CNTK 1.0
 
 Prior to the CNTK 2.0 version, the CNTK EvalDLL is used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features.
