@@ -2,7 +2,7 @@
 title:   Model eval examples
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   04/09/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -44,4 +44,4 @@ Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows.md#using-java) an
 
 ## Examples for legacy applications using EvalDLL
 
-Please refer to [EvalDll-Examples] for details.
+Please refer to [EvalDll-Examples](./EvalDll-Examples.md) for details.

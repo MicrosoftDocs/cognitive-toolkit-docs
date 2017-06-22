@@ -84,16 +84,6 @@
 ### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 ### [Model Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
-### [Model Evaluation using cntk.exe](/cognitive-toolkit/CNTK-Evaluation-using-cntk.exe)
-### [EvalDLL Evaluation Overview](/cognitive-toolkit/EvalDLL-Evaluation-Overview)
-#### [EvalDLL evaluation on Windows](/cognitive-toolkit/EvalDLL-Evaluation-on-Windows)
-#### [EvalDLL evaluation on Linux](/cognitive-toolkit/EvalDLL-Evaluation-on-Linux)
-#### [EvalDLL evaluation in Azure](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
-#### [EvalDLL Managed API](/cognitive-toolkit/EvalDll-Managed-API)
-#### [EvalDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
-#### [EvalDLL Evaluate Hidden Layers](/cognitive-toolkit/CNTK-Evaluate-Hidden-Layers)
-#### [EvalDLL Evaluate Image Transforms](/cognitive-toolkit/CNTK-Evaluate-Image-Transforms)
-#### [EvalDLL Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models)
 
 # How do I
 ## How do I in Python
