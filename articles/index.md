@@ -29,6 +29,6 @@ Here are a few pages to get started:
     * [CNTK with Keras](./Using-CNTK-with-Keras.md)
   * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
 * CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
-* [CNTK Model Evaluation](./CNTK-Evaluation-Overview.md))
+* [CNTK Model Evaluation](./CNTK-Evaluation-Overview.md)
 * [How to contribute to CNTK](./Contributing-to-CNTK.md)
 * Give us feedback through these [channels](Feedback-Channels.md)

@@ -5,12 +5,12 @@ is still supported, but works only for the model created by cntk.exe with BrainS
 by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features.
 
 For legacy applications that are still using EvalDll, you can the following examples in C++ and C#.
-The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) contains the following projects 
-- [`CPPEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalClient): this sample uses the C++ `EvalDll`.
-- [`CPPEvalExtendedClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CPPEvalExtendedClient): this sample uses the C++ extended Eval interface in `EvalDll` to evaluate a RNN model. 
-- [`CSEvalClient`](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CSEvalClient): this sample uses the C# `EvalDll` (only for Windows). It uses the [CNTK EvalDll Nuget Package](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/). 
+The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/EvalClients.sln) contains the following projects 
+- [`CPPEvalClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CPPEvalClient): this sample uses the C++ `EvalDll`.
+- [`CPPEvalExtendedClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CPPEvalExtendedClient): this sample uses the C++ extended Eval interface in `EvalDll` to evaluate a RNN model. 
+- [`CSEvalClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CSEvalClient): this sample uses the C# `EvalDll` (only for Windows). It uses the [CNTK EvalDll Nuget Package](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/). 
  
-On Windows, The solution file [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/EvalClients.sln) is used to build and run samples. Please note 
+On Windows, The solution file [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/EvalClients.sln) is used to build and run samples. Please note 
 - You need Visual Studio 2015 update 3 for using these samples.
 - The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](./Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\..\X64\CPPEvalClient.Release\CppEvalClient.exe. 
