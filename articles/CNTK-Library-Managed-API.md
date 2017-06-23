@@ -1,15 +1,15 @@
 ---
-title:   CNTK Library C# API
+title:   CNTK Library Eval C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   06/22/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   csharp
 ---
 
-# CNTK Library C# API
+# CNTK Library Eval C# API
 
 The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
 
@@ -27,47 +27,65 @@ public string Name { get; }
 Name of 'this' Function.
 
 ***
-`public IList<Variable> Arguments { get; }`
+```cs
+public IList<Variable> Arguments { get; }
+```
 
 List of all input Variables of 'this' Function that are not of type Parameter or Constant. These Variables are required inputs in order to compute the outputs of the Function. 
 
 ***
-`public Variable Output { get; }`
+```cs
+public Variable Output { get; }
+```
 
 The single output Variable of 'this' Function, if there is only one. Otherwise a runtime exception is raised on access. 
 
 ***
-`public IList<Variable> Outputs { get; }`
+```cs 
+public IList<Variable> Outputs { get; }
+```
 
 List of all output Variables of 'this' Function.
 
 ***
-`public Function RootFunction { get; }`
+```cs
+public Function RootFunction { get; }
+```
 
 Returns the primitive Function at the root of the graph of Functions underlying 'this' Function. If 'this' Function itself is a primitive Function, then (this->RootFunction() == this).
 
 ***
-`public string OpName { get; }`
+```cs
+public string OpName { get; }
+```
 
 The name of the operation that 'this' Function denotes.
 
 ***
-`public bool IsComposite { get; }`
+```cs
+public bool IsComposite { get; }
+```
 
 A boolean value indicating whether 'this' Function is a composite Function.
 
 ***
-`public bool IsPrimitive { get; }`
+```cs
+public bool IsPrimitive { get; }
+```
 
 A boolean value indicating whether 'this' Function is a primitive Function.
 
 ***
-`public bool IsBlock { get; }`
+```cs
+public bool IsBlock { get; }
+```
 
 A boolean value indicating whether 'this' Function is a block Function.
 
 ***
-`public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, DeviceDescriptor computeDevice)`
+```cs
+public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, DeviceDescriptor computeDevice)
+```
 
 Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
 
@@ -77,7 +95,9 @@ Parameters:
 *  _computeDevice_: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
 
 ***
-`public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, bool createPersistentOutputValues, DeviceDescriptor computeDevice)`
+```cs
+public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, bool createPersistentOutputValues, DeviceDescriptor computeDevice)
+```
 
 Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
 
@@ -88,7 +108,9 @@ Parameters:
 *  _computeDevice_: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
 
 ***
-`public Function Clone(ParameterCloningMethod parameterCloneMethod = ParameterCloningMethod.Share)`
+```cs
+public Function Clone(ParameterCloningMethod parameterCloneMethod = ParameterCloningMethod.Share)
+```
 
 Clones 'this' Function.
 
@@ -96,7 +118,9 @@ Parameters:
 *  _parameterCloneMethod_: specifies how the parameters of Function are cloned: `ParameterCloningMethod.Share` - Parameters are shared between the Function being cloned and the new clone. This value should be used if the cloned Function is used for concurrent evaluation. `ParameterCloningMethod.Clone` - New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned. `ParameterCloningMethod.Freeze` - Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor). ParameterCloningMethod is defined [here](#enum-parametercloningmethod).
 
 ***
-`public Function FindByName(string name, bool nestedSearchInsideBlockFunction)`
+```cs
+public Function FindByName(string name, bool nestedSearchInsideBlockFunction)
+```
 
 Finds a function with the given name in the Function graph underlying 'this' Function. If more than one function with the same name exists, an exception is thrown. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
@@ -105,7 +129,9 @@ Parameters:
 *  _nestedSearchInsideBlockFunction_: if it is true, all functions inside block functions are also examined.
 
 ***
-`public IList<Function> FindAllWithName(string name, bool nestedSearchInsideBlockFunction = false)`
+```cs
+public IList<Function> FindAllWithName(string name, bool nestedSearchInsideBlockFunction = false)
+```
 
 Finds a list of functions with the given name in the Function graph underlying 'this' Function. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
@@ -114,7 +140,9 @@ Parameters:
 *  _nestedSearchInsideBlockFunction_: if it is true, all functions inside block functions are also examined.
 
 ***
-`public static Function Load(string modelFile, DeviceDescriptor computeDevice)`
+```cs
+public static Function Load(string modelFile, DeviceDescriptor computeDevice)
+```
 
 Loads a Function from a model file.
 
@@ -123,7 +151,9 @@ Parameters:
 *  _computeDevice_: the device on which the Function is loaded.
 
 ***
-`public static Function Load(byte[] modelBuffer, DeviceDescriptor computeDevice)`
+```cs
+public static Function Load(byte[] modelBuffer, DeviceDescriptor computeDevice)
+```
 
 Loads a Function from a memory buffer representing a model.
 
@@ -132,7 +162,9 @@ Parameters:
 *  _computeDevice_: the device on which the Function is loaded.
 
 ***
-`public static Function Combine(IEnumerable<Variable> operands)`
+```cs
+public static Function Combine(IEnumerable<Variable> operands)
+```
 
  Creates a new Function instance which combines the outputs of the specified list of 'operands' of Functions. The 'Outputs' of the new 'Function' are union of the 'Outputs' of each of the specified 'operands' Functions. As an example, when creating a classification model, typically the CrossEntropy loss Function and the ClassificationError Function comprise the roots of the computation graph which can be "Combine"d to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
 
@@ -140,7 +172,9 @@ Parameters:
 *  _operands_: the list of the functions or variables that should be included in the Outputs of the new function.
 
 ***
-`public static Function AsComposite(Function rootFunction, string name = "")`
+```cs
+public static Function AsComposite(Function rootFunction, string name = "")
+```
 
 Creates a composite Function that has the specified rootFunction as its root. The composite denotes a higher-level Function encapsulating the entire graph of Functions underlying the specified rootFunction.
 
@@ -149,7 +183,9 @@ Parameters:
 *  _name_: the name of the composite function to be created.
 
 ***
-`public static Function Alias(Variable operand, string name = "")`
+```cs
+public static Function Alias(Variable operand, string name = "")
+```
 
 Creates a new Function instance which is just an alias of the specified operand.
 
@@ -164,7 +200,9 @@ A `Value` is a multi-dimensional array with an optional mask and is the actual d
 ### The following methods create a Value object using dense input with the specified tensor shape.
 
 ***
-`public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of samples. The number of samples in the batch is the number of elements in _batch_ divided by the size of _shape_ (A runtime error occurs if the remainder is not zero). The created Value object contains a copy of the specified data in _batch_.
  
@@ -175,7 +213,9 @@ Parameters:
 *  _readOnly_: the Value object is read-only if this flag is `true`. 
 
 ***
-`public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in _sequence_. The sequence length is the number of elements in _sequence_ divided by the size of _shape_ (A runtime error occurs if the remainder is not zero). The created sequence is a new sequence.
  
@@ -186,7 +226,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`. 
 
 ***
-`public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified _sequence_ data. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. The sequence length is the number of elements in _sequence_ divided by the size of _shape_ (A runtime error occurs if the remainder is not zero).
 
@@ -198,7 +240,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`. 
 
 ***
-`public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in _batchOfSequences_. The number of sequences in the batch is the size of _batchOfSequences_. The length of each sequence is the number of elements in the corresponding sequence of _batchOfSequences_ divided by the size of _shape_ (A runtime error occurs if the remainder is not zero). Each sequence in _batchOfSequences_ is a new sequence.
 
@@ -209,7 +253,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in _batchOfSequences_. The number of sequences in the batch is the size of _batchOfSequences_. The length of each sequence is the number of elements in the corresponding sequence of _batchOfSequences_ divided by the size of _shape_ (A runtime error occurs if the remainder is not zero).
 
@@ -225,7 +271,9 @@ Parameters:
 ### The following methods create a Value object using one-hot vector input.
 
 ***
-`public static Value CreateBatch<T>(int dimension, IEnumerable<int> batch, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatch<T>(int dimension, IEnumerable<int> batch, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of _dimension_ elements. The number of samples in the batch is the number of elements in _batch_.
 
@@ -237,7 +285,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`. 
 
 ***
-`public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of _dimension_ elements. The sequence length is the number of elements in _sequence_. The created sequence is a new sequence.
 
@@ -249,7 +299,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of _dimension_ elements. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. The sequence length is the number of elements in _sequence_.
 
@@ -262,7 +314,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of _dimension_ elements. The number of sequences is the number of elements in the outer collection of _batchOfSequences_. The length of each sequence is the number of elements of the corresponding sequence in the collection list of _batchOfSequences_. Each sequence in _batchOfSequences_ is a new sequence.
 
@@ -274,7 +328,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of _dimension_ elements. The number of sequences is the number of elements in the outer collection of _batchOfSequences_. The length of each sequence is the number of elements of the corresponding sequence in the inner collection of _batchOfSequences_.
 
@@ -296,7 +352,9 @@ Currently the Compressed Sparse Column Format (CSC) is supported. The CSC format
 A detailed description of the CSC format can be found [here](http://docs.nvidia.com/cuda/cusparse/index.html#compressed-sparse-column-format-csc).
 
 ***
-`public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence.
 
@@ -311,7 +369,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method.
 
@@ -327,7 +387,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence.
 
@@ -342,7 +404,9 @@ Parameters:
 *  _readOnly_: the Value is read-only if this flag is `true`.
 
 ***
-`public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] colStarts, int[] rowIndices, T[] nonZeroValues, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence.
 
@@ -361,7 +425,9 @@ Parameters:
 ### The following methods create a Value object from NDArrayView. 
 
 ***
-`public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object based on a collection of NDArrayViews. Each sequence in _sequences_ is a new sequence.
 
@@ -371,7 +437,9 @@ Parameters:
 *  _device_: on which device the Value object should be created.
 *  _readOnly_: the Value is read-only if this flag is `true`.
     
-`public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+```
 
 Creates a new Value object based on a collection of NDArrayViews. The sequenceStartFlags specifies whether a sequence is a new sequence or continuation of a previous sequence.
 
@@ -386,52 +454,72 @@ Parameters:
 ### A Value object contains the following properties and methods.
 
 ***
-`public Value(NDArrayView data)`
+```cs
+public Value(NDArrayView data)
+```
 
 Constructs a multi-dimensional value with no mask.
 
 ***
-`public Value(NDArrayView data, NDMask mask)`
+```cs
+public Value(NDArrayView data, NDMask mask)
+```
 
 Constructs a multi-dimensional value with an associated mask.
 
 ***
-`public DataType DataType { get; }`
+```cs
+public DataType DataType { get; }
+```
 
 [DataType](#enum-datatype) of the data contained in 'this' Value object.
 
 ***
-`public DeviceDescriptor Device { get; }`
+```cs
+public DeviceDescriptor Device { get; }
+```
 
 The descriptor of the device that 'this' Value resides on.
 
 ***
-`public NDShape Shape { get; }`
+```cs
+public NDShape Shape { get; }
+```
 
 The shape of 'this' Value.
 
 ***
-`public StroageFormat StorageFormat { get; }`
+```cs
+public StroageFormat StorageFormat { get; }
+```
 
 The storage format of 'this' Value.
 
 ***
-`public bool IsSparse { get; }`
+```cs
+public bool IsSparse { get; }
+```
 
 A boolean value indicating whether 'this' Value contains data in sparse storage format.
 
 ***
-`public bool IsReadOnly { get; }`
+```cs
+public bool IsReadOnly { get; }
+```
 
 A boolean value indicating whether 'this' Value is read-only.
 
 ***
-`public int maskedCount { get; }`
+```cs
+public int maskedCount { get; }
+```
 
 The number of masked/invalid values in 'this' Value.
 
 ***
-`public void CopyFrom(Value Source)`
+```cs
+public void CopyFrom(Value Source)
+```
 
 Copies the contents of `source` to 'this' Value. The shapes of the _Source_'s data and mask must be identical to 'this' Value's data and mask.
 
@@ -439,12 +527,16 @@ Parameter:
 *  _Source_: The source object from which 'this' Value is copied.
 
 ***
-`public Value DeepClone()`
+```cs
+public Value DeepClone()
+```
 
 Creates a new Value with newly allocated storage on the same device as 'this' Value and copies 'this' Value's contents into the newly allocated Value.
 
 ***
-`public Value DeepClone(bool readOnly)`
+```cs
+public Value DeepClone(bool readOnly)
+```
 
 Creates a new Value with newly allocated storage on the same device as 'this' Value and copies 'this' Value's contents into the newly allocated Value.
 
@@ -452,14 +544,18 @@ Parameter:
 *  _readOnly_: the new Value object is read-only if this flag is `true`.
 
 ***
-`public Value Alias(bool readOnly)`
+```cs
+public Value Alias(bool readOnly)
+```
 
 Creates a new Value which is an alias of 'this' Value.
 Parameter:
 *  _readOnly_: the new Value object is read-only if this flag is `true`.
 
 ***
-`public IList<IList<T>> GetDenseData<T>(Variable outputVariable)`
+```cs
+public IList<IList<T>> GetDenseData<T>(Variable outputVariable)
+```
 
 Gets the data stored in the Value object as a list of sequences with variable length in dense format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<T>, contains a variable number of samples. Each sample consists of a fixed number of elements with type of 'T'. The number of elements is determined by the shape of outputVariable. The number of samples is the count of elements in IList<T> divided by the count of elements of the sample.
 
@@ -467,7 +563,9 @@ Parameter:
 *  _outputVariable_: The variable that 'this' Value denotes to. The shape of the variable should match the shape of 'this' Value.
 
 ***
-`public IList<IList<int>> GetOneHotData(Variable outputVariable)`
+```cs
+public IList<IList<int>> GetOneHotData(Variable outputVariable)
+```
 
 Gets the data stored in the Value object as a list of sequences with variable length in one-hot vector format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<int>, contains a variable number of samples. Each sample is represented by an index to the one-hot vector. The number of samples is the count of elements in IList<int>.
 
@@ -478,7 +576,9 @@ Parameter:
 ### The following methods will be deprecated soon. Please use GetDenseData() and GetOneHotData() described above.
 
 ***
-`public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequences)`
+```cs
+public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequences)
+```
 
 Copies the data stored in the Value into the buffer provided by _sequences_. The _sequences_ is a list of sequences with variable length. The number of items contained in the outer list of _sequences_ is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<T>`, contains a variable number of samples. Each sample consists of a fixed number of elements with type of _T_. The number of elements of a sample is determined by the shape of _outputVariable_. The shape of the variable should match the shape of the Value.
 
@@ -487,7 +587,9 @@ Parameters:
 *  _sequences_: the output buffer used to store the data copied from the Value.
 
 ***
-`public void CopyVariableValueTo(Variable outputVariable, List<List<uint>> sequences`
+```cs
+public void CopyVariableValueTo(Variable outputVariable, List<List<uint>> sequences
+```
 
 Copies the data stored in the Value object into the buffer provided by _sequences_. The _sequences_ is a list of sequences with variable length. The number of items contained in the outer list of _sequences_ is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<uint>`, contains a variable number of samples. Each sample is represented by an index pointing to the non-zero value in the one-hot vector. The dimension size of the one-hot vector should match that defined in the _outputVariable_. 
 
@@ -501,62 +603,86 @@ Denotes a symbolic entity corresponding to the inputs and outputs of a [`Functio
 The properties of `Variable` that are often used in evaluation include:
 
 ***
-`public string Name { get; }`
+```cs
+public string Name { get; }
+```
 
 Name of 'this' Variable.
 
 ***
-`public NDShape Shape { get; }`
+```cs
+public NDShape Shape { get; }
+```
 
 Shape of 'this' Variable.
 
 ***
-`public DataType DataTye { get; }`
+```cs
+public DataType DataTye { get; }
+```
 
 DataType(#enum-datatype) of the data that 'this' Variable represents.
 
 ***
-`public VariableKind Kind { get; }`
+```cs
+public VariableKind Kind { get; }
+```
 
 The [VariableKind](#enum-variablekind) of 'this' Variable.
 
 ***
-`public bool IsSparse { get; }`
+```cs
+public bool IsSparse { get; }
+```
 
 A boolean value indicating whether 'this' Variable denotes sparse data.
 
 ***
-`public bool IsInput { get; }`
+```cs
+public bool IsInput { get; }
+```
 
 A boolean value indicating whether 'this' Variable is an Input.
 
 ***
-`public bool IsOutput { get; }`
+```cs
+public bool IsOutput { get; }
+```
 
 A boolean value indicating whether 'this' Variable is an Output.
 
 ***
-`public bool IsParameter { get; }`
+```cs
+public bool IsParameter { get; }
+```
 
 A boolean value indicating whether 'this' Variable is a Parameter.
 
 ***
-`public bool IsConstant { get; }`
+```cs
+public bool IsConstant { get; }
+```
 
 A boolean value indicating whether 'this' Variable is a Constant.
 
 ***
-`public bool IsPlaceholder { get; }`
+```cs
+public bool IsPlaceholder { get; }
+```
 
 A boolean value indicating whether 'this' Variable is a Placeholder.
 
 ***
-`public IList<Axis> DynamicAxes { get; }`
+```cs
+public IList<Axis> DynamicAxes { get; }
+```
 
 Returns the dynamic axes of 'this' Variable.
 
 ***
-`public Function Owner { get; }`
+```cs
+public Function Owner { get; }
+```
 
 Returns the Function which 'this' Variable is an output of. Returns `null` when 'this' Variable is not of VariableKind Output.
 
@@ -566,22 +692,30 @@ Denotes a computation device instance.
 The class `DeviceDescriptor` contains the following properties and methods:
 
 ***
-`public int Id { get; }`
+```cs
+public int Id { get; }
+```
 
 The Id of 'this' device. 
 
 ***
-`public DeviceKind Type { get; }`
+```cs
+public DeviceKind Type { get; }
+```
 
 [DeviceKind](#enum-devicekind) of 'this' device.
 
 ***
-`public static DeviceDescriptor CPUDevice { get; }`
+```cs
+public static DeviceDescriptor CPUDevice { get; }
+```
 
 The DeviceDescriptor representing the CPU device on the local system.
 
 ***
-`public static DeviceDescriptor GPUDevice(int deviceId)`
+```cs
+public static DeviceDescriptor GPUDevice(int deviceId)
+```
 
 Gets the DeviceDescriptor of the GPU device on the local system with the specified CUDA device ID.
  
@@ -589,7 +723,9 @@ Parameter:
 *  _deviceId_: the CUDA device ID.
 
 ***
-`public static IList<DeviceDescriptor> AllDevices()`
+```cs
+public static IList<DeviceDescriptor> AllDevices()
+```
 
 Gets a list of descriptors of all available/supported devices.
  
@@ -597,12 +733,16 @@ Gets a list of descriptors of all available/supported devices.
 Denotes a multi-dimensional rectangular shape.
 
 ***
-`public NDShape()`
+```cs
+public NDShape()
+```
 
 Constructs a NDShape with 0 axes, which denotes a scalar.
 
 ***
-`public NDShape(int numAxes, int dimension)`
+```cs
+public NDShape(int numAxes, int dimension)
+```
 
 Constructs a NDShape instance with the specified rank and dimension size. Each axis has the same dimensionality.
 
@@ -611,7 +751,9 @@ Parameter:
 *  _dimension_: the dimension size, applied to each axis.
 
 ***
-`public NDShape(int numAxes)`
+```cs
+public NDShape(int numAxes)
+```
 
 Constructs a NDShape instance with the specified rank. The dimensionality in each axis is `NDShape.InferredDimension`.
 
@@ -619,54 +761,74 @@ Parameter:
 *  _numAxes_: the number of axes of the shape.
 
 ***
-`public static NDShape CreateNDShape(IEnumerable<int> dimensions)`
+```cs
+public static NDShape CreateNDShape(IEnumerable<int> dimensions)
+```
 
 Creates a NDShape instance with specified dimensions.
 Parameter:
 *  _dimensions_: the dimension size of each axis.
 
 ***
-`public int Rank { get; }`
+```cs
+public int Rank { get; }
+```
 
 The rank of 'this' NDShape.
 
 ***
-`public IList<int> Dimensions { get; }`
+```cs
+public IList<int> Dimensions { get; }
+```
 
 The dimensions of 'this' NDShape. 
 
 ***
-`public int TotalSize { get; }`
+```cs
+public int TotalSize { get; }
+```
 
 The total size of the rectangular shape that 'this' Shape denotes.
 
 ***
-`public int this[int key] { get; } `
+```cs
+public int this[int key] { get; } 
+```
 
 Returns the dimension size of the specified axis.
 
 ***
-`public int IsUnknown { get; }`
+```cs
+public int IsUnknown { get; }
+```
 
 A boolean indicating if 'this' shape is the special Unknown shape.
 
 *** 
-`public int HasInferredDimension { get; }`
+```cs
+public int HasInferredDimension { get; }
+```
 
 A boolean value indicating if the dimension size for any of the axes of 'this' shape is unknown/inferred (NDShape.InferredDimension).
 
 ***
-`public NDShape AppendShape(NDShape shape)`
+```cs
+public NDShape AppendShape(NDShape shape)
+```
 
 Creates and returns a new shape constructed by appending the dimensions of the specified 'shape' to 'this' shape's dimensions.
 
 ***
-`public NDShape SubShape(int beginAxisId, int endAxisId)`
+```cs
+public NDShape SubShape(int beginAxisId, int endAxisId)
+```
 
 Creates and returns a new NDShape instance with the same dimensions as 'this' shape's specified axis range [beginAxisId, endAxisId).
 
 ***
-`public NDShape SubShape(int beginAxisId)`
+```cs
+public NDShape SubShape(int beginAxisId)
+```
 
 Creates and returns a new NDShape instance with the same dimensions as 'this' shape's axis range between the beginAxisId axis (inclusive) and the last axis (inclusive).
 
@@ -674,8 +836,10 @@ Creates and returns a new NDShape instance with the same dimensions as 'this' sh
 Denotes a multi-dimensional writable or read-only array of elemental values. This type denotes a view and there may be multiple simultaneous views of the data underlying a NDArrayView instance. The underlying data is stored in sparse or dense format, and is located on a specific device.
 
 ***
-`public NDArrayView(NDShape viewShape, float[] dataBuffer, DeviceDescriptor device, bool readOnly = false)`
-`public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public NDArrayView(NDShape viewShape, float[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
+public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
+```
 
 Constructs a NDArrayView with the specified 'dataBuffer' in dense format as the backing storage on the specified device.
 
@@ -686,8 +850,10 @@ Parameter:
 *  _readOnly_: the NDArrayView object is read-only if this flag is `true`.
 
 ***
-`public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, float[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)`
-`public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)`
+```cs
+public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, float[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+```
 
 Constructs a NDArrayView with the specified storage in sparse CSC format on the specified device. The specified sparse data must outlive the created NDArrayView object.
 
@@ -700,42 +866,57 @@ Parameter:
 *  _readOnly_: the NDArrayView object is read-only if this flag is `true`.
 
 ***
-`public DeviceDescriptor Device`
+```cs
+public DeviceDescriptor Device
+```
 
 The DeviceDescriptor of the device that 'this' NDArrayView resides on.
 
 ***
-`public NDShape Shape`
+```cs
+public NDShape Shape
+```
 
 The shape of 'this' NDArrayView.
 
 ***
-`public DataType DataType`
+```cs
+public DataType DataType
+```
 
 The DataType of the data that 'this' NDArrayView stores.
 
 ***
-`public StroageFormat StorageFormat`
+```cs
+public StroageFormat StorageFormat
+```
 
 The storage format of 'this' NDArrayView.
 
 ***
-`public bool IsSparse`
+```cs
+public bool IsSparse
+```
 
 A boolean value indicating whether 'this' NDArrayView contains data in sparse storage format.
 
 ***
-`public bool IsReadOnly`
+```cs
+public bool IsReadOnly`
 
 A boolean value indicating whether 'this' NDArrayView is read-only.
 
 ***
-`public NDArrayView DeepClone()`
+```cs
+public NDArrayView DeepClone()
+```
 
 Creates a new NDArrayView with newly allocated storage on the same device as 'this' view and copies 'this' view's contents into the newly allocated view.
 
 ***
-`public NDArrayView DeepClone(bool readOnly)`
+```cs
+public NDArrayView DeepClone(bool readOnly)
+```
 
 Creates a new NDArrayView with newly allocated storage on the same device as 'this' view and copies 'this' view's contents into the newly allocated view.
 
@@ -743,7 +924,9 @@ Parameter:
 *  _readOnly_: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
-`public NDArrayView DeepClone(DeviceDescriptor device, bool readOnly)`
+```cs
+public NDArrayView DeepClone(DeviceDescriptor device, bool readOnly)
+```
 
 Creates a new NDArrayView with newly allocated storage on the specified device and copies 'this' view's contents into the newly allocated view.
 
@@ -752,7 +935,9 @@ Parameter:
 *  _readOnly_: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
-`public NDArrayView Alias(bool readOnly)`
+```cs
+public NDArrayView Alias(bool readOnly)
+```
 
 Creates a new NDArrayView which is an alias of 'this' view; i.e. a new view of the same shape as 'this' over the same underlying data.
 
@@ -760,7 +945,9 @@ Parameter:
 *  _readOnly_: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
-`public NDArrayView AsShape(NDShape newShape)`
+```cs
+public NDArrayView AsShape(NDShape newShape)
+```
 
 Creates a new NDArrayView which is an alias of 'this' view but with a new shape.
 
@@ -768,7 +955,9 @@ Parameter:
 *  _newShape_: the shape of the new NDArrayView object.
 
 ***
-`public void CopyFrom(NDArrayView source)`
+```cs
+public void CopyFrom(NDArrayView source)
+```
 
 Copies the contents of the 'source' NDArrayView to 'this' view. The shapes of the 'source' view and 'this' view must be identical.
 
@@ -776,7 +965,9 @@ Parameter:
 *  _source_: the source NDArrayView whose content is copied to 'this' view.
 
 ***
-`public void ChangeDevice(DeviceDescriptor device)`
+```cs
+public void ChangeDevice(DeviceDescriptor device)
+```
 
 Changes the device of 'this' NDArrayView to the specified device.
 
@@ -789,101 +980,99 @@ Denotes an Axis of a [`Variable`](#class-variable). Besides the static axes corr
 The following properties are defined in the class `Axis`
 
 ***
-`public string Name { get; }`
+```cs
+public string Name { get; }
+```
 
 Name of 'this' Axis. 
 
 ***
-`public bool IsStatic { get; }`
+```cs
+public bool IsStatic { get; }
+```
 
 Returns a boolean value indicating whether 'this' Axis corresponds to a static axis.
 
 ***
-`public bool IsDynamic { get; }`
+```cs
+public bool IsDynamic { get; }
+```
 
 Returns a boolean value indicating whether 'this' Axis corresponds to a dynamic axis.
 
 ## class Utils
 
 ***
-`public static void SetMaxNumCPUThreads(int numCPUThreads)`
+```cs
+public static void SetMaxNumCPUThreads(int numCPUThreads)
+```
 
 Sets the process-wide maximum number of CPU threads to be used by any individual compute operation.
 
 ***
-`public static int GetMaxNumCPUThreads()`
+```cs
+public static int GetMaxNumCPUThreads()
+```
 
 Returns the process-wide maximum number of CPU threads to be used by any individual compute operation.
 
 ***
-`public static void SetTraceLevel(TraceLevel value)`
+```cs
+public static void SetTraceLevel(TraceLevel value)`
 
 Specifies global logging verbosity level.
 
 ***
-`public static TraceLevel GetTraceLevel()`
+```cs
+public static TraceLevel GetTraceLevel()
+```
 
 Returns current logging verbosity level.
 
 ## enum VariableKind
 Denotes the kind of a symbolic [`Variable`](#class-variable) object
 
-***
-`{`        
-`Input = 0,`  
-`Output = 1,`   
-`Parameter = 2,`   
-`Constant = 3,`   
-`Placeholder = 4`   
-`}`   
+```cs
+enum VariableKind { Input, Output, Parameter, Constant, Placeholder };
+```
 
 ## enum DataType
 Denotes data type of symbolic data entities or actual data.
 
-***
-`{`    
-`Unknown = 0,`   
-`Float = 1,`  
-`Double = 2`   
-`}`   
+```cs
+enum DataType { Unknown, Float, Double };
+```
 
 ## enum DeviceKind
 Denotes the type of a computation device.
 
-***
-`{`      
-`CPU,` // A CPU device.   
-`GPU`  // A GPU device.   
-`}` 
+```cs
+enum DeviceKind { CPU, GPU };
+```
 
 ## enum StorageFormat
 Denotes the format of storage underlying an instance of a NDArrayView.
 
-***
-`{`      
-`Dense,`     
-`SparseCSC,`    
-`SparseBlockCol`      
-`}` 
+```cs
+enum StorageFormat { Dense, SparseCSC, SparseBlockCol };
+```
 
 ## enum ParameterCloningMethod
 Denotes how Parameters are handled when cloning a Function.
 
-***
-`{`    
-`Share,` // Parameters are shared between the Function being cloned and the new clone.   
-`Clone,` // New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned.   
-`Freeze` // Parameters are cloned and made immutable.   
-`}`
+```cs
+enum ParameterCloningMethod { 
+    Share, // Parameters are shared between the Function being cloned and the new clone.
+    Clone, // New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned.
+    Freeze // Parameters are cloned and made immutable.   
+};
+```
 
 ## enum TraceLevel
 Denotes logging verbosity levels.
 
-***
-`{`    
-`Error,`       
-`Warning,`      
-`Info`      
-`}`   
+```cs
+enum TraceLevel { Error, Warning, Info };
+```
 
 
