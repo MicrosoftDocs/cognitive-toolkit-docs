@@ -1,7 +1,6 @@
 ---
 title:   Getting Started With the Microsoft Cognitive Toolkit
 author:    wolfma
-date:    12/06/2017
 ms.author:   cbasoglu
 ms.date:   12/06/2017
 ms.custom:   cognitive-toolkit

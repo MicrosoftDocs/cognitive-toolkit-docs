@@ -1,7 +1,6 @@
 ---
 title:   CNTK Development Environment Setup
 author:    wolfma61
-date:    06/12/2017
 ms.author:   wolfma
 ms.date:   06/12/2017
 ms.custom:   cognitive-toolkit

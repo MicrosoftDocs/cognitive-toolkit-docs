@@ -32,3 +32,7 @@ The best way to learn about the APIs is to look at the following examples in the
 
 An overview on all examples and tutorials is also provided by the
 [Cognitive Toolkit Model Gallery](http://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/) page.
+
+## Evaluation Examples
+
+The [CNTK Eval Examples](./CNTK-Eval-Examples.md) page provides examples demonstrating how to evaluate pre-trained models using C++, C#/.NET, Python, and Java.
