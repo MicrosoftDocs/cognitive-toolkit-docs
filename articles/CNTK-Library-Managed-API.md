@@ -86,15 +86,6 @@ A boolean value indicating whether 'this' Function is a block Function.
 ```cs
 public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, DeviceDescriptor computeDevice)
 ```
-
-Evaluates the Function using the specified _arguments_ as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the _inputs_ dictionary. The outputs are stored in the output Values corresponding to the output variables in the _outputs_ dictionary.
-
-Parameters:
-*  _inputs_: the input variables and their values of the Function.
-*  _outputs_: output values for each output variable. The caller may specify the Value object for storing the output or pass _null_ in which case the function allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a _null_ Value was specified, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call. If it needs to be accessed later, you should use the Evaluate() method below which allows you to create persistent Value objects, or you must explicitly _DeepClone_ the temporary Value object.
-*  _computeDevice_: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
-
-***
 ```cs
 public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, bool createPersistentOutputValues, DeviceDescriptor computeDevice)
 ```
@@ -103,9 +94,9 @@ Evaluates the Function using the specified _arguments_ as input. It computes the
 
 Parameters:
 *  _inputs_: the input variables and their values of the Function.
-*  _outputs_: output values for each output variable. The caller may specify the Value object for storing the output or pass _null_ in which case the method allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a _null_ Value was specified, and _createPersistentOutputValues_ is false, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call.
-* _createPersistentOutputValues_: Only relevant if a _null_ Value was specified in outputs. If it is set to _true_, the method will create persistent Value objects, otherwise the Value objects are temporary and are only valid until the next Forward/Backward call.
+*  _outputs_: output values for each output variable. The caller may specify the Value object for storing the output or pass _null_ in which case the method allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a _null_ Value was specified, and the parameter _createPersistentOutputValues_ is not specified or is set to `false`, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call. If it needs to be accessed later, you should specify _createPersistentOutputValues_ to `true`, or explicitly _DeepClone_ the temporary Value object.
 *  _computeDevice_: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
+* _createPersistentOutputValues_: Only relevant if a _null_ Value was specified in outputs. If it is set to _true_, the method will create persistent Value objects, otherwise the Value objects are temporary and are only valid until the next Forward/Backward call.
 
 ***
 ```cs
@@ -838,6 +829,8 @@ Denotes a multi-dimensional writable or read-only array of elemental values. Thi
 ***
 ```cs
 public NDArrayView(NDShape viewShape, float[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
+```
+```cs
 public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
 ```
 
@@ -852,6 +845,8 @@ Parameter:
 ***
 ```cs
 public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, float[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+```
+```cs
 public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
 ```
 
@@ -1018,7 +1013,8 @@ Returns the process-wide maximum number of CPU threads to be used by any individ
 
 ***
 ```cs
-public static void SetTraceLevel(TraceLevel value)`
+public static void SetTraceLevel(TraceLevel value)
+```
 
 Specifies global logging verbosity level.
 
