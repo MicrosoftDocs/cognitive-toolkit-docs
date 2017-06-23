@@ -39,6 +39,6 @@ The current release of CNTK Eval Nuget Packages support the following interfaces
 ## Linux
 There is a Linux equivalent set of libraries (albeit not available through NuGet) that enables CNTK model evaluations in Linux using C++. Refer to the [CNTK Evaluation on Linux](./CNTK-Library-Evaluation-on-Linux.md) page for details.
 
-## Legacy applications using CNTK EvalDLL
-For applications that are still using CNTK EvalDLL, which only supports the [model-v1 format](./CNTK-model-format.md), please use  the **Microsoft.Research.CNTK.CpuEval-mkl** Nuget package:
+## Legacy applications using CNTK EvalDLL interface
+For applications that are still using CNTK EvalDLL interface, which only supports the [model-v1 format](./CNTK-model-format.md), please use  the **Microsoft.Research.CNTK.CpuEval-mkl** Nuget package:
 * [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0): supports CPU Only, implements [EvalDll C# Interface](./EvalDll-Managed-API.md) and [EvalDll C++ Interface](./EvalDll-Native-API.md).

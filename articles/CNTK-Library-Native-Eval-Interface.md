@@ -1,5 +1,5 @@
 ---
-title:   CNTK Library Native Eval Interface
+title:   CNTK Library Eval C++ API
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/01/2017
@@ -9,7 +9,7 @@ ms.service:  Cognitive-services
 ms.devlang:  cpp
 ---
 
-# CNTK Library Native Eval Interface
+# CNTK Library Eval C++ API
 
 The C++ CNTK Library for Evaluation is based on [CNTK Library API](./CNTK-Library-Managed-API.md). The following methods are used to evaluate a model.
 

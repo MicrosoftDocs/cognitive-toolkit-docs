@@ -1,5 +1,5 @@
 ---
-title:   CNTK Library API C#
+title:   CNTK Library C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/01/2017
@@ -9,7 +9,7 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp
 ---
 
-# CNTK Library API C#
+# CNTK Library C# API
 
 The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
 
