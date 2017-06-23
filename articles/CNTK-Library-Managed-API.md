@@ -90,7 +90,7 @@ public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, 
 public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, Value> outputs, bool createPersistentOutputValues, DeviceDescriptor computeDevice)
 ```
 
-Evaluates the Function using the specified `arguments` as input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the `inputs` dictionary. The outputs are stored in the output Values corresponding to the output variables in the `outputs` dictionary.
+Evaluates the Function using the specified input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the `inputs` dictionary. The outputs are stored in the output Values corresponding to the output variables in the `outputs` dictionary.
 
 Parameters:
 *  `inputs`: the input variables and their values of the Function.
