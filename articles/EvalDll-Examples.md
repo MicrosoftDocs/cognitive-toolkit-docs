@@ -11,11 +11,11 @@ ms.devlang:   brainscript,cpp, csharp,dotnet,python
 
 # EvalDll C++/C# Examples
 
-Prior to the CNTK 2.0 version, the CNTK EvalDLL wa used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
+Prior to the CNTK 2.0 version, the CNTK EvalDLL was used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created 
 by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features.
 
-For legacy applications that are still using EvalDll, The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/EvalClients.sln) contains the following examples: 
+For legacy applications that are still using EvalDll, The [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/EvalClients.sln) contains the following examples:
 - [`CPPEvalClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CPPEvalClient): this sample uses the C++ `EvalDll`.
 - [`CPPEvalExtendedClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CPPEvalExtendedClient): this sample uses the C++ extended Eval interface in `EvalDll` to evaluate a RNN model. 
 - [`CSEvalClient`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CSEvalClient): this sample uses the C# `EvalDll` (only for Windows). It uses the [CNTK EvalDll Nuget Package](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/). 

@@ -11,7 +11,7 @@ ms.devlang:   NA
 
 # CNTK 2.0 Evaluation Overview
 
-Once you have trained a model, you can use CNTK Eval library to evaluate the model in your own application. CNTK supports model evaluation from C++, ....in C++, Python, C#/.NET, and Java.
+Once you have trained a model, you can use CNTK Eval library to evaluate the model in your own application. CNTK supports model evaluation from C++, Python, C#/.NET, and Java.
 
 New features of the CNTK Evaluation include
 * Support both CPU and GPU device.
@@ -31,4 +31,4 @@ Prior to the CNTK 2.0 version, the CNTK EvalDLL was used to evaluate model train
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features.
 
 For more details on different model formats refer to the [CNTK model format](./CNTK-model-format.md) page.
-For legacy applications that use use EvalDLL please refer to the [CNTK EvalDLL Overview](./EvalDll-Evaluation-Overview.md) page.
+For legacy applications that use use EvalDLL interface please refer to the [CNTK EvalDLL Overview](./EvalDll-Evaluation-Overview.md) page.
