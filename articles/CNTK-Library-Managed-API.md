@@ -20,7 +20,9 @@ A `Function` denotes a symbolic computation with zero or more input arguments an
 The `Function` class contains the following properties and methods that are relevant to evaluation:
 
 ***
-`public string Name { get; }`
+```cs
+public string Name { get; }
+```
 
 Name of 'this' Function.
 
