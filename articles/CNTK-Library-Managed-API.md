@@ -24,63 +24,63 @@ The `Function` class contains the following properties and methods that are rele
 public string Name { get; }
 ```
 
-Name of `this` Function.
+Name of the Function.
 
 ***
 ```cs
 public IList<Variable> Arguments { get; }
 ```
 
-List of all input Variables of `this` Function that are not of type Parameter or Constant. These Variables are required inputs in order to compute the outputs of the Function. 
+List of all input Variables of the Function that are not of type Parameter or Constant. These Variables are required inputs in order to compute the outputs of the Function.
 
 ***
 ```cs
 public Variable Output { get; }
 ```
 
-The single output Variable of `this` Function, if there is only one. Otherwise a runtime exception is raised on access. 
+The single output Variable of the Function, if there is only one. Otherwise a runtime exception is raised on access.
 
 ***
-```cs 
+```cs
 public IList<Variable> Outputs { get; }
 ```
 
-List of all output Variables of `this` Function.
+List of all output Variables of the Function.
 
 ***
 ```cs
 public Function RootFunction { get; }
 ```
 
-Returns the primitive Function at the root of the graph of Functions underlying `this` Function. If `this` Function itself is a primitive Function, then (this->RootFunction() == this).
+Returns the primitive Function at the root of the graph of Functions underlying the Function. If the Function itself is a primitive Function, then (this->RootFunction() == this).
 
 ***
 ```cs
 public string OpName { get; }
 ```
 
-The name of the operation that `this` Function denotes.
+The name of the operation that the Function denotes.
 
 ***
 ```cs
 public bool IsComposite { get; }
 ```
 
-A boolean value indicating whether `this` Function is a composite Function.
+A boolean value indicating whether the Function is a composite Function.
 
 ***
 ```cs
 public bool IsPrimitive { get; }
 ```
 
-A boolean value indicating whether `this` Function is a primitive Function.
+A boolean value indicating whether the Function is a primitive Function.
 
 ***
 ```cs
 public bool IsBlock { get; }
 ```
 
-A boolean value indicating whether `this` Function is a block Function.
+A boolean value indicating whether the Function is a block Function.
 
 ***
 ```cs
@@ -113,7 +113,7 @@ Parameters:
 public Function FindByName(string name, bool nestedSearchInsideBlockFunction)
 ```
 
-Finds a function with the given name in the Function graph underlying `this` Function. If more than one function with the same name exists, an exception is thrown. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
+Finds a function with the given name in the Function graph underlying the Function. If more than one function with the same name exists, an exception is thrown. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
 Parameters:
 *  `name`: the name to be searched for.
@@ -124,7 +124,7 @@ Parameters:
 public IList<Function> FindAllWithName(string name, bool nestedSearchInsideBlockFunction = false)
 ```
 
-Finds a list of functions with the given name in the Function graph underlying `this` Function. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
+Finds a list of functions with the given name in the Function graph underlying the Function. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
 Parameters:
 *  `name`: the name to be searched for.
@@ -169,7 +169,7 @@ public static Function AsComposite(Function rootFunction, string name = "")
 
 Creates a composite Function that has the specified rootFunction as its root. The composite denotes a higher-level Function encapsulating the entire graph of Functions underlying the specified rootFunction.
 
-Parameters:   
+Parameters:
 *  `rootFunction`: the root of the composite function to be created.
 *  `name`: the name of the composite function to be created.
 
@@ -196,12 +196,12 @@ public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, De
 ```
 
 Creates a new Value object containing a batch of samples. The number of samples in the batch is the number of elements in `batch` divided by the size of `shape` (A runtime error occurs if the remainder is not zero). The created Value object contains a copy of the specified data in `batch`.
- 
+
 Parameters:
-*  `sampleShape`: the tensor shape of the Value object. 
-*  `batch`: the data to be contained in the Value object. 
+*  `sampleShape`: the tensor shape of the Value object.
+*  `batch`: the data to be contained in the Value object.
 *  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value object is read-only if this flag is `true`. 
+*  `readOnly`: the Value object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -209,12 +209,12 @@ public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequen
 ```
 
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in `sequence`. The sequence length is the number of elements in `sequence` divided by the size of `shape` (A runtime error occurs if the remainder is not zero). The created sequence is a new sequence.
- 
+
 Parameters:
-*  `sampleShape`: the tensor shape of the Value. 
-*  `sequence`: the data to be contained in the Value. 
+*  `sampleShape`: the tensor shape of the Value.
+*  `sequence`: the data to be contained in the Value.
 *  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`. 
+*  `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -224,11 +224,11 @@ public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequen
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified `sequence` data. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. The sequence length is the number of elements in `sequence` divided by the size of `shape` (A runtime error occurs if the remainder is not zero).
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value. 
+*  `sampleShape`: the tensor shape of the Value.
 *  `sequence`: the data to be contained in the Value.
 *  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
 *  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`. 
+*  `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -270,10 +270,10 @@ Creates a new Value object containing a batch of samples. Each sample is represe
 
 Parameters:
 *  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector. 
-*  `batch`: the collection of indexes representing the batch of samples. 
+*  `dimension`: the size of dimension of the one-hot vector.
+*  `batch`: the collection of indexes representing the batch of samples.
 *  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`. 
+*  `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -284,8 +284,8 @@ Creates a new Value object containing a sequence of samples. Each sample is repr
 
 Parameters:
 *  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector. 
-*  `sequence`: the collection of indexes representing the sequence of samples. 
+*  `dimension`: the size of dimension of the one-hot vector.
+*  `sequence`: the collection of indexes representing the sequence of samples.
 *  `device`: on which device the Value object should be created.
 *  `readOnly`: the Value is read-only if this flag is `true`.
 
@@ -298,8 +298,8 @@ Creates a new Value object containing a sequence of samples. Each sample is repr
 
 Parameters:
 *  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector. 
-*  `sequence`: the collection of indexes representing the sequence of samples. 
+*  `dimension`: the size of dimension of the one-hot vector.
+*  `sequence`: the collection of indexes representing the sequence of samples.
 *  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
 *  `device`: on which device the Value object should be created.
 *  `readOnly`: the Value is read-only if this flag is `true`.
@@ -334,10 +334,10 @@ Parameters:
 *  `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods create a Value object using sparse input. 
+### The following methods create a Value object using sparse input.
 Currently the Compressed Sparse Column Format (CSC) is supported. The CSC format stores the matrix in column-major format, and the array containing the column indices is compressed. A matrix in CSC format is represented by the following parameters:
 * `nonZeroValues`: the data array that holds all nonzero values of the matrix in column-major format.
-* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.   
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
 * `colStarts`: the array that holds indices into the arrays `rowIndices` and `nonZeroValues`.
 
 A detailed description of the CSC format can be found [here](http://docs.nvidia.com/cuda/cusparse/index.html#compressed-sparse-column-format-csc).
@@ -413,7 +413,7 @@ Parameters:
 *  `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
-### The following methods create a Value object from NDArrayView. 
+### The following methods create a Value object from NDArrayView.
 
 ***
 ```cs
@@ -427,7 +427,7 @@ Parameters:
 *  `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
 *  `device`: on which device the Value object should be created.
 *  `readOnly`: the Value is read-only if this flag is `true`.
-    
+
 ```cs
 public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
 ```
@@ -463,59 +463,59 @@ Constructs a multi-dimensional value with an associated mask.
 public DataType DataType { get; }
 ```
 
-[DataType](#enum-datatype) of the data contained in `this` Value object.
+[DataType](#enum-datatype) of the data contained in the Value object.
 
 ***
 ```cs
 public DeviceDescriptor Device { get; }
 ```
 
-The descriptor of the device that `this` Value resides on.
+The descriptor of the device that the Value resides on.
 
 ***
 ```cs
 public NDShape Shape { get; }
 ```
 
-The shape of `this` Value.
+The shape of the Value.
 
 ***
 ```cs
 public StroageFormat StorageFormat { get; }
 ```
 
-The storage format of `this` Value.
+The storage format of the Value.
 
 ***
 ```cs
 public bool IsSparse { get; }
 ```
 
-A boolean value indicating whether `this` Value contains data in sparse storage format.
+A boolean value indicating whether the Value contains data in sparse storage format.
 
 ***
 ```cs
 public bool IsReadOnly { get; }
 ```
 
-A boolean value indicating whether `this` Value is read-only.
+A boolean value indicating whether the Value is read-only.
 
 ***
 ```cs
 public int maskedCount { get; }
 ```
 
-The number of masked/invalid values in `this` Value.
+The number of masked/invalid values in the Value.
 
 ***
 ```cs
 public void CopyFrom(Value Source)
 ```
 
-Copies the contents of `source` to `this` Value. The shapes of the `Source`'s data and mask must be identical to `this` Value's data and mask.
+Copies the contents of `source` to the Value. The shapes of the `Source`'s data and mask must be identical to `this` Value's data and mask.
 
 Parameter:
-*  `Source`: The source object from which `this` Value is copied.
+*  `Source`: The source object from which the Value is copied.
 
 ***
 ```cs
@@ -551,7 +551,7 @@ public IList<IList<T>> GetDenseData<T>(Variable outputVariable)
 Gets the data stored in the Value object as a list of sequences with variable length in dense format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<T>, contains a variable number of samples. Each sample consists of a fixed number of elements with type of 'T'. The number of elements is determined by the shape of outputVariable. The number of samples is the count of elements in IList<T> divided by the count of elements of the sample.
 
 Parameter:
-*  `outputVariable`: The variable that `this` Value denotes to. The shape of the variable should match the shape of `this` Value.
+*  `outputVariable`: The variable that the Value denotes to. The shape of the variable should match the shape of the Value.
 
 ***
 ```cs
@@ -561,7 +561,7 @@ public IList<IList<int>> GetOneHotData(Variable outputVariable)
 Gets the data stored in the Value object as a list of sequences with variable length in one-hot vector format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<int>, contains a variable number of samples. Each sample is represented by an index to the one-hot vector. The number of samples is the count of elements in IList<int>.
 
 Parameter:
-*  `outputVariable`: The variable that `this` Value denotes to. The size of the one-hot vector should match that defined in the variable.
+*  `outputVariable`: The variable that the Value denotes to. The size of the one-hot vector should match that defined in the variable.
 
 ***
 ### The following methods will be deprecated soon. Please use GetDenseData() and GetOneHotData() described above.
@@ -574,7 +574,7 @@ public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequen
 Copies the data stored in the Value into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<T>`, contains a variable number of samples. Each sample consists of a fixed number of elements with type of `T`. The number of elements of a sample is determined by the shape of `outputVariable`. The shape of the variable should match the shape of the Value.
 
 Parameters:
-*  `outputVariable`: denotes the shape and dynamic axes when copying data from `this` Value to the `sequences`. 
+*  `outputVariable`: denotes the shape and dynamic axes when copying data from the Value to the `sequences`.
 *  `sequences`: the output buffer used to store the data copied from the Value.
 
 ***
@@ -582,10 +582,10 @@ Parameters:
 public void CopyVariableValueTo(Variable outputVariable, List<List<uint>> sequences
 ```
 
-Copies the data stored in the Value object into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<uint>`, contains a variable number of samples. Each sample is represented by an index pointing to the non-zero value in the one-hot vector. The dimension size of the one-hot vector should match that defined in the `outputVariable`. 
+Copies the data stored in the Value object into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<uint>`, contains a variable number of samples. Each sample is represented by an index pointing to the non-zero value in the one-hot vector. The dimension size of the one-hot vector should match that defined in the `outputVariable`.
 
 Parameters:
-* `outputVariable`: denotes the shape and dynamic axes when copying data from `this` Value to the `sequences`. 
+* `outputVariable`: denotes the shape and dynamic axes when copying data from the Value to the `sequences`.
 * `sequences`: the output buffer used to store the data copied from the Value.
 
 ## class Variable
@@ -598,84 +598,84 @@ The properties of `Variable` that are often used in evaluation include:
 public string Name { get; }
 ```
 
-Name of `this` Variable.
+Name of the Variable.
 
 ***
 ```cs
 public NDShape Shape { get; }
 ```
 
-Shape of `this` Variable.
+Shape of the Variable.
 
 ***
 ```cs
 public DataType DataTye { get; }
 ```
 
-DataType(#enum-datatype) of the data that `this` Variable represents.
+DataType(#enum-datatype) of the data that the Variable represents.
 
 ***
 ```cs
 public VariableKind Kind { get; }
 ```
 
-The [VariableKind](#enum-variablekind) of `this` Variable.
+The [VariableKind](#enum-variablekind) of the Variable.
 
 ***
 ```cs
 public bool IsSparse { get; }
 ```
 
-A boolean value indicating whether `this` Variable denotes sparse data.
+A boolean value indicating whether the Variable denotes sparse data.
 
 ***
 ```cs
 public bool IsInput { get; }
 ```
 
-A boolean value indicating whether `this` Variable is an Input.
+A boolean value indicating whether the Variable is an Input.
 
 ***
 ```cs
 public bool IsOutput { get; }
 ```
 
-A boolean value indicating whether `this` Variable is an Output.
+A boolean value indicating whether the Variable is an Output.
 
 ***
 ```cs
 public bool IsParameter { get; }
 ```
 
-A boolean value indicating whether `this` Variable is a Parameter.
+A boolean value indicating whether the Variable is a Parameter.
 
 ***
 ```cs
 public bool IsConstant { get; }
 ```
 
-A boolean value indicating whether `this` Variable is a Constant.
+A boolean value indicating whether the Variable is a Constant.
 
 ***
 ```cs
 public bool IsPlaceholder { get; }
 ```
 
-A boolean value indicating whether `this` Variable is a Placeholder.
+A boolean value indicating whether the Variable is a Placeholder.
 
 ***
 ```cs
 public IList<Axis> DynamicAxes { get; }
 ```
 
-Returns the dynamic axes of `this` Variable.
+Returns the dynamic axes of the Variable.
 
 ***
 ```cs
 public Function Owner { get; }
 ```
 
-Returns the Function which `this` Variable is an output of. Returns `null` when `this` Variable is not of VariableKind Output.
+Returns the Function which the Variable is an output of. Returns `null` when the Variable is not of VariableKind Output.
 
 ## class DeviceDescriptor
 Denotes a computation device instance.
@@ -687,14 +687,14 @@ The class `DeviceDescriptor` contains the following properties and methods:
 public int Id { get; }
 ```
 
-The Id of `this` device. 
+The Id of the device.
 
 ***
 ```cs
 public DeviceKind Type { get; }
 ```
 
-[DeviceKind](#enum-devicekind) of `this` device.
+[DeviceKind](#enum-devicekind) of the device.
 
 ***
 ```cs
@@ -709,7 +709,7 @@ public static DeviceDescriptor GPUDevice(int deviceId)
 ```
 
 Gets the DeviceDescriptor of the GPU device on the local system with the specified CUDA device ID.
- 
+
 Parameter:
 *  `deviceId`: the CUDA device ID.
 
@@ -719,7 +719,7 @@ public static IList<DeviceDescriptor> AllDevices()
 ```
 
 Gets a list of descriptors of all available/supported devices.
- 
+
 ## class NDShape
 Denotes a multi-dimensional rectangular shape.
 
@@ -765,25 +765,25 @@ Parameter:
 public int Rank { get; }
 ```
 
-The rank of `this` NDShape.
+The rank of the NDShape.
 
 ***
 ```cs
 public IList<int> Dimensions { get; }
 ```
 
-The dimensions of `this` NDShape. 
+The dimensions of the NDShape.
 
 ***
 ```cs
 public int TotalSize { get; }
 ```
 
-The total size of the rectangular shape that `this` Shape denotes.
+The total size of the rectangular shape that the Shape denotes.
 
 ***
 ```cs
-public int this[int key] { get; } 
+public int this[int key] { get; }
 ```
 
 Returns the dimension size of the specified axis.
@@ -793,14 +793,14 @@ Returns the dimension size of the specified axis.
 public int IsUnknown { get; }
 ```
 
-A boolean indicating if `this` shape is the special Unknown shape.
+A boolean indicating if the shape is the special Unknown shape.
 
-*** 
+***
 ```cs
 public int HasInferredDimension { get; }
 ```
 
-A boolean value indicating if the dimension size for any of the axes of `this` shape is unknown/inferred (NDShape.InferredDimension).
+A boolean value indicating if the dimension size for any of the axes of the shape is unknown/inferred (NDShape.InferredDimension).
 
 ***
 ```cs
@@ -854,9 +854,9 @@ Constructs a NDArrayView with the specified storage in sparse CSC format on the 
 
 Parameter:
 *  `viewShape`: the shape of the NDArrayView being created.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`. 
+*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
 *  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix. The specified sparse data must outlive the created NDArrayView object. 
+*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix. The specified sparse data must outlive the created NDArrayView object.
 *  `device`: on which device the NDArrayView object should be created.
 *  `readOnly`: the NDArrayView object is read-only if this flag is `true`.
 
@@ -865,41 +865,41 @@ Parameter:
 public DeviceDescriptor Device
 ```
 
-The DeviceDescriptor of the device that `this` NDArrayView resides on.
+The DeviceDescriptor of the device that the NDArrayView resides on.
 
 ***
 ```cs
 public NDShape Shape
 ```
 
-The shape of `this` NDArrayView.
+The shape of the NDArrayView.
 
 ***
 ```cs
 public DataType DataType
 ```
 
-The DataType of the data that `this` NDArrayView stores.
+The DataType of the data that the NDArrayView stores.
 
 ***
 ```cs
 public StroageFormat StorageFormat
 ```
 
-The storage format of `this` NDArrayView.
+The storage format of the NDArrayView.
 
 ***
 ```cs
 public bool IsSparse
 ```
 
-A boolean value indicating whether `this` NDArrayView contains data in sparse storage format.
+A boolean value indicating whether the NDArrayView contains data in sparse storage format.
 
 ***
 ```cs
 public bool IsReadOnly`
 
-A boolean value indicating whether `this` NDArrayView is read-only.
+A boolean value indicating whether the NDArrayView is read-only.
 
 ***
 ```cs
@@ -964,10 +964,10 @@ Parameter:
 public void ChangeDevice(DeviceDescriptor device)
 ```
 
-Changes the device of `this` NDArrayView to the specified device.
+Changes the device of the NDArrayView to the specified device.
 
 Parameter:
-*  `device`: the target device of `this` NDArrayView object.
+*  `device`: the target device of the NDArrayView object.
 
 ## class Axis
 Denotes an Axis of a [`Variable`](#class-variable). Besides the static axes corresponding to each of the axes of the Variable's shape, Variables of kind 'Input' and any 'Output' Variables dependent on an 'Input' Variable also have 2 additional dynamic axes whose dimensions are known only when the Variable is bound to actual data during compute (viz. sequence axis and batch axis denoting the axis along which multiple sequences are batched)
@@ -979,21 +979,21 @@ The following properties are defined in the class `Axis`
 public string Name { get; }
 ```
 
-Name of `this` Axis. 
+Name of the Axis.
 
 ***
 ```cs
 public bool IsStatic { get; }
 ```
 
-Returns a boolean value indicating whether `this` Axis corresponds to a static axis.
+Returns a boolean value indicating whether the Axis corresponds to a static axis.
 
 ***
 ```cs
 public bool IsDynamic { get; }
 ```
 
-Returns a boolean value indicating whether `this` Axis corresponds to a dynamic axis.
+Returns a boolean value indicating whether the Axis corresponds to a dynamic axis.
 
 ## class Utils
 
@@ -1057,10 +1057,10 @@ enum StorageFormat { Dense, SparseCSC, SparseBlockCol };
 Denotes how Parameters are handled when cloning a Function.
 
 ```cs
-enum ParameterCloningMethod { 
+enum ParameterCloningMethod {
     Share, // Parameters are shared between the Function being cloned and the new clone.
     Clone, // New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned.
-    Freeze // Parameters are cloned and made immutable.   
+    Freeze // Parameters are cloned and made immutable.
 };
 ```
 
