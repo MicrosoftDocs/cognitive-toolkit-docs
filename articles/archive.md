@@ -27,14 +27,14 @@ by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries fo
 
 More information about using EvalDll can be found in the following pages.
 
-* [Model Evaluation using cntk.exe](./CNTK-Evaluation-using-cntk.exe)
-* [EvalDLL Evaluation Overview](.//EvalDLL-Evaluation-Overview)
-* [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows)
-* [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux)
-* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi)
-* [EvalDLL Managed API](./EvalDll-Managed-API)
-* [EvalDLL Native API](./EvalDll-Native-API)
-* [EvalDLL Evaluate Hidden Layers](./CNTK-Evaluate-Hidden-Layers)
-* [EvalDLL Evaluate Image Transforms](.//CNTK-Evaluate-Image-Transforms)
-* [EvalDLL Evaluate Multiple Models](./CNTK-Evaluate-Multiple-Models)
+* [Model Evaluation using cntk.exe](./CNTK-Evaluation-using-cntk.exe.md)
+* [EvalDLL Evaluation Overview](.//EvalDLL-Evaluation-Overview.md)
+* [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows.md)
+* [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux.md)
+* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
+* [EvalDLL Managed API](./EvalDll-Managed-API.md)
+* [EvalDLL Native API](./EvalDll-Native-API.md)
+* [EvalDLL Evaluate Hidden Layers](./CNTK-Evaluate-Hidden-Layers.md)
+* [EvalDLL Evaluate Image Transforms](.//CNTK-Evaluate-Image-Transforms.md)
+* [EvalDLL Evaluate Multiple Models](./CNTK-Evaluate-Multiple-Models.md)
 

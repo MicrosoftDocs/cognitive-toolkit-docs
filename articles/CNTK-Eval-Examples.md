@@ -1,5 +1,5 @@
 ---
-title:   Model eval examples
+title:   Model evaluation examples
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/22/2017
@@ -11,8 +11,7 @@ ms.devlang:   csharp, cpp
 
 # Model evaluation examples
 
-## Eval samples in CNTK binary download package 
-The CNTK binary download package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) includes samples for using the eval library in C++, C#/.NET and Python.
+Examples for using the CNTK Eval library in C++, C#/.NET and Python can be found in [Examples/Evaluation](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation) folder in Github, as well as in the CNTK binary download package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## CNTK Library Eval C++/C# Examples
 The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryEvalExamples.sln) contains code samples demonstrating how to use the CNTK Library Eval API in C++ and C#. 
@@ -27,7 +26,7 @@ On Windows,
 - The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](./Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\..\X64\CNTKLibraryCSEvalCPUOnlyExamples.Release\CNTKLibraryCSEvalCPUOnlyExamples.exe.
  
-On Linux, only C++ is supported. Please refer to Makefile for building samples. The target name CNTKLIBRARY_CPP_EVAL_EXAMPLES is used to build CNTKLibraryCPPEvalExamples. 
+On Linux, only C++ is supported. Please refer to the `Makefile` for building samples. The target name CNTKLIBRARY_CPP_EVAL_EXAMPLES is used to build CNTKLibraryCPPEvalExamples.
  
 ## Examples for evaluating multiple requests in parallel
 The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryEvalExamples.sln) includes sample code to evaluate multiple evaluation requests in parallel. The sample code also shows how to share model parameters among multiple instances of the same model to reduce memory usage.

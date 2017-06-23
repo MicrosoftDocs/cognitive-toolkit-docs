@@ -1,5 +1,5 @@
 ---
-title:   CNTK Library Evaluation on Linux
+title:   Model Evaluation on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/22/2017
