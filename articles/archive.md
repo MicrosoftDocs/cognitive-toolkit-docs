@@ -2,7 +2,7 @@
 title:   CNTK Archive Page
 author:    wolfma61
 ms.author:   wolfma
-ms.date:   06/12/2017
+ms.date:   06/22/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   archive
 ms.service:  cognitive-services
@@ -21,20 +21,20 @@ This page lists documentation pages which have been moved out of the main docume
 
 ## Model Evaluation using EvalDll
 
-Prior to the CNTK 2.0 version, the CNTK EvalDLL is used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
+Prior to the CNTK 2.0 version, the CNTK EvalDLL was used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created 
 by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features. 
 
 More information about using EvalDll can be found in the following pages.
 
-* [Model Evaluation using cntk.exe](/cognitive-toolkit/CNTK-Evaluation-using-cntk.exe)
-* [EvalDLL Evaluation Overview](/cognitive-toolkit/EvalDLL-Evaluation-Overview)
-* [EvalDLL evaluation on Windows](/cognitive-toolkit/EvalDLL-Evaluation-on-Windows)
-* [EvalDLL evaluation on Linux](/cognitive-toolkit/EvalDLL-Evaluation-on-Linux)
-* [EvalDLL evaluation in Azure](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
-* [EvalDLL Managed API](/cognitive-toolkit/EvalDll-Managed-API)
-* [EvalDLL Native API](/cognitive-toolkit/EvalDll-Native-API)
-* [EvalDLL Evaluate Hidden Layers](/cognitive-toolkit/CNTK-Evaluate-Hidden-Layers)
-* [EvalDLL Evaluate Image Transforms](/cognitive-toolkit/CNTK-Evaluate-Image-Transforms)
-* [EvalDLL Evaluate Multiple Models](/cognitive-toolkit/CNTK-Evaluate-Multiple-Models)
+* [Model Evaluation using cntk.exe](./CNTK-Evaluation-using-cntk.exe)
+* [EvalDLL Evaluation Overview](.//EvalDLL-Evaluation-Overview)
+* [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows)
+* [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux)
+* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi)
+* [EvalDLL Managed API](./EvalDll-Managed-API)
+* [EvalDLL Native API](./EvalDll-Native-API)
+* [EvalDLL Evaluate Hidden Layers](./CNTK-Evaluate-Hidden-Layers)
+* [EvalDLL Evaluate Image Transforms](.//CNTK-Evaluate-Image-Transforms)
+* [EvalDLL Evaluate Multiple Models](./CNTK-Evaluate-Multiple-Models)
 
