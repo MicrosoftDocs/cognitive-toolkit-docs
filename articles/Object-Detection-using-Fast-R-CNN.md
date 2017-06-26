@@ -295,7 +295,7 @@ For the negative images you do not need to create any annotations. For the other
 
 ### Train on custom dataset
 
-After annotating your dataset using VoTT or the A1-A3 scripts you will need to add your dataset to `PARAMETERS.py`before running Fast R-CNN:
+Before running CNTK Fast R-CNN using scripts A1-A3 you need to add your data set to `PARAMETERS.py`:
 
 * Set `dataset = "CustomDataset"`
 * Add the parameters for your data set under the Python class `CustomDataset`. You can start by copying the parameters from `GroceryParameters`
