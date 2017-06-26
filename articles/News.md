@@ -1,8 +1,8 @@
 ---
 title:   News
-author:    chrisbasoglu
-ms.author:   cbasoglu
-ms.date:   06/01/2017
+author:    chazhang
+ms.author:   chazhang
+ms.date:   06/26/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -12,6 +12,8 @@ ms.devlang:   NA
 # News
 
 ## June 2017
+***2017-06-26.* A great class for getting started with both Deep Learning and CNTK, [Deep Learning Explained](https://www.edx.org/course/deep-learning-explained-microsoft-dat236x) is now available on edX.**
+
 ***2017-06-01.* CNTK 2.0**  
 The first production release of Cognitive Toolkit 2.0.
 
