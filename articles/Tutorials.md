@@ -55,6 +55,19 @@ Additional Python tutorials:
 [!code[Main](index.xml?highlight=2,5-7,9-) "This includes the whole file with lines 2,5-7,9- highlighted"]
 -->
 
-[!code(source/test.bat) "1"]
-[!code(./source/test.bat) "1"]
-[!code(/source/test.bat) "1"]
+[!code(source/test.bat)]
+
+[!code-batchfile(source/test.bat)]
+
+[!code(./source/test.bat)]
+
+[!code-batchfile(./source/test.bat)]
+
+[!code[blah](source/test.bat)]
+
+[!code-batchfile[blah](source/test.bat)]
+
+[!code[blah](./source/test.bat)]
+
+[!code-batchfile[blah](./source/test.bat)]
+
