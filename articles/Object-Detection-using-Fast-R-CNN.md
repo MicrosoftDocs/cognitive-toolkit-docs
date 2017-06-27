@@ -32,10 +32,10 @@ ms.devlang:   brainscript
 
 The above are examples images and object annotations for the grocery data set (left) and the Pascal VOC data set (right) used in this tutorial.
 
-`Fast R-CNN` is an object detection algorithm proposed by `Ross Girshick` in 2015. 
+_Fast R-CNN_ is an object detection algorithm proposed by _Ross Girshick_ in 2015. 
 The paper is accepted to ICCV 2015, and archived at https://arxiv.org/abs/1504.08083. 
 Fast R-CNN builds on previous work to efficiently classify object proposals using deep convolutional networks. 
-Compared to previous work, Fast R-CNN employs a `region of interest pooling` scheme that allows to reuse the computations from the convolutional layers.
+Compared to previous work, Fast R-CNN employs a _region of interest pooling_ scheme that allows to reuse the computations from the convolutional layers.
 
 The following are the main resources for CNTK Fast R-CNN:
 

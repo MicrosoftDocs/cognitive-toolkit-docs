@@ -112,7 +112,7 @@ The script will inspect your system and determine the prerequisites which are mi
 
 The script will download needed components from the web, therefore a connection to the Internet is required. It will execute these components, and according to the setting of UAC (User Account Control) on your system, you will be asked to acknowledge the execution and installation of these components.
 
-Depending on the speed of your system and your Internet connection, the whole process can take between 20 and 30 minutes. Especially the Anaconda3 install is very time consuming without any progress indication, please be patient. The downloaded files from the internet are being cache in the directory [c:\installCacheCntk] and allows you to rerun the installer without going through the component download again. In case of any problems you can restart the installer again, it will not reinstall already successfully installed components. **Note:** If the installer is interrupted you might need to restart PowerShell in order to propagate the new environment variables.
+Depending on the speed of your system and your Internet connection, the whole process can take between 20 and 30 minutes. Especially the Anaconda3 install is very time consuming without any progress indication, please be patient. The downloaded files from the internet are being cached in the directory `c:\installCacheCntk` and allows you to rerun the installer without going through the component download again. In case of any problems you can restart the installer again, it will not reinstall already successfully installed components. **Note:** If the installer is interrupted you might need to restart PowerShell in order to propagate the new environment variables.
 
 ### Build and test
 
