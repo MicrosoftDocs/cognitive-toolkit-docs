@@ -118,18 +118,6 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
 ```
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
 
-## SWIG 
-
-If you want to take advantage of CNTK from Python, you will need to install [SWIG](http://swig.org). SWIG is also a requirement to build the CNTK Evaluation libraries (for C#/.NET and C++).
-
-Please download the version `SWIG 3.0.10` from [this site](https://sourceforge.net/projects/swig/files/swigwin/).
-
-Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.0.10` and set the environment variable `SWIG_PATH` pointing to that location, e.g.: 
-```
-    setx SWIG_PATH C:\local\swigwin-3.0.10
-```
-Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
-
 ## GPU Specific Packages
 
 This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs.
@@ -189,6 +177,18 @@ This completes the GPU specific section
 
 ----------
 
+## OPTIONAL. SWIG.
+
+If you want to take advantage of CNTK from Python, you will need to install [SWIG](http://swig.org). SWIG is also a requirement to build the CNTK Evaluation libraries (for C#/.NET or Java).
+
+Please download the version `SWIG 3.0.10` from [this site](https://sourceforge.net/projects/swig/files/swigwin/).
+
+Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.0.10` and set the environment variable `SWIG_PATH` pointing to that location, e.g.: 
+```
+    setx SWIG_PATH C:\local\swigwin-3.0.10
+```
+Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
+
 ## OPTIONAL. OpenCV
 
 If you want to build the **CNTK Image Reader**, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/) as well as support for the *ZIP file format* (see the next section).
@@ -216,7 +216,7 @@ Quick installation check: If you followed the instruction above and used the sam
 
 ## OPTIONAL. Anaconda Python Installation
 
-If you plan on using CNTK with Python you will need a Python environment. We use Anaconda Python for our default Python installation. 
+If you plan to build CNTK with Python support, install [SWIG](#optional-swig) if you have not done so yet. Also, you will need a Python environment. We use Anaconda Python for our default Python installation. 
 
 If you do not have an Anaconda installation: install [Anaconda Python for Windows](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe). 
 You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Anaconda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
@@ -280,7 +280,7 @@ The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK
 ```
 
 ## OPTIONAL. Java
-To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
+To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
 
 Set the environment variable JAVA_HOME to point to the directory of Java installation. The following setting assumes that you have installed JDK 1.8.0_131 to C:\local\jdk1.8.0_131:
 ```
