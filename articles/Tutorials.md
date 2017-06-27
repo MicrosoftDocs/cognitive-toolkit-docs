@@ -43,6 +43,7 @@ Additional Python tutorials:
 * [Tutorial II](./Tutorial2/Tutorial2): Convolutional Networks with Batch Normalization for MNIST
 --->
 
+<!--
 [!code-csharp[Main](Program.cs)]
 
 [!code[Main](Program.cs#L12-L16 "This is source file")]
@@ -52,3 +53,9 @@ Additional Python tutorials:
 [!code-javascript[Main](../jquery.js?name=testsnippet)]
 [!code[Main](index.xml?range=2,5-7,9-) "This includes the lines 2, 5, 6, 7 and lines 9 to the last line"]
 [!code[Main](index.xml?highlight=2,5-7,9-) "This includes the whole file with lines 2,5-7,9- highlighted"]
+-->
+
+[!code[One](source/test.bat) "xsource/test.bat"]
+
+[!code[One](source/test.bat?name=one) "xsource/test.bat"]
+[!code[One](source/test.bat#name=one) "xsource/test.bat"]
