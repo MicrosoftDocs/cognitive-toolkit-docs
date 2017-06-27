@@ -81,5 +81,9 @@ Additional Python tutorials:
 
 [!code-batchfile[blah](./source/test.bat#one)]
 
-[!code-batchfile[blah](./source/test.bat?one)]
+[!code-batchfile[blah](./source/test.bat?name=one)]
+
+[!code[blah](./source/test.bat#one)]
+
+[!code[blah](./source/test.bat?name=one)]
 
