@@ -42,3 +42,13 @@ Additional Python tutorials:
 # Older deprecated NDL tutorial for reference purposes only
 * [Tutorial II](./Tutorial2/Tutorial2): Convolutional Networks with Batch Normalization for MNIST
 --->
+
+[!code-csharp[Main](Program.cs)]
+
+[!code[Main](Program.cs#L12-L16 "This is source file")]
+[!code-vb[Main](../Application/Program.vb#testsnippet "This is source file")]
+
+[!code[Main](index.xml?start=5&end=9)]
+[!code-javascript[Main](../jquery.js?name=testsnippet)]
+[!code[Main](index.xml?range=2,5-7,9-) "This includes the lines 2, 5, 6, 7 and lines 9 to the last line"]
+[!code[Main](index.xml?highlight=2,5-7,9-) "This includes the whole file with lines 2,5-7,9- highlighted"]
