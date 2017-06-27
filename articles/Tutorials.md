@@ -71,4 +71,27 @@ Additional Python tutorials:
 
 [!code-batchfile[blah](./source/test.bat)]
 
+[!code-dos[blah](./source/test.bat)]
+
+[!code-bat[blah](./source/test.bat)]
+
+[!code-cmd[blah](./source/test.bat)]
+
 [!code-csharp[Main](Program.cs)]
+
+[!code-batchfile[blah](./source/test.bat#one)]
+
+[!code-dos[blah](./source/test.bat#one)]
+
+[!code-bat[blah](./source/test.bat#one)]
+
+[!code-cmd[blah](./source/test.bat#one)]
+
+[!code-batchfile[blah](./source/test.bat?one)]
+
+[!code-dos[blah](./source/test.bat?one)]
+
+[!code-bat[blah](./source/test.bat?one)]
+
+[!code-cmd[blah](./source/test.bat?one)]
+
