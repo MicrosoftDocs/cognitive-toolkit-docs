@@ -23,9 +23,9 @@ In this Beta the Microsoft Cognitive Toolkit is only supporting NVIDIA Cuda 7.5 
 
 ## CNTK Evaluation library. NuGet package 
 
-A new Nuget package with the latest eval DLL (managed and native) is [available](../NuGet-Package.md). The `EvaluateRgbImage` function in the [managed Eval API](../EvalDll-Managed-API.md) improves speed of image evaluation. 
+A new NuGet package with the latest eval DLL (managed and native) is [available](../NuGet-Package.md). The `EvaluateRgbImage` function in the [managed Eval API](../EvalDll-Managed-API.md) improves speed of image evaluation. 
 
- **IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta5```.
+ **IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta5```.
 
 ## Performance
 

@@ -58,7 +58,7 @@ These are the current breaking changes:
     - test configuration
 
 ## C#/.NET CNTK Library API
-- New file names of CNTK binaries. It only affects users who directly use CNTK libraries from binary drop packages. No changes are required for users who use Nuget packages for C++/C#.
+- New file names of CNTK binaries. It only affects users who directly use CNTK libraries from binary drop packages. No changes are required for users who use NuGet packages for C++/C#.
 
 - The following C# methods have been moved to new classes:
 	- CNTKLib.Alias() => Function.Alias()

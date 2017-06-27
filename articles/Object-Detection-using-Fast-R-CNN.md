@@ -246,8 +246,30 @@ To run on the Pascal VOC data make sure that in `PARAMETERS.py` `dataset` is set
   [fastRCNN/pascal_voc.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastRCNN/pascal_voc.py) and 
   [fastRCNN/voc_eval.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastRCNN/voc_eval.py) 
   to avoid encoding errors.
-
+  
 ## Train on your own data
+
+### Prepare a custom dataset
+
+**Option #1: Visual Object Tagging Tool (Recommended)**
+
+The [Visual Object Tagging Tool (VOTT)](https://github.com/CatalystCode/VOTT) is a cross platform annotation tool for tagging video and image assets.
+
+![Vott Screen Shot](https://github.com/CatalystCode/VOTT/blob/master/media/4_Tagging_Job.jpg)
+
+VOTT provides the following **features**:
+
+- Computer-assisted tagging and tracking of objects in videos using the [Camshift tracking algorithm](http://opencv.jp/opencv-1.0.0_org/docs/papers/camshift.pdf).
+- Exporting tags and assets to CNTK Fast-RCNN format for training an object detection model.
+- Running and validating a trained CNTK object detection model on new videos to generate stronger models.
+
+How to annotate with VOTT:
+
+1. Download the latest [Release](https://github.com/CatalystCode/VOTT/releases)
+2. Follow the [Readme](https://github.com/CatalystCode/VOTT/blob/master/README.md) to run a tagging job
+3. After tagging Export tags to the dataset directory
+
+**Option #2: Using Annotation Scripts**
 
 To train a CNTK Fast R-CNN model on your own data set we provide two scripts to annotate rectangular regions on images and assign labels to these regions. 
 The scripts will store the annotations in the correct format as required by the first step of running Fast R-CNN (`A1_GenerateInputROIs.py`).
@@ -270,6 +292,8 @@ For the negative images you do not need to create any annotations. For the other
   * The script loads these manually annotated rectangles for each image, displays them one-by-one, 
   and asks the user to provide the object class by clicking on the respective button to the left of the window. 
   Ground truth annotations marked as either "undecided" or "exclude" are fully excluded from further processing.
+
+### Train on custom dataset
 
 Before running CNTK Fast R-CNN using scripts A1-A3 you need to add your data set to `PARAMETERS.py`:
 

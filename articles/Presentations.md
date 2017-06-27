@@ -19,7 +19,7 @@ Here you can find CNTK and Deep Learning related presentations:
 
 * [GTC 2017](https://gputechconf2017.smarteventscloud.com/connect/sessionDetail.ww?SESSION_ID=110233) - May 8, 2017: *Sayan Pathak* presented **Scalable deep learning with Microsoft Cognitive Toolkit**. Presentation links - [Overview](http://www.cntk.ai/Tutorials/GTC2017/S7129_Scalable_Deep_Learning_with_Microsoft_Cognitive_Toolkit_SayanPathak.pdf), [Tutorial](http://www.cntk.ai/Tutorials/GTC2017/GTC_2017_05_CNTK_Tutorials_Shared.pdf).
 
-* Build 2017 - May 9-11, 2017: *Sayan Pathak* presented **Deep learning with Cognitive Toolkit**. [Presentation](http://www.cntk.ai/Tutorials/Build2017/Build_2017_05_CNTK_Overview_v2.pdf) 
+* Build 2017 - May 9-11, 2017: *Sayan Pathak* presented **Deep learning with Cognitive Toolkit**. [Presentation](http://www.cntk.ai/Tutorials/Build2017/Build_2017_05_CNTK_Overview_v2.pdf), [Video](https://channel9.msdn.com/Events/Build/2017/B8038)
 
 ## Upcoming
 

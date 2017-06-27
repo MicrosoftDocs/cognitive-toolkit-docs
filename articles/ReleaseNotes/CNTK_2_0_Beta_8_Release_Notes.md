@@ -49,7 +49,7 @@ The structure of [CNTK NuGet packages](../NuGet-Package.md) has changed with two
 * (*New*) `CNTK.GPU`. Contains [CNTK Library C# Eval API](../CNTK-Library-Evaluation-on-Windows.md), and used for GPU enabled machines.
 * `Microsoft.Research.CNTK.CpuEval-mkl`. Contains [CNTK EvalDll API](../EvalDll-Evaluation-Overview.md). It supports CPU only.  
 
-**IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta8```.
+**IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta8```.
 
 ## Custom MKL Library v.3
 

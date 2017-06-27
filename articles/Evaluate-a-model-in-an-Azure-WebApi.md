@@ -70,9 +70,9 @@ We recommend you start from this solution, since we already added all the code w
 These are the changes we performed so far. We still need to get the CNTK Eval functionality included in the project and 
 need a model to evaluate. 
 
-Add the CNTK Eval functionality to the project. This is available as a Nuget package. In VS select `Tools -> Manage Nuget Packages`, pick `Nuget.org` as the online source, search for `CNTK` and install the latest package version.
+Add the CNTK Eval functionality to the project. This is available as a NuGet package. In VS select `Tools -> NuGet Package Manager`, pick `nuget.org` as the online source, search for `CNTK` and install the latest package version.
 
-![Nuget](./pictures/EvaluateWebApi/pic1.png)
+![NuGet](./pictures/EvaluateWebApi/pic1.png)
 
 Now we need a model to evaluate. Download the [ResNet_18.model](https://cntk.ai/resnet/ResNet_18.model) and save it in the directory `CNTK\Models` in the solution. The model file needs also to be included in the solution (`Project -> Add existing Item`)
 

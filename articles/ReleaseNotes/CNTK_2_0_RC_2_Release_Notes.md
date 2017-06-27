@@ -52,5 +52,5 @@ The updated APIs are described [here](../CNTK-Library-Managed-API.md).
 
 A new set of NuGet Packages is provided with this Release. 
 
-**IMPORTANT!** For Visual Studio: In the *Manage Nuget Packages* window change the default option *Stable Only* to *Include Prerelease*. Otherwise the release candidate package of CNTK will not be visible. This Package version is ```2.0.0-rc2```.
+**IMPORTANT!** For Visual Studio: In the *Manage NuGet Packages* window change the default option *Stable Only* to *Include Prerelease*. Otherwise the release candidate package of CNTK will not be visible. This Package version is ```2.0.0-rc2```.
 

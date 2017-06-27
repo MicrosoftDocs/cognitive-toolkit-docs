@@ -14,13 +14,13 @@ ms.devlang:   csharp, cpp
 Currently, CNTK provides libraries in C++, C#/.NET, Python and Java for loading and evaluating models on Windows.
 
 ## Using C#/.NET Managed API
-The CNTK Library provides a managed (.NET) library for evaluation of CNTK models on CPU and GPU using C# and other .NET languages. The Nuget package CNTK.CPUOnly is designed for execution on CPU, and the CNTK.GPU is designed for execution on devices with NVIDIA GPU. Please refer to the [NuGet Package](./NuGet-Package.md) page about details how to install CNTK Library NuGet Packages. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The CNTK Library provides a managed (.NET) library for evaluation of CNTK models on CPU and GPU using C# and other .NET languages. The NuGet package CNTK.CPUOnly is designed for execution on CPU, and the CNTK.GPU is designed for execution on devices with NVIDIA GPU. Please refer to the [NuGet Package](./NuGet-Package.md) page about details how to install CNTK Library NuGet Packages. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 
 The CNTK Library Managed API allows you to load and evaluate pre-trained models on specified devices (CPU or GPU). It also provides different ways to help you to prepare input and output data in the dense, one-hot vector or sparse CSC format. The input data can be a single sample, batch of multiple samples, a sequence of samples, or a batch of sequences with variable lengths. A detailed description about batch and sequence format can be found at the page [CNTK Concepts](https://cntk.ai/pythondocs/sequence.html#cntk-concepts). After evaluation, the API provides convenient methods to get results.
 
 ### C#/.NET Programming Guide
 The usual steps for model evaluation using CNTK Library Managed API include:
-  1. Install the appropriate Nuget package (CPU or GPU depending on usage) to your. Details are described in the [CNTK NuGet Package](./NuGet-Package.md).
+  1. Install the appropriate NuGet package (CPU or GPU depending on usage) to your. Details are described in the [CNTK NuGet Package](./NuGet-Package.md).
   2. Load the model by [Function.Load()](./CNTK-Library-Managed-API.md#class-function). The returned value is a [`Function`](./CNTK-Library-Managed-API.md#class-function) instance referring to the loaded model.
   3. If needed, get inputs and outputs of the loaded model by calling the properties [`Arguments`](./CNTK-Library-Managed-API.md#class-function), [`Output`](./CNTK-Library-Managed-API.md#class-function) or [`Outputs`](./CNTK-Library-Managed-API.md#class-function) of the Function instance returned by Load(). The inputs and outputs are represented as [`Variable`](./CNTK-Library-Managed-API.md#class-variable). Further information about each individual input or output, e.g. [`Name`](./CNTK-Library-Managed-API.md#class-variable) or [`Shape`](./CNTK-Library-Managed-API.md#class-variable) can be found by calling corresponding properties of the Variable.
   4. For each input, prepare input data for evaluation. Depending on usage, input data might consist of a single sample, batch of multiple samples, a sequence of samples, or a batch of sequences with variable length. Regarding storage, input data can be in the dense format, one-hot vector, or sparse CSC format. The [`Value`](./CNTK-Library-Managed-API.md#class-value) object is used to represent the input data with different contents and formats. The CNTK API provides different methods to easily create the Value object from plain user data.
@@ -44,12 +44,12 @@ If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION
 ## Using C++
 The CNTK Library C++ API supports model evaluation in C++ applications. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 
-The CNTK Nuget package CNTK.CPUOnly and CNTK.GPU also contain C++ CNTK Library. By using Nuget packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
+The CNTK NuGet package CNTK.CPUOnly and CNTK.GPU also contain C++ CNTK Library. By using NuGet packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
 
 ### C++ Programming Guide
 The following steps describe how to use the C++ CNTK Library for model evaluation.   
 
-1. Link the `Cntk.Core-<VERSION>.lib` import library into the application. This step can be omitted if you use the Nuget package.
+1. Link the `Cntk.Core-<VERSION>.lib` import library into the application. This step can be omitted if you use the NuGet package.
 2. Include the evaluation header file "CNTKLibrary.h".    
 3. Load the model by `CNTK::Function::Load()`. The returned Function object represents the computation graph of the model.
 4. Prepare data for each input variable. You can use `CNTK::Value::CreateBatch()`, `CNTK::Value::CreateSequence()`, or `CNTK::Value::CreateBatchOfSequences()` to create a Value object from your input data representing a batch of samples, a sequence of samples, or a batch of sequences of samples respectively.

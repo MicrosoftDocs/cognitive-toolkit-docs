@@ -60,5 +60,5 @@ The following updates are introduced to Python API:
 
 A new set of NuGet Packages is provided with this Release. 
 
-**IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*.
+**IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*.
 After selecting the appropriate NuGet package to install, use the version selector on the right to explicitly select package version `2.0.0-beta10`.

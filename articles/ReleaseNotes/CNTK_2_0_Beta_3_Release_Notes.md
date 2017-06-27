@@ -21,7 +21,7 @@ NCCL library supports Linux system only. NCCL can be enabled for those who build
 
 ## CNTK Evaluation library. NuGet package
 
-This Release features NuGet package for CNTK Evaluation library. **IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta3```.
+This Release features NuGet package for CNTK Evaluation library. **IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta3```.
 
 ## Stability Improvements
 We continue fine tuning new features and fixing different bugs - thank you once again for the constant feedback. You are not required to adopt your code or models to take an advantage of these improvements.

@@ -428,6 +428,7 @@ Parameters:
 *  `device`: on which device the Value object should be created.
 *  `readOnly`: the Value is read-only if this flag is `true`.
 
+***
 ```cs
 public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
 ```
