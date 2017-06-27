@@ -6,7 +6,7 @@ ms.date:   06/27/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
-ms.devlang:   brainscript
+ms.devlang:   brainscript, python
 ---
 
 # Object  detection using Fast R-CNN
