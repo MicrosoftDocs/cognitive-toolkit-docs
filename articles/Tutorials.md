@@ -81,17 +81,5 @@ Additional Python tutorials:
 
 [!code-batchfile[blah](./source/test.bat#one)]
 
-[!code-dos[blah](./source/test.bat#one)]
-
-[!code-bat[blah](./source/test.bat#one)]
-
-[!code-cmd[blah](./source/test.bat#one)]
-
 [!code-batchfile[blah](./source/test.bat?one)]
-
-[!code-dos[blah](./source/test.bat?one)]
-
-[!code-bat[blah](./source/test.bat?one)]
-
-[!code-cmd[blah](./source/test.bat?one)]
 
