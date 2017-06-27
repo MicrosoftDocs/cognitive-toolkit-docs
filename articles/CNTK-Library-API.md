@@ -34,7 +34,7 @@ Currently the best source of API documentation is inline in the API header file 
 
 ## C#/.NET API
 
-The CNTK Library Managed API exposes Evaluation related APIs for developers using C# or other .NET languages. It is provided as Nuget packages. The Nuget package CNTK.CPUOnly is for CPU only devices, and the CNTK.GPU supports both CPU and NVIDIA GPU.
+The CNTK Library Managed API exposes Evaluation related APIs for developers using C# or other .NET languages. It is provided as NuGet packages. The NuGet package CNTK.CPUOnly is for CPU only devices, and the CNTK.GPU supports both CPU and NVIDIA GPU.
 
 For details regarding the CNTK Library managed API, please refer to the [CNTK Library Managed API](./CNTK-Library-Managed-API.md) page.
 

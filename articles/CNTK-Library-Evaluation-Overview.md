@@ -22,6 +22,6 @@ The following pages provide detailed information about model evaluation using CN
 * [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows.md)
 * [CNTK-library evaluation on Linux](./CNTK-Library-Evaluation-on-Linux.md)
 * [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python.md)
-* [NuGet-Packages](./NuGet-Package.md)
+* [NuGet Packages](./NuGet-Package.md)
 * [Evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
 

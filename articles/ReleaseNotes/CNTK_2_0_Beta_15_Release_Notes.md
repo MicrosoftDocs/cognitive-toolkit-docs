@@ -64,7 +64,7 @@ We have made the following updates to the [Layers Library](https://cntk.ai/pytho
 
 A new set of NuGet Packages is provided with this Release. 
 
-**IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta15```.
+**IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta15```.
 
 ## Bug fixes
 

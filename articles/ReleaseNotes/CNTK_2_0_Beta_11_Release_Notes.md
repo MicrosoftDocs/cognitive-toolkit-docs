@@ -51,7 +51,7 @@ This release contains the following **breaking changes**:
 
 A new set of NuGet Packages is provided with this Release. 
 
-**IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta11```.
+**IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta11```.
 
 **IMPORTANT!** NuGet package in this Release contains a **breaking change** related to Assembly Strong Name enabling. See *Breaking changes* section in the beginning of these Release Notes. 
 

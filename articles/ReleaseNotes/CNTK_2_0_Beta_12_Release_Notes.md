@@ -61,9 +61,9 @@ The following is added to CNTK C++ API:
 ## CNTK NuGet package
 
 A new set of NuGet Packages is provided with this Release. The packages have the following new features:
-* CNTK V2 C++ Library is now published as a part of Nuget packages.
-* `CNTK.GPU` and `CNTK.CPUOnly` Nuget packages now contain header files, libraries and all dependent dll libraries required to use the C++ library for training and evaluation. Both debug and release builds are supported. 
+* CNTK V2 C++ Library is now published as a part of NuGet packages.
+* `CNTK.GPU` and `CNTK.CPUOnly` NuGet packages now contain header files, libraries and all dependent dll libraries required to use the C++ library for training and evaluation. Both debug and release builds are supported. 
 
-**IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta12```.
+**IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the packages will not be visible. The Package version should be ```2.0-beta12```.
 
 **IMPORTANT!** NuGet package in this Release contains a **breaking change** related to the way CNTK libraries are digitally signed. See *Breaking changes* section in the beginning of these Release Notes. 

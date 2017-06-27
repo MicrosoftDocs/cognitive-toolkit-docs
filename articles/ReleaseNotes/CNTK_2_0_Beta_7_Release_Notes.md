@@ -41,6 +41,6 @@ We have made some changes and improvements in CNTK Backend:
 
 ## CNTK Evaluation library. NuGet package 
 
-A new Nuget package with the latest eval DLL (managed and native) is [available](../NuGet-Package.md). 
+A new NuGet package with the latest eval DLL (managed and native) is [available](../NuGet-Package.md). 
 
- **IMPORTANT!** In Visual Studio *Manage Nuget Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta7```.
+ **IMPORTANT!** In Visual Studio *Manage NuGet Packages* Window change the default option *Stable Only* to *Include Prerelease*. Otherwise the package will not be visible. The Package version should be ```2.0-beta7```.

@@ -11,7 +11,7 @@ ms.devlang:   csharp, cpp
 
 # EvalDLL  evaluation on Windows
 
-The EvalDll library on Windows is provided both as C++ and C# library. A NuGet package is also available at Nuget.org. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The EvalDll library on Windows is provided both as C++ and C# library. A NuGet package is also available at nuget.org. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 
 ## Using the EvalDll library
 The EvalDll library enables programmatic model evaluation on CPU (GPU is not supported).  
@@ -59,7 +59,7 @@ The usage pattern for the managed wrapper is simple:
 There are several [examples](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CSEvalClient) of performing a programmatic CNTK model evaluation in C# inside the CSEvalClient project. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for how to build and run examples.
 
 ## NuGet Package
-There is currently a NuGet package at Nuget.org (search for CNTK) that provides both the native and managed versions for Debug and Release for the CNTK evaluation libraries (CPU only using MKL). With the NuGet it is possible to simply add the CNTK Eval NuGet to a .Net or Win32 project and call the APIs.
+There is currently a NuGet package at nuget.org (search for CNTK) that provides both the native and managed versions for Debug and Release for the CNTK evaluation libraries (CPU only using MKL). With the NuGet it is possible to simply add the CNTK Eval NuGet to a .Net or Win32 project and call the APIs.
 Please refer to the [NuGet Package](./NuGet-Package.md) page for details on how to get started with CNTK and NuGet.
 
 If you do not want to use NuGet Package, you can add `Cntk.Eval.Wrapper-<VERSION>.dll` as reference to your project. Please make sure in this case that the path to the `Cntk.Eval.Wrapper` DLL and its [dependencies](#shipping-evaldll-library-with-your-windows-application) below are included in the search path of DLLs for your application.
