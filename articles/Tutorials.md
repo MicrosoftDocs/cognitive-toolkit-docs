@@ -71,3 +71,4 @@ Additional Python tutorials:
 
 [!code-batchfile[blah](./source/test.bat)]
 
+[!code-csharp[Main](Program.cs)]
