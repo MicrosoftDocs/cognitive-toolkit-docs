@@ -181,7 +181,5 @@
 ## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/CNTK-1bit-SGD-License)
 ## [Archive](/cognitive-toolkit/archive)
-# [Blogs]
-## [Recurrent Neural Networks with CNTK and applications to the world of ranking](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/08/recurrent-neural-networks-with-cntk-and-applications-to-the-world-of-ranking/)
 # [FAQ](/cognitive-toolkit/CNTK-FAQ)
 # [Feedback](/cognitive-toolkit/Feedback-Channels)
