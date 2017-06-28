@@ -28,7 +28,9 @@
 ### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
 ### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
+
 # [Examples](/cognitive-toolkit/Examples)
+
 # Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## [BrainScript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
@@ -120,22 +122,13 @@
 ### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-Models-in-BrainScript)
 ### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-BrainScript)
 ### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-BrainScript)
-### Recipes / Concepts
+### Recipes
 #### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
-### [Deep Crossing on CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/08/deep-crossing-on-cntk/)
-### [Sequence to Sequence – Deep Recurrent Neural Networks in CNTK – Part 1](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-1/)
-### [Sequence to Sequence – Deep Recurrent Neural Networks in CNTK – Part 2 – Machine Translation](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/11/sequence-to-sequence-deep-recurrent-neural-networks-in-cntk-part-2-machine-translation/)
 ### [GRUs on CNTK with BrainScript](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/08/grus-on-cntk-with-brainscript/)
-
 ## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
 ## [CNTK model format](/cognitive-toolkit/CNTK-model-format)
-
-
-
-
 ## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
-
 # [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
 ## [Development Setup](/cognitive-toolkit/Setup-development-environment)
 ### Windows
@@ -181,5 +174,7 @@
 ## [CNTK license](https://github.com/Microsoft/CNTK/blob/master/LICENSE.md)
 ## [CNTK 1bit-SGD license](/cognitive-toolkit/CNTK-1bit-SGD-License)
 ## [Archive](/cognitive-toolkit/archive)
+
 # [FAQ](/cognitive-toolkit/CNTK-FAQ)
+
 # [Feedback](/cognitive-toolkit/Feedback-Channels)
