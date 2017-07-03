@@ -21,7 +21,7 @@ Assuming that:
 
 * during training you subtracted 128 from all channels
 * the image you want to predict on is "foo.jpg"
-* you saved your model in Python using ```z.save_model("mycnn.dnn")```
+* you saved your model in Python using `z.save_model("mycnn.dnn")`
 
 then you can do the following:
 
@@ -39,7 +39,7 @@ predictions = np.squeeze(z.eval({z.arguments[0]:[pic]}))
 top_class = np.argmax(predictions)
 ```
 
-If you are loading an old model trained by NDL or BrainScript, then you will need to find the model output node as follow:
+If you are loading an old model trained by NDL or BrainScript, then you will need to find the model output node as follows:
 
 ```python
 for index in range(len(z.outputs)):
@@ -55,9 +55,9 @@ Index 2 for output: OutputNodes.z_output.
 We care only about 'z_output' which has index 2. So in order to get the real model output, do the following
 
 ```python
-import cntk as ct
+import cntk
 
-z_out = ct.combine([z.outputs[2].owner])
+z_out = cntk.combine([z.outputs[2].owner])
 predictions = np.squeeze(z_out.eval({z_out.arguments[0]:[pic]}))
 top_class = np.argmax(predictions)
 ```
