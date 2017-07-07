@@ -58,7 +58,10 @@ Assuming the default values:
  * DataParallel ASGD *is* being built
  * 1bit SGD *is not* being built
  * With undefined `CNTK_PY.._PATH`, Python libraries are *not* being built
- 
-  
+
+|Environment Variable | Default value | |
+|:------------|:------------|:-------------|
+|CNTK_CUDA_CODEGEN_DEBUG CNTK_CUDA_CODEGEN_RELEASE | | With these environment variables your define the NVidia Compiler target architectures. For Example, setting a variable to `compute_35,sm_35;compute_50,sm_50` will only add level 3.5 and 5.0 compatible cubin and PTX information to the specified build. For detailed information about this refer to the NVidia Compiler documentation.
+
 **More information**
 * [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
