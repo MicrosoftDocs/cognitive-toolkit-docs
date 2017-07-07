@@ -446,7 +446,7 @@ and *one* of the following (whatever applies to your environment):
 --with-py27-path[=directory]
 ```
 
-- Only Release builds are supported at this stage. For example, if you installed SWIG to `/usr/local/swig-3.0.10` and your Python environment is located at `$HOME/anaconda3/envs/cntk-py35` provide these additional parameters to configure:
+- Only Release builds are supported at this stage. For example, if you installed SWIG to `/usr/local/swig-3.0.10` and your Python environment is located at `$HOME/anaconda3/envs/cntk-py35` provide these additional parameters to `configure`:
 ```
 --with-swig=/usr/local/swig-3.0.10 --with-py35-path=$HOME/anaconda3/envs/cntk-py35
 ```
