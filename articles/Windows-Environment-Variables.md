@@ -26,7 +26,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |CUDA_PATH_V8_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build)
 |PROTOBUF_PATH | c:\local\protobuf-3.1.0-vs15 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
-|SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#optional-swig) (required for CNTK Python, Java, and C#/.NET support)
+|SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#swig) (required)
 |ZLIB_PATH | c:\local\zlib-vs15 | [Compression Library](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip) (required for ImagerReader build)
 
 In a command shell you could use these commands to set the environment variables on your machine:
@@ -58,7 +58,13 @@ Assuming the default values:
  * DataParallel ASGD *is* being built
  * 1bit SGD *is not* being built
  * With undefined `CNTK_PY.._PATH`, Python libraries are *not* being built
- 
-  
+
+There are several environment variables which allow you to fine-tune the build process on your machine
+
+|Environment Variable | Default value | |
+|:------------|:------------|:-------------|
+|CNTK_CUDA_CODEGEN_DEBUG  
+CNTK_CUDA_CODEGEN_RELEASE  | | With these environment variables your define the NVidia Compiler target architectures. For Example, setting a variable to `compute_35,sm_35;compute_50,sm_50' will only add level 3.5 and 5.0 compatible cubin and PTXX information to the specified build. For detailed information about this refer to the NVidia Compiler documentation.
+
 **More information**
 * [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
