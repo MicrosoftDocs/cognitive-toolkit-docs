@@ -2,7 +2,7 @@
 title:   Setup CNTK with script on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   02/16/2017
+ms.date:   07/09/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -42,7 +42,9 @@ This page will walk you through all these steps. The script driven installation 
 
 ### Visual Studio 2015 Update 3
 
-Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/). Please install Visual Studio 2015, not a previous version or the 2017-Preview! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
+Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/older-downloads/). You will need a Microsoft account and either a **free** membership in the subscription *Visual Studio Dev Essentials*, or a valid MSDN subscription. If you don't have a Microsoft account, the required subscription membership or both, you will be offered to enroll.
+
+Please install Visual Studio 2015, neither a previous version, nor Visual Studio 2017! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
 
 During the installation process please select custom installation:
 
