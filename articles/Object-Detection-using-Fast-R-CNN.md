@@ -227,7 +227,7 @@ If you are using a different folder please set `pascalDataDir` in `PARAMETERS.py
 * Download and unpack the 2007 test data into the same folder `DataSets/Pascal/VOCdevkit2007`
   * [http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar)
 * Download and unpack the precomputed ROIs to `DataSets/Pascal/selective_search_data`
-  * [http://www.cs.berkeley.edu/~rbg/fast-rcnn-data/selective_search_data.tgz](http://www.cs.berkeley.edu/~rbg/fast-rcnn-data/selective_search_data.tgz)
+  * [http://dl.dropboxusercontent.com/s/orrt7o6bp6ae0tc/selective_search_data.tgz?dl=0](http://dl.dropboxusercontent.com/s/orrt7o6bp6ae0tc/selective_search_data.tgz?dl=0)
 
 The `VOCdevkit2007` folder should look like this (similar for 2012):
 
