@@ -2,7 +2,7 @@
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -341,15 +341,15 @@ Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvid
 
 * Use the following commands:
 ```
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz
-tar -xzvf ./cudnn-8.0-linux-x64-v5.1.tgz
-sudo mkdir /usr/local/cudnn-5.1
-sudo cp -r cuda /usr/local/cudnn-5.1
+wget http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/cudnn-8.0-linux-x64-v6.0.tgz
+tar -xzvf ./cudnn-8.0-linux-x64-v6.0.tgz
+sudo mkdir /usr/local/cudnn-6.0
+sudo cp -r cuda /usr/local/cudnn-6.0
 ```
 
 * Add the following environment variable to your current session and your `.bashrc` profile:
 ```
-export LD_LIBRARY_PATH=/usr/local/cudnn-5.1/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cudnn-6.0/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ----------
@@ -372,12 +372,18 @@ the CNTK binary. Support for additional parallelization methods and CNTK v2 will
 This completes GPU Specific section
 
 ----------
+## OPTIONAL. SWIG.
+If you want to take advantage of CNTK from Python, you will need to install [SWIG](http://swig.org).
+SWIG is also a requirement to build the CNTK Evaluation libraries for Java.
+To install it, run the script: `[CNTK clone root]/Tools/devInstall/Linux/install-swig.sh`.
+This creates the installed version in the folder `/usr/local/swig-3.0.10`.
+
 ## OPTIONAL. CNTK v2 Python support.
 
 This section describes how to build CNTK v2 with Python support.
 
 **Step 1**: Build Python APIs
-- Install SWIG by running the script: `[CNTK clone root]/bindings/python/swig_install.sh`. This creates the installed version in a `$HOME/swig-3.0.10/root` folder
+- Install the [SWIG tool](#optional-swig) if you have not done so yet.
 
 - Install [Anaconda3 4.1.1 (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh)
 
@@ -440,9 +446,9 @@ and *one* of the following (whatever applies to your environment):
 --with-py27-path[=directory]
 ```
 
-- Only Release builds are supported at this stage. For example, if you installed SWIG to `$HOME/swig-3.0.10` and your Python environment is located at `$HOME/anaconda3/envs/cntk-py35` provide these additional parameters to configure:
+- Only Release builds are supported at this stage. For example, if you installed SWIG to `/usr/local/swig-3.0.10` and your Python environment is located at `$HOME/anaconda3/envs/cntk-py35` provide these additional parameters to `configure`:
 ```
---with-swig=$HOME/swig-3.0.10/root --with-py35-path=$HOME/anaconda3/envs/cntk-py35
+--with-swig=/usr/local/swig-3.0.10 --with-py35-path=$HOME/anaconda3/envs/cntk-py35
 ```
 
 - Afterwards, run make as you normally would, which will build the CNTK Python module inside `bindings/python/cntk` and also produce a package (.whl) in a subfolder python of your build output folder (e.g., `build/gpu/release/python`).
@@ -509,7 +515,7 @@ Note that in the instructions above we suggest using "plain" `make` rather than 
 
 ## OPTIONAL. Java
 
-To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 7](http://openjdk.java.net/install/).
+To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 7](http://openjdk.java.net/install/).
 
 The configure script provides `--with-jdk` option to specify the JDK directory manually, if it cannot be found by default.
 

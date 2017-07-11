@@ -2,7 +2,7 @@
 title:   Setup CNTK on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -24,7 +24,9 @@ Building CNTK on your system requires the definition and configuration of variou
 
 ## Visual Studio 2015 with Update 3
 
-Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/). Please install Visual Studio 2015, not a previous version or the 2017-Preview! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
+Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/older-downloads/). You will need a Microsoft account and either a **free** membership in the subscription *Visual Studio Dev Essentials*, or a valid MSDN subscription. If you don't have a Microsoft account, the required subscription membership or both, you will be offered to enroll.
+
+Please install Visual Studio 2015, neither a previous version, nor Visual Studio 2017! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
 
 During the installation process please select custom installation:
 
@@ -118,18 +120,6 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
 ```
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
 
-## SWIG 
-
-If you want to take advantage of CNTK from Python, you will need to install [SWIG](http://swig.org). SWIG is also a requirement to build the CNTK Evaluation libraries (for C#/.NET and C++).
-
-Please download the version `SWIG 3.0.10` from [this site](https://sourceforge.net/projects/swig/files/swigwin/).
-
-Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.0.10` and set the environment variable `SWIG_PATH` pointing to that location, e.g.: 
-```
-    setx SWIG_PATH C:\local\swigwin-3.0.10
-```
-Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
-
 ## GPU Specific Packages
 
 This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs.
@@ -158,13 +148,13 @@ CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 
 ### cuDNN
 
-Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v5.1 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
+Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v6.0 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v6.0/cudnn-8.0-windows10-x64-v6.0.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
-* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v6.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
 ```
-    setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
+    setx CUDNN_PATH C:\local\cudnn-8.0-v6.0\cuda
 ```
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v6.0\cuda\include\cudnn.h` will succeed.
 
 ### CUB
 
@@ -188,6 +178,18 @@ Now install the latest driver for your GPU card:
 This completes the GPU specific section
 
 ----------
+
+## OPTIONAL. SWIG.
+
+If you want to take advantage of CNTK from Python, you will need to install [SWIG](http://swig.org). SWIG is also a requirement to build the CNTK Evaluation libraries (for C#/.NET or Java).
+
+Please download the version `SWIG 3.0.10` from [this site](https://sourceforge.net/projects/swig/files/swigwin/).
+
+Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.0.10` and set the environment variable `SWIG_PATH` pointing to that location, e.g.: 
+```
+    setx SWIG_PATH C:\local\swigwin-3.0.10
+```
+Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
 
 ## OPTIONAL. OpenCV
 
@@ -216,7 +218,7 @@ Quick installation check: If you followed the instruction above and used the sam
 
 ## OPTIONAL. Anaconda Python Installation
 
-If you plan on using CNTK with Python you will need a Python environment. We use Anaconda Python for our default Python installation. 
+If you plan to build CNTK with Python support, install [SWIG](#optional-swig) if you have not done so yet. Also, you will need a Python environment. We use Anaconda Python for our default Python installation. 
 
 If you do not have an Anaconda installation: install [Anaconda Python for Windows](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe). 
 You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Anaconda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
@@ -280,7 +282,7 @@ The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK
 ```
 
 ## OPTIONAL. Java
-To build the Java bindings for the CNTK Evaluation library, Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
+To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
 
 Set the environment variable JAVA_HOME to point to the directory of Java installation. The following setting assumes that you have installed JDK 1.8.0_131 to C:\local\jdk1.8.0_131:
 ```
@@ -356,7 +358,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md#cudnn)). 
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Windows#optional-anaconda-python-installation). 
 Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
 As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 

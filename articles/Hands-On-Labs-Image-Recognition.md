@@ -320,14 +320,14 @@ For example, it could be defined as
 	MyLayer (x, depth, initValueScale)
 
 When you run this, you would expect the resulting `ce` and `errs` values to be the same.
-However, if you run on the GPU, non-determinism in cudnn's back-propagation implementation
+However, if you run on the GPU, non-determinism in cuDNN's back-propagation implementation
 will cause minor variations. 
 
 Please see the solution [here](#solution-2-simplify-model-definition-by-extracting-repetitive-parts-into-a-function).
 
 ### Task 3: Adding BatchNormalization
 
-(This Task requires a GPU, since CNTK's implementation of batch normalization is based on cudnn.)
+(This Task requires a GPU, since CNTK's implementation of batch normalization is based on cuDNN.)
 
 Batch normalization is a popular technique to speed up and improve convergence.
 In CNTK, batch normalization is implemented as [`BatchNormalizationLayer{}`](./BrainScript-Layers-Reference.md#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer).
