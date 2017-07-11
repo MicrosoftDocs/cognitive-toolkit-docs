@@ -2,7 +2,7 @@
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/07/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -341,15 +341,15 @@ Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvid
 
 * Use the following commands:
 ```
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz
-tar -xzvf ./cudnn-8.0-linux-x64-v5.1.tgz
-sudo mkdir /usr/local/cudnn-5.1
-sudo cp -r cuda /usr/local/cudnn-5.1
+wget http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/cudnn-8.0-linux-x64-v6.0.tgz
+tar -xzvf ./cudnn-8.0-linux-x64-v6.0.tgz
+sudo mkdir /usr/local/cudnn-6.0
+sudo cp -r cuda /usr/local/cudnn-6.0
 ```
 
 * Add the following environment variable to your current session and your `.bashrc` profile:
 ```
-export LD_LIBRARY_PATH=/usr/local/cudnn-5.1/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cudnn-6.0/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ----------

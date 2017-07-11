@@ -2,7 +2,7 @@
 title:   Setup CNTK on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/09/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -148,13 +148,13 @@ CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 
 ### cuDNN
 
-Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v5.1 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
+Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v6.0 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v6.0/cudnn-8.0-windows10-x64-v6.0.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
-* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v6.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
 ```
-    setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
+    setx CUDNN_PATH C:\local\cudnn-8.0-v6.0\cuda
 ```
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v6.0\cuda\include\cudnn.h` will succeed.
 
 ### CUB
 
@@ -358,7 +358,7 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md#cudnn)). 
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Windows#optional-anaconda-python-installation). 
 Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
 As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 

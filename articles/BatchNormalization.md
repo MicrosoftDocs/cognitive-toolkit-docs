@@ -8,8 +8,7 @@ ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
-# Batch normalization 
+# Batch normalization
 
     BatchNormalization(input, scale, bias, runMean, runVariance, spatial,
                        normalizationTimeConstant = 0,
@@ -30,9 +29,10 @@ initial value 0, and `learningRateMultiplier=0` set.
 low-pass filtered version of the batch statistics. Note: The default is not typically what you want.
 * `blendTimeConstant` (default 0): allows to smooth batch estimates with the running statistics
 * `epsilon` is a conditioner constant added to the variance when computing the inverse standard deviation.
-* `useCntkEngine` (default: true): set this to `false` to select the GPU-only CuDNN implementation
+* `useCntkEngine` (default: true): set this to `false` to select the GPU-only cuDNN implementation
 
 ## Return value
+
 The batch-normalized `input`.
 
 ## Description
@@ -40,12 +40,14 @@ The batch-normalized `input`.
 `BatchNormalization` implements the technique described in paper 
 [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift (Sergey Ioffe, Christian Szegedy)](http://arxiv.org/abs/1502.03167).
 In short, it normalizes layer outputs for every minibatch for each output (feature) independently and applies affine transformation to preserve representation of the layer. That is, for layer `input`:
+
 ```
 m = mean (input)
 var = variance (input)
 inputNorm = (input - mean)/sqrt (epsilon + var)
 output = gamma * inputNorm + beta
 ```
+
 where `gamma` and `beta` are trainable parameters.
 
 `mean` and `variance` are estimated from training data. In the simplest case, they are the mean and variance
@@ -70,9 +72,6 @@ However, this has not been found useful so far in our experiments.
 Note that during inference, CNTK will set both time constants automatically such that
 only use the existing running mean is used, and that it is not updated. There is no explicit action needed by the user.
 
-### CuDNN implementation
-By default, this function uses a CNTK implementation which works with both GPUs and CPUs.
-You can choose to use the CuDNN implementation, which is more performant.
-Note, however, that the CuDNN implementation does not support all options,
-and training requires a GPU (CNTK does, however, provide a CPU emulation for inference
-even if you select the CuDNN implementation).
+### cuDNN implementation
+
+By default, this function uses a CNTK implementation which works with both GPUs and CPUs. You can choose to use the cuDNN implementation, which is more performant. Note, however, that the cuDNN implementation does not support all options, and training requires a GPU (CNTK does, however, provide a CPU emulation for inference even if you select the cuDNN implementation).

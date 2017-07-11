@@ -83,7 +83,7 @@ If you use the C#/.NET Managed Library, beside the DLLs mentioned above, you nee
 For using GPU, you need in addition to include the following NVIDIA CUDA related DLLs:
 * `cublas64_80.dll`
 * `cudart64_80.dll`
-* `cudnn64_5.dll`
+* `cudnn64_6.dll`
 * `curand64_80.dll`
 * `cusparse64_80.dll`
 * `nvml.dll`
