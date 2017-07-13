@@ -234,6 +234,10 @@ is multiplied by the number of samples in the minibatch.
 
 * `numMBsToShowResult`: display training statistics after how many minibatches. Default is `10`.
 
+### TensorBoard
+
+* `tensorBoardNumMBsToLogResult`: number of minibatches between logging results to TensorBoard.
+
 ### Gradient Check
 * `gradientCheck`: determines whether to use the gradient checker. The default value is `false`. When using the gradient checker you need to use a minibatch size that is larger than the sequence length for RNNs due to the truncated backpropagation through time (BPTT) algorithm used to train RNNs, and a smaller learning rate to prevent numerical issues caused by divergence. In addition, precision should be set to double.
 
