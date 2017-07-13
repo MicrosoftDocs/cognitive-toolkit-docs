@@ -17,8 +17,6 @@ This page will walk you through the process of manual installing the Microsoft C
 
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead.
 
-> Note: These instructions apply to release 2.0.
-
 If you previously installed an earlier version of the CNTK Python package, you can jump to step 3 to update existing CNTK package installation from your Python environment
 
 **Step 1**: Install prerequisites

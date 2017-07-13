@@ -11,7 +11,8 @@ ms.devlang:   brainscript
 
 # BrainScript HTKMLF Reader
 
-**IMPORTANT!** HTKMLFReader becomes obsolete and is being replaced by HTK MLF and Feature deserializers, cf. [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md).
+[!IMPORTANT]
+HTKMLFReader becomes obsolete and is being replaced by HTK MLF and Feature deserializers, cf. [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md).
 Please use these for your networks.
 
 HTKMLFReader is a data reader that reads files typically associated with speech recognition tasks, and specifically with the [Hidden Markov Model Toolkit (HTK)](http://htk.eng.cam.ac.uk/) suite of tools. The reader can take as input two types of files, a list of feature files known in HTK parlance as an ```scp``` file (“script” file), a label file known as ```mlf``` file (“model label file”) and an archive file.
@@ -20,6 +21,7 @@ HTKMLFReader relies on HTK defined formats of datasets, so we recommend to get f
 
 Because CNTK can be used to build networks with arbitrary topology including networks with multiple inputs and outputs, the HTKMLFReader can process one or multiple ```scp``` and ```MLF``` files. A typical example of usage for the HTKMLFReader is as follows:
 
+```
     reader = [
         readerType = "HTKMLFReader"
         readMethod = "blockRandomize"
@@ -35,6 +37,7 @@ Because CNTK can be used to build networks with arbitrary topology including net
             labelMappingFile = "$MlfDir$\TIMIT.statelist"
         ]
     ]
+```
 
 The HTKMLFReader has the following configuration parameters:
 
@@ -82,15 +85,18 @@ The ```scp``` files processed by the HTKMLFReader can be one of two varieties: e
 Here are example snippets of ```scp``` and ```mlf``` files for the TIMIT corpus for appropriate for a network with 2 feature inputs (in this case, MFCC and PLP features) and 1 output corresponding to phoneme states.
 
 The ```scp``` file lists all files you to process, using this syntax:
+
 ```
 id=pathname
 ```
+
 A CNTK-proprietary extension of this format (that is not found in the original HTK) is that CNTK allows a more convenient relative pathname syntax when the ```scp``` file is located next to the features:
+
 ```
 id=.../filename
 ```
-where ```...``` refers to the directory of the ```scp``` file.
 
+where ```...``` refers to the directory of the ```scp``` file.
 
 The ```scp``` file for the MFCC features contains entries such as these.
 
@@ -109,6 +115,7 @@ The ```scp``` file for the PLP features is similar but point to different physic
 `train-dr1-fcjf0-si648.plp=//hostname/data/TIMIT/plp/train/dr1/fcjf0/train-dr1-fcjf0-si648.plp [0,359]`
 
 An ```mlf``` file lists the labels, using this syntax:
+
 ```
 #!MLF!#
 "id"
@@ -128,9 +135,11 @@ labelBegin2 labelEnd2 label1
 
 ...
 ```
+
 Here we have a section terminated with ```.``` (dot) per each input file, and one line per token within each section. The label times are given in a time base of ```10e-7```, and speech frames are normally ```10e-2```, so  ***5 zeroes*** are needed to appended to every time index. 
 
 It is important to notice, that CNTK reads **only first three columns*** within a section of an ```mlp``` file and ignores the rest. In our example ```mlf``` file also shares the logical name with both ```scp`` files. Here is the snippet:
+
 ```
 #!MLF!#
 "train-dr1-fcjf0-si1027.rec"
@@ -148,6 +157,7 @@ It is important to notice, that CNTK reads **only first three columns*** within 
 Now we will describe *Archive* files, that are sometimes also known as ```chunk``` files. CNTK uses a concept of *chunk* for all of its Readers, and it means an absolutely different thing, so to avoid the confusion we do **not** use the term *chunk* in relation to the files described below, but rather call them *Archives*. 
 
 Archive files are basically column-major matrices of ```float32```, with a 12-byte header that contains the sample size and the number of samples. Generally they are easier to use, especially as a start. The expected header of the file is defined via the ```struct``` below:
+
 ```
 struct fileheader
 {
@@ -157,6 +167,7 @@ struct fileheader
 	short sampkind;
 }
 ```
+
 where:
 * ```sampsize``` is the size of a vector in bytes (```=4 * feature dimension```);
 * ```sampkind``` is a numeric identifier of the feature type (MFCC, PLP etc.). CNTK ignores this. If your files are not created by HTK, you can just set this to 9 (USER). And

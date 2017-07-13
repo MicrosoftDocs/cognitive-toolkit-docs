@@ -16,6 +16,7 @@ If you want to build manually CNTK from source code on Windows using Visual Stud
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
 ## 64-bit OS
+
 CNTK requires a 64-bit Windows installation. We tested the build process on Windows 8.1, Windows 10, and Windows Server 2012 R2 and later. Other environments are not officially supported. For compatibility issues check [CNTK Production Build and Test configuration](./Test-Configurations.md).
 
 ## Environment Variables and Components
@@ -35,6 +36,7 @@ On the feature selection screen make sure you add 'Common Tools for Visual C++ 2
 ![im1](./pictures/setup/VS2015InstallFeatures.jpg)
 
 ### Preexisting Visual Studio 2015 installation
+
 If you already have VS 2015 installed, make sure you are on **Update 3**. See the `Help->About` menu to display the version number like "Version 14.0.25431.01 Update 3". 
 
 You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
@@ -56,6 +58,7 @@ Here we assume you installed [Git for Windows](https://git-scm.com/download/win)
 Create a clone of the CNTK source code in `c:\repos\cntk` directory. If you prefer a different location, you will need to adjust the commands accordingly. 
 
 Open a standard windows command shell, and execute these command
+
 ```
 c: && md \repos && cd \repos
 git clone https://github.com/Microsoft/cntk
@@ -66,11 +69,13 @@ git submodule update --init Source/Multiverso
 This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in a CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
+
 ```
 setx CNTK_ENABLE_ASGD false
 ```
 
-**IMPORTANT!** The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
+[!IMPORTANT]
+The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ##  MKL
 
@@ -79,13 +84,17 @@ The default CNTK math library is the [Intel Math Kernel Library (MKL)](https://s
 Installing the CNTK custom MKL library: 
 
 * Create a directory on your machine to hold CNTK custom MKL versions, e.g.: 
+
 ```
     mkdir c:\local\CNTKCustomMKL
 ```
+
 * Set the environment variable `CNTK_MKL_PATH` to point to this directory: 
+
 ```
     setx CNTK_MKL_PATH c:\local\CNTKCustomMKL
 ```
+
 * Download the file [CNTKCustomMKL-Windows-3.zip](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/).
 
 ## MS-MPI
@@ -95,15 +104,20 @@ Install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI) from [this download pa
 ## Boost
 
 Follow these steps to install the [Boost Library](http://www.boost.org/) on your system:
+
 * Download and install Boost version 1.60 (you need the `msvc-14.0` binaries) from this <a href="http://sourceforge.net/projects/boost/files/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe/download" target="_blank">download location</a> on Sourceforge.
 * Set the environment variable `BOOST_INCLUDE PATH` to your Boost installation, e.g.: 
+
 ```
     setx BOOST_INCLUDE_PATH c:\local\boost_1_60_0-msvc-14.0
 ```
+
 * Set the environment variable `BOOST_LIB_PATH` to the Boost libraries, e.g.: 
+
 ```
     setx BOOST_LIB_PATH c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0
 ```
+
 * To integrate the Boost test framework into Visual Studio you can install a runner for Boost tests in Visual Studio from the <a href="https://visualstudiogallery.msdn.microsoft.com/5f4ae1bd-b769-410e-8238-fb30beda987f" target="_blank">Visual Studio Gallery</a>.
 
 ## Protobuf
@@ -113,9 +127,11 @@ You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this ver
 Download the ZIP file containing the precompiled version of Protobuf for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/protobuf/protobuf-3.1.0-vs15.zip)
 
 Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3.1.0-vs15` and set the environment variable `PROTOBUF_PATH` pointing to that location, e.g.: 
+
 ```
     setx PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
 ```
+
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
 
 ## GPU Specific Packages
@@ -132,13 +148,16 @@ In the following steps we will install the NVidia development tools required to 
 
 ## NVIDIA CUDA 8
 
-***Important*** In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
+[!IMPORTANT]
+In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
 
 CNTK is set to build with CUDA 8.0. Download and install the NVIDIA CUDA 8.0 Toolkit:
+
 * Download the required package from [this download page](https://developer.NVIDIA.com/CUDA-downloads)
 * Run the installation procedure
 
 Make sure that the following CUDA environment variables are set to the correct path (the NVIDIA Cuda installer will create these for you). Default installation paths are assumed:
+
 ```
 CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
@@ -149,20 +168,25 @@ CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v5.1 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
 * Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+
 ```
     setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
 ```
+
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
 
 ### CUB
 
-**IMPORTANT!** Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
+[!IMPORTANT]
+Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
 
 * Download NVIDIA CUB v.1.4.1 [from this download link](https://github.com/NVlabs/cub/archive/1.4.1.zip)
 * Extract the archive to a folder on your local disk (we assume `c:\local\cub-1.4.1`) and set the environment variable `CUB_PATH` pointing to that location, e.g.:
+
 ```
     setx CUB_PATH c:\local\cub-1.4.1\
 ```
+
 * Quick installation check. If you followed the instruction above and used the same paths, this command `dir C:\local\cub-1.4.1\cub\cub.cuh` will succeed.
 
 ### Latest GPU card driver
@@ -184,9 +208,11 @@ If you want to take advantage of CNTK from Python, you will need to install [SWI
 Please download the version `SWIG 3.0.10` from [this site](https://sourceforge.net/projects/swig/files/swigwin/).
 
 Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.0.10` and set the environment variable `SWIG_PATH` pointing to that location, e.g.: 
+
 ```
     setx SWIG_PATH C:\local\swigwin-3.0.10
 ```
+
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
 
 ## OPTIONAL. OpenCV
@@ -194,6 +220,7 @@ Quick installation check: If you followed the instruction above and used the sam
 If you want to build the **CNTK Image Reader**, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/) as well as support for the *ZIP file format* (see the next section).
 
 Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
+
 ```
 setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
 ```
@@ -209,9 +236,11 @@ The ZLib and LibZip are distributed in source code, you will need to recompile t
 Download the ZIP file containing the precompiled version of libzip/zlib compression library for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/zip/zlib-vs15.zip)
 
 Extract the archive to a folder on your local disk, e.g. to `C:\local\zlib-vs15` and set the environment variable `ZLIB_PATH` pointing to that location, e.g.: 
+
 ```
     setx ZLIB_PATH c:\local\zlib-vs15
 ```
+
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\zlib-vs15\bin` will succeed and show a couple of DLLs.
 
 ## OPTIONAL. Anaconda Python Installation
@@ -237,6 +266,7 @@ As an example we create a Python 3.5 environment in an environment named `cntk-p
 The following assumes you cloned the CNTK source code from GitHub into the directory `c:\repos\cntk`.
 
 * To create a new conda environment (e.g. `cntk-py35`) and activate it, run the following commands from the Windows command shell:
+
 ```
     cd C:\local\Anaconda3-4.1.1-Windows-x86_64\scripts
     conda env create --file c:\repos\cntk\scripts\install\windows\conda-windows-cntk-py35-environment.yml  --name cntk-py35
@@ -244,6 +274,7 @@ The following assumes you cloned the CNTK source code from GitHub into the direc
 ```
 
 If you have an environment (e.g. `cntk-py35`) you can update it with the latest required packages with the following commands:
+
 ```
     cd C:\local\Anaconda3-4.1.1-Windows-x86_64\scripts
     conda env update --file c:\repos\cntk\scripts\install\windows\conda-windows-cntk-py35-environment.yml --name cntk-py35
@@ -257,6 +288,7 @@ Before you start the build of CNTK and build the Python libraries for CNTK, you 
 #### CNTK_PY.._PATH
 
 Set up build environment variables for your Python environment (choose at least one that applies):
+
 ```
     setx CNTK_PY36_PATH [paths for your Python 3.6 environment]
     setx CNTK_PY35_PATH [paths for your Python 3.5 environment]
@@ -265,6 +297,7 @@ Set up build environment variables for your Python environment (choose at least 
 ```
 
 If you followed the installation so far, this would mean
+
 ```
     setx CNTK_PY35_PATH C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35
 ```
@@ -275,14 +308,17 @@ The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK
 #### PYTHONPATH
 
 `PYTHONPATH` sets the paths to the places Python will look for modules to import. If you build CNTK, you need to add the output path of the build process to this environment variable. If you cloned CNTK into `c:\repos\cntk` this will be
+
 ```
     setx PYTHONPATH c:\repos\cntk\bindings\python;%PYTHONPATH%
 ```
 
 ## OPTIONAL. Java
+
 To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64 bit [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (JDK Version 1.8.0_131).
 
 Set the environment variable JAVA_HOME to point to the directory of Java installation. The following setting assumes that you have installed JDK 1.8.0_131 to C:\local\jdk1.8.0_131:
+
 ```
     setx JAVA_HOME "c:\local\jdk1.8.0_131"
 ```
@@ -302,16 +338,18 @@ This concludes the installation portion. Let's continue with building CNTK
 ## Building CNTK
 
 Start Visual Studio 2015 and open the CNTK solution (`CNTK.sln`) in the root of the cloned CNTK project from GitHub. If you just changed and environment variable, you should close any already opened Visual Studio instance, otherwise the content of changed environment variables will not be reflected inside Visual Studio.
+
 * Right-click the CNTK Solution in Solution Explorer and select `Properties`
 * In the opened window select `Configuration Properties` and press `Configuration Manager...` button
 * In Configuration Manager select the desired configuration:
- * Debug or Release
- * GPU or CPU-only. CPU-only configurations are explicitly named. All other configurations imply GPU usage (i.e. `Release` means *Release. GPU enabled mode*)
- * You should always select CPU-only configurations if you have NOT installed the [components required for GPU configurations](#gpu-specific-packages)
+  * Debug or Release
+  * GPU or CPU-only. CPU-only configurations are explicitly named. All other configurations imply GPU usage (i.e. `Release` means *Release. GPU enabled mode*)
+  * You should always select CPU-only configurations if you have NOT installed the [components required for GPU configurations](#gpu-specific-packages)
 
 Build the CNTK solution. The components created by the build process are dependent on the prerequisites you installed, for details the page detailing [Windows Environment Variables](./Windows-Environment-Variables.md) should be consulted.
 
 If you build Python modules note: 
+
 * Python modules are only created in the `Release` configuration
 * This will build the CNTK Python module inside `bindings\python\cntk` and also produce a package (`.whl`) in a subfolder `Python` of your build output folder (e.g., `x64\Release\Python`)
 * Make sure your path includes the build output folder (e.g., `x64\Release`), and that `PYTHONPATH` includes the `bindings\python` directory. This is contrary to the setup shown for the Pip package installation, here we will load the CNTK module from the CNTK repository clone, not as an installed package in your Python environment, hence also the difference in setting up `PYTHONPATH`.
@@ -326,29 +364,36 @@ functioning properly.
 Below we assume that the CNTK repository is cloned to `c:\repos\cntk` and `build\x64\release` was used as a sub-directory for the (Release) build.
 
 * Open Command Prompt
-* Provide the path to the CNTK binaries (via Environment Variable or for Command Prompt session using the first command below) and
-  change to the `Tutorials\HelloWorld-LogisticRegression` directory:
+* Provide the path to the CNTK binaries (via Environment Variable or for Command Prompt session using the first command below) and change to the `Tutorials\HelloWorld-LogisticRegression` directory:
+
 ```
 set PATH=C:\repos\cntk\x64\release;%PATH%
 cd C:\repos\cntk\Tutorials\HelloWorld-LogisticRegression
 ```
+
 First try the example:
+
 ```
 cntk configFile=lr_bs.cntk makeMode=false
 ```
+
 If the sample runs, i.e. if there are no error messages, you will get an output related first to reading the configuration, followed
 by the output of the actual network training.
 
 ### Trying CNTK with GPU
 
 If you built CNTK for GPU usage, try using GPU by executing the following command:
+
 ```
 cntk configFile=lr_bs.cntk makeMode=false deviceId=auto
 ```
+
 Near the beginning of the output you should see a line confirming a GPU was used:
+
 ```
 Model has 9 nodes. Using GPU 0.
 ```
+
 Note that GPU ID may be different. The `deviceId` parameter defines what processor to use for computation.
 * `deviceId=-1` means use CPU. Default value
 * `deviceId=X` where X is an integer >=0 means use GPU X, i.e. `deviceId=0` means GPU 0, etc.
@@ -366,6 +411,7 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 ```
 
 ### Debugging CNTK source code in Visual Studio
+
  - If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
  - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)   
  - To debug BrainScript in CNTK with Visual Studio, follow the steps [here](./Debugging-CNTK-source-code-in-Visual-Studio.md).
@@ -374,7 +420,8 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
-**Links**
+## Links
+
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)

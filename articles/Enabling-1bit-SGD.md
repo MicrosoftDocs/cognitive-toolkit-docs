@@ -46,7 +46,8 @@ Ensure you set up all required software prerequisites for your platform as descr
 
 This method works if you want to make a *new* clone of CNTK repository.
 
-**IMPORTANT!** Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
+[!IMPORTANT]
+Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
 
 To get a new CNTK repository clone with 1bit-SGD source code on your machine you need to use *git recursive clone*:
 ```
