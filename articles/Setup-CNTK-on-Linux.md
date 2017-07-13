@@ -29,8 +29,8 @@ Today `configure` and `Makefile` scripts support only limited set of installatio
 
 `configure` looks for all dependency components among the paths listed in `default_path_list` variable defined within the script. 
 
-[!IMPORTANT]
-If you want to modify `default_path_list` variable in `configure` to add a custom path for a certain dependency component be sure to check the correspondent section of `Makefile`. Otherwise you may get build errors due to inability of finding INCLUDE files, libraries, etc.
+> [!IMPORTANT]
+> If you want to modify `default_path_list` variable in `configure` to add a custom path for a certain dependency component be sure to check the correspondent section of `Makefile`. Otherwise you may get build errors due to inability of finding INCLUDE files, libraries, etc.
 
 ### Installation methods and paths of dependency components
 
@@ -85,8 +85,8 @@ Install Git on your system as described <a href="https://git-scm.com/download/li
 The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
 CNTK supports using the Intel MKL via a custom library version ("CNTK custom MKL").
 
-[!IMPORTANT]
-You can NOT directly build CNTK using a regular installed Intel MKL SDK, the build is configured to work with a custom generated CNTK custom MKL library (This way you don't need to go through the process of installing the complete Intel MKL SDK). You can obtain the CNTK custom MKL library if you follow the steps below. If you need to build your own custom version, you can find the needed information [here](https://github.com/Microsoft/CNTK/tree/master/Dependencies/CNTKCustomMKL).
+> [!IMPORTANT]
+> You can NOT directly build CNTK using a regular installed Intel MKL SDK, the build is configured to work with a custom generated CNTK custom MKL library (This way you don't need to go through the process of installing the complete Intel MKL SDK). You can obtain the CNTK custom MKL library if you follow the steps below. If you need to build your own custom version, you can find the needed information [here](https://github.com/Microsoft/CNTK/tree/master/Dependencies/CNTKCustomMKL).
 
 Installing the CNTK custom MKL library: 
 
@@ -280,7 +280,6 @@ chmod +x ./cuda_8.0.44_linux.run
 sudo ./cuda_8.0.44_linux.run
 ```
 
-[!IMPORTANT]
 When prompted by the installer:
 
 ```
@@ -288,9 +287,9 @@ Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 367.48?
 (y)es/(n)o/(q)uit:
 ```
 
-select `no` if you have already installed the latest driver by performing the steps in the [previous section](#checking-your-gpu-compatibility-and-getting-the-latest-driver). If you have not done it, select `yes`, but we **strongly recommend** updating to the latest driver after installing CUDA toolkit.
+Select `no` if you have already installed the latest driver by performing the steps in the [previous section](#checking-your-gpu-compatibility-and-getting-the-latest-driver). If you have not done it, select `yes`, but we **strongly recommend** updating to the latest driver after installing CUDA toolkit.
 
-If you declined the driver installation from the CUDA 8.0 package as described in the previous section, you will get the following warning at the end of the installation:
+If you declined the driver installation from the CUDA 8.0 package, you will get the following warning at the end of the installation:
 
 ```
 ***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 361.00 is required for CUDA 8.0 functionality to work.
@@ -298,17 +297,17 @@ To install the driver using this installer, run the following command, replacing
     sudo <CudaInstaller>.run -silent -driver
 ```
 
-Ignore it
+Ignore this warning. 
 
-* If stopped during the steps above, start X Windows manager. Refer to your platform documentation for exact commands.
+If stopped during the steps above, start X Windows manager. Refer to your platform documentation for exact commands.
 
-Example: for Ubuntu use the following command (in case of `lightdm` as your X Windows manager):
+**Example:** for Ubuntu use the following command (in case of `lightdm` as your X Windows manager):
 
 ```
 sudo start lightdm
 ```
 
-* Add the following environment variable to your current session and your `.bashrc` profile (if you modified the default paths during the CUDA installation, change the values below accordingly):
+Add the following environment variable to your current session and your `.bashrc` profile (if you modified the default paths during the CUDA installation, change the values below accordingly):
 
 ```
 export PATH=/usr/local/cuda-8.0/bin:$PATH
@@ -386,8 +385,8 @@ Starting from CUDA version 8, the GPU Deployment Kit is a part of the CUDA packa
 
 Get and install NVIDIA CUB using the commands below.
 
-[!IMPORTANT]
-Install NVIDIA CUB using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
+> [!IMPORTANT]
+> Install NVIDIA CUB using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
 
 Use the following commands:
 
@@ -401,11 +400,11 @@ sudo cp -r cub-1.4.1 /usr/local
 
 Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvidia.com/cuDNN).
 
-[!IMPORTANT]
-If you previously installed cuDNN for an older version make sure that you upgrade to the CUDA 8.0 compatible version
+> [!IMPORTANT]
+> If you previously installed cuDNN for an older version make sure that you upgrade to the CUDA 8.0 compatible version
 
-[!IMPORTANT]
-Install cuDNN using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
+> [!IMPORTANT]
+> Install cuDNN using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
 
 * Use the following commands:
 
@@ -436,8 +435,8 @@ Then, use the CNTK configure option `--with-nccl=<path>` to enable building with
 For example, if NCCL builds outputs are in folder `$HOME/nccl/build`, use
 `configure --with-nccl=$HOME/nccl/build` (plus additional options) to build with NVIDIA NCCL support.
 
-[!NOTE]
-Currently, CNTK's support for NVIDIA NCCL is limited to data-parallel SGD with 32/64 gradient bits, using
+> [!NOTE]
+> Currently, CNTK's support for NVIDIA NCCL is limited to data-parallel SGD with 32/64 gradient bits, using
 the CNTK binary. Support for additional parallelization methods and CNTK v2 will be added in the future.
 
 This completes GPU Specific section
@@ -542,8 +541,8 @@ cd [CNTK clone root]/bindings/python
 export LD_LIBRARY_PATH=$PWD/cntk/libs:$LD_LIBRARY_PATH
 ```
 
-[!NOTE]
-In contrast to the setup shown for the Pip package installation, here we will load the CNTK module from the CNTK repository clone, not as an installed package in your Python environment. (Hence also the difference in setting up `PYTHONPATH`)
+> [!NOTE]
+> In contrast to the setup shown for the Pip package installation, here we will load the CNTK module from the CNTK repository clone, not as an installed package in your Python environment. (Hence also the difference in setting up `PYTHONPATH`)
 
 **Step 4**: Verify setup
 
@@ -577,8 +576,8 @@ OpenCV can have many interfaces and options.
 In this section we cover only parts necessary to build CNTK.
 Read more about installing OpenCV [here](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) and more generally [here](http://docs.opencv.org/3.1.0/df/d65/tutorial_table_of_content_introduction.html).
 
-[!IMPORTANT]
-Install OpenCV using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
+> [!IMPORTANT]
+> Install OpenCV using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
 
 * Install OpenCV prerequisites. See [OpenCV installation instructions](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) for the full package list and explanations. See your platform documentation on how to install the packages. 
 
@@ -625,8 +624,8 @@ Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-m
 
 **Optional** If you don't need DataParallelASGD support, then pass the option `--asgd=no` to the configure command.
 
-[!IMPORTANT]
-The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#6-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
+> [!IMPORTANT]
+> The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#6-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ## Building CNTK
 

@@ -63,9 +63,8 @@ Assuming the default values:
 
 There are additional environment variables which can influence the compilation process:
 
-[!div class="mx-tdBreakAll"]
-|Environment Variable | Default value | |
-|:------------|:------------|:-------------|
+| Environment Variable | |
+|:------------|:-------------|
 |CNTK_CUDA_CODEGEN_DEBUG CNTK_CUDA_CODEGEN_RELEASE | | With these environment variables you can define the NVidia Compiler target architectures. For example, setting a variable to `compute_35,sm_35;compute_50,sm_50` will only build level 3.5 and 5.0 compatible cubin and PTX information. For detailed information about this refer to the NVidia Compiler documentation.
 
 **More information**

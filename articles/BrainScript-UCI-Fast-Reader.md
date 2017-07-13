@@ -11,7 +11,8 @@ ms.devlang:   brainscript
 
 # BrainScript UCI Fast Reader
 
-[!WARNING] UCIFastReader is **deprecated** and is being replaced by [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md). Please use [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) for your networks.
+> [!WARNING]
+> UCIFastReader is **deprecated** and is being replaced by [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md). Please use [CNTK Text Format Reader](./BrainScript-CNTKTextFormat-Reader.md) for your networks.
 
 ----------
 

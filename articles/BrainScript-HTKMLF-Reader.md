@@ -11,9 +11,8 @@ ms.devlang:   brainscript
 
 # BrainScript HTKMLF Reader
 
-[!IMPORTANT]
-HTKMLFReader becomes obsolete and is being replaced by HTK MLF and Feature deserializers, cf. [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md).
-Please use these for your networks.
+> [!IMPORTANT]
+> HTKMLFReader is obsolete and is being replaced by HTK MLF and Feature deserializers, cf. [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md). Please use these for your networks.
 
 HTKMLFReader is a data reader that reads files typically associated with speech recognition tasks, and specifically with the [Hidden Markov Model Toolkit (HTK)](http://htk.eng.cam.ac.uk/) suite of tools. The reader can take as input two types of files, a list of feature files known in HTK parlance as an ```scp``` file (“script” file), a label file known as ```mlf``` file (“model label file”) and an archive file.
 

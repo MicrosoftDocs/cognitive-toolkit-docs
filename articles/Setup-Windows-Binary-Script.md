@@ -64,8 +64,8 @@ cd scripts
 cntkpy35.bat
 ```
 
-[!NOTE]
-You will need to activate the CNTK environment every time you plan on using the CNTK Python environment.
+> [!NOTE]
+> You will need to activate the CNTK environment every time you plan on using the CNTK Python environment.
 
 You can now follow the [standard description](./Setup-Test-Python.md) to test your installation from Python and run the tutorials or Jupyter notebooks.
 

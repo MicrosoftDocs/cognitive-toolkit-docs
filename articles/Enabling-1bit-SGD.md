@@ -46,10 +46,11 @@ Ensure you set up all required software prerequisites for your platform as descr
 
 This method works if you want to make a *new* clone of CNTK repository.
 
-[!IMPORTANT]
-Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
+> [!IMPORTANT]
+> Do not apply the command below to an existing repository clone - you will get an error message. If you already have a clone of CNTK repository you are working with and would like to extend it with 1bit-SGD code, proceed to the [next section](#adding-1bit-sgd-code-to-an-existing-cntk-repository-clone). 
 
 To get a new CNTK repository clone with 1bit-SGD source code on your machine you need to use *git recursive clone*:
+
 ```
 git clone --recursive https://github.com/Microsoft/cntk/
 ```
@@ -61,14 +62,19 @@ You will find 1bit-SGD code in ```Source/1BitSGD``` directory of the CNTK reposi
 If you already have a working clone of CNTK repository and would like to expand it with 1bit-SGD perform the following set of commands:
 
 * Change directory to the root of CNTK repository on your machine, e.g.
+
 ```
 cd /usr/cntk-user/git/repos/cntk
 ```
+
 or
+
 ```
 cd c:\code\git\repos\cntk
 ```
+
 * Execute
+
 ```
 git submodule update --init -- Source/1BitSGD
 ```
@@ -82,9 +88,11 @@ Having 1bit-SGD code on your machine does not automatically mean you have 1bit-S
 #### Windows
 
 Add the Environment Variable ```CNTK_ENABLE_1BitSGD``` and set its value to ```true```. E.g. run this in an Admin (elevated) CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
+
 ```
 setx CNTK_ENABLE_1BitSGD true
 ```
+
 If you already built CNTK, you just need to rebuild the SGDLib Project (right-click, Project Only -> Rebuild Only SGDLib).
 
 #### Linux
@@ -93,7 +101,8 @@ Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 
 Then perform the build as usual.
 
-**Next steps**
+## Next steps
+
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
 * [Config file overview](./BrainScript-Config-file-overview.md)

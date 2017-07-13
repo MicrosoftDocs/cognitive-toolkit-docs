@@ -74,8 +74,8 @@ The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-an
 setx CNTK_ENABLE_ASGD false
 ```
 
-[!IMPORTANT]
-The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
+> [!IMPORTANT]
+> The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ##  MKL
 
@@ -148,8 +148,8 @@ In the following steps we will install the NVidia development tools required to 
 
 ## NVIDIA CUDA 8
 
-[!IMPORTANT]
-In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
+> [!IMPORTANT]
+> In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
 
 CNTK is set to build with CUDA 8.0. Download and install the NVIDIA CUDA 8.0 Toolkit:
 
@@ -177,8 +177,8 @@ Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://
 
 ### CUB
 
-[!IMPORTANT]
-Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
+> [!IMPORTANT]
+> Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
 
 * Download NVIDIA CUB v.1.4.1 [from this download link](https://github.com/NVlabs/cub/archive/1.4.1.zip)
 * Extract the archive to a folder on your local disk (we assume `c:\local\cub-1.4.1`) and set the environment variable `CUB_PATH` pointing to that location, e.g.:
