@@ -6,6 +6,7 @@
 				"**/*.md",
 				"**/*.yml"
 			],
+			"version": "cntk-py-2.1",
 			"exclude": [
 				"**/obj/**",
 				"**/includes/**",
@@ -22,12 +23,18 @@
 				"**/*.png",
 				"**/*.jpg"
 			],
+			"version": "cntk-py-2.1",
 			"exclude": [
 				"**/obj/**",
 				"**/includes/**"
 			]
 			}
 		],
+		"versions": {
+                  "cntk-py-2.1": {
+                    "dest": "cntk-py-2.1"
+                  }
+                },
 		"overwrite": [],
 		"externalReference": [],
 		"globalMetadata": {
