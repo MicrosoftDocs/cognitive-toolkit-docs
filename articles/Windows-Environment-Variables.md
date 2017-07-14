@@ -2,13 +2,12 @@
 title:   Windows Environment Variables
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/12/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
 # Windows Environment Variables
 
 If you are building the Microsoft Cognitive Toolkit on your own machine, it requires the installation of several external components. The build process finds these installed components on your machine through environment variables. This allows you to install these components according to your wishes and preferences.
@@ -58,7 +57,15 @@ Assuming the default values:
  * DataParallel ASGD *is* being built
  * 1bit SGD *is not* being built
  * With undefined `CNTK_PY.._PATH`, Python libraries are *not* being built
- 
-  
+
+# Additional Environment Variables
+
+There are additional environment variables which can influence the compilation process:
+
+| Environment Variable | |
+|:------------|:-------------|
+|CNTK_CUDA_CODEGEN_DEBUG CNTK_CUDA_CODEGEN_RELEASE | | With these environment variables you can define the NVidia Compiler target architectures. For example, setting a variable to `compute_35,sm_35;compute_50,sm_50` will only build level 3.5 and 5.0 compatible cubin and PTX information. For detailed information about this refer to the NVidia Compiler documentation.
+
 **More information**
+
 * [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
