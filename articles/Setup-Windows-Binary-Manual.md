@@ -8,8 +8,10 @@ ms.topic:   get-started-article
 ms.service:  Cognitive-services
 ms.devlang:   brainscript, python, cpp
 ---
-
 # Setup Windows binary manual
+
+> [!NOTE]
+> These instructions apply to release 2.0.
 
 ## Windows manual installation from binary distribution
 

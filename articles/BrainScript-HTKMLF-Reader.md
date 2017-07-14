@@ -8,10 +8,9 @@ ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
-
 # BrainScript HTKMLF Reader
 
-> [!IMPORTANT]
+> [!WARNING]
 > HTKMLFReader is obsolete and is being replaced by HTK MLF and Feature deserializers, cf. [Understanding and Extending Readers](./BrainScript-and-Python---Understanding-and-Extending-Readers.md). Please use these for your networks.
 
 HTKMLFReader is a data reader that reads files typically associated with speech recognition tasks, and specifically with the [Hidden Markov Model Toolkit (HTK)](http://htk.eng.cam.ac.uk/) suite of tools. The reader can take as input two types of files, a list of feature files known in HTK parlance as an ```scp``` file (“script” file), a label file known as ```mlf``` file (“model label file”) and an archive file.
@@ -51,6 +50,7 @@ The HTKMLFReader has the following configuration parameters:
 The above example has two sources of data being processed by the reader, features, in the form of a list of HTK feature files, and labels, which are in the form of an HTK MLF file. Both features and labels correspond to nodes in the computational network, in this case, the input and output nodes, respectively. Note that `features` and `labels` are the default names used by the SimpleNetworkBuilder but if the network is designed using the Network Description Language (NDL), then any names can be used, as long as they each have a corresponding node in the network.
 
 To specify continuous-valued features, e.g. MFCC's or log mel filterbank coefficients, the following parameters should be included in the a configuration block:
+
 * `scpFile`: a list of files to be processed. The files should be HTK compatible files and can be specified in standard format or “archive” format. The details of using an archive are described below. 
 
 * `dim`: an integer that specifies the full feature vector dimension with the desired context window. For example, if you had 72-dimensional features (24-dimensional filterbank features plus delta and delta-delta coefficients) and the network is designed to process a context window of 11 frames, the specified dimension should be 792. Note that only symmetric context windows are supported.
@@ -66,8 +66,8 @@ To specify the corresponding labels, e.g. phoneme or senone labels, a configurat
 Note that multiple inputs and outputs can be specified using additional reader blocks for either features read from files listed in an ```scp``` file or labels read from an ```mlf``` file. For example, in a multi-task learning scenario, where the network was predicting both speaker identity and senone label, the user would specify an additional block that includes an ```mlf``` file that contains labels corresponding about speaker identity. Similarly, for a network with multiple inputs, e.g. both MFCC and PLP features, an additional feature block would be used. 
 
 For recurrent structures, such as an RNN or an LSTM, there are additional configuration options in the HTKMLFReader
-* `frameMode`: `true` or `false`, whether the reader should randomize the data at the frame level or the utterance level. Setting `frameMode` to `true` is the default and is appropriate for training networks without any temporal connections.
-For networks that are designed to learn sequential information, e.g. RNN, `frameMode` should be set to `false`, which means utterances are randomized but proper sequence is maintained within an utterance. Note that this only works with the `blockRandomize` read method.
+
+* `frameMode`: `true` or `false`, whether the reader should randomize the data at the frame level or the utterance level. Setting `frameMode` to `true` is the default and is appropriate for training networks without any temporal connections. For networks that are designed to learn sequential information, e.g. RNN, `frameMode` should be set to `false`, which means utterances are randomized but proper sequence is maintained within an utterance. Note that this only works with the `blockRandomize` read method.
 
 * `nbruttsineachrecurrentiter`: specifies the number of utterances to process together for efficient training of networks with recurrent structures. The default is `1`, but any value below 20 to 30 will lead to significant efficiency degradations with GPUs.
 
@@ -160,14 +160,15 @@ Archive files are basically column-major matrices of ```float32```, with a 12-by
 ```
 struct fileheader
 {
-	int nsamples;
-	int sampperiod;
-	short sampsize;
-	short sampkind;
+    int nsamples;
+    int sampperiod;
+    short sampsize;
+    short sampkind;
 }
 ```
 
 where:
+
 * ```sampsize``` is the size of a vector in bytes (```=4 * feature dimension```);
 * ```sampkind``` is a numeric identifier of the feature type (MFCC, PLP etc.). CNTK ignores this. If your files are not created by HTK, you can just set this to 9 (USER). And
 * ```sampperiod``` should be ```100000``` (CNTK mostly ignores this value, except possibly for error messages).

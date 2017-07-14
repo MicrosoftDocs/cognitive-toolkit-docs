@@ -4,11 +4,10 @@ author:    wolfma61
 ms.author:   wolfma
 ms.date:   07/12/2017
 ms.custom:   cognitive-toolkit
-ms.topic:   linux-environment-variables-article
+ms.topic:  get-started-article
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
 # Linux Environment Variables
 
 If you are building the Microsoft Cognitive Toolkit on your own machine, `configure` and `Makefile` scripts support a limited set of installation paths for all dependent components. In addition the build process and the Microsoft Cognitive Toolkit use environment variables to locate components. Add the following environment variable as required to your current session and your .bashrc profile (prepending the new path, to ensure that the component required by CNTK is used as opposed to a default version available through the OS).

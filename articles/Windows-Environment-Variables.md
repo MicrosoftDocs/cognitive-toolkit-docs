@@ -8,7 +8,6 @@ ms.topic:   get-started-article
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
 # Windows Environment Variables
 
 If you are building the Microsoft Cognitive Toolkit on your own machine, it requires the installation of several external components. The build process finds these installed components on your machine through environment variables. This allows you to install these components according to your wishes and preferences.

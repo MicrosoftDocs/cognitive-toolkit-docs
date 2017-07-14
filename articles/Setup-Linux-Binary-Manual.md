@@ -10,6 +10,9 @@ ms.devlang:   NA
 ---
 # Setup Linux binary manual
 
+> [!NOTE]
+> These instructions apply to release 2.0.
+
 ## Linux binary manual installation
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK)
@@ -33,7 +36,7 @@ CNTK V2 on Linux requires the following prerequisites to be installed from the l
 * [Open MPI](./Setup-CNTK-on-Linux.md#open-mpi)
 
 > [!IMPORTANT]
-> We strongly recommend to follow Open MPI installation procedure described by the link above to ensure the correct work of CNTK.
+> We strongly recommend to follow the Open MPI installation procedure described by the link above.
 
 * For GPU systems ensure that you have the [latest NVIDIA driver](http://www.nvidia.com/drivers)
 * Download the required binary package from [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) and extract it to your machine.

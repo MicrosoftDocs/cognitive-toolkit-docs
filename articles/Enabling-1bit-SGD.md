@@ -1,19 +1,14 @@
 ---
-title:   Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit
+title:    Build the Microsoft Cognitive Toolkit wit 1-bit Stochastic Gradient Descent (1bit-SGD) enabled
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/21/2017
+ms.date:   04/14/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
-# Enabling 1-bit Stochastic Gradient Descent for the Microsoft Cognitive Toolkit (1bit-SGD)
-
-***On January 25, 2017 1bit-SGD code is moved to a new Repository in GitHub.***
-
-***If you cloned CNTK Repository with 1bit-SGD enabled prior to January 25, 2017 you need to update git submodule configuration as described in [this article](./Update-1bit-SGD-Submodule-Location.md).***
+# Building the Microsoft Cognitive Toolkit wit 1-bit Stochastic Gradient Descent (1bit-SGD) enabled
 
 1-bit Stochastic Gradient Descent (1bit-SGD) is an optional component of the Microsoft Cognitive Toolkit (CNTK) which significantly improves the performance during deep neural network (DNN) training using a single server with multiple GPUs and/or multiple servers with a single or multiple GPUs. This is achieved by the implementing the Gradient Quantization approach that significantly reduces the communication costs during parallel computations involved in the DNN training process. You may read more about 1-bit Stochastic Gradient Descent in this [article](http://research.microsoft.com/apps/pubs/?id=230137).
 
@@ -100,9 +95,3 @@ If you already built CNTK, you just need to rebuild the SGDLib Project (right-cl
 Pass the option ```--1bitsgd=yes``` to the ```configure``` command.
 
 Then perform the build as usual.
-
-## Next steps
-
-* [CNTK usage from Brainscript](./CNTK-usage-overview.md)
-* [Examples](./Examples.md)
-* [Config file overview](./BrainScript-Config-file-overview.md)
