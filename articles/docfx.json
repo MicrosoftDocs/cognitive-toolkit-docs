@@ -64,14 +64,18 @@
 			]
 			}
 		],
-		"versions": {
-          "cntk-py-2.1": {
-            "dest": "cntk-py-2.1"
-          },
-          "cntk-py-2.0": {
-            "dest": "cntk-py-2.0"
-          }
-        },
+		"versions": [
+		        {
+                        "cntk-py-2.1": {
+                                 "dest": "cntk-py-2.1"
+		        }
+		        },
+			{
+                        "cntk-py-2.0": {
+                                 "dest": "cntk-py-2.0"
+		        }
+		        }
+                ]
 		"overwrite": [],
 		"externalReference": [],
 		"globalMetadata": {
