@@ -6,7 +6,26 @@
 				"**/*.md",
 				"**/*.yml"
 			],
+			"src": "2.1",
 			"version": "cntk-py-2.1",
+			"exclude": [
+				"**/obj/**",
+				"**/includes/**",
+				"README.md",
+				"LICENSE",
+				"LICENSE-CODE",
+				"ThirdPartyNotices"
+			]
+			}
+		],
+		"content": [
+			{
+			"files": [
+				"**/*.md",
+				"**/*.yml"
+			],
+			"src": "2.0",
+			"version": "cntk-py-2.0",
 			"exclude": [
 				"**/obj/**",
 				"**/includes/**",
@@ -23,6 +42,7 @@
 				"**/*.png",
 				"**/*.jpg"
 			],
+			"src": "2.1",
 			"version": "cntk-py-2.1",
 			"exclude": [
 				"**/obj/**",
@@ -30,11 +50,28 @@
 			]
 			}
 		],
+		"resource": [
+			{
+			"files": [
+				"**/*.png",
+				"**/*.jpg"
+			],
+			"src": "2.0",
+			"version": "cntk-py-2.0",
+			"exclude": [
+				"**/obj/**",
+				"**/includes/**"
+			]
+			}
+		],
 		"versions": {
-                  "cntk-py-2.1": {
-                    "dest": "cntk-py-2.1"
-                  }
-                },
+          "cntk-py-2.1": {
+            "dest": "cntk-py-2.1"
+          },
+          "cntk-py-2.0": {
+            "dest": "cntk-py-2.0"
+          }
+        },
 		"overwrite": [],
 		"externalReference": [],
 		"globalMetadata": {
