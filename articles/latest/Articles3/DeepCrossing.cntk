@@ -1,0 +1,127 @@
+WorkingDir  = "."
+DataDir     = "./data/"
+ModelDir    = "$WorkingDir$/DeepCrossing"
+ConfigDir   = "."
+
+MBSize=100
+LRate=0.0001
+
+CROSSDim1 = 512
+CROSSDim2 = 512
+CROSSDIM3 = 256
+CROSSDIM4 = 128
+CROSSDIM5 = 64
+MAXEPOCHS = 50
+
+trainFile = "train.bin"
+validFile = "valid.bin"
+
+command = train
+precision = float
+train = [
+    action = train
+    numMBsToShowResult=500
+    deviceId = Auto
+    minibatchSize =$MBSize$
+    modelPath = $ModelDir$/DeepCrossing.net
+    traceLevel = 3
+
+    SGD = [
+		epochSize=0
+		learningRatesPerSample = $LRate$    #run 1 to 2 epochs, check the result and adjust this value
+        momentumPerMB = 0
+		maxEpochs=$MAXEPOCHS$
+
+		gradUpdateType=none
+		gradientClippingWithTruncation=true
+		clippingThresholdPerSample=1#INF
+			
+		AutoAdjust=[
+			reduceLearnRateIfImproveLessThan=0
+			loadBestModel=true
+			increaseLearnRateIfImproveMoreThan=1000000000
+			learnRateDecreaseFactor=0.5
+			autoAdjustLR=AdjustAfterEpoch
+			learnRateAdjustInterval=2
+		]
+
+	]
+
+    BrainScriptNetworkBuilder=[
+	    
+		// Helper Macro
+        ResUnit(InnerDim, OutDim, INNODE)
+		{
+			L1 = DenseLayer {InnerDim, activation = ReLU, init = "gaussian"}( INNODE )
+			L2 = DenseLayer {OutDim, activation = Pass, init = "gaussian"}( L1 )
+			ResUnit = ReLU(Plus(INNODE, L2))
+		}.ResUnit
+
+        // Constants
+        T1Dim = XXX
+		T2Dim = XXX
+		T3Dim = XXX
+		D1Dim = XXX
+		D2Dim = XXX
+		D3Dim = XXX
+		S1Dim = XXX
+		S2Dim = XXX
+
+        // Inputs
+		T1 = SparseInput(T1Dim)
+		T2 = SparseInput(T2Dim)
+		T3 = SparseInput(T3Dim)
+		D1 = Input(D1Dim)
+		D2 = Input(D2Dim)
+		D3 = Input(D3Dim)
+		S1 = SparseInput(S1Dim)
+		S2 = SparseInput(S2Dim)
+        
+
+		// Embedding Constants
+		EDim = XXX # Previously we stated 128 as a potential default
+		
+		// Embedding Layer
+		T1E = DenseLayer {EDim, activation = ReLU, init = "gaussian"}( T1 )
+		T2E = DenseLayer {EDim, activation = ReLU, init = "gaussian"}( T2 )
+		T3E = DenseLayer {EDim, activation = ReLU, init = "gaussian"}( T3 )
+		S2E = DenseLayer {EDim, activation = ReLU, init = "gaussian"}( S2E )
+        
+		// Stacking
+        c = Splice(( T1E : T2E : T3E : D1 : D2 : D3 : S1 : S2E ))
+		
+		// ResNet Constants		
+		AllDim = EDim + EDim + EDim + EDim + D1Dim + D2Dim + D3Dim + S1Dim
+		Inner1 = XXX
+		Inner2 = XXX
+		Inner3 = XXX
+		Inner4 = XXX
+		Inner5 = XXX
+		
+		// ResNet Layers
+		r1 = ResNet( Inner1, AllDim, c )
+		r2 = ResNet( Inner1, AllDim, r1 )
+		r3 = ResNet( Inner1, AllDim, r2 )
+		r4 = ResNet( Inner1, AllDim, r3 )
+		r5 = ResNet( Inner1, AllDim, r4 )
+
+		// Scoring Layer
+		s = DenseLayer {1, activation = Sigmoid, init = "gaussian"}( r5 )
+		CE = logistic(Label, s)
+		
+		// Criteria, output, and evaluation nodes
+        criterionNodes = (CE)
+		evaluationNodes = (err)
+		outputNodes = (s)
+    ]
+
+    reader = [
+        readerType = "CNTKTextFormatReader"
+        file = "$DataDir$/$trainFile$"
+    ] 
+    cvReader = [
+        readerType = "CNTKTextFormatReader"
+        file = "$DataDir$/$validFile$"
+    ]    
+]
+

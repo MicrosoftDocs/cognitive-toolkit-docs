@@ -32,6 +32,22 @@
 				"LICENSE-CODE",
 				"ThirdPartyNotices"
 			]
+			},
+			{
+			"files": [
+				"**/*.md",
+				"**/*.yml"
+			],
+			"src": "latest",
+			"version": "cntk-py",
+			"exclude": [
+				"**/obj/**",
+				"**/includes/**",
+				"README.md",
+				"LICENSE",
+				"LICENSE-CODE",
+				"ThirdPartyNotices"
+			]
 			}
 		],
 		"resource": [
@@ -58,6 +74,18 @@
 				"**/obj/**",
 				"**/includes/**"
 			]
+			},
+			{
+			"files": [
+				"**/*.png",
+				"**/*.jpg"
+			],
+			"src": "latest",
+			"version": "cntk-py",
+			"exclude": [
+				"**/obj/**",
+				"**/includes/**"
+			]
 			}
 		],
 		"versions": {
@@ -66,6 +94,9 @@
           },
           "cntk-py-2.0": {
             "dest": "cntk-py-2.0"
+          },
+          "cntk-py": {
+            "dest": "cntk-py"
           }
         },
 		"overwrite": [],
