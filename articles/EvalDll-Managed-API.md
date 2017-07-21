@@ -148,4 +148,4 @@ class IEvaluateModelManagedD : IEvaluateModelManaged<double> // Assumes data ele
 ```
 
 ## Example
-The CSEvalClient program located [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CSEvalClient) demonstrates the usage of this evaluation interface.
+The CSEvalClient program located [here](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/LegacyEvalDll/CSEvalClient) demonstrates the usage of this evaluation interface.
