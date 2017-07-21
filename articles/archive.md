@@ -31,7 +31,7 @@ More information about using EvalDll can be found in the following pages.
 * [EvalDLL Evaluation Overview](.//EvalDLL-Evaluation-Overview.md)
 * [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows.md)
 * [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux.md)
-* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
+* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi-using-EvalDll.md)
 * [EvalDLL C# API](./EvalDll-Managed-API.md)
 * [EvalDLL C++ API](./EvalDll-Native-API.md)
 * [EvalDLL Evaluate Hidden Layers](./CNTK-Evaluate-Hidden-Layers.md)
