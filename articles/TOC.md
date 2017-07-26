@@ -66,7 +66,6 @@
 ##### [Parameters And constants](/cognitive-toolkit/Parameters-And-Constants)
 ##### [Pooling](/cognitive-toolkit/Pooling)
 ##### [Post Batch Normalization Statistics](/cognitive-toolkit/Post-Batch-Normalization-Statistics)
-##### [project a 1D input of dim inputDim to a 1D output of dim outputDim](/cognitive-toolkit/project-a-1D-input-of-dim-inputDim-to-a-1D-output-of-dim-outputDim)
 ##### [Records](/cognitive-toolkit/Records)
 ##### [Reduction operations](/cognitive-toolkit/Reduction-Operations)
 ##### [Sequential](/cognitive-toolkit/Sequential)
