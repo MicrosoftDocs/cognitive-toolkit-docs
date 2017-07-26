@@ -28,7 +28,7 @@ This page lists the environment variables which are used by the CNTK build proce
 | LD_LIBRARY_PATH | /usr/local/cuda-8.0/lib64
 | |
 | **[cuDNN](./Setup-CNTK-on-Linux.md#cudnn)** |
-| LD_LIBRARY_PATH | /usr/local/cudnn-6.0/cuda/lib64 |
+| LD_LIBRARY_PATH | /usr/local/cudnn-5.1/cuda/lib64 |
 
 
 # Additional Environment Variables
