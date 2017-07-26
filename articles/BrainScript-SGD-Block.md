@@ -2,7 +2,7 @@
 title:   BrainScript SGD Block
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/13/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -233,6 +233,10 @@ is multiplied by the number of samples in the minibatch.
 * `traceLevel`: trace level to decide what information to print out in the stderr. Valid values are `0` (default) and `1`.
 
 * `numMBsToShowResult`: display training statistics after how many minibatches. Default is `10`.
+
+### TensorBoard
+
+* `tensorBoardNumMBsToLogResult`: number of minibatches between logging results to TensorBoard.
 
 ### Gradient Check
 * `gradientCheck`: determines whether to use the gradient checker. The default value is `false`. When using the gradient checker you need to use a minibatch size that is larger than the sequence length for RNNs due to the truncated backpropagation through time (BPTT) algorithm used to train RNNs, and a smaller learning rate to prevent numerical issues caused by divergence. In addition, precision should be set to double.

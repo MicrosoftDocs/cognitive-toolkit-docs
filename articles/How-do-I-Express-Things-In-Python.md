@@ -111,14 +111,18 @@ trainer.train_minibatch({criterion.arguments[0]: features, criterion.arguments[1
 
 ## Port projection of 1D input to 1D output from Python API to C++ API
 
-In C++ API a rank-1 tensor denotes a column and tensors are stored in column major format (i.e. axis 0 is the faster changing dimension, followed by axis 1 and so on). 
+In the [CNTK C++ API](./CNTK-Library-API.md#c-api), a rank-1 tensor denotes a column vector, and tensors are stored in column major format (i.e., axis 0 is the fastest changing dimension, followed by axis 1, and so on). 
+In Python, to conform to the generally accepted norm established by NumPy, a rank-1 tensor denotes a row vector, and tensors are stored in row major format (i.e., axis 0 is the slowest changing dimension, followed by axis 1, and so on).
+
+Take the following Python snippet:
 
 ```python
 input = input_variable((input_dim), np.float32)
 times_param = parameter(shape=(input.shape[0], output_dim))
 t = times(input, times_param)
 ```
-So to project a 1D input of dim “inputDim” to a 1D output of dim “outputDim”, you need to setup things as follows in C++:
+
+To project a 1D input of dim `inputDim` to a 1D output of dim `outputDim`, you need to set up things as follows in C++:
 
 ```cpp
 input = InputVariable({ inputDim }, DataType::Float);
@@ -126,7 +130,8 @@ timesParam = CNTK::Parameter({ outputDim, input.Shape()[0] });
 t = Times(timesParam, input);
 ```
 
-Note how both the tensor shapes and the order of the operands to the Times operation are reversed compared to the Python code. In Python, to conform to the generally accepted norm established by numpy, a rank-1 tensor denoted a row vector and data layout is row major (i.e. axis 0 is the slowest changing dimension, followed by axis 1 and so on). We internally do the required shape transformations at the SWIG layer to map the Python shapes and ops to the C++ implementation correctly.
+Note how both the tensor shapes and the order of the operands to the `Times` operation are reversed compared to the Python code.
+We internally do the required shape transformations at the SWIG layer to map the Python shapes and ops to the C++ implementation correctly.
 
 ## Port LSTM NDL primitives to Python
 

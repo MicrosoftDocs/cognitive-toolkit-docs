@@ -19,17 +19,19 @@ The Windows binary installations script can be run with several options to adapt
 
 By default the script will:
 
- - Create or reuse Anaconda3 in the folder `C:\local\Anaconda3-4.1.1-Windows-x86_64`
- - Create or update a CNTK Python 3.5 environment in `C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35`
+- Create or reuse Anaconda3 in the folder `C:\local\Anaconda3-4.1.1-Windows-x86_64`
+- Create or update a CNTK Python 3.5 environment in `C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35`
 
 Overview:
+
 ```
-install.bat 
+install.bat
   [-AnacondaBasePath <LOCAL_DIRECTORY>]
   [-PyVersion (27|34|35|36)]
   [-NoConfirm]
   [-Execute]
 ```
+
 ### Parameter `AnacondaBasePath`
 
 `install.bat -AnacondaBasePath <LOCAL_DIRECTORY>`
@@ -37,6 +39,7 @@ install.bat
 This optional parameter allows you to specify the location of an Anaconda installation to be used or created on your machine. If the directory exists on your machine, the script will continue under the assumption that this is a working Anaconda 3 (4.1.1) (or compatible) installation, and will create the CNTK Python environment in that location. If the directory doesn't exist, a new Anaconda installation will be created in the specified location.
 
 Example:
+
 ```
 install.bat -AnacondaBasePath c:\Python\Anaconda3
 ```
@@ -51,6 +54,7 @@ This is an optional parameter and can be used to specify the Python version used
 - The `cntkpy<PyVersion>.bat` file is created in the scripts directory to activate the Python environment
 
 Example:
+
 ```
 install.bat -PyVersion 34
 ```
@@ -60,6 +64,7 @@ install.bat -PyVersion 34
 If you just want to see what components would be installed, you can just set the parameter `-Execute:$false`. The installation script will execute, but no changes to your system will be performed.
 
 Example:
+
 ```
 install.bat -Execute:$false
 ```

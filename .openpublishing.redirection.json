@@ -1,0 +1,8 @@
+{
+   "redirections": [
+     {
+       "source_path":  "articles/project-a-1D-input-of-dim-inputDim-to-a-1D-output-of-dim-outputDim.md",
+       "redirect_url":  "/cognitive-toolkit/How-do-I-Express-Things-In-Python#port-projection-of-1d-input-to-1d-output-from-python-api-to-c-api"
+     }
+   ]
+}

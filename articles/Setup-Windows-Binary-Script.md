@@ -58,19 +58,20 @@ To verify the correct installation of CNTK from Python:
 
 You need to **activate** the CNTK environment by opening a standard Windows command prompt and running the batch file created by the installation script (see Step 2). This script will add Python and the CNTK installation to your current PATH environment only for the current Windows command prompt.
 
-> Note: you will need to do this every time you plan to use the CNTK Python environment
-
 ```
 cd c:\local\CNTK-2-0
 cd scripts
 cntkpy35.bat
 ```
 
+> [!NOTE]
+> You will need to activate the CNTK environment every time you plan on using the CNTK Python environment.
+
 You can now follow the [standard description](./Setup-Test-Python.md) to test your installation from Python and run the tutorials or Jupyter notebooks.
-  
- - If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
- - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)   
-  
+
+- If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
+- If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)   
+
 **Step 5** Verify the setup for BrainScript
 
 Perform the following command in the CNTK environment command prompt (see previous step):
@@ -80,7 +81,9 @@ cd c:\local\CNTK-2-0
 cd Tutorials\HelloWorld-LogisticRegression
 cntk configFile=lr_bs.cntk makeMode=false command=Train
 ```
+
 The last lines of the CNTK output on the console should look similar to this:
+
 ```
 Finished Epoch[42 of 50]: [Training] lr = 0.04287672 * 1000; err = 0.01152817 * 1000; totalSamplesSeen = 42000; learningRatePerSample = 0.039999999; epochTime=0.050296s
 Finished Epoch[43 of 50]: [Training] lr = 0.04388479 * 1000; err = 0.01206375 * 1000; totalSamplesSeen = 43000; learningRatePerSample = 0.039999999; epochTime=0.052143s
@@ -94,16 +97,21 @@ Finished Epoch[50 of 50]: [Training] lr = 0.04399402 * 1000; err = 0.01202178 * 
 
 COMPLETED.
 ```
+
 If you have an NVidia GPU and installed a GPU build, you can also try this command:
+
 ```
 cntk configFile=lr_bs.cntk makeMode=false command=Train deviceId=auto
 ```
+
 To validate that the GPU was being used, look for the following line in your output:
+
 ```
 Model has 9 nodes. Using GPU 0.
 ```
 
 Next:
+
 - [CNTK binary installation scripts options](./Setup-Windows-Binary-Script-Options.md)
 - [Setup CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 - [Home](./index.md)
