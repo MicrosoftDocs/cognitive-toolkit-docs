@@ -2,7 +2,7 @@
 title:    Build the Microsoft Cognitive Toolkit wit 1-bit Stochastic Gradient Descent (1bit-SGD) enabled
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   04/14/2017
+ms.date:   07/26/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
