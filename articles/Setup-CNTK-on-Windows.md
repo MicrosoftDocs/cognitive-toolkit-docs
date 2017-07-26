@@ -252,6 +252,10 @@ If you plan to build CNTK with Python support, install [SWIG](#optional-swig) if
 If you do not have an Anaconda installation: install [Anaconda Python for Windows](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe). 
 You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Anaconda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
 
+## OPTIONAL. CNTK UWP Build
+
+If you want to build the CNTK Evalaluation Library for UWP you need to follow the additional installation steps described [here](./Setup-UWP-Build-on-Windows.md)
+
 ### CNTK Python environments
 
 CNTK supports Python 2.7, Python 3.4, Python 3.5 and Python 3.6. We recommend you create a dedicated environment in your Python installation to work with CNTK. This way CNTK and the installed supporting packages won't impact any other Python project. We provide several files (`yml`-files) containing the description of required Python packages. The packages are located in the `scripts\install\windows` directory inside your CNTK clone. Please select the file matching your targeted Python version.
@@ -425,6 +429,7 @@ If you plan modifications to the code you should read the information on [Develo
 ## Links
 
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
+* [CNTK UWP build](./Setup-UWP-Build-on-Windows.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)
