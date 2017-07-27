@@ -11,6 +11,47 @@ ms.devlang:   NA
 
 # Setup BuildProtobuf VS15
 
+cntk-short.md
+[!INCLUDE[cntk-short.md](includes/cntk-short.md)]
+cntk.md
+[!INCLUDE[cntk.md](includes/cntk.md)]
+deprecated-2.1.md
+[!INCLUDE[deprecated-2.1.md](includes/deprecated-2.1.md)]
+versionadded-2.1.md
+[!INCLUDE[versionadded-2.1.md](includes/versionadded-2.1.md)]
+versionchanged-2.1.md
+[!INCLUDE[versionchanged-2.1.md](includes/versionchanged-2.1.md)]
+vs2015u3-md.md
+[!INCLUDE[vs2015u3-md.md](includes/vs2015u3-md.md)]
+the end
+
+deprecated-2.1-block.md
+
+[!INCLUDE[deprecated-2.1-block.md](includes/deprecated-2.1-block.md)]
+
+versionadded-2.1-block.md
+
+[!INCLUDE[versionadded-2.1-block.md](includes/versionadded-2.1-block.md)]
+
+versionchanged-2.1-block.md
+
+[!INCLUDE[versionchanged-2.1-block.md](includes/versionchanged-2.1-block.md)]
+
+deprecated-2.1-block.md
+
+[!INCLUDE[deprecated-2.1-block.md](includes/deprecated-2.1-block.md)]
+> sdflksjdflksdjf
+
+versionadded-2.1-block.md
+
+[!INCLUDE[versionadded-2.1-block.md](includes/versionadded-2.1-block.md)]
+> sdflksjdflksdjf
+
+versionchanged-2.1-block.md
+
+[!INCLUDE[versionchanged-2.1-block.md](includes/versionchanged-2.1-block.md)]
+> sdflksjdflksdjf
+
 ## Creating a compiled Protobuf 3.1.0 for CNTK
 
 If you want to build the Protobuf 3.1.0 for CNTK yourself, follow these instructions. The compiled Protobuf version will be located in `c:\local\protobuf-3.1.0-vs15`
