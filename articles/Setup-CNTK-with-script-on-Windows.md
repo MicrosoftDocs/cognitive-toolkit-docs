@@ -2,7 +2,7 @@
 title:   Setup CNTK with script on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/09/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -65,7 +65,8 @@ You are also required to have the 'Common Tools for Visual C++ 2015' installed o
 
 ### NVIDIA CUDA 8
 
-***Important*** In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
+> [!IMPORTANT]
+> In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
 
 CNTK is set to build with CUDA 8.0. Download and install the NVIDIA CUDA 8.0 Toolkit:
 
@@ -133,9 +134,15 @@ Depending on the speed of your system and your Internet connection, the whole pr
 
 At this point all the required components to build CNTK on you system are installed. You can follow the steps found [here](./Setup-CNTK-on-Windows.md#building-cntk) to build and test CNTK.
 
+NOTE_NEW
+
+> [!Note]
+> If you want to build the CNTK Evaluation Library for Universal Windows Platform (UWP) you need to follow the additional installation steps [here](./Setup-UWP-Build-on-Windows.md)
+
 ## More information
 
 * [Windows build specific environment variables](./Windows-Environment-Variables.md)
+* [CNTK Development Environment for Universal Windows Platform (UWP)](./Setup-UWP-Build-on-Windows.md)
 * [Build and test CNTK](./Setup-CNTK-on-Windows.md#building-cntk)
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
