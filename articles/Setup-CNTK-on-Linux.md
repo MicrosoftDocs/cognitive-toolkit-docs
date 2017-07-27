@@ -21,6 +21,16 @@ Content for Windows...
 
 ---
 
+# [CNTK 2.0](#tab/cntk-py-2.0)
+
+Blah
+
+# [CNTK 2.1](#tab/cntk-py-2.1)
+
+Blub
+
+---
+
 ## CNTK Production Build and Test configuration
 
 CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations.md) where we list all dependency component and component versions that we use.
