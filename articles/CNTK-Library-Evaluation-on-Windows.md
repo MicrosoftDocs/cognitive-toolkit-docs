@@ -88,6 +88,10 @@ For using GPU, you need in addition to include the following NVIDIA CUDA related
 * `cusparse64_80.dll`
 * `nvml.dll`
 
+> [!NOTE]
+> [!INCLUDE[versionchanged-2.1](includes/versionchanged-2.1.md)]
+> CNTK NuGet packages are shipping with cuDNN 6 (`cudnn64_6.dll`).
+
 All these DLLs can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). 
 
 ## Using Python

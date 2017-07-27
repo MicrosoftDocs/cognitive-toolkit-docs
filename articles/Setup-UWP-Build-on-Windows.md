@@ -10,7 +10,7 @@ ms.devlang:   NA
 ---
 # CNTK Development Environment for Universal Windows Platform (UWP)
 
-[!INCLUDE[versionadded-2.1-block](includes\versionadded-2.1-block.md)]
+[!INCLUDE[versionadded-2.1-block](includes/versionadded-2.1-block.md)]
 
 To build the CNTK configurations `Release_UWP` and `Debug_UWP` (for x64) in the CNTK Visual Studio solution file, you need to do the following:
 

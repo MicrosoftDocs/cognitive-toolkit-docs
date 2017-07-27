@@ -30,7 +30,7 @@ Here are the current configurations that are used in CNTK team environment for a
 
 ### NVIDIA Components
 * NVIDIA CUDA 8.0
-* NVIDIA cuDNN 6.0 for CUDA 8
+* NVIDIA cuDNN 6.0 for CUDA
 * NVIDIA CUB 1.4.1
 
 ### OpenCV

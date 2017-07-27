@@ -23,6 +23,9 @@ Before moving any further you may consider deploying CNTK as a Docker container.
 
 Please, read carefully this section before you proceed with your system configuration. The information below may save you a lot of time otherwise spent on build errors debugging.
 
+> [!NOTE]
+> This page assumes that you are trying to build CNTK's master branch.
+
 ### Expected component locations in configure and Makefile scripts
 
 Today `configure` and `Makefile` scripts support only limited set of installation paths for all dependency components listed in this section. We know, that this is a limitation and will fix it soon (also if you feel like improving these scripts yourselves and [submit your proposed changes](./Contributing-to-CNTK.md) your help is welcome and much appreciated).

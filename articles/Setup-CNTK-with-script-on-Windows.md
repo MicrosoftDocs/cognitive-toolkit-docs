@@ -137,7 +137,7 @@ At this point all the required components to build CNTK on you system are instal
 > [!Note]
 > If you want to build the CNTK Evaluation Library for Universal Windows Platform (UWP) you need to follow the additional installation steps [here](./Setup-UWP-Build-on-Windows.md).
 >
-> [!INCLUDE[versionadded-2.1](includes\versionadded-2.1.md)]
+> [!INCLUDE[versionadded-2.1](includes/versionadded-2.1.md)]
 
 
 ## More information
