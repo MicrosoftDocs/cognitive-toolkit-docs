@@ -11,6 +11,16 @@ ms.devlang:   cpp, python
 
 # Setup CNTK on Linux
 
+# [Linux](#tab/linux)
+
+Content for Linux...
+
+# [Windows](#tab/windows)
+
+Content for Windows...
+
+---
+
 ## CNTK Production Build and Test configuration
 
 CNTK may be successfully run in many Linux configurations, but in case you want to avoid possible compatibility issues you may get yourself familiar with [CNTK Production Build and Test configuration](./Test-Configurations.md) where we list all dependency component and component versions that we use.
