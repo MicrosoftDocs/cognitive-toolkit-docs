@@ -1,17 +1,17 @@
 ---
-title:   CNTK 2.0 Evaluation Overview
+title:   CNTK 2.1 Evaluation Overview
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-# CNTK 2.0 Evaluation Overview
+# CNTK 2.1 Evaluation Overview
 
-Once you have trained a model, you can use CNTK Eval library to evaluate the model in your own application. CNTK supports model evaluation from C++, Python, C#/.NET, and Java.
+Once you have trained a model, you can use CNTK Eval library to evaluate the model in your own application. CNTK supports model evaluation from C++, Python, C#/.NET, and Java. Starting from v2.1, CNTK also supports Universal Windows Platform (UWP).
 
 New features of the CNTK Evaluation include
 * Support both CPU and GPU device.
@@ -24,6 +24,7 @@ The following pages provide detailed information about model evaluation using CN
 * [CNTK-library evaluation with Python](./How-do-I-Evaluate-models-in-Python.md)
 * [NuGet-Packages](./NuGet-Package.md)
 * [Evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
+* [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
 
 ### Legacy Applications using CNTK 1.0
 

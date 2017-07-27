@@ -17,16 +17,18 @@ The CNTK Eval NuGet package is a NuGet package containing the necessary librarie
 
 * **CNTK.CPUOnly**: provides [CNTK C#/.NET Managed Eval Library](./CNTK-Library-Managed-API.md) and [C++ Library](./CNTK-Library-Native-Eval-Interface.md) for CPU only machines.
 * **CNTK.GPU**: provides [CNTK C#/.NET Managed Eval Library](./CNTK-Library-Managed-API.md) and [C++ Library](./CNTK-Library-Native-Eval-Interface.md) for GPU enabled machines.
+* **CNTK.UWP.CPUOnly**: provides [CNTK C++ UWP Eval Library](./CNTK-Library-Native-Eval-Interface.md) for applications using Universal Windows Platform (UWP) on CPU only machines.
 
 ## Installation
-The package may be obtained through the NuGet Package Manager inside Visual Studio by searching for "CNTK", or downloaded directly from NuGet:
+The package may be obtained through the NuGet Package Manager inside Visual Studio by searching for "CNTK", or downloaded directly from nuget.org:
 
-* [https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0](https://www.nuget.org/packages/CNTK.CPUOnly/2.0.0)   
-* [https://www.nuget.org/packages/CNTK.GPU/2.0.0](https://www.nuget.org/packages/CNTK.GPU/2.0.0)
+* [https://www.nuget.org/packages/CNTK.CPUOnly/2.1.0](https://www.nuget.org/packages/CNTK.CPUOnly/2.1.0)
+* [https://www.nuget.org/packages/CNTK.GPU/2.1.0](https://www.nuget.org/packages/CNTK.GPU/2.1.0)
+* [https://www.nuget.org/packages/CNTK.UWP.CPUOnly/2.1.0](https://www.nuget.org/packages/CNTK.UWP.CPUOnly/2.1.0)
 
-The current version is `2.0.0`.
+The current version is `2.1.0`.
 
-The CNTK NuGet packages may be installed on a Visual C++ or .NET project (C#, VB.Net, F#, ...). The NuGet package contains both debug and release versions of C++ library and DLLs, and the release version of C# assembly and its dependent DLLs. Once installed the project will contain a reference to the managed DLL and the required dependent binary libraries will be copied to the output directory after building the project. 
+The CNTK NuGet packages may be installed on a Visual C++, .NET(C#, VB.Net, F#, ...), or UWP projects. The NuGet package contains both debug and release versions of C++ library and DLLs, and the release version of C# assembly and its dependent DLLs. Once installed the project will contain a reference to the managed DLL and the required dependent binary libraries will be copied to the output directory after building the project.
 
 For instructions on how to install a NuGet package, please refer to the NuGet documentation at:
 [https://docs.nuget.org/consume/installing-nuget](https://docs.nuget.org/consume/installing-nuget)

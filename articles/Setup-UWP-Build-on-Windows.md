@@ -16,7 +16,7 @@ To build the CNTK configurations `Release_UWP` and `Debug_UWP` (for x64) in the 
 
 ## Install Windows 10 SDK (10.0.14393)
 
-Open the Control Panel, then navigate to Add-Remove Programs. Select Visual Studio 2015:
+Open the Control Panel, then navigate to Programs -> Programs and Features. Select Visual Studio 2015:
 
 ![Add-Remove Program](pictures\setup\uwp-arp.png)
 
