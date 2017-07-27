@@ -134,10 +134,11 @@ Depending on the speed of your system and your Internet connection, the whole pr
 
 At this point all the required components to build CNTK on you system are installed. You can follow the steps found [here](./Setup-CNTK-on-Windows.md#building-cntk) to build and test CNTK.
 
-NOTE_NEW
-
 > [!Note]
-> If you want to build the CNTK Evaluation Library for Universal Windows Platform (UWP) you need to follow the additional installation steps [here](./Setup-UWP-Build-on-Windows.md)
+> If you want to build the CNTK Evaluation Library for Universal Windows Platform (UWP) you need to follow the additional installation steps [here](./Setup-UWP-Build-on-Windows.md).
+>
+> [!INCLUDE[versionadded-2.1](includes\versionadded-2.1.md)]
+
 
 ## More information
 

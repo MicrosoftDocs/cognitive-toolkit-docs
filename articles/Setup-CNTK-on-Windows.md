@@ -254,7 +254,7 @@ You can follow the standard configuration given in the install program (Installa
 
 ## OPTIONAL. CNTK UWP Build
 
-NOTE_NEW
+[!INCLUDE[versionadded-2.1-block](includes\versionadded-2.1-block.md)]
 
 If you want to build the CNTK Evaluation Library for UWP you need to follow the additional installation steps described [here](./Setup-UWP-Build-on-Windows.md).
 
