@@ -254,7 +254,9 @@ You can follow the standard configuration given in the install program (Installa
 
 ## OPTIONAL. CNTK UWP Build
 
-If you want to build the CNTK Evalaluation Library for UWP you need to follow the additional installation steps described [here](./Setup-UWP-Build-on-Windows.md)
+NOTE_NEW
+
+If you want to build the CNTK Evaluation Library for UWP you need to follow the additional installation steps described [here](./Setup-UWP-Build-on-Windows.md).
 
 ### CNTK Python environments
 
@@ -429,7 +431,7 @@ If you plan modifications to the code you should read the information on [Develo
 ## Links
 
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
-* [CNTK UWP build](./Setup-UWP-Build-on-Windows.md)
+* [CNTK Development Environment for Universal Windows Platform (UWP)](./Setup-UWP-Build-on-Windows.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)

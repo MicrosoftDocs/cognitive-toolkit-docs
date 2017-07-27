@@ -19,7 +19,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |BOOST_INCLUDE_PATH | c:\local\boost_1_60_0-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |BOOST_LIB_PATH | c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |CNTK_MKL_PATH | c:\local\CNTKCustomMKL | [Custom MKL for CNTK](./Setup-CNTK-on-Windows.md#mkl) (required)
-|CNTK_OPENBLAS_PATH | c:\local\CNTKopenBLAS | [OpenBLAS library for CNTK UWP build](./Setup-UWP-Build-on-Windows) (optional)
+|CNTK_OPENBLAS_PATH | c:\local\CNTKopenBLAS | [OpenBLAS library for CNTK UWP build](./Setup-UWP-Build-on-Windows) (optional NOTE_NEW)
 |CUB_PATH | c:\local\cub-1.4.1 | [NVIDIA CUB Library](./Setup-CNTK-on-Windows.md#cub) (required for GPU build)
 |CUDNN_PATH | C:\local\cudnn-8.0-v6.0\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
 |CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
