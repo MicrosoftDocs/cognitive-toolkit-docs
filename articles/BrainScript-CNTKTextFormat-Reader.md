@@ -2,7 +2,7 @@
 title:   BrainScript CNTK Text Format Reader
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -285,6 +285,12 @@ For example, the following datasets are **invalid**:
 | `chunkSizeInBytes`                    | Number of consecutive bytes to read from disk in a single read operation. *Optional*, defaults to  `33554432` (32MB). |
 | `keepDataInMemory`                    | If `true`, the whole dataset will be cached in memory. *Optional*, defaults to `false`. |
 | `frameMode`                           | `true` signals the reader to use a packing method optimized for frames (sequences that contain only a single sample). *Optional*, defaults to `false`. |
+| `cacheIndex`                          | Specifies whether the meta-data built during the pre-processing stage should be written out to disk and loaded in from disk if available (`true`, `false`). *Optional*, defaults to  `false`. For more details, see the section below. [!INCLUDE[versionadded-2.1](includes/versionadded-2.1.md)] |
+
+##### Index caching
+
+[!INCLUDE[index-caching-block](Index-Caching.md)]
+
 
 ### `input` sub-section
 
