@@ -2,7 +2,7 @@
 title:   BrainScript and Python Understanding and Extending Readers
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -206,13 +206,14 @@ When you need another stream of different format, you can simply add the corresp
 
 Currently CNTK supports the below deserializers:
 
-| Deserializer type          | Module               | Description                                                            |
-| -----------------          | ------               | -----------                                                            |
-| HTKFeatureDeserializer     | HTKDeserializers     | Deserializer for HTK feature files                                     |
-| HTKMLFDeserializer         | HTKDeserializers     | Deserializer for HTK MLF files                                         |
-| ImageDeserializer          | ImageReader          | Deserializer for images encoded as plain files or in zip archive.      |
-| Base64ImageDeserializer    | ImageReader          | Deserializer for images encoded as base64 strings in the mapping file. |
-| CNTKTextFormatDeserializer | CNTKTextFormatReader | Deserializer for CNTK text format files                                |
+| Deserializer type           | Module               | Description                                                            |
+| -----------------           | ------               | -----------                                                            |
+| HTKFeatureDeserializer      | HTKDeserializers     | Deserializer for HTK feature files                                     |
+| HTKMLFDeserializer          | HTKDeserializers     | Deserializer for HTK MLF files                                         |
+| ImageDeserializer           | ImageReader          | Deserializer for images encoded as plain files or in zip archive.      |
+| Base64ImageDeserializer     | ImageReader          | Deserializer for images encoded as base64 strings in the mapping file. |
+| CNTKTextFormatDeserializer  | CNTKTextFormatReader | Deserializer for CNTK text format files                                |
+| CNTKBinaryFormatDeserializer| CNTKBinaryReader     | Deserializer for CNTK binary format files                              |
 
 Please refer to the tables [below](#general-reader-configuration) for the full description of the configuration parameters.
 
@@ -357,6 +358,13 @@ Transform configuration identifies the transform type and any transform-specific
 | `truncated`                           | When ``true``, enables truncated back-propagation through time (BPTT). *Optional*. Both `frameMode` and `truncated` can not be set to `true` at the same time. |
 | `useNumericSequenceKeys`              | Sequence keys are used to correlated sequences between different deserializers. For some deserializers (i.e. HTK and MLF) the sequence keys are arbitrary strings. Storing them requires much memory on big corpus. If you are sure your sequence keys are numeric, please set this parameter to true, in that case all string keys will be converted to integers decreasing memory pressure. *Optional, default `false`.*|
 | `hashSequenceKeys`                    | For the memory reasons described above, the string keys can also be hashed by setting this parameter to true. Please use it only for deserializers that support string sequence keys (HTK, MLF). *Optional, default `false`.*|
+| `cacheIndex`                          | Specifies whether the meta-data built during the pre-processing stage should be written out to disk and loaded in from disk if available (`true`, `false`). *Optional*, defaults to `false`. For more details, see the section below. [!INCLUDE[versionadded-2.1](includes/versionadded-2.1.md)] |
+
+##### Index caching
+
+[!INCLUDE[index-caching-block](Index-Caching.md)]
+
+`cacheIndex` has no effect on ImageDeserializer and CNTKBinaryFormatDeserializer, as the former does not index the input data and the later has the index information embedded in the format itself.
 
 ### General Deserializer Configuration
 
@@ -387,10 +395,10 @@ For example, if you had 72-dimensional features (24-dimensional filterbank featu
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
-| `mlfFile`                             | Path to an HTK-style ```mlf``` file that contains the labels for all utterances specified in the ```scp``` file(s). **Required** if `mlfFileList` is not specified. |
-| `mlfFileList`                         | Array of paths to HTK-style ```mlf``` file(s) that contains the labels for all utterances specified in the ```scp``` file(s).  **Required** if `mlfFile` is not specified. |
+| `mlfFile`                             | Path to an HTK-style `mlf` file that contains the labels for all utterances specified in the `scp` file(s). **Required** if `mlfFileList` is not specified. |
+| `mlfFileList`                         | Array of paths to HTK-style `mlf` file(s) that contains the labels for all utterances specified in the `scp` file(s).  **Required** if `mlfFile` is not specified. |
 | `dim`                                 | Total cardinality of the label set (positive integer). **Required**. |
-| `labelMappingFile`                    | Path to a file which lists all the labels seen in the ```mlf``` file, one per line. **Required**. |
+| `labelMappingFile`                    | Path to a file which lists all the labels seen in the `mlf` file, one per line. **Required**. |
 
 labelDim can be used as a synonym for dim.
 
