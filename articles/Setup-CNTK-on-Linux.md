@@ -11,16 +11,6 @@ ms.devlang:   cpp, python
 
 # Setup CNTK on Linux
 
-# [Linux](#tab/linux)
-
-Content for Linux...
-
-# [Windows](#tab/windows)
-
-Content for Windows...
-
----
-
 ## Test
 
 # [CNTK 2.0](#tab/cntk-py-2.0)
