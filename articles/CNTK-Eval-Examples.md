@@ -2,7 +2,7 @@
 title:   Model evaluation examples
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -20,6 +20,8 @@ The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Exampl
 - [**CNTKLibraryCSEvalGPUExamples**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCSEvalGPUExamples) uses the [CNTK Library GPU NuGet package](https://www.nuget.org/packages/CNTK.GPU) to evaluate models on devices with Nvidia GPU in C#. 
 - [**CNTKLibraryCPPEvalCPUOnlyExamples**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) uses the CNTK Library C++ API to evaluate models on CPU-only devices. It uses the [CNTK Library CPU-Only NuGet package](https://www.nuget.org/packages/CNTK.CPUOnly).
 - [**CNTKLibraryCPPEvalGPUExamples**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) uses the CNTK Library C++ API to evaluate models on devices with Nvidia GPU. It uses the [CNTK Library GPU NuGet package](https://www.nuget.org/packages/CNTK.GPU).
+
+- [**UWPImageRecognition**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/UWPImageRecognition) contains an example using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.
 
 On Windows,
 - You need Visual Studio 2015 update 3 for using these samples.
