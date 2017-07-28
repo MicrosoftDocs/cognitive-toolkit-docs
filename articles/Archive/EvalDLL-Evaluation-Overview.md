@@ -11,11 +11,11 @@ ms.devlang:   NA
 
 # EvalDLL Evaluation Overview
 
-The EvalDLL library provides methods to evaluate pre-trained CNTK models that are saved in the CNTK [model-v1 format](./CNTK-model-format.md). It is available in C++ (on Windows and Linux) and C# (on Windows only). 
+The EvalDLL library provides methods to evaluate pre-trained CNTK models that are saved in the CNTK [model-v1 format](../CNTK-model-format.md). It is available in C++ (on Windows and Linux) and C# (on Windows only). 
 
 * [EvalDll evaluation on Windows](./EvalDll-Evaluation-on-Windows.md)
 * [EvalDll evaluation on Linux](./EvalDll-Evaluation-on-Linux.md)
-* [EvalDll evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
+* [EvalDll evaluation in Azure](../Evaluate-a-model-in-an-Azure-WebApi.md)
 
 ## Evaluating different data types and layers
 Currently the Eval library supports vectors for input and output. That means that the input vector must match the input nodes in the model (features). Some models are trained with images (e.g. CIFAR-10) however, these images are vectorized first then fed into the network. For example, the CIFAR-10 data set is composed of small images (32 pixels by 32 pixels) or RGB values. Although each is a 3 dimensional coordinate (width, height, color), the data is vectorized into a 1-dimensional vector. It is important thus, to convert the raw data to the vector format prior to evaluation. This conversion *should* be done in the same manner as when fed to the network for training.
