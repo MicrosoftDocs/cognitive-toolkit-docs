@@ -2,7 +2,7 @@
 title:   CNTK Evaluation Overview
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/31/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -29,7 +29,7 @@ The following pages provide detailed information about model evaluation using CN
 ### Legacy Applications using CNTK 1.0
 
 Prior to the CNTK 2.0 version, the CNTK EvalDLL was used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
-is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features.
+is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created by CNTK 2.0 or later using Python. We strongly recommend to use the latest CNTK libraries for evaluation, as it supports model formats and provides more features.
 
 For more details on different model formats refer to the [CNTK model format](./CNTK-model-format.md) page.
 For legacy applications that use use EvalDLL interface please refer to the [CNTK EvalDLL Overview](./EvalDll-Evaluation-Overview.md) page.

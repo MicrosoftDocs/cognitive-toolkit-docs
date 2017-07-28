@@ -2,7 +2,7 @@
 title:   Evaluate a model in an Azure WebApi using CNTK Library Managed API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/17/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -43,7 +43,7 @@ Initially we will develop the WebApi locally and then upload this to our Azure i
 
 ### Let’s get started
 
-We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/blob/v2.0/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
+We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/blob/release/2.1/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
 
 **Please note that the sample project is using CNTK Library Managed API. For users who use the EvalDll API, to evaluate the model, please use [CNTK EvalDLL API](./evaldll-evaluation-on-windows.md). The tutorial for using EvalDll can be found at [Evaluate a model in Azure WebApi using EvalDll](./evaluate-a-model-in-an-azure-webapi-using-evaldll.md)**
 

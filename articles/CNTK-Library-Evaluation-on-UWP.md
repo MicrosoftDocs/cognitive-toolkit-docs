@@ -2,7 +2,7 @@
 title:   Model Evaluation on Universal Windows Platform
 author:    zhouwangzw
 ms.author:   zhouwang
-ms.date:   07/31/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -28,4 +28,4 @@ The CNTK UWP library currently provides C++ APIs for model evaluation on UWP. It
 
 ## Examples
 
-The [UWPImageRecognition folder] (https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/UWPImageRecognition) contains an example for using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.
+The [UWPImageRecognition folder] (https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/UWPImageRecognition) contains an example for using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.

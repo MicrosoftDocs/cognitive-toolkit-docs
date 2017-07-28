@@ -2,7 +2,7 @@
 title:   NuGet Package
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -43,4 +43,4 @@ There is a Linux equivalent set of libraries (albeit not available through NuGet
 
 ## Legacy applications using CNTK EvalDLL interface
 For applications that are still using CNTK EvalDLL interface, which only supports the [model-v1 format](./CNTK-model-format.md), please use  the **Microsoft.Research.CNTK.CpuEval-mkl** NuGet package:
-* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.0.0): supports CPU Only, implements [EvalDll C# Interface](./EvalDll-Managed-API.md) and [EvalDll C++ Interface](./EvalDll-Native-API.md).
+* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.1.0](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.1.0): supports CPU Only, implements [EvalDll C# Interface](./EvalDll-Managed-API.md) and [EvalDll C++ Interface](./EvalDll-Native-API.md).

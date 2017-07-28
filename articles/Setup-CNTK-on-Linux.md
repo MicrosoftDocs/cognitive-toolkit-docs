@@ -2,7 +2,7 @@
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/31/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -508,9 +508,9 @@ source activate cntk-py35
 
 Similarly, for a Python 3.6, 3.4, or 2.7 based environment.
 
-**Step 2**: Uninstall previous CNTK 2.0 package
+**Step 2**: Uninstall previous CNTK package
 
-* If you previously installed any version of the CNTK 2.0 pip-package on your machine, uninstall it by running: `pip uninstall cntk`
+* If you previously installed any version of the CNTK pip-package on your machine, uninstall it by running: `pip uninstall cntk`
 
 **Step 3**: Build Python Package
 
