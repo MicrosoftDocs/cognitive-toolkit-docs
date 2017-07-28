@@ -289,7 +289,7 @@ For example, the following datasets are **invalid**:
 
 ##### Index caching
 
-[!INCLUDE[index-caching-block](Index-Caching.md)]
+[!INCLUDE[index-caching-block](./includes/Index-Caching.md)]
 
 
 ### `input` sub-section

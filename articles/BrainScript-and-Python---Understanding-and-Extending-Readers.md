@@ -362,7 +362,7 @@ Transform configuration identifies the transform type and any transform-specific
 
 ##### Index caching
 
-[!INCLUDE[index-caching-block](Index-Caching.md)]
+[!INCLUDE[index-caching-block](./includes/Index-Caching.md)]
 
 `cacheIndex` has no effect on ImageDeserializer and CNTKBinaryFormatDeserializer, as the former does not index the input data and the later has the index information embedded in the format itself.
 
