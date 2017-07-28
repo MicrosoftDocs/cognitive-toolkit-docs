@@ -23,6 +23,42 @@ Blub
 
 ---
 
+## Test No Dash
+
+# [CNTK 2.0](#tab/cntkpy2.0)
+
+Blah
+
+# [CNTK 2.1](#tab/cntkpy2.1)
+
+Blub
+
+---
+
+## Test No Dash No Dot
+
+# [CNTK 2.0](#tab/cntkpy20)
+
+Blah
+
+# [CNTK 2.1](#tab/cntkpy21)
+
+Blub
+
+---
+
+## Test No Dash No Dot
+
+# [CNTK Two Zero](#tab/cntkpy20)
+
+Blah
+
+# [CNTK Two One](#tab/cntkpy21)
+
+Blub
+
+---
+
 ## The Cognitive Toolkit and CUDA 8
 
 With the release of CNTK v.2.0 Beta 5 (Windows) and CNTK v.2.0 Beta 6 (Linux) the toolkit started supporting NVIDIA CUDA 8.0 as the development toolkit for GPU accelerated applications. This allows the Microsoft Cognitive Toolkit to take advantage of the latest improvements in NVIDIA graphic cards and optimizations.
