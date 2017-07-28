@@ -2,7 +2,7 @@
 title:   CNTK Library Eval C++ API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -362,7 +362,7 @@ Creates a new Function instance which is just an alias of the specified `operand
 
 ***
 
-Please refer to [CNTKLibrary.h](https://github.com/Microsoft/CNTK/blob/v2.0/Source/CNTKv2LibraryDll/API/CNTKLibrary.h) for details of data types used by the functions above.
+Please refer to [CNTKLibrary.h](https://github.com/Microsoft/CNTK/blob/release/2.1/Source/CNTKv2LibraryDll/API/CNTKLibrary.h) for details of data types used by the functions above.
 
 ## Examples
-The C++ examples [**CNTKLibraryCPPEvalCPUOnlyExamples**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [**CNTKLibraryCPPEvalGPUExamples**](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) demonstrate the usage of CNTK Library for evaluation. The samples also show how to do multiple evaluations in parallel using multiple threads and share model parameters among threads.
+The C++ examples [**CNTKLibraryCPPEvalCPUOnlyExamples**](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [**CNTKLibraryCPPEvalGPUExamples**](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) demonstrate the usage of CNTK Library for evaluation. The samples also show how to do multiple evaluations in parallel using multiple threads and share model parameters among threads.

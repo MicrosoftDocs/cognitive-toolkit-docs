@@ -2,7 +2,7 @@
 title:   Setup Windows binary manual
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -11,7 +11,7 @@ ms.devlang:   brainscript, python, cpp
 # Setup Windows binary manual
 
 > [!NOTE]
-> These instructions apply to release 2.0.
+> These instructions apply to release 2.1.
 
 ## Windows manual installation from binary distribution
 

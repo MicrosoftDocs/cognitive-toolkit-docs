@@ -2,7 +2,7 @@
 title:   Model Evaluation on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -34,10 +34,10 @@ The usual steps for model evaluation using CNTK Library Managed API include:
 The CNTK Library Managed API is described in the [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API.md) page.
 
 ### Evaluation of multiple requests in parallel
-CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMultipleImagesInParallel()`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
+CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMultipleImagesInParallel()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
 
 ### C# Examples
-The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
+The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
 
 If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` DLL and all dependent DLLs can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` DLL and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of DLLs for your application.
 
@@ -56,12 +56,12 @@ The following steps describe how to use the C++ CNTK Library for model evaluatio
 5. Call `CNTK::Function::Evaluate()` for evaluation. The `Evaluate()` expects as input an unordered_map for input variables and input values, and an unordered_map for output variables and output values. The output value object could be `null` which means that CNTK Library allocates the actual storage for this output value. On return, the Value objects associated with the output variables contain the results of evaluation.
 6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableValueTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
 
-For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
+For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
 
 For details on C++ CNTK Library API for evaluation, please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface.md) page.
 
 ### C++ Examples
-The C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the usage pattern above. The [UWPImageRecognition](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/UWPImageRecognition) contains an example using CNTK UWP library for model evaluation. The [Eval Examples](./CNTK-Eval-Examples.md) page provides detailed steps about building and running examples.
+The C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the usage pattern above. The [UWPImageRecognition](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/UWPImageRecognition) contains an example using CNTK UWP library for model evaluation. The [Eval Examples](./CNTK-Eval-Examples.md) page provides detailed steps about building and running examples.
 
 Alternatively, you can use C++ CNTK Library without the NuGet Package. You can either get `Cntk.Core-<VERSION>.lib` (or `Cntk.Core_app-<Version>.lib`) and all dependent DLLs from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) or build them from CNTK source code. You also need to configure include and library path to point to the correct directory, and make sure that the build configuration (Debug or Release) of the CNTK Library is the same as that of your project setting (Otherwise you will get unexpected exceptions). The CNTK release package contains only the release build of binaries.
 
@@ -105,7 +105,7 @@ You can use Python to evaluate a pre-trained model. Examples can be found [here]
 ## Using Java
 CNTK also provides APIs for evaluating model in Java application. Please note that the CNTK Java API is still experimental and subject to change.
 
-The [Java example](https://github.com/Microsoft/CNTK/blob/v2.0/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
+The [Java example](https://github.com/Microsoft/CNTK/blob/release/2.1/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
 
 For using CNTK Java Library, please add the `cntk.jar` file to the `classpath` of your Java project. If you are working with an IDE you should add this as an unmanaged jar. The cntk.jar file can be found in the CNTK binary release package (in the folder cntk\cntk\java). You can also build cntk.jar from CNTK source. Please also set `java.library.path` to the directory containing `Cntk.Core.JavaBinding-<Version>.dll`, and make sure that the directory containing CNTK binary DLLs is in the DLL search path of your system, e.g. by adding the directory to the PATH environment variable. Please note that you also need to install Visual C++ Redistributable Package for Visual Studio 2015. If you get `UnsatisfiedLinkErrors` in Java, it is typically because that the directory is not in the DLL search path (or in the wrong order).
 
