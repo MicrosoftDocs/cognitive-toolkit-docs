@@ -42,7 +42,7 @@ The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Exam
 If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` DLL and all dependent DLLs can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` DLL and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of DLLs for your application.
 
 ## Using C++
-The CNTK Library C++ API supports model evaluation in C++ applications. Both desktop applications and Universal Windows Platform applications are supported. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The CNTK Library C++ API supports model evaluation in C++ applications. Both standard desktop applications and Universal Windows Platform applications are supported. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 
 The CNTK NuGet package CNTK.CPUOnly and CNTK.GPU contain C++ CNTK Library for using CNTK in desktop applications. For using CNTK on Universal Windows Platform, please install CNTK.UWP.CPUOnly. By using NuGet packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
 
@@ -94,7 +94,7 @@ For using GPU, you need in addition to include the following NVIDIA CUDA related
 
 All these DLLs can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). 
 
-For UWP applications, the following DLLs need to be distributed with your application. You can find these dlls in the Nuget package `CNTK.UWP.CPUOnly`.
+For UWP applications, the following DLLs need to be distributed with your application. You can find these DLLs in the Nuget package `CNTK.UWP.CPUOnly`.
 * `Cntk.Core_app-<VERSION>.dll`
 * `Cntk.Math_app-<VERSION>.dll`
 * `libopenblas.dll`
