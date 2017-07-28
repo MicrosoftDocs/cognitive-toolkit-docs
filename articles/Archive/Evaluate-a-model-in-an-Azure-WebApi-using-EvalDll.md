@@ -45,7 +45,7 @@ Initially we will develop the WebApi locally and then upload this to our Azure i
 
 We already created a project blueprint called **[EvalDll_AzureTutorial](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/LegacyEvalDll/EvalDll_AzureTutorial)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\LegacyEvalDll\EvalDll_AzureTutorial`. 
 
-**Please note that the sample project is using CNTK EvalDll API. For users who use a model trained with Python, please use [CNTK Library API](./cntk-library-evaluation-on-windows.md). The tutorial for using CNTK Library can be found at [Evaluate a model in Azure WebApi using CNTK Library Managed API](./evaluate-a-model-in-an-azure-webApi.md)**
+**Please note that the sample project is using CNTK EvalDll API. For users who use a model trained with Python, please use [CNTK Library API](../cntk-library-evaluation-on-windows.md). The tutorial for using CNTK Library can be found at [Evaluate a model in Azure WebApi using CNTK Library Managed API](../evaluate-a-model-in-an-azure-webApi.md)**
 
 We recommend you start from this solution, since we already added all the code we need. For completeness here is the list of operations to create the tutorial project:
 
@@ -72,13 +72,13 @@ need a model to evaluate.
 
 Add the CNTK Eval functionality to the project. This is available as a NuGet package. In VS select `Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution...`, pick `nuget.org` as the online source, search for `CNTK` and install the latest package version (`Microsoft.Research.CNTK.*`).
 
-![NuGet](./pictures/EvaluateWebApiEvalDll/nuget_manager.png)
+![NuGet](../pictures/EvaluateWebApiEvalDll/nuget_manager.png)
 
 Now we need a model to evaluate. Download the [ResNet_18.model](https://cntk.ai/resnet/ResNet_18.model) and save it in the directory `CNTK\Models` in the solution. The model file needs also to be included in the solution (`Project -> Add existing Item`)
 
 CNTK requires a 64-bit runtime environment. Make sure in the Configuration Manager that the project is compiled for the x64 platform. In addition, the WebApi we are creating has to be hosted in a 64-bit instance of IIS. You can enforce this by selecting "Use 64 bit version of IIS Express for web sites and projects" in `Tools -> Options -> Project and Solutions -> WebProjects`
 
-![Project](./pictures/EvaluateWebApiEvalDll/setting_64_bits_in_vs.png)
+![Project](../pictures/EvaluateWebApiEvalDll/setting_64_bits_in_vs.png)
 
 
 At this point you have performed all the necessary steps to execute the model locally on your machine. In Visual Studio press `F5` to run the project. This will open an internet browser on the default web site and display an error message. This is to be expected since we have created a WebApi and not a website. We easily call the implemented WebApi by changing the address in the browser to: 
@@ -87,27 +87,27 @@ At this point you have performed all the necessary steps to execute the model lo
 
 This will call the `Get()` method in the ValuesController-Class which will in turn call the method `EvaluateCustomDNN()` and return a result to your web browser
 
-![local](./pictures/EvaluateWebApiEvalDll/local_webapi_evaluation.png)
+![local](../pictures/EvaluateWebApiEvalDll/local_webapi_evaluation.png)
 
 ### Hosting the WebApi on Azure
 
 With this we accomplished the first part of our mission, now we need this functionality hosted in Azure!
 From the Build menu of your project select the `Publish` command. Pick `Microsoft Azure App Service` as the publishing target
 
-![Azure](./pictures/EvaluateWebApiEvalDll/publishing_webapp.png)
+![Azure](../pictures/EvaluateWebApiEvalDll/publishing_webapp.png)
 
 In the AppService dialog you have to log-in with your account and select the appropriate subscription and resource group. Be sure to pick a resource group that supports 64-bit virtual machines (the ‘free’ resource group isn’t sufficient for this). During the final publishing steps you have to pick a x64-configuration in the Setting menu. This is required to also publish the native binary components of CNTK to Azure
 
-![AzureSettings](./pictures/EvaluateWebApiEvalDll/publishing_step.png)
+![AzureSettings](../pictures/EvaluateWebApiEvalDll/publishing_step.png)
 
 Once you publish you model and you call your published WebApi in the browser, you will see an error message. Open the Azure portal and make sure your WebApi is running on a 64-bit platform (change and ‘save’ the setting if required, this will also restart your virtual machine instance in Azure). 
 
-![Azure64Settings](./pictures/EvaluateWebApiEvalDll/setting_64_bits_in_portal.png)
+![Azure64Settings](../pictures/EvaluateWebApiEvalDll/setting_64_bits_in_portal.png)
 
 Once you performed these changes, you will be able to call you WebApi under
 `http://<yourwebapp>.azurewebsites.net/api/values`
 
-![AzureSettings](./pictures/EvaluateWebApiEvalDll/remote_webapi_evaluation.png)
+![AzureSettings](../pictures/EvaluateWebApiEvalDll/remote_webapi_evaluation.png)
 
 This project showed you how to integrate the CNTK Eval functionality using EvalDll in an Azure WebApi and setup Azure to run the CNTK eval binaries. In a next step you can now add new APIs to dynamically supply data to the eval-function or upload new model version. These are WebApi/Azure development tasks, and you should refer to the Azure documentation for this.
 

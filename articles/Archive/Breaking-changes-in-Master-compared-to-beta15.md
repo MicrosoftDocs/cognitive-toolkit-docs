@@ -122,4 +122,4 @@ These are the current breaking changes:
 		- public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequences). Instead, please use `public IList<IList<T>> GetDenseData<T>(Variable outputVariable)`.
         - public void CopyVariableValueTo(Variable outputVariable, List<List<uint>> sequences). Instead, please use `public IList<IList<int>> GetOneHotData(Variable outputVariable)`.
 
-The updated APIs are described in [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API.md).
+The updated APIs are described in [CNTK Library C#/.NET Managed API](../CNTK-Library-Managed-API.md).
