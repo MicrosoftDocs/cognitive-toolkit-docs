@@ -1,8 +1,8 @@
 ---
 title:   News
-author:    chazhang
-ms.author:   chazhang
-ms.date:   06/26/2017
+author:    alexeyo26
+ms.author:   alexeyo
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -10,6 +10,21 @@ ms.devlang:   NA
 ---
 
 # News
+
+## July 2017
+***2017-07-31.* CNTK 2.1**  
+Release of Cognitive Toolkit v.2.1.
+
+Highlights:
+* cuDNN 6.0 integration
+* Support of Universal Windows Platform (UWP)
+* Improvements in backend for Keras
+* Performance improvements
+* New manuals, tutorials and examples
+* Multiple bug fixes
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_1_Release_Notes).  
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## June 2017
 ***2017-06-26.* A great class for getting started with both Deep Learning and CNTK, [Deep Learning Explained](https://www.edx.org/course/deep-learning-explained-microsoft-dat236x) is now available on edX.**

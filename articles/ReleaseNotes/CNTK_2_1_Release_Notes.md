@@ -20,6 +20,7 @@ This is a summary of new features delivered with the release of the Microsoft Co
 * Improvements in backend for Keras
 * Performance improvements
 * New manuals, tutorials and examples
+* Multiple bug fixes
 
 ## Breaking changes
 
