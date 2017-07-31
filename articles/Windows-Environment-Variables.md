@@ -2,7 +2,7 @@
 title:   Windows Environment Variables
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/12/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -19,8 +19,9 @@ This page lists the environment variables which are used by the CNTK build proce
 |BOOST_INCLUDE_PATH | c:\local\boost_1_60_0-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |BOOST_LIB_PATH | c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |CNTK_MKL_PATH | c:\local\CNTKCustomMKL | [Custom MKL for CNTK](./Setup-CNTK-on-Windows.md#mkl) (required)
+|CNTK_OPENBLAS_PATH | c:\local\CNTKopenBLAS | [OpenBLAS library for CNTK UWP build](./Setup-UWP-Build-on-Windows.md) (optional)
 |CUB_PATH | c:\local\cub-1.4.1 | [NVIDIA CUB Library](./Setup-CNTK-on-Windows.md#cub) (required for GPU build)
-|CUDNN_PATH | C:\local\cudnn-8.0-v5.1\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
+|CUDNN_PATH | C:\local\cudnn-8.0-v6.0\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
 |CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |CUDA_PATH_V8_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build)
@@ -34,7 +35,7 @@ setx  BOOST_INCLUDE_PATH c:\local\boost_1_60_0-msvc-14.0
 setx  BOOST_LIB_PATH c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0
 setx  CNTK_MKL_PATH c:\local\CNTKCustomMKL
 setx  CUB_PATH c:\local\cub-1.4.1
-setx  CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
+setx  CUDNN_PATH C:\local\cudnn-8.0-v6.0\cuda
 setx  OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
 setx  PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
 setx  SWIG_PATH c:\local\swigwin-3.0.10

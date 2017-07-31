@@ -53,7 +53,7 @@ covariate
 CPUs
 CUDA
 cuda
-cudnn
+cuDNN
 customizable
 dataset
 datasets

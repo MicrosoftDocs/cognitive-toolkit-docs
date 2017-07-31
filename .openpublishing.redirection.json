@@ -3,6 +3,66 @@
      {
        "source_path":  "articles/project-a-1D-input-of-dim-inputDim-to-a-1D-output-of-dim-outputDim.md",
        "redirect_url":  "/cognitive-toolkit/How-do-I-Express-Things-In-Python#port-projection-of-1d-input-to-1d-output-from-python-api-to-c-api"
+     },
+     {
+      "source_path":  "articles/Breaking-changes-in-Master-compared-to-beta15.md",
+      "redirect_url": "/cognitive-toolkit/Archive/Breaking-changes-in-Master-compared-to-beta15"
+     },
+     {
+      "source_path":  "articles/CNTK-move-to-Cuda8.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-move-to-Cuda8"
+     },
+     {
+      "source_path":  "articles/Setup-Migrate-VS13-to-VS15.md",
+      "redirect_url": "/cognitive-toolkit/Archive/Setup-Migrate-VS13-to-VS15"
+     },
+     {
+      "source_path":  "articles/News-2016.md",
+      "redirect_url": "/cognitive-toolkit/Archive/News-2016"
+     },
+     {
+      "source_path":  "articles/CNTK-Shared-Libraries-Naming-Format.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-Shared-Libraries-Naming-Format"
+     },
+     {
+      "source_path":  "articles/CNTK-Evaluation-using-cntk.exe.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-Evaluation-using-cntk.exe"
+     },
+     {
+      "source_path":  "articles//EvalDLL-Evaluation-Overview.md",
+      "redirect_url": "/cognitive-toolkit/Archive//EvalDLL-Evaluation-Overview"
+     },
+     {
+      "source_path":  "articles/EvalDLL-Evaluation-on-Windows.md",
+      "redirect_url": "/cognitive-toolkit/Archive/EvalDLL-Evaluation-on-Windows"
+     },
+     {
+      "source_path":  "articles/EvalDLL-Evaluation-on-Linux.md",
+      "redirect_url": "/cognitive-toolkit/Archive/EvalDLL-Evaluation-on-Linux"
+     },
+     {
+      "source_path":  "articles/Evaluate-a-model-in-an-Azure-WebApi-using-EvalDll.md",
+      "redirect_url": "/cognitive-toolkit/Archive/Evaluate-a-model-in-an-Azure-WebApi-using-EvalDll"
+     },
+     {
+      "source_path":  "articles/EvalDll-Managed-API.md",
+      "redirect_url": "/cognitive-toolkit/Archive/EvalDll-Managed-API"
+     },
+     {
+      "source_path":  "articles/EvalDll-Native-API.md",
+      "redirect_url": "/cognitive-toolkit/Archive/EvalDll-Native-API"
+     },
+     {
+      "source_path":  "articles/CNTK-Evaluate-Hidden-Layers.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-Evaluate-Hidden-Layers"
+     },
+     {
+      "source_path":  "articles/CNTK-Evaluate-Image-Transforms.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-Evaluate-Image-Transforms"
+     },
+     {
+      "source_path":  "articles/CNTK-Evaluate-Multiple-Models.md",
+      "redirect_url": "/cognitive-toolkit/Archive/CNTK-Evaluate-Multiple-Models"
      }
    ]
 }

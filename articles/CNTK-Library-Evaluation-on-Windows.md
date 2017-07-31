@@ -2,7 +2,7 @@
 title:   Model Evaluation on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -11,7 +11,7 @@ ms.devlang:   csharp, cpp
 
 # Model Evaluation on Windows
 
-Currently, CNTK provides libraries in C++, C#/.NET, Python and Java for loading and evaluating models on Windows.
+Currently, CNTK provides libraries in C++, C#/.NET, Python and Java for loading and evaluating models on Windows. Starting from v2.1, CNTK also supports Universal Windows Platform (UWP).
 
 ## Using C#/.NET Managed API
 The CNTK Library provides a managed (.NET) library for evaluation of CNTK models on CPU and GPU using C# and other .NET languages. The NuGet package CNTK.CPUOnly is designed for execution on CPU, and the CNTK.GPU is designed for execution on devices with NVIDIA GPU. Please refer to the [NuGet Package](./NuGet-Package.md) page about details how to install CNTK Library NuGet Packages. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
@@ -34,43 +34,43 @@ The usual steps for model evaluation using CNTK Library Managed API include:
 The CNTK Library Managed API is described in the [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API.md) page.
 
 ### Evaluation of multiple requests in parallel
-CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMultipleImagesInParallel()`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
+CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMultipleImagesInParallel()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
 
 ### C# Examples
-The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
+The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
 
 If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` DLL and all dependent DLLs can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` DLL and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of DLLs for your application.
 
 ## Using C++
-The CNTK Library C++ API supports model evaluation in C++ applications. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The CNTK Library C++ API supports model evaluation in C++ applications. Both standard desktop applications and Universal Windows Platform applications are supported. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
 
-The CNTK NuGet package CNTK.CPUOnly and CNTK.GPU also contain C++ CNTK Library. By using NuGet packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
+The CNTK NuGet package CNTK.CPUOnly and CNTK.GPU contain C++ CNTK Library for using CNTK in desktop applications. For using CNTK on Universal Windows Platform, please install CNTK.UWP.CPUOnly. By using NuGet packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
 
 ### C++ Programming Guide
 The following steps describe how to use the C++ CNTK Library for model evaluation.   
 
-1. Link the `Cntk.Core-<VERSION>.lib` import library into the application. This step can be omitted if you use the NuGet package.
-2. Include the evaluation header file "CNTKLibrary.h".    
+1. Link the `Cntk.Core-<VERSION>.lib` import library into the application. This step can be omitted if you use the NuGet package. For UWP application, the library name is `Cnkt.Core_app-<Version>.lib`.
+2. Include the evaluation header file "CNTKLibrary.h".
 3. Load the model by `CNTK::Function::Load()`. The returned Function object represents the computation graph of the model.
 4. Prepare data for each input variable. You can use `CNTK::Value::CreateBatch()`, `CNTK::Value::CreateSequence()`, or `CNTK::Value::CreateBatchOfSequences()` to create a Value object from your input data representing a batch of samples, a sequence of samples, or a batch of sequences of samples respectively.
 5. Call `CNTK::Function::Evaluate()` for evaluation. The `Evaluate()` expects as input an unordered_map for input variables and input values, and an unordered_map for output variables and output values. The output value object could be `null` which means that CNTK Library allocates the actual storage for this output value. On return, the Value objects associated with the output variables contain the results of evaluation.
 6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableValueTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
 
-For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
+For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
 
 For details on C++ CNTK Library API for evaluation, please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface.md) page.
 
 ### C++ Examples
-The C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/v2.0/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the usage pattern above. The [Eval Examples](./CNTK-Eval-Examples.md) page provides detailed steps about building and running examples.
+The C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples) illustrate the usage pattern above. The [UWPImageRecognition](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/UWPImageRecognition) contains an example using CNTK UWP library for model evaluation. The [Eval Examples](./CNTK-Eval-Examples.md) page provides detailed steps about building and running examples.
 
-Alternatively, you can use C++ CNTK Library without the NuGet Package. You can either get `Cntk.Core-<VERSION>.lib` and all dependent DLLs from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) or build them from CNTK source code. You also need to configure include and library path to point to the correct directory, and make sure that the build configuration (Debug or Release) of the CNTK Library is the same as that of your project setting (Otherwise you will get unexpected exceptions). The CNTK release package contains only the release build of binaries.
+Alternatively, you can use C++ CNTK Library without the NuGet Package. You can either get `Cntk.Core-<VERSION>.lib` (or `Cntk.Core_app-<Version>.lib`) and all dependent DLLs from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) or build them from CNTK source code. You also need to configure include and library path to point to the correct directory, and make sure that the build configuration (Debug or Release) of the CNTK Library is the same as that of your project setting (Otherwise you will get unexpected exceptions). The CNTK release package contains only the release build of binaries.
 
 ## Shipping CNTK Library with your Windows application
 CNTK Library requires the Visual C++ Redistributable Package for Visual Studio 2015 to be installed on the system where your application is going to run. And the target platform in the project property should be X64.
 
 This [page](./CNTK-Shared-Libraries-Naming-Format.md) describes how CNTK binary files are named.
 
-If your application uses CNTK Library C++ API, the following DLLs need to be distributed with your application. 
+For desktop C++ applications, the following DLLs need to be distributed with your application. 
 * `Cntk.Core-<VERSION>.dll`
 * `Cntk.Math-<VERSION>.dll`
 * `libiomp5md.dll`
@@ -83,12 +83,21 @@ If you use the C#/.NET Managed Library, beside the DLLs mentioned above, you nee
 For using GPU, you need in addition to include the following NVIDIA CUDA related DLLs:
 * `cublas64_80.dll`
 * `cudart64_80.dll`
-* `cudnn64_5.dll`
+* `cudnn64_6.dll`
 * `curand64_80.dll`
 * `cusparse64_80.dll`
 * `nvml.dll`
 
+> [!NOTE]
+> [!INCLUDE[versionchanged-2.1](includes/versionchanged-2.1.md)]
+> CNTK NuGet packages are shipping with cuDNN 6 (`cudnn64_6.dll`).
+
 All these DLLs can be found in the CNTK binary release version, see the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). 
+
+For UWP applications, the following DLLs need to be distributed with your application. You can find these DLLs in the Nuget package `CNTK.UWP.CPUOnly`.
+* `Cntk.Core_app-<VERSION>.dll`
+* `Cntk.Math_app-<VERSION>.dll`
+* `libopenblas.dll`
 
 ## Using Python
 You can use Python to evaluate a pre-trained model. Examples can be found [here](./How-do-I-Evaluate-models-in-Python.md).
@@ -96,7 +105,7 @@ You can use Python to evaluate a pre-trained model. Examples can be found [here]
 ## Using Java
 CNTK also provides APIs for evaluating model in Java application. Please note that the CNTK Java API is still experimental and subject to change.
 
-The [Java example](https://github.com/Microsoft/CNTK/blob/v2.0/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
+The [Java example](https://github.com/Microsoft/CNTK/blob/release/2.1/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
 
 For using CNTK Java Library, please add the `cntk.jar` file to the `classpath` of your Java project. If you are working with an IDE you should add this as an unmanaged jar. The cntk.jar file can be found in the CNTK binary release package (in the folder cntk\cntk\java). You can also build cntk.jar from CNTK source. Please also set `java.library.path` to the directory containing `Cntk.Core.JavaBinding-<Version>.dll`, and make sure that the directory containing CNTK binary DLLs is in the DLL search path of your system, e.g. by adding the directory to the PATH environment variable. Please note that you also need to install Visual C++ Redistributable Package for Visual Studio 2015. If you get `UnsatisfiedLinkErrors` in Java, it is typically because that the directory is not in the DLL search path (or in the wrong order).
 

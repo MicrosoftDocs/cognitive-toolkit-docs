@@ -1,8 +1,8 @@
 ---
 title:   Setup CNTK on Windows
-author:    chrisbasoglu
-ms.author:   cbasoglu
-ms.date:   07/09/2017
+author:    wolfma61
+ms.author:   wolfma
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -14,6 +14,9 @@ ms.devlang:   NA
 If you want to build manually CNTK from source code on Windows using Visual Studio 2015, this page is for you. 
 
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
+
+> [!NOTE]
+> This page assumes that you are trying to build CNTK's master branch.
 
 ## 64-bit OS
 
@@ -165,17 +168,17 @@ CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 ```
 
-### cuDNN
+## cuDNN
 
-Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v5.1 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
+Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v6.0 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v6.0/cudnn-8.0-windows10-x64-v6.0.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
-* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v6.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
 
 ```
-    setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
+    setx CUDNN_PATH C:\local\cudnn-8.0-v6.0\cuda
 ```
 
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v6.0\cuda\include\cudnn.h` will succeed.
 
 ### CUB
 
@@ -251,6 +254,12 @@ If you plan to build CNTK with Python support, install [SWIG](#optional-swig) if
 
 If you do not have an Anaconda installation: install [Anaconda Python for Windows](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe). 
 You can follow the standard configuration given in the install program (InstallationType=JustMe; AddToPath=No; RegisterPython=No). In the following we assume you installed Python `Anaconda3 4.1.1` into `C:\local\Anaconda3-4.1.1-Windows-x86_64`.
+
+## OPTIONAL. CNTK UWP Build
+
+[!INCLUDE[versionadded-2.1-block](includes/versionadded-2.1-block.md)]
+
+If you want to build the CNTK Evaluation Library for UWP you need to follow the additional installation steps described [here](./Setup-UWP-Build-on-Windows.md).
 
 ### CNTK Python environments
 
@@ -403,9 +412,13 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 
 ### Trying the CNTK Python API
 
-We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Linux.md#cudnn)). 
-Open a command prompt and activate your CNTK Python environment, e.g., by executing `activate cntk-py35`. 
-As a quick test go to the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
+We assume that you created a CNTK Python environment (either through the [install script](./Setup-Windows-Binary-Script.md) or [manually](./Setup-CNTK-on-Windows.md#optional-anaconda-python-installation). Open a command prompt and activate your CNTK Python environment, e.g., by executing
+
+```
+activate cntk-py35
+```
+
+As a quick test change into the `Tutorials\NumpyInterop` folder and run `python FeedForwardNet.py`. After training you should see an output similar to this:
 
 ```
 Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
@@ -414,9 +427,9 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 ### Debugging CNTK source code in Visual Studio
 
- - If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/). 
- - If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)   
- - To debug BrainScript in CNTK with Visual Studio, follow the steps [here](./Debugging-CNTK-source-code-in-Visual-Studio.md).
+* If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/).
+* If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)
+* To debug BrainScript in CNTK with Visual Studio, follow the steps [here](./Debugging-CNTK-source-code-in-Visual-Studio.md).
 
 ## Contributing to CNTK code
 
@@ -425,10 +438,8 @@ If you plan modifications to the code you should read the information on [Develo
 ## Links
 
 * [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
+* [CNTK Development Environment for Universal Windows Platform (UWP)](./Setup-UWP-Build-on-Windows.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
-
-
-

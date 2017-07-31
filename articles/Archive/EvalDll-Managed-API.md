@@ -2,7 +2,7 @@
 title:   EvalDLL C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -148,4 +148,4 @@ class IEvaluateModelManagedD : IEvaluateModelManaged<double> // Assumes data ele
 ```
 
 ## Example
-The CSEvalClient program located [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CSEvalClient) demonstrates the usage of this evaluation interface.
+The CSEvalClient program located [here](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CSEvalClient) demonstrates the usage of this evaluation interface.

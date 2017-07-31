@@ -2,7 +2,7 @@
 title:   CNTK production test configurations
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -30,7 +30,7 @@ Here are the current configurations that are used in CNTK team environment for a
 
 ### NVIDIA Components
 * NVIDIA CUDA 8.0
-* NVIDIA cuDNN 5.1 for CUDA 8
+* NVIDIA cuDNN 6.0 for CUDA
 * NVIDIA CUB 1.4.1
 
 ### OpenCV
@@ -53,14 +53,14 @@ Here are the current configurations that are used in CNTK team environment for a
 * GNU C++ 4.8.4
 
 ### MPI
-* Open MPI v. 1.10.3
+* Open MPI v. 1.10.7
 
 ### Math Library
 * Intel® Math Kernel Library 11.3 Update 3
 
 ### NVIDIA Components
 * NVIDIA CUDA 8.0
-* NVIDIA cuDNN 5.1 for CUDA 8
+* NVIDIA cuDNN 6.0 for CUDA 8
 * NVIDIA CUB 1.4.1
 
 ### OpenCV

@@ -532,7 +532,7 @@ Factory functions to create a single-layer or multi-layer recurrent LSTM.
 * `init` (`'heNormal'`|`'glorotUniform'`|...): type of initialization for the weights. [See here](./Parameters-And-Constants.md#random-initialization) for a full list of initialization options.
 * `initValueScale`: the variance random initialization is multiplied with this
 * `enableSelfStabilization` (optional): if true, insert a "stabilizer" operation similar to [`StabilizerLayer{}`](#batchnormalizationlayer-layernormalizationlayer-stabilizerlayer)
-* `allowOptimizedEngine` (optional, default false): if true, then use cudnn5's optimized RNN engine where possible
+* `allowOptimizedEngine` (optional, default false): if true, then use cuDNN's optimized RNN engine where possible
 
 ### Return Value
 
@@ -675,7 +675,7 @@ values are 0 (no pooling) and 2 (pooling across all pixel positions of an image)
 that is used to compute mean/variance statistics for use in inference
 * `initialScale`: initial value of scale parameter
 * `epsilon`: small value that gets added to the variance estimate when computing the inverse
-* `useCntkEngine`: if true, use CNTK's native implementation. If false, use CuDNN's implementation (GPU only).
+* `useCntkEngine`: if true, use CNTK's native implementation. If false, use cuDNN's implementation (GPU only).
 
 `LayerNormalizationLayer`:
 
