@@ -2,7 +2,7 @@
 title:   Setup Linux binary manual
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -11,7 +11,7 @@ ms.devlang:   NA
 # Setup Linux binary manual
 
 > [!NOTE]
-> These instructions apply to release 2.0.
+> These instructions apply to release 2.1.
 
 ## Linux binary manual installation
 

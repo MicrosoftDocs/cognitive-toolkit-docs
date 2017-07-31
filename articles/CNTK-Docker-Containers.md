@@ -1,8 +1,8 @@
 ---
 title:   CNTK Docker Containers
-author:    chrisbasoglu
-ms.author:   cbasoglu
-ms.date:   06/06/2017
+author:    alexeyo26
+ms.author:   alexeyo
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -32,9 +32,9 @@ This will get the latest image, which today means latest available GPU runtime c
 
 To get a specific configuration you need to add a tag. E.g.
 ```
-docker pull microsoft/cntk:2.0-cpu-python3.5
+docker pull microsoft/cntk:2.1-cpu-python3.5
 ```
-will get you CNTK 2.0 CPU runtime configuration set up for Python 3.5.
+will get you CNTK 2.1 CPU runtime configuration set up for Python 3.5.
 
 If you are unfamiliar with Docker, read [sections below](#building-cntk-docker-images) at this page.
 

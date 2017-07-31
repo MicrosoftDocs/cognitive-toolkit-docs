@@ -103,6 +103,7 @@
 ### [CNTK Library C# Eval interface](/cognitive-toolkit/CNTK-Library-Managed-API)
 ### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
+### [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
 ### [Model Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
 
 # How do I

@@ -2,207 +2,129 @@
 title:   BrainScript CNTK  Binary Reader
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 
-# BrainScript CNTK  Binary Reader
+# BrainScript CNTK Binary Reader
 
-The CNTKBinaryReader (later simply *binary reader*) is designed to be used on large data corpora formatted according to the specification below. It supports the following main features:
+The CNTKBinaryReader (later simply **binary reader**) is designed to be used with large data corpora formatted according to the specification below. It supports the following main features:
 * Multiple input streams (inputs) per file
 * Both sparse and dense inputs
 * Variable length sparse sequences
 
-The Scripts/ctf2bin.py script can be used to convert data in the CNTKTextFormat into the CNTKBinaryFormat. Alternatively, one can implement the schema defined below.
+The [Scripts/ctf2bin.py](https://github.com/Microsoft/CNTK/blob/master/Scripts/ctf2bin.py) script can be used to convert data from the CNTKTextFormat into the CNTKBinaryFormat. Alternatively, one can implement the schema defined below.
 
 ## Input Schema
 
-The binary format is composed of 3 major sections:
+The CNTK binary format (aka **CBF**) is composed of 3 major sections:
 
-1. header
-2. offsets table
-3. data
+1. Prefix
+2. Data
+3. Header
 
 Each section is concatenated together into one contiguous file.
 
-### Header
+### Prefix
 
-The header contains information regarding the data in the file. It enables the binary file to be used with minimal information provided in the config. Below is the format of the header.
+Prefix is the first 12 bytes of a CNTK binary file containing the following segments:
 
-| count | type | name |
-|-------|------|------|
-| 1     | int64_t | version number |
-| 1     | int64_t | number of chunks |
-| 1     | int32_t | number of inputs |
-| numInputs | matHeader | input header |
+* unsigned long long (8 bytes), CBF magic number `0x636e746b5f62696e`
+* unsigned int (4 bytes), CBF version number, the current version number is `1`.
 
-version number is the version of the binary format that the file was created for. The current version number is 1.
-
-number of chunks corresponds to the number of chunks (defined below) in the file.
-
-number of inputs corresponds to the number of input streams in the file.
-
-#### matHeader
-
-matHeader is a compound type describing the required information for each input stream. It is defined as:
-
-| count | type | name |
-|-------|------|------|
-| 1     | int32_t | len |
-| len   | char | name |
-| 1     | int32_t | deserializer |
-| 1     | deserializer | deserializer header data |
-
-len is the number of characters in the name variable.
-
-name is the name of the stream. It is the same name that one will use as the name of the input node in the BrainScript specification.
-
-deserializer is the deserializer that should be used to deserialize the binary data stored on disk. Currently there are two deserializers:
-* DenseBinaryDataDeserializer
-* SparseBinaryDataDeserializer
-
-Each deserializer requires certain input parameters. These parameters are packed immediately after the deserializer type. Below are the specifications for the header data for the deserializers defined above.
-
-##### DenseBinaryDataDeserializer Header
-
-| count | type | name |
-|-------|------|------|
-| 1     | int32_t | elemType |
-| 1     | int32_t | sampleSize |
-
-elemType is 0 if the values are floats, and 1 if the values are doubles.
-
-sampleSize is the size (i.e., number of columns) in one input sample.
-
-##### SparseBinaryDataDeserializer Header
-
-| count | type | name |
-|-------|------|------|
-| 1     | int32_t | storageType |
-| 1     | int32_t | elemType |
-| 1     | int32_t | isSequence |
-| 1     | int32_t | sampleSize |
-
-storageType is the storage type of the matrix. Currently only sparse CSC (with value 0) is supported.
-
-elemType is 0 if the values are floats, and 1 if the values are doubles.
-
-isSequence is 0 if the input is not a sequence, and 1 if the input is a sequence.
-
-sampleSize is the size (i.e., number of columns) in one input sample.
-
-
-### Offsets Table
-
-In the binary format, the data section is broken into chunks. The chunks should be sized such that reading one chunk can be done efficiently on the underlying platform. Since the chunks can be variable sized, an offsets table is required to indicate the starting position of each chunk in the data section. The offsets table also contains the number of sequences, and the number of samples in the chunk for efficient retrieval. Below is the specification for the offsets table:
-
-| count | type | name |
-|-------|------|------|
-| numChunks | offsets table row | offsets row |
-
-numChunks is the number of chunks defined in the header. offsets table row is a compound type defined as:
-
-| count | type | name |
-|-------|------|------|
-| 1     | int64_t | offset |
-| 1     | int32_t | numSequences |
-| 1     | int32_t | numSamples |
-
-offset is the number of bytes from the start of the data portion that the chunk begins.
-
-numSequences is the number of sequences in the chunk.
-
-numSamples is the number of samples in the chunk. This is defined as the sum of the number of samples in each sequence. The number of samples in a sequence is defined as the maximum number of samples over all inputs for that sequence.
+All numbers in CBF are stored using little-endian byte order.
 
 ### Data
 
-The data portion contains the data outlined in chunks as described above. It is constructed by serializing all of the sequences for each input, in the order the inputs were defined in the header. Note that this means that the input formats can be serialized in an arbitrary order, depending on preference.
+The data section contains a collection of fixed-size binary chunks. Each chunk is consumed by the reader all at once (the entire chunk is read into memory and stays there until all sequences from the chunk have been used up for training). Unlike the CNTKTextFormat, where the reader is able to process chunks of different sizes depending on the configuration parameter, the size of the CBF chunk is fixed upfront when the chunk is created. Therefore, the size should be chosen such that reading a chunk can be done efficiently on the underlying platform (the typical chunks size is 32-64 MBs).
 
-| count | type | name |
-|-------|------|------|
-| numInputs | serialized input | data |
+A chunk is constructed by serializing all sequences for each input stream, with the order of inputs identical across chunks (e.g., all chunks having all sequences from the 'features' input followed by all sequences from 'labels'). Note that this means that the inputs with different storage formats can be serialized in an arbitrary order, depending on preference (e.g., sparse 'features' and dense 'labels'). 
 
-#### Serialized Input
+The CBF chunk is structured as follows (`S` denotes the number of sequence in a given chunk, `I` denotes the number of input streams):
 
-Input is serialized such that the deserializer can read the data from the chunk. Below are the serialization specifications for the deserializer defined in the [matHeader](#matheader) section.
+* unsigned int (4 bytes), **(meta) number of samples** in Sequence<sub>**s**</sub>, for `s = 1,...,S`
+* **sequence data** for stream Sequence<sub>**i,s**</sub> for `i = 1,...,I; s = 1,...,S`
 
-##### DenseBinaryDataDeserializer Data
+Since a sequence can contain different number of samples in each input stream, the number of samples here is interpreted as a meta-information about the sequence, which is not required for the reading per se, and will be provided to the higher level components (randomizers, trainers, etc.). This number can, for example, be set to the maximum number of samples across all inputs or it can be set equal to the number of samples in the input that is meant to define the minibatch size (e.g., 'labels').
 
-The DenseBinaryDataDeserializer's data is serialized as each sequence concatenated consecutively in memory. Specifically:
+At the moment, CBF supports two types of sequence data: **dense** and **sparse**. The sequence data type reflects the `storage type` of the corresponding input stream (i.e., all sequence from an input share the same type).
 
-| count | type | name |
-|-------|------|------|
-| numSequences | elemType[sampleDim] | data |
+##### Dense Stream Sequence Data
 
-where:
+* unsigned int (4 bytes), the actual number of samples in the sequence in this input stream (`N`)
+* contiguous array of `sample dim` `element type` values for Sample<sub>**n**</sub> for `n = 1,...,N`
 
-numSequences is the number of sequences in the chunk (defined in the offsets table)
+The `element type` can either be float (4 bytes) or double (8 bytes), `sample dim` is the size (the number of elements) of a sample in this input. Both are specified on the per-input basis at the file construction time and recored in the [Header section](#header) described below. For example, a dense sequence with 4 samples from an input that was declared to have `element type = float` and `sample dim = 3` will consume 52 bytes and will be laid out as follows:
 
-elemType[sampleDim] is the data encoded as an array of length sampleSize of type elemType, where sampleSize and elemType are defined in the header.
+| 4 bytes |    12 bytes   |    12 bytes   |    12 bytes   |    12 bytes   |
+|---------|---------------|---------------|---------------|---------------|
+|   3     | 0.1, 0.2, 0.3 | 0.4, 0.5, 0.6 | 0.7, 0.8, 0.9 | 1.0, 1.1, 1.2 |
 
-##### SparseBinaryDataDeserializer Data
+##### Sparse Stream Sequence Data
 
-The SparseBinaryDataDeserializer's data is serialized as a large matrix in [CSC format](http://docs.nvidia.com/cuda/cusparse/#compressed-sparse-column-format-csc), with an added caveat of how row indices are packed (see below). Before continuing, it is recommended that one reads over the specification on the page linked above.
+* unsigned int (4 bytes), the actual number of samples in the sequence in this input stream (`N`)
+* signed int (4 bytes), total number of non-zero elements in this sequence (`NNZ`)
+* contiguous array of `NNZ` `element type` values -- all non-zero element from all `N` samples concatenated together
+* contiguous array of `NNZ` signed int values -- indices for all non-zero element from all `N` samples concatenated together (with each individual index in `[0, sample dim)` interval)
+* contiguous array of `N` signed int values -- number of non-zero elements for each of the `N`  samples in the sequence.
 
-The data is therefore serialized as:
+The sparse format is somewhat similar to the [CSC format](http://docs.nvidia.com/cuda/cusparse/#compressed-sparse-column-format-csc) (with samples interpreted as columns). Please note that  NNZ counts and indices are written out as signed int, since this is the type CNTK uses natively for sparse matrix indices. A sparse sequence from an input declared to have `element type = double` and `sample dim = 1000` having two samples (`[123:0.1, 456:0.2, 789:0.3]` and `[99:0.4, 999:0.5]`) will be laid out as follows:
 
-| count | type | name |
-|-------|------|------|
-| 1 | int32_t | nnz |
-| 1 | elemType[nnz] | vals |
-| 1 | int32_t[nnz] | row indices |
-| 1 | int32_t[numSequences+1] | condensed column indices |
+| 4 bytes | 4 bytes |        40 bytes         |         20 bytes       | 8 bytes |
+|---------|---------|-------------------------|------------------------|---------|
+|   2     |   5     | 0.1, 0.2, 0.3, 0.4, 0.5 | 123, 456, 789, 99, 999 |  3, 2   |
 
-where:
 
-nnz are the number of non zero values in the chunk
+### Header
 
-vals is a float array of length nnz containing the values for each element.
+The header is placed at the end of the file, after the [Data section](#data), because it includes the offset table that contains the binary offset for each chunk in the file and is populated at the same time as the chunks are written out. The header is structured as follows:
 
-row indices is an int32_t array of length nnz containing the row indices for each element.
+* unsigned long long (8 bytes) sentinel `0x636e746b5f62696e` (same magic number used in the [Prefix](#prefix))
+* unsigned int (4 bytes), number of chunks (`C`)
+* unsigned int (4 bytes), number of input streams (`I`)
+* **stream header** for Stream<sub>**i**</sub>, for `i = 1,...,I`
+* **chunk header** for Chunk<sub>**c**</sub>, for `c = 1,...,C` (this is the offset table mentioned above)
+* signed long long (8 bytes), offset of the header, 8 bytes starting at this offset has to correspond to the sentinel value.
 
-condensed column indices is an array of int32_t of length (numSequences+1) (where numSequences is defined in the offsets table) containing the offset that each sequence begins.
+##### Stream Header
 
-In order to pack variable length sequences, we make one change to the definition of the row index.
-In particular, each <row index[i]> is encoded as follows:
+* 1 byte, `storage type` (`0 = dense`, `1 = sparse`)
+* length-prefixed (4 bytes) ASCII encoded string, name of the input stream (e.g., `8'features'`, `6'labels'`, etc.)
+* 1 byte, `element type` (`0 = float`, `1 = double`)
+* unsigned int (4 bytes), `sample dim` -- number of elements in a sample in this input stream (i.e., for sparse, the maximum number). 
 
-`new row index[i] = <sample number> * sampleSize + <row index[i]>`
+##### Chunk Header (offset table)
 
-Where:
+* signed long long (8 bytes), start offset of the chunk
+* unsigned int (4 bytes), number of sequences in the chunk
+* unsigned int (4 bytes), total number of samples in the chunk (aggregated across all sequences). As is the case in the [Data section](#data), this number is meta-information required by the randomizer.
 
-sample number is the (0 indexed) sample number for the value. Thus the first sample would have a sample number of 0, the second of 1, etc.
 
-sampleSize is the width of a sample as defined in the header
-
-row index[i] is the original row index for the element.
-
-Thus one can decode the sample for each element by dividing it by the sampleSize. Similarly, one can determine the actual row index by modding it with the sampleSize.
-
-##### ```reader``` section
+## `reader` section
 
 | Parameter | Mandatory | Accepted values | Default value | Description |
 |:----------|:---------:|-----------------|---------------|-------------|
-| ```readerType``` | Yes | one of the supported CNTK readers | | Specifies the reader flavor to load (e.g., ```CNTKBinaryReader```) |
-| ```file``` | Yes | File path | | Path to the file containing the input dataset (Windows or Linux style) |
-| ```randomize``` | No | ```true```, ```false``` | ```true``` | Specifies whether the input should be randomized |
-| ```randomizationSeed``` | No | Positive integer | ```0``` | Initial randomization seed value (incremented every sweep when the input data is re-randomized). |
-| ```randomizationWindow``` | No | Positive integer | | Specifies the randomization range (in number of samples)<sup>[1](#footnote1)</sup>. This controls how much of the dataset resides in memory.   |
-| ```traceLevel``` | No | ```0```, ```1```, ```2``` | ```1``` | Output verbosity level. ```0``` - show only errors; ```1``` - show errors and warnings; ```2``` - show all output<sup>[2](#footnote2)</sup> |
-| ```keepDataInMemory``` | No | ```true```, ```false``` | ```false``` | If ```true```, the whole dataset will be cached in memory |
+| `readerType` | Yes | one of the supported CNTK readers | | Specifies the reader flavor to load (e.g., `CNTKBinaryReader`) |
+| `file` | Yes | File path | | Path to the file containing the input dataset (Windows or Linux style) |
+| `randomize` | No | `true`, `false` | `true` | Specifies whether the input should be randomized |
+| `randomizationSeed` | No | Positive integer | `0` | Initial randomization seed value (incremented every sweep when the input data is re-randomized). |
+| `randomizationWindow` | No | Positive integer | | Specifies the randomization range (in number of samples)<sup>[1](#footnote1)</sup>. This controls how much of the dataset resides in memory.   |
+| `traceLevel` | No | `0`, `1`, `2` | `1` | Output verbosity level. `0` - show only errors; `1` - show errors and warnings; `2` - show all output<sup>[2](#footnote2)</sup> |
+| `keepDataInMemory` | No | `true`, `false` | `false` | If `true`, the whole dataset will be cached in memory |
 
-<a name = "footnote1"><sup>1</sup></a> If no `randomizationWindow` is specified, the randomization range is set to be equal to the size of the dataset (i.e., the input is randomized across the whole dataset). `randomizationWindow` is ignored when `randomize` is set to ```false```.
+<a name = "footnote1"><sup>1</sup></a> If no `randomizationWindow` is specified, the randomization range is set to be equal to the size of the dataset (i.e., the input is randomized across the whole dataset). `randomizationWindow` is ignored when `randomize` is set to `false`.
 
 <a name = "footnote2"><sup>2</sup></a> In order to force the reader to show a warning for each input error it ignores (in the sense of not raising an exception), non-default `maxErrors` value should be used in combination with the  `traceLevel` set to `1` or above.
 
-##### ```input``` sub-section
+##### `input` sub-section
 
-```input``` combines a number of individual inputs, each with an appropriately labeled configuration sub-section. All parameters described below are specific to an *Input name* sub-section associated with a particular input.
+`input` combines a number of individual inputs, each with an appropriately labeled configuration sub-section. All parameters described below are specific to an *Input name* sub-section associated with a particular input.
 
 | Parameter | Mandatory | Accepted values | Description |
 |:----------|:---------:|-----------------|-------------|
-| ```alias``` | No | String | A way of renaming an input in a converted binary file into a new stream for use in the network. |
+| `alias` | No | String | A way of renaming an input in a converted binary file into a new stream for use in the network. |
 
-The ```alias``` parameter is mainly used in case one has an already created binary file that one wants to use with an already created network. In such a case if the input names do not match, one would have to regenerate the binary file (or at least rewrite the header) in order to use the two pieces together. Instead, the binary reader offers the ability to rename streams in the input into new output streams via the use of the ```alias``` parameter. In such a case the input stream named by the ```alias``` parameter is renamed, and will be mapped to a new output stream.
+The `alias` parameter is mainly used in case one has an already created binary file that one wants to use with an already created network. In such a case if the input names do not match, one would have to regenerate the binary file (or at least rewrite the header) in order to use the two pieces together. Instead, the binary reader offers the ability to rename streams in the input into new output streams via the use of the `alias` parameter. In such a case the input stream named by the `alias` parameter is renamed, and will be mapped to a new output stream.

@@ -2,7 +2,7 @@
 title:   CNTK Archive Page
 author:    wolfma61
 ms.author:   wolfma
-ms.date:   06/22/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   archive
 ms.service:  cognitive-services
@@ -23,7 +23,7 @@ This page lists documentation pages which have been moved out of the main docume
 
 Prior to the CNTK 2.0 version, the CNTK EvalDLL was used to evaluate model trained by using cntk.exe with BrainScript. The EvalDLL 
 is still supported, but works only for the model created by cntk.exe with BrainScript. It can not be used to evaluate models created 
-by CNTK 2.0 using Python. We strongly recommend to use the CNTK 2.0 Libraries for evaluation, as it supports model formats and provides more features. 
+by CNTK 2.0 or later using Python. We strongly recommend to use the latest CNTK libraries for evaluation, as it supports model formats and provides more features. 
 
 More information about using EvalDll can be found in the following pages.
 
@@ -31,7 +31,7 @@ More information about using EvalDll can be found in the following pages.
 * [EvalDLL Evaluation Overview](.//EvalDLL-Evaluation-Overview.md)
 * [EvalDLL evaluation on Windows](./EvalDLL-Evaluation-on-Windows.md)
 * [EvalDLL evaluation on Linux](./EvalDLL-Evaluation-on-Linux.md)
-* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi.md)
+* [EvalDLL evaluation in Azure](./Evaluate-a-model-in-an-Azure-WebApi-using-EvalDll.md)
 * [EvalDLL C# API](./EvalDll-Managed-API.md)
 * [EvalDLL C++ API](./EvalDll-Native-API.md)
 * [EvalDLL Evaluate Hidden Layers](./CNTK-Evaluate-Hidden-Layers.md)

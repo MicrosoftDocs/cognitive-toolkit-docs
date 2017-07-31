@@ -65,11 +65,11 @@ You will find the following fixes in this release:
 * Fix for packed sequences
 * Correctness for Sequence2Sequence
 * Automated minibatch scaling 
-* Optimized ```lstm``` from cudnn5.1
+* Optimized ```lstm``` from cuDNN-5.1
 * Automatic minibatch-sizing no longer affects accuracy
 * Improved performance for certain kinds of recurrent networks (```PastValue()```)
 * ```fanout``` in ```glorot``` initialization is now correct
-* Fix for dimension error in cudnn RNN wrapper
+* Fix for dimension error in cuDNN RNN wrapper
 * ```fsAdagrad``` denominator is now aggregated correctly
 * ```LSTMBlock{}``` and ```StabilizerLayer{}``` no longer create parameters from inside ```apply()```
 * Improved default for ```BatchNormalizationLayer{}`` time constant

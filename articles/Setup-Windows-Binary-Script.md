@@ -2,7 +2,7 @@
 title:   Setup Windows binary script
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -17,19 +17,19 @@ This page will walk you through the process of installing the Microsoft Cognitiv
 
 If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-> These instructions apply to release 2.0.
+> These instructions apply to release 2.1.
 
 **Step 1: Download and prepare the Microsoft Cognitive Toolkit**
 
 Download the appropriate binary package from [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). The installation described on this page only works with the binary package. The source code package, which is also available from the CNTK Release page, is NOT required.
 
-Unpack the zip file into an empty local folder of your choice. We recommend you name the folder according to the CNTK version, so you don't mix files of a previously downloaded CNTK version with the newly downloaded files. In the following we will assume you unzipped the files into the directory `c:\local\CNTK-2-0`. If you used another directory, adjust the following instructions accordingly.
+Unpack the zip file into an empty local folder of your choice. We recommend you name the folder according to the CNTK version, so you don't mix files of a previously downloaded CNTK version with the newly downloaded files. In the following we will assume you unzipped the files into the directory `c:\local\CNTK-2-1`. If you used another directory, adjust the following instructions accordingly.
 
 **Step 2 Run the installation script**
 
 Start a standard windows command prompt, and run the installation script:
 ```
-cd c:\local\CNTK-2-0
+cd c:\local\CNTK-2-1
 cd cntk\Scripts\install\windows
 install.bat
 ```
@@ -59,7 +59,7 @@ To verify the correct installation of CNTK from Python:
 You need to **activate** the CNTK environment by opening a standard Windows command prompt and running the batch file created by the installation script (see Step 2). This script will add Python and the CNTK installation to your current PATH environment only for the current Windows command prompt.
 
 ```
-cd c:\local\CNTK-2-0
+cd c:\local\CNTK-2-1
 cd scripts
 cntkpy35.bat
 ```
@@ -77,7 +77,7 @@ You can now follow the [standard description](./Setup-Test-Python.md) to test yo
 Perform the following command in the CNTK environment command prompt (see previous step):
 
 ```
-cd c:\local\CNTK-2-0
+cd c:\local\CNTK-2-1
 cd Tutorials\HelloWorld-LogisticRegression
 cntk configFile=lr_bs.cntk makeMode=false command=Train
 ```

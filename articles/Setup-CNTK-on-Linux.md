@@ -2,7 +2,7 @@
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/07/2017
+ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -22,6 +22,9 @@ Before moving any further you may consider deploying CNTK as a Docker container.
 ## Current limitations and precautions
 
 Please, read carefully this section before you proceed with your system configuration. The information below may save you a lot of time otherwise spent on build errors debugging.
+
+> [!NOTE]
+> This page assumes that you are trying to build CNTK's master branch.
 
 ### Expected component locations in configure and Makefile scripts
 
@@ -409,16 +412,16 @@ Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvid
 * Use the following commands:
 
 ```
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v5.1/cudnn-8.0-linux-x64-v5.1.tgz
-tar -xzvf ./cudnn-8.0-linux-x64-v5.1.tgz
-sudo mkdir /usr/local/cudnn-5.1
-sudo cp -r cuda /usr/local/cudnn-5.1
+wget http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/cudnn-8.0-linux-x64-v6.0.tgz
+tar -xzvf ./cudnn-8.0-linux-x64-v6.0.tgz
+sudo mkdir /usr/local/cudnn-6.0
+sudo cp -r cuda /usr/local/cudnn-6.0
 ```
 
 * Add the following environment variable to your current session and your `.bashrc` profile:
 
 ```
-export LD_LIBRARY_PATH=/usr/local/cudnn-5.1/cuda/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/cudnn-6.0/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ----------
@@ -505,9 +508,9 @@ source activate cntk-py35
 
 Similarly, for a Python 3.6, 3.4, or 2.7 based environment.
 
-**Step 2**: Uninstall previous CNTK 2.0 package
+**Step 2**: Uninstall previous CNTK package
 
-* If you previously installed any version of the CNTK 2.0 pip-package on your machine, uninstall it by running: `pip uninstall cntk`
+* If you previously installed any version of the CNTK pip-package on your machine, uninstall it by running: `pip uninstall cntk`
 
 **Step 3**: Build Python Package
 
