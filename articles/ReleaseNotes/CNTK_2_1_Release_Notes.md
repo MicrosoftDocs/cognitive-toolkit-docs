@@ -39,9 +39,8 @@ This release contains the following **breaking changes**:
 * Reduction over multiple axes:
   * Computes the mean of the input tensor's elements across the specified axis
   * Computes the mean of the input tensor's elements across a specified axis or a list of specified axes 
-* See sections below on other new features:
-  * Support of Universal Windows Platform (UWP) in CNTK Evaluation library
-  * New and improved features in the CNTK Keras backend
+* Support of Universal Windows Platform (UWP) in CNTK Evaluation library (see section below)
+* New and improved features in the CNTK Keras backend (see section below)
 
 ### NVIDIA cuDNN 6.0 integration
 
