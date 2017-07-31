@@ -91,7 +91,7 @@ The primitive operations and layers are declared in the global namespace. Additi
  - [`TransposeTimes`](./Times-and-TransposeTimes.md)`(A, B, outputRank=1)`  
  - [`Convolution`](./Convolution.md)`(weights, x, kernelShape, mapDims=(0), stride=(1), sharing=(true), autoPadding=(true), lowerPadding=(0), upperPadding=(0), imageLayout='CHW', maxTempMemSizeInSamples=0)`  
  - [`Pooling`](./Pooling.md)`(x, poolKind/*'max'|'average'*/, kernelShape, stride=(1), autoPadding=(true), lowerPadding=(0), upperPadding=(0), imageLayout='CHW')`  
- - [`ROIPooling`](./ROIPooling.md)`(x, poolKind/*'max'*/, roiOutputShape, spatialScale=1.0/16.0)`
+ - [`ROIPooling`](./ROIPooling.md)`(x, rois, roiOutputShape, spatialScale=1.0/16.0)`
 
 ## Learnable parameters and constants
  - [`ParameterTensor`](./Parameters-And-Constants.md)` {shape, learningRateMultiplier=1.0, init='uniform'/*|gaussian*/, initValueScale=1.0, initValue=0.0, randomSeed=-1, initFromFilePath=''}`  
