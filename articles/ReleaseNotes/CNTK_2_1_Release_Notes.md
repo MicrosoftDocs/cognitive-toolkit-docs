@@ -51,7 +51,7 @@ If you build CNTK from source, you should also install NVIDIA cuDNN 6.0, since i
 
 ### CNTK Evaluation library. Support of Universal Windows Platform (UWP)
 
-With this release we introduce the support of [Universal Windows Platform (UWP](https://docs.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp). A new CNTK NuGet Package *[CNTK, UWP CPU-Only Build](http://www.nuget.org/packages/CNTK.UWP.CPUOnly)* is available for download. For further details see the description of [Model Evaluation on Universal Windows Platform](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Library-Evaluation-on-UWP). To build the CNTK UWP evaluation library, see the description [here](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-UWP-Build-on-Windows).
+With this release we introduce the support of [Universal Windows Platform (UWP)](https://docs.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp). A new CNTK NuGet Package *[CNTK, UWP CPU-Only Build](http://www.nuget.org/packages/CNTK.UWP.CPUOnly)* is available for download. For further details see the description of [Model Evaluation on Universal Windows Platform](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Library-Evaluation-on-UWP). To build the CNTK UWP evaluation library, see the description [here](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-UWP-Build-on-Windows).
 
 ### CNTK backend for Keras
 
