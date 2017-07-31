@@ -12,8 +12,7 @@ ms.devlang:   NA
 # Pooling
 
     Pooling (input,
-             roiInput,
-             poolKind, # "max"
+             ROIs,
              {roi output dimensions}, 
              spatialScale = {spatial scale wrt image (float)})
 
@@ -25,8 +24,7 @@ The spatial scale can be computed by multiplying all strides that occur before t
 e.g., a network that has four pooling layers with stride two would have a spatial scale of 1/16.
 
 * `input` - pooling input for the entire image
-* `roiInput` - roi coordinates as absolute pixel coordinates `(x_min, y_min, x_max, y_max)`
-* `poolKind` - "max"
+* `ROIs` - roi coordinates as absolute pixel coordinates `(x_min, y_min, x_max, y_max)`
 * `{roi output dimensions}` - dimensions (width, height) of the roi output, as a BrainScript vector, e.g. `(4:4)`.
 * `spatialScale` - the scale of operand from the original image size.
 
