@@ -95,6 +95,7 @@ Version 2.1 provides fixes for the following bugs:
 
 * Concurrency issue in parallel evaluations
 * Intermittent reference error in `next_minibatch`
+* Checkpointing of `bptt`
 
 ### CNTK NuGet package
 
