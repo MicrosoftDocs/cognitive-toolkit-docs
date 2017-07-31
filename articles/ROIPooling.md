@@ -1,6 +1,6 @@
 ---
 title:   ROIPooling 
-author:    philippkranen
+author:    pkranen
 ms.author:   pkranen
 ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
