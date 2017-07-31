@@ -13,7 +13,7 @@ ms.devlang:   NA
 
     Pooling (input,
              ROIs,
-             {roi output dimensions}, 
+             {roi output shape}, 
              spatialScale = {spatial scale wrt image (float)})
 
 The roi-pooling operation computes a new matrix by selecting the maximum (max pooling) value in the pooling input for each region of interest (roi). 
@@ -22,9 +22,9 @@ The pooling input is computed per roi by projecting the coordinates onto the inp
 The projection uses the 'spatial scale' which is the size ratio of the input feature map over the input image size. 
 The spatial scale can be computed by multiplying all strides that occur before the roi-pooling and taking the inverse, 
 e.g., a network that has four pooling layers with stride two would have a spatial scale of 1/16.
+The output shape's width and height are determined by the third argument, the output depth (number of filters) is the same as the input depth.
 
 * `input` - pooling input for the entire image
 * `ROIs` - roi coordinates as absolute pixel coordinates `(x_min, y_min, x_max, y_max)`
-* `{roi output dimensions}` - dimensions (width, height) of the roi output, as a BrainScript vector, e.g. `(4:4)`.
+* `{roi output shape}` - dimensions (width, height) of the roi output, as a BrainScript vector, e.g. `(4:4)`.
 * `spatialScale` - the scale of operand from the original image size.
-
