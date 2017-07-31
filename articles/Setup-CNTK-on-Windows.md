@@ -1,7 +1,7 @@
 ---
 title:   Setup CNTK on Windows
-author:    chrisbasoglu
-ms.author:   cbasoglu
+author:    wolfma61
+ms.author:   wolfma
 ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
@@ -168,7 +168,7 @@ CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 ```
 
-### cuDNN
+## cuDNN
 
 Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v6.0 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v6.0/cudnn-8.0-windows10-x64-v6.0.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
