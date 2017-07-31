@@ -53,7 +53,7 @@ Here are the current configurations that are used in CNTK team environment for a
 * GNU C++ 4.8.4
 
 ### MPI
-* Open MPI v. 1.10.3
+* Open MPI v. 1.10.7
 
 ### Math Library
 * Intel® Math Kernel Library 11.3 Update 3
