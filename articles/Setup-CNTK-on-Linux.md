@@ -101,10 +101,9 @@ sudo mkdir /usr/local/CNTKCustomMKL
 
 * Download the required CNTK custom MKL from the [CNTK web site](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/).
   Un-tar it into your CNTK MKL path, creating a numbered sub directory within.
-  For example, if you are on latest master, download `CNTKCustomMKL-Linux-3.tgz` and extract its contents to `/usr/local/CNTKCustomMKL/3`:
+  For example, if you are on latest master, download `CNTKCustomMKL-Linux-3.tgz` and extract its contents to `/usr/local/CNTKCustomMKL`, which should create a folder `/usr/local/CNTKCustomMKL/3` within:
 
 ```
-wget https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/
 sudo tar -xzf CNTKCustomMKL-Linux-3.tgz -C /usr/local/CNTKCustomMKL
 ```
 
