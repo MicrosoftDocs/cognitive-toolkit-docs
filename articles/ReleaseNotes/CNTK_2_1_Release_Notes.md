@@ -33,7 +33,7 @@ This release contains the following **breaking changes**:
 
 ## New and updated features
 
-* Reinforcement learning framework for CNTK. See details [here](https://github.com/Microsoft/CNTK/blob/release/2.1/bindings/python/cntk/contrib/deeprl/README.md)
+* Preview of Reinforcement learning framework for CNTK. See details [here](https://github.com/Microsoft/CNTK/blob/release/2.1/bindings/python/cntk/contrib/deeprl/README.md). Please, be aware, that this is the first preview, and many changes are likely in the future
 * More flexible Python-based user deserializer. See the [manual](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_write_a_custom_deserializer.ipynb) for detailed information
 * Caffe to CNTK model converter. See the [Converter ReadMe](https://github.com/Microsoft/CNTK/blob/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/README.md). Examples illustrating the usage of the converter are available in [CNTK Codebase](https://github.com/Microsoft/CNTK/tree/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/examples). 
 * Reduction over multiple axes:
