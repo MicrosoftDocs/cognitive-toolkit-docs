@@ -70,16 +70,15 @@ We recommend you start from this solution, since we already added all the code w
 These are the changes we performed so far. We still need to get the CNTK Eval functionality included in the project and 
 need a model to evaluate. 
 
-Add the CNTK Eval functionality to the project. This is available as a NuGet package. In VS select `Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution...`, pick `nuget.org` as the online source, search for `CNTK` and install the latest package version (`CNTK.GPU` or `CNTK.CPUOnly`).
+Add the CNTK Eval functionality to the project. This is available as a NuGet package. In VS select `Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution...`, pick `nuget.org` as the online source, search for `CNTK` and install the latest package version (`CNTK.GPU` or `CNTK.CPUOnly`) to the project.
 
 ![NuGet](./pictures/EvaluateWebApiCntkLibrary/nuget_manager.png)
 
-Now we need a model to evaluate. Download the [ResNet20_CIFAR10_Python.model](https://www.cntk.ai/Models/CNTK_Pretrained/ResNet20_CIFAR10_Python.model) and save it in the directory `CNTK\Models` in the solution. The model file needs also to be included in the solution (`Project -> Add existing Item`)
+Now we need a model to evaluate. Download the [ResNet20_CIFAR10_Python.model](https://www.cntk.ai/Models/CNTK_Pretrained/ResNet20_CIFAR10_Python.model) and save it in the directory `CNTK\Models` under the project folder. The model file needs also to be included in the solution (`Project -> Add existing Item`)
 
 CNTK requires a 64-bit runtime environment. Make sure in the Configuration Manager that the project is compiled for the x64 platform. In addition, the WebApi we are creating has to be hosted in a 64-bit instance of IIS. You can enforce this by selecting "Use 64 bit version of IIS Express for web sites and projects" in `Tools -> Options -> Project and Solutions -> WebProjects`
 
 ![Project](./pictures/EvaluateWebApiCntkLibrary/setting_64_bits_in_vs.png)
- 
 
 At this point you have performed all the necessary steps to execute the model locally on your machine. In Visual Studio press `F5` to run the project. This will open an internet browser on the default web site and display an error message. This is to be expected since we have created a WebApi and not a website. We easily call the implemented WebApi by changing the address in the browser to: 
 

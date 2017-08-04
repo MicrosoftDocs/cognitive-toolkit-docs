@@ -24,15 +24,15 @@ The usage pattern for this DLL is the following:
 5. Evaluate some input against the model and obtain the corresponding output.
 6. Dispose the model when done.
 
-For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](../EvalDll-Native-API.md) page.
+For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page.
 
-The [CPPEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) program located in the folder [Examples/Evaluation/LegacyEvalDll/CPPEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) demonstrates the usage of this evaluation interface. Please see the [Eval Examples](../CNTK-Eval-Examples.md) page for how to build and run examples.
+The [CPPEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) program located in the folder [Examples/Evaluation/LegacyEvalDll/CPPEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) demonstrates the usage of this evaluation interface. Please see the [EvalDll Examples](./Evaldll-examples.md) page for how to build and run examples.
 
 ## Using the EvalDll C# library 
 CNTK provides a managed (.Net) library wrapper named `Cntk.Eval.Wrapper`. This library wraps the native EvalDll library and exposes a managed interface. This interface provides the same functionality as the native interface, with the addition of some convenience methods.
 Alike its native counterpart, this library can only perform evaluations using the CPU (no GPU used). The library is written in CLI/C++ and thus forms the bridge between .Net (e.g. C#) and the native C++ side.
 
-For details regarding the managed API provided by EvalWrapper.DLL, refer to the [EvalDll Managed API](../EvalDll-Managed-API.md) page.
+For details regarding the managed API provided by EvalWrapper.DLL, refer to the [EvalDll Managed API](./EvalDll-Managed-API.md) page.
 
 The usage pattern for the managed wrapper is simple:
 
@@ -56,7 +56,7 @@ The usage pattern for the managed wrapper is simple:
     ...
     }
 
-There are several [examples](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CSEvalClient) of performing a programmatic CNTK model evaluation in C# inside the CSEvalClient project. Please see the [Eval Examples](../CNTK-Eval-Examples.md) page for how to build and run examples.
+There are several [examples](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CSEvalClient) of performing a programmatic CNTK model evaluation in C# inside the CSEvalClient project. Please see the [EvalDll Examples](./Evaldll-examples.md) page for how to build and run examples.
 
 ## NuGet Package
 There is currently a NuGet package at nuget.org (search for CNTK) that provides both the native and managed versions for Debug and Release for the CNTK evaluation libraries (CPU only using MKL). With the NuGet it is possible to simply add the CNTK Eval NuGet to a .Net or Win32 project and call the APIs.

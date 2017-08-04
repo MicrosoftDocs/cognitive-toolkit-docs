@@ -312,8 +312,23 @@ void CNTK::Value::CopyVariableValueTo(const Variable& outputVariable, std::vecto
 Copies the data stored in the Value object into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `vector<size_t>`, contains a variable number of samples. Each sample is represented by an index pointing to the non-zero value in the one-hot vector. The dimension size of the one-hot vector should match that defined in the `outputVariable`.
 
 Parameters:
-* `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
-* `sequences`: the output buffer used to store the data copied from the Value.
+*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
+*  `sequences`: the output buffer used to store the data copied from the Value.
+
+***
+```cpp
+template <typename ElementType> void CopyVariableValueTo(const Variable& outputVariable, size_t& sequenceLength, std::vector<SparseIndexType>& colStarts, std::vector<SparseIndexType>& rowIndices, std::vector<ElementType>& nonZeroValues, size_t& numNonZeroValues)
+```
+
+Copy the data stored in the Value object to the buffers representing a sequence in CSC sparse format. The sequence buffer will be resized if necessary. The Value should have the same tensor shape as outputVariable. On return, `sequenceLength` is set to the length of the sequence stored in the Value, and `colStarts`, `rowIndices` and `nonZeroValues` contain the data of column start indexes, row indexes and non-zero values, and `numNonZeroValues` is set to number of non-zero values contained in `this` Value.
+
+Parameters:
+*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
+*  `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
+*  `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
+*  `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
+*  `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
+*  `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
 
 ***
 ## Helper functions to manipulate the Function to be evaluated

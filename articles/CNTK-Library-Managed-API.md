@@ -565,6 +565,21 @@ Parameter:
 *  `outputVariable`: The variable that the Value denotes to. The size of the one-hot vector should match that defined in the variable.
 
 ***
+```cs
+public void GetSparseData<T>(Variable outputVariable, out int sequenceLength, out IList<int> colStarts, out IList<int> rowIndices, out IList<T> nonZeroValues, out int numNonZeroValues)
+```
+
+Copy the data stored in the Value object to the buffers representing a sequence in CSC sparse format. The sequence buffer will be resized if necessary. The Value should have the same tensor shape as outputVariable. On return, `sequenceLength` is set to the length of the sequence stored in the Value, and `colStarts`, `rowIndices` and `nonZeroValues` contain the data of column start indexes, row indexes and non-zero values, and `numNonZeroValues` is set to number of non-zero values contained in `this` Value.
+
+Parameters:
+*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
+*  `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
+*  `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
+*  `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
+*  `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
+*  `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
+
+***
 ### The following methods will be deprecated soon. Please use GetDenseData() and GetOneHotData() described above.
 
 ***
@@ -969,6 +984,112 @@ Changes the device of the NDArrayView to the specified device.
 
 Parameter:
 *  `device`: the target device of the NDArrayView object.
+
+## class NDMask
+Denotes a multi-dimensional mask used for specifying specific sections of a NDArrayView object as masked/invalid. This type denotes a view and there may be multiple simultaneous views of the data underlying a NDMask instance.
+
+***
+```cs
+public NDMask(NDShape shape, DeviceDescriptor device)
+```
+
+Construct a new Mask object of specified shape on the specified device.
+
+Parameter:
+*  `shape`: the shape of the NDMask object.
+*  `device`: the target device of the MDMask object.
+
+***
+```cs
+public int MaskedCount { get; }
+```
+
+The number of masked/invalid values.
+
+***
+```cs
+public int Device { get; }
+```
+
+The descriptor of the device that the mask resides on
+
+***
+```cs
+public int Shape { get; }
+```
+
+The shape of the mask.
+
+***
+```cs
+public void InvalidateSection(IEnumerable<int> sectionOffset, NDShape sectionShape)
+```
+
+Mask the specified sub-section as invalid.
+
+Parameter:
+*  `sectionOffset`: A list specifying start positions of the section that should be masked as invalid.
+*  `sectionShape`: The shape describes the section that should be masked as invalid.
+
+***
+```cs
+public void MarkSequenceBegin(IEnumerable<int> offset)
+```
+Mark the specified position as sequence begin.
+
+Parameter:
+*  `sectionOffset`: A list specifying start positions in the mask that should be masked as sequence begin.
+
+***
+```cs
+public void MarkSequenceBegin(IEnumerable<int> offset, NDShape sectionShape)
+```
+Mark the specified sub-section as sequence begin.
+
+Parameter:
+*  `offset`: A list specifying start positions of the section that should be masked as sequence begin.
+*  `sectionShape`: The shape describes the section that should be masked as sequence begin.
+
+***
+```cs
+public void Clear()
+```
+Clear the mask. All currently values masked as invalid are set to valid.
+
+***
+```cs
+public NDMask DeepClone(DeviceDescriptor device)
+```
+
+Creates a new NDMask with newly allocated storage on the specified device and copies `this` mask's contents into the newly allocated view.
+
+Parameter:
+*  `device`: the target device of the MDMask object.
+
+***
+```cs
+public NDMask DeepClone()
+```
+
+Creates a new NDMask with newly allocated storage on the same device as `this` mask and copies `this` mask's contents into the newly allocated mask.
+
+***
+```cs
+public NDMask Alias()
+```
+
+Creates a new NDMask which is an alias of `this` mask.
+
+***
+```cs
+public void CopyFrom(NDMask source)
+```
+
+Copies the contents of the `source` NDMask to `this` mask. The shapes of the `source` mask and `this` mask must be identical.
+
+
+Parameter:
+*  `source`: the source NDMask whose content is copied to `this` view.
 
 ## class Axis
 Denotes an Axis of a [`Variable`](#class-variable). Besides the static axes corresponding to each of the axes of the Variable's shape, Variables of kind 'Input' and any 'Output' Variables dependent on an 'Input' Variable also have 2 additional dynamic axes whose dimensions are known only when the Variable is bound to actual data during compute (viz. sequence axis and batch axis denoting the axis along which multiple sequences are batched)
