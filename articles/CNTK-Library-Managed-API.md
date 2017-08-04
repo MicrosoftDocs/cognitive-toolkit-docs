@@ -2,7 +2,7 @@
 title:   CNTK Library Eval C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:   08/03/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -159,7 +159,7 @@ public static Function Combine(IEnumerable<Variable> operands)
 
  Creates a new Function instance which combines the outputs of the specified list of 'operands' of Functions. The 'Outputs' of the new 'Function' are union of the 'Outputs' of each of the specified 'operands' Functions. As an example, when creating a classification model, typically the CrossEntropy loss Function and the ClassificationError Function comprise the roots of the computation graph which can be "Combine"d to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
 
-Parameters:
+Parameter:
 *  `operands`: the list of the functions or variables that should be included in the Outputs of the new function.
 
 ***
@@ -753,7 +753,7 @@ public NDShape(int numAxes, int dimension)
 
 Constructs a NDShape instance with the specified rank and dimension size. Each axis has the same dimensionality.
 
-Parameter:
+Parameters:
 *  `numAxes`: the number of axes of the shape.
 *  `dimension`: the dimension size, applied to each axis.
 
@@ -852,7 +852,7 @@ public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor devi
 
 Constructs a NDArrayView with the specified 'dataBuffer' in dense format as the backing storage on the specified device.
 
-Parameter:
+Parameters:
 *  `viewShape`: the shape of the NDArrayView being created.
 *  `dataBuffer`: the data values contained in the NDArrayView. The 'dataBuffer' must be at least as large as the total size of the specified 'viewShape' and must outlive the created NDArrayView object.
 *  `device`: on which device the NDArrayView object should be created.
@@ -868,7 +868,7 @@ public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[
 
 Constructs a NDArrayView with the specified storage in sparse CSC format on the specified device. The specified sparse data must outlive the created NDArrayView object.
 
-Parameter:
+Parameters:
 *  `viewShape`: the shape of the NDArrayView being created.
 *  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
 *  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
@@ -941,7 +941,7 @@ public NDArrayView DeepClone(DeviceDescriptor device, bool readOnly)
 
 Creates a new NDArrayView with newly allocated storage on the specified device and copies `this` view's contents into the newly allocated view.
 
-Parameter:
+Parameters:
 *  `device`: on which device the new NDArrayView object should be created.
 *  `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
 
@@ -995,7 +995,7 @@ public NDMask(NDShape shape, DeviceDescriptor device)
 
 Construct a new Mask object of specified shape on the specified device.
 
-Parameter:
+Parameters:
 *  `shape`: the shape of the NDMask object.
 *  `device`: the target device of the MDMask object.
 
@@ -1027,7 +1027,7 @@ public void InvalidateSection(IEnumerable<int> sectionOffset, NDShape sectionSha
 
 Mask the specified sub-section as invalid.
 
-Parameter:
+Parameters:
 *  `sectionOffset`: A list specifying start positions of the section that should be masked as invalid.
 *  `sectionShape`: The shape describes the section that should be masked as invalid.
 
@@ -1046,7 +1046,7 @@ public void MarkSequenceBegin(IEnumerable<int> offset, NDShape sectionShape)
 ```
 Mark the specified sub-section as sequence begin.
 
-Parameter:
+Parameters:
 *  `offset`: A list specifying start positions of the section that should be masked as sequence begin.
 *  `sectionShape`: The shape describes the section that should be masked as sequence begin.
 

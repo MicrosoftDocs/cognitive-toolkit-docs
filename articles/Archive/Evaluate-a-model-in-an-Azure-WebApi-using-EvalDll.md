@@ -2,7 +2,7 @@
 title:   Evaluate a model in an Azure WebApi using EvalDll
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:  07/31/2017
+ms.date:  08/03/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -11,10 +11,6 @@ ms.devlang:   dotnet
 
 # Evaluate a model in an Azure WebApi using EvalDll
 
-## Deploy through Azure Machine Learning Command Line
-One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](https://github.com/Azure/Machine-Learning-Operationalization/blob/master/samples/cntk/tutorials/realtime/image_classification.md) to learn how.
-
-## Deploy through ASP.NET
 We will walk you to the required steps to deploy a CNTK model on Azure and send web requests to the Azure endpoint to
 evaluate data against the deployed model. We will build this functionality in form of a WebApi, but focus on the most
 basic Azure functionality. Please refer to more advanced Azure documentation to learn about all the advanced abilities, i.e. parameter passing etc.
