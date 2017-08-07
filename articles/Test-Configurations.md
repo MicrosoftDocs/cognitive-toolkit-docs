@@ -2,7 +2,7 @@
 title:   CNTK Production Test Configurations
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/31/2017
+ms.date:   08/07/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -10,7 +10,7 @@ ms.devlang:   NA
 ---
 # CNTK Production Test Configurations
 
-The page lists configurations that are used for automated test of the Microsoft Cognitive Toolkit. It doesn't distinguish explicitly between build and test environment, for a detailed overview of the individual requirements you should consult the [development environment setup page](./Setup-development-environment.md) for a build environment, and the [setup from precompiled binaries page](./Setup-CNTK-on-your-machine.md) for the test environment.
+This page lists configurations that are used for automated test of the Microsoft Cognitive Toolkit. It doesn't distinguish explicitly between build and test environment, for a detailed overview of the individual requirements you should consult the [development environment setup page](./Setup-development-environment.md) for a build environment, and the [setup from precompiled binaries page](./Setup-CNTK-on-your-machine.md) for the test environment.
 
 The presented set of product versions is not restrictive, i.e. CNTK may well work in many other configurations.
 
