@@ -45,4 +45,4 @@ Please refer to [Windows](./CNTK-Library-Evaluation-on-Windows.md#using-java) an
 
 ## Examples for legacy applications using EvalDLL
 
-Please refer to [EvalDll-Examples](./EvalDll-Examples.md) for details.
+Please refer to [EvalDll-Examples](./Archive/EvalDll-Examples.md) for details.
