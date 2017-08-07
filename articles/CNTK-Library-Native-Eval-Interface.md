@@ -51,10 +51,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatch(const N
 Creates a new Value object containing a batch of samples. The number of samples in the batch is the number of elements in `batchData` divided by the size of `sampleShape` (A runtime error occurs if the remainder is not zero). The created Value object contains a copy of the specified data in `batchData`. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value object.
-*  `batchData`: the data to be contained in the Value object.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value object is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value object.
+* `batchData`: the data to be contained in the Value object.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value object is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -64,10 +64,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(cons
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in `sequenceData`. The sequence length is the number of elements in `sequenceData` divided by the size of `sampleShape` (A runtime error occurs if the remainder is not zero). The created sequence is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `sequenceData`: the data to be contained in the Value.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `sequenceData`: the data to be contained in the Value.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -77,11 +77,11 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(cons
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in `sequenceData`. The sequence length is the number of elements in `sequenceData` divided by the size of `sampleShape` (A runtime error occurs if the remainder is not zero). The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence at the same index in the sequences list from a previous call to this method. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `sequenceData`: the data to be contained in the Value.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `sequenceData`: the data to be contained in the Value.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -91,10 +91,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatchOfSequen
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in `batchOfSequences`. The number of sequences in the batch is the size of `batchOfSequences`. The length of each sequence is the number of elements in the corresponding sequence of `batchOfSequences` divided by the size of `sampleShape` (A runtime error occurs if the remainder is not zero). Each sequence in `batchOfSequences` is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `batchOfSequences`: the data to be stored in the Value. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
-*  `device`: on which device the Value should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `batchOfSequences`: the data to be stored in the Value. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
+* `device`: on which device the Value should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -104,11 +104,11 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatchOfSequen
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in `batchOfSequences`. The number of sequences in the batch is the size of `batchOfSequences`. The length of each sequence is the number of elements in the corresponding sequence of `batchOfSequences` divided by the size of `sampleShape` (A runtime error occurs if the remainder is not zero). `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `batchOfSequences`: the data to be stored in the Value. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `batchOfSequences`: the data to be stored in the Value. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ## Create a Value using one-hot vector input
@@ -121,10 +121,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatch(size_t 
 Creates a new Value object containing a batch of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of samples in the batch is the number of elements in `batchData`. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batchData`: the collection of indexes representing the batch of samples.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batchData`: the collection of indexes representing the batch of samples.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -134,10 +134,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(size
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The sequence length is the number of elements in `sequenceData`.Each sequence is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequenceData`: the collection of indexes representing the sequence of samples.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequenceData`: the collection of indexes representing the sequence of samples.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -147,11 +147,11 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(size
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The seqStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence at the same index in the sequences list from a previous call to this method. The sequence length is the number of elements in `sequenceData`. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequenceData`: the collection of indexes representing the sequence of samples.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequenceData`: the collection of indexes representing the sequence of samples.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -161,10 +161,10 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatchOfSequen
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of sequences is the number of elements in the outer list of `batchOfSequences`. The length of each sequence is the number of elements of the corresponding sequence in the inner list of `batchOfSequences`. Each sequence in `batchOfSequences` is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
@@ -174,11 +174,11 @@ template <typename ElementType> static ValuePtr CNTK::Value::CreateBatchOfSequen
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of sequences is the number of elements in the outer list of `batchOfSequences`. The length of each sequence is the number of elements of the corresponding sequence in the inner list of `batchOfSequences`. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `vector` represents a collection of sequences with variable length, and the inner `vector` represents each individual sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ## Create a Value using sparse CSC input
@@ -192,103 +192,103 @@ A detailed description of the CSC format can be found [here](http://docs.nvidia.
 
 ***
 ```cpp
-template <typename ElementType> static ValuePtr  CNTK::Value::CreateSequence(const NDShape& sampleShape, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, const DeviceDescriptor& device, bool readOnly = false
+template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(const NDShape& sampleShape, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, const DeviceDescriptor& device, bool readOnly = false
 ```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `numNonZeroValues`: the number of nonzero values in the sparse matrix.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `numNonZeroValues`: the number of nonzero values in the sparse matrix.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
-template <typename ElementType> static ValuePtr  CNTK::Value::CreateSequence(const NDShape& sampleShape, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, bool sequenceStartFlag, const DeviceDescriptor& device, bool readOnly = false
+template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(const NDShape& sampleShape, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, bool sequenceStartFlag, const DeviceDescriptor& device, bool readOnly = false
 ```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `numNonZeroValues`: the number of nonzero values in the sparse matrix.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `numNonZeroValues`: the number of nonzero values in the sparse matrix.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
-template <typename ElementType> static ValuePtr  CNTK::Value::CreateSequence(size_t dimension, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, const DeviceDescriptor& device, bool readOnly = false
+template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(size_t dimension, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, const DeviceDescriptor& device, bool readOnly = false
 ```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `numNonZeroValues`: the number of nonzero values in the sparse matrix.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `numNonZeroValues`: the number of nonzero values in the sparse matrix.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
-template <typename ElementType> static ValuePtr  CNTK::Value::CreateSequence(size_t dimension, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, bool sequenceStartFlag, const DeviceDescriptor& device, bool readOnly = false
+template <typename ElementType> static ValuePtr CNTK::Value::CreateSequence(size_t dimension, size_t sequenceLength, const SparseIndexType* colStarts, const SparseIndexType* rowIndices, const ElementType* nonZeroValues, size_t numNonZeroValues, bool sequenceStartFlag, const DeviceDescriptor& device, bool readOnly = false
 ```
 
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `numNonZeroValues`: the number of nonzero values in the sparse matrix.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `numNonZeroValues`: the number of nonzero values in the sparse matrix.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ## Create a Value from NDArrayView
 
 ***
 ```cpp
-static ValuePtr  CNTK::Value::Create(const NDShape& sampleShape, const std::vector<NDArrayViewPtr>& sequences, const DeviceDescriptor& device, bool readOnly = false
+static ValuePtr CNTK::Value::Create(const NDShape& sampleShape, const std::vector<NDArrayViewPtr>& sequences, const DeviceDescriptor& device, bool readOnly = false
 ```
 
 Creates a new Value object based on a collection of NDArrayViews. Each sequence in `sequences` is a new sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value being created.
-*  `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value being created.
+* `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cpp
-static ValuePtr  CNTK::Value::Create(const NDShape& sampleShape, const std::vector<NDArrayViewPtr>& sequences, const std::vector<bool>& sequenceStartFlags, const DeviceDescriptor& device, bool readOnly, bool createNewCopy
+static ValuePtr CNTK::Value::Create(const NDShape& sampleShape, const std::vector<NDArrayViewPtr>& sequences, const std::vector<bool>& sequenceStartFlags, const DeviceDescriptor& device, bool readOnly, bool createNewCopy
 ```
 
 Creates a new Value object based on a collection of NDArrayViews. The sequenceStartFlags specifies whether a sequence is a new sequence or continuation of a previous sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value being created.
-*  `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `sequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value being created.
+* `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `sequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ## Copy data from a Value object
@@ -301,8 +301,8 @@ template <typename ElementType> void CNTK::Value::CopyVariableValueTo(const Vari
 Copies the data stored in the Value into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `vector<ElementType>`, contains a variable number of samples. Each sample consists of a fixed number of elements with type of `ElementType`. The number of elements of a sample is determined by the shape of `outputVariable`. The shape of the variable should match the shape of the Value. `ElementType` is the data type of the created Value object. Currently, `float` and `double` are supported.
 
 Parameters:
-*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
-*  `sequences`: the output buffer used to store the data copied from the Value.
+* `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
+* `sequences`: the output buffer used to store the data copied from the Value.
 
 ***
 ```cpp
@@ -312,8 +312,8 @@ void CNTK::Value::CopyVariableValueTo(const Variable& outputVariable, std::vecto
 Copies the data stored in the Value object into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `vector<size_t>`, contains a variable number of samples. Each sample is represented by an index pointing to the non-zero value in the one-hot vector. The dimension size of the one-hot vector should match that defined in the `outputVariable`.
 
 Parameters:
-*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
-*  `sequences`: the output buffer used to store the data copied from the Value.
+* `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the `sequences`.
+* `sequences`: the output buffer used to store the data copied from the Value.
 
 ***
 ```cpp
@@ -323,12 +323,12 @@ template <typename ElementType> void CopyVariableValueTo(const Variable& outputV
 Copy the data stored in the Value object to the buffers representing a sequence in CSC sparse format. The sequence buffer will be resized if necessary. The Value should have the same tensor shape as outputVariable. On return, `sequenceLength` is set to the length of the sequence stored in the Value, and `colStarts`, `rowIndices` and `nonZeroValues` contain the data of column start indexes, row indexes and non-zero values, and `numNonZeroValues` is set to number of non-zero values contained in `this` Value.
 
 Parameters:
-*  `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
-*  `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
-*  `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
-*  `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
-*  `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
-*  `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
+* `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
+* `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
+* `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
+* `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
+* `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
+* `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
 
 ***
 ## Helper functions to manipulate the Function to be evaluated
