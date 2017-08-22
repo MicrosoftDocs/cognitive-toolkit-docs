@@ -185,7 +185,7 @@ To use a different model as base model you need to adapt the following parameter
 
 ```
 # define base model location and characteristics
-_base_model_file = os.path.join(base_folder, "..", "PretrainedModels", "ResNet_18.model")
+_base_model_file = os.path.join(base_folder, "..", "..", "..", "PretrainedModels", "ResNet_18.model")
 _feature_node_name = "features"
 _last_hidden_node_name = "z.x"
 _image_height = 224
