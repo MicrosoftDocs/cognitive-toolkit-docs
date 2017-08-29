@@ -2,7 +2,7 @@
 title:   CNTK Library Eval C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/22/2017
+ms.date:   08/03/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -93,9 +93,9 @@ public void Evaluate(IDictionary<Variable, Value> inputs, IDictionary<Variable, 
 Evaluates the Function using the specified input. It computes the outputs of the Function based on the [Values](#class-value) provided for each input variable specified in the `inputs` dictionary. The outputs are stored in the output Values corresponding to the output variables in the `outputs` dictionary.
 
 Parameters:
-*  `inputs`: the input variables and their values of the Function.
-*  `outputs`: output values for each output variable. The caller may specify the Value object for storing the output or pass `null` in which case the method allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a `null` Value was specified, and the parameter `createPersistentOutputValues` is not specified or is set to `false`, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call. If it needs to be accessed later, you should specify `createPersistentOutputValues` to `true`, or explicitly `DeepClone` the temporary Value object.
-*  `computeDevice`: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
+* `inputs`: the input variables and their values of the Function.
+* `outputs`: output values for each output variable. The caller may specify the Value object for storing the output or pass `null` in which case the method allocates the storage for the output results. In both cases, on return the Value object contains the result of the corresponding output of the Function. If a `null` Value was specified, and the parameter `createPersistentOutputValues` is not specified or is set to `false`, the Value object returned by the method is temporary and only guaranteed to be valid until the next Forward/Backward call. If it needs to be accessed later, you should specify `createPersistentOutputValues` to `true`, or explicitly `DeepClone` the temporary Value object.
+* `computeDevice`: the device on which the computation is executed. It should be aligned with the device on which the model is loaded.
 * `createPersistentOutputValues`: Only relevant if a `null` Value was specified in outputs. If it is set to `true`, the method will create persistent Value objects, otherwise the Value objects are temporary and are only valid until the next Forward/Backward call.
 
 ***
@@ -106,7 +106,7 @@ public Function Clone(ParameterCloningMethod parameterCloneMethod = ParameterClo
 Clones `this` Function.
 
 Parameters:
-*  `parameterCloneMethod`: specifies how the parameters of Function are cloned: `ParameterCloningMethod.Share` - Parameters are shared between the Function being cloned and the new clone. This value should be used if the cloned Function is used for concurrent evaluation. `ParameterCloningMethod.Clone` - New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned. `ParameterCloningMethod.Freeze` - Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor). ParameterCloningMethod is defined [here](#enum-parametercloningmethod).
+* `parameterCloneMethod`: specifies how the parameters of Function are cloned: `ParameterCloningMethod.Share` - Parameters are shared between the Function being cloned and the new clone. This value should be used if the cloned Function is used for concurrent evaluation. `ParameterCloningMethod.Clone` - New learnable Parameters are created and initialized with the current values of the corresponding Parameters of the Function being cloned. `ParameterCloningMethod.Freeze` - Parameters are cloned and made immutable; i.e. Constants in the new clone (e.g. for use as a fixed feature extractor). ParameterCloningMethod is defined [here](#enum-parametercloningmethod).
 
 ***
 ```cs
@@ -116,8 +116,8 @@ public Function FindByName(string name, bool nestedSearchInsideBlockFunction)
 Finds a function with the given name in the Function graph underlying the Function. If more than one function with the same name exists, an exception is thrown. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
 Parameters:
-*  `name`: the name to be searched for.
-*  `nestedSearchInsideBlockFunction`: if it is true, all functions inside block functions are also examined.
+* `name`: the name to be searched for.
+* `nestedSearchInsideBlockFunction`: if it is true, all functions inside block functions are also examined.
 
 ***
 ```cs
@@ -127,8 +127,8 @@ public IList<Function> FindAllWithName(string name, bool nestedSearchInsideBlock
 Finds a list of functions with the given name in the Function graph underlying the Function. If nestedSearchInsideBlockFunction is true, search all functions inside block functions too.
 
 Parameters:
-*  `name`: the name to be searched for.
-*  `nestedSearchInsideBlockFunction`: if it is true, all functions inside block functions are also examined.
+* `name`: the name to be searched for.
+* `nestedSearchInsideBlockFunction`: if it is true, all functions inside block functions are also examined.
 
 ***
 ```cs
@@ -138,8 +138,8 @@ public static Function Load(string modelFile, DeviceDescriptor computeDevice)
 Loads a Function from a model file.
 
 Parameters:
-*  `modelFile`: the path to the model file.
-*  `computeDevice`: the device on which the Function is loaded.
+* `modelFile`: the path to the model file.
+* `computeDevice`: the device on which the Function is loaded.
 
 ***
 ```cs
@@ -149,8 +149,8 @@ public static Function Load(byte[] modelBuffer, DeviceDescriptor computeDevice)
 Loads a Function from a memory buffer representing a model.
 
 Parameters:
-*  `modelBuffer`: the byte array contains the serialized model content.
-*  `computeDevice`: the device on which the Function is loaded.
+* `modelBuffer`: the byte array contains the serialized model content.
+* `computeDevice`: the device on which the Function is loaded.
 
 ***
 ```cs
@@ -159,8 +159,8 @@ public static Function Combine(IEnumerable<Variable> operands)
 
  Creates a new Function instance which combines the outputs of the specified list of 'operands' of Functions. The 'Outputs' of the new 'Function' are union of the 'Outputs' of each of the specified 'operands' Functions. As an example, when creating a classification model, typically the CrossEntropy loss Function and the ClassificationError Function comprise the roots of the computation graph which can be "Combine"d to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
 
-Parameters:
-*  `operands`: the list of the functions or variables that should be included in the Outputs of the new function.
+Parameter:
+* `operands`: the list of the functions or variables that should be included in the Outputs of the new function.
 
 ***
 ```cs
@@ -170,8 +170,8 @@ public static Function AsComposite(Function rootFunction, string name = "")
 Creates a composite Function that has the specified rootFunction as its root. The composite denotes a higher-level Function encapsulating the entire graph of Functions underlying the specified rootFunction.
 
 Parameters:
-*  `rootFunction`: the root of the composite function to be created.
-*  `name`: the name of the composite function to be created.
+* `rootFunction`: the root of the composite function to be created.
+* `name`: the name of the composite function to be created.
 
 ***
 ```cs
@@ -181,8 +181,8 @@ public static Function Alias(Variable operand, string name = "")
 Creates a new Function instance which is just an alias of the specified operand.
 
 Parameters:
-*  `operand`: the function or variable that the alias function is created for.
-*  `name`: the name of the new function to be created.
+* `operand`: the function or variable that the alias function is created for.
+* `name`: the name of the new function to be created.
 
 ## class Value
 A `Value` is a multi-dimensional array with an optional mask and is the actual data fed into or produced from a computation.
@@ -198,10 +198,10 @@ public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, De
 Creates a new Value object containing a batch of samples. The number of samples in the batch is the number of elements in `batch` divided by the size of `shape` (A runtime error occurs if the remainder is not zero). The created Value object contains a copy of the specified data in `batch`.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value object.
-*  `batch`: the data to be contained in the Value object.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value object is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value object.
+* `batch`: the data to be contained in the Value object.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -211,10 +211,10 @@ public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequen
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified data in `sequence`. The sequence length is the number of elements in `sequence` divided by the size of `shape` (A runtime error occurs if the remainder is not zero). The created sequence is a new sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `sequence`: the data to be contained in the Value.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `sequence`: the data to be contained in the Value.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -224,11 +224,11 @@ public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequen
 Creates a new Value object containing a sequence of samples. The created Value object contains a copy of the specified `sequence` data. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. The sequence length is the number of elements in `sequence` divided by the size of `shape` (A runtime error occurs if the remainder is not zero).
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `sequence`: the data to be contained in the Value.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `sequence`: the data to be contained in the Value.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -238,10 +238,10 @@ public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<I
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in `batchOfSequences`. The number of sequences in the batch is the size of `batchOfSequences`. The length of each sequence is the number of elements in the corresponding sequence of `batchOfSequences` divided by the size of `shape` (A runtime error occurs if the remainder is not zero). Each sequence in `batchOfSequences` is a new sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `batchOfSequences`: the data to be stored in the Value. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
-*  `device`: on which device the Value should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `batchOfSequences`: the data to be stored in the Value. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
+* `device`: on which device the Value should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -251,11 +251,11 @@ public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<I
 Creates a new Value object containing a batch of variable length sequences. The created Value object contains a copy of the specified data in `batchOfSequences`. The number of sequences in the batch is the size of `batchOfSequences`. The length of each sequence is the number of elements in the corresponding sequence of `batchOfSequences` divided by the size of `shape` (A runtime error occurs if the remainder is not zero).
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value.
-*  `batchOfSequences`: the data to be stored in the Value. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value.
+* `batchOfSequences`: the data to be stored in the Value. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 
 ***
@@ -269,11 +269,11 @@ public static Value CreateBatch<T>(int dimension, IEnumerable<int> batch, Device
 Creates a new Value object containing a batch of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of samples in the batch is the number of elements in `batch`.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batch`: the collection of indexes representing the batch of samples.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batch`: the collection of indexes representing the batch of samples.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -283,11 +283,11 @@ public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, 
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The sequence length is the number of elements in `sequence`. The created sequence is a new sequence.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequence`: the collection of indexes representing the sequence of samples.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequence`: the collection of indexes representing the sequence of samples.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -297,12 +297,12 @@ public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, 
 Creates a new Value object containing a sequence of samples. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method. The sequence length is the number of elements in `sequence`.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `sequence`: the collection of indexes representing the sequence of samples.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the size of dimension of the one-hot vector.
+* `sequence`: the collection of indexes representing the sequence of samples.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -312,11 +312,11 @@ public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumer
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of sequences is the number of elements in the outer collection of `batchOfSequences`. The length of each sequence is the number of elements of the corresponding sequence in the collection list of `batchOfSequences`. Each sequence in `batchOfSequences` is a new sequence.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -326,12 +326,12 @@ public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumer
 Creates a new Value object containing a batch of variable length sequences. Each sample is represented by an index value that points to the non-zero value in the one-hot vector of `dimension` elements. The number of sequences is the number of elements in the outer collection of `batchOfSequences`. The length of each sequence is the number of elements of the corresponding sequence in the inner collection of `batchOfSequences`.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the size of dimension of the one-hot vector.
-*  `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the size of dimension of the one-hot vector.
+* `batchOfSequences`: the collection of indexes representing sequences of samples. The outer `IEnumerable` represents a collection of sequences with variable length, and the inner `IEnumerable` represents each individual sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `batchOfSequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ### The following methods create a Value object using sparse input.
@@ -350,14 +350,14 @@ public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, i
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -367,15 +367,15 @@ public static Value CreateSequence<T>(NDShape sampleShape, int sequenceLength, i
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence from a previous call to this method.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `sampleShape`: the tensor shape of the Value. For sparse input, the tensor shape leading dimensionality must be the same as the total size of the tensor shape.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -385,14 +385,14 @@ public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] c
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The created sequence is a new sequence.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the number of columns in the sparse matrix.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the number of columns in the sparse matrix.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -402,15 +402,15 @@ public static Value CreateSequence<T>(int dimension, int sequenceLength, int[] c
 Creates a new Value object containing a sequence of samples using CSC sparse input format. The sequence length is the number of rows of the sparse matrix. The sequenceStartFlag specifies whether this sequence is a new sequence or continuation of a previous sequence.
 
 Parameters:
-*  `T`: data type of the created Value object. Currently, `float` and `double` are supported.
-*  `dimension`: the number of columns in the sparse matrix.
-*  `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
-*  `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `T`: data type of the created Value object. Currently, `float` and `double` are supported.
+* `dimension`: the number of columns in the sparse matrix.
+* `sequenceLength`: the sequence length, which is also the number of rows in the sparse matrix.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix.
+* `sequenceStartFlag`: `true` indicates that it is a new sequence. `false` means a continuation of a previous sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ### The following methods create a Value object from NDArrayView.
@@ -423,10 +423,10 @@ public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequenc
 Creates a new Value object based on a collection of NDArrayViews. Each sequence in `sequences` is a new sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value being created.
-*  `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value being created.
+* `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -436,11 +436,11 @@ public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequenc
 Creates a new Value object based on a collection of NDArrayViews. The sequenceStartFlags specifies whether a sequence is a new sequence or continuation of a previous sequence.
 
 Parameters:
-*  `sampleShape`: the tensor shape of the Value being created.
-*  `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
-*  `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `sequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
-*  `device`: on which device the Value object should be created.
-*  `readOnly`: the Value is read-only if this flag is `true`.
+* `sampleShape`: the tensor shape of the Value being created.
+* `sequences`: a collection of sequences represented by NDArrayView. Each NDArrayView represents a sequence.
+* `sequenceStartFlags`: A collection of boolean values. Each element represents whether the corresponding sequence in `sequences` is a new sequence (in case of `true`) or a continuation of a previous sequence (in case of `false`).
+* `device`: on which device the Value object should be created.
+* `readOnly`: the Value is read-only if this flag is `true`.
 
 ***
 ### A Value object contains the following properties and methods.
@@ -516,7 +516,7 @@ public void CopyFrom(Value Source)
 Copies the contents of `source` to the Value. The shapes of the `Source`'s data and mask must be identical to `this` Value's data and mask.
 
 Parameter:
-*  `Source`: The source object from which the Value is copied.
+* `Source`: The source object from which the Value is copied.
 
 ***
 ```cs
@@ -533,7 +533,7 @@ public Value DeepClone(bool readOnly)
 Creates a new Value with newly allocated storage on the same device as `this` Value and copies `this` Value's contents into the newly allocated Value.
 
 Parameter:
-*  `readOnly`: the new Value object is read-only if this flag is `true`.
+* `readOnly`: the new Value object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -542,7 +542,7 @@ public Value Alias(bool readOnly)
 
 Creates a new Value which is an alias of `this` Value.
 Parameter:
-*  `readOnly`: the new Value object is read-only if this flag is `true`.
+* `readOnly`: the new Value object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -552,7 +552,7 @@ public IList<IList<T>> GetDenseData<T>(Variable outputVariable)
 Gets the data stored in the Value object as a list of sequences with variable length in dense format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<T>, contains a variable number of samples. Each sample consists of a fixed number of elements with type of 'T'. The number of elements is determined by the shape of outputVariable. The number of samples is the count of elements in IList<T> divided by the count of elements of the sample.
 
 Parameter:
-*  `outputVariable`: The variable that the Value denotes to. The shape of the variable should match the shape of the Value.
+* `outputVariable`: The variable that the Value denotes to. The shape of the variable should match the shape of the Value.
 
 ***
 ```cs
@@ -562,7 +562,22 @@ public IList<IList<int>> GetOneHotData(Variable outputVariable)
 Gets the data stored in the Value object as a list of sequences with variable length in one-hot vector format. This method returns an IList<IList<T>>. Each element of the outer list represents a sequence. Each sequence, represented by IList<int>, contains a variable number of samples. Each sample is represented by an index to the one-hot vector. The number of samples is the count of elements in IList<int>.
 
 Parameter:
-*  `outputVariable`: The variable that the Value denotes to. The size of the one-hot vector should match that defined in the variable.
+* `outputVariable`: The variable that the Value denotes to. The size of the one-hot vector should match that defined in the variable.
+
+***
+```cs
+public void GetSparseData<T>(Variable outputVariable, out int sequenceLength, out IList<int> colStarts, out IList<int> rowIndices, out IList<T> nonZeroValues, out int numNonZeroValues)
+```
+
+Copy the data stored in the Value object to the buffers representing a sequence in CSC sparse format. The sequence buffer will be resized if necessary. The Value should have the same tensor shape as outputVariable. On return, `sequenceLength` is set to the length of the sequence stored in the Value, and `colStarts`, `rowIndices` and `nonZeroValues` contain the data of column start indexes, row indexes and non-zero values, and `numNonZeroValues` is set to number of non-zero values contained in `this` Value.
+
+Parameters:
+* `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
+* `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
+* `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
+* `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
+* `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
+* `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
 
 ***
 ### The following methods will be deprecated soon. Please use GetDenseData() and GetOneHotData() described above.
@@ -575,8 +590,8 @@ public void CopyVariableValueTo<T>(Variable outputVariable, List<List<T>> sequen
 Copies the data stored in the Value into the buffer provided by `sequences`. The `sequences` is a list of sequences with variable length. The number of items contained in the outer list of `sequences` is the number of sequences in the Value. Each element of the outer list represents a sequence. Each sequence, represented by `List<T>`, contains a variable number of samples. Each sample consists of a fixed number of elements with type of `T`. The number of elements of a sample is determined by the shape of `outputVariable`. The shape of the variable should match the shape of the Value.
 
 Parameters:
-*  `outputVariable`: denotes the shape and dynamic axes when copying data from the Value to the `sequences`.
-*  `sequences`: the output buffer used to store the data copied from the Value.
+* `outputVariable`: denotes the shape and dynamic axes when copying data from the Value to the `sequences`.
+* `sequences`: the output buffer used to store the data copied from the Value.
 
 ***
 ```cs
@@ -712,7 +727,7 @@ public static DeviceDescriptor GPUDevice(int deviceId)
 Gets the DeviceDescriptor of the GPU device on the local system with the specified CUDA device ID.
 
 Parameter:
-*  `deviceId`: the CUDA device ID.
+* `deviceId`: the CUDA device ID.
 
 ***
 ```cs
@@ -738,9 +753,9 @@ public NDShape(int numAxes, int dimension)
 
 Constructs a NDShape instance with the specified rank and dimension size. Each axis has the same dimensionality.
 
-Parameter:
-*  `numAxes`: the number of axes of the shape.
-*  `dimension`: the dimension size, applied to each axis.
+Parameters:
+* `numAxes`: the number of axes of the shape.
+* `dimension`: the dimension size, applied to each axis.
 
 ***
 ```cs
@@ -750,7 +765,7 @@ public NDShape(int numAxes)
 Constructs a NDShape instance with the specified rank. The dimensionality in each axis is `NDShape.InferredDimension`.
 
 Parameter:
-*  `numAxes`: the number of axes of the shape.
+* `numAxes`: the number of axes of the shape.
 
 ***
 ```cs
@@ -759,7 +774,7 @@ public static NDShape CreateNDShape(IEnumerable<int> dimensions)
 
 Creates a NDShape instance with specified dimensions.
 Parameter:
-*  `dimensions`: the dimension size of each axis.
+* `dimensions`: the dimension size of each axis.
 
 ***
 ```cs
@@ -837,11 +852,11 @@ public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor devi
 
 Constructs a NDArrayView with the specified 'dataBuffer' in dense format as the backing storage on the specified device.
 
-Parameter:
-*  `viewShape`: the shape of the NDArrayView being created.
-*  `dataBuffer`: the data values contained in the NDArrayView. The 'dataBuffer' must be at least as large as the total size of the specified 'viewShape' and must outlive the created NDArrayView object.
-*  `device`: on which device the NDArrayView object should be created.
-*  `readOnly`: the NDArrayView object is read-only if this flag is `true`.
+Parameters:
+* `viewShape`: the shape of the NDArrayView being created.
+* `dataBuffer`: the data values contained in the NDArrayView. The 'dataBuffer' must be at least as large as the total size of the specified 'viewShape' and must outlive the created NDArrayView object.
+* `device`: on which device the NDArrayView object should be created.
+* `readOnly`: the NDArrayView object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -853,13 +868,13 @@ public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[
 
 Constructs a NDArrayView with the specified storage in sparse CSC format on the specified device. The specified sparse data must outlive the created NDArrayView object.
 
-Parameter:
-*  `viewShape`: the shape of the NDArrayView being created.
-*  `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
-*  `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
-*  `nonZeroValues`: the array that holds all nonzero values in the sparse matrix. The specified sparse data must outlive the created NDArrayView object.
-*  `device`: on which device the NDArrayView object should be created.
-*  `readOnly`: the NDArrayView object is read-only if this flag is `true`.
+Parameters:
+* `viewShape`: the shape of the NDArrayView being created.
+* `colStarts`: the array holds indices for each column into the arrays `rowIndices` and `nonZeroValues`.
+* `rowIndices`: the array that contains the row indices of the corresponding elements in array `nonZeroValues`.
+* `nonZeroValues`: the array that holds all nonzero values in the sparse matrix. The specified sparse data must outlive the created NDArrayView object.
+* `device`: on which device the NDArrayView object should be created.
+* `readOnly`: the NDArrayView object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -917,7 +932,7 @@ public NDArrayView DeepClone(bool readOnly)
 Creates a new NDArrayView with newly allocated storage on the same device as `this` view and copies `this` view's contents into the newly allocated view.
 
 Parameter:
-*  `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
+* `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -926,9 +941,9 @@ public NDArrayView DeepClone(DeviceDescriptor device, bool readOnly)
 
 Creates a new NDArrayView with newly allocated storage on the specified device and copies `this` view's contents into the newly allocated view.
 
-Parameter:
-*  `device`: on which device the new NDArrayView object should be created.
-*  `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
+Parameters:
+* `device`: on which device the new NDArrayView object should be created.
+* `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -938,7 +953,7 @@ public NDArrayView Alias(bool readOnly)
 Creates a new NDArrayView which is an alias of `this` view; i.e. a new view of the same shape as `this` over the same underlying data.
 
 Parameter:
-*  `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
+* `readOnly`: the new NDArrayView object is read-only if this flag is `true`.
 
 ***
 ```cs
@@ -948,7 +963,7 @@ public NDArrayView AsShape(NDShape newShape)
 Creates a new NDArrayView which is an alias of `this` view but with a new shape.
 
 Parameter:
-*  `newShape`: the shape of the new NDArrayView object.
+* `newShape`: the shape of the new NDArrayView object.
 
 ***
 ```cs
@@ -958,7 +973,7 @@ public void CopyFrom(NDArrayView source)
 Copies the contents of the 'source' NDArrayView to `this` view. The shapes of the 'source' view and `this` view must be identical.
 
 Parameter:
-*  `source`: the source NDArrayView whose content is copied to `this` view.
+* `source`: the source NDArrayView whose content is copied to `this` view.
 
 ***
 ```cs
@@ -968,7 +983,113 @@ public void ChangeDevice(DeviceDescriptor device)
 Changes the device of the NDArrayView to the specified device.
 
 Parameter:
-*  `device`: the target device of the NDArrayView object.
+* `device`: the target device of the NDArrayView object.
+
+## class NDMask
+Denotes a multi-dimensional mask used for specifying specific sections of a NDArrayView object as masked/invalid. This type denotes a view and there may be multiple simultaneous views of the data underlying a NDMask instance.
+
+***
+```cs
+public NDMask(NDShape shape, DeviceDescriptor device)
+```
+
+Construct a new Mask object of specified shape on the specified device.
+
+Parameters:
+* `shape`: the shape of the NDMask object.
+* `device`: the target device of the MDMask object.
+
+***
+```cs
+public int MaskedCount { get; }
+```
+
+The number of masked/invalid values.
+
+***
+```cs
+public int Device { get; }
+```
+
+The descriptor of the device that the mask resides on
+
+***
+```cs
+public int Shape { get; }
+```
+
+The shape of the mask.
+
+***
+```cs
+public void InvalidateSection(IEnumerable<int> sectionOffset, NDShape sectionShape)
+```
+
+Mask the specified sub-section as invalid.
+
+Parameters:
+* `sectionOffset`: A list specifying start positions of the section that should be masked as invalid.
+* `sectionShape`: The shape describes the section that should be masked as invalid.
+
+***
+```cs
+public void MarkSequenceBegin(IEnumerable<int> offset)
+```
+Mark the specified position as sequence begin.
+
+Parameter:
+* `sectionOffset`: A list specifying start positions in the mask that should be masked as sequence begin.
+
+***
+```cs
+public void MarkSequenceBegin(IEnumerable<int> offset, NDShape sectionShape)
+```
+Mark the specified sub-section as sequence begin.
+
+Parameters:
+* `offset`: A list specifying start positions of the section that should be masked as sequence begin.
+* `sectionShape`: The shape describes the section that should be masked as sequence begin.
+
+***
+```cs
+public void Clear()
+```
+Clear the mask. All currently values masked as invalid are set to valid.
+
+***
+```cs
+public NDMask DeepClone(DeviceDescriptor device)
+```
+
+Creates a new NDMask with newly allocated storage on the specified device and copies `this` mask's contents into the newly allocated view.
+
+Parameter:
+* `device`: the target device of the MDMask object.
+
+***
+```cs
+public NDMask DeepClone()
+```
+
+Creates a new NDMask with newly allocated storage on the same device as `this` mask and copies `this` mask's contents into the newly allocated mask.
+
+***
+```cs
+public NDMask Alias()
+```
+
+Creates a new NDMask which is an alias of `this` mask.
+
+***
+```cs
+public void CopyFrom(NDMask source)
+```
+
+Copies the contents of the `source` NDMask to `this` mask. The shapes of the `source` mask and `this` mask must be identical.
+
+
+Parameter:
+* `source`: the source NDMask whose content is copied to `this` view.
 
 ## class Axis
 Denotes an Axis of a [`Variable`](#class-variable). Besides the static axes corresponding to each of the axes of the Variable's shape, Variables of kind 'Input' and any 'Output' Variables dependent on an 'Input' Variable also have 2 additional dynamic axes whose dimensions are known only when the Variable is bound to actual data during compute (viz. sequence axis and batch axis denoting the axis along which multiple sequences are batched)
