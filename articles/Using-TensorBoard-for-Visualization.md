@@ -19,10 +19,13 @@ ms.devlang:   brainscript, python
 * Record model graph.
 * Record arbitrary scalar values during training.
 * Automatically record the values of a loss function and error rate during training.
+* Record images
 
 ![CNTK model graph as displayed in TensorBoard.](./pictures/TensorBoard/tensorboard_graph.png)
 
 ![Loss and error rate logged from CNTK and displayed in TensorBoard.](./pictures/TensorBoard/tensorboard_scalars.png)
+
+![Images logged from CNTK and displayed in TensorBoard.](./pictures/TensorBoard/tensorboard_images.png)
 
 First, you need to instantiate a TensorBoardProgressWriter class by providing some of the following arguments:
 
@@ -51,6 +54,15 @@ The Trainer object will make sure to update the TensorBoardProgressWriter with t
     if minibatch_idx % 10000 == 0:
         for p in my_model.parameters:
             tensorboard_writer.write_value(p.uid + "/mean",  reduce_mean(p).eval(), minibatch_idx)
+```
+
+To record images, you need to call TensorBoardProgressWriter.write_image method() as shown below:
+```python
+     while sample_count < epoch_size:  # loop over minibatches in the epoch
+         data = reader_train.next_minibatch(min(minibatch_size, epoch_size - sample_count), input_map=input_map)  
+         output = trainer.train_minibatch(data, outputs=[input_var])  
+         sample_count += data[label_var].num_samples  
+         tensorboard_writer.write_image('training', output[1], sample_count)
 ```
 
 TensorBoard is not part of CNTK package and should be installed separately. After the installation, once your training job is started, you can launch TensorBoard to monitor its progress by running the following command:
