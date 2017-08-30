@@ -34,7 +34,16 @@ The usual steps for model evaluation using CNTK Library Managed API include:
 The CNTK Library Managed API is described in the [CNTK Library C#/.NET Managed API](./CNTK-Library-Managed-API.md) page.
 
 ### Evaluation of multiple requests in parallel
-CNTK also supports evaluating multiple requests in parallel. The [`EvaluateMultipleImagesInParallel()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
+CNTK supports evaluating multiple requests in parallel. Because running evaluation on the same model instance is not thread-safe, it is required first to create multiple model instances by calling Clone() with `ParameterCloningMethod.Share`, and then each thread uses a separate model instance for evaluation. The [`EvaluateMultipleImagesInParallelAsync()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) demonstrates how to evaluate concurrent requests using CNTK C#/.NET Managed API.
+
+### Run evaluation asynchronously
+CNTK C# API does not have an asynchronous method for Evaluate(), because the evaluation is a CPU-bound operation (Please refer to [this article] (https://blogs.msdn.microsoft.com/pfxteam/2012/03/24/should-i-expose-asynchronous-wrappers-for-synchronous-methods/) for detailed explanation). However, it is desired to run evaluation asynchronously in some use cases, e.g. offloading for responsiveness, we show in the example [`EvaluationSingleImageAsync()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) how to achieve that by using the extension method [`EvaluateAsync()`](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKExtensions.cs).
+
+### Evaluate intermediate layers
+CNTK C# API is able to evaluate an intermediate layer in a model graph. To that end, the desired layer can be found by its name, and the intermediate layer can be evaluated. The example [**EvaluateIntermediateLayer()**](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) in C# demonstrates how to evaluate an intermediate layer in a model.
+
+### Evaluate outputs from multiple nodes
+CNTK can evaluate multiple nodes in a model graph by combining their outputs into a single node. The example [**EvaluateCombinedOutputs()**](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) in C# demonstrates how to evaluate multiple outputs.
 
 ### C# Examples
 The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) shows how to evaluate a model in C# using CNTK Library NuGet packages. Please see the [Eval Examples](./CNTK-Eval-Examples.md) page for building and running examples.
@@ -56,7 +65,7 @@ The following steps describe how to use the C++ CNTK Library for model evaluatio
 5. Call `CNTK::Function::Evaluate()` for evaluation. The `Evaluate()` expects as input an unordered_map for input variables and input values, and an unordered_map for output variables and output values. The output value object could be `null` which means that CNTK Library allocates the actual storage for this output value. On return, the Value objects associated with the output variables contain the results of evaluation.
 6. Get output data from evaluation results. Use `CNTK::Value::CopyVariableValueTo()` to copy the data stored in the Value object into the buffer as a list of sequences with variable length of samples.
 
-For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`MultiThreadsEvaluationWithLoadModel()`]( https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/EvalMultithreads.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
+For concurrent evaluation of multiple requests, `CNTK::Function::Clone()` should be called before Evaluate(). The [`ParallelEvaluationExample()`]( https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples/CNTKLibraryCPPEvalCPUOnlyExamples.cpp) demonstrates how to evaluate multiple requests in parallel using CNTK C++ Library API.
 
 For details on C++ CNTK Library API for evaluation, please refer to the [CNTK Library C++ Evaluation Interface](./CNTK-Library-Native-Eval-Interface.md) page.
 
