@@ -1,6 +1,6 @@
 ---
 title:   Object  detection using Fast R-CNN
-author:    philippkranen
+author:    pkranen
 ms.author:   pkranen
 ms.date:   08/30/2017
 ms.custom:   cognitive-toolkit
