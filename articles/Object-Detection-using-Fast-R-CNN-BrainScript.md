@@ -2,7 +2,7 @@
 title:   Object  detection using Fast R-CNN
 author:    pkranen
 ms.author:   pkranen
-ms.date:   06/27/2017
+ms.date:   08/30/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -30,7 +30,7 @@ ms.devlang:   brainscript
 
 **This tutorial describes how to use CNTK Fast R-CNN with BrainScript and cntk.exe. Fast R-CNN using the CNTK Python API is described [here](./Object-Detection-using-Fast-R-CNN.md).**
 
-The above are examples images and object annotations for the grocery data set (left) and the Pascal VOC data set (right) used in this tutorial.
+The above are examples images and object annotations for the grocery data set (first image) and the Pascal VOC data set (second image) used in this tutorial.
 
 _Fast R-CNN_ is an object detection algorithm proposed by _Ross Girshick_ in 2015.
 The paper is accepted to ICCV 2015, and archived at https://arxiv.org/abs/1504.08083.
@@ -42,15 +42,15 @@ Additional material: a detailed tutorial for object detection using CNTK Fast R-
 
 ## Setup
 
-To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
+To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). Further you need to install a few additional packages. Go to the FastRCNN folder and run:
 
 ```
 pip install -r requirements.txt
 ```
 
 Known issue: to install scikit-learn you might have to run `conda install scikit-learn` if you use Anaconda Python.
-You will further need Scikit-Image and OpenCV to run these examples (and possibly numpy and scipy if your Python 3.4 package does not come with them).
-You need to download the corresponding wheel packages and install them manually. On Linux you can `conda install scikit-image opencv`.
+You will further need Scikit-Image and OpenCV to run these examples.
+Please download the corresponding wheel packages and install them manually. On Linux you can `conda install scikit-image opencv`.
 For Windows users, visit http://www.lfd.uci.edu/~gohlke/pythonlibs/, and download:
 
 * Python 3.4
@@ -60,14 +60,13 @@ For Windows users, visit http://www.lfd.uci.edu/~gohlke/pythonlibs/, and downloa
   * scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
   * opencv_python-3.2.0-cp35-cp35m-win_amd64.whl
 
-Once you download the respective wheel binaries, install them with (Python 3.5 analogously):
+Once you download the respective wheel binaries, install them with:
 
 ```
-pip install your_download_folder/scikit_image-0.12.3-cp34-cp34m-win_amd64.whl
+pip install your_download_folder/scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
 ```
 
-Remark 1: if you see the message _No module named past_ when running the scripts please execute `pip install future`.
-<br>Remark 2: If you have a Python 3.5 environment you need the corresponding _cp35_ wheels.
+[!NOTE]: if you see the message _No module named past_ when running the scripts please execute `pip install future`.
 
 This tutorial code assumes you are using 64bit version of Python, either 3.4 or 3.5 on Windows or 3.4 on Linux, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/utils)
 are prebuilt for those versions. If your task requires the use of a different Python version, please recompile these DLL files yourself in the correct environment (see [below](#pre-compiled-binaries-for-bounding-box-regression-and-non-maximum-suppression)).
@@ -81,7 +80,7 @@ The folder `Examples\Image\Detection\FastRCNN\BrainScript\fastRCNN\utils` contai
 * `git clone --recursive https://github.com/rbgirshick/fast-rcnn.git`
 * `cd $FRCN_ROOT/lib`
 * `make`
-  * Alternatively you can run `python setup.py build_ext --inplace`. On Windows you might have to comment out the extra compile args in lib/setup.py:
+  * Instead of `make` you can run `python setup.py build_ext --inplace` from the same folder. On Windows you might have to comment out the extra compile args in lib/setup.py:
 
   ```
   ext_modules = [
@@ -102,7 +101,7 @@ The folder `Examples\Image\Detection\FastRCNN\BrainScript\fastRCNN\utils` contai
 
 ### Example data and baseline model
 
-We use a pre-trained AlexNet model as the basis for Fast-R-CNN training. The pre-trained AlexNet is available at [https://www.cntk.ai/Models/AlexNet/AlexNet.model](https://www.cntk.ai/Models/AlexNet/AlexNet.model). Please store the model at `<cntkroot>/PretrainedModels`. To download the data please run 
+We use a pre-trained AlexNet model as the basis for Fast-R-CNN training. The pre-trained AlexNet is available at [https://www.cntk.ai/Models/AlexNet/AlexNet.model](https://www.cntk.ai/Models/AlexNet/AlexNet.model). Please store the model at `$CNTK_ROOT/PretrainedModels`. To download the data please run 
 
 ```
 python install_grocery.py
@@ -112,8 +111,8 @@ from the `Examples/Image/DataSets/Grocery` folder.
 
 ## Run the toy example
 
-In the toy example we train a CNTK Fast  R-CNN model to detect grocery items in a refrigerator.
-All required scripts are in `<cntkroot>/Examples/Image/Detection/FastRCNN/BrainScript`.
+In the toy example we train a CNTK Fast R-CNN model to detect grocery items in a refrigerator.
+All required scripts are in `$CNTK_ROOT/Examples/Image/Detection/FastRCNN/BrainScript`.
 
 ### Quick guide
 
@@ -159,7 +158,7 @@ To visualize the bounding boxes and predicted labels you can run `B3_VisualizeOu
 
 ### Step details
 
-__A1:__ The script first `A1_GenerateInputROIs.py` generates ROI candidates for each image using [selective search](#selective-search).
+__A1:__ The script `A1_GenerateInputROIs.py` first generates ROI candidates for each image using [selective search](#selective-search).
 It then stores them in a [CNTK Text Format](./BrainScript-CNTKTextFormat-Reader.md) as input for `cntk.exe`.
 Additionally the required CNTK input files for the images and the ground truth labels are generated.
 The script generates the following folders and files under the `FastRCNN` folder:
@@ -169,10 +168,9 @@ The script generates the following folders and files under the `FastRCNN` folder
     * `rois` - contains the raw ROI coordinates for each image stored in text files.
     * `cntkFiles` - contains the formatted CNTK input files for images (`train.txt` and `test.txt`), ROI coordinates (`xx.rois.txt`) and ROI labels (`xx.roilabels.txt`) for `train` and `test`. (Format details are provided [below](#cntk-input-file-format).)
 
-All parameters are contained in `PARAMETERS.py`, for example `cntk_nrRois = 2000` to set the number of ROIs used for training and testing. We describe parameters in the section [Parameters](#parameters) below.
+All parameters are contained in `PARAMETERS.py`, for example change `cntk_nrRois = 2000` to set the number of ROIs used for training and testing. We describe parameters in the section [Parameters](#parameters) below.
 
 __A2:__ The script `A2_RunWithBSModel.py` runs cntk using cntk.exe and a BrainScript config file ([configuration details](#cntk-configuration)).
-A script that uses the new CNTK Python API for Fast R-CNN training will be added soon.
 The trained model is stored in the folder `cntkFiles/Output` of the corresponding `proc` sub-folder.
 The trained model is tested separately on both the training set and the test set.
 During testing for each image and each corresponding ROI a label is predicted and stored in the files `test.z` and `train.z` in the `cntkFiles` folder.
@@ -198,7 +196,7 @@ Alternatively you can run using the CPU, which will however take _some_ time.
 
 You need the 2007 (trainval and test) and 2012 (trainval) data as well as the precomputed ROIs used in the original paper.
 You need to follow the folder structure described below.
-The scripts assume that the Pascal data resides in `<cntkroot>/Examples/Image/DataSets/Pascal`.
+The scripts assume that the Pascal data resides in `$CNTK_ROOT/Examples/Image/DataSets/Pascal`.
 If you are using a different folder please set `pascalDataDir` in `PARAMETERS.py` correspondingly.
 
 * Download and unpack the 2012 trainval data to `DataSets/Pascal/VOCdevkit2012`
@@ -361,9 +359,10 @@ The output shape (width:height) of the ROI pooling layer is set to `(6:6)` since
 pre-trained `fcLayers` from the AlexNet model expect. The output of the `fcLayers` is fed into a dense layer that
 predicts one value per label (`NumLabels`) for each ROI.
 
-The following six lines define the input: an image of size 1000 x 1000 x 3 (`$ImageH$:$ImageW$:$ImageC$`),
-ground truth labels for each ROI (`$NumLabels$:$NumTrainROIs$`)
-and four coordinates per ROI (`4:$NumTrainROIs$`) corresponding to (x, y, w, h), all relative with respect to the full width and height of the image.
+The following six lines define the input:
+* an image of size 1000 x 1000 x 3 (`$ImageH$:$ImageW$:$ImageC$`),
+* ground truth labels for each ROI (`$NumLabels$:$NumTrainROIs$`)
+* and four coordinates per ROI (`4:$NumTrainROIs$`) corresponding to (x, y, w, h), all relative with respect to the full width and height of the image.
 
 `z = model (features, rois)` feeds the input images and ROIs into the defined network model and assigns the output to `z`.
 Both the criterion (`CrossEntropyWithSoftmax`) and the error (`ClassificationError`) are specified with `axis = 1`
@@ -475,8 +474,8 @@ and then performing hierarchical clustering to combine segments from the same ob
 </p>
 
 To complement the detected ROIs from Selective Search, we add ROIs that uniform cover the image at different scales and aspect ratios.
-The image on the left shows an example output of Selective Search, where each possible object location is visualized by a green
-rectangle. ROIs that are too small, too big, etc. are discarded (middle) and finally ROIs that uniformly cover the image are added (right).
+The first image shows an example output of Selective Search, where each possible object location is visualized by a green
+rectangle. ROIs that are too small, too big, etc. are discarded (second image) and finally ROIs that uniformly cover the image are added (third image).
 These rectangles are then used as Regions-of-Interests (ROIs) in the R-CNN pipeline.
 
 The goal of ROI generation is to find a small set of ROIs which however tightly cover as many objects in the image as possible.
@@ -492,7 +491,7 @@ best cover the real locations of an object and discards all other ROIs. This is 
 ROI with highest confidence and removing all other ROIs which significantly overlap this ROI and are classified to be of
 the same class. The threshold for the overlap can be set in `PARAMETERS.py` ([details](#parameters)).
 
-Detection results before (left) and after (right) Non Maximum Suppression:
+Detection results before (first image) and after (second image) Non Maximum Suppression:
 <p align="center">
 <a target="_blank" href="./Tutorial_FastRCNN/nn_noNms4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_noNms4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="300"/></a>
 <a target="_blank" href="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="300"/></a>
