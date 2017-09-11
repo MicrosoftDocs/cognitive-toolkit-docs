@@ -1,12 +1,12 @@
 ---
 title:   Object  detection using Fast R-CNN
-author:    chrisbasoglu
-ms.author:   cbasoglu
-ms.date:   06/27/2017
+author:    pkranen
+ms.author:   pkranen
+ms.date:   08/30/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
-ms.devlang:   brainscript, python
+ms.devlang:   python
 ---
 
 # Object  detection using Fast R-CNN
@@ -16,7 +16,7 @@ ms.devlang:   brainscript, python
 - [Summary](#summary)
 - [Setup](#setup)
 - [Run the toy example](#run-the-toy-example)
-- [Run Pascal VOC](#run-pascal-voc)
+- [Train on Pascal VOC data](#train-on-pascal-voc)
 - [Train CNTK Fast R-CNN on your own data](#train-on-your-own-data)
 - [Technical details](#technical-details)
 - [Algorithm details](#algorithm-details)
@@ -28,7 +28,7 @@ ms.devlang:   brainscript, python
 <a target="_blank" href="./Tutorial_FastRCNN/bus_01.jpg"><img src="./Tutorial_FastRCNN/bus_01.jpg" alt="image" height="250"/></a>
 </p>
 
-**Fast R-CNN is now also supported in the CNTK Python API (see [A2_RunWithPyModel.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/A2_RunWithPyModel.py) and the description below).**
+This tutorial describes how to use Fast R-CNN in the CNTK Python API. Fast R-CNN using BrainScript and cnkt.exe is described [here](./Object-Detection-using-Fast-R-CNN-BrainScript.md).
 
 The above are examples images and object annotations for the grocery data set (left) and the Pascal VOC data set (right) used in this tutorial.
 
@@ -37,221 +37,85 @@ The paper is accepted to ICCV 2015, and archived at https://arxiv.org/abs/1504.0
 Fast R-CNN builds on previous work to efficiently classify object proposals using deep convolutional networks.
 Compared to previous work, Fast R-CNN employs a _region of interest pooling_ scheme that allows to reuse the computations from the convolutional layers.
 
-The following are the main resources for CNTK Fast R-CNN:
-
-|||
-|:-----------------|:---
-|Recipe            |[CNTK Python API](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN) (see `A2_RunWithPyModel.py`) or [BrainScript config file](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN) (see fastrcnn.cntk).
-|pre-trained models |Download pre-trained Fast R-CNN models for the [grocery](https://cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model) data or the [Pascal VOC](https://cntk.ai/Models/FRCN_Pascal/Fast-RCNN.model) data set.
-|Data              |[Example data](#example-data-and-baseline-model) (food items in a fridge) and [Pascal VOC data](#run-pascal-voc).
-|How to run        |Follow the description below.
-
-Additional material: a detailed tutorial for object detection using CNTK Fast R-CNN
-(including optional SVM training and publishing the trained model as a Rest API) can be found [here](https://github.com/Azure/ObjectDetectionUsingCntk).
-
 ## Setup
 
-To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). You need to work from your Python 3.4 environment (if you are using Anaconda Python type `activate cntk-py34` (from a standard command line, not PowerShell), assuming `cntk-py34` is your environment name). Further you need to install a few additional packages. From your Python 3.4 environment (64bit version assumed, Python 3.5 analogously), go to the FastRCNN folder and run:
+To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). Please install the following additional packages in your cntk Python environment
 
-```
-pip install -r requirements.txt
-```
+`pip install opencv-python easydict pyyaml dlib`
 
-Known issue: to install scikit-learn you might have to run `conda install scikit-learn` if you use Anaconda Python.
-You will further need Scikit-Image and OpenCV to run these examples (and possibly numpy and scipy if your Python 3.4 package does not come with them).
-You need to download the corresponding wheel packages and install them manually. On Linux you can `conda install scikit-image opencv`.
-For Windows users, visit http://www.lfd.uci.edu/~gohlke/pythonlibs/, and download:
+#### Pre-compiled binaries for bounding box regression and non maximum suppression
 
-* Python 3.4
-  * scikit_image-0.12.3-cp34-cp34m-win_amd64.whl
-  * opencv_python-3.1.0-cp34-cp34m-win_amd64.whl
-* Python 3.5
-  * scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
-  * opencv_python-3.2.0-cp35-cp35m-win_amd64.whl
+The folder `Examples\Image\Detection\utils\cython_modules` contains pre-compiled binaries that are required for running Fast R-CNN. The versions that are currently contained in the repository are Python 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following the steps described at
 
-Once you download the respective wheel binaries, install them with (Python 3.5 analogously):
+* Linux: [https://github.com/rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn)
+* Windows: [https://github.com/MrGF/py-faster-rcnn-windows](https://github.com/MrGF/py-faster-rcnn-windows)
 
-```
-pip install your_download_folder/scikit_image-0.12.3-cp34-cp34m-win_amd64.whl
-```
+Copy the generated `cython_bbox` and `cpu_nms` (and/or `gpu_nms`) binaries from `$FRCN_ROOT/lib/utils` to `$CNTK_ROOT/Examples/Image/Detection/utils/cython_modules`.
 
-Remark 1: if you see the message _No module named past_ when running the scripts please execute `pip install future`.
-<br>Remark 2: If you have a Python 3.5 environment you need the corresponding _cp35_ wheels.
+#### Example data and baseline model
 
-This tutorial code assumes you are using 64bit version of Python, either 3.4 or 3.5 on Windows or 3.4 on Linux, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Detection/FastRCNN/fastRCNN/utils)
-are prebuilt for those versions. If your task requires the use of a different Python version, please recompile these DLL files yourself in the correct environment (see [below](#pre-compiled-binaries-for-bounding-box-regression-and-non-maximum-suppression)).
-
-The tutorial further assumes that **the folder where cntk.exe resides is in your PATH environment variable**. (To add the folder to your PATH you can run the following command from a command line (assuming the folder where cntk.exe is on your machine is C:\src\CNTK\x64\Release): `set PATH=C:\src\CNTK\x64\Release;%PATH%`.)
-
-### Pre-compiled binaries for bounding box regression and non maximum suppression
-
-The folder `Examples\Image\Detection\FastRCNN\fastRCNN\utils` contains pre-compiled binaries that are required for running Fast R-CNN. They versions that are currently contained in the repository are Python 3.4 and 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following these steps:
-
-* `git clone --recursive https://github.com/rbgirshick/fast-rcnn.git`
-* `cd $FRCN_ROOT/lib`
-* `make`
-  * Alternatively you can run `python setup.py build_ext --inplace`. On Windows you might have to comment out the extra compile args in lib/setup.py:
-
-  ```
-  ext_modules = [
-    Extension(
-        "utils.cython_bbox",
-        ["utils/bbox.pyx"],
-        #extra_compile_args=["-Wno-cpp", "-Wno-unused-function"],
-    ),
-    Extension(
-        "utils.cython_nms",
-        ["utils/nms.pyx"],
-        #extra_compile_args=["-Wno-cpp", "-Wno-unused-function"],
-    )
-  ]
-  ```
-
-* copy the generated `cython_bbox` and `cython_nms` binaries from `$FRCN_ROOT/lib/utils` to `$CNTK_ROOT/Examples/Image/Detection/FastRCNN/fastRCNN/utils`.
-
-### Example data and baseline model
-
-We use a pre-trained AlexNet model as the basis for Fast-R-CNN training.
-Both the example dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the FastRCNN folder:
+We use a pre-trained AlexNet model as the basis for Fast-R-CNN training (for VGG or other base models see [Using a different base model](#using-a-different-base-model). Both the example dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the FastRCNN folder:
 
 ```
 python install_fastrcnn.py
 ```
 
+* Learn how to [use a different base model](#using-a-different-base-model)
+* Learn how to [run Fast R-CNN on Pascal VOC data](#train-on-pascal-voc)
+* Learn how to [run Fast R-CNN on your own data](#train-on-your-own-data)
+
 ## Run the toy example
 
-In the toy example we train a CNTK Fast  R-CNN model to detect grocery items in a refrigerator.
-All required scripts are in `<cntkroot>/Examples/Image/Detection/FastRCNN`.
+To train and evaluate Fast R-CNN run 
 
-### Quick guide
+`python run_fast_rcnn.py`
 
-To run the toy example, make sure that in `PARAMETERS.py` `dataset` is set to `"Grocery"`.
-
-* Run `A1_GenerateInputROIs.py` to generate the input ROIs for training and testing.
-* Run `A2_RunWithPyModel.py` to train a Fast R-CNN model using the CNTK Python API and compute test results.
-  * Alternatively run `A2_RunWithBSModel.py` to train and test using cntk.exe and BrainScript.
-  * Alternatively you can download the pre-trained CNTK Fast R-CNN model for the grocery example [here](https://cntk.ai/Models/FRCN_Grocery/Fast-RCNN.model). ([Details](#using-a-pre-trained-model))
-* Run `A3_ParseAndEvaluateOutput.py` to compute the mAP ([mean average precision](#map-mean-average-precision)) of the trained model.
-
-The output from script A3 should contain the following:
+The results for training with 2000 ROIs on Grocery using AlexNet as the base model should look similar to these:
 
 ```
-Evaluating detections
-AP for         avocado = 1.0000
-AP for          orange = 1.0000
-AP for          butter = 1.0000
-AP for       champagne = 1.0000
-AP for          eggBox = 0.7500
 AP for          gerkin = 1.0000
+AP for          butter = 1.0000
 AP for         joghurt = 1.0000
+AP for          eggBox = 1.0000
+AP for         mustard = 1.0000
+AP for       champagne = 1.0000
+AP for          orange = 1.0000
+AP for           water = 0.5000
+AP for         avocado = 1.0000
+AP for          tomato = 1.0000
+AP for          pepper = 1.0000
+AP for         tabasco = 1.0000
+AP for           onion = 1.0000
+AP for            milk = 1.0000
 AP for         ketchup = 0.6667
 AP for     orangeJuice = 1.0000
-AP for           onion = 1.0000
-AP for          pepper = 1.0000
-AP for          tomato = 0.7600
-AP for           water = 0.5000
-AP for            milk = 1.0000
-AP for         tabasco = 1.0000
-AP for         mustard = 1.0000
-Mean AP = 0.9173
-DONE.
+Mean AP = 0.9479
 ```
 
-To visualize the bounding boxes and predicted labels you can run `B3_VisualizeOutputROIs.py` (click on the images to enlarge):
-
-<p align="center">
-<a target="_blank" href="./Tutorial_FastRCNN/nn_0WIN_20160803_11_28_42_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_0WIN_20160803_11_28_42_Pro.jpg" alt="image" height="200"/></a>
-<a target="_blank" href="./Tutorial_FastRCNN/nn_1WIN_20160803_11_42_36_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_1WIN_20160803_11_42_36_Pro.jpg" alt="image" height="200"/></a>
-<a target="_blank" href="./Tutorial_FastRCNN/nn_2WIN_20160803_11_46_03_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_2WIN_20160803_11_46_03_Pro.jpg" alt="image" height="200"/></a>
-<a target="_blank" href="./Tutorial_FastRCNN/nn_3WIN_20160803_11_48_26_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_3WIN_20160803_11_48_26_Pro.jpg" alt="image" height="200"/></a>
-<a target="_blank" href="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg"><img src="./Tutorial_FastRCNN/nn_4WIN_20160803_12_37_07_Pro.jpg" alt="image" height="200"/></a>
-</p>
-
-### Step details
-
-__A1:__ The script first `A1_GenerateInputROIs.py` generates ROI candidates for each image using [selective search](#selective-search).
-It then stores them in a [CNTK Text Format](./BrainScript-CNTKTextFormat-Reader.md) as input for `cntk.exe`.
-Additionally the required CNTK input files for the images and the ground truth labels are generated.
-The script generates the following folders and files under the `FastRCNN` folder:
-
-* `proc` - root folder for generated content.
-  * `grocery_2000` - contains all generated folders and files for the `grocery` example using `2000` ROIs. If you run again with a different number of ROIs the folder name will change correspondingly.
-    * `rois` - contains the raw ROI coordinates for each image stored in text files.
-    * `cntkFiles` - contains the formatted CNTK input files for images (`train.txt` and `test.txt`), ROI coordinates (`xx.rois.txt`) and ROI labels (`xx.roilabels.txt`) for `train` and `test`. (Format details are provided [below](#cntk-input-file-format).)
-
-All parameters are contained in `PARAMETERS.py`, for example `cntk_nrRois = 2000` to set the number of ROIs used for training and testing. We describe parameters in the section [Parameters](#parameters) below.
-
-__A2:__ The script `A2_RunWithBSModel.py` runs cntk using cntk.exe and a BrainScript config file ([configuration details](#cntk-configuration)).
-A script that uses the new CNTK Python API for Fast R-CNN training will be added soon.
-The trained model is stored in the folder `cntkFiles/Output` of the corresponding `proc` sub-folder.
-The trained model is tested separately on both the training set and the test set.
-During testing for each image and each corresponding ROI a label is predicted and stored in the files `test.z` and `train.z` in the `cntkFiles` folder.
-
-__A3:__ The evaluation step parses the CNTK output and computes the [mAP](#map-mean-average-precision) comparing the predicted results with the ground truth annotations.
-[Non maximum suppression](#nms-non-maximum-suppression) is used to merge overlapping ROIs. You can set the threshold for non maximum suppression in `PARAMETERS.py` ([details](#parameters)).
-
-### Using a pre-trained model
-
-Download links for pre-trained models are provided at the top of this page.
-Store the model in the `cntkFiles/Output` folder under the corresponding proc sub-folder, for example `proc/grocery_2000/cntkFiles/Output` for the toy example.
-__Note:__ if you are using a pre-trained model you still need to run step A2 to compute the predicted labels, i.e. CNTK will skip the training and only run the testing.
-
-### Additional scripts
-
-There are three optional scripts you can run to visualize and analyze the data:
-
-* `B1_VisualizeInputROIs.py` visualizes the candidate input ROIs.
-* `B2_EvaluateInputROIs.py` computes the recall of the ground truth ROIs with respect to the candidate ROIs.
-* `B3_VisualizeOutputROIs.py` visualize the bounding boxes and predicted labels.
-
-## Run Pascal VOC
-
-The [Pascal VOC](http://host.robots.ox.ac.uk/pascal/VOC/) (PASCAL Visual Object Classes) data is a well known set of standardised images for object class recognition.
-Training or testing CNTK Fast R-CNN on the Pascal VOC data requires a GPU with at least 4GB of RAM.
-Alternatively you can run using the CPU, which will however take _some_ time.
-In this case we strongly recommend to download the pre-trained model (see [Using a pre-trained model](#using-a-pre-trained-model)).
-
-### Getting the Pascal VOC data
-
-You need the 2007 (trainval and test) and 2012 (trainval) data as well as the precomputed ROIs used in the original paper.
-You need to follow the folder structure described below.
-The scripts assume that the Pascal data resides in `<cntkroot>/Examples/Image/DataSets/Pascal`.
-If you are using a different folder please set `pascalDataDir` in `PARAMETERS.py` correspondingly.
-
-* Download and unpack the 2012 trainval data to `DataSets/Pascal/VOCdevkit2012`
-  * Website: [http://host.robots.ox.ac.uk/pascal/VOC/voc2012/](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)
-  * Devkit: [http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/VOCtrainval_11-May-2012.tar)
-* Download and unpack the 2007 trainval data to `DataSets/Pascal/VOCdevkit2007`
-  * Website: [http://host.robots.ox.ac.uk/pascal/VOC/voc2007/](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/)
-  * Devkit: [http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtrainval_06-Nov-2007.tar)
-* Download and unpack the 2007 test data into the same folder `DataSets/Pascal/VOCdevkit2007`
-  * [http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCtest_06-Nov-2007.tar)
-* Download and unpack the precomputed ROIs to `DataSets/Pascal/selective_search_data`
-  * [http://dl.dropboxusercontent.com/s/orrt7o6bp6ae0tc/selective_search_data.tgz?dl=0](http://dl.dropboxusercontent.com/s/orrt7o6bp6ae0tc/selective_search_data.tgz?dl=0)
-
-The `VOCdevkit2007` folder should look like this (similar for 2012):
+To visualize the predicted bounding boxes and labels on the images open `FastRCNN_config.py` from the `FastRCNN` folder and set 
 
 ```
-VOCdevkit2007/VOC2007
-VOCdevkit2007/VOC2007/Annotations
-VOCdevkit2007/VOC2007/ImageSets
-VOCdevkit2007/VOC2007/JPEGImages
+__C.VISUALIZE_RESULTS = True
 ```
 
-### Running CNTK on Pascal VOC
+The images will be saved into the `FastRCNN/Output/Grocery/` folder if you run `python run_fast_rcnn.py`.
 
-To run on the Pascal VOC data make sure that in `PARAMETERS.py` `dataset` is set to `"pascal"`.
+## Train on Pascal VOC
 
-* Run `A1_GenerateInputROIs.py` to generate the CNTK formatted input files for training and testing from the downloaded ROI data.
-* Run `A2_RunWithBSModel.py` to train a Fast R-CNN model and compute test results.
-  * If you downloaded the [pre-trained model](#using-a-pre-trained-model) you still need to run step A2 to compute the predicted labels.
-  To decrease the required time you can skip computing the predictions for the training data by setting `command = Train:WriteTest` (i.e. removing `WriteTrain`) in the `fastrcnn.cntk` file.
-* Run `A3_ParseAndEvaluateOutput.py` to compute the mAP ([mean average precision](#map-mean-average-precision)) of the trained model.
-  * Please note that this is work in progress and the results are preliminary as we are training new baseline models.
-  * Please make sure to have the latest version from CNTK master for the files
-  [fastRCNN/pascal_voc.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastRCNN/pascal_voc.py) and
-  [fastRCNN/voc_eval.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastRCNN/voc_eval.py)
-  to avoid encoding errors.
+To download the Pascal data and create the annotation files for Pascal in CNTK format run the following scripts:
+
+```
+python Examples/Image/DataSets/Pascal/install_pascalvoc.py
+python Examples/Image/DataSets/Pascal/mappings/create_mappings.py
+```
+
+Change the `dataset_cfg` in the `get_configuration()` method of `run_fast_rcnn.py` to
+
+```
+from utils.configs.Pascal_config import cfg as dataset_cfg
+```
+
+Now you're set to train on the Pascal VOC 2007 data using `python run_fast_rcnn.py`. Beware that training might take a while.
 
 ## Train on your own data
 
@@ -301,152 +165,155 @@ For the negative images you do not need to create any annotations. For the other
 
 ### Train on custom dataset
 
-Before running CNTK Fast R-CNN using scripts A1-A3 you need to add your data set to `PARAMETERS.py`:
+After storing your images in the described folder structure and annotating them please run
 
-* Set `dataset = "CustomDataset"`
-* Add the parameters for your data set under the Python class `CustomDataset`. You can start by copying the parameters from `GroceryParameters`
-  * Adapt the _classes_ to reflect your object categories. Following the above example this would look like
-  `self.classes = ('__background__',  'dog', 'cat', 'octopus')`.
-  * Set `self.imgDir = <your_image_folder>`.
-  * Optionally you can adjust more parameters, e.g. for ROI generation and pruning (see [Parameters](#parameters) section).
+`python Examples/Image/Detection/utils/annotations/annotations_helper.py`
 
-Ready to train on your own data! (Use the [same steps](#quick-guide) as for the toy example.)
+after changing the folder in that script to your data folder. Finally, create a `MyDataSet_config.py` in the `utils\configs` folder following the existing examples:
+
+```
+__C.CNTK.DATASET == "YourDataSet":
+__C.CNTK.MAP_FILE_PATH = "../../DataSets/YourDataSet"
+__C.CNTK.CLASS_MAP_FILE = "class_map.txt"
+__C.CNTK.TRAIN_MAP_FILE = "train_img_file.txt"
+__C.CNTK.TEST_MAP_FILE = "test_img_file.txt"
+__C.CNTK.TRAIN_ROI_FILE = "train_roi_file.txt"
+__C.CNTK.TEST_ROI_FILE = "test_roi_file.txt"
+__C.CNTK.NUM_TRAIN_IMAGES = 500
+__C.CNTK.NUM_TEST_IMAGES = 200
+__C.CNTK.PROPOSAL_LAYER_SCALES = [8, 16, 32]
+```
+
+Note that `__C.CNTK.PROPOSAL_LAYER_SCALES` is not used for Fast R-CNN, only for Faster R-CNN.
+
+To train and evaluate Fast R-CNN on your data change the `dataset_cfg` in the `get_configuration()` method of `run_fast_rcnn.py` to
+
+```
+from utils.configs.MyDataSet_config import cfg as dataset_cfg
+```
+
+and run `python run_fast_rcnn.py`.
 
 ## Technical details
 
-### Parameters
+The Fast R-CNN algorithm is explained in the [Algorithm details](#algorithm-details) section together with a high level overview of how it is implemented in the CNTK Python API. This section focuses on configuring Fast R-CNN and how to you use different base models.
 
-The main parameters in `PARAMETERS.py` are
-* `dataset` - which data set to use
-* `cntk_nrRois` - how many ROIs to use for training and testing
-* `nmsThreshold` - Non Maximum suppression threshold (in range [0,1]). The lower the more ROIs will be combined. It used for both evaluation and visualization.
+### Configuration and Parameters
 
-All parameters for ROI generation, such as minimum and maximum width and height etc.,
-are described in `PARAMETERS.py` under the Python class `Parameters`. They are all set to a default value which is reasonable.
-You can overwrite them in the `# project-specific parameters` section corresponding to the data set you are using.
+The parameters are grouped into three parts:
 
-### CNTK configuration
+* Detector parameters (see `FastRCNN/FastRCNN_config.py`)
+* Data set parameters (see for example `utils/configs/Grocery_config.py`)
+* Base model parameters (see for example `utils/configs/AlexNet_config.py`)
 
-The CNTK BrainScript configuration file that is used to train and test Fast R-CNN is
-[fastrcnn.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/fastrcnn.cntk).
-The part that is constructing the network is the `BrainScriptNetworkBuilder` section in the `Train` command:
+The three parts are loaded and merged in the `get_configuration()` method in `run_fast_rcnn.py`. In this section we'll cover the detector parameters. Data set parameters are described [here](#train-on-your-own-data), base model parameters [here](#using-a-different-base-model). In the following we go through the most important parameters in `FastRCNN_config.py`. All parameters are also commented in the file. The configuration uses the `EasyDict` package that allows easy access to nested dictionaries.
 
 ```
-BrainScriptNetworkBuilder = {
-    network     = BS.Network.Load ("../../../../../pre-trainedModels/AlexNet.model")
-    convLayers  = BS.Network.CloneFunction(network.features, network.conv5_y, parameters = "constant")
-    fcLayers    = BS.Network.CloneFunction(network.pool3, network.h2_d)
+# Number of regions of interest [ROIs] proposals
+__C.NUM_ROI_PROPOSALS = 200 # use 2000 or more for good results
+# the minimum IoU (overlap) of a proposal to qualify for training regression targets
+__C.BBOX_THRESH = 0.5
 
-    model (features, rois) = {
-        featNorm = features - 114
-        convOut  = convLayers (featNorm)
-        roiOut   = ROIPooling (convOut, rois, (6:6))
-        fcOut    = fcLayers (roiOut)
-        W        = ParameterTensor{($NumLabels$:4096), init="glorotUniform"}
-        b        = ParameterTensor{$NumLabels$, init = 'zero'}
-        z        = W * fcOut + b
-    }.z
+# Maximum number of ground truth annotations per image
+__C.INPUT_ROIS_PER_IMAGE = 50
+__C.IMAGE_WIDTH = 850
+__C.IMAGE_HEIGHT = 850
 
-    imageShape = $ImageH$:$ImageW$:$ImageC$         # 1000:1000:3
-    labelShape = $NumLabels$:$NumTrainROIs$         # 21:64
-    ROIShape   = 4:$NumTrainROIs$                   # 4:64
-
-    features = Input {imageShape}
-    roiLabels = Input {labelShape}
-    rois = Input {ROIShape}
-
-    z = model (features, rois)
-
-    ce = CrossEntropyWithSoftmax(roiLabels, z, axis = 1)
-    errs = ClassificationError(roiLabels, z, axis = 1)
-
-    featureNodes    = (features:rois)
-    labelNodes      = (roiLabels)
-    criterionNodes  = (ce)
-    evaluationNodes = (errs)
-    outputNodes     = (z)
-}
+# Use horizontally-flipped images during training?
+__C.TRAIN.USE_FLIPPED = True
+# If set to 'True' conv layers weights from the base model will be trained, too
+__C.TRAIN_CONV_LAYERS = True
 ```
 
-In the first line the pre-trained AlexNet is loaded as the base model. Next two parts of the network are cloned:
-`convLayers` contains the convolutional layers with constant weights, i.e. they are not trained further.
-`fcLayers` contains the fully connected layers with the pre-trained weights, which will be trained further.
-The node names `network.features`, `network.conv5_y` etc. can be derived from looking at the log output of the cntk.exe call
-(contained in the log output of the `A2_RunWithBSModel.py` script).
+The ROI proposals are computed on the fly in the first epoch using the selective search implementation from the `dlib` package. The number of proposals that are generated is controlled by the `__C.NUM_ROI_PROPOSALS` parameter. We recommend to use around 2000 proposals. The regression head is only trained on those ROIs that have an overlap (IoU) with a ground truth box of at least `__C.BBOX_THRESH`.
 
-The model definition(`model (features, rois) = ...`) first normalizes the features by subtracting 114 for each channel and pixel.
-Then the normalized features are pushed through the `convLayers` followed by the `ROIPooling` and finally the `fcLayers`.
-The output shape (width:height) of the ROI pooling layer is set to `(6:6)` since this is the shape nd size that the
-pre-trained `fcLayers` from the AlexNet model expect. The output of the `fcLayers` is fed into a dense layer that
-predicts one value per label (`NumLabels`) for each ROI.
+`__C.INPUT_ROIS_PER_IMAGE` specifies the maximum number of ground truth annotations per image. CNTK currently requires to set a maximum number. If there are fewer annotations they will be padded internally. `__C.IMAGE_WIDTH` and `__C.IMAGE_HEIGHT` are the dimensions that are used to resize and pad the input images. 
 
-The following six lines define the input: an image of size 1000 x 1000 x 3 (`$ImageH$:$ImageW$:$ImageC$`),
-ground truth labels for each ROI (`$NumLabels$:$NumTrainROIs$`)
-and four coordinates per ROI (`4:$NumTrainROIs$`) corresponding to (x, y, w, h), all relative with respect to the full width and height of the image.
-
-`z = model (features, rois)` feeds the input images and ROIs into the defined network model and assigns the output to `z`.
-Both the criterion (`CrossEntropyWithSoftmax`) and the error (`ClassificationError`) are specified with `axis = 1`
-to account for the prediction error per ROI.
-
-The reader section of the CNTK configuration is listed below. It uses three deserializers:
-* `ImageDeserializer` to read the image data. It picks up the image file names from `train.txt`,
-scales the image to the desired width and height while preserving the aspect ratio (padding empty areas with `114`)
-and transposes the tensor to have the correct input shape.
-* One `CNTKTextFormatDeserializer` to read the ROI coordinates from `train.rois.txt`.
-* A second `CNTKTextFormatDeserializer` to read the ROI labels from `train.roislabels.txt`.
-
-The input file formats are described in the next section.
+`__C.TRAIN.USE_FLIPPED = True` will augment the training data by flipping all images every other epoch, i.e. the first epoch has all regular images, the second has all images flipped, and so forth. `__C.TRAIN_CONV_LAYERS` determines whether the convolutional layers, from input to the convolutional feature map, will be trained or fixed. Fixing the conv layer weights means that the weights from the base model are taken and not modified during training. (You can also specify how many conv layers you want to train, see section [Using a different base model](#using-a-different-base-model)).
 
 ```
-reader = {
-    randomize = false
-    verbosity = 2
-    deserializers = ({
-        type = "ImageDeserializer" ; module = "ImageReader"
-        file = train.txt
-        input = {
-            features = { transforms = (
-                { type = "Scale" ; width = $ImageW$ ; height = $ImageW$ ; channels = $ImageC$ ; scaleMode = "pad" ; padValue = 114 }:
-                { type = "Transpose" }
-            )}
-            ignored = {labelDim = 1000}
-        }
-    }:{
-        type = "CNTKTextFormatDeserializer" ; module = "CNTKTextFormatReader"
-        file = train.rois.txt
-        input = { rois = { dim = $TrainROIDim$ ; format = "dense" } }
-    }:{
-        type = "CNTKTextFormatDeserializer" ; module = "CNTKTextFormatReader"
-        file = train.roilabels.txt
-        input = { roiLabels = { dim = $TrainROILabelDim$ ; format = "dense" } }
-    })
-}
+# NMS threshold used to discard overlapping predicted bounding boxes
+__C.RESULTS_NMS_THRESHOLD = 0.5
+
+# If set to True the following two parameters need to point to the corresponding files that contain the proposals:
+# __C.DATA.TRAIN_PRECOMPUTED_PROPOSALS_FILE
+# __C.DATA.TEST_PRECOMPUTED_PROPOSALS_FILE
+__C.USE_PRECOMPUTED_PROPOSALS = False
 ```
 
-### CNTK input file format
+`__C.RESULTS_NMS_THRESHOLD` is the NMS threshold used to discard overlapping predicted bounding boxes in evaluation. A lower threshold yields fewer removals and hence more predicted bounding boxes in the final output. If you set `__C.USE_PRECOMPUTED_PROPOSALS = True` the reader will read precomputed ROIs from text files. This is for example used for training on Pascal VOC data. The file names `__C.DATA.TRAIN_PRECOMPUTED_PROPOSALS_FILE` and `__C.DATA.TEST_PRECOMPUTED_PROPOSALS_FILE` are specified in `Examples/Image/Detection/utils/configs/Pascal_config.py`. 
 
-There are three input files for CNTK Fast R-CNN corresponding to the three deserializers described above:
+```
+# The basic segmentation is performed kvals.size() times. The k parameter is set (from, to, step_size)
+__C.roi_ss_kvals = (10, 500, 5)
+# When doing the basic segmentations prior to any box merging, all
+# rectangles that have an area < min_size are discarded. Therefore, all outputs and
+# subsequent merged rectangles are built out of rectangles that contain at
+# least min_size pixels. Note that setting min_size to a smaller value than
+# you might otherwise be interested in using can be useful since it allows a
+# larger number of possible merged boxes to be created
+__C.roi_ss_min_size = 9
+# There are max_merging_iterations rounds of neighboring blob merging.
+# Therefore, this parameter has some effect on the number of output rectangles
+# you get, with larger values of the parameter giving more output rectangles.
+# Hint: set __C.CNTK.DEBUG_OUTPUT=True to see the number of ROIs from selective search
+__C.roi_ss_mm_iterations = 30
+# image size used for ROI generation
+__C.roi_ss_img_size = 200
+```
 
-1) `train.txt` contains in each line first a sequence number, then an image filenames and finally a `0` (which is currently still needed for legacy reasons of the ImageReader).
+The above parameters are configuring dlib's selective search. For details see [the dlib homepage](http://dlib.net/dlib/image_transforms/segment_image_abstract.h.html#find_candidate_object_locations). The following additional parameters are used to filter generated ROIs w.r.t. minimum and maximum side length, area and aspect ratio.
+
 ```
-0 image_01.jpg 0
-1 image_02.jpg 0
-...
+# minimum relative width/height of an ROI
+__C.roi_min_side_rel = 0.01
+# maximum relative width/height of an ROI
+__C.roi_max_side_rel = 1.0
+# minimum relative area of an ROI
+__C.roi_min_area_rel = 0.0001
+# maximum relative area of an ROI
+__C.roi_max_area_rel = 0.9
+# maximum aspect ratio of an ROI vertically and horizontally
+__C.roi_max_aspect_ratio = 4.0
+# aspect ratios of ROIs for uniform grid ROIs
+__C.roi_grid_aspect_ratios = [1.0, 2.0, 0.5]
 ```
-2) `train.rois.txt` ([CNTK text format](./BrainScript-CNTKTextFormat-Reader.md))
-contains in each line first a sequence number, then the `|rois` identifier followed by a sequence of numbers.
-These are groups of four numbers corresponding to (x, y, w, h) of an ROI,
-all relative with respect to the full width and height of the image. There is a total of 4 * number-of-rois numbers per line.
+
+If selective search returns more ROIs than requested they are sampled randomly. If fewer ROIs are return additional ROIs are generated on a regular grid using the specified `__C.roi_grid_aspect_ratios`.
+
+### Using a different base model
+
+To use a different base model you need to choose a different model configuration in the `get_configuration()` method of `run_fast_rcnn.py`. Two models are supported right away:
+
 ```
-0 |rois 0.2185 0.0 0.165 0.29 ...
+    # for VGG16 base model use:         from utils.configs.VGG16_config import cfg as network_cfg
+    # for AlexNet base model use:       from utils.configs.AlexNet_config import cfg as network_cfg
 ```
-3) `train.roilabels.txt` ([CNTK text format](./BrainScript-CNTKTextFormat-Reader.md))
-contains in each line first a sequence number, then the `|roiLabels` identifier followed by a sequence of numbers.
-These are groups of number-of-labels numbers (either zero or one) per ROI encoding the ground truth class in a one-hot representation.
-There is a total of number-of-labels * number-of-rois numbers per line.
+
+To download the VGG16 model please use the download script in `<cntkroot>/PretrainedModels`:
+
 ```
-0 |roiLabels 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0  ...
+    python download_model.py VGG16_ImageNet_Caffe
 ```
+
+If you want to use another different base model you need to copy, for example, the configuration file `utils/configs/VGG16_config.py` and modify it according to your base model:
+
+```
+# model config
+__C.MODEL.BASE_MODEL = "VGG16"
+__C.MODEL.BASE_MODEL_FILE = "VGG16_ImageNet_Caffe.model"
+__C.MODEL.IMG_PAD_COLOR = [103, 116, 123]
+__C.MODEL.FEATURE_NODE_NAME = "data"
+__C.MODEL.LAST_CONV_NODE_NAME = "relu5_3"
+__C.MODEL.START_TRAIN_CONV_NODE_NAME = "pool2" # __C.MODEL.FEATURE_NODE_NAME
+__C.MODEL.POOL_NODE_NAME = "pool5"
+__C.MODEL.LAST_HIDDEN_NODE_NAME = "drop7"
+__C.MODEL.FEATURE_STRIDE = 16
+__C.MODEL.RPN_NUM_CHANNELS = 512
+__C.MODEL.ROI_DIM = 7
+``` 
+
+To investigate the node names of your base model you can use the `plot()` method from `cntk.logging.graph`. Please note that ResNet models are currently not supported since roi pooling in CNTK does not yet support roi average pooling.
 
 ## Algorithm details
 
@@ -472,10 +339,43 @@ a single time per image. According to the authors, this leads to a 213 times spe
 training without loss of accuracy. This is achieved by using an ROI pooling layer which projects the ROI onto the convolutional
 feature map and performs max pooling to generate the desired output size that the following layer is expecting.
 In the AlexNet example used in this tutorial the ROI pooling layer is put between the last convolutional layer and the first
-fully connected layer (see [BrainScript code](#cntk-configuration)).
+fully connected layer. In the CNTK Python API code shown below this is realized by cloning two parts of the network, the `conv_layers` and the `fc_layers`. The input image is then first normalized, pushed through the `conv_layers`, the `roipooling` layer and the `fc_layers` and finally the prediction and regression heads are added that predict the class label and the regression coefficients per candidate ROI respectively.
+
+```
+def create_fast_rcnn_model(features, roi_proposals, label_targets, bbox_targets, bbox_inside_weights, cfg):
+    # Load the pre-trained classification net and clone layers
+    base_model = load_model(cfg['BASE_MODEL_PATH'])
+    conv_layers = clone_conv_layers(base_model, cfg)
+    fc_layers = clone_model(base_model, [cfg["MODEL"].POOL_NODE_NAME], [cfg["MODEL"].LAST_HIDDEN_NODE_NAME], clone_method=CloneMethod.clone)
+
+    # Normalization and conv layers
+    feat_norm = features - Constant([[[v]] for v in cfg["MODEL"].IMG_PAD_COLOR])
+    conv_out = conv_layers(feat_norm)
+
+    # Fast RCNN and losses
+    cls_score, bbox_pred = create_fast_rcnn_predictor(conv_out, roi_proposals, fc_layers, cfg)
+    detection_losses = create_detection_losses(...)
+    pred_error = classification_error(cls_score, label_targets, axis=1)
+
+    return detection_losses, pred_error
+
+def create_fast_rcnn_predictor(conv_out, rois, fc_layers, cfg):
+    # RCNN
+    roi_out = roipooling(conv_out, rois, cntk.MAX_POOLING, (6, 6), spatial_scale=1/16.0)
+    fc_out = fc_layers(roi_out)
+
+    # prediction head
+    cls_score = plus(times(fc_out, W_pred), b_pred, name='cls_score')
+
+    # regression head
+    bbox_pred = plus(times(fc_out, W_regr), b_regr, name='bbox_regr')
+
+    return cls_score, bbox_pred
+```
 
 The original Caffe implementation used in the R-CNN papers can be found at GitHub:
-[RCNN](https://github.com/rbgirshick/rcnn), [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn), and [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn). This tutorial uses some of the code from these repositories, notably (but not exclusively) for SVM training and model evaluation.
+[RCNN](https://github.com/rbgirshick/rcnn), [Fast R-CNN](https://github.com/rbgirshick/fast-rcnn), and [Faster R-CNN](https://github.com/rbgirshick/py-faster-rcnn). 
+
 
 #### SVM vs NN training
 
