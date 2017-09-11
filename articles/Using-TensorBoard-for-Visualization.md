@@ -1,4 +1,4 @@
----
+﻿---
 title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
@@ -19,7 +19,7 @@ ms.devlang:   brainscript, python
 * Record model graph.
 * Record arbitrary scalar values during training.
 * Automatically record the values of a loss function and error rate during training.
-* Record images
+* Display images
 
 ![CNTK model graph as displayed in TensorBoard.](./pictures/TensorBoard/tensorboard_graph.png)
 
@@ -56,13 +56,41 @@ The Trainer object will make sure to update the TensorBoardProgressWriter with t
             tensorboard_writer.write_value(p.uid + "/mean",  reduce_mean(p).eval(), minibatch_idx)
 ```
 
-To record images, you need to call TensorBoardProgressWriter.write_image method() as shown below:
+To display images, you need to call TensorBoardProgressWriter.write_image() method. Below is an example, we use TensorBoard to display images from mnist data set.
+First, we read images from mnist data set and feed them as part of the model input
+
 ```python
-     while sample_count < epoch_size:  # loop over minibatches in the epoch
-         data = reader_train.next_minibatch(min(minibatch_size, epoch_size - sample_count), input_map=input_map)  
-         output = trainer.train_minibatch(data, outputs=[input_var])  
-         sample_count += data[label_var].num_samples  
-         tensorboard_writer.write_image('training', output[1], sample_count)
+    # Input variables denoting the features and label data
+    input_var = C.ops.input_variable((num_channels, image_height, image_width), np.float32)
+    label_var = C.ops.input_variable(num_output_classes, np.float32)
+
+    # Create a model
+    with C.layers.default_options(activation=C.ops.relu, pad=False):
+        conv1 = C.layers.Convolution2D((5, 5), 32, pad=True)(scaled_input)
+       ...
+
+    #load image data as model input
+    reader_train = create_reader(os.path.join(data_path, 'minist_data_set_file'), True, input_dim,
+                                 num_output_classes)
+    input_map = {
+        input_var: reader_train.streams.features,
+        label_var: reader_train.streams.labels
+    }
+```
+For demostration purpose only, this example outputs image data stored in model input and displays it in tensorboard. Users can use TensorBoard to display any images store in a NDArray.
+```python
+    for epoch in range(max_epochs): 
+        sample_count = 0
+        while sample_count < epoch_size:  
+	    #train the model using input data
+            data = reader_train.next_minibatch(min(minibatch_size, epoch_size - sample_count),
+                                               input_map=input_map)
+	    #Store input data in the output  
+            output = trainer.train_minibatch(data, outputs=[input_var])  
+
+	    #Write output images to tensorboard
+	    tensorboard_writer.write_image('training', output[1], sample_count)
+
 ```
 
 TensorBoard is not part of CNTK package and should be installed separately. After the installation, once your training job is started, you can launch TensorBoard to monitor its progress by running the following command:
