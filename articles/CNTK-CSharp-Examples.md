@@ -12,7 +12,7 @@ ms.devlang:   csharp
 # CNTK C#/.NET API training examples
 
 ## Overview
-CNTK repository contains [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape) using CNTK C# API to build, train, and evaluate CNTK neural network models. 
+CNTK repository contains [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) using CNTK C# API to build, train, and evaluate CNTK neural network models. 
 
 #### LogisticRegression
 A hello-world example to train and evaluate a logistic regression model using C#/API. See [CNTK 101: Logistic Regression and ML Primer](https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_101_LogisticRegression.ipynb) for more details.

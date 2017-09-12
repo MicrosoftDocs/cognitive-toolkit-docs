@@ -40,7 +40,7 @@ For details regarding the CNTK Library managed API, please refer to the [CNTK Li
 
 There are several [Eval Examples](./CNTK-Eval-Examples.md) inside the [CNTKLibraryEvalExamples.sln](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/CNTKLibraryEvalExamples.sln) project shows how to evaluate a model in C#.
 
-Training Examples using C# API can be found inside [CNTKLibraryCSharpTrainingExamples.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCShape/CNTKLibraryCSharpTrainingExamples.sln)
+Training Examples using C# API can be found inside [CNTKLibraryCSharpTrainingExamples.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCSharp/CNTKLibraryCSharpTrainingExamples.sln)
  
 ## Java API (Experimental)
 

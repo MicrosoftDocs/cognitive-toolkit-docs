@@ -11,7 +11,7 @@ ms.devlang:   csharp
 
 # C#/.NET Managed API
 
-CNTK v2.2.0 provides C# API to build, train, and evaluate CNTK models. This section gives an overview of CNTK C# API. [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape) are available in CNTK github repository.
+CNTK v2.2.0 provides C# API to build, train, and evaluate CNTK models. This section gives an overview of CNTK C# API. [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) are available in CNTK github repository.
 
 ## Using C#/.NET Managed API to Build a Deep Neural Network
 CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation takes one or two input variables with necessary parameters and produces a CNTK Function. A CNTK Function maps input data to output. A CNTK Function may also be treated as a varaible and be taken as input to another CNTK operation. With this mechanism, a Deep Neural Network can be built with basic CNTK operations by chaining and composition. As an example:
@@ -38,7 +38,7 @@ CNTK C# API provides opteraions to build convolution neural networks (CNN) and r
     var convParams1 = new Parameter(
       new int[] { kernelWidth1, kernelHeight1, numInputChannels, outFeatureMapCount1 }, 
       DataType.Float, CNTKLib.GlorotUniformInitializer(convWScale, -1, 2), device);
-    var convFunction = CNTKLib.ReLU(CNTKLib.Convolution(
+    var convFunction1 = CNTKLib.ReLU(CNTKLib.Convolution(
       convParams1, input, 
       new int[] { 1, 1, numInputChannels } ));
     var pooling1 = CNTKLib.Pooling(convFunction1, PoolingType.Max,
@@ -47,19 +47,19 @@ CNTK C# API provides opteraions to build convolution neural networks (CNN) and r
     var convParams2 = new Parameter(
       new int[] { kernelWidth2, kernelHeight2, outFeatureMapCount1, outFeatureMapCount2 }, 
       DataType.Float, CNTKLib.GlorotUniformInitializer(convWScale, -1, 2), device);
-    var convFunction = CNTKLib.ReLU(CNTKLib.Convolution(
+    var convFunction2 = CNTKLib.ReLU(CNTKLib.Convolution(
       convParams2, pooling1, 
       new int[] { 1, 1, outFeatureMapCount1 } ));
-    var pooling2 = CNTKLib.Pooling(convFunction, PoolingType.Max,
+    var pooling2 = CNTKLib.Pooling(convFunction2, PoolingType.Max,
         new int[] { poolingWindowWidth2, poolingWindowHeight2 }, new int[] { hStride2, vStride2 }, new bool[] { true });
 
     var imageClassifier = TestHelper.Dense(pooling2, numClasses, device, Activation.None,   "ImageClassifier");        
 ```
 
-An example to build a RNN with long-short-term-memory (LTSM) is also provided: (ref)
+An example to build a RNN with long-short-term-memory ([LTSM](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs)) is also provided.
     
 ## Data Preparation Using C#/.NET
-CNTK provides data preparation utilities for training. CNTK C# API exposes these utilities. It takes data from various preprocessed forms. Dataloading and batching are done efficiently. For example, assuming we have data in text in the following CNTK text format called "Train.ctf":
+CNTK provides data preparation utilities for training. CNTK C# API exposes these utilities. It takes data from various preprocessed forms. Data loading and batching are done efficiently. For example, assuming we have data in text in the following CNTK text format called "Train.ctf":
 ```
 |features 3.854499 4.163941 |labels 1.000000
 |features 1.058121 1.204858 |labels 0.000000
@@ -71,18 +71,21 @@ CNTK provides data preparation utilities for training. CNTK C# API exposes these
 |features 0.232070 1.814821 |labels 0.000000
 ```
 
-A CNTK DataSource is create used :
+A CNTK DataSource is create in this way:
 ***
 ```cs
     var minibatchSource = MinibatchSource.TextFormatMinibatchSource(
         Path.Combine(DataFolder, "Train.ctf"), streamConfigurations,
         MinibatchSource.InfinitelyRepeat, true);
-
+```
+Later batch data can be retrieved and used for training:
+***
+```cs
+    var minibatchData = minibatchSource.GetNextMinibatch(minibatchSize, device);
 ```
 
-
 ## Using C#/.NET Managed API to Train a Deep Neural Network
-Stochastic gradient descent (SGD) is a way to optimize model parameters with minibatch training data. CNTK supports many SGD variations that are commonly used in DNN training. They are exposed by CNTK C# API:  
+Stochastic gradient descent (SGD) is a way to optimize model parameters with minibatch training data. CNTK supports many SGD variations that are commonly seen in deep learning literature. They are exposed by CNTK C# API:  
 
 ```
 SGDLearner - the CNTK built-in SGD learner
@@ -95,7 +98,7 @@ AdaDeltaLearner - the CNTK built-in [AdaDelta learner](https://arxiv.org/abs/121
 For a general overview of different learning optimizers, see [Stochastic gradient descent] (https://en.wikipedia.org/wiki/Stochastic_gradient_descent).
 ```
 
-A CNTK trainer is used to do minibatch training. [A C# code snip](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape/Common/LogisticRegression.cs) for minibatch training:
+A CNTK trainer is used to do minibatch training. [A C# code snip](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/LogisticRegression.cs) for minibatch training:
 ***
 ```cs
     // build a learning model
@@ -125,11 +128,14 @@ A CNTK trainer is used to do minibatch training. [A C# code snip](https://github
     }
 ```
   
-In this code snip, a CNTK built-in SGD learner with per sample learning rate = 0.02 is used. A trainer is created with the learner, a loss function, and a evaluation function. It is used to optimize all parameters of the model. During each training iteration a data minibatch is fed to the trainer to have model parameters updated. Trainig loss and evaluation error are displayed with a helper method during the training.  
+In this code snip, a CNTK built-in SGD learner with per sample learning rate = 0.02 is used. The learner is to optimize all parameters of the model. A trainer is created with the learner, a loss function, and a evaluation function. During each training iteration minibatch data is fed to the trainer to have model parameters updated. Trainig loss and evaluation error are displayed with a helper method during the training.  
+Here we generate 2 classes of statistically separable data of labels and features.
+In other more realistic [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common), public test data are loaded with CNTK MinibatchSource as discussed above.   
+
 
 ## Using C#/.NET Managed API to Evaluate a Deep Neural Network
 
-C# API has evaluation API to do model evaluation. Most [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape) do model evaluation after training.   
+C# API has evaluation API to do model evaluation. Most [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) do model evaluation after training.   
 
 
 More model evaluation details using CNTK C# API can be found at
@@ -143,9 +149,11 @@ Once you have gone through this overview, you may proceed with C# training examp
 ### work with CNTK source
 - Following [Setp CNTK on Windows](Setup-CNTK-on-Windows.md) to setup CNTK on windows.
 - Build CNTK.sln with Visual Studio. 
+- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape).
 - Run examples as EndToEnd test in CNTKLibraryCSTrainingTest.csproj
 
 ### work with CNTK examples with CNTK NuGet
-- Download CNTK C# Training [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape)
+- Download CNTK C# Training [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp)
+- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape).
 - Build and run the examples.
 

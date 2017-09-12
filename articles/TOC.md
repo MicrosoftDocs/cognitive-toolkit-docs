@@ -14,7 +14,7 @@
 #### [Manual Install](/cognitive-toolkit/Setup-Linux-Binary-Manual)
 ### [Test Installation From Python](/cognitive-toolkit/Setup-Test-Python)
 ## [Using CNTK from Python](https://cntk.ai/pythondocs/gettingstarted.html)
-## [Using CNTK from C#](./Using-CNTK-with-CShape.md)
+## [Using CNTK from C#](./Using-CNTK-with-CSharp.md)
 ## [Using Keras](./Using-CNTK-with-Keras.md)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
