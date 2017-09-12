@@ -221,7 +221,7 @@ sudo ./b2 -d0 -j"$(nproc)" install
 
 Since CNTK 2.2, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/).
 
-If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-80)
+If you plan to use both CUDA and OpenCV, install CUDA first
 
 OpenCV can have many interfaces and options.
 In this section we cover only parts necessary to build CNTK.
