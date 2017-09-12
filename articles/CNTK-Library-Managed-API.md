@@ -1,5 +1,5 @@
 ---
-title:   CNTK Library Eval C# API
+title:   CNTK Library C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/03/2017
@@ -9,9 +9,71 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp
 ---
 
-# CNTK Library Eval C# API
+# CNTK Library C# API
 
-The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+The CNTK Library Managed API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) and [Using CNTK with C#](./Using-CNTK-with-CSharp.md) present how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+
+## class CNTKLib
+This is a static class contains many operations, initialization, and many miscellaneous methods.
+
+***
+```cs
+public static Function Sigmoid(Variable operand, string name)
+```
+
+Sigmoid operation. It takes a input variable and applies Sigmoid operation to it.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Tanh(Variable operand, string name)
+```
+
+Tanh activation. It takes a input variable and applies Tanh operation to it.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function ReLU(Variable operand, string name)
+```
+
+Rectifier linear activation. It takes a input variable and applies rectifier linear activation operation to it.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Plus(Variable leftOperand, Variable rightOperand, string name)
+```
+
+A binary elementwise tensor addition operation. 
+
+Parameters:
+* `leftOperand`: The left variable of the plus operation. It can be the ouput of another function.
+* `rightOperand`: The left variable of the plus operation. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Softmax(Variable operand, Axis axis, string name)
+```
+
+A softmax operation on an input variable
+
+Parameters:
+* `operand`: The input variable of the operation. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+## class Learner
+
 
 ## class Function
 
