@@ -8,7 +8,6 @@ ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
-
 # Variables
 
 Variables are defined in NDL when they appear on the left of an equal sign ```=```. From that point on that variable name will be associated with the value it was assigned. Variables are **immutable**, thus assigning new values to an existing variable is not supported.
