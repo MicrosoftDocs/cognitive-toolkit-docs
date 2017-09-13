@@ -2,7 +2,7 @@
 title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/07/2017
+ms.date:   09/15/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -19,7 +19,7 @@ ms.devlang:   brainscript, python
 * Record model graph.
 * Record arbitrary scalar values during training.
 * Automatically record the values of a loss function and error rate during training.
-* Display images
+* Display images (since v2.2)
 
 ![CNTK model graph as displayed in TensorBoard.](./pictures/TensorBoard/tensorboard_graph.png)
 
