@@ -11,7 +11,7 @@ ms.devlang:   NA
 
 # CNTK Evaluate Image Transforms
 
-This page describes some possible implementations for transforming images prior to evaluating them on a CNTK model that was trained with data fed with the ImageReader. A working example is provided as part of the [CSEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CSEvalClient) example program, in particular refer to the `EvaluateImageClassificationModel` method.
+This page describes some possible implementations for transforming images prior to evaluating them on a CNTK model that was trained with data fed with the ImageReader. A working example is provided as part of the [CSEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/LegacyEvalDll/CSEvalClient) example program, in particular refer to the `EvaluateImageClassificationModel` method.
 
 ## Overview
 The CNTK ImageReader plugin enables feeding image data to the CNTK model for training, testing, and evaluation. The ImageReader has some configurable capabilities that when enabled, perform some on-the-fly transforms to the image data.
