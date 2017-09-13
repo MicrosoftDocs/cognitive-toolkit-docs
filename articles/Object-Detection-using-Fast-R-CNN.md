@@ -57,7 +57,7 @@ Copy the generated `cython_bbox` and `cpu_nms` (and/or `gpu_nms`) binaries from 
 We use a pre-trained AlexNet model as the basis for Fast-R-CNN training (for VGG or other base models see [Using a different base model](#using-a-different-base-model). Both the example dataset and the pre-trained AlexNet model can be downloaded by running the following Python command from the FastRCNN folder:
 
 ```
-python install_fastrcnn.py
+python install_data_and_model.py
 ```
 
 * Learn how to [use a different base model](#using-a-different-base-model)
