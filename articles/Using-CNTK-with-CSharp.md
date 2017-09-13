@@ -78,7 +78,7 @@ A CNTK DataSource is create in this way:
         Path.Combine(DataFolder, "Train.ctf"), streamConfigurations,
         MinibatchSource.InfinitelyRepeat, true);
 ```
-Later batch data can be retrieved and used for training:
+Batch data can be retrieved and used for training later:
 ***
 ```cs
     var minibatchData = minibatchSource.GetNextMinibatch(minibatchSize, device);
@@ -87,16 +87,17 @@ Later batch data can be retrieved and used for training:
 ## Using C#/.NET Managed API to Train a Deep Neural Network
 Stochastic gradient descent (SGD) is a way to optimize model parameters with minibatch training data. CNTK supports many SGD variations that are commonly seen in deep learning literature. They are exposed by CNTK C# API:  
 
-```
-SGDLearner - the CNTK built-in SGD learner
-MomentumSGDLearner - the CNTK built-in Momentum SGD learner
-FSAdaGradLearner - FSAdaGrad learner as the original [paper](http://mirlab.org/conference_papers/International_Conference/ICASSP%202014/papers/p235-seide.pdf)
-AdamLearner - Adam learner as the original [paper](https://arxiv.org/pdf/1412.6980.pdf)
-AdaGradLearner - the CNTK built-in [AdaGrad learner](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2010/EECS-2010-24.pdf)
-RMSPropLearner - the CNTK built-in RMSProp learner
-AdaDeltaLearner - the CNTK built-in [AdaDelta learner](https://arxiv.org/abs/1212.5701)
-For a general overview of different learning optimizers, see [Stochastic gradient descent] (https://en.wikipedia.org/wiki/Stochastic_gradient_descent).
-```
+
+- SGDLearner - a CNTK built-in SGD learner
+- MomentumSGDLearner - a CNTK built-in Momentum SGD learner
+- FSAdaGradLearner - an [variation of AdaGrad learner](http://mirlab.org/conference_papers/International_Conference/ICASSP%202014/papers/p235-seide.pdf)
+- AdamLearner - an [Adam learner](https://arxiv.org/pdf/1412.6980.pdf)
+- AdaGradLearner - an [adaptive gradient learner](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2010/EECS-2010-24.pdf)
+- RMSPropLearner - a RMSProp learner
+- AdaDeltaLearner - a [AdaDelta learner](https://arxiv.org/abs/1212.5701)
+
+For a general overview of different learning optimizers, see [Stochastic gradient descent](https://en.wikipedia.org/wiki/Stochastic_gradient_descent).
+
 
 A CNTK trainer is used to do minibatch training. [A C# code snip](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/LogisticRegression.cs) for minibatch training:
 ***
@@ -129,14 +130,11 @@ A CNTK trainer is used to do minibatch training. [A C# code snip](https://github
 ```
   
 In this code snip, a CNTK built-in SGD learner with per sample learning rate = 0.02 is used. The learner is to optimize all parameters of the model. A trainer is created with the learner, a loss function, and a evaluation function. During each training iteration minibatch data is fed to the trainer to have model parameters updated. Trainig loss and evaluation error are displayed with a helper method during the training.  
-Here we generate 2 classes of statistically separable data of labels and features.
-In other more realistic [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common), public test data are loaded with CNTK MinibatchSource as discussed above.   
-
+In the code we generate 2 classes of statistically separable data of labels and features. In other more realistic [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common), public test data are loaded with CNTK MinibatchSource.   
 
 ## Using C#/.NET Managed API to Evaluate a Deep Neural Network
 
 C# API has evaluation API to do model evaluation. Most [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) do model evaluation after training.   
-
 
 More model evaluation details using CNTK C# API can be found at
 * [CNTK-library evaluation on Windows](./CNTK-Library-Evaluation-on-Windows.md)
@@ -144,13 +142,13 @@ More model evaluation details using CNTK C# API can be found at
 * [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
 * [NuGet-Packages](./NuGet-Package.md)
 
-## Get started with examples
-Once you have gone through this overview, you may proceed with C# training examples in two ways: to work with CNTK github source or to work with CNTK examples using [CNTK Nuget for Windows](NuGet-Package.md).   
+## Get Started With C# Training Examples
+Once you have gone through this overview, you may proceed with C# training examples in two ways: to work with CNTK source from GitHub or to work with CNTK examples using [CNTK NuGet for Windows](NuGet-Package.md).   
 ### work with CNTK source
-- Following [Setp CNTK on Windows](Setup-CNTK-on-Windows.md) to setup CNTK on windows.
+- Follow steps in this [page](Setup-CNTK-on-Windows.md) to setup CNTK on windows.
 - Build CNTK.sln with Visual Studio. 
 - [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape).
-- Run examples as EndToEnd test in CNTKLibraryCSTrainingTest.csproj
+- Run examples as end-to-end tests in CNTKLibraryCSTrainingTest.csproj
 
 ### work with CNTK examples with CNTK NuGet
 - Download CNTK C# Training [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp)
