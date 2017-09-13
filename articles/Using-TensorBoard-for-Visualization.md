@@ -77,7 +77,7 @@ First, we read images from mnist data set and feed them as part of the model inp
         label_var: reader_train.streams.labels
     }
 ```
-For demostration purpose only, this example outputs image data stored in model input and displays it in tensorboard. Users can use TensorBoard to display any images store in a NDArray.
+For demonstration purpose only, this example outputs image data stored in model input and displays it in tensorboard. Users can use TensorBoard to display any images store in a NDArray.
 ```python
     for epoch in range(max_epochs): 
         sample_count = 0
