@@ -2,7 +2,7 @@
 title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/07/2017
+ms.date:   09/15/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
