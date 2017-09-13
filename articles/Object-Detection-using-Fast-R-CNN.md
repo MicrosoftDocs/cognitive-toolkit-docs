@@ -198,7 +198,7 @@ and run `python run_fast_rcnn.py`.
 
 The Fast R-CNN algorithm is explained in the [Algorithm details](#algorithm-details) section together with a high level overview of how it is implemented in the CNTK Python API. This section focuses on configuring Fast R-CNN and how to you use different base models.
 
-### Configuration and Parameters
+### Parameters
 
 The parameters are grouped into three parts:
 
@@ -409,7 +409,7 @@ This is traditionally done using a technique called Non Maximum Suppression (NMS
 (and which was also used in the R-CNN publications) does not merge ROIs but instead tries to identify which ROIs
 best cover the real locations of an object and discards all other ROIs. This is implemented by iteratively selecting the
 ROI with highest confidence and removing all other ROIs which significantly overlap this ROI and are classified to be of
-the same class. The threshold for the overlap can be set in `PARAMETERS.py` ([details](#Configuration-and-Parameters)).
+the same class. The threshold for the overlap can be set in `PARAMETERS.py` ([details](#parameters)).
 
 Detection results before (left) and after (right) Non Maximum Suppression:
 <p align="center">
@@ -453,4 +453,3 @@ ranking of examples. It should be noted that to obtain a high
 score, a method must have precision at all levels of recall –
 this penalizes methods which retrieve only a subset of examples
 with high precision (e.g. side views of cars)._
-
