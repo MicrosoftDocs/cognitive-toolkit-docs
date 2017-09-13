@@ -453,4 +453,3 @@ ranking of examples. It should be noted that to obtain a high
 score, a method must have precision at all levels of recall –
 this penalizes methods which retrieve only a subset of examples
 with high precision (e.g. side views of cars)._
-
