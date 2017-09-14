@@ -23,7 +23,7 @@ Highlights:
   - 16bit support for training on Volta GPU (limited functionality)    
   - Support for NCCL 2
   - CNTK learner interface update
-  - A C#/.NET API that enables people to build and train networks
+  - C#/.NET API that enables people to build and train networks
   - R-binding for CNTK
 * Examples
   - Object Detection with Fast R-CNN and Faster R-CNN
