@@ -35,33 +35,36 @@ model.compile(loss='categorical_crossentropy',
 
 **Step 2.** Construct a distributed trainer
 
-This step is a bit tricky, users need to explicitly construct a CNTK distributed trainer and provide it to Keras model generate in last step. Here, the trainer
-uses [BlockMomentumSGD algorithm](./Multiple-GPUs-and-machines#6-block-momentum-sgd). User can easily choose other parallel SGD algorithms support by CNTK.
+This step is a bit tricky, users need to explicitly construct a CNTK distributed trainer and provide it to Keras model generated in last step. To do that, we obtain the
+universal learner from cntk_keras backend, wrapper it with distributed learners and feed it back to the trainer. In the example, the trainer
+uses [BlockMomentumSGD algorithm](./Multiple-GPUs-and-machines#6-block-momentum-sgd). User can choose other parallel SGD algorithms support by CNTK as well.
 ```python
 #create a CNTK distributed trainer
 model.model._make_train_function()
 trainer = model.model.train_function.trainer
 learner = trainer.parameter_learners[0]
-dist_learner = C.train.distributed.data_parallel_distributed_learner(learner,
+dist_learner = cntk.train.distributed.data_parallel_distributed_learner(learner,
                                                     num_quantization_bits=32,
                                                          distributed_after=0)
-model.model.train_function.trainer = C.trainer.Trainer(trainer.model, 
+model.model.train_function.trainer = cntk.trainer.Trainer(trainer.model, 
 				[trainer.loss_function, trainer.evaluation_function], [dist_learner])
 
 ```
 
 **Step 3.** Partitioning and training 
-Since Keras does not provide data partitioning APIs, users must do it according to their requirements and design choices. Below is the function we used to partition data
-in this example.
+Since Keras does not provide data partitioning APIs, users must do it according to their requirements and design choices. Note cntk.Communicator provides information 
+about all available GPUs(workers) and the GPU the process is currently running on(rank). Users make decision on their partition strategy based on worker and rank info 
+from CNTK. Below is the function that equally divides the whole data set for each GPU. 
+
 ```python
-rank = C.Communicator.rank()
-workers = C.Communicator.num_workers()
+rank = cntk.Communicator.rank()
+workers = cntk.Communicator.num_workers()
 total_items = x_train.shape[0]
 start = rank*total_items//workers
 end = min((rank+1)*total_items//workers, total_items)
 ```
 
-Similiar to Step 2, training uses standard Keras APIs just like single GPU training.
+Training just uses standard Keras APIs just like single GPU training.
 ```python
 history = model.fit(x_train[start : end], y_train[start : end],
                     batch_size=batch_size,
