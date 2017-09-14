@@ -36,3 +36,6 @@ An overview on all examples and tutorials is also provided by the
 ## Evaluation Examples
 
 The [CNTK Eval Examples](./CNTK-Eval-Examples.md) page provides examples demonstrating how to evaluate pre-trained models using C++, C#/.NET, Python, and Java.
+
+## C# Examples
+The [CNTK Training with C# Examples](./CNTK-CSharp-Examples.md) page provides examples showing how to build, train, and validate DNN models. 

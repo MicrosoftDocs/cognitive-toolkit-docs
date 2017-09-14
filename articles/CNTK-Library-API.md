@@ -34,12 +34,14 @@ Currently the best source of API documentation is inline in the API header file 
 
 ## C#/.NET API
 
-The CNTK Library Managed API exposes Evaluation related APIs for developers using C# or other .NET languages. It is provided as NuGet packages. The NuGet package CNTK.CPUOnly is for CPU only devices, and the CNTK.GPU supports both CPU and NVIDIA GPU.
+The CNTK Library Managed API exposes Training and Evaluation related APIs for developers using C# or other .NET languages. It is provided as NuGet packages. The NuGet package CNTK.CPUOnly is for CPU only devices, and the CNTK.GPU supports both CPU and NVIDIA GPU.
 
 For details regarding the CNTK Library managed API, please refer to the [CNTK Library Managed API](./CNTK-Library-Managed-API.md) page.
 
 There are several [Eval Examples](./CNTK-Eval-Examples.md) inside the [CNTKLibraryEvalExamples.sln](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryEvalExamples.sln) project shows how to evaluate a model in C#.
 
+Training Examples using C# API can be found inside [CNTKLibraryCSharpTrainingExamples.sln](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCSharp/CNTKLibraryCSharpTrainingExamples.sln)
+ 
 ## Java API (Experimental)
 
 The CNTK Java API supports model evaluation in Java. This API is still experimental and subject to change. It is provided as a jar file (cntk.jar) that can be included in Java projects.

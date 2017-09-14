@@ -10,6 +10,8 @@ ms.devlang:   NA
 ---
 
 # News
+## September 2017
+TODO: add summary of 2.2 release note
 
 ## July 2017
 ***2017-07-31.* CNTK 2.1**  
