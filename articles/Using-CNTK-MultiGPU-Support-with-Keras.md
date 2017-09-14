@@ -42,13 +42,17 @@ uses [BlockMomentumSGD algorithm](./Multiple-GPUs-and-machines#6-block-momentum-
 #create a CNTK distributed trainer
 model.model._make_train_function()
 trainer = model.model.train_function.trainer
+assert (trainer is not None), "Cannot find a trainer in Keras Model!"
+learner_no = len(trainer.parameter_learners)
+assert (learner_no > 0), "No learner in the trainer."
+if(learner_no > 1):
+    warnings.warn("Unexpected multiple learners in a trainer.")
 learner = trainer.parameter_learners[0]
-dist_learner = cntk.train.distributed.data_parallel_distributed_learner(learner,
-                                                    num_quantization_bits=32,
+dist_learner = C.train.distributed.data_parallel_distributed_learner(learner,
+                                                     num_quantization_bits=32,
                                                          distributed_after=0)
-model.model.train_function.trainer = cntk.trainer.Trainer(trainer.model, 
-				[trainer.loss_function, trainer.evaluation_function], [dist_learner])
-
+model.model.train_function.trainer = C.trainer.Trainer(
+    trainer.model, [trainer.loss_function, trainer.evaluation_function], [dist_learner])
 ```
 
 **Step 3.** Partitioning and training 
@@ -59,12 +63,14 @@ from CNTK. Below is the function that equally divides the whole data set for eac
 ```python
 rank = cntk.Communicator.rank()
 workers = cntk.Communicator.num_workers()
+if (workers == 1):
+    warnings.warn("Only one worker is found.")
 total_items = x_train.shape[0]
 start = rank*total_items//workers
 end = min((rank+1)*total_items//workers, total_items)
 ```
 
-Training just uses standard Keras APIs just like single GPU training.
+Training just uses standard Keras APIs just like single GPU training. At end of training, call communicator.finalize() method to conclude.
 ```python
 history = model.fit(x_train[start : end], y_train[start : end],
                     batch_size=batch_size,
@@ -74,4 +80,5 @@ history = model.fit(x_train[start : end], y_train[start : end],
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
+cntk.Communicator.finalize()
 ```
