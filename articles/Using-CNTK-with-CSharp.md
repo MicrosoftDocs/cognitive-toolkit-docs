@@ -9,7 +9,7 @@ ms.service:
 ms.devlang:   csharp
 ---
 
-# C#/.NET Managed API
+# Using CNTK with C#/.NET API
 
 CNTK v2.2.0 provides C# API to build, train, and evaluate CNTK models. This section gives an overview of CNTK C# API. [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) are available in CNTK github repository.
 
@@ -147,11 +147,11 @@ Once you have gone through this overview, you may proceed with C# training examp
 ### work with CNTK source
 - Follow steps in this [page](Setup-CNTK-on-Windows.md) to setup CNTK on windows.
 - Build CNTK.sln with Visual Studio. 
-- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape).
+- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp).
 - Run examples as end-to-end tests in CNTKLibraryCSTrainingTest.csproj
 
 ### work with CNTK examples with CNTK NuGet
 - Download CNTK C# Training [examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp)
-- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCShape).
+- [Prepare sample data](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp).
 - Build and run the examples.
 
