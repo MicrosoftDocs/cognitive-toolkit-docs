@@ -9,12 +9,14 @@ ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
-#CNTK Multi-GPU Support with Keras
+# CNTK Multi-GPU Support with Keras
+
 Since CNTK 2.0, Keras can use CNTK as its back end, more details can be found [here](./using-cntk-with-keras.md). 
 As stated in [this article](./Multiple-GPUs-and-machines), CNTK supports parallel training on multi-GPU and multi-machine. This article elaborates how to conduct
 parallel training with Keras.
 
-**Step 1.**, create a Keras model
+**Step 1.** Create a Keras model
+
 As you see in the following code snippet, this step just uses Keras to build a model. 
 ```python
 model = Sequential()
@@ -31,10 +33,11 @@ model.compile(loss='categorical_crossentropy',
               metrics=['accuracy'])
 ```
 
-**Step 2.**, construct a distributed trainer
+**Step 2.** Construct a distributed trainer
+
 This step is a bit tricky, users need to explicitly construct a CNTK distributed trainer and provide it to Keras model generate in last step. Here, the trainer
 uses [BlockMomentumSGD algorithm](./Multiple-GPUs-and-machines#6-block-momentum-sgd). User can easily choose other parallel SGD algorithms support by CNTK.
-python```
+```python
 #create a CNTK distributed trainer
 model.model._make_train_function()
 trainer = model.model.train_function.trainer
@@ -47,8 +50,8 @@ model.model.train_function.trainer = C.trainer.Trainer(trainer.model,
 
 ```
 
-**Step 3.** partitioning and training 
-Since Keras does not provide data partitioning API, users must do it according to their requirements and design choices. Below is the function we used to partition data
+**Step 3.** Partitioning and training 
+Since Keras does not provide data partitioning APIs, users must do it according to their requirements and design choices. Below is the function we used to partition data
 in this example.
 ```python
 rank = C.Communicator.rank()
@@ -58,7 +61,7 @@ start = rank*total_items//workers
 end = min((rank+1)*total_items//workers, total_items)
 ```
 
-Similiar to Step 2, training uses standard Keras API just like single GPU training.
+Similiar to Step 2, training uses standard Keras APIs just like single GPU training.
 ```python
 history = model.fit(x_train[start : end], y_train[start : end],
                     batch_size=batch_size,
