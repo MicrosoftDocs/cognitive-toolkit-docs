@@ -20,7 +20,7 @@ Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply differen
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0.1](#anaconda2)
 
-# [CNTK 2.2](#tab/cntkpy21)
+# [CNTK 2.2](#tab/cntkpy22)
 
 |Python | Flavor | URL
 |:------|:-------|:--------|
