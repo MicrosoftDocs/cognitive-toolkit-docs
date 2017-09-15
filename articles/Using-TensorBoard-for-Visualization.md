@@ -1,4 +1,4 @@
-﻿---
+---
 title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
@@ -56,8 +56,8 @@ The Trainer object will make sure to update the TensorBoardProgressWriter with t
             tensorboard_writer.write_value(p.uid + "/mean",  reduce_mean(p).eval(), minibatch_idx)
 ```
 
-To display images, you need to call TensorBoardProgressWriter.write_image() method. Below is an example, we use TensorBoard to display images from mnist data set.
-First, we read images from mnist data set and feed them as part of the model input
+To display images, you need to call TensorBoardProgressWriter.write_image() method. Below is an example, we use TensorBoard to display images from MNIST data set.
+First, we read images from MNIST data set and feed them as part of the model input
 
 ```python
     # Input variables denoting the features and label data
