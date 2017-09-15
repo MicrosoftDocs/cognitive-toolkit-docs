@@ -23,6 +23,23 @@ Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD L
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)
 
+# [CNTK 2.2](#tab/cntkpy22)
+
+|Python | Flavor | URL
+|:------|:-------|:--------|
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp27-cp27mu-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp27-cp27mu-linux_x86_64.whl` |
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp27-cp27mu-linux_x86_64.whl` |
+| 3.4 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp34-cp34m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp34-cp34m-linux_x86_64.whl` |
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp34-cp34m-linux_x86_64.whl` |
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp35-cp35m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp35-cp35m-linux_x86_64.whl` |
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp35-cp35m-linux_x86_64.whl` |
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.2-cp36-cp36m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.2-cp36-cp36m-linux_x86_64.whl` |
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.2-cp36-cp36m-linux_x86_64.whl` |
+
 # [CNTK 2.1](#tab/cntkpy21)
 
 |Python | Flavor | URL
