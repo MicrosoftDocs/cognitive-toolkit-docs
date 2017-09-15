@@ -1,5 +1,5 @@
 ---
-title:   CNTK_2_1_Release_Notes
+title:   CNTK_2_2_Release_Notes
 author:    chazhang
 ms.author:   chazhang
 ms.date:   09/15/2017
