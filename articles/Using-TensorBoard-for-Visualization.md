@@ -77,7 +77,8 @@ First, we read images from MNIST data set and feed them as part of the model inp
         label_var: reader_train.streams.labels
     }
 ```
-For demonstration purpose only, this example outputs image data stored in model input and displays it in tensorboard. Users can use TensorBoard to display any images store in a NDArray.
+To serialize the image to tensorboard, users should fetch the image variable during training then call TensorBoardProgressWriter.write_image() 
+to display it. Users can fetch any intermedie variable as images, in the following example, the input_var has the images we want to serialize.
 ```python
     for epoch in range(max_epochs): 
         sample_count = 0
