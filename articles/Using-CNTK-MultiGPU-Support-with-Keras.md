@@ -55,6 +55,7 @@ model.model.train_function.trainer = C.trainer.Trainer(
 ```
 
 **Step 3.** Partitioning and training 
+
 Since Keras does not provide data partitioning APIs, users must do it according to their requirements and design choices. Note cntk.Communicator provides information 
 about all available GPUs(workers) and the GPU the process is currently running on(rank). Users make decision on their partition strategy based on worker and rank info 
 from CNTK. Below is the function that equally divides the whole data set for each GPU. 
@@ -69,7 +70,7 @@ start = rank*total_items//workers
 end = min((rank+1)*total_items//workers, total_items)
 ```
 
-Training just uses standard Keras APIs just like single GPU training. At end of training, call communicator.finalize() method to conclude.
+Training uses standard Keras APIs just like single GPU training. At end of training, call communicator.finalize() method to conclude.
 ```python
 history = model.fit(x_train[start : end], y_train[start : end],
                     batch_size=batch_size,
