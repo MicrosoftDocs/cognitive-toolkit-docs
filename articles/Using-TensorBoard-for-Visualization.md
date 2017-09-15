@@ -56,8 +56,10 @@ The Trainer object will make sure to update the TensorBoardProgressWriter with t
             tensorboard_writer.write_value(p.uid + "/mean",  reduce_mean(p).eval(), minibatch_idx)
 ```
 
-To display images, you need to call TensorBoardProgressWriter.write_image() method. Below is an example, we use TensorBoard to display images from MNIST data set.
-First, we read images from MNIST data set and feed them as part of the model input
+Since CNTK 2.2, you can use TensorBoard image feature for CNTK. To display images, you need to call TensorBoardProgressWriter.write_image() method. 
+Below is an example, we use TensorBoard to display images from MNIST data set.
+
+First, we read images from MNIST data set and feed them as part of the model input.
 
 ```python
     # Input variables denoting the features and label data
@@ -77,8 +79,8 @@ First, we read images from MNIST data set and feed them as part of the model inp
         label_var: reader_train.streams.labels
     }
 ```
-To serialize the image to tensorboard, users should fetch the image variable during training then call TensorBoardProgressWriter.write_image() 
-to display it. Users can fetch any intermedie variable as images, in the following example, the input_var has the images we want to serialize.
+To serialize the image to tensorboard, you should fetch the image variable during training then call TensorBoardProgressWriter.write_image() 
+to display it. You can fetch any intermedie variable as images, in the following example, the input_var has the images we want to serialize.
 ```python
     for epoch in range(max_epochs): 
         sample_count = 0
