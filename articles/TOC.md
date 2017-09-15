@@ -31,6 +31,7 @@
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
 
 # [Examples](/cognitive-toolkit/Examples)
+# [Manuals](https://cntk.ai/pythondocs/manuals.html)
 
 # Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
