@@ -11,6 +11,41 @@ ms.devlang:   NA
 
 # News
 
+## September 2017
+***2017-09-15.* CNTK 2.2**  
+Release of Cognitive Toolkit v.2.2.
+
+Highlights:
+* Documentation
+  - Add HTML version of tutorials and manuals so that they can be searchable
+  - Updated evaluation documents
+* System
+  - 16bit support for training on Volta GPU (limited functionality)    
+  - Support for NCCL 2
+  - CNTK learner interface update
+  - C#/.NET API that enables people to build and train networks
+  - R-binding for CNTK
+* Examples
+  - Object Detection with Fast R-CNN and Faster R-CNN
+  - New C++ Eval Examples
+  - New C# Eval examples
+* Operations
+  - Noise contrastive estimation node
+  - Improved AttentionModel
+  - Aggregation on sparse gradient for embedded layer
+  - Reduced rank for convolution in C++ to enable convolution on 1D data
+  - Dilated convolution (GPU only)
+  - Free static axes support for convolution
+  - Deterministic Pooling
+* Performance
+  - Intel MKL update to improve inference speed on CPU by around 2x on AlexNet
+* Keras and Tensorboard
+  - Multi-GPU support for Keras on CNTK
+  - Tensorboard image support for CNTK
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_2_Release_Notes).  
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
 ## July 2017
 ***2017-07-31.* CNTK 2.1**  
 Release of Cognitive Toolkit v.2.1.

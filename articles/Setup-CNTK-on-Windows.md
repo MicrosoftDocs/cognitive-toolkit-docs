@@ -137,13 +137,23 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
     setx PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
 ```
 
+## OpenCV
+
+Since CNTK 2.2, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/) .
+
+Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
+
+```
+setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
+```
+
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
 
 ## GPU Specific Packages
 
 This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs.
 
-If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#optional-opencv). Otherwise proceed further.
+If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#optional-swig). Otherwise proceed further.
 
 ### Checking your GPU compatibility
 
@@ -220,19 +230,9 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.
 
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
 
-## OPTIONAL. OpenCV
-
-If you want to build the **CNTK Image Reader**, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/) as well as support for the *ZIP file format* (see the next section).
-
-Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
-
-```
-setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
-```
-
 ## OPTIONAL. zlib and libzip
 
-If you plan to build the **CNTK Image Reader** you require OpenCV libraries (see above) as well as the [zlib](http://zlib.net/) and [libzip](http://nih.at/libzip/) libraries. 
+If you plan to build the **CNTK Image Reader** you require [zlib](http://zlib.net/) and [libzip](http://nih.at/libzip/) libraries. 
 
 ## zlib and libzip
 

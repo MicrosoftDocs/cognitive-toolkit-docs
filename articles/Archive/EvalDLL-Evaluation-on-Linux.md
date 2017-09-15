@@ -26,6 +26,6 @@ Any program using the evaluation library needs to link the libraries `Cntk.Core`
 ```
 -lCntk.Eval-<VERSION> -lCntk.Math-<VERSION>
 ```
-, and set the appropriate search path for these libraries. Please use the same build flavor (Debug/Release) and [the same compiler version](../Setup-CNTK-on-Linux.md#c-compiler) as the one used to create the libraries. The [CPPEvalClient](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) in the CNTK source code illustrates the usage pattern in Linux. The [Makefile](https://github.com/Microsoft/CNTK/blob/master/Makefile) contains the target EVAL_SAMPLE_CLIENT showing how to build the example.
+, and set the appropriate search path for these libraries. Please use the same build flavor (Debug/Release) and [the same compiler version](../Setup-CNTK-on-Linux.md#c-compiler) as the one used to create the libraries. The [CPPEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) in the CNTK source code illustrates the usage pattern in Linux. The [Makefile](https://github.com/Microsoft/CNTK/blob/master/Makefile) contains the target EVAL_SAMPLE_CLIENT showing how to build the example.
 
 For details on the C++ API provided by EvalDll, please refer to the [EvalDll C++ API](./EvalDll-Native-API.md) page.

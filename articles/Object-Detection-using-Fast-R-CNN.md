@@ -198,7 +198,7 @@ and run `python run_fast_rcnn.py`.
 
 The Fast R-CNN algorithm is explained in the [Algorithm details](#algorithm-details) section together with a high level overview of how it is implemented in the CNTK Python API. This section focuses on configuring Fast R-CNN and how to you use different base models.
 
-### Configuration and Parameters
+### Parameters
 
 The parameters are grouped into three parts:
 
@@ -453,4 +453,3 @@ ranking of examples. It should be noted that to obtain a high
 score, a method must have precision at all levels of recall –
 this penalizes methods which retrieve only a subset of examples
 with high precision (e.g. side views of cars)._
-
