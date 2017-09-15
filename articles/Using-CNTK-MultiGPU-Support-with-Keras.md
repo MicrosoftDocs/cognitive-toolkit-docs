@@ -36,8 +36,7 @@ model.compile(loss='categorical_crossentropy',
 **Step 2.** Construct a distributed trainer
 
 This step is a bit tricky, users need to explicitly construct a CNTK distributed trainer and provide it to Keras model generated in last step. To do that, we obtain the
-universal learner from cntk_keras backend, wrapper it with distributed learners and feed it back to the trainer. In the example, the trainer
-uses [BlockMomentumSGD algorithm](./Multiple-GPUs-and-machines#6-block-momentum-sgd). User can choose other parallel SGD algorithms support by CNTK as well.
+universal learner from cntk_keras backend, wrapper it with distributed learners and feed it back to the trainer.
 ```python
 #create a CNTK distributed trainer
 model.model._make_train_function()
@@ -48,7 +47,7 @@ assert (learner_no > 0), "No learner in the trainer."
 if(learner_no > 1):
     warnings.warn("Unexpected multiple learners in a trainer.")
 learner = trainer.parameter_learners[0]
-dist_learner = C.train.distributed.data_parallel_distributed_learner(learner,
+dist_learner = C.train.distributed.data_parallel_distributed_learner(learner
                                                      num_quantization_bits=32,
                                                          distributed_after=0)
 model.model.train_function.trainer = C.trainer.Trainer(
