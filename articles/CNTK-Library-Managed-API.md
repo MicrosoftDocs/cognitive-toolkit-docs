@@ -1,5 +1,5 @@
 ---
-title:   CNTK Library Eval C# API
+title:   CNTK Library C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/03/2017
@@ -9,9 +9,355 @@ ms.service:  Cognitive-services
 ms.devlang:   csharp
 ---
 
-# CNTK Library Eval C# API
+# CNTK Library C# API
 
-The CNTK Library Managed Eval API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) presents how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+The CNTK Library Managed API is implemented in C#, and can be consumed by C# and other .NET languages. The page [Using the CNTK Library Managed API](./CNTK-Library-Evaluation-on-Windows.md#using-cnet-managed-api) and [Using CNTK with C#](./Using-CNTK-with-CSharp.md) present how to use this API in your application. The following sections describe the classes and methods of the CNTK Library Managed Eval API.
+
+## class CNTKLib
+This is a static class contains many operations, initialization, and many miscellaneous methods.
+
+***
+```cs
+public static Function Negate(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise negate operation with the specified input operand.
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+ 
+***
+```cs
+public static Function Sigmoid(Variable operand, string name = "")
+```
+
+Sigmoid operation. It takes a input variable and applies Sigmoid operation to it.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Tanh(Variable operand, string name)
+```
+
+Tanh activation. It takes a input variable and applies Tanh operation to it.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Asin(Variable operand, string name = "");
+```
+
+Create an instance of the CNTK built-in elementwise asin operation with the specified input operand.
+
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Sin(Variable operand, string name = "");
+``` 
+Create an instance of the CNTK built-in elementwise sine operation with the specified input operand.
+Parameters:
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Acos(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise acos operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Cos(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise cosine operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Cosh(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise cosh operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Sinh(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise sinh operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function ReLU(Variable operand, string name = "")
+```
+Rectifier linear activation. It takes a input variable and applies rectifier linear activation operation to it.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Exp(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise exp operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Log(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise log operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Square(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise square operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Sqrt(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise square-root operation with the specified input operand.
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Softmax(Variable operand, Axis axis, string name = "")
+```
+Create an instance of the CNTK built-in softmax operation on specified axis on a specified tensor input operand
+Parameters:
+* `operand`: The input variable of the operation. It can be the ouput of another function.
+* `axis`: The axis to apply softmax operation
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Hardmax(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in hardmax operation on specified tensor input operand
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Transpose(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in transpose operation on the specified 1D or 2D input operand
+* `operand`: The input variables. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Dropout(Variable operand, dropoutRate, uint seed, string name = "");
+```
+Create an instance of the dropout operation on specified tensor input operand
+* `operand`: The input variables. It can be the ouput of another function.
+* `dropoutRate`: 
+* `seed`:
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Reshape(Variable operand, NDShape replacementShape, Axis beginAxis, Axis endAxis, string name = "");
+```
+Create an instance of the reshape operation on specified tensor input operand
+
+***
+```cs
+public static Function Times(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in tensor multiplication operation with the specified input operands.
+
+***
+```cs
+public static Function TransposeTimes(Variable leftOperand, Variable rightOperand, uint outputRank, string name = "");
+```
+Create an instance of the CNTK built-in matrix multiplication operation with the transpose of the left input operand
+and the specified right operand. Only accepts left operands of ranks 1 or 2.
+
+***
+```cs
+public static Function Plus(Variable leftOperand, Variable rightOperand, string name = "")
+```
+A binary elementwise tensor addition operation. 
+Parameters:
+* `leftOperand`: The left variable of the plus operation. It can be the ouput of another function.
+* `rightOperand`: The left variable of the plus operation. It can be the ouput of another function.
+* `name`: the name of the operation.
+
+***
+```cs
+public static Function Minus(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise tensor subtraction operation with the specified input operands.
+
+***
+```cs
+public static Function LogAddExp(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise tensor operation that computes the log of the sum of the exponentials of the specified input operands.
+
+***
+```cs
+public static Function Pow(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise tensor operation that computes the leftOperand raised to the power of the right operand.
+
+***
+```cs
+public static Function ElementTimes(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise multiplication operation on specified tensor input operands.
+
+***
+```cs
+public static Function ElementDivide(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise division operation on specified tensor input operands.
+
+***
+```cs
+public static Function CosineDistance(Variable leftOperand, Variable rightOperand, string name = "");
+```
+Create an instance of the CNTK built-in operation to compute the cosine distance for the specified input operands.
+
+***
+```cs
+public static Function CosineDistanceWithNegativeSamples(Variable leftOperand, Variable rightOperand, uint shiftWindow, uint numberOfNegativeSamples, string name = "");
+```
+Create an instance of the CNTK built-in operation to compute the cosine distance with negative samplesfor the specified input operands.
+
+***
+```cs
+public static Function BinaryCrossEntropy(Variable prediction, Variable targets, string name = "");
+```
+Create an instance of the CNTK built-in operation to compute binary cross-entropy for specified input operands.
+
+***
+```cs
+public static Function WeightedBinaryCrossEntropy(Variable prediction, Variable targets, Variable weights, string name = "");
+```
+Create an instance of the CNTK built-in operation to compute weighted binary cross-entropy for specified input operands.
+
+***
+```cs
+public static Function CrossEntropyWithSoftmax(Variable prediction, Variable labels, Axis axis, string name = "");
+```
+Create an instance of the CNTK built-in operation to compute cross-entropy with softmax for specified input operands.
+
+***
+```cs
+public static Function ClassificationError(Variable prediction, Variable labels, uint topN, Axis axis, string name = "");
+```
+Create an instance of the CNTK built-in operation for computing the classification prediction error for specified operands.
+
+***
+```cs
+public static Function PastValue(Variable operand, Variable initialState, uint offset = 1, string name = "");
+```
+Create an instance of the CNTK built-in operation for getting the past value along the lone dynamic axis of the specified operand.
+
+***
+```cs
+public static Function FutureValue(Variable operand, Variable initialState, uint offset = 1, string name = "");
+```
+Create an instance of the CNTK built-in operation for getting the future value along the lone dynamic axis of the specified operand.
+
+***
+```cs
+public static Function Convolution(Variable convolutionMap,
+                                     Variable operand,
+                                     NDShape strides = { 1 },
+                                     BoolVector sharing = { true },
+                                     BoolVector autoPadding = { true },
+                                     NDShape dilation = { 1 },
+                                     uint reductionRank = 1,
+                                     uint maxTempMemSizeInSamples = 0,
+                                     string name = "");
+```
+Convolution
+
+***
+```cs
+public static Function ROIPooling(Variable operand,
+                                    Variable rois,
+                                    PoolingType poolingType,
+                                    NDShape roiOutputShape,
+                                    double spatialScale,
+                                    string name= "");
+```
+Create an instance of the CNTK built-in ROI pooling operation on specified tensor input operands with the specified output shape
+
+***
+```cs
+public static Function Pooling(Variable operand,
+                                 PoolingType poolingType,
+                                 NDShape poolingWindowShape,
+                                 NDShape strides = {1},
+                                 BoolVector autoPadding = {false},
+                                 const bool ceilOutDim = false,
+                                 const bool includePad = false,
+                                 string name = "");
+```
+
+***
+```cs
+public static Function BatchNormalization(Variable operand,
+                                            Variable scale,
+                                            Variable bias,
+                                            Variable runningMean,
+                                            Variable runningInvStd,
+                                            Variable runningCount,
+                                            bool spatial,
+                                            double normalizationTimeConstant = 0,
+                                            double blendTimeConstant = 0,
+                                            double epsilon = 0.00001,
+                                            bool useCuDNNEngine = true,
+                                            string name = "");
+```
+
+***
+```cs
+public static Function Splice(VariableVector operands, Axis axis, string name = "");
+```
+Create an instance of the CNTK built-in splice operation to splice together all the specified tensor operands into a single output tensor
+
+***
+```cs
+public static Function Combine(VariableVector operands, string name = "");
+```
+Create a new Function instance which just combines the outputs of the specified list of 'operands' Functions such that the 'Outputs' of the
+new 'Function' are union of the 'Outputs' of each of the specified 'operands' Functions.
+E.g. When creating a classification model, typically the CrossEntropy loss Function and the ClassificationError Function comprise the two roots
+of the computation graph which can be "Combine"d to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
+
+***
+```cs
+public static Function LeakyReLU(Variable operand, string name = "");
+```
+Create an instance of the CNTK built-in elementwise leaky linear rectifier operation with the specified input operand.
+
+## class Learner
+
 
 ## class Function
 
