@@ -29,7 +29,7 @@ a_lstm = Sequential([ Embedding(500), BiRecurrence(LSTM(300), LSTM(300)), Dense(
 q_embed = q_lstm(question)
 a_embed = a_lstm(answer) 
 ```
-where `BiRecurrence` is a convenience function that you can find in the solution of the third task of [this tutorial](https://github.com/Microsoft/CNTK/blob/release/2.1/Tutorials/CNTK_202_Language_Understanding.ipynb). It runs one LSTM forward, another LSTM backward and concatenates the results. After this preprocessing we have a variable-length sequence of 200 dimensional vectors for the query and another variable length sequence of 200 dimensional vectors for the answer.
+where `BiRecurrence` is a convenience function that you can find in the solution of the third task of [this tutorial](https://github.com/Microsoft/CNTK/blob/release/2.2/Tutorials/CNTK_202_Language_Understanding.ipynb). It runs one LSTM forward, another LSTM backward and concatenates the results. After this preprocessing we have a variable-length sequence of 200 dimensional vectors for the query and another variable length sequence of 200 dimensional vectors for the answer.
 
 To implement an attention mechanism we need to compute scalar values for each position and exponentiate them with an appropriate correction so that the sum of their exponentials equals 1.
 ```python

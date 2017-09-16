@@ -14,6 +14,7 @@
 #### [Manual Install](/cognitive-toolkit/Setup-Linux-Binary-Manual)
 ### [Test Installation From Python](/cognitive-toolkit/Setup-Test-Python)
 ## [Using CNTK from Python](https://cntk.ai/pythondocs/gettingstarted.html)
+## [Using CNTK from C#](./Using-CNTK-with-CSharp.md)
 ## [Using Keras](./Using-CNTK-with-Keras.md)
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
@@ -30,6 +31,7 @@
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
 
 # [Examples](/cognitive-toolkit/Examples)
+# [Manuals](https://cntk.ai/pythondocs/manuals.html)
 
 # Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
@@ -95,12 +97,13 @@
 #### [Plot command](/cognitive-toolkit/Plot-command)
 #### [BrainScript via command line](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
+## [C#/.Net](./CNTK-Library-Managed-API.md)
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
 ### [Model Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
 ### [Model Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
 ### [NuGet Package](/cognitive-toolkit/NuGet-Package)
 ### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
-### [CNTK Library C# Eval interface](/cognitive-toolkit/CNTK-Library-Managed-API)
+### [CNTK Library C# interface](/cognitive-toolkit/CNTK-Library-Managed-API)
 ### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
 ### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 ### [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
@@ -152,6 +155,7 @@
 ## [Conference appearances](/cognitive-toolkit/Conference-Appearances)
 ## [Presentations](/cognitive-toolkit/Presentations)
 ## [Releases](https://github.com/Microsoft/CNTK/releases)
+### [CNTK 2.2 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_2_Release_Notes)
 ### [CNTK 2.1 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_1_Release_Notes)
 ### [CNTK 2.0 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Release_Notes)
 ### [CNTK 2.0 RC 3 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_RC_3_Release_Notes)

@@ -22,7 +22,7 @@ For legacy applications that are still using EvalDll, The [EvalClients.sln](http
  
 On Windows, the solution file [EvalClients.sln](https://github.com/Microsoft/CNTK/blob/release/2.1/Examples/Evaluation/EvalClients.sln) is used to build and run samples. Please note 
 - You need Visual Studio 2015 Update 3 for using these samples.
-- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](../Troubleshoot-CNTK.md) page for more information.
+- The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](./Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\..\X64\CPPEvalClient.Release\CppEvalClient.exe. 
 
 On Linux, please refer to the `Makefile` for building samples. The target name EVAL_CLIENT, and EVAL_EXTENDED_CLIENT are used to build these projects. 
