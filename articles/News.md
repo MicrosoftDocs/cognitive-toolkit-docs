@@ -37,6 +37,7 @@ Highlights:
   - Dilated convolution (GPU only)
   - Free static axes support for convolution
   - Deterministic Pooling
+  - Add Crop Node to Python API
 * Performance
   - Intel MKL update to improve inference speed on CPU by around 2x on AlexNet
 * Keras and Tensorboard
