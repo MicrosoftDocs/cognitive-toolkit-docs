@@ -12,6 +12,9 @@ ms.devlang:   NA
 # News
 
 ## September 2017
+***2017-09-24.* CNTK R-binding**  
+CNTK R-binding is released at: https://github.com/Microsoft/CNTK-R. 
+
 ***2017-09-15.* CNTK 2.2**  
 Release of Cognitive Toolkit v.2.2.
 
