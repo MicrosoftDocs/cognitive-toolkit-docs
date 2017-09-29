@@ -7,15 +7,16 @@ ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
 ms.devlang:   brainscript, python
+ms.description: Explains how to use TensorBoard with the Cognitive Toolkit for Visualization of Neural Network state
 ---
 
 # Using TensorBoard for Visualization
 
-[TensorBoard](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/tensorboard/README.md) is a suite of visualization tools that makes it easier to understand and debug deep learning programs. For example, it allows viewing the model graph, plotting various scalar values as the training progresses, and visualizing the embeddings. 
+[TensorBoard](https://github.com/tensorflow/tensorboard/blob/master/README.md) is a suite of visualization tools that makes it easier to understand and debug deep learning programs. For example, it allows viewing the model graph, plotting various scalar values as the training progresses, and visualizing the embeddings. 
 
 ## Python
 
-[TensorBoardProgressWriter](https://cntk.ai/pythondocs/cntk.utils.html#cntk.utils.progress_print.TensorBoardProgressWriter) class in Python now supports output in the native TensorBoard format, thus enabling rich visualization capabilities for CNTK jobs. At present, TensorBoardProgressWriter can be used to:
+[TensorBoardProgressWriter](https://docs.microsoft.com/en-us/python/api/cntk.logging.progress_print.tensorboardprogresswriter) class in Python now supports output in the native TensorBoard format, thus enabling rich visualization capabilities for CNTK jobs. At present, TensorBoardProgressWriter can be used to:
 * Record model graph.
 * Record arbitrary scalar values during training.
 * Automatically record the values of a loss function and error rate during training.
