@@ -137,18 +137,6 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
     setx PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
 ```
 
-## OpenCV
-
-Since CNTK 2.2, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/) .
-
-Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
-
-```
-setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
-```
-
-Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\protobuf-3.1.0-vs15\bin` will succeed.
-
 ## GPU Specific Packages
 
 This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs.
@@ -229,6 +217,22 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\swigwin-3.
 ```
 
 Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\swigwin-3.0.10\swig.exe` will succeed and show one file.
+
+## OPTIONAL. OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3.
+
+You need to install OpenCV for CNTK 2.3, if you want to build any of the the following:
+- CNTK Image Reader
+- CNTK Image Writer - required to use Tensorboard's Image feature.
+
+Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
+
+```
+setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
+```
+
+Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\Opencv3.1.0\build` will succeed.
 
 ## OPTIONAL. zlib and libzip
 
