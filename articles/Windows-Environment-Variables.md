@@ -23,7 +23,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |CUDNN_PATH | C:\local\cudnn-8.0-v6.0\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
 |CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
 |CUDA_PATH_V8_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-8) (required for GPU build)
-|MKLML_PATH | C:\local\mklml\mklml_win_2018.0.1.20171007 |[MKLML]( ./Setup-CNTK-on-Windows.md#MKL) (required)
+|MKLML_PATH | C:\local\mklml\mklml_win_2018.0.1.20171007 |[MKLML]( ./Setup-CNTK-on-Windows.md#mkl) (required)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build and TensorBoard's Image feature)
 |PROTOBUF_PATH | c:\local\protobuf-3.1.0-vs15 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
 |SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#optional-swig) (required for CNTK Python, Java, and C#/.NET support)
