@@ -84,23 +84,23 @@ setx CNTK_ENABLE_ASGD false
 
 ##  MKL
 
-The default CNTK math library is the [Intel Math Kernel Library (MKL)](https://software.intel.com/en-us/intel-mkl/). CNTK uses Intel MKL through a custom library version ("CNTK custom MKL"), allowing you to build CNTK without downloading the complete Intel MKL software distribution. The custom version of MKL for CNTK contains just the functionality used by CNTK and is therefore much smaller. If you want to build with the complete Intel MKL distribution, you will need to adapt the CNTK build process. If you need to build your own custom version, you can find the needed information [here](https://github.com/Microsoft/CNTK/tree/master/Dependencies/CNTKCustomMKL).
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
+CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases).
 
-Installing the CNTK custom MKL library: 
+Installing the MKLML library: 
 
-* Create a directory on your machine to hold CNTK custom MKL versions, e.g.: 
-
-```
-    mkdir c:\local\CNTKCustomMKL
-```
-
-* Set the environment variable `CNTK_MKL_PATH` to point to this directory: 
+* Create a directory on your machine to hold MKLML, e.g.:
 
 ```
-    setx CNTK_MKL_PATH c:\local\CNTKCustomMKL
+    mkdir c:\local\mklml
 ```
 
-* Download the file [CNTKCustomMKL-Windows-3.zip](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/).
+* Download the file [mklml_win_2018.0.1.20171007.zip](https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_win_2018.0.1.20171007.zip). Unzip it into your MKLML path, creating a versioned sub directory within.
+* Set the environment variable `MKLML_PATH` to the versioned sub directory, e.g.:
+
+```
+    setx MKLML_PATH c:\local\mklml\mklml_win_2018.0.1.20171007
+```
 
 ## MS-MPI
 
