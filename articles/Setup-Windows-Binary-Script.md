@@ -17,7 +17,7 @@ This page will walk you through the process of installing the Microsoft Cognitiv
 
 If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-> These instructions apply to release 2.2.
+> These instructions apply to release 2.3.
 
 **Step 1: Download and prepare the Microsoft Cognitive Toolkit**
 

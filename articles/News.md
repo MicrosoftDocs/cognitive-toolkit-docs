@@ -11,6 +11,22 @@ ms.devlang:   NA
 
 # News
 
+## November 2017
+***2017-11-22.* CNTK 2.3**
+Release of Cognitive Toolkit v.2.3.
+
+Highlights:
+* Better ONNX support.
+* Switched to NCCL2 for better performance in distributed training.
+* Improved C# API.
+* OpenCV is not required to install CNTK, it is only required for Tensorboard Image feature and image reader.
+* Various performance improvement.
+* Added Network Optimization API.
+* Faster Adadelta for sparse.
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_3_Release_Notes).  
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
 ## September 2017
 ***2017-09-15.* CNTK 2.2**  
 Release of Cognitive Toolkit v.2.2.

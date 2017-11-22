@@ -28,4 +28,4 @@ The CNTK UWP library currently provides C++ APIs for model evaluation on UWP. It
 
 ## Examples
 
-The [UWPImageRecognition folder] (https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/UWPImageRecognition) contains an example for using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.
+The [UWPImageRecognition folder] (https://github.com/Microsoft/CNTK/tree/release/2.3/Examples/Evaluation/UWPImageRecognition) contains an example for using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.

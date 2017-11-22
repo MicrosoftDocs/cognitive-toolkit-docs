@@ -15,7 +15,7 @@ If you want to use Python Tools for Visual Studio (PTVS):
 * First determine your path to Visual studio (like: "c:\Program Files (x86)\Microsoft Visual Studio 14.0").  Take that path and create an environment variable named MYVSPATH.  `set MYVSPATH=thePathToVSDescribedAbove`. 
 * If you have a source install, make sure you have set PYTHONPATH from [here](./Setup-CNTK-on-Windows.md#pythonpath):
 * Next get the path to your CNTK installation:
- * If you have a binary install, (take a look in c:\local). For example if you installed CNTK 2.2, you would have a path like: c:\local\CNTK-2-2-Windows-64bit-GPU.  Take that path and create an environment variable named MYCNTKPATH:  `set MYCNTKPATH=thePathToCNTKDescribedAbove`.  
+ * If you have a binary install, (take a look in c:\local). For example if you installed CNTK 2.3, you would have a path like: c:\local\CNTK-2-3-Windows-64bit-GPU.  Take that path and create an environment variable named MYCNTKPATH:  `set MYCNTKPATH=thePathToCNTKDescribedAbove`.  
  * If you have a source install, find the path just above where you cloned.  That is just above the cntk dir. Take that path and create an environment variable named MYCNTKPATH: `set MYCNTKPATH=thePathToCNTKDescribedAbove`.   
 * Next Setup your environment with `%MYVSPATH%\vc\vcvarsall.bat amd64`.  
 * Next depending on your install type:
