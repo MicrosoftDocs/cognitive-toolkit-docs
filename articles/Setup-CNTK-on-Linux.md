@@ -86,31 +86,27 @@ Install Git on your system as described <a href="https://git-scm.com/download/li
 ## MKL
 
 The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
-CNTK supports using the Intel MKL via a custom library version ("CNTK custom MKL").
+CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases).
 
-> [!IMPORTANT]
-> You can NOT directly build CNTK using a regular installed Intel MKL SDK, the build is configured to work with a custom generated CNTK custom MKL library (This way you don't need to go through the process of installing the complete Intel MKL SDK). You can obtain the CNTK custom MKL library if you follow the steps below. If you need to build your own custom version, you can find the needed information [here](https://github.com/Microsoft/CNTK/tree/master/Dependencies/CNTKCustomMKL).
+Installing the MKLML library: 
 
-Installing the CNTK custom MKL library: 
-
-* Create a directory on your machine to hold CNTK custom MKL versions, e.g.:
+* Create a directory on your machine to hold MKLML, e.g.:
 
 ```
-sudo mkdir /usr/local/CNTKCustomMKL
+sudo mkdir /usr/local/mklml
 ```
 
-* Download the required CNTK custom MKL from the [CNTK web site](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/).
-  Un-tar it into your CNTK MKL path, creating a numbered sub directory within.
-  For example, if you are on latest master, download `CNTKCustomMKL-Linux-3.tgz` and extract its contents to `/usr/local/CNTKCustomMKL`, which should create a folder `/usr/local/CNTKCustomMKL/3` within:
+* Download the required MKLML v0.11 from the [MKLML web site](https://github.com/01org/mkl-dnn/releases).
+  Un-tar it into your MKLML path, creating a versioned sub directory within.
 
 ```
-sudo tar -xzf CNTKCustomMKL-Linux-3.tgz -C /usr/local/CNTKCustomMKL
+sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_lnx_2018.0.1.20171007.tgz
+sudo tar -xzf mklml_lnx_2018.0.1.20171007.tgz -C /usr/local/mklml
 ```
 
-  Note: if you want to build other CNTK source versions, you may need to install alternate CNTK custom MKL versions.
-  Check the variable `cntk_custom_mkl_version` in CNTK's configuration script `configure` to determine which.
+  Note: if you want to build with different MKLML versions,
 
-* When configuring the build (cf. below), specify the option `--with-mkl` or `--with-mkl=<directory>`, e.g., `--with-mkl=/usr/local/CNTKCustomMKL`.
+* When configuring the build (cf. below), specify the option `--with-mkl` or `--with-mkl=<directory>`, e.g., `--with-mkl=/usr/local/mkl/<different version>`.
 
 ## Open MPI
 
@@ -216,43 +212,6 @@ cd boost_1_60_0
 ./bootstrap.sh --prefix=/usr/local/boost-1.60.0
 sudo ./b2 -d0 -j"$(nproc)" install  
 ```
-
-## OpenCV
-
-Since CNTK 2.2, you need to install [Open Source Computer Vision (OpenCV)](http://opencv.org/).
-
-If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-8)
-
-OpenCV can have many interfaces and options.
-In this section we cover only parts necessary to build CNTK.
-Read more about installing OpenCV [here](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) and more generally [here](http://docs.opencv.org/3.1.0/df/d65/tutorial_table_of_content_introduction.html).
-
-> [!IMPORTANT]
-> Install OpenCV using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
-
-* Install OpenCV prerequisites. See [OpenCV installation instructions](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) for the full package list and explanations. See your platform documentation on how to install the packages. 
-
-Example: for Ubuntu use the following command:
-
-```
-sudo apt-get install cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-```
-
-* Get OpenCV and install it. Use the following commands:
-
-```
-wget https://github.com/Itseez/opencv/archive/3.1.0.zip
-unzip 3.1.0.zip
-cd opencv-3.1.0
-mkdir release
-cd release
-cmake -D WITH_CUDA=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local/opencv-3.1.0 ..
-make all
-sudo make install
-```
-
-Note that in the instructions above we suggest using "plain" `make` rather than `make -j`. We found that using `make -j` with OpenCV results in unstable system behavior and may result in a build failure and system crash.
-
 
 ----------
 ## GPU Specific Packages
@@ -460,23 +419,26 @@ sudo cp -r cuda /usr/local/cudnn-6.0
 export LD_LIBRARY_PATH=/usr/local/cudnn-6.0/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
-----------
 
-## OPTIONAL. NCCL
+### OPTIONAL. NCCL
 
 [NVIDIA's NCCL library](https://github.com/NVIDIA/nccl) provides optimized primitives for collective
 multi-GPU communication on Linux.
 CNTK can take advantage of these accelerated primitives for parallel jobs running on a single host
 (cf. [here](./Multiple-GPUs-and-machines.md) for an introduction into parallel training with CNTK).
 
-Please follow build instructions [here](https://github.com/NVIDIA/nccl) to build the NVIDIA NCCL library.
+Please follow instructions [here](https://github.com/NVIDIA/nccl) to download the NVIDIA NCCL library.
 Then, use the CNTK configure option `--with-nccl=<path>` to enable building with NVIDIA NCCL.
-For example, if NCCL builds outputs are in folder `$HOME/nccl/build`, use
-`configure --with-nccl=$HOME/nccl/build` (plus additional options) to build with NVIDIA NCCL support.
+For example, if NCCL are installed in folder other than the default folder `/usr`, use
+`configure --with-nccl=<nccl install folder>` (plus additional options) to build with NVIDIA NCCL support.
 
 > [!NOTE]
 > Currently, CNTK's support for NVIDIA NCCL is limited to data-parallel SGD with 32/64 gradient bits, using
 the CNTK binary. Support for additional parallelization methods and CNTK v2 will be added in the future.
+> The official release of CNTK is built with NCCL enabled. All linux Python wheels already include NCCL binary. 
+For Brainscript users on Linux, NCCL needs to be installed.
+> If user prefers to not use NCCL, please build CNTK from source. Note that configure automatically detects NCCL 
+installed under /usr, so please uninstall NCCL before build.
 
 This completes GPU Specific section
 
@@ -600,6 +562,48 @@ Minibatch: 60, Train Loss: 0.6558118438720704, Train Evaluation Criterion: 0.56
 ```
 
 ----------
+
+## OPTIONAL. OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3.
+
+You need to install OpenCV for CNTK 2.3, if you want to build any of the the following:
+- CNTK Image Reader
+
+- CNTK Image Writer - required to use Tensorboard's Image feature.
+
+
+If you plan to use both CUDA and OpenCV, [install CUDA first](#cuda-8)
+
+OpenCV can have many interfaces and options.
+In this section we cover only parts necessary to build CNTK.
+Read more about installing OpenCV [here](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) and more generally [here](http://docs.opencv.org/3.1.0/df/d65/tutorial_table_of_content_introduction.html).
+
+> [!IMPORTANT]
+> Install OpenCV using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
+
+* Install OpenCV prerequisites. See [OpenCV installation instructions](http://docs.opencv.org/3.1.0/d7/d9f/tutorial_linux_install.html) for the full package list and explanations. See your platform documentation on how to install the packages. 
+
+Example: for Ubuntu use the following command:
+
+```
+sudo apt-get install cmake libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+```
+
+* Get OpenCV and install it. Use the following commands:
+
+```
+wget https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip 3.1.0.zip
+cd opencv-3.1.0
+mkdir release
+cd release
+cmake -D WITH_CUDA=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local/opencv-3.1.0 ..
+make all
+sudo make install
+```
+
+Note that in the instructions above we suggest using "plain" `make` rather than `make -j`. We found that using `make -j` with OpenCV results in unstable system behavior and may result in a build failure and system crash.
 
 ## OPTIONAL. Java
 

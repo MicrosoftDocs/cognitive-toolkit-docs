@@ -11,7 +11,7 @@ ms.devlang:   brainscript, python, cpp
 # Setup Windows binary manual
 
 > [!NOTE]
-> These instructions apply to release 2.2.
+> These instructions apply to release 2.3.
 
 ## Windows manual installation from binary distribution
 
