@@ -90,6 +90,12 @@ If no data unit is specified, the default data unit is in samples.
 - Covers most vision models such as Resnet, Inception, and VGG (only model saved in V2 CNTK format).
 - Fixed several bugs.
 
+## Tutorials
+- Sequence classification tutorial 
+- DSSM tutorial 
+- WGAN and LSGAN tutorial 
+- Super Resolution using CNN and GAN tutorial 
+
 ## Dependencies
 ### Removed OpenCV dependency from CNTK core.
 - CNTK 2.2 requires you to install OpenCV to use CNTK but it is optional for CNTK 2.3
