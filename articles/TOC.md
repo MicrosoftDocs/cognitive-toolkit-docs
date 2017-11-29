@@ -33,6 +33,9 @@
 # [Examples](/cognitive-toolkit/Examples)
 # [Manuals](https://cntk.ai/pythondocs/manuals.html)
 
+# [Train/Develop]
+# [Evaluate/Deploy]
+
 # Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
 ## [CNTK model format](/cognitive-toolkit/CNTK-model-format)
