@@ -42,12 +42,12 @@
 
 # Evaluate/Deploy
 
-# Reference
+# API Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
-## [CNTK model format](/cognitive-toolkit/CNTK-model-format)
-## [Python](https://cntk.ai/pythondocs/)
+## [CNTK Model Format](/cognitive-toolkit/CNTK-model-format)
+## Python
 ### [Working with Sequences](https://cntk.ai/pythondocs/sequence.html)
-### [Layers library reference](https://cntk.ai/pythondocs/layerref.html)
+### [Layers Library Reference](https://cntk.ai/pythondocs/layerref.html)
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
