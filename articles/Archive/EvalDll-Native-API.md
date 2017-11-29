@@ -92,4 +92,4 @@ IEvaluateModelD : IEvaluateModel<double> // Assumes data elements of type double
 ```
 
 ## Example
-The [CPPEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) program located in the folder [Examples/Evaluation/LegacyEvalDll/CPPEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) demonstrates the usage of this evaluation interface.
+The [CPPEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.3/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) program located in the folder [Examples/Evaluation/LegacyEvalDll/CPPEvalClient](https://github.com/Microsoft/CNTK/tree/release/2.3/Examples/Evaluation/LegacyEvalDll/CPPEvalClient) demonstrates the usage of this evaluation interface.

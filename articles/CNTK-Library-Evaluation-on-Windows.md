@@ -83,7 +83,7 @@ For desktop C++ applications, the following DLLs need to be distributed with you
 * `Cntk.Core-<VERSION>.dll`
 * `Cntk.Math-<VERSION>.dll`
 * `libiomp5md.dll`
-* `mkl_cntk_p.dll`
+* `mklml.dll`
 
 If you use the C#/.NET Managed Library, beside the DLLs mentioned above, you need to additionally include the following DLLs:
 * `Cntk.Core.Managed-<VERSION>.dll`

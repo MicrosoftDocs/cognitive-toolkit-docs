@@ -33,9 +33,9 @@ This release contains the following **breaking changes**:
 
 ## New and updated features
 
-* Preview of Reinforcement learning framework for CNTK. See details [here](https://github.com/Microsoft/CNTK/blob/release/2.1/bindings/python/cntk/contrib/deeprl/README.md). Please, be aware, that this is the first preview, and many changes are likely in the future
-* More flexible Python-based user deserializer. See the [manual](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_write_a_custom_deserializer.ipynb) for detailed information
-* Caffe to CNTK model converter. See the [Converter ReadMe](https://github.com/Microsoft/CNTK/blob/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/README.md). Examples illustrating the usage of the converter are available in [CNTK Codebase](https://github.com/Microsoft/CNTK/tree/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/examples). 
+* Preview of Reinforcement learning framework for CNTK. See details [here](https://github.com/Microsoft/CNTK/tree/release/2.1/bindings/python/cntk/contrib/deeprl/README.md). Please, be aware, that this is the first preview, and many changes are likely in the future
+* More flexible Python-based user deserializer. See the [manual](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_write_a_custom_deserializer.ipynb) for detailed information
+* Caffe to CNTK model converter. See the [Converter ReadMe](https://github.com/Microsoft/CNTK/tree/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/README.md). Examples illustrating the usage of the converter are available in [CNTK Codebase](https://github.com/Microsoft/CNTK/tree/release/2.1/bindings/python/cntk/contrib/crosstalkcaffe/examples). 
 * Reduction over multiple axes:
   * Computes the mean of the input tensor's elements across the specified axis
   * Computes the mean of the input tensor's elements across a specified axis or a list of specified axes 
@@ -70,16 +70,16 @@ Version 2.1 introduces the following improvements for the [CNTK backend for Kera
 
 #### Manuals
 
-* [How to train model using declarative and imperative API](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_train_using_declarative_and_imperative_API.ipynb)
-* [How to create user minibatch sources](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_create_user_minibatch_sources.ipynb)
-* [How to feed data](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_feed_data.ipynb)
-* [Debugging CNTK programs](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_debug.ipynb)
-* [How to use learners](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_use_learners.ipynb)
-* [How to write a custom deserializer](https://github.com/Microsoft/CNTK/blob/release/2.1/Manual/Manual_How_to_write_a_custom_deserializer.ipynb)
+* [How to train model using declarative and imperative API](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_train_using_declarative_and_imperative_API.ipynb)
+* [How to create user minibatch sources](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_create_user_minibatch_sources.ipynb)
+* [How to feed data](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_feed_data.ipynb)
+* [Debugging CNTK programs](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_debug.ipynb)
+* [How to use learners](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_use_learners.ipynb)
+* [How to write a custom deserializer](https://github.com/Microsoft/CNTK/tree/release/2.1/Manual/Manual_How_to_write_a_custom_deserializer.ipynb)
 
 #### Tutorials and Examples
 
-* [Training Acoustic Model with Connectionist Temporal Classification (CTC) Criteria](https://github.com/Microsoft/CNTK/blob/release/2.1/Tutorials/CNTK_208_Speech_Connectionist_Temporal_Classification.ipynb)
+* [Training Acoustic Model with Connectionist Temporal Classification (CTC) Criteria](https://github.com/Microsoft/CNTK/tree/release/2.1/Tutorials/CNTK_208_Speech_Connectionist_Temporal_Classification.ipynb)
 * [Flapping Bird using Keras and Reinforcement Learning](https://github.com/Microsoft/CNTK/tree/release/2.1/Examples/ReinforcementLearning/FlappingBirdWithKeras)
 * [Faster R-CNN object detection](https://github.com/Microsoft/CNTK/tree/release/2.1/Examples/Image/Detection/FasterRCNN)
 * [Using CNTK V2 API in Azure WebAPI for model evaluation](https://docs.microsoft.com/en-us/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
