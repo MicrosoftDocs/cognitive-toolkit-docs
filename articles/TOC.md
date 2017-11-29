@@ -63,6 +63,7 @@
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
+## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 
 # How do I
 ## How do I in Python
