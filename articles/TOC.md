@@ -3,7 +3,7 @@
 # [What's new](/cognitive-toolkit/news)
 
 # [Getting Started](/cognitive-toolkit/getting-started)
-## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## [Installing CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### Setup on Windows
 #### [Python only](/cognitive-toolkit/Setup-Windows-Python)
 #### [Scripted Install](/cognitive-toolkit/Setup-Windows-Binary-Script)
