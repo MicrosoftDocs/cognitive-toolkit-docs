@@ -26,10 +26,12 @@
 ## [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
 
 # Train/Develop
-## Inputting Data
+## Loading Data
 ### [Read and Feed Data to CNTK Trainer](https://cntk.ai/pythondocs/Manual_How_to_feed_data.html)
 ### [Write a Custom Deserializer](https://cntk.ai/pythondocs/Manual_How_to_write_a_custom_deserializer.html)
 ### [Create User Minibatch Sources](https://cntk.ai/pythondocs/Manual_How_to_create_user_minibatch_sources.html)
+## Training a Model
+### [Train Model using Declarative and Imperative API](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)
 ## [CNTK Learners](https://cntk.ai/pythondocs/Manual_How_to_use_learners.html)
 ## Serialization
 ## [Distributed Training](/cognitive-toolkit/Multiple-GPUs-and-machines)
