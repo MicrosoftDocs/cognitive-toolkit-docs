@@ -25,8 +25,10 @@ ms.devlang:   NA
 - Improved C# API with performance gains in training and evaluation. 
 - During training and evaluation, data batch can be created from single managed buffer with offset. This eases the burden to prepare data in C# code. 
 - Internally, data marshalling is done more efficiently than Release 2.2. Use of chatty FloatVector has been avoided during training and evaluation.
+
 ### C++
 - Exported "PreorderTraverse" C++ API: use to search the graph based on the provided criteria.
+
 ### Python and C++
 - Add custom attributes to primitive function, which would be serialized/deserialized when model save/load. 
 - Some usage:
@@ -35,6 +37,7 @@ ms.devlang:   NA
     func.custom_attributes = {'test':'abc', 'dict':{'a':1, 'b':2}, 'list':[1,2,3]} 
     func.custom_attributes['test2'] = 'def'
 ```
+
 ### Enabled data unit in frequency specification (Python)
 Now we can specify data unit in sample, minibatch and sweep in training session progress frequency, CrossValidationConfig, and Checkpoint Config. For example,
 ```python
@@ -61,26 +64,33 @@ If no data unit is specified, the default data unit is in samples.
 - In recent years, the DNN Research community has proposed many techniques to make inference faster and more compact. Proposed techniques include factoring matrix-vector-product and convolution operations, binarization/quantization, sparsification and the use of frequency-domain representations. 
 - The goal of cntk.contrib.netopt module is to provide users of CNTK easy-to-use interfaces to speed up or compress their networks using such optimizations, and writers of optimizations a framework within which to export them to CNTK users. 
 - The initial release of netopt supports factoring of Dense CNTK layers and the 1-bit binarization of Convolutional layers.
+
 #### Netopt API
 - Details on how to use the netopt module is available in [Manual_How_to_use_network_optimizations.ipynb](https://github.com/Microsoft/CNTK/tree/release/2.3/Manual/Manual_How_to_use_network_optimizations.ipynb)
 
 ## Operators
 ### Group convolution
 - We added support for group convolution on the GPU, exposed by C++ and Python API.
+
 ### Free static axes (FreeDimension) support for more operators
 - We have added free static axes support for additional operators such as pooling (MaxPool, AveragePool), global pooling, unpooling, and reshape. With this increased support, it should be possible to run most common convolutional pipelines (CNNs) with free static axes. 
+
 ### Backcompat
 - Support loading v1 model with DiagTimes node.
 
 ## Performance
 ### Convolution with free static axes support
 - We have improved the training performance for models that use convolution operation with free static axes support. For certain models, we see training speed up of more than x5. 
+
 ### Validation Performance
 - Improve validation performance and remove a lot of unneeded validation check.
+
 ### CPU Convolution
 - Move CPU Convolution to use MKL-ML, which leads to ~4x speedup in AlexNet training.
+
 ### Moving to NCCL2
 - NCCL2 would be enabled by default in official CNTK releases for Linux GPU build, which reduced aggregation cost in distributed training. For Python users, there's no impact as NCCL binary is included in the Linux Python wheels. For BrainScript users on Linux, they need to install [NCCL library]( https://github.com/NVIDIA/nccl) as part of CNTK environment setup, similar to CUDA and CUDNN. CPU builds and Windows builds are not affected since NCCL is available for Linux only.
+
 ### Adadelta
 - Faster adadelta updates when gradients are sparse. The running time for the update is now proportional to the number of _non-zero_ elements in the gradient. We observed a speedup of 5x on a single GPU for a feed forward model with a high dimensional sparse input (about 2 million features). Memory requirements increased modestly, requiring 4 additional bytes per sparse input feature (about 8 MB for the aforementioned network). 
 
@@ -100,8 +110,10 @@ If no data unit is specified, the default data unit is in samples.
 ### Removed OpenCV dependency from CNTK core.
 - CNTK 2.2 requires you to install OpenCV to use CNTK but it is optional for CNTK 2.3
 - You need to install OpenCV only if you are planning to use ImageReader or TensorBoard's Image feature.
+
 ### Upgraded ImageIO to 2.2.0
 - [Details](https://github.com/Microsoft/CNTK/pull/2385)
+
 ### MKL
 - Switched from CNTKCustomMKL to Intel MKLML. MKLML is released with [Intel MKL-DNN](https://github.com/01org/mkl-dnn/releases) as a trimmed version of Intel MKL for MKL-DNN. To set it up:
 
