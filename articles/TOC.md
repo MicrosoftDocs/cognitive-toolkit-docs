@@ -73,9 +73,8 @@
 ### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
 ### Recipes
 #### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
-## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
-## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
 ## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
+
 # [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
 ## [Development Setup](/cognitive-toolkit/Setup-development-environment)
 ### Windows
