@@ -41,6 +41,18 @@
 ### [Debug CNTK Python Programs](https://cntk.ai/pythondocs/Manual_How_to_debug.html)
 
 # Evaluate/Deploy
+## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
+### [Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
+### [Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
+### [Evaluation on Universal Windows Platform (UWP)](/cognitive-toolkit/cntk-library-evaluation-on-uwp)
+### [NuGet Package](/cognitive-toolkit/NuGet-Package)
+## CNTK Evaluation Interfaces
+### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
+### [CNTK Library C# interface](/cognitive-toolkit/CNTK-Library-Managed-API)
+### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
+## [Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
+## Deploying on Azure
+### [Evaluate a Model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 
 # API Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
@@ -51,16 +63,6 @@
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
 ### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
-## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
-### [Model Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
-### [Model Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
-### [NuGet Package](/cognitive-toolkit/NuGet-Package)
-### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
-### [CNTK Library C# interface](/cognitive-toolkit/CNTK-Library-Managed-API)
-### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
-### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
-### [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
-### [Model Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
 
 # How do I
 ## How do I in Python
