@@ -19,11 +19,10 @@
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
 
-# [Tutorials](/cognitive-toolkit/tutorials)
-## [Python](https://cntk.ai/pythondocs/tutorials.html)
+# [Tutorials & Examples](/cognitive-toolkit/tutorials)
+## [Python Tutorials](https://cntk.ai/pythondocs/tutorials.html)
 ### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
-
-# [Examples](/cognitive-toolkit/Examples)
+## [Examples](/cognitive-toolkit/Examples)
 
 # Train/Develop
 ## Inputting Data
