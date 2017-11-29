@@ -23,6 +23,7 @@
 ## [Python Tutorials](https://cntk.ai/pythondocs/tutorials.html)
 ### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ## [Examples](/cognitive-toolkit/Examples)
+## [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
 
 # Train/Develop
 ## Inputting Data
@@ -65,16 +66,14 @@
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
 ## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 
-# How do I
-## How do I in Python
+# How To
+## How To in Python
 ### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
 ### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
 ### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python)
 ### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
 ### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
 ### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
-### Recipes
-#### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
 ## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
 
 # [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
