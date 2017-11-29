@@ -24,7 +24,6 @@
 ### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 
 # [Examples](/cognitive-toolkit/Examples)
-# [Manuals](https://cntk.ai/pythondocs/manuals.html)
 
 # Train/Develop
 ## Inputting Data
