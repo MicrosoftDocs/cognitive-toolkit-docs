@@ -1,4 +1,13 @@
-# Loading Data Overview
+---
+title:   Loading Data
+ms.author:   minxia
+ms.date:  11/30/2017
+ms.topic:   conceptual
+ms.service:  Cognitive-services
+ms.devlang:   python, brainscript
+---
+
+# Loading Data
 
 This section provides information on the processes for building input data pipelines for training in CNTK.
 
