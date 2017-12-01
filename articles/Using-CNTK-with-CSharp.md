@@ -56,7 +56,7 @@ CNTK C# API provides opteraions to build convolution neural networks (CNN) and r
     var imageClassifier = TestHelper.Dense(pooling2, numClasses, device, Activation.None,   "ImageClassifier");        
 ```
 
-An example to build a RNN with long-short-term-memory ([LTSM](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs)) is also provided.
+An [example](https://github.com/Microsoft/CNTK/blob/master/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs) to build a RNN with long-short-term-memory (LTSM) is also provided.
     
 ## Data Preparation Using C#/.NET
 CNTK provides data preparation utilities for training. CNTK C# API exposes these utilities. It takes data from various preprocessed forms. Data loading and batching are done efficiently. For example, assuming we have data in text in the following CNTK text format called "Train.ctf":
