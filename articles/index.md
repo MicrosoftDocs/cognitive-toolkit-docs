@@ -12,7 +12,8 @@ ms.devlang:   NA
 
 # The Microsoft Cognitive Toolkit
 
-The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by Microsoft. [This video](https://youtu.be/9gDDO5ldT-4) provides a high-level overview of the toolkit.
+The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by Microsoft. This [video](https://youtu.be/9gDDO5ldT-4) provides a high-level overview of the toolkit:
+[![CNTK](CNTK.jpg?raw=true "Introduction to Microsoft Cognitive Toolkit")](https://youtu.be/9gDDO5ldT-4)
 
 The latest release of the Microsoft Cognitive Toolkit is [2.3](./ReleaseNotes/CNTK_2_3_Release_Notes.md).
 
