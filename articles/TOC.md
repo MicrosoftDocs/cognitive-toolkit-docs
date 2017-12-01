@@ -27,6 +27,7 @@
 
 # Train/Develop
 ## Loading Data
+### [Understanding Readers](/cognitive-toolkit/Understanding-Readers)
 ### [Read and Feed Data to CNTK Trainer](https://cntk.ai/pythondocs/Manual_How_to_feed_data.html)
 ### [Write a Custom Deserializer](https://cntk.ai/pythondocs/Manual_How_to_write_a_custom_deserializer.html)
 ### [Create User Minibatch Sources](https://cntk.ai/pythondocs/Manual_How_to_create_user_minibatch_sources.html)
