@@ -6,7 +6,7 @@ ms.date:   12/04/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
-ms.devlang:   python, brainscript, 
+ms.devlang:   python, brainscript
 ---
 
 # Setup CNTK on your machine
