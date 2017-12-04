@@ -57,7 +57,7 @@
 ## [Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
 ## Deploying on Azure
 ### [Evaluate a Model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
-### Deploy a Model to Azure Container Services (AKS)
+### [Deploy a Model to Azure Container Services (AKS)](/cognitive-toolkit/Deploy-Model-to-AKS)
 
 # API Reference
 ## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
