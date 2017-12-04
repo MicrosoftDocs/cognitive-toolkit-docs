@@ -26,7 +26,7 @@
 ## [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
 
 # Train/Develop
-## Loading Data
+## [Loading Data](/cognitive-toolkit/Loading-Data-Overview)
 ### [Understanding Readers](/cognitive-toolkit/Understanding-Readers)
 ### [Read and Feed Data to CNTK Trainer](https://cntk.ai/pythondocs/Manual_How_to_feed_data.html)
 ### [Write a Custom Deserializer](https://cntk.ai/pythondocs/Manual_How_to_write_a_custom_deserializer.html)
@@ -69,7 +69,7 @@
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
 ## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 
-# How To
+# [How To](/cognitive-toolkit/How-To-Overview)
 ## How To in Python
 ### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
 ### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
