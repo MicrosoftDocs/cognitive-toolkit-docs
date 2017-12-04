@@ -11,6 +11,9 @@ ms.devlang:  python
 
 # Interpreting epoch_size and minibatch_size_in_samples in CNTK
 
+* [epoch_size](#python-epoch_size)
+* [minibatch_size_in_samples](#python-minibatch_size_in_samples)
+
 ## Python epoch_size
 
 The number of **label** samples (tensors along a dynamic axis) in each epoch. The `epoch_size` in CNTK is the number of **label** samples after which specific additional actions are taken, including
