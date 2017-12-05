@@ -26,5 +26,7 @@ Sections:
 * Test the web app
 
 ## Train and Serve Models using Kubernetes on Azure
-Tutorial: [How to Serve and Train Deep Learning Models at Scale, using Cognitive Toolkit with Kubernetes on Azure](https://blogs.technet.microsoft.com/machinelearning/2017/09/06/how-to-use-cognitive-toolkit-cntk-with-kubernetes-on-azure/)  
+Tutorial: [How to Serve and Train Deep Learning Models at Scale, using Cognitive Toolkit with Kubernetes on Azure](https://blogs.technet.microsoft.com/machinelearning/2017/09/06/how-to-use-cognitive-toolkit-cntk-with-kubernetes-on-azure/) | [Github](https://github.com/weehyong/k8scntkSamples)  
 Author: Wee Hyong Tok
+
+This tutorial explains how to deploy a Kubernetes cluster on Azure using the [ACS Engine](https://github.com/Azure/acs-engine) and how to autoscale the cluster. Once the Kubernetes cluster is up and running, the tutorial [repo](https://github.com/weehyong/k8scntkSamples) provides sample CNTK docker images for training on the CIFAR-10 dataset and serving a pretrained ResNet model (based on the [above](#deploy-a-model-to-azure-container-service) tutorial).
