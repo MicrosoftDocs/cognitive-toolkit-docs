@@ -21,6 +21,23 @@ Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply differen
 * Easy pip install for [Anaconda2 4.3.0.1](#anaconda2)
 
 
+# [CNTK 2.3.1](#tab/cntkpy231)
+
+|Python | Flavor | URL
+|:------|:-------|:--------|
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp27-cp27m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.3.1-cp27-cp27m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.3.1-cp27-cp27m-win_amd64.whl`
+| 3.4 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp34-cp34m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.3.1-cp34-cp34m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.3.1-cp34-cp34m-win_amd64.whl`
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp35-cp35m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.3.1-cp35-cp35m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.3.1-cp35-cp35m-win_amd64.whl`
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp36-cp36m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.3.1-cp36-cp36m-win_amd64.whl`
+|  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.3.1-cp36-cp36m-win_amd64.whl`
+
 # [CNTK 2.3](#tab/cntkpy23)
 
 |Python | Flavor | URL
@@ -109,7 +126,7 @@ C:\> pip install <url>
 ```
 where `<url>` is the corresponding wheel file URL in the table on the top of this page. E.g. if you have Python 3.5 and want to install the CPU-only version, run
 ```
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3-cp35-cp35m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp35-cp35m-win_amd64.whl
 ```
 
 Continue with a [quick installation test](#quick-installation-test)
@@ -141,7 +158,7 @@ Open a standard command shell, create the environment, make it active, and pip-i
 ```
 C:\> conda create --name cntk-py34 python=3.4 numpy scipy h5py jupyter
 C:\> activate cntk-py34
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3-cp34-cp34m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp34-cp34m-win_amd64.whl
 ```
 A quick test that the installation succeeded can be done by querying the CNTK version:
 ```
