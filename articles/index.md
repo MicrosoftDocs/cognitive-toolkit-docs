@@ -21,7 +21,6 @@ CNTK can be included as a library in your Python, C#, or C++ programs, or used a
 CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the toolkit from the source provided in GitHub.
 
 Here are a few pages to get started:
-* [Reasons to switch from TensorFlow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
 * [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
 * [Tutorials](./Tutorials.md), [Examples](./Examples.md), [Tutorials on Azure](https://notebooks.azure.com/cntk/libraries/tutorials)
 * [The CNTK Library APIs](./CNTK-Library-API.md)
