@@ -72,13 +72,12 @@
 ## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 
 # [How To](/cognitive-toolkit/How-To-Overview)
-## How To in Python
-### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
-### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
-### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python)
-### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
-### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
-### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
+## [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
+## [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
+## [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python)
+## [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
+## [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
+## [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
 ## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
 
 # [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
