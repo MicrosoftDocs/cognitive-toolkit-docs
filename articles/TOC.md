@@ -25,6 +25,7 @@
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
 ## [Object Detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
+## [Object Detection using Faster R-CNN](/cognitive-toolkit/Object-Detection-using-Faster-R-CNN)
 
 # Train/Develop
 ## [Loading Data](/cognitive-toolkit/Loading-Data-Overview)
