@@ -155,8 +155,8 @@
 #### [SGD Configuration](/cognitive-toolkit/BrainScript-SGD-Block)
 ### Miscellaneous
 #### [Simple Network Builder](/cognitive-toolkit/Simple-Network-Builder)
-#### [BrainScript epochSize and Python epoch_size in CNTK](/cognitive-toolkit/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
-#### [BrainScript minibatchSize and Python minibatch_size_in_samples in CNTK](/cognitive-toolkit/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
+#### [BrainScript epochSize in CNTK](/cognitive-toolkit/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
+#### [BrainScript minibatchSize in CNTK](/cognitive-toolkit/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [ConvertDBN command](/cognitive-toolkit/ConvertDBN-command)
 #### [Plot command](/cognitive-toolkit/Plot-command)
