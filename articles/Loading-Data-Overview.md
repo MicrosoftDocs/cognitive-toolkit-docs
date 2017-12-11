@@ -23,5 +23,4 @@ We include the following Python manuals in this section:
     * [CNTK 201B](https://cntk.ai/pythondocs/CNTK_201B_CIFAR-10_ImageHandsOn.html): Reading image data using the CNTK image deserializer.
     * [CNTK 208](https://cntk.ai/pythondocs/CNTK_208_Speech_Connectionist_Temporal_Classification.html): Reading audio data in HTK/MLF format using the HTKFeatureDeserializer/HTKMLFDeserializer.
     * [CNTK 200](https://cntk.ai/pythondocs/CNTK_200_GuidedTour.html): An overview of the different ways to feed data to the CNTK trainer.
-* For reading data in **BrainScript**, refer to the "Specifying Readers in BrainScript" section under the [BrainScript Reference](/cognitive-toolkit/Using-CNTK-with-BrainScript).
 * For some additional information on CNTK Readers, refer to these articles on the [CTF Reader](/cognitive-toolkit/BrainScript-CNTKTextFormat-Reader) and [CNTK Binary Reader](/cognitive-toolkit/BrainScript-CNTKBinary-Reader).
