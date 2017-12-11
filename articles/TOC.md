@@ -24,6 +24,7 @@
 ### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
 ## [Examples](/cognitive-toolkit/Examples)
 ## [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
+## [Object Detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
 
 # Train/Develop
 ## [Loading Data](/cognitive-toolkit/Loading-Data-Overview)
@@ -104,7 +105,7 @@
 ### [Getting started](/cognitive-toolkit/tutorial/tutorial)
 ### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 ### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
-### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
+### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN-BrainScript)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
 ## [Reference](/cognitive-toolkit/Using-CNTK-with-BrainScript)
 ### [BrainScript Config file overview](/cognitive-toolkit/BrainScript-Config-file-overview)
