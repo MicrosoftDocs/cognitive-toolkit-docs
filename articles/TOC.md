@@ -37,7 +37,7 @@
 ### [Interpreting epoch_size and minibatch_size_in_samples in CNTK](/cognitive-toolkit/Interpreting-epoch_size-and-minibatch_size_in_samples-in-CNTK)
 ### [Train Model using Declarative and Imperative API](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)
 ## [CNTK Learners](https://cntk.ai/pythondocs/Manual_How_to_use_learners.html)
-## Serialization
+## [Serialization](./Serialization.md)
 ## [Distributed Training](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## Visualization
 ### [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
