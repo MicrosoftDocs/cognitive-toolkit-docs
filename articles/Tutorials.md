@@ -11,18 +11,20 @@ ms.devlang:   python
 
 # Tutorials & Examples
 
-### Python Jupyter Notebook (**Recommended**) Tutorials
+## Tutorials
 
+### Python Jupyter Notebook (Recommended)
 Assuming you have completed [Getting Started](https://www.cntk.ai/pythondocs/gettingstarted.html), use the
 CNTK Python Jupyter notebook [tutorials](https://cntk.ai/pythondocs/tutorials.html) to gain familiarity with the toolkit. You may want to start with the CNTK 100 series tutorials before trying out higher series that cover a range of different applications including image classification, language understanding, reinforcement learning and others. 
 
-Additional Python recipes: 
+### Additional Python recipes: 
 * ['Build your own image classifier using Transfer Learning'](./Build-your-own-image-classifier-using-Transfer-Learning.md) provides two examples for custom image classifiers using transfer learning.
 * ['Object detection using Fast R-CNN'](./Object-Detection-using-Fast-R-CNN.md) describes how to train Fast R-CNN on PASCAL VOC data and custom data for object detection.
+* ['Object-Detection-using-Faster-R-CNN'](./Object-Detection-using-Faster-R-CNN.md) describes how to train Faster R-CNN on PASCAL VOC data and custom data for object detection.
 
 You can also try out the tutorials live with pre-installed CNTK in [Azure Notebooks](https://notebooks.azure.com/CNTK/libraries/tutorials) for free.
 
-### Examples
+## Examples
 Refer to [Examples](./Examples.md) to find examples of building networks in CNTK using the supported APIs.
 
 <!---
