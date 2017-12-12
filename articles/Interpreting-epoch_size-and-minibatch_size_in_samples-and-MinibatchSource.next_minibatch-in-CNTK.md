@@ -13,7 +13,7 @@ ms.devlang:  python
 In this article, we will clarify the interpretation and usage of the following parameters and functions in Python:
 * [epoch_size](#epoch_size)
 * [minibatch_size_in_samples](#minibatch_size_in_samples)
-* [MinibatchSource.next_minibatch](#minibatchSource.next_minibatch)
+* [MinibatchSource.next_minibatch](#minibatchSourcenext_minibatch)
 
 ## epoch_size
 
