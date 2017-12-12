@@ -11,9 +11,9 @@ ms.devlang:  python
 
 # Interpreting epoch_size, minibatch_size_in_samples and MinibatchSource.next_minibatch in CNTK
 In this article, we will clarify the interpretation and usage of the following parameters and functions in Python:
-* [epoch_size](#epoch_size)
-* [minibatch_size_in_samples](#minibatch_size_in_samples)
-* [MinibatchSource.next_minibatch](#minibatchSourcenext_minibatch)
+* [epoch_size](#epochsize)
+* [minibatch_size_in_samples](#minibatchsizeinsamples)
+* [MinibatchSource.next_minibatch](#minibatchSourcenextminibatch)
 
 ## epoch_size
 
@@ -84,7 +84,7 @@ All of the above considerations also apply to `epoch_size`, but `epoch_size` has
 
 ## MinibatchSource.next_minibatch
 
-The method [MinibatchSource.next_minibatch()](https://github.com/MicrosoftDocs/cognitive-toolkit-docs/edit/mxiao/restruct/articles) reads a minibatch that contains data for all input streams. When called during training, `MinibatchSource.next_minibatch(minibatch_size_in_samples, input_map)` will pick a random subset of `k` samples from the training dataset, where `k=minibatch_size_in_samples`.  
+The method [MinibatchSource.next_minibatch()](https://cntk.ai/pythondocs/cntk.io.html?highlight=next_minibatch#cntk.io.MinibatchSource.next_minibatch) reads a minibatch that contains data for all input streams. When called during training, `MinibatchSource.next_minibatch(minibatch_size_in_samples, input_map)` will pick a random subset of `k` samples from the training dataset, where `k=minibatch_size_in_samples`.  
 
 The implementation ensures that when `next_minibatch` is called `N` times (where `N = number_of_training_samples/minibatch_size_in_samples`), the entire training dataset gets covered at the end of the `N` calls of `next_minibatch`.
 This also means that when `next_minibatch` is called `2*N` times, the entire dataset gets covered twice.
