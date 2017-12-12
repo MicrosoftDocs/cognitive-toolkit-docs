@@ -37,8 +37,12 @@ Alternatively, you can also load your model using [load()](https://cntk.ai/pytho
 ```
 z = C.Function.load("myModel.model")
 ```
-
-For an example of evaluation on a saved trained model, see [here](https://docs.microsoft.com/en-us/cognitive-toolkit/How-do-I-Evaluate-models-in-Python).
+### Related resources
+The following examples include some commonly performed tasks involving the saving and loading of trained models.
+* [Evaluate a saved trained model](https://docs.microsoft.com/en-us/cognitive-toolkit/How-do-I-Evaluate-models-in-Python#evaluate-a-saved-convolutional-network)
+* [Access the parameters of a saved trained model](https://docs.microsoft.com/en-us/cognitive-toolkit/How-do-I-Read-Things-in-Python#load-model-and-access-network-weights-parameters)
+* [Evaluate and write out specific layers of a saved trained model](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction)  
+*(Note that the pretrained ResNet-18 model used in this example was trained in BrainScript and is saved in the model-v1 format.)*
 
 ### ONNX format
 CNTK also supports the saving and loading of models in the [ONNX](http://onnx.ai/) format, which allows for interoperability among other frameworks, including Caffe2, PyTorch and MXNet. 
