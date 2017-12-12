@@ -11,7 +11,7 @@ ms.devlang:   brainscript
 
 # BrainScript epochSize in CNTK 
 
-For Python users, see [here](./Interpreting-epoch_size-and-minibatch_size_in_samples-in-CNTK.md).  
+For Python users, see [here](./Interpreting-epoch_size-and-minibatch_size_in_samples-and-MinibatchSource.next_minibatch-in-CNTK.md).  
 
 The number of **label** samples (tensors along a dynamic axis) in each epoch. The `epochSize` in CNTK is the number of **label** samples after which specific additional actions are taken, including
 * saving a checkpoint model (training can be restarted from here)
