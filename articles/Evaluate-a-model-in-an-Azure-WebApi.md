@@ -12,7 +12,7 @@ ms.devlang:   dotnet
 # Evaluate a model in an Azure WebApi using CNTK Library Managed API
 
 ## Deploy through Azure Machine Learning Command Line
-One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](https://github.com/Azure/Machine-Learning-Operationalization/blob/master/samples/cntk/tutorials/realtime/image_classification.md) to learn how.
+One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](https://docs.microsoft.com/en-us/azure/machine-learning/preview/scenario-image-classification-using-cntk) to learn how.
 
 ## Deploy through ASP.NET
 We will walk you to the required steps to deploy a CNTK model on Azure and send web requests to the Azure endpoint to 
@@ -43,7 +43,7 @@ Initially we will develop the WebApi locally and then upload this to our Azure i
 
 ### Let’s get started
 
-We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/tree/release/2.3/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
+We already created a project blueprint called **[CNTKAzureTutorial01](https://github.com/Microsoft/CNTK/tree/master/Examples/Evaluation/CNTKAzureTutorial01)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\CNTKAzureTutorial01`. 
 
 **Please note that the sample project is using CNTK Library Managed API. For users who use the EvalDll API, to evaluate the model, please use [CNTK EvalDLL API](./evaldll-evaluation-on-windows.md). The tutorial for using EvalDll can be found at [Evaluate a model in Azure WebApi using EvalDll](./evaluate-a-model-in-an-azure-webapi-using-evaldll.md)**
 
@@ -74,7 +74,7 @@ Add the CNTK Eval functionality to the project. This is available as a NuGet pac
 
 ![NuGet](./pictures/EvaluateWebApiCntkLibrary/nuget_manager.png)
 
-Now we need a model to evaluate. Download the [ResNet20_CIFAR10_Python.model](https://www.cntk.ai/Models/CNTK_Pretrained/ResNet20_CIFAR10_Python.model) and save it in the directory `CNTK\Models` under the project folder. The model file needs also to be included in the solution (`Project -> Add existing Item`)
+Now we need a model to evaluate. Download the [ResNet20_CIFAR10_CNTK.model](https://www.cntk.ai/Models/CNTK_Pretrained/ResNet20_CIFAR10_CNTK.model) and save it in the directory `CNTK\Models` under the project folder. The model file needs also to be included in the solution (`Project -> Add existing Item`)
 
 CNTK requires a 64-bit runtime environment. Make sure in the Configuration Manager that the project is compiled for the x64 platform. In addition, the WebApi we are creating has to be hosted in a 64-bit instance of IIS. You can enforce this by selecting "Use 64 bit version of IIS Express for web sites and projects" in `Tools -> Options -> Project and Solutions -> WebProjects`
 
