@@ -1,5 +1,5 @@
 ---
-title:   Interpreting epoch_size and minibatch_size_in_samples in CNTK
+title:   Interpreting epoch_size, minibatch_size_in_samples and MinibatchSource.next_minibatch in CNTK
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  12/04/2017
@@ -9,12 +9,13 @@ ms.service:  Cognitive-services
 ms.devlang:  python
 ---
 
-# Interpreting epoch_size and minibatch_size_in_samples in CNTK
+# Interpreting epoch_size, minibatch_size_in_samples and MinibatchSource.next_minibatch in CNTK
+In this article, we will clarify the interpretation and usage of the following parameters and functions in Python:
+* [epoch_size](#epoch_size)
+* [minibatch_size_in_samples](#minibatch_size_in_samples)
+* [MinibatchSource.next_minibatch](#minibatchSource.next_minibatch)
 
-* [epoch_size](#python-epoch_size)
-* [minibatch_size_in_samples](#python-minibatch_size_in_samples)
-
-## Python epoch_size
+## epoch_size
 
 The number of **label** samples (tensors along a dynamic axis) in each epoch. The `epoch_size` in CNTK is the number of **label** samples after which specific additional actions are taken, including
 * saving a checkpoint model (training can be restarted from here)
@@ -34,7 +35,7 @@ For smaller dataset sizes, `epoch_size` is often set equal to the dataset size. 
 
 For large data sets, you may want to guide your choice for `epoch_size` by checkpointing. For example, if you want to lose at most 30 minutes of computation in case of a power outage or network glitch, you would want a checkpoint to be created about every 30 minutes (from which the training can be resumed). Choose `epoch_size` to be the number of samples that takes about 30 minutes to compute.
 
-## Python minibatch_size_in_samples
+## minibatch_size_in_samples
 
 Note: For BrainScript users, the parameter for minibatch size is `minibatchSize`; for Python users, it is `minibatch_size_in_samples`.
 
@@ -79,4 +80,25 @@ length of the minibatch size, the minibatch size will consist of this sequence).
 * data parallelism: Here, the minibatch size is approximate, as our chunk-based randomization algorithm cannot guarantee
 that each worker receives precisely the same number of samples.
 
-All of the above considerations also apply to `epoch_size`, but `epoch_size` has some differences, see [above](#python-epoch_size).
+All of the above considerations also apply to `epoch_size`, but `epoch_size` has some differences, see [above](#epoch_size).
+
+## MinibatchSource.next_minibatch
+
+The method [MinibatchSource.next_minibatch()](https://github.com/MicrosoftDocs/cognitive-toolkit-docs/edit/mxiao/restruct/articles) reads a minibatch that contains data for all input streams. When called during training, `MinibatchSource.next_minibatch(minibatch_size_in_samples, input_map)` will pick a random subset of `k` samples from the training dataset, where `k=minibatch_size_in_samples`.  
+
+The implementation ensures that when `next_minibatch` is called `N` times (where `N = number_of_training_samples/minibatch_size_in_samples`), the entire training dataset gets covered at the end of the `N` calls of `next_minibatch`.
+This also means that when `next_minibatch` is called `2*N` times, the entire dataset gets covered twice.
+
+**Additional information:**
+* Each cycle through the data will have a different random order.
+* If you double your minibatch size, one minibatch will now contain exactly the samples that, before, the corresponding two consecutive minibatches would have contained (this may be approximate if you have variable-length sequences). I.e. two runs that only differ in minibatch size process the data in the same order.
+* If you interrupt and restart from checkpoint, you will get the same random order as if you had not interrupted training. This is implemented by grounding the reading/randomization process on a nominal time axis, with this simple algorithm:
+  * Training proceeds on a nominal infinite time axis. If you fetch a minibatch of size 256, the nominal time progresses by 256.
+  * The training corpus is replicated an infinite number of times on this time axis. If you have `M` samples, then the first replica spans nominal time `0..M-1`; the second `M..2M-1`, etc.
+  * Each replica is random-shuffled within, but not across, replica boundaries. I.e. once you have processed precisely `M` samples, you have seen each sample exactly once.
+  * Calling `next_minibatch(K)` gives you the next `K` samples on this reshuffled infinite timeline. It’s the same as calling `next_minibatch(1)` for `K` times.
+  * This is all done lazily.
+  * Restarting from checkpoint is as simple as resetting the nominal time to the nominal time when the checkpoint was created.
+
+
+
