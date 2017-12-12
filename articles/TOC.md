@@ -34,7 +34,7 @@
 ### [Write a Custom Deserializer](https://cntk.ai/pythondocs/Manual_How_to_write_a_custom_deserializer.html)
 ### [Create User Minibatch Sources](https://cntk.ai/pythondocs/Manual_How_to_create_user_minibatch_sources.html)
 ## Training a Model
-### [Interpreting epoch_size and minibatch_size_in_samples in CNTK](/cognitive-toolkit/Interpreting-epoch_size-and-minibatch_size_in_samples-in-CNTK)
+### [Interpreting epoch_size, minibatch_size_in_samples and MinibatchSource.next_minibatch in CNTK](./Interpreting-epoch_size-and-minibatch_size_in_samples-and-MinibatchSource.next_minibatch-in-CNTK.md)
 ### [Train Model using Declarative and Imperative API](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)
 ## [CNTK Learners](https://cntk.ai/pythondocs/Manual_How_to_use_learners.html)
 ## [Serialization](./Serialization.md)
