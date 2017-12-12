@@ -11,7 +11,7 @@ ms.devlang:   brainscript
 
 # BrainScript minibatchSize in CNTK
 
-Note: For BrainScript users, the parameter for minibatch size is minibatchSize, for Python users, it is minibatch_size_in_samples.  The below description uses the name minibatchSize, but the description is fully applicable to Python users of minibatch_size_in_samples. For Python users, see [here](./Interpreting-epoch_size-and-minibatch_size_in_samples-in-CNTK.md).
+Note: For BrainScript users, the parameter for minibatch size is `minibatchSize`, for Python users, it is `minibatch_size_in_samples`.  For Python users, see [here](./Interpreting-epoch_size-and-minibatch_size_in_samples-and-MinibatchSource.next_minibatch-in-CNTK.md).
 
 CNTK has a very specific definition of `minibatchSize` parameter: It denotes **the number of samples between model updates**.
 A *sample* here is defined as one vector or tensor flowing through the system.
