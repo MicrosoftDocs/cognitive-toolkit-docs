@@ -22,3 +22,11 @@ CNTK can be included as a library in your Python, C#, or C++ programs, or used a
 
 CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the toolkit from the source provided in [GitHub](https://github.com/Microsoft/CNTK).
 
+<br/>
+<img src="./pictures/ONNX_logo_main.png" width="200">
+CNTK is also one of the first deep-learning toolkits to support the Open Neural Network Exchange ([ONNX](https://onnx.ai)) format, an open-source shared model representation for framework interoperability and shared optimization. Co-developed by Microsoft and Facebook, ONNX will allow developers to easily move between CNTK and other supported frameworks, which include Caffe2, PyTorch and MXNet.
+
+The latest release of CNTK supports ONNX v1.0.
+
+Learn more about ONNX [here](https://github.com/onnx/onnx).
+
