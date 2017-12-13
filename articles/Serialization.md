@@ -55,3 +55,11 @@ And to load a model from ONNX:
 z = C.Function.load("myModel.onnx", format=C.ModelFormat.ONNX)
 ```
 You can find more ONNX-specific tutorials [here](https://github.com/onnx/tutorials).
+
+
+## Checkpointing during training
+* https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html?highlight=checkpoint
+* minibatchsource restore from ckpt https://cntk.ai/pythondocs/cntk.io.html?highlight=checkpoint#cntk.io.MinibatchSource.restore_from_checkpoint
+* Trainer restore from ckpt https://cntk.ai/pythondocs/Manual_How_to_feed_data.html?highlight=checkpointing
+* https://cntk.ai/pythondocs/CNTK_200_GuidedTour.html?highlight=checkpointing
+* https://www.cntk.ai/pythondocs/cntk.train.training_session.html
