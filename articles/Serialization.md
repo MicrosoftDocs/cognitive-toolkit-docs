@@ -60,8 +60,37 @@ You can find more ONNX-specific tutorials [here](https://github.com/onnx/tutoria
 ## Checkpointing during training
 During the training of deep neural networks, the practice of checkpointing allows the user to take snapshots of the model state and weights across regular intervals. Since the training of deep learning models can be extremely time-consuming, checkpointing ensures a level of fault tolerance in the event of hardware or software failures. Moreover, checkpointing enables the user to resume training from the last saved checkpoint, and to retain the best-performing models (i.e. during hyperparameter tuning).
 
-In CNTK, one way to save the model state is by using the aformentioned [`save()`](#save-model) method. However, this method only saves the model state, and not other stateful entities of the training script like the current state of the minibatch source and the trainer, which are also needed in order to restore a state to resume training. To this end, CNTK provides checkpointing API for the two ways of model training: 1) the low-level `Trainer.train_minibatch` API  and 2) the high-level `Function.train` (training_session) API. For more information on the different training methods, see the manual ['Train model using declarative and imperative API'](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html).
+In CNTK, one way to save the model state is by using the aformentioned [`save()`](#save-model) method. However, this method only saves the model state, and not other stateful entities of the training script like the current state of the minibatch source and the trainer, which are also needed in order to restore a state to resume training. To this end, CNTK provides checkpointing API for the two ways of model training: 1) the low-level `Trainer.train_minibatch` API  and 2) the high-level `Function.train` (`training_session`) API. For more information on the different training methods, see the manual ['Train model using declarative and imperative API.'](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)
 
 ### Low-level checkpointing (`Trainer.train_minibatch`)
+In the `Trainer.train_minibatch/test_minibatch` method of training, the user has full control over each minibatch update and data is fed to the trainer through an explicit loop, minibatch by minibatch. In this case, to perform checkpointing during training, the user has to manually checkpoint the current state of both the minibatch source and the trainer.
+
+**Save checkpoint**
+
+Once your trainer object is instantiated, during training you can checkpoint the model and Trainer state by calling the [save_checkpoint](https://cntk.ai/pythondocs/cntk.train.trainer.html#cntk.train.trainer.Trainer.save_checkpoint) method while inside your training loop:
+```Python
+# get the checkpoint state of the MinibatchSource object (mb_source)
+mb_source_state = mb_source.get_checkpoint_state()
+
+# pass the minibatch source state to the external_state parameter of save_checkpoint()
+checkpoint = "myModel.dnn" #filename to store the checkpoint
+trainer.save_checkpoint(checkpoint, mb_source_state)
+```
+
+**Restore from checkpoint**
+
+To resume training from a checkpoint file, restore the minibatch source and trainer state using the corresponding [`restore_from_checkpoint`](https://www.cntk.ai/pythondocs/cntk.train.trainer.html?highlight=restore_from_checkpoint#cntk.train.trainer.Trainer.restore_from_checkpoint) methods:
+
+```Python
+checkpoint = "myModel.dnn"
+mb_source_state = trainer.restore_from_checkpoint(checkpoint)
+mb_source.restore_from_checkpoint(mb_source_state)
+```
+
+For a complete example of manual checkpointing during training, refer [here](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html).
 
 ### High-level checkpointing (`Function.train`, `training_session`)
+Instead of explicitly writing the training loop, the user can use the [Function.train/test](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?highlight=train#cntk.ops.functions.Function.train) methods, which take care of the different aspects of a training session, including data sources, checkpointing, and progress printing. 
+
+In order to enable checkpointing, the user must provide a checkpoint configuration callback by instantiating the [CheckpointConfig](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=checkpointconfig#cntk.train.training_session.CheckpointConfig) class. The callback then takes care of consistent checkpointing with the specified frequency during training. To restore from available checkpoint before the start of training, the `restore` parameter is default set to `True`. If you would like to save all the checkpoints from training, set `preserve_all` to `True` (default is `False`). The checkpoint filenames are then saved like so: e.g. if `filename="myModel.dnn"`, the checkpoints will be `myModel.dnn.0`, `myModel.dnn.1`, `myModel.dnn.2`, and so on.
+
