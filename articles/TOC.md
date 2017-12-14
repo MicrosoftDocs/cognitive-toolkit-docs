@@ -45,6 +45,7 @@
 ## Debugging in CNTK
 ### [Performance Profiler](/cognitive-toolkit/Performance-Profiler)
 ### [Debug CNTK Python Programs](https://cntk.ai/pythondocs/Manual_How_to_debug.html)
+## [Extending CNTK](https://cntk.ai/pythondocs/extend.html)
 
 # Evaluate/Deploy
 ## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
@@ -68,7 +69,6 @@
 ### [Working with Sequences](https://cntk.ai/pythondocs/sequence.html)
 ### [Layers Library Reference](https://cntk.ai/pythondocs/layerref.html)
 ### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
-### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
 ## [C#/.Net](./CNTK-Library-Managed-API.md)
 ## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
 
