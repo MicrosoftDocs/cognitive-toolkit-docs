@@ -69,7 +69,7 @@ In the [Trainer.train_minibatch/test_minibatch](https://www.cntk.ai/pythondocs/c
 
 **Save checkpoint**
 
-Once your Trainer object is instantiated, during training you can checkpoint the model and trainer state by calling the [save_checkpoint](https://cntk.ai/pythondocs/cntk.train.trainer.html#cntk.train.trainer.Trainer.save_checkpoint) method while inside your training loop:
+Once your Trainer object is instantiated, during training you can checkpoint the model and trainer state by calling the [`save_checkpoint`](https://cntk.ai/pythondocs/cntk.train.trainer.html#cntk.train.trainer.Trainer.save_checkpoint) method while inside your training loop:
 ```Python
 # get the checkpoint state of the minibatch source (mb_source)
 mb_source_state = mb_source.get_checkpoint_state()
