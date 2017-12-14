@@ -69,7 +69,7 @@ In the `Trainer.train_minibatch/test_minibatch` method of training, the user has
 
 Once your trainer object is instantiated, during training you can checkpoint the model and Trainer state by calling the [save_checkpoint](https://cntk.ai/pythondocs/cntk.train.trainer.html#cntk.train.trainer.Trainer.save_checkpoint) method while inside your training loop:
 ```Python
-# get the checkpoint state of the MinibatchSource object (mb_source)
+# get the checkpoint state of the minibatch source (mb_source)
 mb_source_state = mb_source.get_checkpoint_state()
 
 # pass the minibatch source state to the external_state parameter of save_checkpoint()
@@ -92,5 +92,19 @@ For a complete example of manual checkpointing during training, refer [here](htt
 ### High-level checkpointing (`Function.train`, `training_session`)
 Instead of explicitly writing the training loop, the user can use the [Function.train/test](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?highlight=train#cntk.ops.functions.Function.train) methods, which take care of the different aspects of a training session, including data sources, checkpointing, and progress printing. 
 
-In order to enable checkpointing, the user must provide a checkpoint configuration callback by instantiating the [CheckpointConfig](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=checkpointconfig#cntk.train.training_session.CheckpointConfig) class. The callback then takes care of consistent checkpointing with the specified frequency during training. To restore from available checkpoint before the start of training, the `restore` parameter is default set to `True`. If you would like to save all the checkpoints from training, set `preserve_all` to `True` (default is `False`). The checkpoint filenames are then saved like so: e.g. if `filename="myModel.dnn"`, the checkpoints will be `myModel.dnn.0`, `myModel.dnn.1`, `myModel.dnn.2`, and so on.
+In order to enable checkpointing, the user must provide a checkpoint configuration callback by instantiating the [CheckpointConfig](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=checkpointconfig#cntk.train.training_session.CheckpointConfig) class. The callback then takes care of consistent checkpointing with the specified frequency during training. To restore from the last available checkpoint before the start of training, the `restore` parameter is default set to `True`. If you would like to save all the checkpoints from training, set `preserve_all` to `True` (default is `False`). The checkpoint filenames are then saved like so: e.g. if `filename="myModel.dnn"`, the checkpoints will be `myModel.dnn.0`, `myModel.dnn.1`, `myModel.dnn.2`, and so on.
+
+Once you've defined your minibatch source (`mb_source`), model (`z`), criterion function (`criterion`), learner and input map (if `mb_source` is a data reader), you can configure the train method to take in a checkpoint callback:
+```Python
+checkpoint = "myModel.dnn"
+checkpoint_frequency = 100
+checkpoint_config = C.CheckpointConfig(checkpoint, frequency=checkpoint_frequency, preserve_all=True)
+criterion.train(mb_source, model_inputs_to_streams = input_map, parameter_learners=[learner], callbacks=[checkpoint_config]) #note that there are additional params that can be specified
+```
+
+More detailed examples can be found [here](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)(in section 2) and in the [CNTK 200 Tutorial](https://cntk.ai/pythondocs/CNTK_200_GuidedTour.html)(under the "Advanced Training Example").
+
+**training_session**
+
+In addition, you can also perform high-level training using the [TrainingSession](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=train#cntk.train.training_session.TrainingSession) class
 
