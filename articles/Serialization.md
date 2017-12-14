@@ -17,7 +17,7 @@ This article goes over saving and loading models and checkpointing during traini
 
 ### Save model
 
-To save a model to file, use the [save()](https://cntk.ai/pythondocs/cntk.ops.functions.html#cntk.ops.functions.Function.save) function and specify a filepath for the saved model.
+To save a model to file, use the [`save()`](https://cntk.ai/pythondocs/cntk.ops.functions.html#cntk.ops.functions.Function.save) function and specify a filepath for the saved model.
 ```Python
 import cntk as C
 
@@ -35,7 +35,7 @@ from cntk.ops.functions import load_model
 
 z = load_model("myModel.model")
 ```
-Alternatively, you can also load your model using [load()](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?#cntk.ops.functions.Function.load):
+Alternatively, you can also load your model using [`load()`](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?#cntk.ops.functions.Function.load):
 ```Python
 z = C.Function.load("myModel.model")
 ```
@@ -94,7 +94,7 @@ For a complete example of manual checkpointing during training, refer [here](htt
 ### High-level checkpointing (`Function.train`)
 Instead of explicitly writing the training loop, the user can use the [Function.train/test](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?#cntk.ops.functions.Function.train) methods, which take care of the different aspects of a training session, including data sources, checkpointing, and progress printing. 
 
-In order to enable checkpointing, the user must provide a checkpoint configuration callback by instantiating the [CheckpointConfig](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=checkpointconfig#cntk.train.training_session.CheckpointConfig) class. The callback then takes care of consistent checkpointing with the specified frequency during training. To restore from the last available checkpoint before the start of training, the `restore` parameter is default set to `True`. If you would like to save all the checkpoints from training, set `preserve_all` to `True` (default is `False`). The checkpoint filenames are then saved like so: e.g. if `filename="myModel.dnn"`, the checkpoints will be `myModel.dnn.0`, `myModel.dnn.1`, `myModel.dnn.2`, and so on.
+In order to enable checkpointing, the user must provide a checkpoint configuration callback by instantiating the [`CheckpointConfig`](https://www.cntk.ai/pythondocs/cntk.train.training_session.html?highlight=checkpointconfig#cntk.train.training_session.CheckpointConfig) class. The callback then takes care of consistent checkpointing with the specified frequency during training. To restore from the last available checkpoint before the start of training, the `restore` parameter is default set to `True`. If you would like to save all the checkpoints from training, set `preserve_all` to `True` (default is `False`). The checkpoint filenames are then saved like so: e.g. if `filename="myModel.dnn"`, the checkpoints will be `myModel.dnn.0`, `myModel.dnn.1`, `myModel.dnn.2`, and so on.
 
 Once you've defined your minibatch source (`mb_source`), model (`z`), criterion function (`criterion`), learner and input map (if `mb_source` is a data reader), you can configure the train method to take in a checkpoint callback:
 ```Python
@@ -104,7 +104,7 @@ checkpoint_config = C.CheckpointConfig(checkpoint, frequency=checkpoint_frequenc
 criterion.train(mb_source, model_inputs_to_streams = input_map, parameter_learners=[learner], callbacks=[checkpoint_config]) 
 ```
 
-Note that [Function.train](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?#cntk.ops.functions.Function.train) has additional parameters that can be specified.
+Note that [`Function.train`](https://www.cntk.ai/pythondocs/cntk.ops.functions.html?#cntk.ops.functions.Function.train) has additional parameters that can be specified.
 
 More detailed examples can be found [here](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html) (in section 2) and in the [CNTK 200 Tutorial](https://cntk.ai/pythondocs/CNTK_200_GuidedTour.html) (under the "Advanced Training Example").
 
