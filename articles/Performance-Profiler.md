@@ -29,24 +29,27 @@ is blocked until all pending GPU processing is complete. Default is `True`.
 
 There are profiler APIs that control the profiler's behavior. A typical usage with `training_session` is like:
 
-    from cntk.debugging import start_profiler, stop_profiler
-    start_profiler()
-    training_session.train()
-    stop_profiler()
+```Python
+from cntk.debugging import start_profiler, stop_profiler
+start_profiler()
+training_session.train()
+stop_profiler()
+```
 
 Note that profiler is not enabled after `start_profiler`, and that `training_session enable_profiler()` is called after the first checkpoint. This is to skip the first epoch, which may have more latency due to prefetching. When not using `training_session`, the user needs to do something like the following:
 
-    from cntk.debugging import start_profiler, stop_profiler, enable_profiler
-    start_profiler()        
-    for epoch in range(max_epochs):       # loop over epochs
-        sample_count = 0
-        while sample_count < epoch_size:  # loop over minibatches in the epoch
-            data = reader_train.next_minibatch(min(minibatch_size, epoch_size-sample_count), input_map=input_map) # fetch minibatch.
-            trainer.train_minibatch(data)                                   # update model with it
-            sample_count += trainer.previous_minibatch_sample_count         # count samples processed so far
-        enable_profiler() # begin to collect profiler data after first epoch
-    stop_profiler()
-    
+```Python
+from cntk.debugging import start_profiler, stop_profiler, enable_profiler
+start_profiler()        
+for epoch in range(max_epochs):       # loop over epochs
+    sample_count = 0
+    while sample_count < epoch_size:  # loop over minibatches in the epoch
+        data = reader_train.next_minibatch(min(minibatch_size, epoch_size-sample_count), input_map=input_map) # fetch minibatch.
+        trainer.train_minibatch(data)                                   # update model with it
+        sample_count += trainer.previous_minibatch_sample_count         # count samples processed so far
+    enable_profiler() # begin to collect profiler data after first epoch
+stop_profiler()
+```    
 
 ### Output location
 Unless the `dir` parameter of `start_profiler` is otherwise specified, the profiler output goes to `./profiler`.
