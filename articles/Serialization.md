@@ -125,3 +125,8 @@ C.train.training_session(
   checkpoint_config=checkpoint_config
 ).train()
 ```
+
+### Distributed training
+During distributed training in CNTK, if the user is using [`save`](https://cntk.ai/pythondocs/cntk.ops.functions.html#cntk.ops.functions.Function.save) to save the model, a common mistake is that he or she will end up calling `save` for all the processes, which can lead to race conditions when writing the model to file. To lower the likelihood of error, consider instead checkpointing with the `save_checkpoint`/`restore_from_checkpoint` (or `CheckpointConfig` for `Function.train`) methods, which guard against such race hazards by explicitly saving the entire distributed training snapshot from only the rank-0 worker.
+
+Section 1.2 ("Distributed manual loop") of the ["Train model using declarative and imperative API"](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html) manual has a full example of checkpointing with `save_checkpoint`/`restore_from_checkpoint` during distributed training when using the low-level `Trainer.train_minibatch API`.
