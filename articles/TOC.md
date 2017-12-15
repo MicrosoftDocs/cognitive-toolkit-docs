@@ -41,7 +41,7 @@
 ## [Distributed Training](/cognitive-toolkit/Multiple-GPUs-and-machines)
 ## Visualization
 ### [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
-### Using Graphviz for Visualization
+### [Using Graphviz for Visualization](/cognitive-toolkit/Using-Graphviz-for-Visualization)
 ## Debugging in CNTK
 ### [Performance Profiler](/cognitive-toolkit/Performance-Profiler)
 ### [Debug CNTK Python Programs](https://cntk.ai/pythondocs/Manual_How_to_debug.html)
