@@ -3,7 +3,7 @@
 # [What's new](/cognitive-toolkit/news)
 
 # [Getting Started](/cognitive-toolkit/getting-started)
-## [Setup](/cognitive-toolkit/Setup-CNTK-on-your-machine)
+## [Installing CNTK](/cognitive-toolkit/Setup-CNTK-on-your-machine)
 ### Setup on Windows
 #### [Python only](/cognitive-toolkit/Setup-Windows-Python)
 #### [Scripted Install](/cognitive-toolkit/Setup-Windows-Binary-Script)
@@ -19,29 +19,95 @@
 ## [Setup on Azure](/cognitive-toolkit/CNTK-on-Azure)
 ## [Using Docker Containers](/cognitive-toolkit/CNTK-Docker-Containers)
 
-# [Tutorials](/cognitive-toolkit/tutorials)
-## [Python](https://cntk.ai/pythondocs/tutorials.html)
-### [On Azure Notebooks](http://notebooks.azure.com/library/cntkbeta2)
-## BrainScript
+# [Tutorials & Examples](/cognitive-toolkit/tutorials)
+## [Python Tutorials](https://cntk.ai/pythondocs/tutorials.html)
+## Python Recipes
+### [Build Your Own Image Classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
+### [Object Detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
+### [Object Detection using Faster R-CNN](/cognitive-toolkit/Object-Detection-using-Faster-R-CNN)
+## [Examples](/cognitive-toolkit/Examples)
+
+# Train/Develop
+## [Loading Data](/cognitive-toolkit/Loading-Data-Overview)
+### [Understanding and Extending Readers](/cognitive-toolkit/BrainScript-and-Python---Understanding-and-Extending-Readers)
+### [Read and Feed Data to CNTK Trainer](https://cntk.ai/pythondocs/Manual_How_to_feed_data.html)
+### [Write a Custom Deserializer](https://cntk.ai/pythondocs/Manual_How_to_write_a_custom_deserializer.html)
+### [Create User Minibatch Sources](https://cntk.ai/pythondocs/Manual_How_to_create_user_minibatch_sources.html)
+## Training a Model
+### [Interpreting epoch_size, minibatch_size_in_samples and MinibatchSource.next_minibatch in CNTK](./Interpreting-epoch_size-and-minibatch_size_in_samples-and-MinibatchSource.next_minibatch-in-CNTK.md)
+### [Train Model using Declarative and Imperative API](https://cntk.ai/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html)
+## [CNTK Learners](https://cntk.ai/pythondocs/Manual_How_to_use_learners.html)
+## [Serialization](./Serialization.md)
+## [Distributed Training](/cognitive-toolkit/Multiple-GPUs-and-machines)
+## Visualization
+### [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
+### [Using Graphviz for Visualization](/cognitive-toolkit/Using-Graphviz-for-Visualization)
+## Debugging in CNTK
+### [Performance Profiler](/cognitive-toolkit/Performance-Profiler)
+### [Debug CNTK Python Programs](https://cntk.ai/pythondocs/Manual_How_to_debug.html)
+## [Extending CNTK](https://cntk.ai/pythondocs/extend.html)
+
+# Evaluate/Deploy
+## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
+### [Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
+### [Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
+### [Evaluation on Universal Windows Platform (UWP)](/cognitive-toolkit/cntk-library-evaluation-on-uwp)
+### [NuGet Package](/cognitive-toolkit/NuGet-Package)
+## CNTK Evaluation Interfaces
+### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
+### [CNTK Library C# interface](/cognitive-toolkit/CNTK-Library-Managed-API)
+### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
+## [Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
+## Deploying on Azure
+### [Evaluate a Model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
+### [Deploy a Model to Azure Container Services (AKS)](/cognitive-toolkit/Deploy-Model-to-AKS)
+
+# API Reference
+## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
+## [CNTK Model Format](/cognitive-toolkit/CNTK-model-format)
+## Python
+### [Working with Sequences](https://cntk.ai/pythondocs/sequence.html)
+### [Layers Library Reference](https://cntk.ai/pythondocs/layerref.html)
+### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
+## [C#/.Net](./CNTK-Library-Managed-API.md)
+## [C++ Eval](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
+
+# [How To](/cognitive-toolkit/How-To-Overview)
+## [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
+## [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
+## [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python)
+## [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
+## [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
+## [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
+## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
+
+# [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
+## [Development Setup](/cognitive-toolkit/Setup-development-environment)
+### Windows
+#### [Scripted](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
+#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Windows)
+### Linux
+#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Linux)
+## [Developing and testing](/cognitive-toolkit/Developing-and-Testing)
+### [Coding guidelines](/cognitive-toolkit/Coding-Guidelines)
+### [How to test](/cognitive-toolkit/How-to-Test)
+### [CNTK production test configurations](/cognitive-toolkit/Test-Configurations)
+### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
+### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
+### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
+### [Enabling 1bit SGD](/cognitive-toolkit/Enabling-1bit-SGD)
+### [Update 1bit SGD Submodule Location](/cognitive-toolkit/Update-1bit-SGD-Submodule-Location)
+## [Contribute to CNTK](/cognitive-toolkit/Contributing-to-CNTK)
+
+# BrainScript
+## Tutorials
 ### [Overview](/cognitive-toolkit/CNTK-usage-overview)
 ### [Getting started](/cognitive-toolkit/tutorial/tutorial)
 ### [Image recognition](/cognitive-toolkit/Hands-On-Labs-Image-Recognition)
 ### [Language understanding with ATIS](/cognitive-toolkit/Hands-On-Labs-Language-Understanding)
-### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN)
+### [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN-BrainScript)
 ### [KDD 2016 Tutorial](/cognitive-toolkit/KDD-2016-Tutorial)
-
-# [Examples](/cognitive-toolkit/Examples)
-# [Manuals](https://cntk.ai/pythondocs/manuals.html)
-
-# Reference
-## [CNTK API Overview](/cognitive-toolkit/CNTK-Library-API)
-## [CNTK model format](/cognitive-toolkit/CNTK-model-format)
-## [Python](https://cntk.ai/pythondocs/)
-### [Working with Sequences](https://cntk.ai/pythondocs/sequence.html)
-### [Layers library reference](https://cntk.ai/pythondocs/layerref.html)
-### [Python API Reference](https://cntk.ai/pythondocs/cntk.html)
-### [Extending Cognitive Toolkit](https://cntk.ai/pythondocs/extend.html)
-## [BrainScript](/cognitive-toolkit/Using-CNTK-with-BrainScript)
+## [Reference](/cognitive-toolkit/Using-CNTK-with-BrainScript)
 ### [BrainScript Config file overview](/cognitive-toolkit/BrainScript-Config-file-overview)
 ### [Train, Test, Eval](/cognitive-toolkit/BrainScript-Train-Test-Eval)
 ### [Top-level Configurations](/cognitive-toolkit/BrainScript-Top-level-configurations)
@@ -90,36 +156,14 @@
 #### [SGD Configuration](/cognitive-toolkit/BrainScript-SGD-Block)
 ### Miscellaneous
 #### [Simple Network Builder](/cognitive-toolkit/Simple-Network-Builder)
-#### [BrainScript epochSize and Python epoch_size in CNTK](/cognitive-toolkit/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
-#### [BrainScript minibatchSize and Python minibatch_size_in_samples in CNTK](/cognitive-toolkit/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
+#### [BrainScript epochSize in CNTK](/cognitive-toolkit/BrainScript-epochSize-and-Python-epoch_size-in-CNTK)
+#### [BrainScript minibatchSize in CNTK](/cognitive-toolkit/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK)
 #### [BrainScript Command line parsing rules](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [ConvertDBN command](/cognitive-toolkit/ConvertDBN-command)
 #### [Plot command](/cognitive-toolkit/Plot-command)
 #### [BrainScript via command line](/cognitive-toolkit/BrainScript-Command-Line-Parsing-Rules)
 #### [Top-level commands](/cognitive-toolkit/Top-level-commands)
-## [C#/.Net](./CNTK-Library-Managed-API.md)
-## [Model Evaluation](/cognitive-toolkit/CNTK-Evaluation-Overview)
-### [Model Evaluation on Windows](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows)
-### [Model Evaluation on Linux](/cognitive-toolkit/CNTK-Library-Evaluation-on-Linux)
-### [NuGet Package](/cognitive-toolkit/NuGet-Package)
-### [CNTK Library C++ Eval interface](/cognitive-toolkit/CNTK-Library-Native-Eval-Interface)
-### [CNTK Library C# interface](/cognitive-toolkit/CNTK-Library-Managed-API)
-### [CNTK Library Java](/cognitive-toolkit/CNTK-Library-API#java-api-experimental)
-### [Evaluate a model in an Azure WebApi](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
-### [Evaluation on Universal Windows Platform (UWP)](./CNTK-Library-Evaluation-on-UWP.md)
-### [Model Evaluation Examples](/cognitive-toolkit/CNTK-Eval-Examples)
-
-# How do I
-## How do I in Python
-### [Express things](/cognitive-toolkit/How-do-I-Express-Things-In-Python)
-### [Train models](/cognitive-toolkit/How-do-I-Train-models-in-Python)
-### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python)
-### [Adapt models](/cognitive-toolkit/How-do-I-Adapt-models-in-Python)
-### [Read things](/cognitive-toolkit/How-do-I-Read-Things-in-Python)
-### [Deal with errors](/cognitive-toolkit/How-do-I-Deal-with-Errors-in-Python)
-### Recipes
-#### [Build your own image classifier using Transfer Learning](/cognitive-toolkit/Build-your-own-image-classifier-using-Transfer-Learning)
-## How do I in BrainScript
+## How To
 ### [Express things](/cognitive-toolkit/How-do-I-Express-Things-in-BrainScript)
 ### [Train models](/cognitive-toolkit/How-do-I-Train-Models-in-BrainScript)
 ### [Evaluate models](/cognitive-toolkit/How-do-I-Evaluate-Models-in-BrainScript)
@@ -129,26 +173,6 @@
 ### Recipes
 #### [Image Auto Encoder Using Deconvolution and Unpooling](/cognitive-toolkit/Image-Auto-Encoder-Using-Deconvolution-And-Unpooling)
 ### [GRUs on CNTK with BrainScript](https://www.microsoft.com/en-us/cognitive-toolkit/blog/2016/08/grus-on-cntk-with-brainscript/)
-## [Multiple GPUs and Machines](/cognitive-toolkit/Multiple-GPUs-and-machines)
-## [Using TensorBoard for Visualization](/cognitive-toolkit/Using-TensorBoard-for-Visualization)
-## [Troubleshoot](/cognitive-toolkit/Troubleshoot-CNTK)
-# [CNTK Source Code & Development](/cognitive-toolkit/Setup-CNTK-from-source)
-## [Development Setup](/cognitive-toolkit/Setup-development-environment)
-### Windows
-#### [Scripted](/cognitive-toolkit/Setup-CNTK-with-script-on-Windows)
-#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Windows)
-### Linux
-#### [Manual](/cognitive-toolkit/Setup-CNTK-on-Linux)
-## [Developing and testing](/cognitive-toolkit/Developing-and-Testing)
-### [Coding guidelines](/cognitive-toolkit/Coding-Guidelines)
-### [How to test](/cognitive-toolkit/How-to-Test)
-### [CNTK production test configurations](/cognitive-toolkit/Test-Configurations)
-### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
-### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
-### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
-### [Enabling 1bit SGD](/cognitive-toolkit/Enabling-1bit-SGD)
-### [Update 1bit SGD Submodule Location](/cognitive-toolkit/Update-1bit-SGD-Submodule-Location)
-## [Contribute to CNTK](/cognitive-toolkit/Contributing-to-CNTK)
 
 # Resources
 ## [CNTK Blog](https://www.microsoft.com/en-us/cognitive-toolkit/blog/)

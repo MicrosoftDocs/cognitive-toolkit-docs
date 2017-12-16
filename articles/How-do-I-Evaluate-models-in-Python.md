@@ -21,7 +21,7 @@ Assuming that:
 
 * during training you subtracted 128 from all channels
 * the image you want to predict on is "foo.jpg"
-* you saved your model in Python using `z.save_model("mycnn.dnn")`
+* you saved your model in Python using `z.save("mycnn.dnn")`
 
 then you can do the following:
 

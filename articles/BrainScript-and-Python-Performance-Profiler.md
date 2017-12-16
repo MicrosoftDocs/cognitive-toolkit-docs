@@ -1,22 +1,22 @@
 ---
-title:   BrainScript and Python Performance Profiler
+title:   BrainScript Performance Profiler
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/01/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
-ms.devlang:   brainscript, python
+ms.devlang:   brainscript
 ---
 
-# BrainScript and Python Performance Profiler
+# BrainScript Performance Profiler
 
 
-CNTK has a performance profiler that can help debug performance issues. It generates a summary report and a detailed profile log.
+CNTK has a performance profiler that can help debug performance issues. It generates a summary report and a detailed profile log.  
 
-## Config file parameters
+For details on using the performance profiler in Python, see [here](./Performance-Profiler.md).
 
-### For BrainScript
+## BrainScript config file parameters
 
 The behavior of the profiler is controlled through the following top-level parameters:
 * `profilerEnabled`: Enables/disables the profiler (`true` or `false`). Default is `false`.
@@ -27,28 +27,6 @@ In most cases it is sufficient to add a single line to the config file:
 
     profilerEnabled="true"
     
-### For Python
-
-There are profiler APIs that control the profiler's behavior. A typical usage with training_session is like:
-
-    from cntk.debugging import start_profiler, stop_profiler
-    start_profiler()
-    training_session.train()
-    stop_profiler()
-
-Note that profiler is not enabled after start_profiler, and in training_session enable_profiler() is called after the first checkpoint. This is to skip the first epoch that may have more latency due to prefetching. When not using training_session, user need to do it like:
-
-    from cntk.debugging import start_profiler, stop_profiler, enable_profiler
-    start_profiler()        
-    for epoch in range(max_epochs):       # loop over epochs
-        sample_count = 0
-        while sample_count < epoch_size:  # loop over minibatches in the epoch
-            data = reader_train.next_minibatch(min(minibatch_size, epoch_size-sample_count), input_map=input_map) # fetch minibatch.
-            trainer.train_minibatch(data)                                   # update model with it
-            sample_count += trainer.previous_minibatch_sample_count         # count samples processed so far
-        enable_profiler() # begin to collect profiler data after first epoch
-    stop_profiler()
-
 ## Output location
 
 If `WorkDir` macro is defined in the config file profiler output goes to `$WorkDir$/profiler`. Otherwise, it goes to `./profiler`.

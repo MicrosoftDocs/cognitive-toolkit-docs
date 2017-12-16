@@ -12,24 +12,23 @@ ms.devlang:   NA
 
 # The Microsoft Cognitive Toolkit
 
-The Microsoft Cognitive Toolkit - CNTK - is a unified deep-learning toolkit by Microsoft. [This video](https://youtu.be/9gDDO5ldT-4) provides a high-level overview of the toolkit.
+The Microsoft Cognitive Toolkit (CNTK) is an open-source toolkit for commercial-grade distributed deep learning. It describes neural networks as a series of computational steps via a directed graph. CNTK allows the user to easily realize and combine popular model types such as feed-forward DNNs, convolutional neural networks (CNNs) and recurrent neural networks (RNNs/LSTMs). CNTK implements stochastic gradient descent (SGD, error backpropagation) learning with automatic differentiation and parallelization across multiple GPUs and servers.
 
-The latest release of the Microsoft Cognitive Toolkit is [2.3](./ReleaseNotes/CNTK_2_3_Release_Notes.md).
+[This video](https://youtu.be/9gDDO5ldT-4) provides a high-level overview of the toolkit. In addition, Microsoft offers an introductory course to deep learning with CNTK, [Deep Learning Explained](https://www.edx.org/course/deep-learning-explained-microsoft-dat236x-0).
 
-CNTK can be included as a library in your Python, C#, or C++ programs, or used as a standalone machine learning tool through its own model description language (BrainScript). In addition you can use the CNTK model evaluation functionality from your Java program.
+The latest release of CNTK is [2.3](./ReleaseNotes/CNTK_2_3_Release_Notes.md).
 
-CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the toolkit from the source provided in GitHub.
+CNTK can be included as a library in your Python, C#, or C++ programs, or used as a standalone machine-learning tool through its own model description language (BrainScript). In addition you can use the CNTK model evaluation functionality from your Java programs.
 
-Here are a few pages to get started:
-* [Reasons to switch from TensorFlow to CNTK](./Reasons-to-Switch-from-TensorFlow-to-CNTK.md)
-* [Setting up CNTK on your machine](./Setup-CNTK-on-your-machine.md)
-* [Tutorials](./Tutorials.md), [Examples](./Examples.md), [Tutorials on Azure](https://notebooks.azure.com/cntk/libraries/tutorials)
-* [The CNTK Library APIs](./CNTK-Library-API.md)
-  * [Using CNTK from Python](https://cntk.ai/pythondocs)
-    * [CNTK with Keras](./Using-CNTK-with-Keras.md)
-  * [Using CNTK from C#](./Using-CNTK-with-CSharp.md) 
-  * [Using CNTK from C++](./CNTK-Library-API.md#c-api)
-* CNTK using [BrainScript](./Using-CNTK-with-BrainScript.md)
-* [CNTK Model Evaluation](./CNTK-Evaluation-Overview.md)
-* [How to contribute to CNTK](./Contributing-to-CNTK.md)
-* Give us feedback through these [channels](Feedback-Channels.md)
+CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the toolkit from the source provided in [GitHub](https://github.com/Microsoft/CNTK).
+
+<br/>
+<img src="./pictures/ONNX_logo_main.png" width="200">
+
+CNTK is also one of the first deep-learning toolkits to support the Open Neural Network Exchange [ONNX](https://onnx.ai) format, an open-source shared model representation for framework interoperability and shared optimization. Co-developed by Microsoft and Facebook, ONNX will allow developers to easily move between CNTK and other supported frameworks, which include Caffe2, PyTorch and MXNet.
+
+
+The latest release of CNTK supports ONNX v1.0.
+
+Learn more about ONNX [here](https://github.com/onnx/onnx).
+
