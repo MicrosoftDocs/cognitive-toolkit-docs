@@ -14,7 +14,7 @@ ms.devlang:   csharp
 CNTK v2.2.0 provides C# API to build, train, and evaluate CNTK models. This section gives an overview of CNTK C# API. [C# training examples](https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp) are available in CNTK github repository.
 
 ## Using C#/.NET Managed API to Build a Deep Neural Network
-CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation takes one or two input variables with necessary parameters and produces a CNTK Function. A CNTK Function maps input data to output. A CNTK Function may also be treated as a varaible and be taken as input to another CNTK operation. With this mechanism, a Deep Neural Network can be built with basic CNTK operations by chaining and composition. As an example:
+CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation takes one or two input variables with necessary parameters and produces a CNTK Function. A CNTK Function maps input data to output. A CNTK Function may also be treated as a variable and be taken as input to another CNTK operation. With this mechanism, a Deep Neural Network can be built with basic CNTK operations by chaining and composition. As an example:
 ***
 ```cs
 private static Function CreateLogisticModel(Variable input, int numOutputClasses)
