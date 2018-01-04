@@ -260,19 +260,25 @@ After storing your images in the described folder structure and annotating them 
 
 `python Examples/Image/Detection/utils/annotations/annotations_helper.py`
 
-after changing the folder in that script to your data folder. Finally, create a `MyDataSet_config.py` in the `utils\configs` folder following the existing examples:
+after changing the folder in that script to your data folder. Finally, create a `MyDataSet_config.py` in the `utils\configs` folder following the existing examples, as in this code snippet:
 
 ```
-__C.CNTK.DATASET == "YourDataSet":
-__C.CNTK.MAP_FILE_PATH = "../../DataSets/YourDataSet"
-__C.CNTK.CLASS_MAP_FILE = "class_map.txt"
-__C.CNTK.TRAIN_MAP_FILE = "train_img_file.txt"
-__C.CNTK.TEST_MAP_FILE = "test_img_file.txt"
-__C.CNTK.TRAIN_ROI_FILE = "train_roi_file.txt"
-__C.CNTK.TEST_ROI_FILE = "test_roi_file.txt"
-__C.CNTK.NUM_TRAIN_IMAGES = 500
-__C.CNTK.NUM_TEST_IMAGES = 200
-__C.CNTK.PROPOSAL_LAYER_SCALES = [8, 16, 32]
+...
+
+# data set config
+__C.DATA.DATASET = "YourDataSet"
+__C.DATA.MAP_FILE_PATH = "../../DataSets/YourDataSet"
+__C.DATA.CLASS_MAP_FILE = "class_map.txt"
+__C.DATA.TRAIN_MAP_FILE = "train_img_file.txt"
+__C.DATA.TRAIN_ROI_FILE = "train_roi_file.txt"
+__C.DATA.TEST_MAP_FILE = "test_img_file.txt"
+__C.DATA.TEST_ROI_FILE = "test_roi_file.txt"
+__C.DATA.NUM_TRAIN_IMAGES = 500
+__C.DATA.NUM_TEST_IMAGES = 200
+__C.DATA.PROPOSAL_LAYER_SCALES = [8, 16, 32]
+
+...
+
 ```
 
 `__C.CNTK.PROPOSAL_LAYER_SCALES` is used in `generate_anchors()` (see `utils/rpn/generate_anchors.py`). Starting from a base size of `16` three anchors with aspect ratios `0.5, 1.0` and `2.0` are created resulting in (`8 x 24, 16 x 16, 24 x 8`). These are multiplied with each proposal layer scale resulting in nine anchors (`64 x 192`, ... , `768 x 256`). These are absolute pixel coordinates w.r.t. the input image. All anchors are applied at each spatial position of the convolutional feature map to generate candidate regions of interest. Adapt these proposal layer scales according to the object sizes in your data set and the input image size you're using. For example, for the Grocery data set we're using `__C.DATA.PROPOSAL_LAYER_SCALES = [4, 8, 12]` and an input image size of `850 x 850` (see `utils/configs/Grocery_config.py`).
