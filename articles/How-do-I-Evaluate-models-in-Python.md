@@ -11,7 +11,7 @@ ms.devlang:   python
 # How do I evaluate models in Python
 
 * [Evaluate a saved convolutional network](#evaluate-a-saved-convolutional-network)
-* [Extract features from a specific layer using a trained model](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction)
+* [Extract features from a specific layer using a trained model](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/FeatureExtraction)
 
 ## Evaluate a saved convolutional network
 
@@ -66,4 +66,4 @@ The reason for the above, is that in old model the training information is saved
 
 ## Extract features from a specific layer using a trained model?
 
-There is an example [here](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction).
+There is an example [here](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/FeatureExtraction).

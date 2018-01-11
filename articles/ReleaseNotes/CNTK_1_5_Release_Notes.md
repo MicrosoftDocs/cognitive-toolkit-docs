@@ -34,7 +34,7 @@ An example is provided that shows how to apply Sequence-2-Sequence models to the
   
 This initial version still has a number of limitations that will be addressed in the next releases. Notably, for the attention model a maximum length of the input sequence must be known in advance and specified as a parameter. Also, certain operations are not maximally efficient. 
  
-See more in https://github.com/Microsoft/CNTK/tree/master/Examples/SequenceToSequence
+See more in https://github.com/Microsoft/CNTK/tree/release/latest/Examples/SequenceToSequence
 
 The model implements the following papers: 
 * Sutskever et al. (2014): Sequence to sequence Learning with Neural Networks 
@@ -64,7 +64,7 @@ This is our first and still experimental release of the Python API, so some extr
 
 * Clone CNTK GitHub Repository (you need it to access the Python setup part and related documentation)
 * Install Python and Spinx (http://www.sphinx-doc.org/)
-* Build documentation with Sphinx as described in https://github.com/Microsoft/CNTK/blob/master/contrib/Python/doc/README.txt
+* Build documentation with Sphinx as described in https://github.com/Microsoft/CNTK/tree/release/latest/contrib/Python/doc/README.txt
 * Open documentation and setup Python API as described
 
 > Update: please note that this version of the Python API is superceded by the

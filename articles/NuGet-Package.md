@@ -22,9 +22,9 @@ The CNTK NuGet package is a NuGet package containing the necessary libraries and
 ## Installation
 The package may be obtained through the NuGet Package Manager inside Visual Studio by searching for "CNTK", or downloaded directly from nuget.org:
 
-* [https://www.nuget.org/packages/CNTK.CPUOnly/2.3.0](https://www.nuget.org/packages/CNTK.CPUOnly/2.3.0)
-* [https://www.nuget.org/packages/CNTK.GPU/2.3.0](https://www.nuget.org/packages/CNTK.GPU/2.3.0)
-* [https://www.nuget.org/packages/CNTK.UWP.CPUOnly/2.3.0](https://www.nuget.org/packages/CNTK.UWP.CPUOnly/2.3.0)
+* [https://www.nuget.org/packages/CNTK.CPUOnly](https://www.nuget.org/packages/CNTK.CPUOnly)
+* [https://www.nuget.org/packages/CNTK.GPU](https://www.nuget.org/packages/CNTK.GPU)
+* [https://www.nuget.org/packages/CNTK.UWP.CPUOnly](https://www.nuget.org/packages/CNTK.UWP.CPUOnly)
 
 The current version is `2.3.0`.
 
@@ -44,4 +44,4 @@ There is a Linux equivalent set of libraries (albeit not available through NuGet
 
 ## Legacy applications using CNTK EvalDLL interface
 For applications that are still using CNTK EvalDLL interface, which only supports the [model-v1 format](./CNTK-model-format.md), please use  the **Microsoft.Research.CNTK.CpuEval-mkl** NuGet package:
-* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.3.0](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl/2.3.0): supports CPU Only, implements [EvalDll C# Interface](./EvalDll-Managed-API.md) and [EvalDll C++ Interface](./EvalDll-Native-API.md).
+* [https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl](https://www.nuget.org/packages/Microsoft.Research.CNTK.CpuEval-mkl): supports CPU Only, implements [EvalDll C# Interface](./EvalDll-Managed-API.md) and [EvalDll C++ Interface](./EvalDll-Native-API.md).

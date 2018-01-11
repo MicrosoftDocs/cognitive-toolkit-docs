@@ -20,7 +20,7 @@ ms.devlang:   brainscript
 ## Use a trained model as a feature extractor
 
 (thanks to @zpbappi, [Issue #672](https://github.com/Microsoft/CNTK/issues/672))
-<br>(for a Python API example go [here](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/FeatureExtraction))
+<br>(for a Python API example go [here](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/FeatureExtraction))
 
 Consider you have trained, say, a deep auto-encoder, which is symmetric around an encoding layer ("input --> encoding --> input" model). Now you would like to use the first half of the network as a constant feature extractor in another network.
 

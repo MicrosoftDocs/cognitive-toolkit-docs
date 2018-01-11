@@ -39,7 +39,7 @@ Assuming you have completed [Getting Started](./Tutorial/Tutorial.md), you can g
 --->
 <!---
 Additional Python tutorials:
-* The folder [Tutorials/NumpyInterop](https://github.com/Microsoft/CNTK/tree/master/Tutorials/NumpyInterop) contains a simple example of how to use numpy arrays as input for CNTK training and evaluation.
+* The folder [Tutorials/NumpyInterop](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/NumpyInterop) contains a simple example of how to use numpy arrays as input for CNTK training and evaluation.
 --->
 
 <!---

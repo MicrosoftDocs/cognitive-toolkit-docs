@@ -51,7 +51,7 @@ For their detailed description please see [ImageReader](./Brainscript-Image-read
 
 This section provides several examples on how a composite reader (aka [MinibatchSource](https://cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
 
-The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py). It shows the Python equivalent of the AlexNet reader from the [BrainScript Transforms](/cognitive-toolkit/BrainScript-and-Python---Understanding-and-Extending-Readers#transforms) section.
+The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py). It shows the Python equivalent of the AlexNet reader from the [BrainScript Transforms](/cognitive-toolkit/BrainScript-and-Python---Understanding-and-Extending-Readers#transforms) section.
 
 ```
 import cntk.io
@@ -84,7 +84,7 @@ reader = MinibatchSource(
         labels   = StreamDef(field='label', shape=num_classes)))) 
 ```
 
-The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
+The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
 
 ```
 n_rois = 100
@@ -209,8 +209,8 @@ This deserializer supports the same options that can be used with ImageDeseriali
 
 You will find complete network definitions and the corresponding data set examples in the CNTK Repository.
 There you will also find Unit and End-to-End Tests that use deserializers, i.e.
-* https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/Speech/HTKDeserializers/LSTM/FullUtterance
-* https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/Image/AlexNet
-* https://github.com/Microsoft/CNTK/blob/master/Tests/UnitTests/ReaderTests/Config/ImageAndTextReaderSimple_Config.cntk
-* https://github.com/Microsoft/CNTK/blob/master/Tests/UnitTests/ReaderTests/Config/CNTKTextFormatReader/dense.cntk
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Speech/HTKDeserializers/LSTM/FullUtterance
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Image/AlexNet
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/UnitTests/ReaderTests/Config/ImageAndTextReaderSimple_Config.cntk
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/UnitTests/ReaderTests/Config/CNTKTextFormatReader/dense.cntk
 

@@ -26,7 +26,7 @@ This release contains the following **breaking changes**:
   * Explicit calls to `plus()`, `log_add_exp()` and `element_times()` that pass a name must use the keyword `name=...`
   * Change calls to `save_model()` and `restore_model()` to `save()` and `restore()`, respectively. Further, `load_model()` can now optionally be written as `Function.load()`
 * CNTK NuGet package:
-  * *CNTKLibraryManaged-2.0.dll* now has a *Strong Name* (both GPU and CPU versions). Implementation details available in the description in the header of  [CNTKLibraryManagedDll-CPUOnly-AssemblyInfo.cs](https://github.com/Microsoft/CNTK/blob/master/bindings/csharp/CNTKLibraryManagedDll/CNTKLibraryManagedDll-CPUOnly-AssemblyInfo.cs) and [CNTKLibraryManagedDll-GPU-AssemblyInfo.cs](https://github.com/Microsoft/CNTK/blob/master/bindings/csharp/CNTKLibraryManagedDll/CNTKLibraryManagedDll-GPU-AssemblyInfo.cs). This is in addition to *EvalWrapper.dll* which is strong name enabled since v.1.7.
+  * *CNTKLibraryManaged-2.0.dll* now has a *Strong Name* (both GPU and CPU versions). Implementation details available in the description in the header of  [CNTKLibraryManagedDll-CPUOnly-AssemblyInfo.cs](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/csharp/CNTKLibraryManagedDll/CNTKLibraryManagedDll-CPUOnly-AssemblyInfo.cs) and [CNTKLibraryManagedDll-GPU-AssemblyInfo.cs](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/csharp/CNTKLibraryManagedDll/CNTKLibraryManagedDll-GPU-AssemblyInfo.cs). This is in addition to *EvalWrapper.dll* which is strong name enabled since v.1.7.
 
 ## New and updated features
 

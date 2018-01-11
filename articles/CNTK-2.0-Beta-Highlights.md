@@ -60,7 +60,7 @@ We have introduced a lot of new features during the Beta period. The list below 
 * Support of [object recognition using Fast R-CNN](./Object-Detection-using-Fast-R-CNN.md) algorithm.
 * Integration with [NVIDIA NCCL](https://github.com/NVIDIA/nccl), a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. See how to enable NCCL [here](./Setup-CNTK-on-Linux.md#cudnn).
 * Support of Asynchronous Stochastic Gradient Descent (ASGD)/Hogwild! training parallelization support using Microsoft’s Parameter Server ([Project Multiverso](https://github.com/Microsoft/multiverso)).
-* Support of Distributed scenarios in Python API. See more in the sections on Distributed scenarios in [ConvNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ConvNet/Python/README.md) and [ResNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ResNet/Python/README.md) examples.
+* Support of Distributed scenarios in Python API. See more in the sections on Distributed scenarios in [ConvNet](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ConvNet/Python/README.md) and [ResNet](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ResNet/Python/README.md) examples.
 * Support for training on one-hot and sparse arrays via NumPy.
 * Lambda rank and NDCG at 1 are accessible from Python for real this time.
 * New Python and BrainScript for VGG16 and 19.

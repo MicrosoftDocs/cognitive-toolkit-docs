@@ -72,7 +72,7 @@ Linux CNTK Evaluator is included in Linux binary distribution.
 The following changes and improvements are introduced in V.1.7:
 * Eval client samples (both C++ and C#) are included in the CNTK binary drop for Windows. The samples demonstrate how to use the CNTK evaluation library in C++ and C#. Instructions for using samples 
 are available [here](../index.md).
-* *EvalWrapper.dll* now has a *Strong Name*. Implementation details available in the description in the header of [*EvalWrapperAssemblyInfo.cpp*](https://github.com/Microsoft/CNTK/blob/master/Source/Extensibility/EvalWrapper/EvalWrapperAssemblyInfo.cpp).
+* *EvalWrapper.dll* now has a *Strong Name*. Implementation details available in the description in the header of [*EvalWrapperAssemblyInfo.cpp*](https://github.com/Microsoft/CNTK/tree/release/latest/Source/Extensibility/EvalWrapper/EvalWrapperAssemblyInfo.cpp).
 
 ## Unit Tests
 

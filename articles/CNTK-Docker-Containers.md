@@ -75,7 +75,7 @@ You can build and run CNTK using the same container and this is a recommended ap
 
 First you need to install docker. It is highly recommended to follow the [installation process in the official docker documentation](https://docs.docker.com/engine/installation/linux/ubuntulinux/). Versions that come with your Linux distribution might be outdated and will not work with `nvidia-docker` (which you may need to install in addition to docker if you plan to build and run the GPU image from within the same container). You should also follow the instructions in the optional section titled [creating a docker group](https://docs.docker.com/engine/installation/linux/ubuntulinux/#/create-a-docker-group).
 
-The correspondent Docker files are in the CNTK Repository at https://github.com/Microsoft/CNTK/tree/master/Tools/docker
+The correspondent Docker files are in the CNTK Repository at https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker
 
 To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU only, CPU+GPU with or without 1bit-SGD). For example, to build CNTK's GPU docker image without 1bit-SGD execute
 ```

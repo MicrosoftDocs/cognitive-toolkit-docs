@@ -13,7 +13,7 @@ ms.devlang:   brainscript
 
 This section provides information on BrainScript built-in functions.
 
-The declarations of all built-in functions can be found in the [`CNTK.core.bs`](https://github.com/Microsoft/CNTK/tree/master/Source/CNTK/BrainScript/CNTKCoreLib) located next to the CNTK binary.
+The declarations of all built-in functions can be found in the [`CNTK.core.bs`](https://github.com/Microsoft/CNTK/tree/release/latest/Source/CNTK/BrainScript/CNTKCoreLib) located next to the CNTK binary.
 
 The primitive operations and layers are declared in the global namespace. Additional operations are declared in namespaces, and will be given with the respective prefix (e.g. `BS.RNN.LSTMP`).
 

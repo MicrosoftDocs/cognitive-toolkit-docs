@@ -58,7 +58,7 @@ Below we describe how to predict one or more floating point value for an input i
 3. Define a loss function that compares the predicted values with the ground truth
 4. Adapt the reader section in your .cntk config file to read both image and regression labels
 
-Here is how you could do it. The full config file is included in the Examples folder at [Examples/Image/Regression/RegrSimple_CIFAR10.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Regression/RegrSimple_CIFAR10.cntk). That folder also contains the scripts to download the image data and generate the regression ground truth for training and testing.
+Here is how you could do it. The full config file is included in the Examples folder at [Examples/Image/Regression/RegrSimple_CIFAR10.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Regression/RegrSimple_CIFAR10.cntk). That folder also contains the scripts to download the image data and generate the regression ground truth for training and testing.
 
 1-3) Defining inputs, network and loss function:
 
@@ -121,7 +121,7 @@ Here is how you could do it. The full config file is included in the Examples fo
 
 The reader is a composite reader that uses the ImageReader to read images and the CNTKTextFormatReader to read the regression ground truth labels. It does so by defining an array of deserializers (using `{...} : {...}`) and assigning the inputs as defined in the network above (cf. features and regrLabels).
 
-See [Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk) for the full config file and the corresponding Readme in that folder for running the example.
+See [Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk) for the full config file and the corresponding Readme in that folder for running the example.
 
 ## Train a multilabel classifier
 
@@ -146,7 +146,7 @@ This counts the number of times y[i] disagrees with p[i]>0.5.
 ## Get started in sequence to sequence modelling
 
 This [hands-on lab](Hands-On-Labs-Language-Understanding.md) describes the main ingredients for getting started on sequence processing such as the CNTK text format and how to configure the reader to use short aliases for the various input sequences.
-The [grapheme-to-phoneme (G2P) example](https://github.com/Microsoft/CNTK/blob/master/Examples/SequenceToSequence/CMUDict/BrainScript/G2P.cntk)
+The [grapheme-to-phoneme (G2P) example](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/SequenceToSequence/CMUDict/BrainScript/G2P.cntk)
 demonstrates an actual sequence-to-sequence task.
 
 An important issue for sequence-to-sequence modeling is how to decode test data with beam search.
@@ -161,7 +161,7 @@ BrainScriptNetworkBuilder = (BS.Seq2Seq.GreedySequenceDecoderFrom (
                                         BS.Network.Load (decodeModelPath)))
 ```
 Both decoders have specific requirements to the network, as shown
-in the [G2P example](https://github.com/Microsoft/CNTK/blob/master/Examples/SequenceToSequence/CMUDict/BrainScript/G2P.cntk)
+in the [G2P example](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/SequenceToSequence/CMUDict/BrainScript/G2P.cntk)
 
 ## Train a DSSM (or a convolutional DSSM) model
 

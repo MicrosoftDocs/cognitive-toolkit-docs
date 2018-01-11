@@ -107,7 +107,7 @@ Highlights:
 * New operators like `to_sequence` and `sequence.unpack`.
 * Support of convolution in 1D. 
 * Support of UDF serialization (available both in Python and native in C++).
-* New tools ([Crosstalk](https://github.com/Microsoft/CNTK/tree/master/bindings/python/cntk/contrib/crosstalk) and [RNN Conversion](https://github.com/Microsoft/CNTK/blob/master/bindings/python/cntk/misc/optimized_rnnstack_converter.py)).
+* New tools ([Crosstalk](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/python/cntk/contrib/crosstalk) and [RNN Conversion](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/python/cntk/misc/optimized_rnnstack_converter.py)).
 * Support of NVIDIA cuDNN v.6.0 when CNTK is built by the user from source code.
 * A new set of NuGet Packages.
 * Multiple bug fixes.
@@ -181,7 +181,7 @@ Highlights of this Release:
 * HTK deserializers are now exposed in Python. All deserializers are exposed in C++.
 * The memory pool implementation of CNTK has been updated with a new global optimization algorithm. Hyper memory compression has been removed.
 * New features in C++ API.
-* [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs).
+* [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs).
 * New [CNTK NuGet Packages](./NuGet-Package.md) with CNTK V2 C++ Library.
 
 See more in the [Release Notes](./ReleaseNotes/CNTK_2_0_beta_12_Release_Notes.md).  

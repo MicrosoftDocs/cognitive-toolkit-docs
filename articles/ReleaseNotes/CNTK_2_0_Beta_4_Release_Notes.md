@@ -19,7 +19,7 @@ This release introduces Asynchronous Stochastic Gradient Descent (ASGD)/Hogwild!
 
 ## CNTK Python API. Distributed Scenarios support
 
-This release add the support of Distributed scenarios. See more in the sections on Distributed scenarios in [ConvNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ConvNet/Python/README.md) and [ResNet](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ResNet/Python/README.md) examples. (All examples are also available as a part of CNTK Binary Packages)
+This release add the support of Distributed scenarios. See more in the sections on Distributed scenarios in [ConvNet](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ConvNet/Python/README.md) and [ResNet](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ResNet/Python/README.md) examples. (All examples are also available as a part of CNTK Binary Packages)
 
 ## Memory compression
 
@@ -31,7 +31,7 @@ We continue re-organizing and re-arranging CNTK Examples and Tutorials. Please, 
 
 ## CNTK Docker image with 1bit-SGD support
 
-You may now compile and install CNTK with 1bit-SGD support as a Docker container. Thus all three CNTK configurations may be implemented as Docker containers. See more on [CNTK Docker containers here](https://github.com/Microsoft/CNTK/blob/master/Tools/docker/README.md). 
+You may now compile and install CNTK with 1bit-SGD support as a Docker container. Thus all three CNTK configurations may be implemented as Docker containers. See more on [CNTK Docker containers here](https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker/README.md). 
 
 ## CNTK Evaluation library
 

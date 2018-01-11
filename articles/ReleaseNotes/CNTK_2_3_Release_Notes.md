@@ -66,7 +66,7 @@ If no data unit is specified, the default data unit is in samples.
 - The initial release of netopt supports factoring of Dense CNTK layers and the 1-bit binarization of Convolutional layers.
 
 #### Netopt API
-- Details on how to use the netopt module is available in [Manual_How_to_use_network_optimizations.ipynb](https://github.com/Microsoft/CNTK/tree/release/2.3/Manual/Manual_How_to_use_network_optimizations.ipynb)
+- Details on how to use the netopt module is available in [Manual_How_to_use_network_optimizations.ipynb](https://github.com/Microsoft/CNTK/tree/release/latest/Manual/Manual_How_to_use_network_optimizations.ipynb)
 
 ## Operators
 ### Group convolution

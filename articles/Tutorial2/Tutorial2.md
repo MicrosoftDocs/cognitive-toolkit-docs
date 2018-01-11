@@ -35,9 +35,9 @@ ms.devlang:   brainscript
 
 ## Introduction
 
-This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](../Tutorial/Tutorial.md), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
+This tutorial is for BrainScript. For Python click [here](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/MLP/Python/SimpleMNIST.py). This is the second part of the CNTK tutorial where we will start using CNTK more to its full potential. We will go deep! This tutorial assumes that you have already gone through the [first part](../Tutorial/Tutorial.md), and thus you are familiar with basic CNTK/ML concepts such as logistic regression and softmax. In the first tutorial we built models to solve simple binary and multi-class classification problems. Though those models achieved good accuracy, they will not perform as well on harder real-world problems. One principal reason is that the decision boundaries between the classes are not typically linear. In this tutorial, we will learn to build more complex models, namely, neural networks and convolutional neural networks. We will build an image classification system using the MNIST dataset as our benchmark.
 
-The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([GitHub link](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/GettingStarted)).
+The files for this tutorial can be found in the source-code distribution under `Examples/Image/GettingStarted` ([GitHub link](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted)).
 
 ## The MNIST Data
 
@@ -47,7 +47,7 @@ MNIST is a popular image dataset of handwritten digits. It is divided into a tra
  
 ### Getting the Data
 
-CNTK comes with a Python script that fetches and prepares the MNIST data for CNTK consumption. You find it here: [install_mnist.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/DataSets/MNIST/install_mnist.py).
+CNTK comes with a Python script that fetches and prepares the MNIST data for CNTK consumption. You find it here: [install_mnist.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/DataSets/MNIST/install_mnist.py).
 
 ## Some Important CNTK Concepts
 
@@ -144,7 +144,7 @@ If we apply softmax classification like in the [previous tutorial](../Tutorial/T
 
 ### The Network Definition
 
-First, we define our features and labels. Note that we apply a scaling of (1.0 / 256.0) on the features in order to have their values within the range 0 to 1. This normalization helps SGD to converge faster with better predictive performance. Then, we specify the topology of our network which looks similar to the one we used in [Part 1 of the tutorial](../Tutorial/Tutorial.md), except that it has an additional layer, that is, the hidden layer `DNNSigmoidLayer`. The layers are defined in a separate shared BS file, [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs).
+First, we define our features and labels. Note that we apply a scaling of (1.0 / 256.0) on the features in order to have their values within the range 0 to 1. This normalization helps SGD to converge faster with better predictive performance. Then, we specify the topology of our network which looks similar to the one we used in [Part 1 of the tutorial](../Tutorial/Tutorial.md), except that it has an additional layer, that is, the hidden layer `DNNSigmoidLayer`. The layers are defined in a separate shared BS file, [Shared.bs](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs).
 
     featDim = 28 * 28                           # number of pixels
     labelDim = 10                               # number of distinct labels
@@ -239,8 +239,8 @@ You will get close to this by using `learningRatePerMB` and `momentumPerMB`, whi
 ### Putting it all Together
 
 Here are the configuration files you need to run this example:
-- [The main configuration file, including the BrainScript](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/01_OneHidden_ndl_deprecated.cntk)
-- [A few BrainScript functions](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs)
+- [The main configuration file, including the BrainScript](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/01_OneHidden_ndl_deprecated.cntk)
+- [A few BrainScript functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
 
 Once you have cloned the CNTK repository you will have all the required files. You can then run the example from the Image/MNIST/Data folder using:
 
@@ -298,7 +298,7 @@ Finally, the softmax layer for classification. We know the softmax from the firs
 
 ### The Network Definition 2
 
-Our CNN will have a bit more of a complex definition than our previous networks. Starting from the features, you will notice that we define each sample as a `28 x 28` matrix rather than a vector. This is because a CNN exploits local correlations in the image. Thus, we need to preserve this information. Second, in addition to the layer we saw in the previous network, we define a cascade of convolutional and max-pooling layers. We have two of each type. The core layer is `ConvReLULayer` which is defined as a function in [Shared.bs](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs). Here is what this macro looks like:
+Our CNN will have a bit more of a complex definition than our previous networks. Starting from the features, you will notice that we define each sample as a `28 x 28` matrix rather than a vector. This is because a CNN exploits local correlations in the image. Thus, we need to preserve this information. Second, in addition to the layer we saw in the previous network, we define a cascade of convolutional and max-pooling layers. We have two of each type. The core layer is `ConvReLULayer` which is defined as a function in [Shared.bs](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs). Here is what this macro looks like:
 
     ConvReLULayer (inp, outMap, inWCount, kW, kH, hStride, vStride) = [
         convW = Parameter (outMap, inWCount, init="uniform", initValueScale=wScale)
@@ -377,8 +377,8 @@ This allows us to put together the final network definition of our CNN that will
 ### Putting it all Together 2
 
 Here are the configuration files you will need to run this example:
-- [The main configuration file incl. network definition](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/02_Convolution_ndl_deprecated.cntk)
-- [The shared functions](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs)
+- [The main configuration file incl. network definition](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/02_Convolution_ndl_deprecated.cntk)
+- [The shared functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
 
 Similar to the previous example, it runs using the following command:
 
@@ -470,8 +470,8 @@ We start from the CNN we just built and add a batch normalization node to each l
 ### Putting it all Together 3
 
 Here are the configuration files you need to run this example:
-- [The main configuration file](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/03_ConvBatchNorm_ndl_deprecated.cntk)
-- [The shared functions](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/MNIST/Config/Shared.bs)
+- [The main configuration file](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/03_ConvBatchNorm_ndl_deprecated.cntk)
+- [The shared functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
 
 Similar to the previous example, it runs using the following command:
 

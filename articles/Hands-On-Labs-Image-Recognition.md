@@ -46,9 +46,9 @@ The archive contains the files for this tutorial. Please the archive
 and set your working directory to `ImageHandsOn`.
 You will be working with the following files:
 
-* [`ImageHandsOn.cntk`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/ImageHandsOn/ImageHandsOn.cntk): The CNTK configuration file we will introduce below and work with.
-* [`cifar10.pretrained.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/ImageHandsOn/cifar10.pretrained.cmf): Resulting model of the configuration we will begin with.
-* [`cifar10.ResNet.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/ImageHandsOn/cifar10.ResNet.cmf): Resulting model of the ResNet version that we will create below.
+* [`ImageHandsOn.cntk`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/ImageHandsOn/ImageHandsOn.cntk): The CNTK configuration file we will introduce below and work with.
+* [`cifar10.pretrained.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/ImageHandsOn/cifar10.pretrained.cmf): Resulting model of the configuration we will begin with.
+* [`cifar10.ResNet.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/ImageHandsOn/cifar10.ResNet.cmf): Resulting model of the ResNet version that we will create below.
 
 Lastly we must download and convert the CIFAR-10 data set. The conversion step will take about 10 minute. Please execute the following two Python scripts which you will also find in the working directory:
 

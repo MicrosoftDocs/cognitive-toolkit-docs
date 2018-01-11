@@ -34,7 +34,7 @@ In this tutorial we will walk through several complete CNTK examples, showing
 
 We will start with a simple implementation of binary classification using the linear model Logistic Regression. From there, we will expand to multiclass classification towards the end of this tutorial. Our next tutorial will tackle a more complex multiclass classification problem that will greatly benefit from a deep network architecture.
 
-The input files (data, scripts) can be found inside the CNTK source-code distribution at `Tutorials/HelloWorld-LogisticRegression` ([GitHub link](https://github.com/Microsoft/CNTK/tree/master/Tutorials/HelloWorld-LogisticRegression) and can be run directly from there.
+The input files (data, scripts) can be found inside the CNTK source-code distribution at `Tutorials/HelloWorld-LogisticRegression` ([GitHub link](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/HelloWorld-LogisticRegression) and can be run directly from there.
 
 ## Installing CNTK
 

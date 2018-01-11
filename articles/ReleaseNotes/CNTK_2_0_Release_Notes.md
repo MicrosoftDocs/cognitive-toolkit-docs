@@ -25,7 +25,7 @@ We are happy to bring CNTK as a backend for Keras as a beta release to our fans 
 
 ### Binary convolution with Halide
 
-This release includes [an example](https://github.com/Microsoft/CNTK/tree/master/Examples/Extensibility/BinaryConvolution) that implements training of a binary convolution network (see [BinaryConnect by Courbariaux et al.](https://arxiv.org/abs/1511.00363)), and a highly optimized native C++ implementation for fast evaluation of binary convolution models. The C++ binary convolution implementation utilizes the [Halide framework](http://halide-lang.org/) for making optimal use of multi-threading and vector instructions available on modern CPUs. It runs up to 10x faster than an equivalent convolution network trained and evaluated at 32-bit floating point precision.
+This release includes [an example](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Extensibility/BinaryConvolution) that implements training of a binary convolution network (see [BinaryConnect by Courbariaux et al.](https://arxiv.org/abs/1511.00363)), and a highly optimized native C++ implementation for fast evaluation of binary convolution models. The C++ binary convolution implementation utilizes the [Halide framework](http://halide-lang.org/) for making optimal use of multi-threading and vector instructions available on modern CPUs. It runs up to 10x faster than an equivalent convolution network trained and evaluated at 32-bit floating point precision.
 
 ### CNTK Java API
 
@@ -35,7 +35,7 @@ Starting from CNTK V.2.0 RC 3, a Java API is added to support model evaluation i
 
 * Random variables can now be used as a part of the graph. The following are now under the `cntk.random` module: `uniform`, `normal`, `bernoulli`, and `gumbel` as well as their corresponding ones with `_like` (e.g. `uniform_like`).
 * New learner: Universal learner uses a CNTK graph as the update mechanism.
-* New high-level `train()` and `test()` functions that wrap `Trainer`, `training_session`, and `Evaluator`. For usage examples see [Examples/1stSteps](https://github.com/Microsoft/CNTK/tree/master/Examples/1stSteps) and [Tutorials/CNTK_200_GuidedTour.ipynb](https://github.com/Microsoft/CNTK/blob/master/Tutorials/CNTK_200_GuidedTour.ipynb).
+* New high-level `train()` and `test()` functions that wrap `Trainer`, `training_session`, and `Evaluator`. For usage examples see [Examples/1stSteps](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/1stSteps) and [Tutorials/CNTK_200_GuidedTour.ipynb](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/CNTK_200_GuidedTour.ipynb).
 * `training_session`, `train()`, and `test()` now also accept data in the form of numpy/scipy arrays (in addition to data reader). Built on the basis of the new class `MinibatchSourceFromData` that wraps numpy/scipy arrays in a reader.
 
 ### Breaking changes
