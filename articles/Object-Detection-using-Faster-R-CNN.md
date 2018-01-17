@@ -37,7 +37,7 @@ ms.devlang:   python
 The above are examples images and object annotations for the Grocery data set (left) and the Pascal VOC data set (right) used in this tutorial.
 
 _Faster R-CNN_ is an object detection algorithm proposed by _Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun_ in 2015.
-The research paper is titled 'Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks', and is archived at [https://arxiv.org/abs/1506.01497]([https://arxiv.org/abs/1506.01497).
+The research paper is titled 'Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks', and is archived at [https://arxiv.org/abs/1506.01497]([https://arxiv.org/abs/1506.01497]).
 Faster R-CNN builds on previous work to efficiently classify object proposals using deep convolutional networks. 
 Compared to previous work, Faster R-CNN employs a _region proposal network_ and does not require an external method for candidate region proposals.
 
