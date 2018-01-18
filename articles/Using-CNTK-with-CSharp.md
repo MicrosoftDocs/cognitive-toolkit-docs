@@ -71,7 +71,7 @@ CNTK provides data preparation utilities for training. CNTK C# API exposes these
 |features 0.232070 1.814821 |labels 0.000000
 ```
 
-A CNTK DataSource is create in this way:
+A CNTK DataSource is created in this way:
 ***
 ```cs
     var minibatchSource = MinibatchSource.TextFormatMinibatchSource(
