@@ -11,7 +11,7 @@ ms.devlang:   brainscript
 
 # Model  Editing with BrainScript
 
-(Note: Older versions of CNTK used "MEL" (Model Editing Language) for this purposes. We are still in the process of converting the examples. For documentation on MEL, please see the [here](https://github.com/Microsoft/CNTK/blob/master/Documentation/Documents/Model%20Editing%20Language.md).)
+(Note: Older versions of CNTK used "MEL" (Model Editing Language) for this purposes. We are still in the process of converting the examples. For documentation on MEL, please see the [here](https://github.com/Microsoft/CNTK/tree/release/latest/Documentation/Documents/Model%20Editing%20Language.md).)
 
 CNTK allows models to be edited after the fact. This is done by creating a new model while cloning (parts of) an existing model with modifications applied. For this, CNTK provides three basic functions:
 

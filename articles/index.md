@@ -2,7 +2,7 @@
 title:   The Microsoft Cognitive Toolkit
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:  07/31/2017
+ms.date:  01/22/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   landing-page
 
@@ -25,7 +25,7 @@ CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you c
 <br/>
 <img src="./pictures/ONNX_logo_main.png" width="200">
 
-CNTK is also one of the first deep-learning toolkits to support the Open Neural Network Exchange [ONNX](https://onnx.ai) format, an open-source shared model representation for framework interoperability and shared optimization. Co-developed by Microsoft and Facebook, ONNX will allow developers to easily move between CNTK and other supported frameworks, which include Caffe2, PyTorch and MXNet.
+CNTK is also one of the first deep-learning toolkits to support the Open Neural Network Exchange [ONNX](https://onnx.ai) format, an open-source shared model representation for framework interoperability and shared optimization. Co-developed by Microsoft and supported by many others, ONNX allows developers to move models between frameworks such as CNTK, Caffe2, MXNet, and PyTorch.
 
 
 The latest release of CNTK supports ONNX v1.0.

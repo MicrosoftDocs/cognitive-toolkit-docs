@@ -372,7 +372,7 @@ If you build Python modules note:
 ## Test of CNTK build functionality
 
 To ensure that CNTK is working properly in your system, you can quickly run an example from the
-[Hello World - Logistic Regression](https://github.com/Microsoft/CNTK/tree/master/Tutorials/HelloWorld-LogisticRegression) tutorial.
+[Hello World - Logistic Regression](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/HelloWorld-LogisticRegression) tutorial.
 This example trains a simple network and can be directed to use either CPU or GPU, which helps quickly ensure that CNTK is
 functioning properly.
 

@@ -30,7 +30,7 @@ Training a neural network with CNTK involves three components that must be confi
 
 You need to provide this information through a configuration file as the first argument when calling the CNTK executable. The configuration file uses a specific syntax. Please see [Config file overview](./BrainScript-Config-file-overview.md) for details on config files.
 
-In the following we use the CNTK configuration and results from the MNIST example, in particular the configuration '01_OneHidden_ndl_deprecated.cntk' (see [Image/GettingStarted](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/README.md) and [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) for full details).
+In the following we use the CNTK configuration and results from the MNIST example, in particular the configuration '01_OneHidden_ndl_deprecated.cntk' (see [Image/GettingStarted](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/README.md) and [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/01_OneHidden.cntk) for full details).
 
 The CNTK command line for this example is `cntk  configFile=01_OneHidden_ndl_deprecated.cntk`. The following snippet provides an overview of the config file contents that are relevant for training.
 
@@ -73,7 +73,7 @@ Finally, the line `command = MNISTtrain` specifies which of the defined tasks to
 
 ## Evaluating a trained model
 
-To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [Train, Test, Eval](./BrainScript-Train-Test-Eval.md) for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
+To evaluate a trained model's accuracy, you use the `eval` or `test` command (see also [Train, Test, Eval](./BrainScript-Train-Test-Eval.md) for full details). The corresponding configuration in the MNIST [01_OneHidden.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/01_OneHidden.cntk) example looks as follows.
 ```
 testNetwork = {
     action = "test"

@@ -23,8 +23,8 @@ With the Release Candidate 3 we ship the last preview before the Microsoft Cogni
 * Convolution in 1D is now supported. 
 * Added support for UDF serialization (available both in Python and native in C++).
 * `Base64ImageDeserializer` is now available in Python
-* [**Crosstalk** is now in preview](https://github.com/Microsoft/CNTK/tree/master/bindings/python/cntk/contrib/crosstalk). This is a tool for comparing and converting tensors/parameters between different DL platforms. Currently only have limited support for CNTK and Tensorflow (v.0.12 or greater).
-* Introducing [**RNN Conversion tool**](https://github.com/Microsoft/CNTK/blob/master/bindings/python/cntk/misc/optimized_rnnstack_converter.py) to change `optimized_rnnstack` node to GEMM based RNNs, so the model can be used on CPU.
+* [**Crosstalk** is now in preview](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/python/cntk/contrib/crosstalk). This is a tool for comparing and converting tensors/parameters between different DL platforms. Currently only have limited support for CNTK and Tensorflow (v.0.12 or greater).
+* Introducing [**RNN Conversion tool**](https://github.com/Microsoft/CNTK/tree/release/latest/bindings/python/cntk/misc/optimized_rnnstack_converter.py) to change `optimized_rnnstack` node to GEMM based RNNs, so the model can be used on CPU.
 
 ### CNTK Java API
 

@@ -107,10 +107,10 @@ TensorBoard is not part of CNTK package and should be installed separately. Afte
 
 The following scripts contain examples on how to use TensorBoardProgressWriter:
 
-[Examples/Image/Classification/MLP/Python/SimpleMNIST.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py)<br/>
-[Examples/Image/Classification/ResNet/Python/TrainResNet_CIFAR10.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification//ResNet/Python/TrainResNet_CIFAR10.py)<br/>
-[Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py)<br/>
-[Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py](https://github.com/Microsoft/CNTK/blob/master/Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py)
+[Examples/Image/Classification/MLP/Python/SimpleMNIST.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/MLP/Python/SimpleMNIST.py)<br/>
+[Examples/Image/Classification/ResNet/Python/TrainResNet_CIFAR10.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification//ResNet/Python/TrainResNet_CIFAR10.py)<br/>
+[Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ConvNet/Python/ConvNet_CIFAR10_DataAug_Distributed.py)<br/>
+[Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/LanguageUnderstanding/ATIS/Python/LanguageUnderstanding.py)
 
 ## BrainScript
 

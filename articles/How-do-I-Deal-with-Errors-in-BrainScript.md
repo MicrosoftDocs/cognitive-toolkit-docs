@@ -37,7 +37,7 @@ EXCEPTION occurred: AddSequence: Sequences must be a least one frame long.
 The way to avoid it is to ensure that the `<s/>` token is in your vocabulary and its position corresponds to the variable `separatorRow` (0-based) in your config file.
 
 We also recommend to not use LUSequenceReader, but instead convert your text using the
-[`txt2ctf.py`](https://github.com/Microsoft/CNTK/blob/master/Scripts/txt2ctf.py) tool
+[`txt2ctf.py`](https://github.com/Microsoft/CNTK/tree/release/latest/Scripts/txt2ctf.py) tool
 and then reading it with the [`CNTKTextFormatReader`](./BrainScript-CNTKTextFormat-Reader.md).
 
 ## Deal with the 'No Output nodes found' error

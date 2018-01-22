@@ -19,7 +19,7 @@ ms.devlang:   brainscript
 
 The HTKMLFReader (the reader to read Master Label Files (MLF) of the Hidden Markov Toolkit (HTK))
 can be configured to read multiple label streams. The example below is taken from 
-[TIMIT_TrainMultiTask_ndl_deprecated.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Speech/Miscellaneous/TIMIT/config/TIMIT_TrainMultiTask_ndl_deprecated.cntk)
+[TIMIT_TrainMultiTask_ndl_deprecated.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Speech/Miscellaneous/TIMIT/config/TIMIT_TrainMultiTask_ndl_deprecated.cntk)
 in the Examples directory:
 
     reader = {

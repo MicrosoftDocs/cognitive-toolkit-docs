@@ -32,7 +32,7 @@ In the next sections we discuss these abstractions in more detail.
 
 This section provides several examples on how a composite reader (aka [MinibatchSource](https://cntk.ai/pythondocs/cntk.io.html#cntk.io.MinibatchSource)) can be configured in Python.
 
-The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py), it shows the Python equivalent of the AlexNet reader from [Transforms](#transforms) section.
+The following example was adapted from [AlexNet_ImageNet_Distributed.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/AlexNet/Python/AlexNet_ImageNet_Distributed.py), it shows the Python equivalent of the AlexNet reader from [Transforms](#transforms) section.
 
 ```
 import cntk.io
@@ -65,7 +65,7 @@ reader = MinibatchSource(
         labels   = StreamDef(field='label', shape=num_classes)))) 
 ```
 
-The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
+The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
 
 ```
 n_rois = 100
@@ -111,7 +111,7 @@ input_map = {
 
 ## Deserializers
 Let's have a look at the following fragment of configuration for the *HTKMLFReader* from the end-to-end *LSTM/FullUtterance* test
-(full config [here](https://github.com/Microsoft/CNTK/blob/master/Tests/EndToEndTests/Speech/LSTM/cntk.cntk)):
+(full config [here](https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Speech/LSTM/cntk.cntk)):
 ```
 ...
 # Old reader config. For illustration only.
@@ -222,7 +222,7 @@ A transform is a simple abstraction that take a sequence as an input, performs s
 Typical examples of transforms are different transformations of images such as crop, scale or transpose.
 Transforms can be configured on per input basis.
 
-Let's have a look how transforms can be applied to the input (the config is taken from the [Tests/EndToEndTests/Image/AlexNet](https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/Image/AlexNet) test):
+Let's have a look how transforms can be applied to the input (the config is taken from the [Tests/EndToEndTests/Image/AlexNet](https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Image/AlexNet) test):
 ```
 deserializers = ([
     type = "ImageDeserializer"
@@ -424,7 +424,7 @@ This deserializer supports the same options that can be used with ImageDeseriali
 
 You will find complete network definitions and the corresponding data set examples in the CNTK Repository.
 There you will also find Unit and End-to-End Tests that use deserializers, i.e.
-* https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/Speech/HTKDeserializers/LSTM/FullUtterance
-* https://github.com/Microsoft/CNTK/tree/master/Tests/EndToEndTests/Image/AlexNet
-* https://github.com/Microsoft/CNTK/blob/master/Tests/UnitTests/ReaderTests/Config/ImageAndTextReaderSimple_Config.cntk
-* https://github.com/Microsoft/CNTK/blob/master/Tests/UnitTests/ReaderTests/Config/CNTKTextFormatReader/dense.cntk
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Speech/HTKDeserializers/LSTM/FullUtterance
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/Image/AlexNet
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/UnitTests/ReaderTests/Config/ImageAndTextReaderSimple_Config.cntk
+* https://github.com/Microsoft/CNTK/tree/release/latest/Tests/UnitTests/ReaderTests/Config/CNTKTextFormatReader/dense.cntk

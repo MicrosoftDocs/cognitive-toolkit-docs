@@ -39,7 +39,7 @@ Initially we will develop the WebApi locally and then upload this to our Azure i
 
 ### Let’s get started
 
-We already created a project blueprint called **[EvalDll_AzureTutorial](https://github.com/Microsoft/CNTK/tree/release/2.3/Examples/Evaluation/LegacyEvalDll/EvalDll_AzureTutorial)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\LegacyEvalDll\EvalDll_AzureTutorial`. 
+We already created a project blueprint called **[EvalDll_AzureTutorial](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Evaluation/LegacyEvalDll/EvalDll_AzureTutorial)**. This project is part of the CNTK GitHub repository and can be found in the folder `Examples\Evaluation\LegacyEvalDll\EvalDll_AzureTutorial`. 
 
 **Please note that the sample project is using CNTK EvalDll API. For users who use a model trained with Python, please use [CNTK Library API](../cntk-library-evaluation-on-windows.md). The tutorial for using CNTK Library can be found at [Evaluate a model in Azure WebApi using CNTK Library Managed API](../evaluate-a-model-in-an-azure-webApi.md)**
 

@@ -68,7 +68,7 @@ pip install your_download_folder/scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
 
 [!NOTE]: if you see the message _No module named past_ when running the scripts please execute `pip install future`.
 
-This tutorial code assumes you are using 64bit version of Python, either 3.4 or 3.5 on Windows or 3.4 on Linux, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/utils)
+This tutorial code assumes you are using 64bit version of Python, either 3.4 or 3.5 on Windows or 3.4 on Linux, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/utils)
 are prebuilt for those versions. If your task requires the use of a different Python version, please recompile these DLL files yourself in the correct environment (see [below](#pre-compiled-binaries-for-bounding-box-regression-and-non-maximum-suppression)).
 
 The tutorial further assumes that **the folder where cntk.exe resides is in your PATH environment variable**. (To add the folder to your PATH you can run the following command from a command line (assuming the folder where cntk.exe is on your machine is C:\src\CNTK\x64\Release): `set PATH=C:\src\CNTK\x64\Release;%PATH%`.)
@@ -228,8 +228,8 @@ To run on the Pascal VOC data make sure that in `PARAMETERS.py` `dataset` is set
 * Run `A3_ParseAndEvaluateOutput.py` to compute the mAP ([mean average precision](#map-mean-average-precision)) of the trained model.
   * Please note that this is work in progress and the results are preliminary as we are training new baseline models.
   * Please make sure to have the latest version from CNTK master for the files
-  [fastRCNN/pascal_voc.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/pascal_voc.py) and
-  [fastRCNN/voc_eval.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/voc_eval.py)
+  [fastRCNN/pascal_voc.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/pascal_voc.py) and
+  [fastRCNN/voc_eval.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/voc_eval.py)
   to avoid encoding errors.
 
 ## Train on your own data
@@ -251,7 +251,7 @@ VOTT provides the following **features**:
 How to annotate with VOTT:
 
 1. Download the latest [Release](https://github.com/CatalystCode/VOTT/releases)
-2. Follow the [Readme](https://github.com/CatalystCode/VOTT/blob/master/README.md) to run a tagging job
+2. Follow the [Readme](https://github.com/CatalystCode/VOTT/tree/release/latest/README.md) to run a tagging job
 3. After tagging Export tags to the dataset directory
 
 **Option #2: Using Annotation Scripts**
@@ -307,7 +307,7 @@ You can overwrite them in the `# project-specific parameters` section correspond
 ### CNTK configuration
 
 The CNTK BrainScript configuration file that is used to train and test Fast R-CNN is
-[fastrcnn.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/Detection/FastRCNN/BrainScript/fastrcnn.cntk).
+[fastrcnn.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastrcnn.cntk).
 The part that is constructing the network is the `BrainScriptNetworkBuilder` section in the `Train` command:
 
 ```

@@ -34,7 +34,7 @@ The following are the main resources for the transfer learning tutorial:
 
 |||
 |:-----------------|:---
-|Recipe            |`TransferLearning.py` and `TransferLearning_Extended.py` (see [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/TransferLearning)).
+|Recipe            |`TransferLearning.py` and `TransferLearning_Extended.py` (see [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/TransferLearning)).
 |pre-trained models |As base model for transfer learning we use a [pretrained ResNet_18 model](https://cntk.ai/Models/ResNet/ResNet_18.model). 
 |Data              |The [Flowers data set with 102 categories](http://www.robots.ox.ac.uk/~vgg/data/flowers/102/index.html) and example images of sheep and wolfs (see [Setup](#setup)).
 |How to run        |Follow the description below.
@@ -43,7 +43,7 @@ The following are the main resources for the transfer learning tutorial:
 
 To run the code in this example, you need a CNTK Python environment (see [here](./Setup-CNTK-on-your-machine.md) for setup help). 
 
-To download the required data and the pretrained model run the following command form the [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/TransferLearning) folder:
+To download the required data and the pretrained model run the following command form the [Examples/Image/TransferLearning](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/TransferLearning) folder:
 
 `python install_data_and_model.py`
 

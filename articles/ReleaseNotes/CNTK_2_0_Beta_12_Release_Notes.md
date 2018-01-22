@@ -56,7 +56,7 @@ The following is added to CNTK C++ API:
 
 ## New Examples and Tutorials
 
-* [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/blob/master/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) are added to C# Evaluation examples. Also examples for using one-hot vector as input are available.  
+* [New Eval examples for RNN models](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) are added to C# Evaluation examples. Also examples for using one-hot vector as input are available.  
 
 ## CNTK NuGet package
 

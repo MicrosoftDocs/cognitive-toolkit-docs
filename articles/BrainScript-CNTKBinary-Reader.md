@@ -16,7 +16,7 @@ The CNTKBinaryReader (later simply **binary reader**) is designed to be used wit
 * Both sparse and dense inputs
 * Variable length sparse sequences
 
-The [Scripts/ctf2bin.py](https://github.com/Microsoft/CNTK/blob/master/Scripts/ctf2bin.py) script can be used to convert data from the CNTKTextFormat into the CNTKBinaryFormat. Alternatively, one can implement the schema defined below.
+The [Scripts/ctf2bin.py](https://github.com/Microsoft/CNTK/tree/release/latest/Scripts/ctf2bin.py) script can be used to convert data from the CNTKTextFormat into the CNTKBinaryFormat. Alternatively, one can implement the schema defined below.
 
 ## Input Schema
 

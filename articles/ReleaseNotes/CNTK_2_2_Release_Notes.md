@@ -45,7 +45,7 @@ export NCCL_IB_HCA=mlx5_0,mlx5_2
 
 ### CNTK learner interface update
 
-This update simplifies the learner APIs and deprecates the concepts of `unitType.minibatch` and `UnitType.sample`. The purpose is to make the API intuitive to specify the learner hyper-parameters while preserving the unique model update techniques in CNTK --- the mean gradients of every N samples contributes approximately the same to the model updates regardless of the actual data minibatch sizes. Detailed explanation can be found at the manual on [How to Use CNTK Learners](https://github.com/Microsoft/CNTK/blob/master/Manual/Manual_How_to_use_learners.ipynb).
+This update simplifies the learner APIs and deprecates the concepts of `unitType.minibatch` and `UnitType.sample`. The purpose is to make the API intuitive to specify the learner hyper-parameters while preserving the unique model update techniques in CNTK --- the mean gradients of every N samples contributes approximately the same to the model updates regardless of the actual data minibatch sizes. Detailed explanation can be found at the manual on [How to Use CNTK Learners](https://github.com/Microsoft/CNTK/tree/release/latest/Manual/Manual_How_to_use_learners.ipynb).
 
 In the new API, all supported learners, including [AdaDelta](https://cntk.ai/pythondocs/cntk.learners.html#cntk.learners.adadelta),
 [AdaGrad](https://cntk.ai/pythondocs/cntk.learners.html#cntk.learners.adagrad),
@@ -139,15 +139,15 @@ var trainer = Trainer.CreateTrainer(classifierOutput, trainingLoss,
 
 Training examples cover a broad range of DNN use cases:
 * A hello-world example to train and evaluate a logistic regression model using C#/API:
-https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/LogisticRegression.cs
+https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/LogisticRegression.cs
 * Convolution neural network for image classification of the MNIST dataset:
-https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/MNISTClassifier.cs
+https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/MNISTClassifier.cs
 * Build, train, and evaluate a ResNet model with C#/.NET API:  
-https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/CifarResNetClassifier.cs
+https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/CifarResNetClassifier.cs
 * Transfer learning with C#/.NET API:  
-https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/TransferLearning.cs
+https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/TransferLearning.cs
 * Build and train a LSTM sequence classifier with C#/.NET API:
-https://github.com/Microsoft/CNTK/tree/master/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs
+https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs
 
 ### R-binding for CNTK
 R-binding for CNTK, which enables both training and evaluation, will be published in a separate repository very soon.
@@ -156,7 +156,7 @@ R-binding for CNTK, which enables both training and evaluation, will be publishe
 ### Object Detection with Fast R-CNN and Faster R-CNN
 * Support for bounding box regression and VGG model in Fast R-CNN.
 * New tutorial in documentation on [Faster R-CNN object detection](https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Faster-R-CNN) and updated tutorial on [Fast R-CNN](https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN).
-* [Object detection demo script](https://github.com/Microsoft/CNTK/tree/master/Examples/Image/Detection) that allows to choose different detectors, base models, and data sets.
+* [Object detection demo script](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection) that allows to choose different detectors, base models, and data sets.
 
 ### New C++ Eval Examples
 We added new C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples). They illustrate how to use C++ CNTK Library for model evaluation on CPU and GPU. Another new example is [UWPImageRecognition](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/UWPImageRecognition), which is an example using CNTK UWP library for model evaluation.

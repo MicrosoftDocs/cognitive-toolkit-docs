@@ -23,7 +23,7 @@ ms.devlang:   python
 <a target="_blank" href="./pictures/ImageAutoEncoder/imageAutoEncoder_16x.png"><img src="./pictures/ImageAutoEncoder/imageAutoEncoder_16x.png" alt="image" width="500"/></a>
 </p>
 
-The example [Image\GettingStarted\07_Deconvolution_PY.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_PY.py) shows how to use Deconvolution and Unpooling to generate a simple image auto encoder ([07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk) is the corresponding BrainScript version). It uses the MNIST dataset, which has a resolution of 28x28x1, encodes it into a 7x7x1 representation using convolution and pooling and decodes to the original resolution. The training criterion is root-mean-square error (RMSE). 
+The example [Image\GettingStarted\07_Deconvolution_PY.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/07_Deconvolution_PY.py) shows how to use Deconvolution and Unpooling to generate a simple image auto encoder ([07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk) is the corresponding BrainScript version). It uses the MNIST dataset, which has a resolution of 28x28x1, encodes it into a 7x7x1 representation using convolution and pooling and decodes to the original resolution. The training criterion is root-mean-square error (RMSE). 
 The figure above shows visualizations of the original image, the encoded image and the decoded image for the first five images of the MNIST test set.
 
 ## Setup
@@ -51,7 +51,7 @@ The visualizations will be stored in the `Output` folder under `Examples\Image\G
 
 ## Technical details
 
-Below is the model definition for the simple image auto encoder in BrainScript (for the full config file see [Image\GettingStarted\07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk))
+Below is the model definition for the simple image auto encoder in BrainScript (for the full config file see [Image\GettingStarted\07_Deconvolution_BS.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/07_Deconvolution_BS.cntk))
 
         cMap = 1
         model = inputFeatures => {
@@ -61,7 +61,7 @@ Below is the model definition for the simple image auto encoder in BrainScript (
             deconv1 = DeconvLayer        {1, (5:5), cMap, lowerPad=(2:2:0), upperPad=(2:2:0), bias=false}(unpool1)
         }.deconv1
 
-The corresponding model definition in [07_Deconvolution_PY.py](https://github.com/Microsoft/CNTK/blob/master/Examples/Image/GettingStarted/07_Deconvolution_PY.py) is
+The corresponding model definition in [07_Deconvolution_PY.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/GettingStarted/07_Deconvolution_PY.py) is
 
         cMap = 1
         conv1   = cntk.layers.Convolution  ((5,5), cMap, pad=True, activation=cntk.ops.relu)(scaled_input)

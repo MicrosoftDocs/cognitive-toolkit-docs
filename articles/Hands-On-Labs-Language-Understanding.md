@@ -46,10 +46,10 @@ The files you will be working with are:
 
 * [`SLUHandsOn.cntk`](https://github.com/Microsoft/CNTK/blob/Tutorials/SLUHandsOn/SLUHandsOn.cntk): The CNTK configuration file we
   will introduce below and work with.
-* [`slu.forward.nobn.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/SLUHandsOn/slu.forward.nobn.cmf),
-  [`slu.forward.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/SLUHandsOn/slu.forward.cmf),
-  [`slu.forward.lookahead.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/SLUHandsOn/slu.forward.lookahead.cmf), and
-  [`slu.forward.backward.cmf`](https://github.com/Microsoft/CNTK/blob/master/Tutorials/SLUHandsOn/slu.forward.backward.cmf):
+* [`slu.forward.nobn.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.nobn.cmf),
+  [`slu.forward.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.cmf),
+  [`slu.forward.lookahead.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.lookahead.cmf), and
+  [`slu.forward.backward.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.backward.cmf):
   Pre-trained models that are the result of the respective configurations we are developing throughout this tutorial.
 * `atis.train.ctf` and `atis.test.ctf`: The training and test corpus, already converted to CNTK Text Format (CTF).
 
