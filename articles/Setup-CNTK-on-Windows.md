@@ -125,7 +125,7 @@ Follow these steps to install the [Boost Library](http://www.boost.org/) on your
 
 ## Protobuf
 
-You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.1.0 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS15.md)
+You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.1.0 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS17.md)
 
 Download the ZIP file containing the precompiled version of Protobuf for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/protobuf/protobuf-3.1.0-vs15.zip)
 
@@ -238,7 +238,7 @@ If you plan to build the **CNTK Image Reader** you require [zlib](http://zlib.ne
 
 ## zlib and libzip
 
-The ZLib and LibZip are distributed in source code, you will need to recompile these packages, you can also use a precompiled version we created for your convenience (described in this section). To build the libraries yourself, you find detailed instructions [here](./Setup-Buildzlib-VS15.md)
+The ZLib and LibZip are distributed in source code, you will need to recompile these packages, you can also use a precompiled version we created for your convenience (described in this section). To build the libraries yourself, you find detailed instructions [here](./Setup-Buildzlib-VS17.md)
 
 Download the ZIP file containing the precompiled version of libzip/zlib compression library for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/zip/zlib-vs15.zip)
 

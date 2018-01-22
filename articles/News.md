@@ -15,7 +15,7 @@ ms.devlang:   NA
 
 CNTK now supports CUDA 9/cuDNN 7. This requires an update to build environment to Ubuntu 16/GCC 5 for Linux, and Visual Studio 2017/VCTools 14.11 for Windows. With CUDA 9, CNTK also added a preview for 16-bit floating point (a.k.a FP16) computation.
 
-Please check out the example of FP16 in ResNet50 [here](./Examples/Image/Classification/ResNet/Python/TrainResNet_ImageNet_Distributed.py)
+Please check out the example of FP16 in ResNet50 [here](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Classification/ResNet/Python/TrainResNet_ImageNet_Distributed.py)
 
 Notes on FP16 preview:
 * FP16 implementation on CPU is not optimized, and it's not supposed to be used in CPU inference directly. User needs to convert the model to 32-bit floating point before running on CPU.
@@ -30,12 +30,12 @@ To setup build and runtime environment on Windows:
     vs_community.exe --add Microsoft.VisualStudio.Workload.NativeDesktop --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.Universal --add Microsoft.Component.PythonTools --add Microsoft.VisualStudio.Component.VC.Tools.14.11
 * Install [NVidia CUDA 9](https://developer.nvidia.com/cuda-90-download-archive?target_os=Windows&target_arch=x86_64)
 * From PowerShell, run:
-    [DevInstall.ps1](./Tools/devInstall/Windows/DevInstall.ps1)
+    [DevInstall.ps1](https://github.com/Microsoft/CNTK/tree/release/latest/Tools/devInstall/Windows/DevInstall.ps1)
 * Start VCTools 14.11 command line, run:
     cmd /k "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" x64 --vcvars_ver=14.11
-* Open [CNTK.sln](./CNTK.sln) from the VCTools 14.11 command line. Note that starting CNTK.sln other than VCTools 14.11 command line, would causes CUDA 9 [build error](https://developercommunity.visualstudio.com/content/problem/163758/vs-2017-155-doesnt-support-cuda-9.html).
+* Open [CNTK.sln](https://github.com/Microsoft/CNTK/tree/release/latest/CNTK.sln) from the VCTools 14.11 command line. Note that starting CNTK.sln other than VCTools 14.11 command line, would causes CUDA 9 [build error](https://developercommunity.visualstudio.com/content/problem/163758/vs-2017-155-doesnt-support-cuda-9.html).
 
-To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](./Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
+To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
 
 ## November 2017
 ***2017-11-22.* CNTK 2.3**
