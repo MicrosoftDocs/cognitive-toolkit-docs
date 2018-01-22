@@ -75,7 +75,7 @@ Example:
 
 ### Parameter `PyEnvironmentName`
 
-This optional parameter allows to specify the name of the CNTK Anaconda environment that will be created during the installation process. By default the environment will be named `cntkdev-py<PyVersion>`, where PyVersion is being replaced by the content of the <PyVersion> parameter to this script. If this parameter is specified by you, no version substitution in the environment will be performed. 
+This optional parameter allows to specify the name of the CNTK Anaconda environment that will be created during the installation process. By default the environment will be named `cntk-py<PyVersion>`, where PyVersion is being replaced by the content of the <PyVersion> parameter to this script. If this parameter is specified by you, no version substitution in the environment will be performed. 
 
 Example:
 ```
