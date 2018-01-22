@@ -21,15 +21,15 @@ ClassificationError only works correctly for multiclass problems. For binary cla
 
 Training the model usually has a `minibatchSize` property set in its CNTK configuration file. When evaluating the model using CNTK.exe, ensure that the `minibatchSize` is appropriate. To quickly determine if this property is causing the issue, set the property to a low value (e.g. `minibatchSize=2`) in the configuration file for the evaluation command. (cf. Issue #468)
 
-## I am getting SegFault on Linux with deep networks (like ResNet150).
+## I am getting SegFault on Linux with deep networks (like ResNet152).
 You may not have enough stack size.  BrainScript requires a lot of stack.  Run the command: ulimit -s 65536.  This will set your stack size to 64 MB.
 
 ## During eval the following error is seen: About to throw exception 'cuDNN failure 8: CUDNN_STATUS_EXECUTION_FAILED ; GPU=0 ; hostname=haha; expr=err'
 
 Set the minibatchSize property to a smaller value (e.g. `minibatchSize=2`).
  
-## When I compile CNTK using VS2013, I see a compiler error, what is wrong?
-You must upgrade Visual Studio *2015*, update 3. See here: [Setting up CNTK on Windows](./Setup-CNTK-on-Windows.md)
+## When I compile CNTK using VS2013/VS2015, I see a compiler error, what is wrong?
+You must upgrade Visual Studio *2017*. See here: [Setting up CNTK on Windows](./Setup-CNTK-on-Windows.md)
 
 ## I enabled Image Reader with zip support and get "Plugin not found: 'Cntk.Deserializers.Image-<VERSION>.dll' (old name 'ImageReader.dll')" error when running Image Reader unit tests or trying to use the reader. What might be wrong?
 Check that you correctly installed [zlib and libzip](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip).
@@ -79,7 +79,7 @@ Please see the "[Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-A
 Possible reasons are:
 
 * Different build configuration (release or debug) between your application and the `Cntk.Eval-<VERSION>.lib/dll`. If you build your application in release, please link against the release version of `Cntk.Eval-<VERSION>.dll`. Same for the debug configuration. This error  happens usually for C++ application.
-* Different GCC compiler versions on Linux: The `Cntk.Eval` library on Linux is built with GCC 4.8. If you use a different GCC version for your application, you might see the above error
+* Different GCC compiler versions on Linux: The `Cntk.Eval` library on Linux is built with GCC 5.4. If you use a different GCC version for your application, you might see the above error
 * The modelPath is incorrect.  Currently, the modelPath has to be specified as a full path. In the CSEvalClient example, the relative path is combined with the current working directory to build the full path. And the CreateNetwork() must be passed a string containing the "modelPath=" attribute specifying the model's file path. Currently, mapped drive is not supported for modelpath.
 
 ## I get the following result with CNTKTextFormat-Reader -- WARNING: Exhausted all input expected for the current sequence while reading a floating point value at offset

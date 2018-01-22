@@ -11,7 +11,7 @@ ms.devlang:   NA
 
 # Setup CNTK on Windows
 
-If you want to build manually CNTK from source code on Windows using Visual Studio 2015, this page is for you. 
+If you want to build manually CNTK from source code on Windows using Visual Studio 2017, this page is for you. 
 
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
@@ -26,25 +26,23 @@ CNTK requires a 64-bit Windows installation. We tested the build process on Wind
 
 Building CNTK on your system requires the definition and configuration of various environment variables. An overview of environment variables used by the Windows build of CNTK can be found on [this page](./Windows-Environment-Variables.md). In addition, this page gives an overview of **required and optional components** for building CNTK as well as their default install location. 
 
-## Visual Studio 2015 with Update 3
+## Visual Studio 2017
 
-Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/older-downloads/). You will need a Microsoft account and either a **free** membership in the subscription *Visual Studio Dev Essentials*, or a valid MSDN subscription. If you don't have a Microsoft account, the required subscription membership or both, you will be offered to enroll.
+Install Microsoft Visual Studio 2017 for Windows. A link to the download can be found [here](https://www.visualstudio.com/downloads/).
 
-Please install Visual Studio 2015, neither a previous version, nor Visual Studio 2017! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
+The Community Version of Visual Studio 2017 is sufficient to build CNTK.
 
-During the installation process please select custom installation:
+During the installation process, please select Desktop development with C++ workload:
 
-![im1](./pictures/setup/VS2015InstallCustom.jpg)
+![im1](./pictures/setup/VS2017Workloads.jpg)
 
-On the feature selection screen make sure you add 'Common Tools for Visual C++ 2015' to your installation:
+Besides, On the individual components screen make sure you add 'VC++ 2017 version 15.4 v14.11 toolset' to your installation for build with CUDA 9.0:
 
-![im1](./pictures/setup/VS2015InstallFeatures.jpg)
+![im1](./pictures/setup/VS2017VCTools14.11.jpg)
 
-### Preexisting Visual Studio 2015 installation
+### Preexisting Visual Studio 2017 installation
 
-If you already have VS 2015 installed, make sure you are on **Update 3**. See the `Help->About` menu to display the version number like "Version 14.0.25431.01 Update 3". 
-
-You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
+You are also required to have the 'VC++ 2017 version 15.4 v14.11 toolset' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Visual Studio Community 2017' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'VC++ 2017 version 15.4 v14.11 toolset' feature is installed on your system (see picture above).
 
 ## Git
 
@@ -52,7 +50,7 @@ Git is required to work with the CNTK code base. You may use the following tools
 
 * [Git for Windows](https://git-scm.com/download/win). This is the standard command line client for Git, which we will use on this page to describe the enlisting in the CNTK repository. 
 
-* A Git client is available as a part of the Visual Studio 2015 installation. Read the blog post [Microsoft Application Lifecycle Management](https://blogs.msdn.microsoft.com/visualstudioalm/2013/02/06/create-connect-and-publish-using-visual-studio-with-git/) about using the built-in Git client.
+* A Git client is available as a part of the Visual Studio 2017 installation. Read the blog post [Microsoft Application Lifecycle Management](https://blogs.msdn.microsoft.com/visualstudioalm/2013/02/06/create-connect-and-publish-using-visual-studio-with-git/) about using the built-in Git client.
 
 * [GitHub Desktop client](https://desktop.github.com/)
 
@@ -149,48 +147,48 @@ You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic car
 
 In the following steps we will install the NVidia development tools required to build the Microsoft Cognitive Toolkit as well as NVidia support libraries. As the last step (after you installed all these mentioned NVidia tools!), you should check that you have the latest graphic card driver installed. 
 
-## NVIDIA CUDA 8
+## NVIDIA CUDA 9.0
 
 > [!IMPORTANT]
-> In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
+> In case you have a first-time Visual Studio 2017 installation as described above, you will need to install NVIDIA CUDA 9 now, even if you have already an existing installation of CUDA 9! The NVIDIA CUDA 9 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
 
-CNTK is set to build with CUDA 8.0. Download and install the NVIDIA CUDA 8.0 Toolkit:
+CNTK is set to build with CUDA 9.0. Download and install the NVIDIA CUDA 9.0 Toolkit:
 
-* Download the required package from [this download page](https://developer.NVIDIA.com/CUDA-downloads)
+* Download the required package from [this download page](https://developer.nvidia.com/cuda-90-download-archive)
 * Run the installation procedure
 
 Make sure that the following CUDA environment variables are set to the correct path (the NVIDIA Cuda installer will create these for you). Default installation paths are assumed:
 
 ```
-CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
-CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
+CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
+CUDA_PATH_V9_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
 ```
 
 ## cuDNN
 
-Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v6.0 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v6.0/cudnn-8.0-windows10-x64-v6.0.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
+Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v7.0 for CUDA 9.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v7.0.4/cudnn-9.0-windows10-x64-v7.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
-* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v6.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-9.0-v7.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
 
 ```
-    setx CUDNN_PATH C:\local\cudnn-8.0-v6.0\cuda
+    setx CUDNN_PATH C:\local\cudnn-9.0-v7.0\cuda
 ```
 
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v6.0\cuda\include\cudnn.h` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-9.0-v7.0\cuda\include\cudnn.h` will succeed.
 
 ### CUB
 
 > [!IMPORTANT]
 > Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
 
-* Download NVIDIA CUB v.1.4.1 [from this download link](https://github.com/NVlabs/cub/archive/1.4.1.zip)
-* Extract the archive to a folder on your local disk (we assume `c:\local\cub-1.4.1`) and set the environment variable `CUB_PATH` pointing to that location, e.g.:
+* Download NVIDIA CUB v.1.7.4 [from this download link](https://github.com/NVlabs/cub/archive/1.7.4.zip)
+* Extract the archive to a folder on your local disk (we assume `c:\local\cub-1.7.4`) and set the environment variable `CUB_PATH` pointing to that location, e.g.:
 
 ```
-    setx CUB_PATH c:\local\cub-1.4.1\
+    setx CUB_PATH c:\local\cub-1.7.4\
 ```
 
-* Quick installation check. If you followed the instruction above and used the same paths, this command `dir C:\local\cub-1.4.1\cub\cub.cuh` will succeed.
+* Quick installation check. If you followed the instruction above and used the same paths, this command `dir C:\local\cub-1.7.4\cub\cub.cuh` will succeed.
 
 ### Latest GPU card driver
 
@@ -267,16 +265,15 @@ If you want to build the CNTK Evaluation Library for UWP you need to follow the 
 
 ### CNTK Python environments
 
-CNTK supports Python 2.7, Python 3.4, Python 3.5 and Python 3.6. We recommend you create a dedicated environment in your Python installation to work with CNTK. This way CNTK and the installed supporting packages won't impact any other Python project. We provide several files (`yml`-files) containing the description of required Python packages. The packages are located in the `scripts\install\windows` directory inside your CNTK clone. Please select the file matching your targeted Python version.
+CNTK supports Python 2.7, Python 3.5 and Python 3.6. We recommend you create a dedicated environment in your Python installation to work with CNTK. This way CNTK and the installed supporting packages won't impact any other Python project. We provide several files (`yml`-files) containing the description of required Python packages. The packages are located in the `scripts\install\windows` directory inside your CNTK clone. Please select the file matching your targeted Python version.
 
 |Python version | Filename |
 |:--------|:------------|
 |Python 2.7 | conda-windows-cntk-py27-environment.yml
-|Python 3.4 | conda-windows-cntk-py34-environment.yml
 |Python 3.5 | conda-windows-cntk-py35-environment.yml
 |Python 3.6 | conda-windows-cntk-py36-environment.yml
 
-As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7, Python 3.4, or Python 3.6 environment, please adjust the name of the YML to match the Python version you intend to use.
+As an example we create a Python 3.5 environment in an environment named `cntk-py35`. If you want a different environment name, please adjust the following steps accordingly. If you want to create a Python 2.7 or Python 3.6 environment, please adjust the name of the YML to match the Python version you intend to use.
 
 The following assumes you cloned the CNTK source code from GitHub into the directory `c:\repos\cntk`.
 
@@ -307,7 +304,6 @@ Set up build environment variables for your Python environment (choose at least 
 ```
     setx CNTK_PY36_PATH [paths for your Python 3.6 environment]
     setx CNTK_PY35_PATH [paths for your Python 3.5 environment]
-    setx CNTK_PY34_PATH [paths for your Python 3.4 environment]
     setx CNTK_PY27_PATH [paths for your Python 2.7 environment]
 ```
 
@@ -317,7 +313,7 @@ If you followed the installation so far, this would mean
     setx CNTK_PY35_PATH C:\local\Anaconda3-4.1.1-Windows-x86_64\envs\cntk-py35
 ```
 
-The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, `CNTK_PY34_PATH`, or `CNTK_PY27_PATH` environment variables can be determined by running in
+The value for the `CNTK_PY36_PATH`, `CNTK_PY35_PATH`, or `CNTK_PY27_PATH` environment variables can be determined by running in
 `conda ..activate cmd.exe [name-or-path-of-your-environment]`
 
 #### PYTHONPATH
@@ -352,7 +348,14 @@ This concludes the installation portion. Let's continue with building CNTK
 
 ## Building CNTK
 
-Start Visual Studio 2015 and open the CNTK solution (`CNTK.sln`) in the root of the cloned CNTK project from GitHub. If you just changed and environment variable, you should close any already opened Visual Studio instance, otherwise the content of changed environment variables will not be reflected inside Visual Studio.
+Currently there's a compatibility issue between CUDA 9 and default VCTools in Visual Studio 2017. CNTK requires VCTools 14.11 to build with CUDA 9. To do that:
+
+* Open Command Prompt
+* call "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 -vcvars_ver=14.11
+
+This will set VCTools to the CUDA 9 compatible version. From the Command Prompt, start CNTK.sln in the root of the cloned CNTK project from GitHub. If CNTK.sln runs with the default CUDA9-incompatible version of VCTools, there will be build errors like "1>c:\program files\nvidia gpu computing toolkit\cuda\v9.0\include\crt/host_config.h(133): fatal error C1189: #error:  -- unsupported Microsoft Visual Studio version! Only the versions 2012, 2013, 2015 and 2017 are supported!"
+
+If you just changed and environment variable, you should close any already opened Visual Studio instance, otherwise the content of changed environment variables will not be reflected inside Visual Studio.
 
 * Right-click the CNTK Solution in Solution Explorer and select `Properties`
 * In the opened window select `Configuration Properties` and press `Configuration Manager...` button

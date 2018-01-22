@@ -125,7 +125,7 @@ Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH
 We have been testing CNTK with Anaconda3 4.1.1 and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have an Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh).
 
 Below we assume that the [prerequisites above](#prerequisites) are satisfied.
-If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
+If you plan on using a GPU enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
 Also, we assume Anaconda is installed and that it is listed before any other Python installations in your PATH.
 
 #### pip install without an environment
@@ -187,7 +187,7 @@ Continue with a [installing samples and tutorials](#installing-samples-and-tutor
 
 If you require a Python 2.7 root environment, we recommend you install [Anaconda2 4.3.0 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda2-4.3.0-Linux-x86_64.sh).
 Below we assume that the [prerequisites above](#prerequisites) are satisfied.
-If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
+If you plan on using a GPU enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
 Also, we assume Anaconda2 is installed and that it is listed before any other Python installations in your PATH.
 
 #### Anaconda2: pip install

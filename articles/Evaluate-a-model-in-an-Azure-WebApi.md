@@ -21,7 +21,7 @@ basic Azure functionality. Please refer to more advanced Azure documentation to 
 
 ### Requirements
 
-As we are currently using VS2015 to build CNTK, we focus on this version of Visual Studio.
+As we are currently using VS2017 to build CNTK, we focus on this version of Visual Studio.
 
 #### Web Development Feature for Visual Studio
 

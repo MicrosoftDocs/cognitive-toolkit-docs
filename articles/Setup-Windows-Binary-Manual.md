@@ -33,7 +33,7 @@ zip into a different directory, please adjust the commands given below according
 
 CNTK on Windows requires the following prerequisites to be installed on your system. Please install them from the links below: 
 
-- The Visual C++ Redistributable Package for Visual Studio 2015 can be installed from `c:\local\cntk\prerequisites\VS2015\vc_redist.x64.exe`
+- The Visual C++ Redistributable Package for Visual Studio 2017 can be installed from `c:\local\cntk\prerequisites\VS2017\VC_redist.x64.exe`
 
 - Microsoft MPI Version 7 (7.0.12437.6) can be installed from `c:\local\cntk\prerequisites\MsMPiSetup.exe`. At this point we suggest this 
 version of MSMPI (7.0.12437.6), as this is the version which is currently tested by us in connection with the Microsoft Cognitive Toolkit.

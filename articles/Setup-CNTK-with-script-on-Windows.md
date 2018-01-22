@@ -30,8 +30,8 @@ CNTK requires a 64-bit Windows installation. We tested the build process on Wind
 There are steps required to create a CNTK development environment on your machine:
 
   * Installation of required tools
-    * Visual Studio 2015 Update 3
-    * NVIDIA CUDA 8
+    * Visual Studio 2017
+    * NVIDIA CUDA 9.0
     * Git 
     * Clone the CNTK Source code
   * Running the developer installation script
@@ -43,37 +43,35 @@ This page will walk you through all these steps. The script driven installation 
 
 ## Installation of required tools
 
-### Visual Studio 2015 Update 3
+### Visual Studio 2017
 
-Install Microsoft Visual Studio 2015.3 for Windows. A link to the download can be found [here](https://www.visualstudio.com/vs/older-downloads/). You will need a Microsoft account and either a **free** membership in the subscription *Visual Studio Dev Essentials*, or a valid MSDN subscription. If you don't have a Microsoft account, the required subscription membership or both, you will be offered to enroll.
+Install Microsoft Visual Studio 2017 for Windows. A link to the download can be found [here](https://www.visualstudio.com/downloads/). You will need a Microsoft account and either a **free** membership in the subscription *Visual Studio Dev Essentials*, or a valid MSDN subscription. If you don't have a Microsoft account, the required subscription membership or both, you will be offered to enroll.
 
-Please install Visual Studio 2015, neither a previous version, nor Visual Studio 2017! The Community Version of Visual Studio 2015 is sufficient to build CNTK.
+The Community Version of Visual Studio 2017 is sufficient to build CNTK.
 
-During the installation process please select custom installation:
+During the installation process, please select Desktop development with C++ workload:
 
-![im1](./pictures/setup/VS2015InstallCustom.jpg)
+![im1](./pictures/setup/VS2017Workloads.jpg)
 
-On the feature selection screen make sure you add 'Common Tools for Visual C++ 2015' to your installation:
+Besides, On the individual components screen make sure you add 'VC++ 2017 version 15.4 v14.11 toolset' to your installation for build with CUDA 9.0:
 
-![im1](./pictures/setup/VS2015InstallFeatures.jpg)
+![im1](./pictures/setup/VS2017VCTools14.11.jpg)
 
-##### Preexisting Visual Studio 2015 installation
+### Preexisting Visual Studio 2017 installation
 
-If you already have VS 2015 installed, make sure you are on **Update 3**. See the ```Help->About``` menu to display the version number like "Version 14.0.25431.01 Update 3". 
+You are also required to have the 'VC++ 2017 version 15.4 v14.11 toolset' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Visual Studio Community 2017' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'VC++ 2017 version 15.4 v14.11 toolset' feature is installed on your system (see picture above).
 
-You are also required to have the 'Common Tools for Visual C++ 2015' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Microsoft Visual Studio Enterprise 2015 with Updates' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'Common Tools for Visual C++ 2015' feature is installed on your system (see picture above).
-
-### NVIDIA CUDA 8
+### NVIDIA CUDA 9
 
 > [!IMPORTANT]
-> In case you have a first-time Visual Studio 2015 installation as described above, you will need to install NVIDIA CUDA 8 now, even if you have already an existing installation of CUDA 8! The NVIDIA CUDA 8 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
+> In case you have a first-time Visual Studio 2017 installation as described above, you will need to install NVIDIA CUDA 9 now, even if you have already an existing installation of CUDA 9! The NVIDIA CUDA 9 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
 
-CNTK is set to build with CUDA 8.0. Download and install the NVIDIA CUDA 8.0 Toolkit:
+CNTK is set to build with CUDA 9.0. Download and install the NVIDIA CUDA 9.0 Toolkit:
 
-* Download the required package from [this download page](https://developer.NVIDIA.com/CUDA-downloads)
-* Run the installation procedure (Choose the 'Express Install Option' if the choice is presented)
+* Download the required package from [this download page](https://developer.nvidia.com/cuda-90-download-archive)
+* Run the installation procedure
 
-Note: In case you don't have a system with a NVIDIA CUDA 8 compatible graphics card, the CUDA installer will issue a warning. Please continue the installer if you receive this warning, the CUDA tools will be installed, and you are able to build a NVIDIA GPU enabled version of CNTK on your system.
+Note: In case you don't have a system with a NVIDIA CUDA 9.0 compatible graphics card, the CUDA installer will issue a warning. Please continue the installer if you receive this warning, the CUDA tools will be installed, and you are able to build a NVIDIA GPU enabled version of CNTK on your system.
 
 ### Git
 

@@ -68,16 +68,14 @@ dpkg --list | grep compiler
 if in the output you do not see something like
 
 ```
-g++-4.8 4.8.4-2ubuntu1~14.04 amd64 GNU C++ compiler
+g++-5 5.4.0-6ubuntu1~16.04.5 amd64 GNU C++ compiler
 ```
 
-then a C++ compiler is not installed. If you have Ubuntu 1404, install gcc 4.8  with:
+then a C++ compiler is not installed. If you have Ubuntu 1604, install gcc 5.4  with:
 
 ```
 sudo apt-get install g++
 ```
-
-If you have Ubuntu 1604 or something else, install gcc 4.8 by following: [http://askubuntu.com/questions/26498/choose-gcc-and-g-version](http://askubuntu.com/questions/26498/choose-gcc-and-g-version) 
 
 ## Git
 
@@ -86,9 +84,9 @@ Install Git on your system as described <a href="https://git-scm.com/download/li
 ## MKL
 
 The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
-CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases).
+CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases), as well as MKL-DNN in this repo
 
-Installing the MKLML library: 
+Installing the MKL-DNN and MKLML library: 
 
 * Create a directory on your machine to hold MKLML, e.g.:
 
@@ -96,12 +94,23 @@ Installing the MKLML library:
 sudo mkdir /usr/local/mklml
 ```
 
-* Download the required MKLML v0.11 from the [MKLML web site](https://github.com/01org/mkl-dnn/releases).
+* Download the required MKLML v0.12 from the [MKLML web site](https://github.com/01org/mkl-dnn/releases).
   Un-tar it into your MKLML path, creating a versioned sub directory within.
+  Build MKL-DNN using MKLML and install mkl-dnn to /usr/local
 
 ```
-sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_lnx_2018.0.1.20171007.tgz
-sudo tar -xzf mklml_lnx_2018.0.1.20171007.tgz -C /usr/local/mklml
+sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.12/mklml_lnx_2018.0.1.20171227.tgz
+sudo tar -xzf mklml_lnx_2018.0.1.20171227.tgz -C /usr/local/mklml
+wget --no-verbose -O - https://github.com/01org/mkl-dnn/archive/v0.12.tar.gz | tar -xzf - && \
+cd mkl-dnn-0.12 && \
+ln -s /usr/local external && \
+mkdir -p build && \
+cd build && \
+cmake .. && \
+make && \
+make install && \
+cd ../.. && \
+rm -rf mkl-dnn-0.12
 ```
 
   Note: if you want to build with different MKLML versions,
@@ -239,8 +248,8 @@ sudo stop lightdm
 * Install the driver as in the example below (note that the file name may be different for your system):
 
 ```
-sudo chmod +x ./NVIDIA-Linux-x86_64-367.55.run
-sudo ./NVIDIA-Linux-x86_64-367.55.run
+sudo chmod +x ./NVIDIA-Linux-x86_64-384.111.run
+sudo ./NVIDIA-Linux-x86_64-384.111.run
 ```
 
 We recommend accepting the default installation options
@@ -255,13 +264,13 @@ Example: for Ubuntu, use the following command (in case of `lightdm` as your X W
 sudo start lightdm
 ```
 
-### CUDA 8
+### CUDA 9
 
-The procedure below explains how to install CUDA using `.run` file distribution. You can also use `DEB` or `RPM` packages installation. You will find the package for your system at [NVIDIA CUDA 8.0 Download page](https://developer.nvidia.com/cuda-downloads) and installation instructions in [CUDA Online Documentation](http://docs.nvidia.com/cuda/pdf/CUDA_Installation_Guide_Linux.pdf).
+The procedure below explains how to install CUDA using `.run` file distribution. You can also use `DEB` or `RPM` packages installation. You will find the package for your system at [NVIDIA CUDA 9.0 Download page](https://developer.nvidia.com/cuda-90-download-archive) and installation instructions in [CUDA Online Documentation](http://docs.nvidia.com/cuda/pdf/CUDA_Installation_Guide_Linux.pdf).
 
-Download and install the NVIDIA CUDA 8.0 Toolkit:
+Download and install the NVIDIA CUDA 9.0 Toolkit:
 
-* Find the `.run` file for your platform [here](https://developer.nvidia.com/cuda-downloads) and download it.
+* Find the `.run` file for your platform [here](https://developer.nvidia.com/cuda-90-download-archive) and download it.
 
 * If your X Windows manager is running, the installation will likely fail. Open a remote terminal session to your machine and stop the X Windows manager. Refer to your platform documentation for the exact commands.
 
@@ -271,26 +280,26 @@ Example: for Ubuntu use the following command (in case of `lightdm` as your X Wi
 sudo stop lightdm
 ```
 
-* Install the CUDA 8.0 Toolkit (note that the `.run` file name may be different for your system):
+* Install the CUDA 9.0 Toolkit (note that the `.run` file name may be different for your system):
 
 ```
-chmod +x ./cuda_8.0.44_linux.run
-sudo ./cuda_8.0.44_linux.run
+chmod +x ./cuda_9.0.176_384.81_linux.run
+sudo ./cuda_9.0.176_384.81_linux.run
 ```
 
 When prompted by the installer:
 
 ```
-Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 367.48?
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 384.81?
 (y)es/(n)o/(q)uit:
 ```
 
 Select `no` if you have already installed the latest driver by performing the steps in the [previous section](#checking-your-gpu-compatibility-and-getting-the-latest-driver). If you have not done it, select `yes`, but we **strongly recommend** updating to the latest driver after installing CUDA toolkit.
 
-If you declined the driver installation from the CUDA 8.0 package, you will get the following warning at the end of the installation:
+If you declined the driver installation from the CUDA 9.0 package, you will get the following warning at the end of the installation:
 
 ```
-***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 361.00 is required for CUDA 8.0 functionality to work.
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 384.00 is required for CUDA 9.0 functionality to work.
 To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
     sudo <CudaInstaller>.run -silent -driver
 ```
@@ -308,25 +317,25 @@ sudo start lightdm
 Add the following environment variable to your current session and your `.bashrc` profile (if you modified the default paths during the CUDA installation, change the values below accordingly):
 
 ```
-export PATH=/usr/local/cuda-8.0/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-8.0/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-9.0/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64:$LD_LIBRARY_PATH
 ```
 
 The next step is optional. You may skip further to the [next section](#gpu-deployment-kit).
 
-#### OPTIONAL. Verifying CUDA 8.0 installation
+#### OPTIONAL. Verifying CUDA 9.0 installation
 
 You may verify your CUDA installation by compiling the CUDA samples (we assume the default paths were used during the CUDA installation). Note that building all samples is a lengthy operation:
 
 ```
-cd ~/NVIDIA_CUDA-8.0_Samples/
+cd ~/NVIDIA_CUDA-9.0_Samples/
 make
 ```
 
 After the successful build invoke `deviceQuery` utility:
 
 ```
-~/NVIDIA_CUDA-8.0_Samples/1_Utilities/deviceQuery/deviceQuery
+~/NVIDIA_CUDA-9.0_Samples/1_Utilities/deviceQuery/deviceQuery
 ```
 
 If everything works well, you should get an output similar to the one below:
@@ -339,7 +348,7 @@ If everything works well, you should get an output similar to the one below:
 Detected 1 CUDA Capable device(s)
 
 Device 0: "GeForce GTX 960"
-  CUDA Driver Version / Runtime Version          8.0 / 8.0
+  CUDA Driver Version / Runtime Version          9.0 / 9.0
   CUDA Capability Major/Minor version number:    5.2
   Total amount of global memory:                 2025 MBytes (2123235328 bytes)
   ( 8) Multiprocessors, (128) CUDA Cores/MP:     1024 CUDA Cores
@@ -371,7 +380,7 @@ Device 0: "GeForce GTX 960"
   Compute Mode:
      < Default (multiple host threads can use ::cudaSetDevice() with device simultaneously) >
 
-deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 8.0, CUDA Runtime Version = 8.0, NumDevs = 1, Device0 = GeForce GTX 960
+deviceQuery, CUDA Driver = CUDART, CUDA Driver Version = 9.0, CUDA Runtime Version = 9.0, NumDevs = 1, Device0 = GeForce GTX 960
 Result = PASS
 ```
 
@@ -389,9 +398,9 @@ Get and install NVIDIA CUB using the commands below.
 Use the following commands:
 
 ```
-wget https://github.com/NVlabs/cub/archive/1.4.1.zip
-unzip ./1.4.1.zip
-sudo cp -r cub-1.4.1 /usr/local
+wget https://github.com/NVlabs/cub/archive/1.7.4.zip
+unzip ./1.7.4.zip
+sudo cp -r cub-1.7.4 /usr/local
 ```
 
 ### cuDNN
@@ -399,7 +408,7 @@ sudo cp -r cub-1.4.1 /usr/local
 Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvidia.com/cuDNN).
 
 > [!IMPORTANT]
-> If you previously installed cuDNN for an older version make sure that you upgrade to the CUDA 8.0 compatible version
+> If you previously installed cuDNN for an older version make sure that you upgrade to the CUDA 9.0 compatible version
 
 > [!IMPORTANT]
 > Install cuDNN using the exact version and target path as specified below. This is necessary because it is expected by the CNTK build configuration program.
@@ -407,18 +416,9 @@ Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.nvid
 * Use the following commands:
 
 ```
-wget http://developer.download.nvidia.com/compute/redist/cudnn/v6.0/cudnn-8.0-linux-x64-v6.0.tgz
-tar -xzvf ./cudnn-8.0-linux-x64-v6.0.tgz
-sudo mkdir /usr/local/cudnn-6.0
-sudo cp -r cuda /usr/local/cudnn-6.0
+wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libcudnn7_7.0.4.31-1+cuda9.0_amd64.deb
+sudo dpkg -i libcudnn7_7.0.4.31-1+cuda9.0_amd64.deb
 ```
-
-* Add the following environment variable to your current session and your `.bashrc` profile:
-
-```
-export LD_LIBRARY_PATH=/usr/local/cudnn-6.0/cuda/lib64:$LD_LIBRARY_PATH
-```
-
 
 ### OPTIONAL. NCCL
 
@@ -428,6 +428,12 @@ CNTK can take advantage of these accelerated primitives for parallel jobs runnin
 (cf. [here](./Multiple-GPUs-and-machines.md) for an introduction into parallel training with CNTK).
 
 Please follow instructions [here](https://github.com/NVIDIA/nccl) to download the NVIDIA NCCL library.
+```
+wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libnccl-dev_2.1.2-1+cuda9.0_amd64.deb
+wget https://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/libnccl2_2.1.2-1+cuda9.0_amd64.deb
+sudo dpkg -i libnccl2_2.1.2-1+cuda9.0_amd64.deb libnccl-dev_2.1.2-1+cuda9.0_amd64.deb
+```
+
 Then, use the CNTK configure option `--with-nccl=<path>` to enable building with NVIDIA NCCL.
 For example, if NCCL are installed in folder other than the default folder `/usr`, use
 `configure --with-nccl=<nccl install folder>` (plus additional options) to build with NVIDIA NCCL support.
@@ -459,31 +465,27 @@ This section describes how to build CNTK v2 with Python support.
 
 * Install the [SWIG tool](#optional-swig) if you have not done so yet.
 * Install [Anaconda3 4.1.1 (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh)
-* If you already have a CNTK Python environment (called `cntk-py36`, `cntk-py35`, `cntk-py34`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
+* If you already have a CNTK Python environment (called `cntk-py36`, `cntk-py35`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
 
 ```
 # For cntk-py36:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py36-environment.yml --name cntk-py36
 # For cntk-py35:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml --name cntk-py35
-# For cntk-py34:
-conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py34-environment.yml --name cntk-py34
 # For cntk-py27:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml --name cntk-py27
 ```
 
-* If you already have a CNTK Python environment (called `cntk-py35`, `cntk-py34`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
+* If you already have a CNTK Python environment (called `cntk-py35`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
 
 ```
 # For cntk-py35:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml --name cntk-py35
-# For cntk-py34:
-conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py34-environment.yml --name cntk-py34
 # For cntk-py27:
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml --name cntk-py27
 ```
 
-* If you do not have a CNTK Python environment yet, you may choose between a Python 2.7, 3.4, or 3.5 based CNTK Python environment.
+* If you do not have a CNTK Python environment yet, you may choose between a Python 2.7, or 3.5 based CNTK Python environment.
 * Create your Python environment of choice in your existing Python 3.5 Anaconda or Miniconda installation using *one* of the following commands, depending on your desired Python version:
 
 ```
@@ -491,8 +493,6 @@ conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk
 conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py36-environment.yml
 # For a Python 3.5 based version:
 conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml
-# For a Python 3.4 based version:
-conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py34-environment.yml
 # For a Python 2.7 based version:
 conda env create --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml
 ```
@@ -504,7 +504,7 @@ For example, if you have Python 3.5 based environment called `cntk-py35` run thi
 source activate cntk-py35
 ```
 
-Similarly, for a Python 3.6, 3.4, or 2.7 based environment.
+Similarly, for a Python 3.6, or 2.7 based environment.
 
 **Step 2**: Uninstall previous CNTK package
 
@@ -523,7 +523,6 @@ and *one* of the following (whatever applies to your environment):
 ```
 --with-py36-path[=directory]
 --with-py35-path[=directory]
---with-py34-path[=directory]
 --with-py27-path[=directory]
 ```
 
@@ -607,7 +606,7 @@ Note that in the instructions above we suggest using "plain" `make` rather than 
 
 ## OPTIONAL. Java
 
-To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 7](http://openjdk.java.net/install/).
+To build the Java bindings for the CNTK Evaluation library, install the [SWIG tool](#optional-swig) if you have not done so yet. Also, a Java Development Kit (JDK) is required. Currently we use 64-bit [OpenJDK 8](http://openjdk.java.net/install/).
 
 The configure script provides `--with-jdk` option to specify the JDK directory manually, if it cannot be found by default.
 

@@ -41,7 +41,7 @@ The script will download needed components from the web, a connection to the Int
 Depending on the speed of your system, the Internet connection, and the required components to install, the whole process can take up to 20 minutes. Especially the Anaconda3 install is very time consuming, please be patient.
 
 By the end of the successful execution of the installation script:
- - VS2015 Runtime will be installed
+ - VS2017 Runtime will be installed
  - MSMPI will be installed
  - Anaconda3 will be installed into the folder `C:\local\Anaconda3-4.1.1-Windows-x86_64`
  - A CNTK-PY35 environment will be created or updated in `C:\local\Anaconda3-4.1.1-Windows-x86_64\envs`
