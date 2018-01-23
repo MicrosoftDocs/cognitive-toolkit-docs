@@ -1,6 +1,6 @@
 ---
 title:   Setup BuildMklDnn VS17
-author:    Ke Deng
+author:    KeDengMS
 ms.author:   kedeng
 ms.date:   01/22/2018
 ms.custom:   cognitive-toolkit
