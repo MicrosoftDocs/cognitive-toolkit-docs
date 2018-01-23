@@ -37,7 +37,7 @@ Set the environment variable `PROTOBUF_PATH` to the Protobuf location (this is t
 
 ### Manual build steps for a CNTK Protobuf library
 
-1. Launch a 64-bit Visual Studio 2017 development environment. The most convenient was is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
+1. Launch a 64-bit Visual Studio 2017 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
 ```
     "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
 ```

@@ -83,21 +83,22 @@ setx CNTK_ENABLE_ASGD false
 ##  MKL
 
 The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
-CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases).
+CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases), as well as MKL-DNN
 
 Installing the MKLML library: 
 
-* Create a directory on your machine to hold MKLML, e.g.:
+* Create a directory on your machine to hold MKL-DNN/MKLML, e.g.:
 
 ```
-    mkdir c:\local\mklml
+    mkdir c:\local\mkl-dnn-0.12
 ```
 
-* Download the file [mklml_win_2018.0.1.20171007.zip](https://github.com/01org/mkl-dnn/releases/download/v0.11/mklml_win_2018.0.1.20171007.zip). Unzip it into your MKLML path, creating a versioned sub directory within.
-* Set the environment variable `MKLML_PATH` to the versioned sub directory, e.g.:
+* Download the file [mklml_win_2018.0.1.20171227.zip](https://github.com/01org/mkl-dnn/releases/download/v0.12/mklml_win_2018.0.1.20171227.zip). Unzip it into your MKLML path without the versioned sub directory.
+* Download MKL-DNN source and build with MKL_PATH as target path. Check build instructions in [Setup MKL-DNN on Windows](./Setup-BuildMklDnn-VS17.md)
+* Set the environment variable `MKL_PATH` to the directory, e.g.:
 
 ```
-    setx MKLML_PATH c:\local\mklml\mklml_win_2018.0.1.20171007
+    setx MKL_PATH c:\local\mklml-mkldnn-0.12
 ```
 
 ## MS-MPI
