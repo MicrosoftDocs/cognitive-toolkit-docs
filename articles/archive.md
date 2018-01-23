@@ -18,6 +18,8 @@ This page lists documentation pages which have been moved out of the main docume
 * [Migrate from VisualStudio 2013 to VisualStudio 2015](./Setup-Migrate-VS13-to-VS15.md)
 * [News 2016](./News-2016.md)
 * [Shared library naming convention](./CNTK-Shared-Libraries-Naming-Format.md)
+* [Build the Protobuf library for CNTK with VisualStudio 2015](./Setup-BuildProtobuf-VS15.md)
+* [Build the Zlib/LibZip library for CNTK with VisualStudio 2015](./Setup-BuildZlib-VS15.md)
 
 ## Model Evaluation using EvalDll
 

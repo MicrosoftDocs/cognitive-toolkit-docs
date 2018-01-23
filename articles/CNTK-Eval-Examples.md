@@ -24,7 +24,7 @@ The [CNTKLibraryEvalExamples](https://github.com/Microsoft/CNTK/tree/release/lat
 - [**UWPImageRecognition**](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Evaluation/UWPImageRecognition) contains an example using CNTK UWP library for model evaluation. It also shows how to use the library in C# via a C++/CX wrapper.
 
 On Windows,
-- You need Visual Studio 2015 update 3 for using these samples.
+- You need Visual Studio 2017 for using these samples.
 - The samples should be built for the 64-bit target platform. Otherwise some issues arise when calling the library. Please also refer to the [Troubleshoot CNTK](./Troubleshoot-CNTK.md) page for more information.
 - After a successful build, the executable is saved under the $(SolutionDir)..\..\$(Platform)\$(ProjectName).$(Configuration)\ folder, e.g. ..\..\X64\CNTKLibraryCSEvalCPUOnlyExamples.Release\CNTKLibraryCSEvalCPUOnlyExamples.exe.
  

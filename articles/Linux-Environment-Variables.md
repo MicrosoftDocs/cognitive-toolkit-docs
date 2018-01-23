@@ -23,12 +23,12 @@ This page lists the environment variables which are used by the CNTK build proce
 | **[LIBZIP](./Setup-CNTK-on-Linux.md#libzip) (required)** |
 | LD_LIBRARY_PATH | /usr/local/lib
 | |
-| **[CUDA 8](./Setup-CNTK-on-Linux.md#cuda-8) (required)** |
-| PATH | /usr/local/cuda-8.0/bin
-| LD_LIBRARY_PATH | /usr/local/cuda-8.0/lib64
+| **[CUDA 9](./Setup-CNTK-on-Linux.md#cuda-9) (required)** |
+| PATH | /usr/local/cuda-9.0/bin
+| LD_LIBRARY_PATH | /usr/local/cuda-9.0/lib64
 | |
 | **[cuDNN](./Setup-CNTK-on-Linux.md#cudnn)** |
-| LD_LIBRARY_PATH | /usr/local/cudnn-6.0/cuda/lib64 |
+| LD_LIBRARY_PATH | /usr/local/cudnn-7.0/cuda/lib64 |
 
 
 

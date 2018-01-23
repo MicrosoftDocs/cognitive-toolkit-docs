@@ -14,15 +14,11 @@ ms.devlang:   NA
 
 To build the CNTK configurations `Release_UWP` and `Debug_UWP` (for x64) in the CNTK Visual Studio solution file, you need to do the following:
 
-## Install Windows 10 SDK (10.0.14393)
+## Install Workload: Universal Windows Platform development
 
-Open the Control Panel, then navigate to Programs -> Programs and Features. Select Visual Studio 2015:
+Open the Control Panel, then navigate to Programs -> Programs and Features. Select Visual Studio 2017, and click 'Change', when the Visual Studio setup starts, select Workloads `Universal Windows Platform Development` option
 
-![Add-Remove Program](pictures\setup\uwp-arp.png)
-
-Click 'Change', when the Visual Studio setup starts, select `Tools (1.4.1) and Window 10 SDK (10.0.14393)` under the `Universal Windows Apps Development Tools` option
-
-![VS Setup](pictures\setup\uwp-vs-setup.png)
+![VS Setup](pictures\setup\VS2017Workloads.jpg)
 
 This will take a few minutes to install.
 

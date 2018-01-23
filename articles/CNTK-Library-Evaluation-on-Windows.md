@@ -14,7 +14,7 @@ ms.devlang:   csharp, cpp
 Currently, CNTK provides libraries in C++, C#/.NET, Python and Java for loading and evaluating models on Windows. Starting from v2.1, CNTK also supports Universal Windows Platform (UWP).
 
 ## Using C#/.NET Managed API
-The CNTK Library provides a managed (.NET) library for evaluation of CNTK models on CPU and GPU using C# and other .NET languages. The NuGet package CNTK.CPUOnly is designed for execution on CPU, and the CNTK.GPU is designed for execution on devices with NVIDIA GPU. Please refer to the [NuGet Package](./NuGet-Package.md) page about details how to install CNTK Library NuGet Packages. Please note that Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The CNTK Library provides a managed (.NET) library for evaluation of CNTK models on CPU and GPU using C# and other .NET languages. The NuGet package CNTK.CPUOnly is designed for execution on CPU, and the CNTK.GPU is designed for execution on devices with NVIDIA GPU. Please refer to the [NuGet Package](./NuGet-Package.md) page about details how to install CNTK Library NuGet Packages. Please note that Visual Studio 2017 is required and the target platform in the project property should be X64.
 
 The CNTK Library Managed API allows you to load and evaluate pre-trained models on specified devices (CPU or GPU). It also provides different ways to help you to prepare input and output data in the dense, one-hot vector or sparse CSC format. The input data can be a single sample, batch of multiple samples, a sequence of samples, or a batch of sequences with variable lengths. A detailed description about batch and sequence format can be found at the page [CNTK Concepts](https://cntk.ai/pythondocs/sequence.html#cntk-concepts). After evaluation, the API provides convenient methods to get results.
 
@@ -51,7 +51,7 @@ The [CNTKLibraryCSEvalExamples](https://github.com/Microsoft/CNTK/tree/release/l
 If you do not want to use NuGet Package, you can add `Cntk.Core.Managed-<VERSION>.dll` as reference to your project. The `Cntk.Core.Managed` DLL and all dependent DLLs can be found in the CNTK binary release package on the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). Please make sure that the path to `Cntk.Core.Managed` DLL and its [dependencies](./CNTK-Library-Evaluation-on-Windows.md#shipping-cntk-library-with-your-windows-application) (see list at the end of this page) are included in the search path of DLLs for your application.
 
 ## Using C++
-The CNTK Library C++ API supports model evaluation in C++ applications. Both standard desktop applications and Universal Windows Platform applications are supported. Visual Studio 2015 Update 3 is required and the target platform in the project property should be X64.
+The CNTK Library C++ API supports model evaluation in C++ applications. Both standard desktop applications and Universal Windows Platform applications are supported. Visual Studio 2017 is required and the target platform in the project property should be X64.
 
 The CNTK NuGet package CNTK.CPUOnly and CNTK.GPU contain C++ CNTK Library for using CNTK in desktop applications. For using CNTK on Universal Windows Platform, please install CNTK.UWP.CPUOnly. By using NuGet packages, configuration about include and library directories is automatically added to your project property. Both Debug and Release build are supported. The [NuGet Package](./NuGet-Package.md) page explains how to get and install CNTK NuGet Packages.
 
@@ -75,7 +75,7 @@ The C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Micros
 Alternatively, you can use C++ CNTK Library without the NuGet Package. You can either get `Cntk.Core-<VERSION>.lib` (or `Cntk.Core_app-<Version>.lib`) and all dependent DLLs from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases) or build them from CNTK source code. You also need to configure include and library path to point to the correct directory, and make sure that the build configuration (Debug or Release) of the CNTK Library is the same as that of your project setting (Otherwise you will get unexpected exceptions). The CNTK release package contains only the release build of binaries.
 
 ## Shipping CNTK Library with your Windows application
-CNTK Library requires the Visual C++ Redistributable Package for Visual Studio 2015 to be installed on the system where your application is going to run. And the target platform in the project property should be X64.
+CNTK Library requires the Visual C++ Redistributable Package for Visual Studio 2017 to be installed on the system where your application is going to run. And the target platform in the project property should be X64.
 
 This [page](./CNTK-Shared-Libraries-Naming-Format.md) describes how CNTK binary files are named.
 
@@ -90,11 +90,11 @@ If you use the C#/.NET Managed Library, beside the DLLs mentioned above, you nee
 * `Cntk.Core.CSBinding-<VERSION>.dll`
 
 For using GPU, you need in addition to include the following NVIDIA CUDA related DLLs:
-* `cublas64_80.dll`
-* `cudart64_80.dll`
-* `cudnn64_6.dll`
-* `curand64_80.dll`
-* `cusparse64_80.dll`
+* `cublas64_90.dll`
+* `cudart64_90.dll`
+* `cudnn64_7.dll`
+* `curand64_90.dll`
+* `cusparse64_90.dll`
 * `nvml.dll`
 
 > [!NOTE]
@@ -116,6 +116,6 @@ CNTK also provides APIs for evaluating model in Java application. Please note th
 
 The [Java example](https://github.com/Microsoft/CNTK/tree/release/latest/Tests/EndToEndTests/EvalClientTests/JavaEvalTest/src/Main.java) shows how to evaluate a CNN model using the Java API.
 
-For using CNTK Java Library, please add the `cntk.jar` file to the `classpath` of your Java project. If you are working with an IDE you should add this as an unmanaged jar. The cntk.jar file can be found in the CNTK binary release package (in the folder cntk\cntk\java). You can also build cntk.jar from CNTK source. Please also set `java.library.path` to the directory containing `Cntk.Core.JavaBinding-<Version>.dll`, and make sure that the directory containing CNTK binary DLLs is in the DLL search path of your system, e.g. by adding the directory to the PATH environment variable. Please note that you also need to install Visual C++ Redistributable Package for Visual Studio 2015. If you get `UnsatisfiedLinkErrors` in Java, it is typically because that the directory is not in the DLL search path (or in the wrong order).
+For using CNTK Java Library, please add the `cntk.jar` file to the `classpath` of your Java project. If you are working with an IDE you should add this as an unmanaged jar. The cntk.jar file can be found in the CNTK binary release package (in the folder cntk\cntk\java). You can also build cntk.jar from CNTK source. Please also set `java.library.path` to the directory containing `Cntk.Core.JavaBinding-<Version>.dll`, and make sure that the directory containing CNTK binary DLLs is in the DLL search path of your system, e.g. by adding the directory to the PATH environment variable. Please note that you also need to install Visual C++ Redistributable Package for Visual Studio 2017. If you get `UnsatisfiedLinkErrors` in Java, it is typically because that the directory is not in the DLL search path (or in the wrong order).
 
 The Java library is currently built and tested with 64-bit Oracle JDK 8. 

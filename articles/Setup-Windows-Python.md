@@ -112,7 +112,7 @@ Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply differen
 
 We have been testing CNTK with Anaconda3 4.1.1 (64-bit) and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have a Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Windows (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe).
 
-Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
+Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
 
 #### pip install without an environment
 
@@ -173,12 +173,12 @@ Continue with a [installing samples and tutorials](#installing-samples-and-tutor
 
 If you require a Python 2.7 root environment, we recommend you install [Anaconda2 4.3.0.1 (64-bit)](https://repo.continuum.io/archive/Anaconda2-4.3.0.1-Windows-x86_64.exe).
 
-Below we assume Anaconda2 is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 8 compliant graphics card and up-to-date graphics drivers installed on your system.
+Below we assume Anaconda2 is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
 
 #### Anaconda2: CNTK prerequisites
 
-CNTK requires the `Visual C++ Redistributable for Visual Studio 2015` installed on your system (in many cases this will already be the case).
-The installer for the VS2015.3 Runtime (`vc_redist.x64.exe`) can be downloaded [here](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe).
+CNTK requires the `Visual C++ Redistributable for Visual Studio 2017` installed on your system (in many cases this will already be the case).
+The installer for the VS2017 Runtime (`VC_redist.x64.exe`) can be downloaded [here](https://aka.ms/vs/15/release/VC_redist.x64.exe).
 
 #### Anaconda2: `pip install` 
 

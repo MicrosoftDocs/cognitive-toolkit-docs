@@ -24,7 +24,7 @@ The presented set of product versions is not restrictive, i.e. CNTK may well wor
 
 ### Compiler
 
-* Visual Studio Ultimate 2015 Update 3
+* Visual Studio Enterprise 2017
 
 ### MPI
 
@@ -32,13 +32,13 @@ The presented set of product versions is not restrictive, i.e. CNTK may well wor
 
 ### Math Library
 
-* CNTK Custom MKL Library (based on Intel® Math Kernel Library 11.3 Update 3)
+* Intel® MKLML library
 
 ### NVIDIA Components
 
-* NVIDIA CUDA 8.0
-* NVIDIA cuDNN 6.0 for CUDA
-* NVIDIA CUB 1.4.1
+* NVIDIA CUDA 9.0
+* NVIDIA cuDNN 7.0 for CUDA 9.0
+* NVIDIA CUB 1.7.4
 
 ### OpenCV
 
@@ -64,11 +64,11 @@ The presented set of product versions is not restrictive, i.e. CNTK may well wor
 
 ### Operating System
 
-* Ubuntu 14.04 LTS (64 bit)
+* Ubuntu 16.04 LTS (64 bit)
 
 ### Compiler
 
-* GNU C++ 4.8.4
+* GNU C++ 5.4.0
 
 ### MPI
 
@@ -76,13 +76,13 @@ The presented set of product versions is not restrictive, i.e. CNTK may well wor
 
 ### Math Library
 
-* CNTK Custom MKL Library (based on Intel® Math Kernel Library 11.3 Update 3)
+* Intel® MKLML library
 
 ### NVIDIA Components
 
-* NVIDIA CUDA 8.0
-* NVIDIA cuDNN 6.0 for CUDA 8
-* NVIDIA CUB 1.4.1
+* NVIDIA CUDA 9.0
+* NVIDIA cuDNN 7.0 for CUDA 9.0
+* NVIDIA CUB 1.7.4
 
 ### OpenCV
 
