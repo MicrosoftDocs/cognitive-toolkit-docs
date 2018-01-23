@@ -148,7 +148,7 @@ You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic car
 
 In the following steps we will install the NVidia development tools required to build the Microsoft Cognitive Toolkit as well as NVidia support libraries. As the last step (after you installed all these mentioned NVidia tools!), you should check that you have the latest graphic card driver installed. 
 
-## NVIDIA CUDA 9
+## NVIDIA CUDA 9.0
 
 > [!IMPORTANT]
 > In case you have a first-time Visual Studio 2017 installation as described above, you will need to install NVIDIA CUDA 9 now, even if you have already an existing installation of CUDA 9! The NVIDIA CUDA 9 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
