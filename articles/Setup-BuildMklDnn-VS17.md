@@ -35,27 +35,27 @@ buildMklDnnVS17 C:\local\src\mkl-dnn-0.12 C:\local\mklml-mkldnn-0.12
 ```
 Set the environment variable `MKL_PATH` to the MKL-DNN location (this is the second parameter in the command invocation above, not the sources location!
 ```
-    setx MKL_PATH c:\local\mklml-mkldnn-0.12
+setx MKL_PATH c:\local\mklml-mkldnn-0.12
 ```
 
 ### Manual build steps for a CNTK MKL-DNN library
 
 1. Launch a 64-bit Visual Studio 2017 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
 ```
-    "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
+"%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
 ```
 If you can't find this batch file on your system, please revisit the installation of VS2017 and make sure you have the 'VC++ version 15.4 v14.11 toolset' option selected.
 2. Create a build directory, and set MKLROOT for MKL-DNN cmake to locate MKLML library:
 ```
-    cd c:\local\src\mkl-dnn-0.12
-    set MKLROOT=c:\local\mklml-mkldnn-0.12
+cd c:\local\src\mkl-dnn-0.12
+set MKLROOT=c:\local\mklml-mkldnn-0.12
 ```
 3. Create a release build using CMake, and copy built binary to MKL_PATH (user may replace release with debug to create a debug build):
 ```
-    C:\local\src\mkl-dnn-0.12>cd cmake
-    C:\local\src\mkl-dnn-0.12\cmake>cmake ..\.. -G "Visual Studio 15" -DCMAKE_BUILD_TYPE=Release
-    C:\local\src\mkl-dnn-0.12\cmake>msbuild "Intel(R) MKL-DNN.sln" /t:Rebuild /p:Configuration=Release /m
-    C:\local\src\mkl-dnn-0.12\cmake>copy ..\include\* c:\local\mklml-mkldnn-0.12\include
-    C:\local\src\mkl-dnn-0.12\cmake>copy src\Release\*.lib c:\local\mklml-mkldnn-0.12\lib
-    C:\local\src\mkl-dnn-0.12\cmake>copy src\Release\*.dll c:\local\mklml-mkldnn-0.12\lib
+cd cmake
+cmake .. -G "Visual Studio 15" -DCMAKE_BUILD_TYPE=Release
+msbuild "Intel(R) MKL-DNN.sln" /t:Rebuild /p:Configuration=Release /m
+copy ..\include\* c:\local\mklml-mkldnn-0.12\include
+copy src\Release\*.lib c:\local\mklml-mkldnn-0.12\lib
+copy src\Release\*.dll c:\local\mklml-mkldnn-0.12\lib
 ```
