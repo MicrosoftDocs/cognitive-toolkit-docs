@@ -63,6 +63,14 @@
      {
       "source_path":  "articles/CNTK-Evaluate-Multiple-Models.md",
       "redirect_url": "/cognitive-toolkit/Archive/CNTK-Evaluate-Multiple-Models"
+     },
+     {
+      "source_path":  "articles/Setup-BuildProtobuf-VS15.md",
+      "redirect_url": "/cognitive-toolkit/Archive/Setup-BuildProtobuf-VS15.md"
+     },
+     {
+      "source_path":  "articles/Setup-Buildzlib-VS15.md",
+      "redirect_url": "/cognitive-toolkit/Archive/Setup-Buildzlib-VS15.md"
      }
    ]
 }
