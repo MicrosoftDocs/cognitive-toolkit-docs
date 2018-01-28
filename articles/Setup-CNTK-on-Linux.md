@@ -476,16 +476,7 @@ conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk
 conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml --name cntk-py27
 ```
 
-* If you already have a CNTK Python environment (called `cntk-py35`, or `cntk-py27`) you can update it with the latest required packages with the following commands:
-
-```
-# For cntk-py35:
-conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py35-environment.yml --name cntk-py35
-# For cntk-py27:
-conda env update --file [CNTK clone root]/Scripts/install/linux/conda-linux-cntk-py27-environment.yml --name cntk-py27
-```
-
-* If you do not have a CNTK Python environment yet, you may choose between a Python 2.7, or 3.5 based CNTK Python environment.
+* If you do not have a CNTK Python environment yet, you may choose between a Python 2.7, 3.5 or 3.6 based CNTK Python environment.
 * Create your Python environment of choice in your existing Python 3.5 Anaconda or Miniconda installation using *one* of the following commands, depending on your desired Python version:
 
 ```

@@ -20,10 +20,10 @@ based on a binary distribution we have prepared and you can download from our we
 
 Note: You can find an overview about all the available installation options for CNTK on [this page](./Setup-CNTK-on-your-machine.md).
 
-We will install the CNTK binaries, the CNTK prerequisites, and create (or update) a Python 2.7, 3.4, 3.5, or 3.6 environment on your computer. The changes are as much localized as possible to not impact any other installed software.
+We will install the CNTK binaries, the CNTK prerequisites, and create (or update) a Python 2.7, 3.5, or 3.6 environment on your computer. The changes are as much localized as possible to not impact any other installed software.
 
 > [!NOTE]
-> If you previously installed an earlier version of the CNTK Python package, you can skip steps 1 through 3 below and directly jump to step 4 to update your existing CNTK package installation from your Python 2.7, 3.4, 3.5, or 3.6 environment.
+> If you previously installed an earlier version of the CNTK Python package, you can skip steps 1 through 3 below and directly jump to step 4 to update your existing CNTK package installation from your Python 2.7, 3.5, or 3.6 environment.
 
 **Step 1**: Download and install prerequisites
 

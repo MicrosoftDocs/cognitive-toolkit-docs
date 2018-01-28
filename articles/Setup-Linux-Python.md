@@ -122,7 +122,7 @@ Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH
 
 ### Anaconda3
 
-We have been testing CNTK with Anaconda3 4.1.1 and Python versions 2.7, 3.4, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have an Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh).
+We have been testing CNTK with Anaconda3 4.1.1 and Python versions 2.7, 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have an Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Linux (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Linux-x86_64.sh).
 
 Below we assume that the [prerequisites above](#prerequisites) are satisfied.
 If you plan on using a GPU enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
@@ -166,13 +166,13 @@ Continue with [installing samples and tutorials](#installing-samples-and-tutoria
 
 #### pip install in an environment
 
-Below we will create a new Python 3.4 environment inside Anaconda called `cntk-py34` and will pip-install CNTK into this environment. If you want a different CNTK version, Python version, or environment name, please adjust the parameters accordingly.
+Below we will create a new Python 3.5 environment inside Anaconda called `cntk-py35` and will pip-install CNTK into this environment. If you want a different CNTK version, Python version, or environment name, please adjust the parameters accordingly.
 
 Open a command shell, create the environment, make it active, and pip-install CNTK:
 ```
-$ conda create --name cntk-py34 python=3.4 numpy scipy h5py jupyter
-$ activate cntk-py34
-$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp34-cp34m-linux_x86_64.whl
+$ conda create --name cntk-py35 python=3.5 numpy scipy h5py jupyter
+$ activate cntk-py35
+$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.3.1-cp35-cp35m-linux_x86_64.whl
 ```
 A quick test that the installation succeeded can be done by querying the CNTK version:
 ```

@@ -45,7 +45,7 @@ This tutorial is structured into three main sections. The first section provides
 
 ## Quick start
 
-This section assumes that you have your system set up to use the CNTK Python API. We further assume you're using Python 3.5 on Windows or 3.4 on Linux. For a detailed walk through please refer to the [step by step instructions](#step-by-step-instructions). To run Faster R-CNN please install the following additional packages in your cntk Python environment
+This section assumes that you have your system set up to use the CNTK Python API. We further assume you're using Python 3.5 on Windows or 3.5/3.6 on Linux. For a detailed walk through please refer to the [step by step instructions](#step-by-step-instructions). To run Faster R-CNN please install the following additional packages in your cntk Python environment
 
 `pip install opencv-python easydict pyyaml`
 
@@ -102,7 +102,7 @@ To run the code in this example, you need a CNTK Python environment (see [here](
 
 #### Pre-compiled binaries for bounding box regression and non maximum suppression
 
-The folder `Examples\Image\Detection\utils\cython_modules` contains pre-compiled binaries that are required for running Faster R-CNN. The versions that are currently contained in the repository are Python 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following the steps described at
+The folder `Examples\Image\Detection\utils\cython_modules` contains pre-compiled binaries that are required for running Faster R-CNN. The versions that are currently contained in the repository are Python 3.5 for Windows and Python 3.5, 3.6 for Linux, all 64 bit. If you need a different version you can compile it following the steps described at
 
 * Linux: [https://github.com/rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn)
 * Windows: [https://github.com/MrGF/py-faster-rcnn-windows](https://github.com/MrGF/py-faster-rcnn-windows)

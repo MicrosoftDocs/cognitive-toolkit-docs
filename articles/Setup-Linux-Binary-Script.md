@@ -22,7 +22,7 @@ to get you up-and-running quickly.
 
 You can find an overview about all the available installation options for CNTK on [this page](./Setup-CNTK-on-your-machine.md).
 
-We will install the CNTK binaries, the CNTK prerequisites, and create (or update) a Python 2.7, 3.4, 3.5, or 3.6 environment 
+We will install the CNTK binaries, the CNTK prerequisites, and create (or update) a Python 2.7, 3.5, or 3.6 environment 
 on your computer. The changes are as much localized as possible to not impact any other installed
 software. _**If you have already installed a previous version of CNTK2 on your machine, the script will 
 update this installation.**_
@@ -47,10 +47,10 @@ Please use the following commands, depending on your preferred CNTK Python versi
   cd /home/username/cntk/Scripts/install/linux
   ./install-cntk.sh
   ```
-- The script also supports installing a Python 2.7, Python 3.5, or Python 3.6 based CNTK environment. You can do this by adding the value `27`, `34`, or `36` to the optional parameter `--py-version` to the command, e.g., to run these commands to install a CNTK Python 3.4 based environment:
+- The script also supports installing a Python 2.7 or Python 3.6 based CNTK environment. You can do this by adding the value `27` or `36` to the optional parameter `--py-version` to the command, e.g., to run these commands to install a CNTK Python 3.5 based environment:
   ```
   cd /home/username/cntk/Scripts/install/linux
-  ./install-cntk.sh --py-version 34
+  ./install-cntk.sh --py-version 35
   ```
 - The script also allows to customize the location of the Anaconda installation, or use an existing
   Anaconda installation. Use the option `--anaconda-basepath <path>` to specify an Anaconda installation

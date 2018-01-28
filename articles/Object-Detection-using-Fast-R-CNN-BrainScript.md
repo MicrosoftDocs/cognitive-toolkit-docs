@@ -53,9 +53,6 @@ You will further need Scikit-Image and OpenCV to run these examples.
 Please download the corresponding wheel packages and install them manually. On Linux you can `conda install scikit-image opencv`.
 For Windows users, visit http://www.lfd.uci.edu/~gohlke/pythonlibs/, and download:
 
-* Python 3.4
-  * scikit_image-0.12.3-cp34-cp34m-win_amd64.whl
-  * opencv_python-3.1.0-cp34-cp34m-win_amd64.whl
 * Python 3.5
   * scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
   * opencv_python-3.2.0-cp35-cp35m-win_amd64.whl
@@ -68,14 +65,14 @@ pip install your_download_folder/scikit_image-0.12.3-cp35-cp35m-win_amd64.whl
 
 [!NOTE]: if you see the message _No module named past_ when running the scripts please execute `pip install future`.
 
-This tutorial code assumes you are using 64bit version of Python, either 3.4 or 3.5 on Windows or 3.4 on Linux, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/utils)
+This tutorial code assumes you are using 64bit version of Python 3.5 or 3.6, since the required Fast R-CNN DLL files under [utils](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/BrainScript/fastRCNN/utils)
 are prebuilt for those versions. If your task requires the use of a different Python version, please recompile these DLL files yourself in the correct environment (see [below](#pre-compiled-binaries-for-bounding-box-regression-and-non-maximum-suppression)).
 
 The tutorial further assumes that **the folder where cntk.exe resides is in your PATH environment variable**. (To add the folder to your PATH you can run the following command from a command line (assuming the folder where cntk.exe is on your machine is C:\src\CNTK\x64\Release): `set PATH=C:\src\CNTK\x64\Release;%PATH%`.)
 
 ### Pre-compiled binaries for bounding box regression and non maximum suppression
 
-The folder `Examples\Image\Detection\FastRCNN\BrainScript\fastRCNN\utils` contains pre-compiled binaries that are required for running Fast R-CNN. They versions that are currently contained in the repository are Python 3.4 and 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following these steps:
+The folder `Examples\Image\Detection\FastRCNN\BrainScript\fastRCNN\utils` contains pre-compiled binaries that are required for running Fast R-CNN. They versions that are currently contained in the repository are Python 3.5 and 3.6, all 64 bit. If you need a different version you can compile it following these steps:
 
 * `git clone --recursive https://github.com/rbgirshick/fast-rcnn.git`
 * `cd $FRCN_ROOT/lib`

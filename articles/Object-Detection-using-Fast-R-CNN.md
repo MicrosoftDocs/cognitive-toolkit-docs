@@ -45,7 +45,7 @@ To run the code in this example, you need a CNTK Python environment (see [here](
 
 #### Pre-compiled binaries for bounding box regression and non maximum suppression
 
-The folder `Examples\Image\Detection\utils\cython_modules` contains pre-compiled binaries that are required for running Fast R-CNN. The versions that are currently contained in the repository are Python 3.5 for Windows and Python 3.4 for Linux, all 64 bit. If you need a different version you can compile it following the steps described at
+The folder `Examples\Image\Detection\utils\cython_modules` contains pre-compiled binaries that are required for running Fast R-CNN. The versions that are currently contained in the repository are Python 3.5 for Windows and Python 3.5, 3.6 for Linux, all 64 bit. If you need a different version you can compile it following the steps described at
 
 * Linux: [https://github.com/rbgirshick/py-faster-rcnn](https://github.com/rbgirshick/py-faster-rcnn)
 * Windows: [https://github.com/MrGF/py-faster-rcnn-windows](https://github.com/MrGF/py-faster-rcnn-windows)
