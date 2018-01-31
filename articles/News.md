@@ -11,6 +11,21 @@ ms.devlang:   NA
 
 # News
 ## January 2018
+
+***2018-01-31.* CNTK 2.4**
+
+Highlights:
+* Moved to CUDA9, cuDNN 7 and Visual Studio 2017.
+* Removed Python 3.4 support.
+* Added Volta GPU and FP16 support.
+* Better ONNX support.
+* CPU perf improvement.
+* More OPs.
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_4_Release_Notes).
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
+
 ***2018-01-22.*** CNTK support for CUDA 9
 
 CNTK now supports CUDA 9/cuDNN 7. This requires an update to build environment to Ubuntu 16/GCC 5 for Linux, and Visual Studio 2017/VCTools 14.11 for Windows. With CUDA 9, CNTK also added a preview for 16-bit floating point (a.k.a FP16) computation.

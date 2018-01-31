@@ -10,9 +10,6 @@ ms.devlang:   brainscript, python, cpp
 ---
 # Setup Windows binary manual
 
-> [!NOTE]
-> These instructions apply to release 2.3.
-
 ## Windows manual installation from binary distribution
 
 This page will walk you through the process of manual installing the Microsoft Cognitive Toolkit (CNTK) based on a binary distribution. It is intended for those users who want to have a customized installation. The recommended way to install the CNTK binaries is through the [scripted installation](./Setup-Windows-Binary-Script.md) which also gives you the possibility to control the installation by setting [optional parameters](./Setup-Windows-Binary-Script-Options.md).
