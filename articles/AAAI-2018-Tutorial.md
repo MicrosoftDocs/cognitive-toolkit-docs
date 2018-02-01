@@ -71,7 +71,7 @@ One Microsoft Way,
 Redmond, WA 98052
 
 Phone: 1 (425) 421-1756
-Email: sayanpa@microsoft.com 
+Email: yuqtang@microsoft.com
 
 Yuqing Tang is an Applied Scientist II at Microsoft AI & Research. He is a member of the Microsoft deep learning CNTK toolkit team. Before joining Microsoft, he was at the Robotics Institute at Carnegie Mellon University first in 2012 as a postdoctoral fellow and later in 2015 as a project scientist. He has published more than 40 technical papers in Artificial Intelligence. 
 
