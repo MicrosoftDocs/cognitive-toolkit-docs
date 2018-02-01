@@ -10,9 +10,6 @@ ms.devlang:   NA
 ---
 # Setup Linux binary manual
 
-> [!NOTE]
-> These instructions apply to release 2.3.
-
 ## Linux binary manual installation
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK)
