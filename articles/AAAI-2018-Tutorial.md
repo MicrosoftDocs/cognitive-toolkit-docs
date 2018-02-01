@@ -16,7 +16,7 @@ ms.devlang:   NA
 Deep learning is rapidly transforming the landscape of Artificial Intelligence opening up a new era of possibilities in applications. This tutorial will introduce the Microsoft Cognitive Toolkit (CNTK) — a cutting-edge open-source deep-learning toolkit for Windows and Linux. CNTK is a powerful computation-graph based toolkit for training deep neural networks and inference. Microsoft product groups use CNTK, for example to create the Cortana speech models and web ranking. CNTK supports feed-forward, convolutional, and recurrent networks for speech, image, and text workloads, also in combination. Popular network types (e.g. convolution, LSTM and etc.) are supported either natively or can be implemented using CNTK operators, layers and user-defined lambda functions. CNTK scales to multiple GPU servers and is designed around efficiency. This tutorial will cover basic deep learning models, such as feed-forward networks, convolution, recurrence. We will also discuss the GAN (Generative Adversarial Network) and deep reinforcement learning. In addition, we will dive deep into the underlying CNTK specific training techniques for scalable training over large data sets, such as 1-bit SGD, variable length sequence packing, parallel and distributed per-sample training. Microsoft Azure cloud instances will be provided for the tutorial audiences during the course to practice deep networks programming in CNTK.
 
 ## Presentation:
-You can find the link to the presentation [will be uploaded soon]
+You can find the link to the presentation here [will be uploaded soon]
 
 ## Tentative Schedule
 
