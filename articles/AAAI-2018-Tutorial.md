@@ -2,7 +2,7 @@
 title:   AAAI 2018 Tutorial
 author:    tangyuq
 ms.author:   yuqtang
-ms.date:   01/28/2018
+ms.date:   02/03/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -16,7 +16,7 @@ ms.devlang:   NA
 Deep learning is rapidly transforming the landscape of Artificial Intelligence opening up a new era of possibilities in applications. This tutorial will introduce the Microsoft Cognitive Toolkit (CNTK) — a cutting-edge open-source deep-learning toolkit for Windows and Linux. CNTK is a powerful computation-graph based toolkit for training deep neural networks and inference. Microsoft product groups use CNTK, for example to create the Cortana speech models and web ranking. CNTK supports feed-forward, convolutional, and recurrent networks for speech, image, and text workloads, also in combination. Popular network types (e.g. convolution, LSTM and etc.) are supported either natively or can be implemented using CNTK operators, layers and user-defined lambda functions. CNTK scales to multiple GPU servers and is designed around efficiency. This tutorial will cover basic deep learning models, such as feed-forward networks, convolution, recurrence. We will also discuss the GAN (Generative Adversarial Network) and deep reinforcement learning. In addition, we will dive deep into the underlying CNTK specific training techniques for scalable training over large data sets, such as 1-bit SGD, variable length sequence packing, parallel and distributed per-sample training. Microsoft Azure cloud instances will be provided for the tutorial audiences during the course to practice deep networks programming in CNTK.
 
 ## Presentation:
-You can find the link to the presentation [here](https://cntk.ai/Tutorials/AAAI2018/AAAI_2017_CNTK_Tutorial.pdf)
+You can find the link to the presentation [will be uploaded soon]
 
 ## Tentative Schedule
 
@@ -24,35 +24,32 @@ You can find the link to the presentation [here](https://cntk.ai/Tutorials/AAAI2
 
 Session 1
 
-> •	Introduction to CNTK: What, Why, and How?
+> •	Introduction
 
-> •	Deep neural networks crash course
+> • A concise introduction to Deep Neural Networks
+
+> •	CNTK: What is Microsoft Cognitive toolkit? Why use Microsoft Cognitive Toolkit
 
 
 Session 2
 
-> •	Microsoft Cognitive Toolkit (CNTK)
+> • CNTK workflow: Data reading and augmentations, Modeling (MLP, CNN, RNN), Training-Test-Eval workflow
 
-> •	Defining neural networks in CNTK
+> •	Image applications: ResNet, Inception, ConvNet/Emotion, Faster R-CNN, Segmentation, Neural style, GAN/Pixel CNN, etc. 
+
 
 Session 3
-> •	deep dive: how CNTK gets so fast
-> •	GPU execution and optimization 
-> •	Parallelization
 
-Session 4: Advanced topics on audience interests
+> •	Parallel training: 1-bit SGD, Block momentum, variable sized mini-batch
 
-> *	Recurrence
+> •	Reinforcement learning in simulated environment
 
-> *	Language understanding, Sequence to sequence
 
-> * Image networks
+Session 4
 
-> * Video networks
+> •	Video applications
 
-> * GANs
-
-> * Deep reinforcement learning
+> • Other topics if time is available: Scale CNTK runs in Spark
 
 
 Conclusion and QA
