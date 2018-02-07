@@ -61,6 +61,18 @@ Besides, On the individual components screen make sure you add 'VC++ 2017 versio
 
 You are also required to have the 'VC++ 2017 version 15.4 v14.11 toolset' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Visual Studio Community 2017' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'VC++ 2017 version 15.4 v14.11 toolset' feature is installed on your system (see picture above).
 
+> [!NOTE]
+> If `VS2017INSTALLDIR` environment variable was not set by the Visual Studio installer, set it manually. The exact installation directory depends on both the *version* (2017 in this case) and *offering* (*Community*, *Enterprise*, etc) of Visual Studio, according to the following pattern: `C:\Program Files (x86)\Microsoft Visual Studio\<version>\<offering>`.
+>
+> For *Visual Studio 2017 Enterprise* edition, run:
+> ```
+> setx VS2017INSTALLDIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise"
+> ```
+> For *Visual Studio 2017 Community* edition, run:
+> ```
+> setx VS2017INSTALLDIR "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community"
+> ```
+
 ### NVIDIA CUDA 9
 
 > [!IMPORTANT]

@@ -28,6 +28,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |PROTOBUF_PATH | c:\local\protobuf-3.1.0-vs17 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
 |SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#optional-swig) (required for CNTK Python, Java, and C#/.NET support)
 |ZLIB_PATH | c:\local\zlib-vs17 | [Compression Library](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip) (required for ImagerReader build)
+|VS2017INSTALLDIR | C:\Program Files (x86)\Microsoft Visual Studio\\<code>version</code>\\<code>offering</code> | [CNTK on Windows](./Setup-CNTK-on-Windows.md#building-cntk) (required for building CNTK 2.4+ with VS2017)
 
 In a command shell you could use these commands to set the environment variables on your machine:
 ```
