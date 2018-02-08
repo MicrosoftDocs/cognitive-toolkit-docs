@@ -60,7 +60,7 @@ You need to **activate** the CNTK environment by opening a standard Windows comm
 
 ```
 cd c:\local\CNTK-2-4
-cd scripts
+cd cntk\scripts
 cntkpy35.bat
 ```
 
