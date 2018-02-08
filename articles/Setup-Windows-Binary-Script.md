@@ -78,7 +78,7 @@ Perform the following command in the CNTK environment command prompt (see previo
 
 ```
 cd c:\local\CNTK-2-4
-cd Tutorials\HelloWorld-LogisticRegression
+cd cntk\Tutorials\HelloWorld-LogisticRegression
 cntk configFile=lr_bs.cntk makeMode=false command=Train
 ```
 
