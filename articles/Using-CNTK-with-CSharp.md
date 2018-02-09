@@ -14,7 +14,7 @@ ms.devlang:   csharp
 CNTK v2.2.0 provides C# API to build, train, and evaluate CNTK models. This section gives an overview of CNTK C# API. [C# training examples](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp) are available in CNTK github repository.
 
 ## Using C#/.NET Managed API to Build a Deep Neural Network
-CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation takes one or two input variables with necessary parameters and produces a CNTK Function. A CNTK Function maps input data to output. A CNTK Function may also be treated as a varaible and be taken as input to another CNTK operation. With this mechanism, a Deep Neural Network can be built with basic CNTK operations by chaining and composition. As an example:
+CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation takes one or two input variables with necessary parameters and produces a CNTK Function. A CNTK Function maps input data to output. A CNTK Function may also be treated as a variable and be taken as input to another CNTK operation. With this mechanism, a deep neural network can be built with basic CNTK operations by chaining and composition. As an example:
 ***
 ```cs
 private static Function CreateLogisticModel(Variable input, int numOutputClasses)
@@ -32,7 +32,7 @@ private static Function CreateLogisticModel(Variable input, int numOutputClasses
 ```  
 CNTKLib.Plus, CNTKLib.Times, CNTKLib.Sigmoid are basic CNTK operations. The input argument can be a CNTK Variable representing data features. It may also be another CNTK function. This code builds a simple computation network with parameters that are adjusted at training stage to make a decent multi-class classifier. 
 
-CNTK C# API provides opteraions to build convolution neural networks (CNN) and recurrent neural networks (RNN). For example, to build a 2-layer CNN image classifier:
+CNTK C# API provides operations to build convolution neural networks (CNNs) and recurrent neural networks (RNNs). For example, to build a two-layer CNN image classifier:
 ***
 ```cs
     var convParams1 = new Parameter(
@@ -71,7 +71,7 @@ CNTK provides data preparation utilities for training. CNTK C# API exposes these
 |features 0.232070 1.814821 |labels 0.000000
 ```
 
-A CNTK DataSource is create in this way:
+A CNTK DataSource is created in this way:
 ***
 ```cs
     var minibatchSource = MinibatchSource.TextFormatMinibatchSource(
@@ -130,7 +130,7 @@ A CNTK trainer is used to do minibatch training. [A C# code snip](https://github
 ```
   
 In this code snip, a CNTK built-in SGD learner with per sample learning rate = 0.02 is used. The learner is to optimize all parameters of the model. A trainer is created with the learner, a loss function, and a evaluation function. During each training iteration minibatch data is fed to the trainer to have model parameters updated. Trainig loss and evaluation error are displayed with a helper method during the training.  
-In the code we generate 2 classes of statistically separable data of labels and features. In other more realistic [examples](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common), public test data are loaded with CNTK MinibatchSource.   
+In the code we generate two classes of statistically separable data of labels and features. In other more realistic [examples](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common), public test data are loaded with CNTK MinibatchSource.   
 
 ## Using C#/.NET Managed API to Evaluate a Deep Neural Network
 
