@@ -94,19 +94,11 @@ setx CNTK_ENABLE_ASGD false
 
 ##  MKL
 
-The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/).
-CNTK supports using the Intel MKL via a custom library version [MKLML](https://github.com/01org/mkl-dnn/releases), as well as MKL-DNN
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Windows.md) to install it
 
-Installing the MKLML library: 
-
-* Create a directory on your machine to hold MKL-DNN/MKLML, e.g.:
-
-```
-    mkdir c:\local\mkl-dnn-0.12
-```
-
-* Download the file [mklml_win_2018.0.1.20171227.zip](https://github.com/01org/mkl-dnn/releases/download/v0.12/mklml_win_2018.0.1.20171227.zip). Unzip it into your MKLML path without the versioned sub directory.
+### MKL-DNN
 * Download MKL-DNN source and build with MKL_PATH as target path. Check build instructions in [Setup MKL-DNN on Windows](./Setup-BuildMklDnn-VS17.md)
+
 * Set the environment variable `MKL_PATH` to the directory, e.g.:
 
 ```
@@ -150,70 +142,21 @@ Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3
 
 ## GPU Specific Packages
 
-This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs.
+This section outlines the packages you need to setup in order for CNTK to leverage NVIDIA GPUs. 
 
-If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#optional-swig). Otherwise proceed further.
+If you do NOT intend to use any GPUs with CNTK and will rely on the CPU only, you may skip directly to the [next general section](#optional-swig). Otherwise proceed to [this page](./Setup-GPU-Specific-Packages.md).
 
-### Checking your GPU compatibility
-
-You need a [CUDA](https://developer.nvidia.com/cuda-zone)-compatible graphic card to use CNTK GPU capabilities. You can check whether your card is CUDA-compatible [here](https://developer.nvidia.com/cuda-gpus) and [here (for older cards)](https://developer.nvidia.com/cuda-legacy-gpus). Your GPU card [Compute Capability (CC)](http://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#compute-capability) must be 3.0 or more.
-
-In the following steps we will install the NVidia development tools required to build the Microsoft Cognitive Toolkit as well as NVidia support libraries. As the last step (after you installed all these mentioned NVidia tools!), you should check that you have the latest graphic card driver installed. 
-
-## NVIDIA CUDA 9.0
-
-> [!IMPORTANT]
-> In case you have a first-time Visual Studio 2017 installation as described above, you will need to install NVIDIA CUDA 9 now, even if you have already an existing installation of CUDA 9! The NVIDIA CUDA 9 installation adds support to the NVIDIA development tools to the Visual Studio environment, which is required to build CNTK successfully.
-
-CNTK is set to build with CUDA 9.0. Download and install the NVIDIA CUDA 9.0 Toolkit:
-
-* Download the required package from [this download page](https://developer.nvidia.com/cuda-90-download-archive)
-* Run the installation procedure
-
-Make sure that the following CUDA environment variables are set to the correct path (the NVIDIA Cuda installer will create these for you). Default installation paths are assumed:
-
-```
-CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
-CUDA_PATH_V9_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
-```
-
-## cuDNN
-
-Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v7.0 for CUDA 9.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v7.0.4/cudnn-9.0-windows10-x64-v7.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
-
-* Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-9.0-v7.0\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
+Set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
 
 ```
     setx CUDNN_PATH C:\local\cudnn-9.0-v7.0\cuda
 ```
 
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-9.0-v7.0\cuda\include\cudnn.h` will succeed.
-
-### CUB
-
-> [!IMPORTANT]
-> Install NVIDIA CUB using the exact version specified below. This is necessary because it is expected by the CNTK build configuration program.
-
-* Download NVIDIA CUB v.1.7.4 [from this download link](https://github.com/NVlabs/cub/archive/1.7.4.zip)
-* Extract the archive to a folder on your local disk (we assume `c:\local\cub-1.7.4`) and set the environment variable `CUB_PATH` pointing to that location, e.g.:
+Set the environment variable `CUB_PATH` pointing to that location, e.g.:
 
 ```
     setx CUB_PATH c:\local\cub-1.7.4\
 ```
-
-* Quick installation check. If you followed the instruction above and used the same paths, this command `dir C:\local\cub-1.7.4\cub\cub.cuh` will succeed.
-
-### Latest GPU card driver
-
-Now install the latest driver for your GPU card:
-* Select your card and download the driver pack from [this download location](http://www.nvidia.com/Download/index.aspx?lang=en-us)
-* Run the driver installation procedure
-
-----------
-
-This completes the GPU specific section
-
-----------
 
 ## OPTIONAL. SWIG.
 
@@ -231,13 +174,9 @@ Quick installation check: If you followed the instruction above and used the sam
 
 ## OPTIONAL. OpenCV
 
-CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3.
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3. Follow [this page](./Setup-OpenCV-on-Windows.md) for further steps.
 
-You need to install OpenCV for CNTK 2.3, if you want to build any of the the following:
-- CNTK Image Reader
-- CNTK Image Writer - required to use Tensorboard's Image feature.
-
-Download and install version 3.1 for Windows from [this download location](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.1.0/opencv-3.1.0.exe/download). This installer is just an unpacker. E.g. enter "c:\local" under the "Extract to". We recommend that you rename the created OpenCV folder to reflect the version number you just installed (Opencv3.1.0). Once you have done so, set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
+Set the environment variable `OPENCV_PATH_V31` pointing to the OpenCV build folder, e.g.
 
 ```
 setx OPENCV_PATH_V31 c:\local\Opencv3.1.0\build

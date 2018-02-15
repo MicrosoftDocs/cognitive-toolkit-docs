@@ -11,6 +11,41 @@ ms.devlang:   python
 
 # Setup Windows Python
 
+## Environment Variables and required packages
+
+Installing CNTK for Python on your system requires the installation of some third party packages and the definition of the PATH  environment variable.
+
+### GPU Specific Packages
+If you intend to use CNTK with GPU or GPU-1bit-SGD support, follow [this page](./Setup-GPU-Specific-Packages.md) to install and configure the environemnt accordingly.
+
+After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
+
+```
+setx PATH "C:\Program Files\NVIDIA Corporation\NVSMI;%PATH%"
+setx PATH "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%"
+setx PATH "C:\local\cudnn-9.0-v7.0\cuda;%PATH%"
+```
+
+### MKL
+
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Windows.md) to install it in your system.
+
+* Prepend its path to environment variable `PATH`, e.g.:
+
+```
+    setx PATH "c:\local\mklml-2018.0.1;%PATH%"
+```
+
+### OPTIONAL. OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Windows.md) to install it.
+
+Prepend the environment variable `PATH` pointing to the OpenCV build folder, e.g.
+
+```
+setx PATH "C:\local\opencv3.10\build\x64\vc14\bin;%PATH%"
+```
+
 ## Installing CNTK for Python on Windows
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Windows. If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
