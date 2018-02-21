@@ -11,6 +11,45 @@ ms.devlang:   NA
 
 # Setup Linux Python
 
+## Environment Variables and required packages
+
+Installing CNTK for Python on your system requires the installation of some third party packages and the definition of   environment variables.
+
+### GPU Specific Packages
+If you intend to use CNTK with GPU or GPU-1bit-SGD support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+
+After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
+
+### MKL
+
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Linux.md) to install it
+
+* Export its path to environment variable `LD_LIBRARY_PATH`, e.g.:
+
+```
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+```
+
+### OPTIONAL. OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Linux.md) to install it.
+
+Export the environment variable `LD_LIBRARY_PATH` pointing to the OpenCV build folder, e.g.
+
+```
+export LD_LIBRARY_PATH=/usr/local/opencv-3.1.0/lib:$LD_LIBRARY_PATH
+```
+
+### OpenMPI
+
+CNTK requires OpenMPI 1.10.x to be installed on your system.
+On Ubuntu 16.04 install it like this:
+```
+sudo apt-get install openmpi-bin
+```
+
+Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH`.
+
 ## Installing CNTK for Python on Linux (Ubuntu 14.04 or Ubuntu 16.04)
 
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux (Ubuntu 14.04 or Ubuntu 16.04).
@@ -123,16 +162,6 @@ Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD L
 |  | GPU-1bit-SGD | `https://cntk.ai/PythonWheel/GPU-1bit-SGD/cntk-2.0-cp36-cp36m-linux_x86_64.whl` |
 
 ---
-
-### Prerequisites
-
-CNTK requires OpenMPI 1.10.x to be installed on your system.
-On Ubuntu 16.04 install it like this:
-```
-sudo apt-get install openmpi-bin
-```
-On Ubuntu 14.04. please follow the instructions [here](./Setup-CNTK-on-Linux.md#open-mpi) to build it yourself.
-Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH`.
 
 ### Anaconda3
 
