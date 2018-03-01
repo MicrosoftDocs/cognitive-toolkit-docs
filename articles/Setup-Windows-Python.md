@@ -23,7 +23,7 @@ After installing the aforementioned GPU packages, add them into your PATH enviro
 ```
 setx PATH "C:\Program Files\NVIDIA Corporation\NVSMI;%PATH%"
 setx PATH "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%"
-setx PATH "C:\local\cudnn-9.0-v7.0\cuda;%PATH%"
+setx PATH "C:\local\cudnn-9.0-v7.0\cuda\bin;%PATH%"
 ```
 
 ### MKL
@@ -33,7 +33,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 * Prepend its path to environment variable `PATH`, e.g.:
 
 ```
-    setx PATH "c:\local\mklml-2018.0.1;%PATH%"
+    setx PATH "c:\local\mklml-2018.0.1\lib;%PATH%"
 ```
 
 ### OPTIONAL. OpenCV
