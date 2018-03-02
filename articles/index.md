@@ -4,7 +4,7 @@ author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  01/22/2017
 ms.custom:   cognitive-toolkit
-ms.topic:   landing-page
+ms.topic:   overview
 
 ms.service:  Cognitive-services
 ms.devlang:   NA
