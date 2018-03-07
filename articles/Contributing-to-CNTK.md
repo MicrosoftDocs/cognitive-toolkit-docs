@@ -2,7 +2,7 @@
 title:   How to contribute to CNTK
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   02/17/2016
+ms.date:   03/07/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.service:  Cognitive-services
@@ -19,7 +19,7 @@ Here are the simple steps you need to follow to see your code as a part of CNTK:
 
 ## Preliminary Information
 
-* Note that in most cases you will be required to accept Microsoft Contribution License Agreement (CLA) *before you contribution is reviewed*. You may study the text of the agreement [here](https://cla.microsoft.com/cladoc/microsoft-contribution-license-agreement.pdf). You will be automatically notified whether you need to accept CLA after you make a Pull Request (see below). The procedure is automated and should not take more, than 5-7 minutes. Also, you will have to accept the CLA only **once**, and we will not bother you with this during the subsequent contributions
+* Note that in most cases you will be required to accept Microsoft Contribution License Agreement (CLA) *before you contribution is reviewed*. You may study the text of the agreement [here](https://opensource.microsoft.com/pdf/microsoft-contribution-license-agreement.pdf). You will be automatically notified whether you need to accept CLA after you make a Pull Request (see below). The procedure is automated and should not take more, than 5-7 minutes. Also, you will have to accept the CLA only **once**, and we will not bother you with this during the subsequent contributions
 * Please, make each contribution reasonably small - it will allow us to review and accept it quicker. Also if you would like to improve several points, divide it in separate Pull Requests
 * If you would like to make **a really big** contribution, like develop a brand new feature of CNTK, please, **consult us preliminary** by [raising an issue](https://github.com/Microsoft/CNTK/issues). We value your cooperation and respect your time and thus want to ensure that we're ready for your work
 * Consult the section describing how to [setup your development environment](./Setup-CNTK-from-source.md). Get yourself familiar with [Developing and Testing](./Developing-and-Testing.md) and especially [Coding Guidelines](./Coding-Guidelines.md) sections of the CNTK documentation.
