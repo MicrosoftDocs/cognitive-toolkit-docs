@@ -2,7 +2,7 @@
 title:   Setup CNTK on Windows
 author:    wolfma61
 ms.author:   wolfma
-ms.date:   07/31/2017
+ms.date:   03/07/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -88,9 +88,6 @@ The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-an
 ```
 setx CNTK_ENABLE_ASGD false
 ```
-
-> [!IMPORTANT]
-> The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
 
 ##  MKL
 
@@ -396,7 +393,6 @@ If you plan modifications to the code you should read the information on [Develo
 
 ## Links
 
-* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [CNTK Development Environment for Universal Windows Platform (UWP)](./Setup-UWP-Build-on-Windows.md)
 * [Setup CNTK Python Tools for Windows](./Setup-CNTK-Python-Tools-for-Windows.md)
 * [Developing and Testing](./Developing-and-Testing.md)
