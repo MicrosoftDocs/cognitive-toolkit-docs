@@ -204,7 +204,6 @@
 ### [CNTK 1.6 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_1_6_Release_Notes)
 ### [CNTK 1.5 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_1_5_Release_Notes)
 ## [CNTK license](https://github.com/Microsoft/CNTK/tree/release/latest/LICENSE.md)
-## [CNTK 1bit-SGD license](/cognitive-toolkit/CNTK-1bit-SGD-License)
 ## [Archive](/cognitive-toolkit/archive)
 
 # [FAQ](/cognitive-toolkit/CNTK-FAQ)
