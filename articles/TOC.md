@@ -95,8 +95,6 @@
 ### [Debugging CNTK's GPU source code in Visual Studio](/cognitive-toolkit/Debugging-CNTK-source-code-in-Visual-Studio)
 ### [Debugging CNTK source code in Visual Studio](/cognitive-toolkit/Debugging-CNTKs-GPU-source-code-in-Visual-Studio)
 ### [Python Tools For Windows](/cognitive-toolkit/Setup-CNTK-Python-Tools-For-Windows)
-### [Enabling 1bit SGD](/cognitive-toolkit/Enabling-1bit-SGD)
-### [Update 1bit SGD Submodule Location](/cognitive-toolkit/Update-1bit-SGD-Submodule-Location)
 ## [Contribute to CNTK](/cognitive-toolkit/Contributing-to-CNTK)
 
 # BrainScript
