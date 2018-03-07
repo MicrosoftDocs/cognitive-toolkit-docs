@@ -2,7 +2,7 @@
 title:   Setup CNTK on your machine
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   12/04/2017
+ms.date:   3/7/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -26,6 +26,6 @@ To install the latest precompiled binaries to your machine, follow the instructi
 |[Manual installation](./Setup-Windows-Binary-Manual.md)<br>Manually install CNTK Python lib, CNTK.exe for BrainScript, and dependencies  | [Manual installation](./Setup-Linux-Binary-Manual.md)<br>Manually install CNTK Python lib,CNTK.exe for BrainScript, and dependencies
 |                                                     | [Docker installation](./CNTK-Docker-Containers.md)
 
-## CNTK Versions: CPU, GPU, 1bit-SGD
+## CNTK Versions: CPU and GPU
 
-CNTK offers three different build versions. The CPU-only build uses the optimized Intel MKLML; MKLML is released with Intel MKL-DNN as a trimmed version of Intel MKL for MKL-DNN. The GPU implementation uses highly optimized NVIDIA libraries (such as CUB and cuDNN) and supports distributed training across multiple GPUs and multiple machines. The 1bit-SGD version is a special GPU build of CNTK that enables the MSR-developed 1bit-quantized SGD and block-momentum SGD parallel training algorithms, which allow for even faster distributed training in CNTK. Note that the 1bit-SGD package is not necessary for performing parallel training in CNTK; the GPU build will suffice.
+CNTK offers two different build versions. The CPU-only build uses the optimized Intel MKLML; MKLML is released with Intel MKL-DNN as a trimmed version of Intel MKL for MKL-DNN. The GPU implementation uses highly optimized NVIDIA libraries (such as CUB and cuDNN) and supports distributed training across multiple GPUs and multiple machines. The GPU build also includes the MSR-developed 1bit-quantized SGD and block-momentum SGD parallel training algorithms, which allow for even faster distributed training in CNTK.
