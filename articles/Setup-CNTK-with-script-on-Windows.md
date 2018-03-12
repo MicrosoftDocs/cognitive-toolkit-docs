@@ -2,7 +2,7 @@
 title:   Setup CNTK with script on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   07/31/2017
+ms.date:   03/07/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -108,9 +108,6 @@ The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-an
 setx CNTK_ENABLE_ASGD false
 ```
 
-> [!IMPORTANT]
-> The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
-
 ### Running the developer installation script
 
 The developer installation script (devInstall.ps1) is a PowerShell script located in the `tools` subdirectory inside the root of the CNTK repository. It will install all required and optional tools to build CNTK on your system. It will also create the required user-local environment settings. Once the script is started no additional user input is necessary, although you will require to acknowledge the installation of programs or creation of environment variables, depending on your 'User Account Control' setting.
@@ -155,7 +152,6 @@ At this point all the required components to build CNTK on you system are instal
 * [Windows build specific environment variables](./Windows-Environment-Variables.md)
 * [CNTK Development Environment for Universal Windows Platform (UWP)](./Setup-UWP-Build-on-Windows.md)
 * [Build and test CNTK](./Setup-CNTK-on-Windows.md#building-cntk)
-* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
