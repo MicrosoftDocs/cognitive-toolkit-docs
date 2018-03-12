@@ -2,7 +2,7 @@
 title:   Setup CNTK on Linux
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:  07/31/2017
+ms.date:  03/12/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -192,7 +192,7 @@ sudo ./b2 -d0 -j"$(nproc)" install
 
 ----------
 ## GPU Specific Packages
-If you intend to use CNTK with GPU or GPU-1bit-SGD support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
 
 ## OPTIONAL. SWIG.
 
@@ -323,9 +323,6 @@ Submodule Multiverso is used for enable [DataParallelASGD](./Multiple-GPUs-and-m
 
 **Optional** If you don't need DataParallelASGD support, then pass the option `--asgd=no` to the configure command.
 
-> [!IMPORTANT]
-> The procedure above does not provide you with the access to 1-bit Stochastic Gradient Descent (1bit-SGD) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md#6-block-momentum-sgd) components. If you want to build CNTK with this functionality enabled, please read the instructions on [this page](./Enabling-1bit-SGD.md) and then proceed with the installation.
-
 ## Building CNTK
 
 To build CNTK use the following commands (we assume that the CNTK repository was cloned to `~/Repos/cntk`):
@@ -412,7 +409,6 @@ Note that GPU ID may be different. The `deviceId` parameter defines what process
 If you plan modifications to the code you should read the information on [Developing and Testing](./Developing-and-Testing.md).
 
 **Next steps**
-* [Enabling 1bit SGD](./Enabling-1bit-SGD.md)
 * [Developing and Testing](./Developing-and-Testing.md)
 * [CNTK usage from Brainscript](./CNTK-usage-overview.md)
 * [Examples](./Examples.md)
