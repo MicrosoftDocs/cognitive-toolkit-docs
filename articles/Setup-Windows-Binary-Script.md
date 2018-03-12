@@ -50,7 +50,7 @@ By the end of the successful execution of the installation script:
 
 **Step 3 Update your GPU Driver**
 
-If you downloaded/installed the GPU or GPU-1bit-SGD version of CNTK and you are using a NVidia graphics card, ensure that you have the [latest NVIDIA driver](http://www.nvidia.com/drivers) installed.
+If you downloaded/installed the GPU version of CNTK and you are using a NVidia graphics card, ensure that you have the [latest NVIDIA driver](http://www.nvidia.com/drivers) installed.
 
 **Step 4 Verify the setup from Python**
 
