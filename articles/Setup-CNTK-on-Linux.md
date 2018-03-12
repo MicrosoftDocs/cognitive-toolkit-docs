@@ -192,7 +192,7 @@ sudo ./b2 -d0 -j"$(nproc)" install
 
 ----------
 ## GPU Specific Packages
-If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environment accordingly.
 
 ## OPTIONAL. SWIG.
 
