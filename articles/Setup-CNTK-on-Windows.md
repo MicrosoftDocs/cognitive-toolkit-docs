@@ -110,7 +110,7 @@ Install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI) from [this download pa
 Follow these steps to install the [Boost Library](http://www.boost.org/) on your system:
 
 * Download and install Boost version 1.60 (you need the `msvc-14.0` binaries) from this <a href="http://sourceforge.net/projects/boost/files/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe/download" target="_blank">download location</a> on Sourceforge.
-* Set the environment variable `BOOST_INCLUDE PATH` to your Boost installation, e.g.: 
+* Set the environment variable `BOOST_INCLUDE_PATH` to your Boost installation, e.g.: 
 
 ```
     setx BOOST_INCLUDE_PATH c:\local\boost_1_60_0-msvc-14.0
