@@ -55,6 +55,16 @@ Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply differen
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0.1](#anaconda2)
 
+# [CNTK 2.5](#tab/cntkpy25)
+
+|Python | Flavor | URL
+|:------|:-------|:--------|
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp27-cp27m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp27-cp27m-win_amd64.whl`
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp35-cp35m-win_amd64.whl`
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp36-cp36m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp36-cp36m-win_amd64.whl`
 
 # [CNTK 2.4](#tab/cntkpy24)
 
@@ -175,7 +185,7 @@ C:\> pip install <url>
 ```
 where `<url>` is the corresponding wheel file URL in the table on the top of this page. E.g. if you have Python 3.5 and want to install the CPU-only version, run
 ```
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.4-cp35-cp35m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-win_amd64.whl
 ```
 
 Continue with a [quick installation test](#quick-installation-test)
@@ -207,7 +217,7 @@ Open a standard command shell, create the environment, make it active, and pip-i
 ```
 C:\> conda create --name cntk-py35 python=3.5 numpy scipy h5py jupyter
 C:\> activate cntk-py35
-C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.4-cp35-cp35m-win_amd64.whl
+C:\> pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-win_amd64.whl
 ```
 A quick test that the installation succeeded can be done by querying the CNTK version:
 ```

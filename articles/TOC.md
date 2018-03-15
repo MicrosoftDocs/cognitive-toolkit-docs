@@ -179,6 +179,7 @@
 ## [Conference appearances](/cognitive-toolkit/Conference-Appearances)
 ## [Presentations](/cognitive-toolkit/Presentations)
 ## [Releases](https://github.com/Microsoft/CNTK/releases)
+### [CNTK 2.5 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_5_Release_Notes)
 ### [CNTK 2.4 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_4_Release_Notes)
 ### [CNTK 2.3 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_3_Release_Notes)
 ### [CNTK 2.2 Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_2_Release_Notes)

@@ -10,6 +10,23 @@ ms.devlang:   NA
 ---
 
 # News
+
+## March 2018
+***2018-03-15.* CNTK 2.5**
+
+Highlights:
+* Change profiler details output format.
+* Enable per-node timing.
+* CPU inference performance improvements using MKL.
+* 1BitSGD incorporated into CNTK.
+* New loss function.
+* Distributed Training with Mulitple Learners.
+* More OPs.
+* Bug fixes and updates for ONNX.
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_5_Release_Notes).
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
+
 ## January 2018
 
 ***2018-01-31.* CNTK 2.4**
