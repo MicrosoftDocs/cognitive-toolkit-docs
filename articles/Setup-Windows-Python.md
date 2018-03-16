@@ -60,11 +60,11 @@ Depending on the Python and CNTK version (CPU, GPU, 1bit-SGD) we supply differen
 |Python | Flavor | URL
 |:------|:-------|:--------|
 | 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp27-cp27m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp27-cp27m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5-cp27-cp27m-win_amd64.whl`
 | 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp35-cp35m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5-cp35-cp35m-win_amd64.whl`
 | 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp36-cp36m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk-2.5-cp36-cp36m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5-cp36-cp36m-win_amd64.whl`
 
 # [CNTK 2.4](#tab/cntkpy24)
 
