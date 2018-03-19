@@ -28,19 +28,6 @@ To run parallel training, make sure that an implementation of the Message Passin
 
 * On Linux, install OpenMPI version 1.10.x. Please follow the instructions [here](./Setup-CNTK-on-Linux.md#open-mpi) to build it yourself.
 
-##### Notes on SGD Algorithm implementations location and licensing.
-
-* [CNTK License](https://github.com/Microsoft/CNTK/tree/release/latest/LICENSE.md)
-* [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md)
-
-The second license is specific for the 1-bit Stochastic Gradient Descent (1bit-SGD) and Block-Momentum components and is more restrictive than the main CNTK license.
-
-*Data-Parallel SGD* may be used **with or without** 1bit-SGD. When *Data-Parallel SGD* is used **without** 1bit-SGD, it is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/tree/release/latest/LICENSE.md). When it is used **with** 1bit-SGD, it is licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md).
-
-*Block-Momentum SGD* is **always** licensed under the [CNTK 1bit-SGD License](./CNTK-1bit-SGD-License.md) irrespective of the usage scenario. Note, that to obtain the source code implementation for this algorithm, you need to follow the [instructions for enabling 1bit-SGD](./Enabling-1bit-SGD.md) even if you do not plan to use 1bit-SGD itself.
-
-*Model-Averaging SGD*'s implementation is stored with the main CNTK code and is licensed under the [main CNTK License](https://github.com/Microsoft/CNTK/tree/release/latest/LICENSE.md).
-
 ## 2. Configuring Parallel Training in CNTK in Python
 
 To use data parallel SGD in Python, the user needs to create and pass a distributed learner to the trainer:

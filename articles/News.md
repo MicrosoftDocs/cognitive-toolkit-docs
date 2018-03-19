@@ -286,10 +286,6 @@ See more on CNTK as Docker Images in this [article](./CNTK-Docker-Containers.md)
 ***2017-01-25.* 1bit-SGD Code is relocated to GitHub. Submodule configuration update is required for affected users**  
 This news is related to users who are working with CNTK code base. If you use Binary or Docker Runtime Images installation you may ignore it.
 
-Effective January 25, 2017 CNTK [1-bit Stochastic Gradient Descent (1bit-SGD)](./Enabling-1bit-SGD.md) and [BlockMomentumSGD](./Multiple-GPUs-and-machines.md) code is moved to a new Repository in GitHub.
-
-If you cloned CNTK Repository with [1bit-SGD enabled](./Enabling-1bit-SGD.md) *prior to January 25, 2017* you need to update git submodule configuration as described in [this article](./Update-1bit-SGD-Submodule-Location.md).
-
 ***2017-01-20.* V 2.0 Beta 9 Release**  
 Highlights of this Release:
 * Default Python version is now 3.5 (relates to default parameters in client installations as well as [Runtime Images at Docker Hub](./CNTK-Docker-Containers.md)).

@@ -2,7 +2,7 @@
 title:   Setup Linux Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   06/01/2017
+ms.date:   03/07/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
@@ -13,10 +13,10 @@ ms.devlang:   NA
 
 ## Environment Variables and required packages
 
-Installing CNTK for Python on your system requires the installation of some third party packages and the definition of   environment variables.
+Installing CNTK for Python on your system requires the installation of some third party packages and the definition of environment variables.
 
 ### GPU Specific Packages
-If you intend to use CNTK with GPU or GPU-1bit-SGD support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
 
 After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
 
@@ -55,9 +55,8 @@ Make sure that it's libraries can be found, e.g., by setting up `LD_LIBRARY_PATH
 This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux (Ubuntu 14.04 or Ubuntu 16.04).
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-Depending on the Python and CNTK version (CPU-Only, GPU, GPU-1bit-SGD) we supply different wheel (.whl) files to install CNTK.
+Depending on the Python and CNTK version (CPU or GPU) we supply different wheel (.whl) files to install CNTK.
 Please select the correct installation from the list below, and substitute the name and/or link during the installation:
-Note that the CNTK GPU-1bit-SGD version is licensed under a specific [1bit-SGD License](./CNTK-1bit-SGD-License.md) which is MORE restrictive, than the major CNTK License.
 
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)

@@ -77,7 +77,7 @@ First you need to install docker. It is highly recommended to follow the [instal
 
 The correspondent Docker files are in the CNTK Repository at https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker
 
-To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU only, CPU+GPU with or without 1bit-SGD). For example, to build CNTK's GPU docker image without 1bit-SGD execute
+To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU or GPU). For example, to build CNTK's GPU docker image, execute
 ```
 docker build -t cntk CNTK-GPU-Image
 ```
