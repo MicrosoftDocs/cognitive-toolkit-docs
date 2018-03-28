@@ -13,7 +13,7 @@ ms.devlang:   brainscript
 ## Setup for Windows
 
 ### Scripted Install
-For a scripted binary installation of CNTK on Windows, follow Steps 1 and 2 on this [page](./Setup-Windows-Binary-Script).  
+For a scripted binary installation of CNTK on Windows, follow Steps 1 and 2 on this [page](/cognitive-toolkit/Setup-Windows-Binary-Script).  
 
 **Then, verify the setup for BrainScript:**
 
@@ -54,7 +54,7 @@ Model has 9 nodes. Using GPU 0.
 ```
 
 ### Manual Install
-To manually install CNTK from a binary distribution, follow Step 1 on this [page](./Setup-Windows-Binary-Manual).
+To manually install CNTK from a binary distribution, follow Step 1 on this [page](/cognitive-toolkit/Setup-Windows-Binary-Manual).
 
 **Then, verify the setup for BrainScript:**
 Please add the CNTK binary directory (e.g., `c:\local\CNTK\cntk`) to your path.
@@ -91,7 +91,7 @@ Model has 9 nodes. Using GPU 0.
 
 ### Scripted Install
 
-For a scripted binary installation of CNTK on Windows, follow Steps 1 and 2 on this [page](./Setup-Linux-Binary-Script).
+For a scripted binary installation of CNTK on Windows, follow Steps 1 and 2 on this [page](/cognitive-toolkit/Setup-Linux-Binary-Script).
 
 **Then, verify the setup for BrainScript**
 
@@ -125,7 +125,7 @@ Model has 9 nodes. Using GPU 0.
 
 ### Manual Install
 
-To manually install CNTK from a binary distribution, follow Step 1 on this [page](./Setup-Linux-Binary-Manual).
+To manually install CNTK from a binary distribution, follow Step 1 on this [page](/cognitive-toolkit/Setup-Linux-Binary-Manual).
 
 **Then, verify the setup for BrainScript:**
 
