@@ -11,11 +11,11 @@ ms.devlang:   python
 
 # Setup Windows Python
 
-## Environment Variables and required packages
+## Environment Variables and Required Packages
 
-Installing CNTK for Python on your system requires the installation of some third party packages and the definition of the PATH  environment variable.
+Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
 
-### GPU-Specific Packages
+### OPTIONAL: GPU-Specific Packages
 If you intend to use CNTK with GPU, follow [this page](./Setup-GPU-Specific-Packages.md) to install and configure the environment accordingly.
 
 After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
@@ -36,7 +36,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
     setx PATH "c:\local\mklml-2018.0.1\lib;%PATH%"
 ```
 
-### OPTIONAL. OpenCV
+### OPTIONAL: OpenCV
 
 CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed, but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Windows.md) to install it.
 
@@ -61,8 +61,12 @@ We offer three ways to install CNTK for Python:
 3. [Nightly builds](#3-install-from-nightly-builds)
 
 ### 1. Install from PyPI
-As of the CNTK 2.5 release, users can now install CNTK via PyPI.
+As of the CNTK 2.5 release, users can now install CNTK via PyPI.  
 
+If this is your first time installing CNTK via PyPI, we advise that you first uninstall any previous versions:
+`pip uninstall <url>`.
+
+#### First time CNTK installation
 To install the CPU-only version of CNTK:
 ```
 C:\> pip install cntk
@@ -72,6 +76,23 @@ To install the GPU version of CNTK:
 ```
 C:\> pip install cntk-gpu
 ```
+
+Please review the [Environment Variables and Required Packages](#environmentvariablesandrequiredpackages) section to make sure you have the additional third-party packages you need. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the section.
+
+#### Upgrade an existing CNTK installation
+If you already have a previous version (2.5+) of CNTK installed, you can install a new version of CNTK over your existing installation.  
+
+To upgrade the CPU-only version of CNTK:
+```
+C:\> pip install --upgrade --no-deps cntk
+```
+
+To upgrade the GPU version of CNTK:
+```
+C:\> pip install --upgrade --no-deps cntk-gpu
+```
+
+**Note:** we advise that you do not have both `cntk` and `cntk-gpu` packages installed simultaneously.
 
 ### 2. Install from Wheel Files
 Depending on the Python and CNTK version (CPU or GPU) we supply different wheel (.whl) files to install CNTK. Please select the correct installation from the list below, and substitute the name and/or link during the installation. For CNTK 2.5+, we recommend you simply install through [PyPI](#installfrompypi) instead.
@@ -195,7 +216,7 @@ Depending on the Python and CNTK version (CPU or GPU) we supply different wheel 
 
 We have been testing CNTK with Anaconda3 4.1.1 (64-bit) and Python versions 2.7 and 3.5, as well as Anaconda3 4.3.1 with Python version 3.6. If you do not have a Anaconda3 Python installation, install [Anaconda3 4.1.1 Python for Windows (64-bit)](https://repo.continuum.io/archive/Anaconda3-4.1.1-Windows-x86_64.exe).
 
-Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU-enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system.
+Below we assume Anaconda is installed and that it is listed before any other Python installations in your PATH. If you plan on using a GPU-enabled version of CNTK, you will need a CUDA 9 compliant graphics card and up-to-date graphics drivers installed on your system. Make sure you are installing CUDA 9.0 and not CUDA 9.1.
 
 ##### pip install without an environment
 
