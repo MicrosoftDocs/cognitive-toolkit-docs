@@ -5,7 +5,6 @@ ms.author:   thiagofc
 ms.date:   02/20/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
-ms.service:  Cognitive-services
 ms.devlang:   python
 ---
 
