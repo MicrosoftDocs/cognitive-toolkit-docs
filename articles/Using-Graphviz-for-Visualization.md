@@ -5,7 +5,6 @@ ms.author:   minxia
 ms.date:   12/15/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   python
 ---
 
