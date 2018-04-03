@@ -5,7 +5,6 @@ ms.author:   pkranen
 ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 

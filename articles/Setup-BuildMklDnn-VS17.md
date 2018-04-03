@@ -5,7 +5,6 @@ ms.author:   kedeng
 ms.date:   01/22/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 

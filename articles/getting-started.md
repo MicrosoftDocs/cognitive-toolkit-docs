@@ -5,8 +5,6 @@ ms.author:   cbasoglu
 ms.date:   03/27/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   getting started
-
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 # Getting Started With the Microsoft Cognitive Toolkit

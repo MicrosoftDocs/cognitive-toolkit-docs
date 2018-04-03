@@ -5,8 +5,7 @@ ms.author:   wolfma
 ms.date:   06/12/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   setup from source
-ms.service:  Cognitive-services
-ms.devlang: 
+ms.devlang: n/a
 ---
 
 # CNTK Source Code and Development

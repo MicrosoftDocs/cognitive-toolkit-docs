@@ -5,7 +5,6 @@ ms.author:   wolfma
 ms.date:   03/07/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
