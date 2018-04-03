@@ -5,7 +5,6 @@ ms.author:   yuqtang
 ms.date:   02/03/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.prod:  cntk
 ms.devlang:   NA
 ---
 
