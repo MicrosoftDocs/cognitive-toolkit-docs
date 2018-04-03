@@ -4,8 +4,6 @@ author:    liqfu
 ms.author:   liqfu
 ms.date:  08/30/2017
 ms.custom:   cognitive-toolkit
-ms.topic:   
-ms.service:  
 ms.devlang:   csharp
 ---
 

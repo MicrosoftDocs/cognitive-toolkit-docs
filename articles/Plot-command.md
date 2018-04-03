@@ -5,7 +5,6 @@ ms.author:   cbasoglu
 ms.date:   01/20/2016
 ms.custom:   cognitive-toolkit
 ms.topic:   reference
-ms.service:  Cognitive-services
 ms.devlang:   brainscript
 ---
 

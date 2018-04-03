@@ -5,7 +5,6 @@ ms.author:   liqun
 ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   csharp
 ---
 

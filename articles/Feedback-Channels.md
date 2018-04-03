@@ -5,7 +5,6 @@ ms.author:   cbasoglu
 ms.date:   07/12/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 

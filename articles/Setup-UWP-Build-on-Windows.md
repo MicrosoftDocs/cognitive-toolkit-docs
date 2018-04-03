@@ -5,7 +5,6 @@ ms.author:   wolfma
 ms.date:   07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 # CNTK Development Environment for Universal Windows Platform (UWP)

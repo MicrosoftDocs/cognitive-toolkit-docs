@@ -1,13 +1,11 @@
-﻿---
+---
 title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   09/15/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   brainscript, python
-ms.description: Explains how to use TensorBoard with the Cognitive Toolkit for Visualization of Neural Network state
 ---
 
 # Using TensorBoard for Visualization
