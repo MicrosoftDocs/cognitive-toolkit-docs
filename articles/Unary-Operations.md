@@ -4,7 +4,6 @@ Author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/15/2016
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
