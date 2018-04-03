@@ -3,7 +3,6 @@ title:   Loading Data
 ms.author:   minxia
 ms.date:  11/30/2017
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   python, brainscript
 ---
 
