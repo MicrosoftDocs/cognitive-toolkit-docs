@@ -2,20 +2,20 @@
 title:   Setup Linux Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/07/2018
+ms.date:   04/03/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.service:  Cognitive-services
-ms.devlang:   NA
+ms.devlang:   python
 ---
 
 # Setup Linux Python
 
-## Environment Variables and required packages
+## Environment Variables and Required Packages
 
-Installing CNTK for Python on your system requires the installation of some third party packages and the definition of environment variables.
+Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
 
-### GPU Specific Packages
+### OPTIONAL: GPU-Specific Packages
 If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
 
 After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
@@ -30,7 +30,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
 
-### OPTIONAL. OpenCV
+### OPTIONAL: OpenCV
 
 CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Linux.md) to install it.
 
@@ -55,9 +55,9 @@ sudo apt-get install openmpi-bin
 
 Make sure that its libraries can be found, e.g., by setting up `LD_LIBRARY_PATH`.
 
-## Installing CNTK for Python on Linux (Ubuntu 14.04 or Ubuntu 16.04)
+## Installing CNTK for Python on Linux
 
-This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux (Ubuntu 14.04 or Ubuntu 16.04). Note that Ubuntu 14.04 is supported for CNTK 2.3.1 and lower. All releases 2.4+ officially only support Ubuntu 16.04.
+This page will walk you through the process of installing the Microsoft Cognitive Toolkit (CNTK) to use from Python in Linux. Note that Ubuntu 14.04 is supported for CNTK 2.3.1 and lower. All releases 2.4+ officially only support Ubuntu 16.04.
 
 If you are looking for any other kind of support to setup a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
@@ -79,10 +79,27 @@ To install the GPU version of CNTK:
 C:\> pip install cntk-gpu
 ```
 
+Please review the [Environment Variables and Required Packages](#environmentvariablesandrequiredpackages) section to make sure you have the additional third-party packages you need. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the section.
+
+#### Upgrade an existing CNTK installation
+If you already have a previous version (2.5+) of CNTK installed, you can install a new version of CNTK over your existing installation.  
+
+To upgrade the CPU-only version of CNTK:
+```
+C:\> pip install --upgrade --no-deps cntk
+```
+
+To upgrade the GPU version of CNTK:
+```
+C:\> pip install --upgrade --no-deps cntk-gpu
+```
+
+**Note:** we advise that you do not have both `cntk` and `cntk-gpu` packages installed simultaneously.
+
 ### 2. Install from Wheel Files
 
 Depending on the Python and CNTK version (CPU or GPU) we supply different wheel (.whl) files to install CNTK.
-Please select the correct installation from the list below, and substitute the name and/or link during the installation:
+Please select the correct installation from the list below, and substitute the name and/or link during the installation. For CNTK 2.5+, we recommend you simply install through [PyPI](#installfrompypi) instead.
 
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)
@@ -239,7 +256,7 @@ A quick test that the installation succeeded can be done by querying the CNTK ve
 $ python -c "import cntk; print(cntk.__version__)"
 ```
 
-You now have successfully installed CNTK, you can start developing / training / evaluating with CNTK in Python!
+You now have successfully installed CNTK, and you can start developing / training / evaluating with CNTK in Python!
 
 Continue with [installing samples and tutorials](#installing-samples-and-tutorials)
 
