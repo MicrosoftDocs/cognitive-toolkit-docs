@@ -5,7 +5,6 @@ ms.author:   nikosk
 ms.date:   07/10/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   NA
 ---
 
