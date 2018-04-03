@@ -4,7 +4,6 @@ author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  07/31/2017
 ms.topic:   conceptual
-ms.service:  Cognitive-services
 ms.devlang:   python
 ---
 
