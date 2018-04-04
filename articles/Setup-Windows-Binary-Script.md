@@ -29,7 +29,7 @@ Unpack the zip file into an empty local folder of your choice. We recommend you 
 Start a standard windows command prompt, and run the installation script:
 ```
 cd c:\local\CNTK-2-5
-cd cntk\Scripts\install\windows
+cd Scripts\install\windows
 install.bat
 ```
 
