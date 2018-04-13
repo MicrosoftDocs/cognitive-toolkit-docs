@@ -16,19 +16,19 @@ This page will walk you through the process of installing the Microsoft Cognitiv
 
 If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-> These instructions apply to release 2.5.
+> These instructions apply to release 2.5.1.
 
 **Step 1: Download and prepare the Microsoft Cognitive Toolkit**
 
 Download the appropriate binary package from [CNTK Releases page](https://github.com/Microsoft/CNTK/releases). The installation described on this page only works with the binary package. The source code package, which is also available from the CNTK Release page, is NOT required.
 
-Unpack the zip file into an empty local folder of your choice. We recommend you name the folder according to the CNTK version, so you don't mix files of a previously downloaded CNTK version with the newly downloaded files. In the following we will assume you unzipped the files into the directory `c:\local\CNTK-2-5`. If you used another directory, adjust the following instructions accordingly.
+Unpack the zip file into an empty local folder of your choice. We recommend you name the folder according to the CNTK version, so you don't mix files of a previously downloaded CNTK version with the newly downloaded files. In the following we will assume you unzipped the files into the directory `c:\local\CNTK-2-5-1`. If you used another directory, adjust the following instructions accordingly.
 
 **Step 2: Run the installation script**
 
 Start a standard windows command prompt, and run the installation script:
 ```
-cd c:\local\CNTK-2-5
+cd c:\local\CNTK-2-5-1
 cd cntk\Scripts\install\windows
 install.bat
 ```
@@ -58,7 +58,7 @@ To verify the correct installation of CNTK from Python:
 You need to **activate** the CNTK environment by opening a standard Windows command prompt and running the batch file created by the installation script (see Step 2). This script will add Python and the CNTK installation to your current PATH environment only for the current Windows command prompt.
 
 ```
-cd c:\local\CNTK-2-5
+cd c:\local\CNTK-2-5-1
 cd scripts
 cntkpy35.bat
 ```
