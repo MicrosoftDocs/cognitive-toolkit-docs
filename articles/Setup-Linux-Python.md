@@ -103,6 +103,17 @@ Please select the correct installation from the list below, and substitute the n
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)
 
+# [CNTK 2.5.1](#tab/cntkpy251)
+
+|Python | Flavor | URL
+|:------|:-------|:--------|
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5.1-cp27-cp27mu-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5.1-cp27-cp27mu-linux_x86_64.whl` |
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5.1-cp35-cp35m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5.1-cp35-cp35m-linux_x86_64.whl` |
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5.1-cp36-cp36m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.5.1-cp36-cp36m-linux_x86_64.whl` |
+
 # [CNTK 2.5](#tab/cntkpy25)
 
 |Python | Flavor | URL
@@ -235,7 +246,7 @@ $ pip install <url>
 ```
 where `<url>` is the corresponding wheel file URL in the table on the top of this page. E.g., if you have Python 3.5 run
 ```
-$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-linux_x86_64.whl
+$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5.1-cp35-cp35m-linux_x86_64.whl
 ```
 
 Continue with a [quick installation test](#quick-installation-test)
@@ -267,7 +278,7 @@ Open a command shell, create the environment, make it active, and pip-install CN
 ```
 $ conda create --name cntk-py35 python=3.5 numpy scipy h5py jupyter
 $ activate cntk-py35
-$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5-cp35-cp35m-linux_x86_64.whl
+$ pip install https://cntk.ai/PythonWheel/CPU-Only/cntk-2.5.1-cp35-cp35m-linux_x86_64.whl
 ```
 A quick test that the installation succeeded can be done by querying the CNTK version:
 ```

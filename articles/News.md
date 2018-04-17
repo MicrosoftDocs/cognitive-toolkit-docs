@@ -10,6 +10,12 @@ ms.devlang:   NA
 
 # News
 
+## April 2018
+***2018-04-16.* CNTK 2.5.1**
+
+Highlights:
+* Repack of CNTK 2.5 with third party libraries included in the bundle.
+
 ## March 2018
 ***2018-03-15.* CNTK 2.5**
 
