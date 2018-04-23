@@ -263,7 +263,7 @@ Just make sure you select Python 2.7 compatible wheel files from the URL table a
 ### 3. Install from Nightly Builds
 If you prefer to install or upgrade CNTK from the latest nightly build rather than an official release, we offer CNTK nightly packages. You can access the CNTK packages from the latest nightly builds [here](https://cntk.ai/nightly-windows.html).  
 
-If you are using a nightly build, you will need to separately install some third-party packages and them to your PATH environment variable. Follow the below section for instructions. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the following section.
+If you are using a nightly build, you will need to separately install some third-party packages and add them to your PATH environment variable. Follow the below section for instructions. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the following section.
 
 #### Environment Variables and Required Packages
 
