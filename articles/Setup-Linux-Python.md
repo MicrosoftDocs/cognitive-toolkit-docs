@@ -2,7 +2,7 @@
 title:   Setup Linux Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   04/03/2018
+ms.date:   04/23/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.devlang:   python
@@ -10,39 +10,7 @@ ms.devlang:   python
 
 # Setup Linux Python
 
-## Environment Variables and Required Packages
-
-Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
-
-### OPTIONAL: GPU-Specific Packages
-If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
-
-After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
-
-### MKL
-
-The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Linux.md) to install it
-
-* Export its path to environment variable `LD_LIBRARY_PATH`, e.g.:
-
-```
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-```
-
-### OPTIONAL: OpenCV
-
-CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Linux.md) to install it.
-
-You will need to install OpenCV for CNTK 2.3+ if you want to use the following components:
-
-* CNTK Image Reader
-* CNTK Image Writer - required to use TensorBoard's Image feature.
-
-Export the environment variable `LD_LIBRARY_PATH` pointing to the OpenCV build folder, e.g.
-
-```
-export LD_LIBRARY_PATH=/usr/local/opencv-3.1.0/lib:$LD_LIBRARY_PATH
-```
+## Required Packages
 
 ### OpenMPI
 
@@ -77,8 +45,6 @@ To install the GPU version of CNTK:
 ```
 C:\> pip install cntk-gpu
 ```
-
-Please review the [Environment Variables and Required Packages](#environmentvariablesandrequiredpackages) section to make sure you have the additional third-party packages you need. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the section.
 
 #### Upgrade an existing CNTK installation
 If you already have a previous version (2.5+) of CNTK installed, you can install a new version of CNTK over your existing installation.  
@@ -306,7 +272,41 @@ The installation steps for CNTK on Anaconda2 are identical to
 Just make sure you select Python 2.7 compatible wheel files from the URL table at the top of this page.
 
 ### 3. Install from Nightly Builds
-If you prefer to install or upgrade CNTK from the latest nightly build rather than an official release, we offer CNTK nightly packages. You can access the CNTK packages from the latest nightly builds [here](https://cntk.ai/nightly-linux.html).
+If you prefer to install or upgrade CNTK from the latest nightly build rather than an official release, we offer CNTK nightly packages. You can access the CNTK packages from the latest nightly builds [here](https://cntk.ai/nightly-linux.html).  
+
+If you are using a nightly build, you will need to separately install some third-party packages and them to your PATH environment variable (in addition to the OpenMPI requirement listed in [here](#required-packages)). Follow the below section for instructions. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the following section.
+
+#### Environment Variables and Required Packages
+
+##### OPTIONAL: GPU-Specific Packages
+If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+
+After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
+
+##### MKL
+
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Linux.md) to install it
+
+* Export its path to environment variable `LD_LIBRARY_PATH`, e.g.:
+
+```
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+```
+
+##### OPTIONAL: OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Linux.md) to install it.
+
+You will need to install OpenCV for CNTK 2.3+ if you want to use the following components:
+
+* CNTK Image Reader
+* CNTK Image Writer - required to use TensorBoard's Image feature.
+
+Export the environment variable `LD_LIBRARY_PATH` pointing to the OpenCV build folder, e.g.
+
+```
+export LD_LIBRARY_PATH=/usr/local/opencv-3.1.0/lib:$LD_LIBRARY_PATH
+```
 
 ## Installing Samples and Tutorials
 
