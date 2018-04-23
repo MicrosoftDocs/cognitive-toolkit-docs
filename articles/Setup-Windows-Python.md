@@ -267,8 +267,6 @@ If you are using a nightly build, you will need to separately install some third
 
 #### Environment Variables and Required Packages
 
-Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
-
 ##### OPTIONAL: GPU-Specific Packages
 If you intend to use CNTK with GPU, follow [this page](./Setup-GPU-Specific-Packages.md) to install and configure the environment accordingly.
 
