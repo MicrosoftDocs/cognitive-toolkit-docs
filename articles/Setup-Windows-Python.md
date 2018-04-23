@@ -2,53 +2,13 @@
 title:   Setup Windows Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
-ms.date:   03/27/2018
+ms.date:   04/23/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.devlang:   python
 ---
 
 # Setup Windows Python
-
-## Environment Variables and Required Packages
-
-Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
-
-### OPTIONAL: GPU-Specific Packages
-If you intend to use CNTK with GPU, follow [this page](./Setup-GPU-Specific-Packages.md) to install and configure the environment accordingly.
-
-After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
-
-```
-setx PATH "C:\Program Files\NVIDIA Corporation\NVSMI;%PATH%"
-setx PATH "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%"
-setx PATH "C:\local\cudnn-9.0-v7.0\cuda\bin;%PATH%"
-```
-
-### MKL
-
-The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Windows.md) to install it in your system.
-
-* Prepend its path to environment variable `PATH`, e.g.:
-
-```
-    setx PATH "c:\local\mklml-2018.0.1\lib;%PATH%"
-```
-
-### OPTIONAL: OpenCV
-
-CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed, but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Windows.md) to install it.
-
-You will need to install OpenCV for CNTK 2.3+ if you want to use the following components:
-
-* CNTK Image Reader
-* CNTK Image Writer - required to use TensorBoard's Image feature.
-
-Prepend the environment variable `PATH` pointing to the OpenCV build folder, e.g.
-
-```
-setx PATH "C:\local\opencv3.10\build\x64\vc14\bin;%PATH%"
-```
 
 ## Installing CNTK for Python on Windows
 
@@ -75,9 +35,6 @@ To install the GPU version of CNTK:
 ```
 C:\> pip install cntk-gpu
 ```
-
-Please review the [Environment Variables and Required Packages](#environmentvariablesandrequiredpackages) section to make sure you have the additional third-party packages you need. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the section.
-
 #### Upgrade an existing CNTK installation
 If you already have a previous version (2.5+) of CNTK installed, you can install a new version of CNTK over your existing installation.  
 
@@ -304,7 +261,50 @@ The installation steps for CNTK on Anaconda2 are identical to
 Just make sure you select Python 2.7 compatible wheel files from the URL table at the top of this page.
 
 ### 3. Install from Nightly Builds
-If you prefer to install or upgrade CNTK from the latest nightly build rather than an official release, we offer CNTK nightly packages. You can access the CNTK packages from the latest nightly builds [here](https://cntk.ai/nightly-windows.html).
+If you prefer to install or upgrade CNTK from the latest nightly build rather than an official release, we offer CNTK nightly packages. You can access the CNTK packages from the latest nightly builds [here](https://cntk.ai/nightly-windows.html).  
+
+If you are using a nightly build, you will need to separately install some third-party packages and them to your PATH environment variable. Follow the below section for instructions. E.g. if you are installing the GPU version of CNTK, you will also need to install the GPU-specific packages listed in the following section.
+
+#### Environment Variables and Required Packages
+
+Installing CNTK for Python on your system requires the installation of some third-party packages and the definition of the PATH  environment variable.
+
+##### OPTIONAL: GPU-Specific Packages
+If you intend to use CNTK with GPU, follow [this page](./Setup-GPU-Specific-Packages.md) to install and configure the environment accordingly.
+
+After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
+
+```
+setx PATH "C:\Program Files\NVIDIA Corporation\NVSMI;%PATH%"
+setx PATH "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin;%PATH%"
+setx PATH "C:\local\cudnn-9.0-v7.0\cuda\bin;%PATH%"
+```
+
+##### MKL
+
+The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](https://software.intel.com/en-us/intel-mkl/). Follow [this page](./Setup-MKL-on-Windows.md) to install it in your system.
+
+* Prepend its path to environment variable `PATH`, e.g.:
+
+```
+    setx PATH "c:\local\mklml-2018.0.1\lib;%PATH%"
+```
+
+##### OPTIONAL: OpenCV
+
+CNTK 2.2 requires [Open Source Computer Vision (OpenCV)](http://opencv.org/) to be installed, but it is optional for CNTK 2.3+. Follow [this page](./Setup-OpenCV-on-Windows.md) to install it.
+
+You will need to install OpenCV for CNTK 2.3+ if you want to use the following components:
+
+* CNTK Image Reader
+* CNTK Image Writer - required to use TensorBoard's Image feature.
+
+Prepend the environment variable `PATH` pointing to the OpenCV build folder, e.g.
+
+```
+setx PATH "C:\local\opencv3.10\build\x64\vc14\bin;%PATH%"
+```
+
 
 ## Installing Samples and Tutorials
 
