@@ -171,19 +171,19 @@ After storing your images in the described folder structure and annotating them 
 after changing the folder in that script to your data folder. Finally, create a `MyDataSet_config.py` in the `utils\configs` folder following the existing examples:
 
 ```
-__C.CNTK.DATASET == "YourDataSet":
-__C.CNTK.MAP_FILE_PATH = "../../DataSets/YourDataSet"
-__C.CNTK.CLASS_MAP_FILE = "class_map.txt"
-__C.CNTK.TRAIN_MAP_FILE = "train_img_file.txt"
-__C.CNTK.TEST_MAP_FILE = "test_img_file.txt"
-__C.CNTK.TRAIN_ROI_FILE = "train_roi_file.txt"
-__C.CNTK.TEST_ROI_FILE = "test_roi_file.txt"
-__C.CNTK.NUM_TRAIN_IMAGES = 500
-__C.CNTK.NUM_TEST_IMAGES = 200
-__C.CNTK.PROPOSAL_LAYER_SCALES = [8, 16, 32]
+__C.DATA.DATASET == "YourDataSet":
+__C.DATA.MAP_FILE_PATH = "../../DataSets/YourDataSet"
+__C.DATA.CLASS_MAP_FILE = "class_map.txt"
+__C.DATA.TRAIN_MAP_FILE = "train_img_file.txt"
+__C.DATA.TEST_MAP_FILE = "test_img_file.txt"
+__C.DATA.TRAIN_ROI_FILE = "train_roi_file.txt"
+__C.DATA.TEST_ROI_FILE = "test_roi_file.txt"
+__C.DATA.NUM_TRAIN_IMAGES = 500
+__C.DATA.NUM_TEST_IMAGES = 200
+__C.DATA.PROPOSAL_LAYER_SCALES = [8, 16, 32]
 ```
 
-Note that `__C.CNTK.PROPOSAL_LAYER_SCALES` is not used for Fast R-CNN, only for Faster R-CNN.
+Note that `__C.DATA.PROPOSAL_LAYER_SCALES` is not used for Fast R-CNN, only for Faster R-CNN.
 
 To train and evaluate Fast R-CNN on your data change the `dataset_cfg` in the `get_configuration()` method of `run_fast_rcnn.py` to
 
