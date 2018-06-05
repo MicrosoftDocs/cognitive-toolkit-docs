@@ -19,9 +19,9 @@ Installing the MKLML library:
 * Create a directory on your machine to hold MKLML, e.g.:
 
 ```
-    mkdir c:\local\mklml-2018.0.1
+    mkdir c:\local\mklml_win_2018.0.3.20180406
 ```
 
-* Download the file [mklml_win_2018.0.1.20171227.zip](https://github.com/01org/mkl-dnn/releases/download/v0.12/mklml_win_2018.0.1.20171227.zip). Unzip it into the local folder without the versioned sub directory.
+* Download the file [mklml_win_2018.0.3.20180406.zip](https://github.com/intel/mkl-dnn/releases/download/v0.14/mklml_win_2018.0.3.20180406.zip). Unzip it into the local folder without the versioned sub directory.
 
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir c:\local\mklml-2018.0.1\lib\mklml.dll` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir c:\local\mklml_win_2018.0.3.20180406\lib\mklml.dll` will succeed.

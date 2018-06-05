@@ -285,7 +285,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 * Prepend its path to environment variable `PATH`, e.g.:
 
 ```
-    setx PATH "c:\local\mklml-2018.0.1\lib;%PATH%"
+    setx PATH "c:\local\mklml-2018.0.3\lib;%PATH%"
 ```
 
 ##### OPTIONAL: OpenCV

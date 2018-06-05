@@ -18,11 +18,11 @@ This page lists the environment variables which are used by the CNTK build proce
 |BOOST_INCLUDE_PATH | c:\local\boost_1_60_0-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |BOOST_LIB_PATH | c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0 | [BOOST](./Setup-CNTK-on-Windows.md#boost) (required)
 |CNTK_OPENBLAS_PATH | c:\local\CNTKopenBLAS | [OpenBLAS library for CNTK UWP build](./Setup-UWP-Build-on-Windows.md) (optional)
-|CUB_PATH | c:\local\cub-1.7.4 | [NVIDIA CUB Library](./Setup-CNTK-on-Windows.md#cub) (required for GPU build)
-|CUDNN_PATH | C:\local\cudnn-9.0-v7.0\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#cudnn) (required for GPU build)
-|CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-90) (required for GPU build)
-|CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#nvidia-cuda-90) (required for GPU build)
-|MKL_PATH | C:\local\mklml-mkldnn-0.12 |[MKL_PATH]( ./Setup-CNTK-on-Windows.md#mkl) (required)
+|CUB_PATH | c:\local\cub-1.7.4 | [NVIDIA CUB Library](./Setup-CNTK-on-Windows.md#gpu-specific-packages) (required for GPU build)
+|CUDNN_PATH | C:\local\cudnn-9.0-v7.0\cuda | [NVIDIA cuDNN](./Setup-CNTK-on-Windows.md#gpu-specific-packages) (required for GPU build)
+|CUDA_PATH | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#gpu-specific-packages) (required for GPU build)
+|CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#gpu-specific-packages) (required for GPU build)
+|MKL_PATH | C:\local\mklml-mkldnn-0.14 |[MKL_PATH]( ./Setup-CNTK-on-Windows.md#mkl) (required)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build and TensorBoard's Image feature)
 |PROTOBUF_PATH | c:\local\protobuf-3.1.0-vs17 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
 |SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#optional-swig) (required for CNTK Python, Java, and C#/.NET support)
@@ -35,7 +35,7 @@ setx  BOOST_INCLUDE_PATH c:\local\boost_1_60_0-msvc-14.0
 setx  BOOST_LIB_PATH c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0
 setx  CUB_PATH c:\local\cub-1.7.4
 setx  CUDNN_PATH C:\local\cudnn-9.0-v7.0\cuda
-setx  MKL_PATH C:\local\mklml-mkldnn-0.12
+setx  MKL_PATH C:\local\mklml-mkldnn-0.14
 setx  OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
 setx  PROTOBUF_PATH c:\local\protobuf-3.1.0-vs17
 setx  SWIG_PATH c:\local\swigwin-3.0.10
