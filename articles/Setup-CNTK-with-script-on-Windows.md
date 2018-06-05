@@ -98,6 +98,7 @@ Open a standard windows command shell, and execute these command
 c: && md \repos && cd \repos
 git clone https://github.com/Microsoft/cntk
 cd cntk
+git submodule update --init external/gsl
 git submodule update --init -- Source/Multiverso
 ```
 

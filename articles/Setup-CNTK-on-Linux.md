@@ -315,6 +315,7 @@ Use [Git](#git) to clone the CNTK Repository and access the source code:
 ```
 git clone https://github.com/Microsoft/cntk
 cd cntk
+git submodule update --init external/gsl
 git submodule update --init -- Source/Multiverso
 ```
 
