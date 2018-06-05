@@ -10,15 +10,15 @@ ms.devlang:   NA
 
 # Setup BuildMklDnn VS 2017
 
-## Creating a compiled MKL-DNN 0.12 for CNTK
+## Creating a compiled MKL-DNN 0.14 for CNTK
 
-If you want to build the MKL-DNN 0.12 for CNTK yourself, follow these instructions. The compiled MKL-DNN version will be located in `c:\local\mklml-mkldnn-0.12`
+If you want to build the MKL-DNN 0.14 for CNTK yourself, follow these instructions. The compiled MKL-DNN version will be located in `c:\local\mklml-mkldnn-0.14`
 
 * Install CMake from [cmake.org](https://cmake.org/download/).
-* Download and unpack the MKLML binary from https://github.com/01org/mkl-dnn/releases/download/v0.12/mklml_win_2018.0.1.20171227.zip to `c:\local\mklml-mkldnn-0.12`
-* Download and unpack the MKL-DNN sources from https://github.com/01org/mkl-dnn/archive/v0.12.zip.
+* Download and unpack the MKLML binary from https://github.com/intel/mkl-dnn/releases/download/v0.14/mklml_win_2018.0.3.20180406.zip to `c:\local\mklml-mkldnn-0.14`
+* Download and unpack the MKL-DNN sources from https://github.com/01org/mkl-dnn/archive/v0.14.zip.
 
-The following steps assume that the MKL-DNN sources have been unzipped to the directory `c:\local\src\mkl-dnn-0.12`. The instructions below will create the MKL-DNN libraries and header files in the directory `c:\local\mklml-mkldnn-0.12`. If this location differs in your case, please adapt the steps below to match your directory structure.
+The following steps assume that the MKL-DNN sources have been unzipped to the directory `c:\local\src\mkl-dnn-0.14`. The instructions below will create the MKL-DNN libraries and header files in the directory `c:\local\mklml-mkldnn-0.14`. If this location differs in your case, please adapt the steps below to match your directory structure.
 
 Note that MKL-DNN headers and libraries are stored in the same location as MKLML to simpilify setup, since their file names are different. mkl_dnn* files are for dnn functions in MKL which is not open source, while mkldnn* files are built from open source MKL-DNN.
 
@@ -30,11 +30,11 @@ In the directory `Tools\devInstall\Windows` you find the batch file `buildMklDnn
 ```
 c:
 cd \repos\cntk\Tools\devInstall\Windows
-buildMklDnnVS17 C:\local\src\mkl-dnn-0.12 C:\local\mklml-mkldnn-0.12
+buildMklDnnVS17 C:\local\src\mkl-dnn-0.14 C:\local\mklml-mkldnn-0.14
 ```
 Set the environment variable `MKL_PATH` to the MKL-DNN location (this is the second parameter in the command invocation above, not the sources location!
 ```
-setx MKL_PATH c:\local\mklml-mkldnn-0.12
+setx MKL_PATH c:\local\mklml-mkldnn-0.14
 ```
 
 ### Manual build steps for a CNTK MKL-DNN library
@@ -58,15 +58,15 @@ setx MKL_PATH c:\local\mklml-mkldnn-0.12
 If you can't find this batch file on your system, please revisit the installation of VS2017 and make sure you have the 'VC++ version 15.4 v14.11 toolset' option selected.
 2. Create a build directory, and set MKLROOT for MKL-DNN cmake to locate MKLML library:
 ```
-cd c:\local\src\mkl-dnn-0.12
-set MKLROOT=c:\local\mklml-mkldnn-0.12
+cd c:\local\src\mkl-dnn-0.14
+set MKLROOT=c:\local\mklml-mkldnn-0.14
 ```
 3. Create a release build using CMake, and copy built binary to MKL_PATH (user may replace release with debug to create a debug build):
 ```
 cd cmake
 cmake .. -G "Visual Studio 15" -DCMAKE_BUILD_TYPE=Release
 msbuild "Intel(R) MKL-DNN.sln" /t:Rebuild /p:Configuration=Release /m
-copy ..\include\* c:\local\mklml-mkldnn-0.12\include
-copy src\Release\*.lib c:\local\mklml-mkldnn-0.12\lib
-copy src\Release\*.dll c:\local\mklml-mkldnn-0.12\lib
+copy ..\include\* c:\local\mklml-mkldnn-0.14\include
+copy src\Release\*.lib c:\local\mklml-mkldnn-0.14\lib
+copy src\Release\*.dll c:\local\mklml-mkldnn-0.14\lib
 ```

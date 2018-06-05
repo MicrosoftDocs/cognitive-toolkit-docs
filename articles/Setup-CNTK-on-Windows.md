@@ -98,7 +98,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 * Set the environment variable `MKL_PATH` to the directory, e.g.:
 
 ```
-    setx MKL_PATH c:\local\mklml-mkldnn-0.12
+    setx MKL_PATH c:\local\mklml-mkldnn-0.14
 ```
 
 ## MS-MPI
