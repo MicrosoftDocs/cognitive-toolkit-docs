@@ -383,7 +383,7 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 ### Debugging CNTK source code in Visual Studio
 
-* If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://dacrook.com/cntk-vs-code-awesome/).
+* If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://davidcrook.io/cntk-vs-code-awesome/).
 * If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)
 * To debug BrainScript in CNTK with Visual Studio, follow the steps [here](./Debugging-CNTK-source-code-in-Visual-Studio.md).
 
