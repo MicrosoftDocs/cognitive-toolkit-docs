@@ -300,7 +300,7 @@ This concludes the installation portion. Let's continue with building CNTK
 Currently there's a compatibility issue between CUDA 9 and default VCTools in Visual Studio 2017. CNTK requires VCTools 14.11 to build with CUDA 9. To do that:
 
 * Open Command Prompt
-* call "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 -vcvars_ver=14.11
+* call "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
 
 This will set VCTools to the CUDA 9 compatible version. From the Command Prompt, start CNTK.sln in the root of the cloned CNTK project from GitHub. If CNTK.sln runs with the default CUDA9-incompatible version of VCTools, there will be build errors like "1>c:\program files\nvidia gpu computing toolkit\cuda\v9.0\include\crt/host_config.h(133): fatal error C1189: #error:  -- unsupported Microsoft Visual Studio version! Only the versions 2012, 2013, 2015 and 2017 are supported!"
 
