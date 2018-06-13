@@ -129,6 +129,7 @@ input_map = {
 
 ### General Reader Configuration
 
+
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|
 | `verbosity`                           | Verbosity level (`0`, `1`, `2`), controls the diagnostic output of different components (Randomizer, Deserializer, Bundler, etc.) *Optional*, defaults to  `0`. |

@@ -127,7 +127,7 @@ can be used to start a parallel MPI job:
     name_of_node1 slots=4 # we want 4 workers on node1
     name_of_node2 slots=2 # we want 2 workers on node2
     ```
-Where name_of_node(n) is simply a DNS name or IP address of the worker node.
+  Where name_of_node(n) is simply a DNS name or IP address of the worker node.
 
     Step 2: Execute your workload
     ```
@@ -171,7 +171,7 @@ parallel MPI job:
     name_of_node1 slots=4 # we want 4 workers on node1
     name_of_node2 slots=2 # we want 2 workers on node2
     ```
-Where name_of_node(n) is simply a DNS name or IP address of the worker node.
+  Where name_of_node(n) is simply a DNS name or IP address of the worker node.
 
     Step 2: Execute your workload
     ```
@@ -460,12 +460,12 @@ Furthermore, as parameter servers is a distributed framework that store model pa
 ### 8.1 Using Data-Parallel ASGD
 
 - To use parameter servers for the Asynchronous SGD (abbr. as ASGD), you should build CNTK with [Multiverso](http://github.com/microsoft/multiverso) supported, Multiverso is a general parameter server framework for distributed machine learning task developed by Microsoft Research Asia team.
-* `Clone Code`: please clone the code under the root folder of CNTK by using:
-```
+- `Clone Code`: please clone the code under the root folder of CNTK by using:
+  ```
    git submodule update --init Source/Multiverso
-```
-* `Linux`: please build with `--asgd=yes` in the configure process.
-* `Windows`: please add `CNTK_ENABLE_ASGD` to your system environment and set the value to `true`
+  ```
+- `Linux`: please build with `--asgd=yes` in the configure process.
+- `Windows`: please add `CNTK_ENABLE_ASGD` to your system environment and set the value to `true`
 
 - **warm start**. In some cases, it is better to have the asynchronous model training started from a seed model (which is trained by standard SGD algorithm). In some sense, Asynchronous SGD brings more noise for the training due to the delayed updates from asynchronism among workers. Some models are very sensitive to such noise at the beginning, which might result in diverge of model training. Under such circumstance, a **warm start** is needed.
 

@@ -24,17 +24,17 @@ You can find the link to the presentation [here](https://cntk.ai/Tutorials/WWW20
 Motivation (15 min)
 
 > •	Introduction to Cognitive Toolkit (Architecture, flexibility & extensibility)
-
+> 
 > •	Why Cognitive Toolkit 
-
+> 
 > •	Scalability, treat Windows and Linux as first class citizens, C++ and Python API, RNN advantages due to dynamic axis.
 
 Basics (45 min + 45 min)
 
 > •	Tensor Operations, Data readers, built-in data augmentation, Optimizations 
-
+> 
 > •	RNN/LSTM modules – Embeddings, sequence tagging / classification
-
+> 
 > •	[Sequence classification](https://github.com/Microsoft/CNTK/blob/v2.0.beta15.0/Tutorials/CNTK_202_Language_Understanding.ipynb) (45 min) – Hands-on Lab
 
 Break (15 min)
@@ -42,7 +42,7 @@ Break (15 min)
 Advanced 
 
 > *	[Sequence to Sequence with Attention](https://github.com/Microsoft/CNTK/blob/v2.0.beta15.0/Tutorials/CNTK_204_Sequence_To_Sequence.ipynb) (45 min) – Hands-on Lab
-
+> 
 > *	[ReasoNet](https://github.com/Microsoft/CNTK/blob/penhe/reasonet_tutorial/Tutorials/CNTK_302_ReasoNet.ipynb) (45 min) – code walk through. Note: This code is in the process of being migrated to master.
 
 Scale-out (15min)

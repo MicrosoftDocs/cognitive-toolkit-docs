@@ -91,69 +91,69 @@ This release contains the following **breaking changes in CNTK C# API**:
 #### C# API changes due to type change from `uint` to `int`
 
 * Class `NDShape` 
-```
-public NDShape(int numAxes, int dimension)
-public NDShape(int numAxes)
-public int Rank { get; }  
-public IList<int> Dimensions { get; }
-public int TotalSize { get; }
-public int this[int key] { get; }  
-public NDShape SubShape(int beginAxisId, int endAxisId)    
-public NDShape SubShape(int beginAxisId)    
-public static NDShape CreateNDShape(IEnumerable<int> dimensions)
-```	 
+  ```
+  public NDShape(int numAxes, int dimension)
+  public NDShape(int numAxes)
+  public int Rank { get; }  
+  public IList<int> Dimensions { get; }
+  public int TotalSize { get; }
+  public int this[int key] { get; }  
+  public NDShape SubShape(int beginAxisId, int endAxisId)    
+  public NDShape SubShape(int beginAxisId)    
+  public static NDShape CreateNDShape(IEnumerable<int> dimensions)
+  ```  
 * Class `DeviceDescriptor`
-```
-public int Id { get; }
-public static DeviceDescriptor GPUDevice(int deviceId)  
-```	
+  ```
+  public int Id { get; }
+  public static DeviceDescriptor GPUDevice(int deviceId)  
+  ``` 
 * Class `NDArrayView`
-```
-public NDArrayView(NDShape viewShape, float[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
-public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor device, bool readOnly = false) 
-public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, float[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
-public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
-```
+  ```
+  public NDArrayView(NDShape viewShape, float[] dataBuffer, DeviceDescriptor device, bool readOnly = false)
+  public NDArrayView(NDShape viewShape, double[] dataBuffer, DeviceDescriptor device, bool readOnly = false) 
+  public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, float[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+  public NDArrayView(NDShape viewShape, int[] colStarts, int[] rowIndices, double[] nonZeroValues, DeviceDescriptor device, bool readOnly = false)
+  ```
 * Class `NDMask`
-```
-public int MaskedCount { get; }
-public void InvalidateSection(IEnumerable<int> sectionOffset, NDShape sectionShape)
-public void MarkSequenceBegin(IEnumerable<int> offset)
-public void MarkSequenceBegin(IEnumerable<int> offset, NDShape sectionShape) 
-```	
+  ```
+  public int MaskedCount { get; }
+  public void InvalidateSection(IEnumerable<int> sectionOffset, NDShape sectionShape)
+  public void MarkSequenceBegin(IEnumerable<int> offset)
+  public void MarkSequenceBegin(IEnumerable<int> offset, NDShape sectionShape) 
+  ``` 
 * Class `Value`
-```
-public int MaskedCount { get; }
-public static Value CreateBatch<T>(int dimension, IEnumerable<int> batch, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device,  bool readOnly = false)
-public static Value Create<T>(int dimension, IEnumerable<IEnumerable<int>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
-```
-#### C# API changes due to type change from concrete class type to interface type
+  ```
+  public int MaskedCount { get; }
+  public static Value CreateBatch<T>(int dimension, IEnumerable<int> batch, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateSequence<T>(int dimension, IEnumerable<int> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateBatchOfSequences<T>(int dimension, IEnumerable<IEnumerable<int>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device,  bool readOnly = false)
+  public static Value Create<T>(int dimension, IEnumerable<IEnumerable<int>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+  ```
+  #### C# API changes due to type change from concrete class type to interface type
 
 * Class `Function`
-```
-public IList<Variable> Arguments { get; } 
-public IList<Variable> Outputs { get; }
-```
+  ```
+  public IList<Variable> Arguments { get; } 
+  public IList<Variable> Outputs { get; }
+  ```
 * Class `Variable`
-```
-public IList<Axis> DynamicAxes { get; }
-```	
+  ```
+  public IList<Axis> DynamicAxes { get; }
+  ``` 
 * Class `Value`
-```
-public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
-public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device,  bool readOnly = false)
-public static Value Create<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
-public static Value Create<T>(NDShape sampleShape, IEnumerable<IEnumerable<int>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
-public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, DeviceDescriptor device, bool readOnly = false)
-public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
-```
+  ```
+  public static Value CreateBatch<T>(NDShape sampleShape, IEnumerable<T> batch, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateSequence<T>(NDShape sampleShape, IEnumerable<T> sequence, bool sequenceStartFlag, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, DeviceDescriptor device, bool readOnly = false)
+  public static Value CreateBatchOfSequences<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> batchOfSequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device,  bool readOnly = false)
+  public static Value Create<T>(NDShape sampleShape, IEnumerable<IEnumerable<T>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+  public static Value Create<T>(NDShape sampleShape, IEnumerable<IEnumerable<int>> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+  public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, DeviceDescriptor device, bool readOnly = false)
+  public static Value Create(NDShape sampleShape, IEnumerable<NDArrayView> sequences, IEnumerable<bool> sequenceStartFlags, DeviceDescriptor device, bool readOnly = false)
+  ```
 
 ## CNTK NuGet package
 

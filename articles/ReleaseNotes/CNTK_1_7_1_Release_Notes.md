@@ -25,13 +25,13 @@ The are **two breaking changes** in this release. Please, read this section care
 We have the following improvements in BrainScript.
 
 * BrainScript now allows relational operators inline, and scalar constants get automatically casted to ```Constant()```. Example:
-```
-HammingLoss (y, p) = ReduceSum (y != (p > 0.5))
-```
-compare this to the previous syntax
-```
-HammingLoss (y, p) = ReduceSum (NotEqual (y, (Greater (p, Constant(0.5)))))
-```
+  ```
+  HammingLoss (y, p) = ReduceSum (y != (p > 0.5))
+  ```
+  compare this to the previous syntax
+  ```
+  HammingLoss (y, p) = ReduceSum (NotEqual (y, (Greater (p, Constant(0.5)))))
+  ```
 * ```edit``` action can now use BrainScript.
 
 ## CNTK Model Evaluation library

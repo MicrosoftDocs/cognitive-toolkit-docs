@@ -24,13 +24,13 @@ Defines an input that is fed by a reader.
 
 A variable that receives its value from a `reader` stream of the same name.
 
-###Description
+### Description
 
 `Input{}` declares a variable that represents input read from a reader.
 Inputs must be declared at the outermost level of the `BrainScriptNetworkBuilder` section,
 and the `reader` section must define a stream with the same name.
 
-####Sparse input data
+#### Sparse input data
 
 The `sparse=true` option declares that the input data shall be represented as a sparse vector.
 This is commonly used for reading categorical data (such as words) represented by one-hot vectors.

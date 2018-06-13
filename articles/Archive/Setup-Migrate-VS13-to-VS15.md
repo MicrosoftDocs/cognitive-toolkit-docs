@@ -67,9 +67,9 @@ CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 Install `NVIDIA CUDA Deep Neural Network library` also known as [cuDNN](https://developer.NVIDIA.com/cuDNN) in the version **NVIDIA: cuDNN v5.1 for CUDA 8.0** from this [link](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip). This version is suitable for Windows 8.1, Windows 10, as well as Windows Server 2012 R2 and later.
 
 * Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
-```
+  ```
     setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\cuda
-```
+  ```
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\cuda\include\cudnn.h` will succeed.
 
 ##  MKL
@@ -81,13 +81,13 @@ The version of our custom MKL library for CNTK changed for Visual Studio 2015. W
 Installing the CNTK custom MKL library: 
 
 * Create a directory on your machine to hold CNTK custom MKL versions, e.g.: 
-```
+  ```
     mkdir c:\local\CNTKCustomMKL
-```
+  ```
 * Set the environment variable `CNTK_MKL_PATH` to point to this directory: 
-```
+  ```
     setx CNTK_MKL_PATH c:\local\CNTKCustomMKL
-```
+  ```
 * Download the file [CNTKCustomMKL-Windows-3.zip](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/). Unzip it into your CNTK MKL path, creating a numbered sub directory within. For example, if you are on latest master, download and extract its contents to `c:\local\CNTKCustomMKL\3` (the top-level folder inside the ZIP archive is called `3`). For more information, see the [CNTK web site](https://www.microsoft.com/en-us/cognitive-toolkit/download-math-kernel-library/).
 
 ## Boost
@@ -98,13 +98,13 @@ Boost is requirement to build CNTK. In addition, you will need to update to a Bo
 
 * Download and install Boost version 1.60 (you need the `msvc-14.0` binaries) from this <a href="http://sourceforge.net/projects/boost/files/boost-binaries/1.60.0/boost_1_60_0-msvc-14.0-64.exe/download" target="_blank">download location</a> on Sourceforge.
 * Set the environment variable `BOOST_INCLUDE PATH` to your Boost installation, e.g.: 
-```
+  ```
     setx BOOST_INCLUDE_PATH c:\local\boost_1_60_0-msvc-14.0
-```
+  ```
 * Set the environment variable `BOOST_LIB_PATH` to the Boost libraries, e.g.: 
-```
+  ```
     setx BOOST_LIB_PATH c:\local\boost_1_60_0-msvc-14.0\lib64-msvc-14.0
-```
+  ```
 * To integrate the Boost test framework into Visual Studio you can install a runner for Boost tests in Visual Studio from the <a href="https://visualstudiogallery.msdn.microsoft.com/5f4ae1bd-b769-410e-8238-fb30beda987f" target="_blank">Visual Studio Gallery</a>.
 
 ## Protobuf
@@ -130,9 +130,9 @@ If you are building CNTK with ZLib and LibZip, you will need to recompile these 
 Download the ZIP file containing the precompiled version of libzip/zlib compression library for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/zip/zlib-vs15.zip)
 
 * Extract the archive to a folder on your local disk, e.g. to `C:\local\zlib-vs15` and set the environment variable `ZLIB_PATH` pointing to that location, e.g.: 
-```
+  ```
     setx ZLIB_PATH c:\local\zlib-vs15
-```
+  ```
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\zlib-vs15\bin` will succeed and show a couple of DLLs.
 
 ## Building CNTK

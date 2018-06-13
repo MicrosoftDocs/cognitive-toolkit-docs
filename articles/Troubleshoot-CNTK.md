@@ -72,7 +72,7 @@ Please see the "[Evaluate a model in an Azure WebApi](./Evaluate-a-model-in-an-A
 ## I can build my application using Cntk.Eval-<VERSION>.lib/dll, but got an exception similar to the ones below while running
 
 > An unhandled exception of type 'Microsoft.MSR.CNTK.Extensibility.Managed.CNTKRuntimeException' occurred in Cntk.Wrapper-<VERSION>.dll
-
+> 
 > Additional information: configparameters: required parameter missing: unknown:modelPath
 
 Possible reasons are:

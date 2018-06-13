@@ -52,21 +52,21 @@ setx MKL_PATH c:\local\mklml-mkldnn-0.14
 > ```
 
 1. Launch a 64-bit Visual Studio 2017 development environment. The most convenient way is to execute the batch file `vcvarsall.bat` in the Visual Studio directory with the required parameters from a standard windows command shell:
-```
-"%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
-```
-If you can't find this batch file on your system, please revisit the installation of VS2017 and make sure you have the 'VC++ version 15.4 v14.11 toolset' option selected.
+   ```
+   "%VS2017INSTALLDIR%\VC\Auxiliary\Build\vcvarsall.bat" amd64 --vcvars_ver=14.11
+   ```
+   If you can't find this batch file on your system, please revisit the installation of VS2017 and make sure you have the 'VC++ version 15.4 v14.11 toolset' option selected.
 2. Create a build directory, and set MKLROOT for MKL-DNN cmake to locate MKLML library:
-```
-cd c:\local\src\mkl-dnn-0.14
-set MKLROOT=c:\local\mklml-mkldnn-0.14
-```
+   ```
+   cd c:\local\src\mkl-dnn-0.14
+   set MKLROOT=c:\local\mklml-mkldnn-0.14
+   ```
 3. Create a release build using CMake, and copy built binary to MKL_PATH (user may replace release with debug to create a debug build):
-```
-cd cmake
-cmake .. -G "Visual Studio 15" -DCMAKE_BUILD_TYPE=Release
-msbuild "Intel(R) MKL-DNN.sln" /t:Rebuild /p:Configuration=Release /m
-copy ..\include\* c:\local\mklml-mkldnn-0.14\include
-copy src\Release\*.lib c:\local\mklml-mkldnn-0.14\lib
-copy src\Release\*.dll c:\local\mklml-mkldnn-0.14\lib
-```
+   ```
+   cd cmake
+   cmake .. -G "Visual Studio 15" -DCMAKE_BUILD_TYPE=Release
+   msbuild "Intel(R) MKL-DNN.sln" /t:Rebuild /p:Configuration=Release /m
+   copy ..\include\* c:\local\mklml-mkldnn-0.14\include
+   copy src\Release\*.lib c:\local\mklml-mkldnn-0.14\lib
+   copy src\Release\*.dll c:\local\mklml-mkldnn-0.14\lib
+   ```

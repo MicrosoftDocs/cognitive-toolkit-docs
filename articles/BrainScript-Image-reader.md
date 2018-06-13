@@ -89,7 +89,6 @@ The following example demonstrates usage of `ImageReader`:
             labelDim=1000
         ]
     ]    
-
 ```
 There are very few mandatory parameters, like `width`, `height` and `channels` and several optional parameters which configure image transformations. 
 

@@ -41,12 +41,12 @@ CUDA_PATH_V8_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
 ```
 
 #### cuDNN 5.1 for CUDA 8.0
-Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.NVIDIA.com/cuDNN). You need the version ***5.1 for CUDA 8.0**. Use these links: [Windows 8, 8.1, 10](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip), [earlier Windows versions](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows7-x64-v5.1.zip).
+Install [NVIDIA CUDA Deep Neural Network library (cuDNN)](https://developer.NVIDIA.com/cuDNN). You need the version <em>**5.1 for CUDA 8.0</em>*. Use these links: [Windows 8, 8.1, 10](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows10-x64-v5.1.zip), [earlier Windows versions](http://developer.download.NVIDIA.com/compute/redist/cudnn/v5.1/cudnn-8.0-windows7-x64-v5.1.zip).
 
 * Extract the archive to a folder on your local disk, e.g. to `C:\local\cudnn-8.0-v5.1\` and set the environment variable `CUDNN_PATH` pointing to that location, e.g.: 
-```
+  ```
     setx CUDNN_PATH C:\local\cudnn-8.0-v5.1\CUDA
-```
+  ```
 * Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\local\cudnn-8.0-v5.1\CUDA\include\cudnn.h` will succeed.
 
 #### Latest NVIDIA GPU card driver

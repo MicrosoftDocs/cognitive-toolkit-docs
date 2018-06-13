@@ -24,30 +24,30 @@ You can find the link to the presentation [here](https://cntk.ai/Tutorials/AAAI1
 Session 1
 
 > •	Introduction
-
+> 
 > • A concise introduction to Deep Neural Networks
-
+> 
 > •	CNTK: What is Microsoft Cognitive toolkit? Why use Microsoft Cognitive Toolkit
 
 
 Session 2
 
 > • CNTK workflow: Data reading and augmentations, Modeling (MLP, CNN, RNN), Training-Test-Eval workflow
-
+> 
 > •	Image applications: ResNet, Inception, ConvNet/Emotion, Faster R-CNN, Segmentation, Neural style, GAN/Pixel CNN, etc. 
 
 
 Session 3
 
 > •	Parallel training: 1-bit SGD, Block momentum, variable sized mini-batch
-
+> 
 > •	Reinforcement learning in simulated environment
 
 
 Session 4
 
 > •	Video applications
-
+> 
 > • Other topics if time is available: Scale CNTK runs in Spark
 
 

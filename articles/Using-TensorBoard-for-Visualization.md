@@ -84,15 +84,14 @@ to display it. You can fetch any intermedie variable as images, in the following
     for epoch in range(max_epochs): 
         sample_count = 0
         while sample_count < epoch_size:  
-	    #train the model using input data
+        #train the model using input data
             data = reader_train.next_minibatch(min(minibatch_size, epoch_size - sample_count),
                                                input_map=input_map)
-	    #Store input data in the output  
+        #Store input data in the output  
             output = trainer.train_minibatch(data, outputs=[input_var])  
 
-	    #Write output images to tensorboard
-	    tensorboard_writer.write_image('training', output[1], sample_count)
-
+        #Write output images to tensorboard
+        tensorboard_writer.write_image('training', output[1], sample_count)
 ```
 
 TensorBoard is not part of CNTK package and should be installed separately. After the installation, once your training job is started, you can launch TensorBoard to monitor its progress by running the following command:

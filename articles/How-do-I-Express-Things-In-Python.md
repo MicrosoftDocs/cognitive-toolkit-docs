@@ -148,7 +148,7 @@ How do I find the support for following NDL LSTM primitives to Python:
 * Are there any substitutes for these primitives? If not how to implement them in Python? Can we operate on variables as if they are numpy arrays?
 
 * Answer: Use [splice](https://cntk.ai/pythondocs/cntk.ops.html?highlight=splice#cntk.ops.splice)
-  
+
 
 **DiagTime** vs **ElementTimes** 
 
@@ -186,9 +186,9 @@ There are several steps to expose a function that is available in the V1 library
 to V2 in Python:
 
 > Step 1: Define the Python interface
-
+> 
 > Step 2: Define the C++ interface and plumb the interface to V1 CPP
-
+> 
 > Step 3: Establish the glue layers on the Python and C++ API in SWIG layers
 
 ### Step 1: Python interface
@@ -427,7 +427,6 @@ We validate that the shape of the provided parameter as expected is a Constant s
 auto input3AsLearnableParameterNode = Input(3)->template As<LearnableParameter<ElemType>>();
 if (isFinalValidationPass && (!input3AsLearnableParameterNode || input3AsLearnableParameterNode->GetLearningRateMultiplier() != 0) || (Input(3)->GetSampleLayout().GetNumElements() != 1))
     LogicError("%ls %ls operation expects a constant scalar for Input(3) which corresponds to number of negative samples.", NodeName().c_str(), OperationName().c_str());
-
 ```
 For other functions where additional parameters are passed from the Python API one
 need to modify the constructor of the implementation source. For example to expose
@@ -445,7 +444,6 @@ EditDistanceErrorNode(const ScriptableObjects::IConfigRecordPtr configp)
 {
     AttachInputsFromConfig(configp, this->GetExpectedNumInputs());
 }
-
 ```
 Some additional plumbing of the passed variables into local values and explicit
 copying into individual nodes may be needed.
@@ -455,7 +453,6 @@ for the unique ID assertions
 
 ```
      static_cast<size_t>(PrimitiveOpType::CosDistanceWithNegativeSamples) == 67,
-
 ```
 
 ### Step 3: Updates to SWIG:
@@ -492,5 +489,4 @@ and create a new node and attach inputs
     {
         return net.AddNodeToNetAndAttachInputs(New<EditDistanceErrorNode<ElemType>>(net.GetDeviceId(), subPen, delPen, insPen, squashInputs, samplesToIgnore, nodeName), { a, b });
     }
-
 ```

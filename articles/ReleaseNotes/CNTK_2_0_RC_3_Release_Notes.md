@@ -34,9 +34,9 @@ Java API is added to support model evaluation in Java on Windows and Linux. Note
 
 CNTK v.2.0 RC 3 binary distribution and Docker Hub images are built using cuDNN 5.1. However, it is now possible to build CNTK from source code using [NVIDIA cuDNN Library](https://developer.nvidia.com/cudnn) v.6.0. This is what is needed to enable that:
 * **Linux.** Pass the path to cuDNN via the parameter in `configure' script. Example:
-```
-./configure --with-cudnn=/path/to/cudnn6
-```
+  ```
+  ./configure --with-cudnn=/path/to/cudnn6
+  ```
 * **Windows.** Set environment variable `%CUDNN_PATH%` to to the cuDNN installation path, e.g. `c:\path\to\cudnn6\cuda`
 
 ### Bug fixes, improvements, and recommendations

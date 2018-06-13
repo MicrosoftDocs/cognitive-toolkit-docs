@@ -93,4 +93,4 @@ By the end of the successful setup the script will inform you about the location
   cd /home/username/cntk/Tutorials
   jupyter notebook
   ```
-> This will spawn a browser with all available notebooks ready to be run. Should the notebooks fail to execute, run `conda install jupyter` from the activated CNTK Python environment.
+  > This will spawn a browser with all available notebooks ready to be run. Should the notebooks fail to execute, run `conda install jupyter` from the activated CNTK Python environment.

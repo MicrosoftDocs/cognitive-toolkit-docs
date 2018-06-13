@@ -72,8 +72,8 @@ reader = [
 The CTF Reader requires the following set of parameters:
 * `file` - path to the file with the dataset.
 * `input` - sub-section defining *inputs* identified by *input names* (`A`, `B` and `C` in the example above). Within each input the following required parameters must be specified:
-	* `format` - specifies the input type. Must either be `dense` or `sparse`
-	* `dim` - specifies the dimension of the input value vector (for *dense* input this directly corresponds to the number of values in each sample, for *sparse* this represents the upper bound on the range of possible index values).
+    * `format` - specifies the input type. Must either be `dense` or `sparse`
+    * `dim` - specifies the dimension of the input value vector (for *dense* input this directly corresponds to the number of values in each sample, for *sparse* this represents the upper bound on the range of possible index values).
 
 The input data corresponding to the reader configuration above should look something like this:
 
@@ -147,7 +147,6 @@ reader = {
             }
         })
     }
-
 ```
 
 
@@ -165,7 +164,6 @@ The corresponding input file can then look approximately as follows:
 |a 4 5 6 |b 101 201
 |a 4 5 6 |b 101 201
 500 |a 1 2 3 |b 100 200
-
 ```
 
 All options discussed in the example [above](#simple-example), still apply here. On top of that, we introduced two additional features:
@@ -183,7 +181,6 @@ Setting `skipSequenceIds` parameter in the reader section to `true`, forces the 
 |a 1 2 3 |b 100 200
 100 |a 4 5 6 |b 101 201
 200 |b 102983 14532 |a 7 8 9
-
 ```
 
 A few final things to consider when using sequences:
@@ -204,26 +201,26 @@ For example, the following datasets are **invalid**:
 ## A Few Real-World Examples
 
 * Classification: Every line contains a sample, consisting of a label and features. No sequence ID needed, since every line is its own "sequence" of length 1.
-```
-|class 23:1 |features 2 3 4 5 6
-|class 13:1 |features 1 2 0 2 3
-...
-```
+  ```
+  |class 23:1 |features 2 3 4 5 6
+  |class 13:1 |features 1 2 0 2 3
+  ...
+  ```
 * DSSM: Every line contains a source-target document pair, expressed through a bag of words, encoded as sparse vectors.
-```
-|src 12:1 23:1 345:2 45001:1    |tgt 233:1 766:2 234:1
-|src 123:1 56:1 10324:1 18001:3 |tgt 233:1 2344:2 8889:1 2234:1 253434:1
-```
+  ```
+  |src 12:1 23:1 345:2 45001:1    |tgt 233:1 766:2 234:1
+  |src 123:1 56:1 10324:1 18001:3 |tgt 233:1 2344:2 8889:1 2234:1 253434:1
+  ```
 
 * Part-of-speech tagging: Sequences mapping every element to a corresponding label. The sequences are aligned vertically (one word + tag per line).
-```
-0 |word 234:1 |tag 12:1
-0 |word 123:1 |tag 10:1
-0 |word 123:1 |tag 13:1
-1 |word 234:1 |tag 12:1
-1 |word 123:1 |tag 10:1
-...
-```
+  ```
+  0 |word 234:1 |tag 12:1
+  0 |word 123:1 |tag 10:1
+  0 |word 123:1 |tag 13:1
+  1 |word 234:1 |tag 12:1
+  1 |word 123:1 |tag 10:1
+  ...
+  ```
 * Sequence classification: Sequences mapped to a single label. Sequences are aligned vertically; The "class" label can occur in any line that has the same sequenceId.
 
 > [!NOTE]
@@ -269,6 +266,7 @@ For example, the following datasets are **invalid**:
 
 
 ### `reader` section
+
 
 | Parameter                             |             Description             |
 |:--------------------------------------|-------------------------------------|

@@ -32,11 +32,11 @@ ms.devlang:   NA
 ### Python and C++
 - Add custom attributes to primitive function, which would be serialized/deserialized when model save/load. 
 - Some usage:
-```python
+  ```python
     func = C.plus(a, b)
     func.custom_attributes = {'test':'abc', 'dict':{'a':1, 'b':2}, 'list':[1,2,3]} 
     func.custom_attributes['test2'] = 'def'
-```
+  ```
 
 ### Enabled data unit in frequency specification (Python)
 Now we can specify data unit in sample, minibatch and sweep in training session progress frequency, CrossValidationConfig, and Checkpoint Config. For example,

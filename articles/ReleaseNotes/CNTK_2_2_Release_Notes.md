@@ -32,16 +32,16 @@ This work is rolled over into next release due to dependency on test infrastruct
 Now [NCCL](https://developer.nvidia.com/nccl) can be used across machines. User need to enable NCCL in build configure as [here](https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-linux).
 Note:
 * After installed the downloaded NCCL 2 package, there are two packages:
-```
-/var/nccl-repo-2.0.4-ga/libnccl2_2.0.4-1+cuda8.0_amd64.deb
-/var/nccl-repo-2.0.4-ga/libnccl-dev_2.0.4-1+cuda8.0_amd64.deb.
- ```
- Install both of them for building CNTK with NCCL 2.
+  ```
+  /var/nccl-repo-2.0.4-ga/libnccl2_2.0.4-1+cuda8.0_amd64.deb
+  /var/nccl-repo-2.0.4-ga/libnccl-dev_2.0.4-1+cuda8.0_amd64.deb.
+  ```
+  Install both of them for building CNTK with NCCL 2.
 * Due to issues in system configuration, user might encounter failure during NCCL initialization. To get detailed information about the failure, please set environment variable `NCCL_DEBUG=INFO`.
 * There are known issues in current release of NCCL 2 on system configured with InfiniBand devices running in mixed IB and IPoIB modes. To use IB mode devices only, please set environment variable `NCCL_IB_HCA=devices` running on IB mode, e.g.:
-```
-export NCCL_IB_HCA=mlx5_0,mlx5_2
-```
+  ```
+  export NCCL_IB_HCA=mlx5_0,mlx5_2
+  ```
 
 ### CNTK learner interface update
 
@@ -76,14 +76,14 @@ There are two major changes:
 
 With the new API:
 * To have model updates in the same manner as in the classic deep learning literature, we can specify the learner by setting `minibatch_size=cntk.learners.IGNORE` to ignore the minibatch size, e.g.
-```python
-sgd_learner_m = C.sgd(z.parameters, lr = 0.5, minibatch_size = C.learners.IGNORE)
-```
-note
-- To enable CNTK specific techniques which apply the same learning rate to the mean gradient of every N samples regardless of the actual minibatch sizes, we can specify the learner by setting `minibatch_size=N`, e.g. setting `minibatch_size=2`,
-```python
-sgd_learner_s2 = C.sgd(z.parameters, lr = 0.5, minibatch_size = 2)
-```
+  ```python
+  sgd_learner_m = C.sgd(z.parameters, lr = 0.5, minibatch_size = C.learners.IGNORE)
+  ```
+  note
+* To enable CNTK specific techniques which apply the same learning rate to the mean gradient of every N samples regardless of the actual minibatch sizes, we can specify the learner by setting `minibatch_size=N`, e.g. setting `minibatch_size=2`,
+  ```python
+  sgd_learner_s2 = C.sgd(z.parameters, lr = 0.5, minibatch_size = 2)
+  ```
 
 Regarding the [momentum_schedule](https://cntk.ai/pythondocs/cntk.learners.html?highlight=learning_rate_schedule#cntk.learners.momentum_schedule) of the learners [FSAdaGrad](https://cntk.ai/pythondocs/cntk.learners.html#cntk.learners.fsadagrad),
 [Adam](https://cntk.ai/pythondocs/cntk.learners.html#cntk.learners.adam),

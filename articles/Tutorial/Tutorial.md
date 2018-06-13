@@ -275,7 +275,7 @@ Let's see how this translates to our decision boundary. Our evidence is *z* = *b
 
 *x*_2 = -*x*_1 (*w*_1 / *w*_2) - (*b* / *w*_2)
 
-The above is just the standard equation of a line *y* = *mx* + *a* with *y* = *x*_2 and *x* = *x*\_1, the slope *m* = (-*w*\_1 / *w*\_2), and the bias *a* = -*b* / *w*\_2. If we then plug in the values from `"LR.dnn.__AllNodes__.txt"`, `b = -12.3975668`, `w_1 = 2.40208364`, and `w_2 = 2.66412568`, we see:
+The above is just the standard equation of a line *y* = *mx* + *a* with *y* = *x*<em>2 and *x* = *x*\_1, the slope *m* = (-*w*\_1 / *w*\_2), and the bias *a* = -*b* / *w*\_2. If we then plug in the values from `"LR.dnn.<em>_AllNodes</em></em>.txt"`, `b = -12.3975668`, `w_1 = 2.40208364`, and `w_2 = 2.66412568`, we see:
 
 ![Decision Boundary](./decision_boundary.png)
 
