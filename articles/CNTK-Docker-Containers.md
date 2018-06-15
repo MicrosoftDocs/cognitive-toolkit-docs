@@ -76,10 +76,11 @@ First you need to install docker. It is highly recommended to follow the [instal
 
 The correspondent Docker files are in the CNTK Repository at https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker
 
-To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU or GPU). For example, to build CNTK's GPU docker image, execute
+To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU or GPU). For example, to build CNTK's GPU docker image, execute:
 ```
-docker build -t cntk CNTK-GPU-Image
+docker build -t cntk CNTK-GPU-Image -f CNTK-GPU-Image/Dockerfile .
 ```
+The `-f <path/to/Dockerfile>` argument is required because some patches, common for both CPU and GPU dockerfiles, need to be applied on SWIG source code.
 If you receive errors that say `Could not resolve 'archive.ubuntu.com'`
 you will need to provide docker with the IP addresses of your DNS servers. 
 First find the IP addresses of your DNS servers using, for example, the command
