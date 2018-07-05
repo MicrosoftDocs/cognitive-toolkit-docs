@@ -19,10 +19,10 @@ A hello-world example to train and evaluate a logistic regression model using C#
 This class shows how to build and train a classifier for handwritting data (MNIST).  
 #### [CifarResNetClassifier](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/CifarResNetClassifier.cs) 
 This class shows how to do image classification using ResNet.
-The model being built is a lite version of [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385). See [Python Tutortials](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/CNTK_201B_CIFAR-10_ImageHandsOn.ipynb) for more details.
+The model being built is a lite version of [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385). See [Python Tutorials](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/CNTK_201B_CIFAR-10_ImageHandsOn.ipynb) for more details.
 #### [TransferLearning](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/TransferLearning.cs) 
 This class demonstrates transfer learning using a pretrained ResNet model. 
-See [Python Tutortials](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/CNTK_301_Image_Recognition_with_Deep_Transfer_Learning.ipynb) for more details. 
+See [Python Tutorials](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/CNTK_301_Image_Recognition_with_Deep_Transfer_Learning.ipynb) for more details. 
 #### [LSTMSequenceClassifier](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Common/LSTMSequenceClassifier.cs) 
 This class shows how to build a recurrent neural network model from ground up and how to train the model.
 
