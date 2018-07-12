@@ -24,7 +24,7 @@ This page lists the environment variables which are used by the CNTK build proce
 |CUDA_PATH_V9_0 | C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0 |[NVIDIA CUDA]( ./Setup-CNTK-on-Windows.md#gpu-specific-packages) (required for GPU build)
 |MKL_PATH | C:\local\mklml-mkldnn-0.14 |[MKL_PATH]( ./Setup-CNTK-on-Windows.md#mkl) (required)
 |OPENCV_PATH_V31 | c:\local\Opencv3.1.0\build | [OpenCV](./Setup-CNTK-on-Windows.md#optional-opencv) (required for ImagerReader build and TensorBoard's Image feature)
-|PROTOBUF_PATH | c:\local\protobuf-3.1.0-vs17 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
+|PROTOBUF_PATH | c:\local\protobuf-3.5.2-vs17 | [Protobuf Library](./Setup-CNTK-on-Windows.md#protobuf) (required)
 |SWIG_PATH | C:\local\swigwin-3.0.10 | [SWIG](./Setup-CNTK-on-Windows.md#optional-swig) (required for CNTK Python, Java, and C#/.NET support)
 |ZLIB_PATH | c:\local\zlib-vs17 | [Compression Library](./Setup-CNTK-on-Windows.md#optional-zlib-and-libzip) (required for ImagerReader build)
 |VS2017INSTALLDIR | C:\Program Files (x86)\Microsoft Visual Studio\\<code>version</code>\\<code>offering</code> | [CNTK on Windows](./Setup-CNTK-on-Windows.md#building-cntk) (required for building CNTK 2.4+ with VS2017)
@@ -37,7 +37,7 @@ setx  CUB_PATH c:\local\cub-1.7.4
 setx  CUDNN_PATH C:\local\cudnn-9.0-v7.0\cuda
 setx  MKL_PATH C:\local\mklml-mkldnn-0.14
 setx  OPENCV_PATH_V31 c:\local\Opencv3.1.0\build
-setx  PROTOBUF_PATH c:\local\protobuf-3.1.0-vs17
+setx  PROTOBUF_PATH c:\local\protobuf-3.5.2-vs17
 setx  SWIG_PATH c:\local\swigwin-3.0.10
 setx  ZLIB_PATH c:\local\zlib-vs17
 ```

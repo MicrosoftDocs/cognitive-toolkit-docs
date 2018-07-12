@@ -128,14 +128,14 @@ Follow these steps to install the [Boost Library](http://www.boost.org/) on your
 
 ## Protobuf
 
-You need a version of Protobuf 3.1.0 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.1.0 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS17.md)
+You need a version of Protobuf 3.5.2 compiled for CNTK. You can compile this version by yourself, or use an already (precompiled) prepared version of Protobuf 3.5.2 (described on this page). If you want to build the Protobuf library for CNTK on your system, you can find the details [here](./Setup-BuildProtobuf-VS17.md)
 
-Download the ZIP file containing the precompiled version of Protobuf for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/protobuf/protobuf-3.1.0-vs15.zip)
+Download the ZIP file containing the precompiled version of Protobuf for CNTK from [this location](https://cntk.ai/binarydrop/prerequisites/protobuf/protobuf-3.5.2-vs15.zip)
 
-Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3.1.0-vs15` and set the environment variable `PROTOBUF_PATH` pointing to that location, e.g.: 
+Extract the archive to a folder on your local disk, e.g. to `C:\local\protobuf-3.5.2-vs15` and set the environment variable `PROTOBUF_PATH` pointing to that location, e.g.: 
 
 ```
-    setx PROTOBUF_PATH c:\local\protobuf-3.1.0-vs15
+    setx PROTOBUF_PATH c:\local\protobuf-3.5.2-vs15
 ```
 
 ## GPU Specific Packages

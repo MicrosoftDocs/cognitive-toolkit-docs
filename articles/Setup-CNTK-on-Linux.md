@@ -126,16 +126,16 @@ sudo apt-get install autoconf automake libtool curl make g++ unzip
 * Download and unpack protobuf sources
 
 ```
-wget https://github.com/google/protobuf/archive/v3.1.0.tar.gz
-tar -xzf v3.1.0.tar.gz
+wget https://github.com/google/protobuf/archive/v3.5.2.tar.gz
+tar -xzf v3.5.2.tar.gz
 ```
 
 * Compile protobuf
 
 ```
-cd protobuf-3.1.0
+cd protobuf-3.5.2
 ./autogen.sh
-./configure CFLAGS=-fPIC CXXFLAGS=-fPIC --disable-shared --prefix=/usr/local/protobuf-3.1.0
+./configure CFLAGS=-fPIC CXXFLAGS=-fPIC --disable-shared --prefix=/usr/local/protobuf-3.5.2
 make -j $(nproc)
 sudo make install
 ```
