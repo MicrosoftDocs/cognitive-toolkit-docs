@@ -9,6 +9,19 @@ ms.devlang:   NA
 ---
 
 # News
+##September 2018
+***2018-09-17.* CNTK 2.6.0**
+Highlights:
+* .Net Support
+* Efficient group convolution.
+* Improvement of sequential convolution.
+* More operators and improvement of existing ones.
+* ONNX feature update to support ONNX 1.2.2.
+* More ops supported by ONNX converter.
+* Bug fixes.
+
+See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_6_Release_Notes).
+Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## April 2018
 ***2018-04-16.* CNTK 2.5.1**

@@ -16,7 +16,7 @@ This page will walk you through the process of installing the Microsoft Cognitiv
 
 If you are looking for any other kind of support in setting up a CNTK build environment or installing CNTK on your system, you should go [here](./Setup-CNTK-on-your-machine.md) instead. 
 
-> These instructions apply to release 2.5.1.
+> These instructions apply to release 2.6.
 
 **Step 1: Download and prepare the Microsoft Cognitive Toolkit**
 
@@ -28,7 +28,7 @@ Unpack the zip file into an empty local folder of your choice. We recommend you 
 
 Start a standard windows command prompt, and run the installation script:
 ```
-cd c:\local\CNTK-2-5-1
+cd c:\local\CNTK-2-6
 cd cntk\Scripts\install\windows
 install.bat
 ```
@@ -58,7 +58,7 @@ To verify the correct installation of CNTK from Python:
 You need to **activate** the CNTK environment by opening a standard Windows command prompt and running the batch file created by the installation script (see Step 2). This script will add Python and the CNTK installation to your current PATH environment only for the current Windows command prompt.
 
 ```
-cd c:\local\CNTK-2-5-1
+cd c:\local\CNTK-2-6
 cd scripts
 cntkpy35.bat
 ```

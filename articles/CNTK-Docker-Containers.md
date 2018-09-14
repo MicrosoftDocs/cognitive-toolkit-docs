@@ -31,9 +31,9 @@ This will get the latest image, which today means latest available GPU runtime c
 
 To get a specific configuration you need to add a tag. E.g.
 ```
-docker pull microsoft/cntk:2.5.1-cpu-python3.5
+docker pull microsoft/cntk:2.6-cpu-python3.5
 ```
-will get you CNTK 2.5.1 CPU runtime configuration set up for Python 3.5.
+will get you CNTK 2.6 CPU runtime configuration set up for Python 3.5.
 
 If you are unfamiliar with Docker, read [sections below](#building-cntk-docker-images) at this page.
 
