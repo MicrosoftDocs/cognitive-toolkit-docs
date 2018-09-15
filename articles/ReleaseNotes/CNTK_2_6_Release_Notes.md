@@ -12,6 +12,7 @@ ms.devlang:   NA
 # CNTK v2.6 Release Notes
 
 ## Highlights of this release
+* .Net Support
 * Efficient group convolution.
 * Improvement of sequential convolution.
 * More operators and improvement of existing ones.
