@@ -347,7 +347,7 @@ public static Function Combine(VariableVector operands, string name = "");
 Create a new Function instance which just combines the outputs of the specified list of 'operands' Functions such that the 'Outputs' of the
 new 'Function' are union of the 'Outputs' of each of the specified 'operands' Functions.
 E.g. When creating a classification model, typically the CrossEntropy loss Function and the ClassificationError Function comprise the two roots
-of the computation graph which can be "Combine"d to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
+of the computation graph which can be "Combined" to create a single Function with 2 outputs; viz. CrossEntropy loss and ClassificationError output.
 
 ***
 ```cs
