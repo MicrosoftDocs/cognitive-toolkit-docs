@@ -4,6 +4,7 @@ author:    liqfu
 ms.author:   liqfu
 ms.date:  08/30/2017
 ms.prod: cntk
+ms.topic:   conceptual
 ms.custom:   cognitive-toolkit
 ms.devlang:   csharp
 ---

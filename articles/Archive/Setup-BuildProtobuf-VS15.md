@@ -5,7 +5,7 @@ ms.author:   cbasoglu
 ms.date:   01/25/2017
 ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   conceptual
 ms.devlang:   NA
 ---
 
