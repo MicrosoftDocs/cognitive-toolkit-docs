@@ -3,6 +3,7 @@ title:   Model evaluation examples
 author:    liqun
 ms.author:   liqun
 ms.date:  07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   csharp

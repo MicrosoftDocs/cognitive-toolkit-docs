@@ -3,6 +3,7 @@ title:   CNTK blog
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/18/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

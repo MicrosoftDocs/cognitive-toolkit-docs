@@ -3,6 +3,7 @@ title:   Optimized RNN Stack
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/28/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

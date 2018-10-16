@@ -3,6 +3,7 @@ title:   BrainScript Train, Test, Eval
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/17/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

@@ -2,6 +2,7 @@
 title:   Loading Data
 ms.author:   minxia
 ms.date:  11/30/2017
+ms.prod: cntk
 ms.topic:   conceptual
 ms.devlang:   python, brainscript
 ---

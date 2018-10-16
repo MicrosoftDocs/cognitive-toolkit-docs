@@ -3,8 +3,9 @@ title:   Setup Test Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/03/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   python
 ---
 

@@ -3,6 +3,7 @@ title:   Using TensorBoard for Visualization
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   09/15/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript, python

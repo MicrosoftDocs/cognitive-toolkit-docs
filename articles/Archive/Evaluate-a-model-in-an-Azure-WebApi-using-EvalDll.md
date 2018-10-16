@@ -3,6 +3,7 @@ title:   Evaluate a model in an Azure WebApi using EvalDll
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  08/03/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   dotnet

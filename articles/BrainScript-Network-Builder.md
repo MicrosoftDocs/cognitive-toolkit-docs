@@ -3,6 +3,7 @@ title:   BrainScript Network Builder
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   09/13/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

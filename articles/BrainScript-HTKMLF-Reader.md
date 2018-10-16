@@ -3,6 +3,7 @@ title:   BrainScript HTKMLF Reader
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/15/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

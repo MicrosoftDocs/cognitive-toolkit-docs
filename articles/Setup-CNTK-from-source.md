@@ -3,8 +3,9 @@ title:   CNTK Source Code and Development
 author:    wolfma61
 ms.author:   wolfma
 ms.date:   06/12/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   setup from source
+ms.topic:   conceptual
 ms.devlang: n/a
 ---
 

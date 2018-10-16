@@ -3,6 +3,7 @@ title:   MultiGPU Support with Keras
 author:    duli2012
 ms.author:  duli1
 ms.date:   09/15/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA
@@ -11,7 +12,7 @@ ms.devlang:   NA
 # CNTK Multi-GPU Support with Keras
 
 Since CNTK 2.0, Keras can use CNTK as its back end, more details can be found [here](./using-cntk-with-keras.md). 
-As stated in [this article](./Multiple-GPUs-and-machines), CNTK supports parallel training on multi-GPU and multi-machine. This article elaborates how to conduct
+As stated in [this article](./Multiple-GPUs-and-machines.md), CNTK supports parallel training on multi-GPU and multi-machine. This article elaborates how to conduct
 parallel training with Keras.
 
 **Step 1.** Create a Keras model

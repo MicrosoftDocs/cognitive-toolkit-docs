@@ -3,6 +3,7 @@ title:   How to contribute to CNTK
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/07/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

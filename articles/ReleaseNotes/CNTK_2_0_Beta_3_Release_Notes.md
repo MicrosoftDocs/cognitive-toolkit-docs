@@ -5,7 +5,7 @@ ms.author:   cbasoglu
 ms.date:   11/14/2016
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
+ms.prod: cntk
 ms.devlang:   NA
 ---
 
@@ -17,7 +17,7 @@ This is a summary of new features delivered with the Beta 3 release of CNTK V.2.
 
 This Release introduces the integration of CNTK and [NVIDIA NCCL](https://github.com/NVIDIA/nccl), a stand-alone library of standard collective communication routines, such as all-gather, reduce, broadcast, etc., that have been optimized to achieve high bandwidth over PCIe. 
 
-NCCL library supports Linux system only. NCCL can be enabled for those who build CNTK from the source code. See how to enable NCCL [here](../Setup-CNTK-on-Linux.md#cudnn).
+NCCL library supports Linux system only. NCCL can be enabled for those who build CNTK from the source code. [See how to enable NCCL here](../Setup-CNTK-on-Linux.md).
 
 ## CNTK Evaluation library. NuGet package
 
