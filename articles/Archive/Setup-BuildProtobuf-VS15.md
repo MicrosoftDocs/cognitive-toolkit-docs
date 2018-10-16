@@ -3,6 +3,7 @@ title:   Setup BuildProtobuf VS15
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/25/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.devlang:   NA

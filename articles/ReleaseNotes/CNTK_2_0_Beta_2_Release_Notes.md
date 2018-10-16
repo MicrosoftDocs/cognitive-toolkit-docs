@@ -5,7 +5,7 @@ ms.author:   cbasoglu
 ms.date:   11/04/2016
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
+ms.prod: cntk
 ms.devlang:   NA
 ---
 

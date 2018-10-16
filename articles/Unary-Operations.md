@@ -3,6 +3,7 @@ Title:   Unary operations
 Author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/15/2016
+ms.prod: cntk
 ms.topic:   conceptual
 ms.devlang:   NA
 ---

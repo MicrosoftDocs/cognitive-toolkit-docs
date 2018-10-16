@@ -4,7 +4,7 @@ author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   brainscript, python, cpp
 ---
 # Setup Windows binary manual

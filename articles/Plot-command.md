@@ -3,6 +3,7 @@ title:   Plot command
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/20/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   reference
 ms.devlang:   brainscript

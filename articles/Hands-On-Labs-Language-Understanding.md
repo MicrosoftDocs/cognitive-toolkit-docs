@@ -3,6 +3,7 @@ title:   Hands-on Labs Language Understanding
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   11/14/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

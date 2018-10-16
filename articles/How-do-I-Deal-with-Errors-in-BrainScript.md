@@ -3,6 +3,7 @@ title:   How do I deal with errors in BrainScript
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/12/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

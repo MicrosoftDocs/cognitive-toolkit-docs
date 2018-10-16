@@ -3,6 +3,7 @@ title:   KDD 2016 Tutorial
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   11/07/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   python 

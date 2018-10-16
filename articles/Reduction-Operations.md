@@ -3,6 +3,7 @@ title:   Reduction operations
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   02/10/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

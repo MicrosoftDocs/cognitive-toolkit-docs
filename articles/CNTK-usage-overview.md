@@ -3,8 +3,9 @@ title:   CNTK usage overview
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/02/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   overview
 ms.devlang:   NA
 ---
 

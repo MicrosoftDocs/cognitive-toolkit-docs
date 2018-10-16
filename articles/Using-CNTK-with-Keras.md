@@ -3,6 +3,7 @@ title:   Binary Operations
 author:    n17s
 ms.author:   nikosk
 ms.date:   07/10/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

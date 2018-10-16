@@ -3,6 +3,7 @@ title:   AAAI 2018 Tutorial
 author:    tangyuq
 ms.author:   yuqtang
 ms.date:   02/03/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

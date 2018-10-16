@@ -3,6 +3,7 @@ title:   Using CNTK with C#
 author:    liqfu
 ms.author:   liqfu
 ms.date:  08/30/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.devlang:   csharp
 ---

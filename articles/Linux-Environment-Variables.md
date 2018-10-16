@@ -3,8 +3,9 @@ title:   Linux Environment Variables
 author:    wolfma61
 ms.author:   wolfma
 ms.date:   07/12/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:  get-started-article
+ms.topic:  conceptual
 ms.devlang:   NA
 ---
 # Linux Environment Variables

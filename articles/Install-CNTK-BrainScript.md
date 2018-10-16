@@ -3,8 +3,9 @@ title:   Install CNTK for BrainScript
 author:    mx-iao
 ms.author:   minxia
 ms.date:   03/27/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   brainscript
 ---
 

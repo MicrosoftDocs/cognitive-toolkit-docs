@@ -3,6 +3,7 @@ title:   Hands-on Labs Image Recognition
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/14/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

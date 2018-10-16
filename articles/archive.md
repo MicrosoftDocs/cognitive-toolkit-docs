@@ -3,8 +3,9 @@ title:   CNTK Archive Page
 author:    wolfma61
 ms.author:   wolfma
 ms.date:  07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   archive
+ms.topic:   archived
 ms.devlang:   NA
 ---
 

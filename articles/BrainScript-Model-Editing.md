@@ -3,6 +3,7 @@ title:   Model  Editing with BrainScript
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/27/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

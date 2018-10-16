@@ -3,8 +3,9 @@ title:   Setup CNTK with script on Windows
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   03/07/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   NA
 ---
 # Setup CNTK with script on Windows

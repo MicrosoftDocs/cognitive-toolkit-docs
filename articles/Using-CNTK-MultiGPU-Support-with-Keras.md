@@ -3,6 +3,7 @@ title:   MultiGPU Support with Keras
 author:    duli2012
 ms.author:  duli1
 ms.date:   09/15/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

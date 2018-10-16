@@ -3,6 +3,7 @@ title:   CNTK 2.0 Beta Highlights
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   10/25/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   get-started-article
 ms.devlang:   NA

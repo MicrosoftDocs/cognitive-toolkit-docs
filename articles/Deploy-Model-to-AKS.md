@@ -3,6 +3,7 @@ title:   Deploy a Model to Azure Container Service
 author:    mx-iao
 ms.author:   minxia
 ms.date:  12/04/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:  

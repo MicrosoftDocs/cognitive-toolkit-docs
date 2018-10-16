@@ -3,6 +3,7 @@ title:   CNTK Library C# API
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/03/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   csharp
