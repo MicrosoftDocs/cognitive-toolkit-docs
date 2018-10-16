@@ -1,7 +1,7 @@
 ---
 title:   CNTK_2_6_Release_Notes
-author:    liqfu
-ms.author:   liqfu
+author:    chrisbasoglu
+ms.author:   cbasoglu
 ms.date:   09/14/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual

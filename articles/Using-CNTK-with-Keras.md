@@ -24,7 +24,7 @@ Choose the appropriate wheel file from the following pages to match your Python 
 
 - For Windows: Choose a wheel URL from [here](./Setup-Windows-Python.md)
 
-- [For Linux]: Install the [prerequisites](./Setup-Linux-Python.md#prerequisites) and then choose a wheel URL from [here](./Setup-Linux-Python.md).
+- [For Linux]: Install the [prerequisites](./Setup-Linux-Python.md) and then choose a wheel URL from [here](./Setup-Linux-Python.md).
 
 Install the wheel file
 

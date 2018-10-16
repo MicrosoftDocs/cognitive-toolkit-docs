@@ -1,7 +1,7 @@
 ---
 title:   Using CNTK with C#
-author:    liqfu
-ms.author:   liqfu
+author:    chrisbasoglu
+ms.author:   cbasoglu
 ms.date:  08/30/2017
 ms.prod: cntk
 ms.topic:   conceptual
