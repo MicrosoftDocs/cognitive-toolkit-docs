@@ -404,7 +404,7 @@ see [`ConvolutionalLayer{}`](#convolutionallayer) for more detail.
 
     p = MaxPoolingLayer {(3:3), stride=(2:2)} (c)
 
-## MaxUnoolingLayer{}
+## MaxUnpoolingLayer{}
 
 Creates a max-unooling layer.
 
