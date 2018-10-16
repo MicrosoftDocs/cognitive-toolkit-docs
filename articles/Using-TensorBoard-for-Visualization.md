@@ -79,7 +79,7 @@ First, we read images from MNIST data set and feed them as part of the model inp
     }
 ```
 To serialize the image to tensorboard, you should fetch the image variable during training then call TensorBoardProgressWriter.write_image() 
-to display it. You can fetch any intermedie variable as images, in the following example, the input_var has the images we want to serialize.
+to display it. You can fetch any intermediate variable as images, in the following example, the input_var has the images we want to serialize.
 ```python
     for epoch in range(max_epochs): 
         sample_count = 0
