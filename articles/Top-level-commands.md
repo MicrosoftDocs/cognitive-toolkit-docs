@@ -88,7 +88,7 @@ This command dumps the information of node(s) to an output file, which can also 
 * `printMetadata`: determines whether to print the metadata (node name, dimensions, etc) associated with a node. Default is true.
 
 ## WriteWordAndClass Command (deprecated)
-This command reads the text training data, counts the number of occurrences of each each word in the training set, sorts the words in the descending order of the counts, gives each word a unique id, assign each word to a class, and generates
+This command reads the text training data, counts the number of occurrences of each word in the training set, sorts the words in the descending order of the counts, gives each word a unique id, assign each word to a class, and generates
 a four column vocabulary file and a word-to-id mapping file to be used by the (deprecated) LMSequenceReader to train class-based language models. The related parameters are:
 * `inputFile`: the path to the text training file.
 
