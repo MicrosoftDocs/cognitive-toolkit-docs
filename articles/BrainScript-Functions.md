@@ -21,7 +21,7 @@ Functions are first-class data types in the sense that functions can accept and 
 There are two ways to define functions, standard syntax and anonymous lambda syntax.
 
 ### Standard Syntax
-Named functions are record members that are defined as record-member assignments of of these
+Named functions are record members that are defined as record-member assignments of these
 two forms:
 
     f (arg1, arg2, ..., optionalArg1=optionalArg1Default, ...) = expression of args
