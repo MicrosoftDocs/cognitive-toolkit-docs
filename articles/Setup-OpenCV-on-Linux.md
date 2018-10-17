@@ -11,7 +11,7 @@ ms.devlang:   python
 
 # Setup OpenCV on Linux 
 
-You need to install OpenCV for CNTK 2.3 and above, if you want to build any of the the following:
+You need to install OpenCV for CNTK 2.3 and above, if you want to build any of the following:
 - CNTK Image Reader
 - CNTK Image Writer - required to use Tensorboard's Image feature.
 
