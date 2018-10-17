@@ -18,7 +18,7 @@ In the **Solution Explorer**, find the CNTK project and make sure it is the star
 
 In the **Solution Explorer**, find the CNTK project and right click on **Properties**.  From the **Properties** dialog, click on **Configuration Properties** and then on **Debugging**.
 
-Assuming you have your CNTK source at `C:\src` and you want to debug with config file `lr_bs.cntk` from the the tutorial
+Assuming you have your CNTK source at `C:\src` and you want to debug with config file `lr_bs.cntk` from the tutorial
 [HelloWorld-LogisticRegression](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/HelloWorld-LogisticRegression), set the
 Command Arguments as follows:
 
