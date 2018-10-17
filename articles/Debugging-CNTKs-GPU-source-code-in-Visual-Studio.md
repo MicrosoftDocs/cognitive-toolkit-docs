@@ -14,7 +14,7 @@ ms.devlang:   NA
 The steps for debugging CUDA kernels:
 
 1. Install NVIDIA Nsight following the directions from [here](http://docs.nvidia.com/gameworks/index.html#developertools/desktop/nsight/install_debug_monitor.htm%3FTocPath%3DDeveloper%2520Tools%7CDesktop%2520Developer%2520Tools%7CNVIDIA%2520Nsight%2520Visual%2520Studio%2520Edition%7CNVIDIA%2520Nsight%2520Visual%2520Studio%2520Edition%25205.2%7CInstallation%2520and%2520Setup%2520Essentials%7C_____2)
-1. Follow the directions for for “Local debugging”.
+1. Follow the directions for “Local debugging”.
 1. Set the environment variable NSIGHT_CUDA_DEBUGGER = 1.
 1. Run Visual Studio and the Nsight monitor as administrator.
 1. In Nsight Monitor->Options->CUDA, set “Use this monitor for CUDA attach” to True. You may have to restart Nsight. Run as admin again.
