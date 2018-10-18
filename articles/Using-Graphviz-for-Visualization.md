@@ -3,6 +3,7 @@ title:   Using Graphviz for Visualization
 author:    mx-iao
 ms.author:   minxia
 ms.date:   12/15/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   python

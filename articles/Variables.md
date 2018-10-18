@@ -3,6 +3,7 @@ title:   Variables
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   05/18/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

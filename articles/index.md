@@ -3,6 +3,7 @@ title:   The Microsoft Cognitive Toolkit
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  01/22/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   overview
 ms.devlang:   NA

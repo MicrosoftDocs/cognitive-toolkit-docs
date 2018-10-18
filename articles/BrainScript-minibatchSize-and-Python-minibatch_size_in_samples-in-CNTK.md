@@ -3,6 +3,7 @@ title:   BrainScript minibatchSize in CNTK
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/01/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   brainscript

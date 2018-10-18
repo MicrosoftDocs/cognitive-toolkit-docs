@@ -3,6 +3,7 @@ title:   Debugging CNTK's GPU source code in Visual Studio
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/18/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

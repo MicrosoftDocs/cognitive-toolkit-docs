@@ -3,8 +3,9 @@ title:   Setup Windows Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/23/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   python
 ---
 

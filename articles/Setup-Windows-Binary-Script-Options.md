@@ -3,8 +3,9 @@ title:   Setup Windows binary script options
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   06/01/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   NA
 ---
 

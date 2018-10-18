@@ -3,6 +3,7 @@ title:   News
 author:    alexeyo26
 ms.author:   alexeyo
 ms.date:   07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

@@ -3,6 +3,7 @@ title:   Loss functions and metrics
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   11/08/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

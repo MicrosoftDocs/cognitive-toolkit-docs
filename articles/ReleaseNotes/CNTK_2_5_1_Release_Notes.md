@@ -5,7 +5,7 @@ ms.author:   thiagofc
 ms.date:   04/16/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
+ms.prod: cntk
 ms.devlang:   NA
 ---
 

@@ -3,6 +3,7 @@ title:   Image Auto Encoder using deconvolution and unpooling
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/20/2017
+ms.prod: cntk
 ms.topic:   conceptual
 ms.devlang:   python
 ---

@@ -5,7 +5,7 @@ ms.author:   manikj
 ms.date:   01/31/2018
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
-ms.service:  Cognitive-services
+ms.prod: cntk
 ms.devlang:   NA
 ---
 

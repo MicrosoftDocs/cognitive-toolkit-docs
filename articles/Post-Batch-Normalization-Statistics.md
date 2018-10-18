@@ -3,6 +3,7 @@ title:   Post Batch Normalization Statistics
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   09/09/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

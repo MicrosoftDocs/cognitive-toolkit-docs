@@ -3,8 +3,9 @@ title:   CNTK Python known issues and limitations
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/03/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   conceptual
 ms.devlang:   python, cpp, csharp, dotnet
 ---
 

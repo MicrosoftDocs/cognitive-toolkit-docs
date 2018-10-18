@@ -3,9 +3,10 @@ title:   Setup Buildzlib VS17
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   01/25/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
-ms.devlang:   n/a
+ms.topic:   quickstart
+ms.devlang:   na
 ---
 # Setup Buildzlib VS17
 

@@ -3,6 +3,7 @@ title:   Top-level commands with BrainScript
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   11/09/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   reference
 ms.devlang:   NA

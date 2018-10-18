@@ -3,8 +3,9 @@ title:   CNTK Development Environment for Universal Windows Platform (UWP)
 author:    wolfma61
 ms.author:   wolfma
 ms.date:   07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   NA
 ---
 # CNTK Development Environment for Universal Windows Platform (UWP)

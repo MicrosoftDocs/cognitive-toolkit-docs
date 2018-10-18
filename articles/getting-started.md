@@ -3,8 +3,9 @@ title:   Getting Started With the Microsoft Cognitive Toolkit
 author:    wolfma
 ms.author:   cbasoglu
 ms.date:   03/27/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   getting started
+ms.topic:   conceptual
 ms.devlang:   NA
 ---
 # Getting Started With the Microsoft Cognitive Toolkit

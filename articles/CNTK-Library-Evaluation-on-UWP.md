@@ -3,6 +3,7 @@ title:   Model Evaluation on Universal Windows Platform
 author:    zhouwangzw
 ms.author:   zhouwang
 ms.date:  07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   csharp, cpp

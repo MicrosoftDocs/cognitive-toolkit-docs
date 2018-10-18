@@ -3,8 +3,9 @@ title:   Setup MKL on Windows
 author:    thiagofc
 ms.author:   thiagofc
 ms.date:   02/15/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   python
 ---
 

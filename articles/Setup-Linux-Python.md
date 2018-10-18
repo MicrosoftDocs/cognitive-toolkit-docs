@@ -3,8 +3,9 @@ title:   Setup Linux Python
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   04/23/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   python
 ---
 
@@ -290,7 +291,7 @@ If you are using a nightly build, you will need to separately install some third
 #### Environment Variables and Required Packages
 
 ##### OPTIONAL: GPU-Specific Packages
-If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environemnt accordingly.
+If you intend to use CNTK with GPU support, follow [this page](./Setup-GPU-Specific-Packages-Linux.md) to install and configure the environment accordingly.
 
 After installing the aforementioned GPU packages, add them into your PATH environment variable, e.g.
 

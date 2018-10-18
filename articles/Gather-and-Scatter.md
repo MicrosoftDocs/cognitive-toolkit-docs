@@ -3,6 +3,7 @@ title:   Gather and Scatter
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   09/22/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

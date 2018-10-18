@@ -3,8 +3,9 @@ title:   CNTK Docker Containers
 author:    alexeyo26
 ms.author:   alexeyo
 ms.date:   07/31/2017
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   conceptual
 ms.devlang:   NA
 ---
 

@@ -3,6 +3,7 @@ title:   Tutorials & Examples
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:  07/31/2017
+ms.prod: cntk
 ms.topic:   conceptual
 ms.devlang:   python
 ---

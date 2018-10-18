@@ -3,6 +3,7 @@ title:   If operation
 author:    chrisbasoglu
 ms.author:   cbasoglu
 ms.date:   08/27/2016
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
 ms.topic:   conceptual
 ms.devlang:   NA

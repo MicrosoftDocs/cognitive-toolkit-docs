@@ -3,8 +3,9 @@ title:   Setup BuildMklDnn VS17
 author:    KeDengMS
 ms.author:   kedeng
 ms.date:   01/22/2018
+ms.prod: cntk
 ms.custom:   cognitive-toolkit
-ms.topic:   get-started-article
+ms.topic:   quickstart
 ms.devlang:   NA
 ---
 
