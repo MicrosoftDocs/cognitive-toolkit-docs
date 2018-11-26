@@ -32,17 +32,21 @@ Install Microsoft Visual Studio 2017 for Windows. A link to the download can be 
 
 The Community Version of Visual Studio 2017 is sufficient to build CNTK.
 
-During the installation process, please select Desktop development with C++ workload:
+During the installation process, please select 'Universal Windows Platform development', '.NET desktop development', 'Desktop development with C++', and 'Python development' workloads:
 
 ![im1](./pictures/setup/VS2017Workloads.jpg)
 
-Besides, On the individual components screen make sure you add 'VC++ 2017 version 15.4 v14.11 toolset' to your installation for build with CUDA 9.0:
+Besides, On the individual components screen make sure you add 'VC++ 2017 version 15.4 v14.11 toolset' and 'Visual C++ runtime for UWP' to your installation:
 
-![im1](./pictures/setup/VS2017VCTools14.11.jpg)
+![im1](./pictures/setup/VS2017VCTools14.11AndVCforUWP.png)
+
+Lastly, add 'Windows 10 SDK (10.0.16299.0) for Desktop C++ [x86 and x64]':
+
+![im1](./pictures/setup/WindowsSDK10.png)
 
 ### Preexisting Visual Studio 2017 installation
 
-You are also required to have the 'VC++ 2017 version 15.4 v14.11 toolset' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Visual Studio Community 2017' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the 'VC++ 2017 version 15.4 v14.11 toolset' feature is installed on your system (see picture above).
+You are required to have the 'VC++ 2017 version 15.4 v14.11 toolset', 'Visual C++ runtime for UWP' and 'Windows 10 SDK (10.0.16299.0) for Desktop C++ [x86 and x64]' installed on your system. To check open the Windows "Control Panel -> Programs -> Programs and Features' and select 'Visual Studio Community 2017' from the list of installed programs. This will start the Visual Studio setup again and allows you to make sure the aforementioned components are installed on your system (see picture above).
 
 > [!NOTE]
 > If `VS2017INSTALLDIR` environment variable was not set by the Visual Studio installer, set it manually. The exact installation directory depends on both the *version* (2017 in this case) and *offering* (*Community*, *Enterprise*, etc) of Visual Studio, according to the following pattern: `C:\Program Files (x86)\Microsoft Visual Studio\<version>\<offering>`.
