@@ -36,7 +36,7 @@ mkdir -p build && \
 cd build && \
 cmake .. && \
 make && \
-make install && \
+sudo make install && \
 cd ../.. && \
 rm -rf mkl-dnn-0.14
 ```
