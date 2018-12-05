@@ -79,7 +79,7 @@ The correspondent Docker files are in the CNTK Repository at https://github.com/
 
 To build a docker image with CNTK and all its dependencies, simply clone the CNTK repository, navigate to `CNTK/Tools/docker` and use the Dockerfile you want to build from (CPU or GPU). For example, to build CNTK's GPU docker image, execute:
 ```
-docker build -t cntk CNTK-GPU-Image -f CNTK-GPU-Image/Dockerfile .
+docker build -t cntk -f CNTK-GPU-Image/Dockerfile .
 ```
 The `-f <path/to/Dockerfile>` argument is required because some patches, common for both CPU and GPU dockerfiles, need to be applied on SWIG source code.
 If you receive errors that say `Could not resolve 'archive.ubuntu.com'`
@@ -124,7 +124,7 @@ docker rm $(docker ps -a -q)
 ```
 Now try again 
 ```
-docker build -t cntk CNTK-GPU-Image
+docker build -t cntk -f CNTK-GPU-Image/Dockerfile .
 ```
 If you have a GPU you'll want to test if you can access it through a docker container once you have built the image. Try this command:
 ```
