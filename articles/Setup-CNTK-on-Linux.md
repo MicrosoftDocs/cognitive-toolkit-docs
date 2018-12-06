@@ -89,19 +89,19 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 
 Install [Open Message Passing Interface Library (Open MPI)](http://www.open-mpi.org/).
 
-We recommend installing from sources as described below because a lot of distribution packages contain older versions and miss the libraries required by CNTK. Current CNTK Open MPI version requirement is at least **1.10**. Please, check whether you have older version installations on your system and if you do, either uninstall them or ensure (via, e.g. symbolic links) that CNTK build procedure is using the required version. Otherwise you may get hard to debug build errors as you can see in [this post](https://github.com/Microsoft/CNTK/issues/269#issuecomment-202529551).
+We recommend installing from sources as described below because a lot of distribution packages contain older versions and miss the libraries required by CNTK. Current CNTK Open MPI version requirement is **1.10.7**. Please, check whether you have older version installations on your system and if you do, either uninstall them or ensure (via, e.g. symbolic links) that CNTK build procedure is using the required version. Otherwise you may get hard to debug build errors as you can see in [this post](https://github.com/Microsoft/CNTK/issues/269#issuecomment-202529551).
 
 * Get the installation sources:
 
 ```
-wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.3.tar.gz
+wget https://www.open-mpi.org/software/ompi/v1.10/downloads/openmpi-1.10.7.tar.gz
 ```
 
 * Unpack, build and install Open MPI (to `/usr/local/mpi` in this example):
 
 ```
-tar -xzvf ./openmpi-1.10.3.tar.gz
-cd openmpi-1.10.3
+tar -xzvf ./openmpi-1.10.7.tar.gz
+cd openmpi-1.10.7
 ./configure --prefix=/usr/local/mpi
 make -j all
 sudo make install
