@@ -22,25 +22,25 @@ Installing the MKL-DNN and MKLML library:
 sudo mkdir /usr/local/mklml
 ```
 
-* Download the required MKLML v0.14 from the [MKLML web site](https://github.com/01org/mkl-dnn/releases).
+* Download the required MKLML v0.17.1 from the [MKLML web site](https://github.com/01org/mkl-dnn/releases).
   Un-tar it into your MKLML path, creating a versioned sub directory within.
   Build MKL-DNN using MKLML and install mkl-dnn to /usr/local
 
 ```
-sudo wget https://github.com/01org/mkl-dnn/releases/download/v0.14/mklml_lnx_2018.0.3.20180406.tgz
-sudo tar -xzf mklml_lnx_2018.0.3.20180406.tgz -C /usr/local/mklml
-wget --no-verbose -O - https://github.com/01org/mkl-dnn/archive/v0.14.tar.gz | tar -xzf - && \
-cd mkl-dnn-0.14 && \
-ln -s /usr/local external && \
+sudo wget https://github.com/intel/mkl-dnn/releases/download/v0.17.1/mklml_lnx_2019.0.1.20180928.tgz
+sudo tar -xzf mklml_lnx_2019.0.1.20180928.tgz -C /usr/local/mklml
+wget --no-verbose -O - https://github.com/01org/mkl-dnn/archive/v0.17.1.tar.gz | tar -xzf - && \
+cd mkl-dnn-0.17.1 && \
+sudo ln -s /usr/local external && \
 mkdir -p build && \
 cd build && \
 cmake .. && \
 make && \
 sudo make install && \
 cd ../.. && \
-rm -rf mkl-dnn-0.14
+rm -rf mkl-dnn-0.17.1
 ```
 
   Note: if you want to build with different MKLML versions,
 
-* When configuring the build (cf. below), specify the option `--with-mkl=<directory>`, e.g., `--with-mkl=/usr/local/mkl/mklml_lnx_2018.0.3.20180406`.
+* When configuring the build (cf. below), specify the option `--with-mkl=<directory>`, e.g., `--with-mkl=/usr/local/mkl/mklml_lnx_2019.0.1.20180928`.
