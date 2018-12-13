@@ -26,7 +26,7 @@ z = create_model(x) #user-defined
 z.save("myModel.model")
 ``` 
 
-Note that a model saved in this way using the the [CNTK Library API](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-library-api) will have the model-v2 format. The model-v2 format is a Protobuf-based model serialization format, introduced in CNTK v2. (For more information, refer to [CNTK Model Format](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-model-format).) The file extension for the saved model filepath is irrelevant - across CNTK documentation you will see the use of `.model`, `.dnn`, `.cmf`, etc.
+Note that a model saved in this way using the the [CNTK Library API](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-library-api) will have the model-v2 format. The model-v2 format is a Protobuf-based model serialization format, introduced in CNTK v2. (For more information, refer to [CNTK Model Format](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-model-format).) While any file extension can be used (and you may see the use of various file extensions such as `.model`, `.dnn`, `.cmf` across CNTK documentation), we recommend that you stick to the convention of using `.model` for your CNTK models.
 
 ### Load model
 To load a model from file into CNTK:
