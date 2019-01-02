@@ -920,7 +920,7 @@ Copy the data stored in the Value object to the buffers representing a sequence 
 Parameters:
 * `outputVariable`: denotes the shape and dynamic axes when copying data from this Value to the buffers.
 * `sequenceLength`: on return, it is set to the length of the sequence stored in the Value.
-* `colStarts`: on return, it contains indices into the `nonZeorValues` of the first non-zero element of each column of the matrix.
+* `colStarts`: on return, it contains indices into the `nonZeroValues` of the first non-zero element of each column of the matrix.
 * `rowIndices`: on return, it contains the row indexes of each non-zero element of the matrix.
 * `nonZeroValues`: on return, it contains values of all non-zero elements of the matrix.
 * `numNonZeroValues`: on return, it returns the number of non-zero elements of the matrix.
