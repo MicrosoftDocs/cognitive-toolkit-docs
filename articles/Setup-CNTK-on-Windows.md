@@ -76,11 +76,8 @@ Open a standard windows command shell, and execute these command
 
 ```
 c: && md \repos && cd \repos
-git clone https://github.com/Microsoft/cntk
+git clone --recursive https://github.com/Microsoft/cntk
 cd cntk
-git submodule update --init external/gsl
-git submodule update --init Source/CNTKv2LibraryDll/proto/onnx/onnx_repo
-git submodule update --init Source/Multiverso
 ```
 
 This puts all the required source code for a standard build onto your system. If you plan on making modifications to the CNTK code, you should read the information on [Developing and Testing](./Developing-and-Testing.md).
