@@ -652,7 +652,7 @@ The following shows how to stack three neighbor words into a trigram vector:
 
     x  = ...                   # input value, e.g. a N-dimensional one-hot vector
     xp = DelayLayer{} (x)      # previous value
-    xn = DelayLayer{T-1} (x)   # next value (negative delay)
+    xn = DelayLayer{T=-1} (x)  # next value (negative delay)
     tg = Splice (xp : x : xn)  # concatenate all into a 3N-dimensional three-hot vector
 
 ## BatchNormalizationLayer{}, LayerNormalizationLayer{}, StabilizerLayer{}
