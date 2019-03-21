@@ -31,7 +31,7 @@
 		"overwrite": [],
 		"externalReference": [],
 		"globalMetadata": {
-			"uhfHeaderId": "MSDocsHeader-cognitive-toolkit",
+			"brand": "azure",
 			"breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json",
 			"searchScope": ["Cognitive Toolkit"],
 			"titleSuffix": "Cognitive Toolkit - CNTK"
