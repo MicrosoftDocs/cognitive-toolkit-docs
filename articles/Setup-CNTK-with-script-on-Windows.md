@@ -101,11 +101,8 @@ Open a standard windows command shell, and execute these command
 
 ```
 c: && md \repos && cd \repos
-git clone https://github.com/Microsoft/cntk
+git clone --recursive https://github.com/Microsoft/cntk
 cd cntk
-git submodule update --init external/gsl
-git submodule update --init Source/CNTKv2LibraryDll/proto/onnx/onnx_repo
-git submodule update --init -- Source/Multiverso
 ```
 
 The submodule Multiverso is used to enable [DataParallelASGD](./Multiple-GPUs-and-machines.md) for training. If you don't need DataParallelASGD support, then add the environment variable CNTK_ENABLE_ASGD and set its value to false. E.g. run this in a CMD prompt, and then reopen your CMD shell(s) and Visual Studio to pick up the change:
