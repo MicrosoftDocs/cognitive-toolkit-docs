@@ -37,9 +37,9 @@ docker pull mcr.microsoft.com/cntk/nightly
 
 To get a specific configuration you need to add a tag. E.g.
 ```
-docker pull mcr.microsoft.com/cntk/release:2.6-cpu-python3.5
+docker pull mcr.microsoft.com/cntk/release:2.7-cpu-python3.5
 ```
-will get you CNTK 2.6 CPU runtime configuration set up for Python 3.5.
+will get you CNTK 2.7 CPU runtime configuration set up for Python 3.5.
 
 If you are unfamiliar with Docker, read [sections below](#building-cntk-docker-images) at this page.
 

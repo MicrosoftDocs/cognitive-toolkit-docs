@@ -26,7 +26,7 @@ The package may be obtained through the NuGet Package Manager inside Visual Stud
 * [https://www.nuget.org/packages/CNTK.GPU](https://www.nuget.org/packages/CNTK.GPU)
 * [https://www.nuget.org/packages/CNTK.UWP.CPUOnly](https://www.nuget.org/packages/CNTK.UWP.CPUOnly)
 
-The current version is `2.6.0`.
+The current version is `2.7.0`.
 
 The CNTK NuGet packages may be installed on a Visual C++, .NET(C#, VB.Net, F#, ...), or UWP projects. The NuGet package contains both debug and release versions of C++ library and DLLs, and the release version of C# assembly and its dependent DLLs. Once installed the project will contain a reference to the managed DLL and the required dependent binary libraries will be copied to the output directory after building the project.
 

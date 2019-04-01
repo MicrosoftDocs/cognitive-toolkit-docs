@@ -70,6 +70,17 @@ Please select the correct installation from the list below, and substitute the n
 * Easy pip install for [Anaconda3 4.1.1](#anaconda3)
 * Easy pip install for [Anaconda2 4.3.0](#anaconda2)
 
+# [CNTK 2.7](#tab/cntkpy27)
+
+|Python | Flavor | URL
+|:------|:-------|:--------|
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp27-cp27mu-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp27-cp27mu-linux_x86_64.whl` |
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp35-cp35m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp35-cp35m-linux_x86_64.whl` |
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp36-cp36m-linux_x86_64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp36-cp36m-linux_x86_64.whl` |
+
 # [CNTK 2.6](#tab/cntkpy26)
 
 |Python | Flavor | URL
