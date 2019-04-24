@@ -61,12 +61,12 @@ Depending on the Python and CNTK version (CPU or GPU) we supply different wheel 
 
 |Python | Flavor | URL
 |:------|:-------|:--------|
-| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp27-cp27m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp27-cp27m-win_amd64.whl`
-| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp35-cp35m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp35-cp35m-win_amd64.whl`
-| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7-cp36-cp36m-win_amd64.whl`
-|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7-cp36-cp36m-win_amd64.whl`
+| 2.7 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7.post1-cp27-cp27m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7.post1-cp27-cp27m-win_amd64.whl`
+| 3.5 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7.post1-cp35-cp35m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7.post1-cp35-cp35m-win_amd64.whl`
+| 3.6 | CPU-Only | `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.7.post1-cp36-cp36m-win_amd64.whl`
+|  | GPU | `https://cntk.ai/PythonWheel/GPU/cntk_gpu-2.7.post1-cp36-cp36m-win_amd64.whl`
 
 # [CNTK 2.6](#tab/cntkpy26)
 
