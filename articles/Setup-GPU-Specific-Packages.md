@@ -43,7 +43,7 @@ CUDA_PATH="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
 CUDA_PATH_V9_0="C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0"
 ```
 
-* Quick installation check: If you followed the instruction above and used the same paths, the command `dir C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\cudart64_90.dll` will succeed.
+* Quick installation check: If you followed the instruction above and used the same paths, the command `dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin\cudart64_90.dll"` will succeed.
 
 # cuDNN
 
