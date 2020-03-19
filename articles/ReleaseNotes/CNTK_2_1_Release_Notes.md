@@ -46,7 +46,7 @@ This release contains the following **breaking changes**:
 
 GPU editions of CNTK Version 2.1 on Windows and Linux are shipped with the [NVIDIA CUDA Deep Neural Network library (cuDNN) v.6.0](https://developer.nvidia.com/cudnn). This improves CNTK performance with networks like ResNet 50 by about 10%.
 
-If you build CNTK from source, you should also install NVIDIA cuDNN 6.0, since it is now the default for CNTK build and test on [Windows](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#cudnn) and [Linux](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Linux#cudnn)).
+If you build CNTK from source, you should also install NVIDIA cuDNN 6.0, since it is now the default for CNTK build and test on [Windows](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#cudnn) and [Linux](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Linux#cudnn).
 
 ### CNTK Evaluation library. Support of Universal Windows Platform (UWP)
 
