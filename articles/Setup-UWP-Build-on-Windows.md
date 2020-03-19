@@ -18,7 +18,7 @@ To build the CNTK configurations `Release_UWP` and `Debug_UWP` (for x64) in the 
 
 Open the Control Panel, then navigate to Programs -> Programs and Features. Select Visual Studio 2017, and click 'Change', when the Visual Studio setup starts, select Workloads `Universal Windows Platform Development` option
 
-![VS Setup](pictures\setup\VS2017Workloads.jpg)
+![VS Setup](pictures/setup/VS2017Workloads.jpg)
 
 This will take a few minutes to install.
 
@@ -58,4 +58,4 @@ UWP-specific tests are located in the `Tests\EndToEndTests\EvalClientTests\CNTKL
 
 Open Test Explorer window in Visual Studio. You should see a list of tests like this:
 
-![tests](pictures\setup\uwp-tests.png)
+![tests](pictures/setup/uwp-tests.png)
