@@ -74,9 +74,9 @@ and records of values,
 
         # functions to define parameters. Each invocation comes with its own set of weights.
         newB() = Parameter (cellDim, 1)         // bias
-        newW() = Parameter (cellDim, inputDim)  // input-to-hiden
+        newW() = Parameter (cellDim, inputDim)  // input-to-hidden
         newH() = Parameter (cellDim, outputDim) // hidden-to-hidden
-        newC() = Parameter (cellDim, 1)         // cell-to-hiddden (elementwise)
+        newC() = Parameter (cellDim, 1)         // cell-to-hidden (elementwise)
 
         # projections of the LSTM's inputs. Each invocation has its own weights.
         newPIn() = newW() * x + newH() * dh + newB()
