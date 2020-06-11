@@ -1,6 +1,6 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
   - name: Cognitive Toolkit
     tocHref: /cognitive-toolkit/
