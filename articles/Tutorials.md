@@ -15,7 +15,7 @@ ms.devlang:   python
 
 ### Python Jupyter Notebook (Recommended)
 Assuming you have completed [Getting Started](https://www.cntk.ai/pythondocs/gettingstarted.html), use the
-CNTK Python Jupyter notebook [tutorials](https://cntk.ai/pythondocs/tutorials.html) to gain familiarity with the toolkit. You may want to start with the CNTK 100 series tutorials before trying out higher series that cover a range of different applications including image classification, language understanding, reinforcement learning and others. 
+CNTK Python Jupyter Notebook [tutorials](https://cntk.ai/pythondocs/tutorials.html) to gain familiarity with the toolkit. You may want to start with the CNTK 100 series tutorials before trying out higher series that cover a range of different applications including image classification, language understanding, reinforcement learning and others. 
 
 ### Additional Python recipes: 
 * ['Build your own image classifier using Transfer Learning'](./Build-your-own-image-classifier-using-Transfer-Learning.md) provides two examples for custom image classifiers using transfer learning.
