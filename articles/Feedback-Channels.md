@@ -11,7 +11,7 @@ ms.devlang:   NA
 
 # Feedback Channels
 
-As a development team we want to be present on many channels. We ask CNTK users to utilize the appropriate chanel to post issues or questions regarding the Microsoft Cognitive Toolkit. We hope to avoid answers to similar questions on different chanels. This page describes how the Microsoft team intends to use the different channels.
+As a development team we want to be present on many channels. We ask CNTK users to utilize the appropriate chanel to post issues or questions regarding the Microsoft Cognitive Toolkit. We hope to avoid answers to similar questions on different channels. This page describes how the Microsoft team intends to use the different channels.
 
 ## GitHub issues
 
