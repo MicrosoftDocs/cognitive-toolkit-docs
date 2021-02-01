@@ -18,7 +18,7 @@ This is a summary on what's new in CNTK 1.7.1 Binary Release.
 The are **two breaking changes** in this release. Please, read this section carefully:
 
 * Layers library default initialization was changed from ```heNormal``` to ```glorotNormal```. Pass ```init=”heNormal”``` to get 1.7 behaviour.
-* ```fsAdagrad``` had a bug. Learning rates must be retuned. To somewhat approximate the old behaviour, scale by ```sqrt(number of parameter tensors)/400```.
+* ```fsAdagrad``` had a bug. Learning rates must be returned. To somewhat approximate the old behaviour, scale by ```sqrt(number of parameter tensors)/400```.
 
 ## BrainScript
 
