@@ -5,6 +5,7 @@ ms.author:   cbasoglu
 ms.date:  07/31/2017
 ms.custom:   cognitive-toolkit
 ms.topic:   quickstart
+ms.prod:   cntk
 ms.devlang:   brainscript, python, cpp
 ---
 # Setup Windows binary manual
