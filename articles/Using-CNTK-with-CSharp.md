@@ -19,7 +19,7 @@ CNTK C# API provides basic operations in CNTKLib namespace. A CNTK operation tak
 ```cs
 private static Function CreateLogisticModel(Variable input, int numOutputClasses)
 {             
-    Parameter bias = new Parameter(new int[]{numOutputClasses}, DataType.Float, 0}
+    Parameter bias = new Parameter(new int[]{numOutputClasses}, DataType.Float, 0);
     Parameter weights = new Parameter(new int[]{input.Shape[0], numOutputClasses}, DataType.Float,        
       CNTKLib.GlorotUniformInitializer( 
         CNTKLib.DefaultParamInitScale, 
