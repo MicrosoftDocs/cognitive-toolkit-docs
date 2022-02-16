@@ -26,7 +26,7 @@ CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you c
 A separate license is no longer required to use the 1-bit Stochastic Gradient Descent (1-bit SGD) in CNTK; the 1-bit SGD is available under the [license provided in GitHub](https://github.com/microsoft/CNTK/blob/master/LICENSE.md).
 
 <br/>
-<img src="./pictures/ONNX_logo_main.png" width="200" alt-text="ONNX logo">
+<img src="./pictures/ONNX_logo_main.png" width="200">
 
 CNTK is also one of the first deep-learning toolkits to support the Open Neural Network Exchange [ONNX](https://onnx.ai) format, an open-source shared model representation for framework interoperability and shared optimization. Co-developed by Microsoft and supported by many others, ONNX allows developers to move models between frameworks such as CNTK, Caffe2, MXNet, and PyTorch.
 
