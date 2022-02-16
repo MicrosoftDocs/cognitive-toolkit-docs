@@ -23,6 +23,8 @@ CNTK can be included as a library in your Python, C#, or C++ programs, or used a
 
 CNTK supports 64-bit Linux or 64-bit Windows operating systems. To install you can either choose pre-compiled binary packages, or compile the toolkit from the source provided in [GitHub](https://github.com/Microsoft/CNTK).
 
+A separate license is no longer required to use the 1-bit Stochastic Gradient Descent (1-bit SGD) in CNTK; the 1-bit SGD is available under the [license provided in GitHub](https://github.com/microsoft/CNTK/blob/master/LICENSE.md).
+
 <br/>
 <img src="./pictures/ONNX_logo_main.png" width="200">
 
