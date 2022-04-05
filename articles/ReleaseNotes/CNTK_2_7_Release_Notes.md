@@ -43,10 +43,10 @@ To setup build and runtime environment on Windows:
 * Install [Visual Studio 2017](https://www.visualstudio.com/downloads/). Note: going forward for CUDA 10 and beyond, it is no longer required to install and run with the specific VC Tools version 14.11.
 * Install [Nvidia CUDA 10](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64)
 * From PowerShell, run:
-    [DevInstall.ps1](../Tools/devInstall/Windows/DevInstall.ps1)
-* Start Visual Studio 2017 and open [CNTK.sln](./CNTK.sln).
+    [DevInstall.ps1](/cognitive-toolkit/setup-windows-devinstall-script-option)
+* Start Visual Studio 2017 and open [CNTK.sln](/cognitive-toolkit/setup-cntk-on-windows).
 
-To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](./Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
+To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](/cognitive-toolkit/cntk-docker-containers#building-cntk-docker-images). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
 
 ## Support advance RNN loop in ONNX export
 CNTK models with recursive loops can be exported to ONNX models with scan ops.
@@ -61,5 +61,4 @@ In this case, model parameters are saved in external files. Exported models shal
 [Netron](https://github.com/lutzroeder/netron) now supports visualizing CNTK v1 and CNTK v2 `.model` files.
 
 <img src=https://cntk.ai/Images/netron/netron-cntk-dark-1.png alt="NetronCNTKDark1" width="300"> <img src=https://cntk.ai/Images/netron/netron-cntk-light-1.png alt="NetronCNTKLight1" width="300">
-
 
