@@ -20,5 +20,5 @@ ms.devlang:   NA
 * [Exploring Machine Learning with CNTK](https://msdn.microsoft.com/en-us/magazine/mt791798.aspx)
 * [Building a Deep Handwritten Digits Classifier using Microsoft Cognitive Toolkit CNTK and CNN](https://medium.com/@tuzzer/building-a-deep-handwritten-digits-classifier-using-microsoft-cognitive-toolkit-6ae966caec69#.tveftb27o)
 * [Installing CNTK v2.0 beta](https://jamesmccaffrey.wordpress.com/2017/02/25/installing-cntk-v2-0-beta/)
-* [Video object tagging tool](https://www.microsoft.com/reallifecode/2017/04/10/end-end-object-detection-box/)
-* [General object detection with CNTK](https://www.microsoft.com/reallifecode/2017/04/10/object-detection-using-cntk/)
+* [Video object tagging tool](https://devblogs.microsoft.com/cse/2016/02/08/video-tagging-tool-for-video-processing-and-image-recognition/)
+* [General object detection with CNTK](https://devblogs.microsoft.com/cse/2017/04/10/object-detection-using-cntk/)
