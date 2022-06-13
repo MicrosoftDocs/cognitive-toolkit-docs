@@ -26,7 +26,7 @@ ms.devlang:   NA
 * AAAI 2017
 * The BIG CUP competition at WWW 2017
 * The HongKong-Macau Student Contest on Big Ideas
-* [Microsoft Ignite China](https://docs.microsoft.com/zh-cn/events/ignite-microsoft-ignite-china-2016/)
+* [Microsoft Ignite China](/events/ignite-microsoft-ignite-china-2016/)
 * ODSC West 2016
 * NIPS 2016
 * CVPR 2017
