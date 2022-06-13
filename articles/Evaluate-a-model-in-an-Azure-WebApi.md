@@ -12,7 +12,7 @@ ms.devlang:   dotnet
 # Evaluate a model in an Azure WebApi using CNTK Library Managed API
 
 ## Deploy through Azure Machine Learning Command Line
-One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](https://docs.microsoft.com/en-us/azure/machine-learning/preview/scenario-image-classification-using-cntk) to learn how.
+One way to deploy a CNTK model on Azure and be able to run the deployed model through Web APIs is via a command line interface to Azure Machine Learning.  Click [here](/azure/machine-learning/how-to-deploy-and-where?tabs=azcli) to learn how.
 
 ## Deploy through ASP.NET
 We will walk you to the required steps to deploy a CNTK model on Azure and send web requests to the Azure endpoint to 
