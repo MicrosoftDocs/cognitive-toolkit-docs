@@ -237,8 +237,6 @@ To run on the Pascal VOC data make sure that in `PARAMETERS.py` `dataset` is set
 
 The [Visual Object Tagging Tool (VOTT)](https://github.com/CatalystCode/VOTT) is a cross platform annotation tool for tagging video and image assets.
 
-![Vott Screen Shot](https://raw.githubusercontent.com/CatalystCode/VoTT/master/media/4_Tagging_Job.jpg)
-
 VOTT provides the following **features**:
 
 - Computer-assisted tagging and tracking of objects in videos using the [Camshift tracking algorithm](http://opencv.jp/opencv-1.0.0_org/docs/papers/camshift.pdf).
@@ -248,7 +246,7 @@ VOTT provides the following **features**:
 How to annotate with VOTT:
 
 1. Download the latest [Release](https://github.com/CatalystCode/VOTT/releases)
-2. Follow the [Readme](https://github.com/CatalystCode/VOTT/tree/release/latest/README.md) to run a tagging job
+2. Follow the [Readme](https://github.com/microsoft/VoTT/blob/master/README.md) to run a tagging job
 3. After tagging Export tags to the dataset directory
 
 **Option #2: Using Annotation Scripts**
