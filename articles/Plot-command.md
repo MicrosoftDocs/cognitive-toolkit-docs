@@ -11,7 +11,7 @@ ms.devlang:   brainscript
 
 # Plot command
 
-This command loads a given computation network and describes the network topology (usually a DAG) using the DOT (http://www.graphviz.org/doc/info/lang.html) language. It can also optionally call a third-part tool (http://www.graphviz.org/Documentation/dotguide.pdf) to render the network topology. Note that many DOT rendering tools are optimized for DAG, and the rendered graph becomes quite messy if the network structure is non-DAG. The non-DAG structure is usually caused by the use of delay node. In this case, this command will treat all the delay nodes as leaf nodes.
+This command loads a given computation network and describes the network topology (usually a DAG) using the DOT (http://www.graphviz.org/doc/info/lang.html) language. It can also optionally call a third-part tool (http://www.graphviz.org/pdf/dotguide.pdf) to render the network topology. Note that many DOT rendering tools are optimized for DAG, and the rendered graph becomes quite messy if the network structure is non-DAG. The non-DAG structure is usually caused by the use of delay node. In this case, this command will treat all the delay nodes as leaf nodes.
 
 The related parameters of this command are:
 * `modelPath`: the path to the computation network.
