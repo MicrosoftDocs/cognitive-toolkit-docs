@@ -47,7 +47,7 @@ To setup build and runtime environment on Windows:
     [DevInstall.ps1](https://github.com/microsoft/CNTK/blob/release/latest/Tools/devInstall/Windows/DevInstall.ps1)
 * Start Visual Studio 2017 and open [CNTK.sln](https://github.com/microsoft/CNTK/blob/release/latest/CNTK.sln)
 
-To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
+To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](../Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
 
 ## Support advance RNN loop in ONNX export
 CNTK models with recursive loops can be exported to ONNX models with scan ops.
@@ -74,7 +74,7 @@ Highlights:
 * More ops supported by ONNX converter.
 * Bug fixes.
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_6_Release_Notes).
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_6_Release_Notes).
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## April 2018
@@ -96,7 +96,7 @@ Highlights:
 * More OPs.
 * Bug fixes and updates for ONNX.
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_5_Release_Notes).
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_5_Release_Notes).
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## January 2018
@@ -111,7 +111,7 @@ Highlights:
 * CPU perf improvement.
 * More OPs.
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_4_Release_Notes).
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_4_Release_Notes).
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 
@@ -154,7 +154,7 @@ Highlights:
 * Added Network Optimization API.
 * Faster Adadelta for sparse.
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_3_Release_Notes).  
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_3_Release_Notes).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## September 2017
@@ -193,7 +193,7 @@ Highlights:
   - Multi-GPU support for Keras on CNTK
   - Tensorboard image support for CNTK
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_2_Release_Notes).  
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_2_Release_Notes).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## July 2017
@@ -208,7 +208,7 @@ Highlights:
 * New manuals, tutorials and examples
 * Multiple bug fixes
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_1_Release_Notes).  
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_1_Release_Notes).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## June 2017
@@ -224,7 +224,7 @@ Highlights:
 * A new set of NuGet Packages.
 * Multiple bug fixes.
 
-See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Release_Notes).  
+See more in the [Release Notes](/cognitive-toolkit/ReleaseNotes/CNTK_2_0_Release_Notes).  
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## May 2017
