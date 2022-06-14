@@ -107,7 +107,7 @@ The default CNTK math library is the [Intel Math Kernel Library (Intel MKL)](htt
 
 ## MS-MPI
 
-Install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI) from [this download page](https://www.microsoft.com/en-us/download/details.aspx?id=49926), marked simply as "Version 7" in the page title. Click on the Download button, and then select both `msmpisdk.msi` and `MSMpiSetup.exe`.
+Install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI) from [this download page](https://www.microsoft.com/en-us/download/details.aspx?id=52981), marked simply as "Version 7" in the page title. Click on the Download button, and then select both `msmpisdk.msi` and `MSMpiSetup.exe`.
 
 ## Boost
 
@@ -386,7 +386,6 @@ Finished Epoch [1]: loss = 0.297748 * 25600 2.383s (10742.8 samples per second)
 
 ### Debugging CNTK source code in Visual Studio
 
-* If you want to use Python Tools, CNTK, and Visual Studio Code, see this [blog](http://davidcrook.io/cntk-vs-code-awesome/).
 * If you want to use Python Tools, CNTK, and Visual Studio, see [here](./Setup-CNTK-Python-Tools-For-Windows.md)
 * To debug BrainScript in CNTK with Visual Studio, follow the steps [here](./Debugging-CNTK-source-code-in-Visual-Studio.md).
 
