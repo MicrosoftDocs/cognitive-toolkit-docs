@@ -23,7 +23,7 @@ ms.devlang:   NA
 
 ## Change profiler details output format to be chrome://tracing
 
-## Enable per-node timing. Working example [here](../Examples/Image/Classification/MLP/Python/SimpleMNIST.py)
+## Enable per-node timing. Working example [here](https://github.com/microsoft/CNTK/blob/master/Examples/Image/Classification/MLP/Python/SimpleMNIST.py)
 - per-node timing creates items in profiler details when profiler is enabled.
 - usage in Python:
 ```
