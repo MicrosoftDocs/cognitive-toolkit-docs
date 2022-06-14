@@ -44,10 +44,10 @@ To setup build and runtime environment on Windows:
 * Install [Visual Studio 2017](https://www.visualstudio.com/downloads/). Note: going forward for CUDA 10 and beyond, it is no longer required to install and run with the specific VC Tools version 14.11.
 * Install [Nvidia CUDA 10](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64)
 * From PowerShell, run:
-    [DevInstall.ps1](../Tools/devInstall/Windows/DevInstall.ps1)
-* Start Visual Studio 2017 and open [CNTK.sln](./CNTK.sln).
+    [DevInstall.ps1](https://github.com/microsoft/CNTK/blob/release/latest/Tools/devInstall/Windows/DevInstall.ps1)
+* Start Visual Studio 2017 and open [CNTK.sln](https://github.com/microsoft/CNTK/blob/release/latest/CNTK.sln)
 
-To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](./Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
+To setup build and runtime environment on Linux using docker, please build Unbuntu 16.04 docker image using Dockerfiles [here](https://github.com/Microsoft/CNTK/tree/release/latest/Tools/docker). For other Linux systems, please refer to the Dockerfiles to setup dependent libraries for CNTK.
 
 ## Support advance RNN loop in ONNX export
 CNTK models with recursive loops can be exported to ONNX models with scan ops.
@@ -212,7 +212,7 @@ See more in the [Release Notes](https://docs.microsoft.com/en-us/cognitive-toolk
 Get the Release from the [CNTK Releases page](https://github.com/Microsoft/CNTK/releases).
 
 ## June 2017
-***2017-06-26.* A great class for getting started with both Deep Learning and CNTK, [Deep Learning Explained](https://www.edx.org/course/deep-learning-explained-microsoft-dat236x) is now available on edX.**
+***2017-06-26.* A great class for getting started with both Deep Learning and CNTK, Deep Learning Explained is now available on edX.**
 
 ***2017-06-01.* CNTK 2.0**  
 The first production release of Cognitive Toolkit 2.0.
