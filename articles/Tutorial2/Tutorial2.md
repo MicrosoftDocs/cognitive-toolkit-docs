@@ -239,7 +239,7 @@ You will get close to this by using `learningRatePerMB` and `momentumPerMB`, whi
 ### Putting it all Together
 
 Here are the configuration files you need to run this example:
-- [The main configuration file, including the BrainScript](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/01_OneHidden_ndl_deprecated.cntk)
+- [The main configuration file, including the BrainScript](https://github.com/microsoft/CNTK/blob/release/latest/Tests/EndToEndTests/Examples/Image/Deprecated/MNIST/01_OneHidden_ndl/01_OneHidden_ndl_deprecated.cntk)
 - [A few BrainScript functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
 
 Once you have cloned the CNTK repository you will have all the required files. You can then run the example from the Image/MNIST/Data folder using:
@@ -377,7 +377,7 @@ This allows us to put together the final network definition of our CNN that will
 ### Putting it all Together 2
 
 Here are the configuration files you will need to run this example:
-- [The main configuration file incl. network definition](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/02_Convolution_ndl_deprecated.cntk)
+- [The main configuration file incl. network definition](https://github.com/microsoft/CNTK/blob/release/latest/Tests/EndToEndTests/Examples/Image/Deprecated/MNIST/02_Convolution_ndl/02_Convolution_ndl_deprecated.cntk)
 - [The shared functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
 
 Similar to the previous example, it runs using the following command:
@@ -470,8 +470,8 @@ We start from the CNN we just built and add a batch normalization node to each l
 ### Putting it all Together 3
 
 Here are the configuration files you need to run this example:
-- [The main configuration file](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/03_ConvBatchNorm_ndl_deprecated.cntk)
-- [The shared functions](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/Config/Shared.bs)
+- [The main configuration file](https://github.com/microsoft/CNTK/blob/release/latest/Tests/EndToEndTests/Examples/Image/Deprecated/MNIST/03_ConvBatchNorm_ndl/03_ConvBatchNorm_ndl_deprecated.cntk)
+- [The shared functions](https://github.com/microsoft/CNTK/blob/release/latest/Tests/EndToEndTests/Image/FCN/shared.bs)
 
 Similar to the previous example, it runs using the following command:
 
