@@ -26,7 +26,7 @@ CNTK is available as [Microsoft Azure](https://azure.microsoft.com/) Virtual Mac
 
 * [Data Science Virtual Machine - Linux (Ubuntu)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoft-dsvm.ubuntu-2004?tab=Overview)
 * [Data Science Virtual Machine (Linux) Documentation](https://aka.ms/dsvm/ubuntu/docs)
-* We recommend to get yourself familiar with the [Azure Batch Shipyard](https://github.com/Azure/batch-shipyard) which can provision Dockerized CNTK on [Azure Batch](https://azure.microsoft.com/en-us/services/batch/) compute nodes with the ability to execute on CPU, GPU, multinode CPU and multinode GPU with simple configuration files. CNTK recipes can be found [here](https://github.com/Azure/batch-shipyard/tree/master/recipes)
+* We recommend to get yourself familiar with the [Azure Batch Shipyard](https://github.com/Azure/batch-shipyard) which can provision Dockerized CNTK on [Azure Batch](https://azure.microsoft.com/services/batch/) compute nodes with the ability to execute on CPU, GPU, multinode CPU and multinode GPU with simple configuration files. CNTK recipes can be found [here](https://github.com/Azure/batch-shipyard/tree/master/recipes)
 
 **NOTE:** The Data Science Virtual Machine (DSVM) can be deployed on either CPU only or GPU based VM instances. The NVidia drivers, CUDA, cuDNN is built into the DSVM. 
 
