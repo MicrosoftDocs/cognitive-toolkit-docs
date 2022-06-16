@@ -39,7 +39,7 @@ See more on the CNTK Model Evaluation in the [correspondent section](../CNTK-Eva
 
 ## Deconvolution and Unpooling
 
-CNTK now supports Deconvolution and Unpooling. See the usage example in the [Network number 4 in MNIST Sample](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/MNIST/README.md). (All Examples are included in the Binary Distribution).
+CNTK now supports Deconvolution and Unpooling. See the usage example in the [Network number 4 in MNIST Sample](https://github.com/microsoft/CNTK/blob/release/latest/Examples/Image/DataSets/MNIST/README.md). (All Examples are included in the Binary Distribution).
 
 ## Support of OpenCV 3.1
 
