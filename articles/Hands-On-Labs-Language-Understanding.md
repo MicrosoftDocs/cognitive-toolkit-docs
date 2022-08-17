@@ -44,7 +44,7 @@ The archive contains the files for this tutorial. Please the archive
 and set your working directory to `SLUHandsOn`.
 The files you will be working with are:
 
-* [`SLUHandsOn.cntk`](https://github.com/Microsoft/CNTK/blob/Tutorials/SLUHandsOn/SLUHandsOn.cntk): The CNTK configuration file we
+* [`SLUHandsOn.cntk`](https://github.com/microsoft/CNTK/blob/master/Tutorials/SLUHandsOn/SLUHandsOn.cntk): The CNTK configuration file we
   will introduce below and work with.
 * [`slu.forward.nobn.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.nobn.cmf),
   [`slu.forward.cmf`](https://github.com/Microsoft/CNTK/tree/release/latest/Tutorials/SLUHandsOn/slu.forward.cmf),

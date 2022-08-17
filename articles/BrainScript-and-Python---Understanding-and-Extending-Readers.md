@@ -65,7 +65,7 @@ reader = MinibatchSource(
         labels   = StreamDef(field='label', shape=num_classes)))) 
 ```
 
-The following example (adapted from [A2_RunCntk_py3.py](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection/FastRCNN/A2_RunCntk_py3.py)) shows how several deserializers can be combined together. 
+The following example (adapted from A2_RunCntk_py3.py) shows how several deserializers can be combined together. 
 
 ```
 n_rois = 100

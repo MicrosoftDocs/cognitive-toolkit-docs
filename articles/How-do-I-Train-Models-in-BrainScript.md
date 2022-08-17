@@ -121,7 +121,7 @@ Here is how you could do it. The full config file is included in the Examples fo
 
 The reader is a composite reader that uses the ImageReader to read images and the CNTKTextFormatReader to read the regression ground truth labels. It does so by defining an array of deserializers (using `{...} : {...}`) and assigning the inputs as defined in the network above (cf. features and regrLabels).
 
-See [Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk) for the full config file and the corresponding Readme in that folder for running the example.
+See [Examples/Image/Miscellaneous/CIFAR-10/06_RegressionSimple.cntk](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Regression/RegrSimple_CIFAR10.cntk) for the full config file and the corresponding Readme in that folder for running the example.
 
 ## Train a multilabel classifier
 
