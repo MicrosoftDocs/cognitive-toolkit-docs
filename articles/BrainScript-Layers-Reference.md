@@ -584,7 +584,7 @@ are wrappers around the [`OptimizedRNNStack()`](./OptimizedRNNStack.md) primitiv
 ### Example
 
 A simple text classifier, which runs a word sequence through a recurrence and then
-passes the *last* hidden state of the LSTM to a softmax classifer, could have this form:
+passes the *last* hidden state of the LSTM to a softmax classifier, could have this form:
 
     w = Input{...}                   # word sequence (one-hot vectors)
     e = EmbeddingLayer {150} (w)     # embed as a 150-dimensional dense vector
