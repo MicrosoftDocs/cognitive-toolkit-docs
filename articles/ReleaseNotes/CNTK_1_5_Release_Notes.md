@@ -63,7 +63,7 @@ A highly requested feature for easier adoption and experimentation has been a Py
 This is our first and still experimental release of the Python API, so some extra steps are required to install it:
 
 * Clone CNTK GitHub Repository (you need it to access the Python setup part and related documentation)
-* Install Python and Spinx (http://www.sphinx-doc.org/)
+* Install Python and Sphinx (http://www.sphinx-doc.org/)
 * Open documentation and setup Python API as described
 
 > Update: please note that this version of the Python API is superceded by the
