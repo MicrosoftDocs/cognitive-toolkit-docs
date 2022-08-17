@@ -125,6 +125,8 @@ Now you're set to train on the Pascal VOC 2007 data using `python run_fast_rcnn.
 
 The [Visual Object Tagging Tool (VOTT)](https://github.com/CatalystCode/VOTT) is a cross platform annotation tool for tagging video and image assets.
 
+![Vott Screen Shot](https://github.com/microsoft/VoTT/blob/v1/media/4_Tagging_Job.jpg)
+
 VOTT provides the following **features**:
 
 - Computer-assisted tagging and tracking of objects in videos using the [Camshift tracking algorithm](http://opencv.jp/opencv-1.0.0_org/docs/papers/camshift.pdf).
