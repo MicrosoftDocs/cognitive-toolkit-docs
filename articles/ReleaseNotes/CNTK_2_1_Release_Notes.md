@@ -85,10 +85,6 @@ Version 2.1 introduces the following improvements for the [CNTK backend for Kera
 * [Using CNTK V2 API in Azure WebAPI for model evaluation](https://docs.microsoft.com/en-us/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 * [CVPR 2017](http://cvpr2017.thecvf.com/program/tutorials) - July 26, 2017, Tutorial by *Emad Barsoum*, *Sayan Pathak* and *Cha Zhang*, Scalable Deep Learning with Microsoft Cognitive Toolkit. [Presentation](https://www.cntk.ai/Tutorials/CVPR2017/CVPR_2017_Tutorial_final.pdf)
 
-#### Courses
-
-New course [Deep Learning Explained](https://www.edx.org/course/deep-learning-explained-microsoft-dat236x) is published at [edX](https://www.edx.org/).
-
 ### Bug fixes
 
 Version 2.1 provides fixes for the following bugs:

@@ -24,7 +24,7 @@ CNTK currently supports four parallel SGD algorithms:
 
 To run parallel training, make sure that an implementation of the Message Passing Interface (MPI) is installed:
 
-* On Windows, install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI), a Microsoft implementation of the Message Passing Interface standard, from [this download page](https://www.microsoft.com/en-us/download/details.aspx?id=49926), marked simply as "Version 7" in the page title. Click on the Download button, and then select the run-time (`MSMpiSetup.exe`).
+* On Windows, install version 7 (7.0.12437.6) of Microsoft MPI (MS-MPI), a Microsoft implementation of the Message Passing Interface standard, from [this download page](https://www.microsoft.com/download/details.aspx?id=100593), marked simply as "Version 7" in the page title. Click on the Download button, and then select the run-time (`MSMpiSetup.exe`).
 
 * On Linux, install OpenMPI version 1.10.x. Please follow the instructions [here](./Setup-CNTK-on-Linux.md#open-mpi) to build it yourself.
 
