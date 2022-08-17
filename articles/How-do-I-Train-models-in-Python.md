@@ -31,7 +31,7 @@ At a later time I load the `".dnn"` file as my model
 
     mymodel.load_model(checkpoint_file)
 
-When you restart training and it would load the model but not the weights. To be able to restore training from the previously checkpointed model. You need to use [`trainer.restore_from_checkpoint`](https://cntk.ai/pythondocs/cntk.trainer.html?highlight=restore_from_checkpoint#cntk.trainer.Trainer.restore_from_checkpoint) instead, to recreate the trainer and learners. One important thing is that in your Python script the order of network creation (not only structure! but the order in which you create your nodes) should stay the same at the point when you create a checkpoint and when you restore from it.
+When you restart training and it would load the model but not the weights. To be able to restore training from the previously checkpointed model. You need to use [`trainer.restore_from_checkpoint`](https://cntk.azurewebsites.net/pythondocs/Manual_How_to_train_using_declarative_and_imperative_API.html?highlight=trainer%20restore_from_checkpoint) instead, to recreate the trainer and learners. One important thing is that in your Python script the order of network creation (not only structure! but the order in which you create your nodes) should stay the same at the point when you create a checkpoint and when you restore from it.
 
 ## Relate alpha, beta1, beta2 and epsilon to learning rate and momentum in adam_sgd
 

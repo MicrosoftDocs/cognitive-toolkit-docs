@@ -20,13 +20,13 @@ ms.devlang:   NA
 * [GTC Japan 2016](http://www.gputechconf.jp)
 * [GTC India 2016](http://www.gputechconf.in)
 * [China AI Conference](http://ccai.caai.cn)
-* [China High Performance Computing User Forum](http://www.asc-events.org/HPCUF/2016)
+* [China High Performance Computing User Forum](http://www.asc-events.net/HPCUF/2016/)
 * [China Information Hiding and Multimedia Security Workshop](http://www.cihw.org.cn)
 * [Asian Machine Learning Conference](http://acml-conf.org/2016)
 * AAAI 2017
 * The BIG CUP competition at WWW 2017
 * The HongKong-Macau Student Contest on Big Ideas
-* [Microsoft Ignite China](https://www.microsoft.com/china/ignite/2016/)
+* [Microsoft Ignite China](/events/ignite-microsoft-ignite-china-2016/)
 * ODSC West 2016
 * NIPS 2016
 * CVPR 2017

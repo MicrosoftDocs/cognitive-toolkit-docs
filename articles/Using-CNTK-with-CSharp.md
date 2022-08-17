@@ -90,7 +90,7 @@ Stochastic gradient descent (SGD) is a way to optimize model parameters with min
 
 - SGDLearner - a CNTK built-in SGD learner
 - MomentumSGDLearner - a CNTK built-in Momentum SGD learner
-- FSAdaGradLearner - an [variation of AdaGrad learner](http://mirlab.org/conference_papers/International_Conference/ICASSP%202014/papers/p235-seide.pdf)
+- FSAdaGradLearner - an variation of AdaGrad learner
 - AdamLearner - an [Adam learner](https://arxiv.org/pdf/1412.6980.pdf)
 - AdaGradLearner - an [adaptive gradient learner](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2010/EECS-2010-24.pdf)
 - RMSPropLearner - a RMSProp learner
