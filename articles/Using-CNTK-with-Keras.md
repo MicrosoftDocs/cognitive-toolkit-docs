@@ -89,7 +89,7 @@ export KERAS_BACKEND=cntk
 
 **Step 4.** Try out the Keras examples
 
-You can try some example scripts in the Keras' repository: https://github.com/fchollet/keras/tree/master/examples
+You can try some example scripts in the Keras' repository: https://github.com/fchollet/keras/tree/master/
 
 For example, clone the "mnist_mlp.py" from the link above, and run:
 
