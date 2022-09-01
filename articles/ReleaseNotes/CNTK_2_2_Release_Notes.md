@@ -21,7 +21,7 @@ ms.devlang:   NA
 We have added HTML versions of the [tutorials](https://www.cntk.ai/pythondocs/tutorials.html) and [manuals](https://www.cntk.ai/pythondocs/manuals.html) with the [Python documentation](https://www.cntk.ai/pythondocs/). This makes the [tutorial notebooks](https://www.cntk.ai/pythondocs/tutorials.html) and manuals searchable as well.
 
 ### Updated evaluation documents
-Documents related to model evaluation have been updated. Please check the latest documents [here](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Evaluation-Overview).
+Documents related to model evaluation have been updated. Please check the latest documents at [CNTK evaluation overview](/cognitive-toolkit/CNTK-Evaluation-Overview).
 
 ## System
 
@@ -29,7 +29,7 @@ Documents related to model evaluation have been updated. Please check the latest
 This work is rolled over into next release due to dependency on test infrastructure updates.
 
 ### Support for NCCL 2
-Now [NCCL](https://developer.nvidia.com/nccl) can be used across machines. User need to enable NCCL in build configure as [here](https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-linux).
+Now [NCCL](https://developer.nvidia.com/nccl) can be used across machines. User need to enable NCCL in build configure as [here](/cognitive-toolkit/setup-cntk-on-linux).
 Note:
 * After installed the downloaded NCCL 2 package, there are two packages:
 ```
@@ -153,16 +153,17 @@ https://github.com/Microsoft/CNTK/tree/release/latest/Examples/TrainingCSharp/Co
 R-binding for CNTK, which enables both training and evaluation, will be published in a separate repository very soon.
 
 ## Examples
+
 ### Object Detection with Fast R-CNN and Faster R-CNN
 * Support for bounding box regression and VGG model in Fast R-CNN.
-* New tutorial in documentation on [Faster R-CNN object detection](https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Faster-R-CNN) and updated tutorial on [Fast R-CNN](https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN).
+* New tutorial in documentation on [Faster R-CNN object detection](/cognitive-toolkit/Object-Detection-using-Faster-R-CNN) and updated tutorial on [Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN).
 * [Object detection demo script](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/Detection) that allows to choose different detectors, base models, and data sets.
 
 ### New C++ Eval Examples
 We added new C++ examples [`CNTKLibraryCPPEvalCPUOnlyExamples`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCPPEvalCPUOnlyExamples) and [`CNTKLibraryCPPEvalGPUExamples`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCPPEvalGPUExamples). They illustrate how to use C++ CNTK Library for model evaluation on CPU and GPU. Another new example is [UWPImageRecognition](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/UWPImageRecognition), which is an example using CNTK UWP library for model evaluation.
 
 ### New C# Eval examples
-We added an example for asynchronous evaluation:  [`EvaluationSingleImageAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs). One thing we shall point out is CNTK C# API does not have an asynchronous method for Evaluate(), because the evaluation is a CPU-bound operation (Please refer to [this article](https://blogs.msdn.microsoft.com/pfxteam/2012/03/24/should-i-expose-asynchronous-wrappers-for-synchronous-methods/) for detailed explanation). However, it is desired to run evaluation asynchronously in some use cases, e.g. offloading for responsiveness, we show in the example [`EvaluationSingleImageAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) how to achieve that by using the extension method [`EvaluateAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKExtensions.cs). Please refer to the section *Run evaluation asynchronously* on the page [Using C#/.NET Managed API](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows#using-cnet-managed-api) for details.
+We added an example for asynchronous evaluation: [`EvaluationSingleImageAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs). One thing we shall point out is CNTK C# API does not have an asynchronous method for Evaluate(), because the evaluation is a CPU-bound operation (Please refer to [Should I expose asynchronous wrappers for synchronous methods?](https://devblogs.microsoft.com/pfxteam/should-i-expose-asynchronous-wrappers-for-synchronous-methods/) for detailed explanation). However, it is desired to run evaluation asynchronously in some use cases, such as offloading for responsiveness, we show in the example [`EvaluationSingleImageAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs) how to achieve that by using the extension method [`EvaluateAsync()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKExtensions.cs). Please refer to the section *Run evaluation asynchronously* on the page [Using C#/.NET Managed API](/cognitive-toolkit/CNTK-Library-Evaluation-on-Windows#using-cnet-managed-api) for details.
 * Evaluating intermediate layers: [`EvaluateIntermediateLayer()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs)
 * Evaluating outputs from multiple nodes: [`EvaluateCombinedOutputs()`](https://github.com/Microsoft/CNTK/tree/release/2.2/Examples/Evaluation/CNTKLibraryCSEvalCPUOnlyExamples/CNTKLibraryCSEvalExamples.cs)
 
@@ -220,11 +221,11 @@ This work is rolled over to next release due to dependency on test infrastructur
 ## Keras and Tensorboard
 ### Multi-GPU support for Keras on CNTK.
 
-We added an article to elaborated how to conduct parallel training on CNTK with Keras. Details are [here](http://docs.microsoft.com/en-us/cognitive-toolkit/Using-CNTK-MultiGPU-Support-with-Keras).
+We added an article to elaborated how to conduct parallel training on CNTK with Keras. For more information, see [CNTK Multi-GPU Support with Keras](/cognitive-toolkit/Using-CNTK-MultiGPU-Support-with-Keras).
 
 ### Tensorboard image support for CNTK.
 
-We added the image feature support for TensorBoard. Now CNTK users can use TensorBoard to display images. More details and examples can be found [here](http://docs.microsoft.com/en-us/cognitive-toolkit/Using-TensorBoard-for-Visualization).
+We added the image feature support for TensorBoard. Now CNTK users can use TensorBoard to display images. More details and examples can be found [here](/cognitive-toolkit/Using-TensorBoard-for-Visualization).
 
 ### Acknowledgments
 We thank the following community members for their contributions:+
@@ -245,7 +246,6 @@ We thank the following community members for their contributions:+
 * [@StillKeepTry](https://github.com/StillKeepTry)
 * [@taehoonlee](https://github.com/taehoonlee)
 * [@vmazalov](https://github.com/vmazalov)
-
 
 We apologize for any community contributions we might have overlooked in these release notes.
 

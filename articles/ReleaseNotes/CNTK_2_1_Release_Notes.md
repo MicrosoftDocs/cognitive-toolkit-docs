@@ -46,15 +46,15 @@ This release contains the following **breaking changes**:
 
 GPU editions of CNTK Version 2.1 on Windows and Linux are shipped with the [NVIDIA CUDA Deep Neural Network library (cuDNN) v.6.0](https://developer.nvidia.com/cudnn). This improves CNTK performance with networks like ResNet 50 by about 10%.
 
-If you build CNTK from source, you should also install NVIDIA cuDNN 6.0, since it is now the default for CNTK build and test on [Windows](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#cudnn) and [Linux](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Linux#cudnn).
+If you build CNTK from source, you should also install NVIDIA cuDNN 6.0, since it is now the default for CNTK build and test on [Windows](/cognitive-toolkit/Setup-CNTK-on-Windows#cudnn) and [Linux](/cognitive-toolkit/Setup-CNTK-on-Linux#cudnn).
 
 ### CNTK Evaluation library. Support of Universal Windows Platform (UWP)
 
-With this release we introduce the support of [Universal Windows Platform (UWP)](https://docs.microsoft.com/en-us/windows/uwp/get-started/whats-a-uwp). A new CNTK NuGet Package *[CNTK, UWP CPU-Only Build](http://www.nuget.org/packages/CNTK.UWP.CPUOnly)* is available for download. For further details see the description of [Model Evaluation on Universal Windows Platform](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Library-Evaluation-on-UWP). To build the CNTK UWP evaluation library, see the description [here](https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-UWP-Build-on-Windows).
+With this release we introduce the support of [Universal Windows Platform (UWP)](/windows/uwp/get-started/whats-a-uwp). A new CNTK NuGet Package *[CNTK, UWP CPU-Only Build](http://www.nuget.org/packages/CNTK.UWP.CPUOnly)* is available for download. For further details see the description of [Model Evaluation on Universal Windows Platform](/cognitive-toolkit/CNTK-Library-Evaluation-on-UWP). To build the CNTK UWP evaluation library, see the description [here](/cognitive-toolkit/Setup-UWP-Build-on-Windows).
 
 ### CNTK backend for Keras
 
-Version 2.1 introduces the following improvements for the [CNTK backend for Keras](https://docs.microsoft.com/en-us/cognitive-toolkit/Using-CNTK-with-Keras):
+Version 2.1 introduces the following improvements for the [CNTK backend for Keras](/cognitive-toolkit/Using-CNTK-with-Keras):
 
 * Stateful recurrent network support
 * Support of Recurrent layer with mask
@@ -64,7 +64,7 @@ Version 2.1 introduces the following improvements for the [CNTK backend for Kera
 
 * ResNet 50 performance improvement (reduce memcpy and memset during training). Expect single machine training speed to improve by about 8%
 * Improvements in CNTK reader by index caching
-* We have successfully tested CNTK ability to train ResNet 50 and Inception V3 with large minibatch size as the proposed in a [recent paper]( https://research.fb.com/publications/imagenet1kin1h/). This confirms CNTK ability of minibatch scaling not only for speech, but for image tasks as well
+* We have successfully tested CNTK ability to train ResNet 50 and Inception V3 with large minibatch size as the proposed in a [recent paper](https://research.fb.com/publications/imagenet1kin1h/). This confirms CNTK ability of minibatch scaling not only for speech, but for image tasks as well
 
 ### New manuals, tutorials, examples and courses
 
@@ -82,7 +82,7 @@ Version 2.1 introduces the following improvements for the [CNTK backend for Kera
 * [Training Acoustic Model with Connectionist Temporal Classification (CTC) Criteria](https://github.com/Microsoft/CNTK/tree/release/2.1/Tutorials/CNTK_208_Speech_Connectionist_Temporal_Classification.ipynb)
 * [Flapping Bird using Keras and Reinforcement Learning](https://github.com/Microsoft/CNTK/tree/release/2.1/Examples/ReinforcementLearning/FlappingBirdWithKeras)
 * [Faster R-CNN object detection](https://github.com/Microsoft/CNTK/tree/release/2.1/Examples/Image/Detection/FasterRCNN)
-* [Using CNTK V2 API in Azure WebAPI for model evaluation](https://docs.microsoft.com/en-us/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
+* [Using CNTK V2 API in Azure WebAPI for model evaluation](/cognitive-toolkit/Evaluate-a-model-in-an-Azure-WebApi)
 * [CVPR 2017](http://cvpr2017.thecvf.com/program/tutorials) - July 26, 2017, Tutorial by *Emad Barsoum*, *Sayan Pathak* and *Cha Zhang*, Scalable Deep Learning with Microsoft Cognitive Toolkit. [Presentation](https://www.cntk.ai/Tutorials/CVPR2017/CVPR_2017_Tutorial_final.pdf)
 
 ### Bug fixes

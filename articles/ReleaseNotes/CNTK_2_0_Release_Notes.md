@@ -21,7 +21,7 @@ This is the first production release of the Microsoft Cognitive Toolkit V2. We w
 
 ### CNTK backend for Keras
 
-We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. For installation instructions and additional details see [this page](https://docs.microsoft.com/en-us/cognitive-toolkit/Using-CNTK-with-Keras).
+We are happy to bring CNTK as a backend for Keras as a beta release to our fans asking for this feature. While there is still feature and performance work remaining to be done, we appreciate early feedback that would help us bake Keras support. For installation instructions and additional details, see [Using CNTK with Keras](/cognitive-toolkit/Using-CNTK-with-Keras).
 
 ### Binary convolution with Halide
 
@@ -29,7 +29,7 @@ This release includes [an example](https://github.com/Microsoft/CNTK/tree/releas
 
 ### CNTK Java API
 
-Starting from CNTK V.2.0 RC 3, a Java API is added to support model evaluation in Java on Windows and Linux. Note that the API is still *experimental* and subject to change. Feedback from the community is greatly appreciated. See the details at [this page](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-Library-API#java-api-experimental).
+Starting from CNTK V.2.0 RC 3, a Java API is added to support model evaluation in Java on Windows and Linux. Note that the API is still *experimental* and subject to change. Feedback from the community is greatly appreciated. See the details at [this page](/cognitive-toolkit/CNTK-Library-API#java-api-experimental).
 
 ### New additional features
 
