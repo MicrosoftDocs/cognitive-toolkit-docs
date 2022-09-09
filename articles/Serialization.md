@@ -18,15 +18,16 @@ This article goes over saving and loading models and checkpointing during traini
 ### Save model
 
 To save a model to file, use the [`save()`](https://cntk.ai/pythondocs/cntk.ops.functions.html#cntk.ops.functions.Function.save) function and specify a filepath for the saved model.
+
 ```Python
 import cntk as C
 
 x = C.input_variable(<input shape>)
 z = create_model(x) #user-defined 
 z.save("myModel.model")
-``` 
+```
 
-Note that a model saved in this way using the the [CNTK Library API](https://docs.microsoft.com/en-us/cognitive-toolkit/cntk-library-api) will have the model-v2 format. The model-v2 format is a Protobuf-based model serialization format, introduced in CNTK v2. (For more information, refer to [CNTK Model Format](https://docs.microsoft.com/en-us/cognitive-toolkit/CNTK-model-format).) While any file extension can be used (and you may see the use of various file extensions such as `.model`, `.dnn`, `.cmf` across CNTK documentation), we recommend that you stick to the convention of using `.model` for your CNTK models.
+Note that a model saved in this way using the[CNTK Library API](/cognitive-toolkit/cntk-library-api) will have the model-v2 format. The model-v2 format is a Protobuf-based model serialization format, introduced in CNTK v2. (For more information, refer to [CNTK model format](/cognitive-toolkit/CNTK-model-format).) While any file extension can be used (and you may see the use of various file extensions such as `.model`, `.dnn`, `.cmf` across CNTK documentation), we recommend that you stick to the convention of using `.model` for your CNTK models.
 
 ### Load model
 To load a model from file into CNTK:
@@ -41,8 +42,8 @@ z = C.Function.load("myModel.model")
 ```
 ### Related resources
 The following examples include some commonly performed tasks involving the saving and loading of trained models.
-* [Evaluate a saved trained model](https://docs.microsoft.com/en-us/cognitive-toolkit/How-do-I-Evaluate-models-in-Python#evaluate-a-saved-convolutional-network)
-* [Access the parameters of a saved trained model](https://docs.microsoft.com/en-us/cognitive-toolkit/How-do-I-Read-Things-in-Python#load-model-and-access-network-weights-parameters)
+* [Evaluate a saved trained model](/cognitive-toolkit/How-do-I-Evaluate-models-in-Python#evaluate-a-saved-convolutional-network)
+* [Access the parameters of a saved trained model](/cognitive-toolkit/How-do-I-Read-Things-in-Python#load-model-and-access-network-weights-parameters)
 * [Evaluate and write out specific layers of a saved trained model](https://github.com/Microsoft/CNTK/tree/release/latest/Examples/Image/FeatureExtraction)  
 
 ### ONNX format
