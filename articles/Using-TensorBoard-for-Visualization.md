@@ -102,7 +102,7 @@ TensorBoard is not part of CNTK package and should be installed separately. Afte
     tensorboard --logdir=log
 ```
 
-(assuming the command is run from the script’s working directory) and navigate to <http://localhost:6006/> in your favorite web-browser.
+(assuming the command is run from the script’s working directory) and navigate to `<http://localhost:6006/>` in your favorite web-browser.
 
 The following scripts contain examples on how to use TensorBoardProgressWriter:
 
