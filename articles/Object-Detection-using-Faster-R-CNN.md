@@ -255,7 +255,7 @@ Now you're set to train on the Pascal VOC 2007 data using `python run_faster_rcn
 
 ### Run Faster R-CNN on your own data
 
-Preparing your own data and annotating it with ground truth bounding boxes is described [here](https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN#train-on-your-own-data).
+Preparing your own data and annotating it with ground truth bounding boxes is described in [Object detection using Fast R-CNN](/cognitive-toolkit/Object-Detection-using-Fast-R-CNN#train-on-your-own-data).
 After storing your images in the described folder structure and annotating them please run
 
 `python Examples/Image/Detection/utils/annotations/annotations_helper.py`
