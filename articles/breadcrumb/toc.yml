@@ -5,6 +5,7 @@
   - name: Previous Versions
     tocHref: /previous-versions/
     topicHref: /previous-versions/
+    items:
     - name: Cognitive Toolkit
       tocHref: /cognitive-toolkit/
       topicHref: /cognitive-toolkit/index
