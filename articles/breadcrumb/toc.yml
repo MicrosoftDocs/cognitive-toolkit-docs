@@ -2,6 +2,9 @@
   tocHref: /
   topicHref: /
   items:
-  - name: Cognitive Toolkit
-    tocHref: /cognitive-toolkit/
-    topicHref: /cognitive-toolkit/index
+  - name: Previous Versions
+    tocHref: /previous-versions/
+    topicHref: /previous-versions/
+    - name: Cognitive Toolkit
+      tocHref: /cognitive-toolkit/
+      topicHref: /cognitive-toolkit/index
