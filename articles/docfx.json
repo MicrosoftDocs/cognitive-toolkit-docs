@@ -32,9 +32,14 @@
 		"externalReference": [],
 		"globalMetadata": {
 			"brand": "azure",
-			"breadcrumb_path": "/cognitive-toolkit/breadcrumb/TOC.json",
+			"breadcrumb_path": "/previous-versions/cognitive-toolkit/breadcrumb/TOC.json",
 			"searchScope": ["Cognitive Toolkit"],
-			"titleSuffix": "Cognitive Toolkit - CNTK"
+			"titleSuffix": "Cognitive Toolkit - CNTK",
+			"ROBOTS": "NOINDEX,NOFOLLOW",
+                        "is_archived": true,      
+                        "is_retired": true,
+                        "feedback_system": "None",
+                        "learn_archive": "manual"
 	},
 	"fileMetadata": {},
 	"template": [],
