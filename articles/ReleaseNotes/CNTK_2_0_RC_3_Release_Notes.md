@@ -37,7 +37,7 @@ CNTK v.2.0 RC 3 binary distribution and Docker Hub images are built using cuDNN 
 ```
 ./configure --with-cudnn=/path/to/cudnn6
 ```
-* **Windows.** Set environment variable `%CUDNN_PATH%` to to the cuDNN installation path, e.g. `c:\path\to\cudnn6\cuda`
+* **Windows.** Set environment variable `%CUDNN_PATH%` to the cuDNN installation path, e.g. `c:\path\to\cudnn6\cuda`
 
 ### Bug fixes, improvements, and recommendations
 
