@@ -6,6 +6,10 @@
     tocHref: /previous-versions/
     topicHref: /previous-versions/
     items:
-    - name: Cognitive Toolkit
-      tocHref: /previous-versions/cognitive-toolkit/
-      topicHref: /previous-versions/cognitive-toolkit/index
+    - name: Azure
+      tocHref: /previous-versions/azure/
+      topicHref: /previous-versions/azure/index
+      items:
+      - name: Cognitive Toolkit
+        tocHref: /previous-versions/cognitive-toolkit/
+        topicHref: /previous-versions/cognitive-toolkit/index
