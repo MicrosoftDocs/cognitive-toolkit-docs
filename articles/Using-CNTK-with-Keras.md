@@ -48,13 +48,13 @@ For Linux:
 source activate cntkpy
 ```
 
-If you have a Keras installation (in the same environment as your CNTK installation), you will need to upgrade it to the latest version.
+If you have a Keras installation (in the same environment as your CNTK installation), you will need to upgrade it to the latest version with CNTK support.
 
-```pip install -U keras```
+```pip install -U keras==2.2.5```
 
-If you don't have Keras installed, the following command will install the latest version
+If you don't have Keras installed, the following command will install the latest version with CNTK support.
 
-```pip install keras```
+```pip install keras==2.2.5```
 
 **Step 3.** Update Keras to use CNTK as back end
 
