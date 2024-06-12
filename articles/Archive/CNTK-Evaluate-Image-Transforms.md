@@ -100,7 +100,7 @@ In the case of CHW the layout would be:
 
     Offset (byte) :  0  1  2  3 ... 9 10 11 12 13 ...90 91 92 93 ... 99 100 ... 199 200 ... 299 
     Color Index   :  B  B  B  B ... B  B  B  B  B ... B  B  B  B ...  B   G ...   G   R ...   R
-    Height Pos    :  0  0  0  0 ... 0  0  0  0  0 ... 9  9  9  9 ...  9   0 ...   9   0 ...   9
+    Height Pos    :  0  0  0  0 ... 0  1  1  1  1 ... 9  9  9  9 ...  9   0 ...   9   0 ...   9
     Width Pos     :  0  1  2  3 ... 9  0  1  2  3 ... 0  1  2  3 ...  9   0 ...   9   0 ...   9
 
 A possible extension method extracting a `Bitmap`'s image data to CHW layout could be:
