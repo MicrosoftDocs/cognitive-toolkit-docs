@@ -23,7 +23,7 @@ Note that the definition of the number of label samples is similar to the number
 
 So, importantly, for sequential data, a sample is an individual item of a sequence.
 Hence, CNTK's `epochSize` does *not* refer to a number of *sequences*,
-but the of sequence *items* across the sequence **labels** that constitute the minibatch.  
+but the number of sequence *items* across the sequence **labels** that constitute the minibatch.  
 
 Equally important, it is **label** samples, not input samples, and the number of labels per sequence is not necessarily the number of input samples.  It is possible, for example, to have one label per sequence and for each sequence to have many samples (in which case `epochSize` acts like number of sequences), and it is possible to have one label per sample in a sequence, in which case `epochSize` acts exactly like `minibatchSize` in that every sample (not sequence) is counted.
 
